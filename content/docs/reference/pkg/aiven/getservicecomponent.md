@@ -172,8 +172,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -187,8 +186,7 @@ The following arguments are supported:
 Some service types support additional service specific components like `kibana` for
 Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, and
 `pgbouncer` for PostgreSQL. Most service types also support `prometheus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -198,8 +196,7 @@ Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, an
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the service component
 belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -211,8 +208,7 @@ belongs to.
 to the 'kafka' service components. And has the following available options: `certificate`
 and `sasl`. If not set by the user only entries with empty `kafka_authentication_method`
 will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -226,8 +222,7 @@ identifies the regular public DNS name of the service and for services in a priv
 the private DNS name. If the service is in a private network but has also public access
 enabled the `public` route type can be used to get the public DNS name of the service. The
 `private` option should typically not be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -235,8 +230,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -248,8 +242,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -263,13 +256,11 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -283,8 +274,7 @@ but hasn't yet fully caught up.
 Some service types support additional service specific components like `kibana` for
 Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, and
 `pgbouncer` for PostgreSQL. Most service types also support `prometheus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -294,8 +284,7 @@ Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, an
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the service component
 belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -307,8 +296,7 @@ belongs to.
 to the 'kafka' service components. And has the following available options: `certificate`
 and `sasl`. If not set by the user only entries with empty `kafka_authentication_method`
 will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -322,8 +310,7 @@ identifies the regular public DNS name of the service and for services in a priv
 the private DNS name. If the service is in a private network but has also public access
 enabled the `public` route type can be used to get the public DNS name of the service. The
 `private` option should typically not be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -331,8 +318,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -344,8 +330,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -359,13 +344,11 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -379,8 +362,7 @@ but hasn't yet fully caught up.
 Some service types support additional service specific components like `kibana` for
 Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, and
 `pgbouncer` for PostgreSQL. Most service types also support `prometheus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -390,8 +372,7 @@ Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, an
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the service component
 belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -403,8 +384,7 @@ belongs to.
 to the 'kafka' service components. And has the following available options: `certificate`
 and `sasl`. If not set by the user only entries with empty `kafka_authentication_method`
 will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -418,8 +398,7 @@ identifies the regular public DNS name of the service and for services in a priv
 the private DNS name. If the service is in a private network but has also public access
 enabled the `public` route type can be used to get the public DNS name of the service. The
 `private` option should typically not be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -427,8 +406,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -440,8 +418,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -455,13 +432,11 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -475,8 +450,7 @@ but hasn't yet fully caught up.
 Some service types support additional service specific components like `kibana` for
 Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, and
 `pgbouncer` for PostgreSQL. Most service types also support `prometheus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -486,8 +460,7 @@ Elasticsearch, `kafka_connect`, `kafka_rest` and `schema_registry` for Kafka, an
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the service component
 belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -499,8 +472,7 @@ belongs to.
 to the 'kafka' service components. And has the following available options: `certificate`
 and `sasl`. If not set by the user only entries with empty `kafka_authentication_method`
 will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -514,8 +486,7 @@ identifies the regular public DNS name of the service and for services in a priv
 the private DNS name. If the service is in a private network but has also public access
 enabled the `public` route type can be used to get the public DNS name of the service. The
 `private` option should typically not be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -523,8 +494,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -536,8 +506,7 @@ enabled the `public` route type can be used to get the public DNS name of the se
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -551,8 +520,7 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -565,8 +533,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -574,8 +541,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -584,8 +550,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is DNS name for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -594,8 +559,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -604,8 +568,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is port number for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -613,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -622,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -631,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -640,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -653,8 +612,7 @@ The following output properties are available:
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -668,13 +626,11 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -682,8 +638,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -692,8 +647,7 @@ but hasn't yet fully caught up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is DNS name for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -702,8 +656,7 @@ but hasn't yet fully caught up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -712,8 +665,7 @@ but hasn't yet fully caught up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is port number for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -721,8 +673,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -730,8 +681,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -739,8 +689,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -748,8 +697,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -761,8 +709,7 @@ but hasn't yet fully caught up.
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -776,13 +723,11 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -790,8 +735,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -800,8 +744,7 @@ but hasn't yet fully caught up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is DNS name for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -810,8 +753,7 @@ but hasn't yet fully caught up.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -820,8 +762,7 @@ but hasn't yet fully caught up.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}is port number for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -829,8 +770,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -838,8 +778,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -847,8 +786,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -856,8 +794,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -869,8 +806,7 @@ but hasn't yet fully caught up.
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -884,13 +820,11 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -898,8 +832,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -908,8 +841,7 @@ but hasn't yet fully caught up.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is DNS name for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -918,8 +850,7 @@ but hasn't yet fully caught up.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -928,8 +859,7 @@ but hasn't yet fully caught up.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}is port number for connecting to the service component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -937,8 +867,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -946,8 +875,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -955,8 +883,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -964,8 +891,7 @@ but hasn't yet fully caught up.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -977,8 +903,7 @@ but hasn't yet fully caught up.
 always encrypted and this property is only included for service components they may
 disable encryption. If not set by the user only entries with empty `ssl` or `ssl` set
 to true will be selected.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -992,8 +917,7 @@ the `replica` DNS name. `syncing` is used by limited set of services to expose n
 before they have finished restoring state but may already be partially available, for
 example a PostgreSQL node that is streaming WAL segments from backup or current master
 but hasn't yet fully caught up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

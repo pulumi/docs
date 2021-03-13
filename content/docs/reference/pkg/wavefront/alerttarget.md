@@ -203,11 +203,17 @@ func main() {
 ```
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Wavefront = Pulumi.Wavefront;
@@ -238,9 +244,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -273,9 +282,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_wavefront as wavefront
@@ -295,9 +307,12 @@ test_target = wavefront.AlertTarget("testTarget",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -319,9 +334,16 @@ const testTarget = new wavefront.AlertTarget("test_target", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AlertTarget Resource {#create}
@@ -346,9 +368,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -356,9 +376,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -366,9 +384,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -376,10 +392,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -405,9 +418,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -415,9 +426,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -425,9 +434,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -435,9 +442,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -445,18 +450,13 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -464,9 +464,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -474,9 +472,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -484,10 +480,7 @@ const testTarget = new wavefront.AlertTarget("test_target", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -502,9 +495,7 @@ The AlertTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -513,8 +504,7 @@ The AlertTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipient_csharp">
 <a href="#recipient_csharp" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -524,8 +514,7 @@ The AlertTarget resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -534,8 +523,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -545,8 +533,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -555,8 +542,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -566,8 +552,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_csharp">
 <a href="#emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -576,8 +561,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishtmlcontent_csharp">
 <a href="#ishtmlcontent_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Html<wbr>Content</a>
@@ -586,8 +570,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -596,8 +579,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -606,8 +588,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_csharp">
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -616,14 +597,11 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type"><a href="#alerttargetroute">List&lt;Alert<wbr>Target<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -632,8 +610,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipient_go">
 <a href="#recipient_go" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -643,8 +620,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -653,8 +629,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -664,8 +639,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -674,8 +648,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -685,8 +658,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_go">
 <a href="#emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -695,8 +667,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishtmlcontent_go">
 <a href="#ishtmlcontent_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Html<wbr>Content</a>
@@ -705,8 +676,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -715,8 +685,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -725,8 +694,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_go">
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -735,14 +703,11 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type"><a href="#alerttargetroute">[]Alert<wbr>Target<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -751,8 +716,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipient_nodejs">
 <a href="#recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -762,8 +726,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -772,8 +735,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -783,8 +745,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -793,8 +754,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -804,8 +764,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_nodejs">
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
@@ -814,8 +773,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishtmlcontent_nodejs">
 <a href="#ishtmlcontent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Html<wbr>Content</a>
@@ -824,8 +782,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -834,8 +791,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -844,8 +800,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_nodejs">
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -854,14 +809,11 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type"><a href="#alerttargetroute">Alert<wbr>Target<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -870,8 +822,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recipient_python">
 <a href="#recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -881,8 +832,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -891,8 +841,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -902,8 +851,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -912,8 +860,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -923,8 +870,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_subject_python">
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
@@ -933,8 +879,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_html_content_python">
 <a href="#is_html_content_python" style="color: inherit; text-decoration: inherit;">is_<wbr>html_<wbr>content</a>
@@ -943,8 +888,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -953,8 +897,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -963,8 +906,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_python">
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -973,8 +915,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type"><a href="#alerttargetroute">Sequence[Alert<wbr>Target<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -985,9 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -995,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetid_csharp">
 <a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1004,14 +942,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1019,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetid_go">
 <a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1028,14 +962,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1043,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetid_nodejs">
 <a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1052,14 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1067,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_id_python">
 <a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -1076,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1204,9 +1129,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
 <a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1215,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_csharp">
 <a href="#state_customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -1226,8 +1148,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1236,8 +1157,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailsubject_csharp">
 <a href="#state_emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -1246,8 +1166,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishtmlcontent_csharp">
 <a href="#state_ishtmlcontent_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Html<wbr>Content</a>
@@ -1256,8 +1175,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_csharp">
 <a href="#state_method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1266,8 +1184,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1276,8 +1193,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_csharp">
 <a href="#state_recipient_csharp" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -1287,8 +1203,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routes_csharp">
 <a href="#state_routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -1297,8 +1212,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type"><a href="#alerttargetroute">List&lt;Alert<wbr>Target<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_csharp">
 <a href="#state_targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1306,8 +1220,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1316,8 +1229,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_csharp">
 <a href="#state_triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -1327,14 +1239,11 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
 <a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1343,8 +1252,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_go">
 <a href="#state_customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -1354,8 +1262,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1364,8 +1271,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailsubject_go">
 <a href="#state_emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -1374,8 +1280,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishtmlcontent_go">
 <a href="#state_ishtmlcontent_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Html<wbr>Content</a>
@@ -1384,8 +1289,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_go">
 <a href="#state_method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1394,8 +1298,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1404,8 +1307,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_go">
 <a href="#state_recipient_go" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -1415,8 +1317,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routes_go">
 <a href="#state_routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -1425,8 +1326,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type"><a href="#alerttargetroute">[]Alert<wbr>Target<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_go">
 <a href="#state_targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
@@ -1434,8 +1334,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1444,8 +1343,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_go">
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -1455,14 +1353,11 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -1471,8 +1366,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_nodejs">
 <a href="#state_customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -1482,8 +1376,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1492,8 +1385,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailsubject_nodejs">
 <a href="#state_emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
@@ -1502,8 +1394,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishtmlcontent_nodejs">
 <a href="#state_ishtmlcontent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Html<wbr>Content</a>
@@ -1512,8 +1403,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_nodejs">
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1522,8 +1412,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1532,8 +1421,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_nodejs">
 <a href="#state_recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -1543,8 +1431,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routes_nodejs">
 <a href="#state_routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -1553,8 +1440,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type"><a href="#alerttargetroute">Alert<wbr>Target<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetid_nodejs">
 <a href="#state_targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
@@ -1562,8 +1448,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1572,8 +1457,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_nodejs">
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -1583,14 +1467,11 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1599,8 +1480,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the `Content-Type` header of the webhook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_headers_python">
 <a href="#state_custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -1610,8 +1490,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A `string->string` map specifying the custome HTTP header key/value pairs that will be 
 sent in the requests with a method of `WEBHOOK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1620,8 +1499,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description describing this alert target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_subject_python">
 <a href="#state_email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
@@ -1630,8 +1508,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject title of an email notification target.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_html_content_python">
 <a href="#state_is_html_content_python" style="color: inherit; text-decoration: inherit;">is_<wbr>html_<wbr>content</a>
@@ -1640,8 +1517,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determine whether the email alert content is sent as HTML or text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_python">
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1650,8 +1526,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1660,8 +1535,7 @@ sent in the requests with a method of `WEBHOOK`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alert target as it is displayed in wavefront
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_python">
 <a href="#state_recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -1671,8 +1545,7 @@ sent in the requests with a method of `WEBHOOK`.
     </dt>
     <dd>{{% md %}}The end point for the notification Target.  `EMAIL`: email address. `PAGERDUTY`: PagerDuty 
 routing key. `WEBHOOK`: URL endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routes_python">
 <a href="#state_routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -1681,8 +1554,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type"><a href="#alerttargetroute">Sequence[Alert<wbr>Target<wbr>Route<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of routing targets that this alert target will notify. See Route
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_id_python">
 <a href="#state_target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
@@ -1690,8 +1562,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1700,8 +1571,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mustache template that will form the body of the POST request, email and summary of the PagerDuty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_python">
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -1711,8 +1581,7 @@ routing key. `WEBHOOK`: URL endpoint.
     </dt>
     <dd>{{% md %}}A list of occurrences on which this webhook will be fired. Valid values are `ALERT_OPENED`,
 `ALERT_UPDATED`, `ALERT_RESOLVED`, `ALERT_MAINTENANCE`, `ALERT_SNOOZED`, `ALERT_NO_DATA`, `ALERT_NO_DATA_RESOLVED`, `ALERT_NO_DATA_MAINTENANCE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1727,9 +1596,7 @@ routing key. `WEBHOOK`: URL endpoint.
 <h4 id="alerttargetroute">Alert<wbr>Target<wbr>Route</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1738,8 +1605,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1747,8 +1613,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1756,14 +1621,11 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1772,8 +1634,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1781,8 +1642,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1790,14 +1650,11 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1806,8 +1663,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1815,8 +1671,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1824,14 +1679,11 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1840,8 +1692,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notification method used for notification target. One of `WEBHOOK`, `EMAIL`, `PAGERDUTY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1849,8 +1700,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1858,8 +1708,7 @@ routing key. `WEBHOOK`: URL endpoint.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

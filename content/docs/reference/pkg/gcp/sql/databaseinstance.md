@@ -180,8 +180,7 @@ The DatabaseInstance resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clone_csharp">
 <a href="#clone_csharp" style="color: inherit; text-decoration: inherit;">Clone</a>
@@ -190,8 +189,7 @@ The DatabaseInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_csharp">
 <a href="#databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -206,8 +204,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -216,8 +213,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkeyname_csharp">
 <a href="#encryptionkeyname_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
@@ -233,8 +229,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterinstancename_csharp">
 <a href="#masterinstancename_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -245,8 +240,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -255,8 +249,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -265,8 +258,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -280,8 +272,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicaconfiguration_csharp">
 <a href="#replicaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
@@ -291,8 +282,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorebackupcontext_csharp">
 <a href="#restorebackupcontext_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
@@ -300,8 +290,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootpassword_csharp">
 <a href="#rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -310,8 +299,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -321,13 +309,11 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clone_go">
 <a href="#clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
@@ -336,8 +322,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_go">
 <a href="#databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -352,8 +337,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -362,8 +346,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkeyname_go">
 <a href="#encryptionkeyname_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
@@ -379,8 +362,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterinstancename_go">
 <a href="#masterinstancename_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -391,8 +373,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -401,8 +382,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -411,8 +391,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -426,8 +405,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicaconfiguration_go">
 <a href="#replicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
@@ -437,8 +415,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorebackupcontext_go">
 <a href="#restorebackupcontext_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
@@ -446,8 +423,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootpassword_go">
 <a href="#rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -456,8 +432,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -467,13 +442,11 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clone_nodejs">
 <a href="#clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
@@ -482,8 +455,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseversion_nodejs">
 <a href="#databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
@@ -498,8 +470,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -508,8 +479,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionkeyname_nodejs">
 <a href="#encryptionkeyname_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Name</a>
@@ -525,8 +495,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterinstancename_nodejs">
 <a href="#masterinstancename_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Name</a>
@@ -537,8 +506,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,8 +515,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -557,8 +524,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -572,8 +538,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicaconfiguration_nodejs">
 <a href="#replicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configuration</a>
@@ -583,8 +548,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorebackupcontext_nodejs">
 <a href="#restorebackupcontext_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Context</a>
@@ -592,8 +556,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootpassword_nodejs">
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
@@ -602,8 +565,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -613,13 +575,11 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clone_python">
 <a href="#clone_python" style="color: inherit; text-decoration: inherit;">clone</a>
@@ -628,8 +588,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_version_python">
 <a href="#database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
@@ -644,8 +603,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -654,8 +612,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_key_name_python">
 <a href="#encryption_key_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>name</a>
@@ -671,8 +628,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_instance_name_python">
 <a href="#master_instance_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>name</a>
@@ -683,8 +639,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -693,8 +648,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -703,8 +657,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -718,8 +671,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replica_configuration_python">
 <a href="#replica_configuration_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configuration</a>
@@ -729,8 +681,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_backup_context_python">
 <a href="#restore_backup_context_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>backup_<wbr>context</a>
@@ -738,8 +689,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_password_python">
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
@@ -748,8 +698,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -759,8 +708,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -771,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionname_csharp">
 <a href="#connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -782,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstipaddress_csharp">
 <a href="#firstipaddress_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Ip<wbr>Address</a>
@@ -792,8 +738,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -801,8 +746,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -810,8 +754,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">List&lt;Database<wbr>Instance<wbr>Ip<wbr>Address&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -820,8 +763,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -830,8 +772,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -840,8 +781,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_csharp">
 <a href="#servercacerts_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -849,8 +789,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">List&lt;Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemailaddress_csharp">
 <a href="#serviceaccountemailaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -860,13 +799,11 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionname_go">
 <a href="#connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -876,8 +813,7 @@ instance.
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstipaddress_go">
 <a href="#firstipaddress_go" style="color: inherit; text-decoration: inherit;">First<wbr>Ip<wbr>Address</a>
@@ -886,8 +822,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -895,8 +830,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -904,8 +838,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">[]Database<wbr>Instance<wbr>Ip<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -914,8 +847,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -924,8 +856,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -934,8 +865,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_go">
 <a href="#servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -943,8 +873,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">[]Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemailaddress_go">
 <a href="#serviceaccountemailaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -954,13 +883,11 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionname_nodejs">
 <a href="#connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
@@ -970,8 +897,7 @@ instance.
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstipaddress_nodejs">
 <a href="#firstipaddress_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Ip<wbr>Address</a>
@@ -980,8 +906,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -989,8 +914,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -998,8 +922,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">Database<wbr>Instance<wbr>Ip<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -1008,8 +931,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -1018,8 +940,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1028,8 +949,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacerts_nodejs">
 <a href="#servercacerts_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Certs</a>
@@ -1037,8 +957,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccountemailaddress_nodejs">
 <a href="#serviceaccountemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -1048,13 +967,11 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_name_python">
 <a href="#connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
@@ -1064,8 +981,7 @@ instance.
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="first_ip_address_python">
 <a href="#first_ip_address_python" style="color: inherit; text-decoration: inherit;">first_<wbr>ip_<wbr>address</a>
@@ -1074,8 +990,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1083,8 +998,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -1092,8 +1006,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">Sequence[Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -1102,8 +1015,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -1112,8 +1024,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1122,8 +1033,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_ca_certs_python">
 <a href="#server_ca_certs_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>certs</a>
@@ -1131,8 +1041,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">Sequence[Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_account_email_address_python">
 <a href="#service_account_email_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email_<wbr>address</a>
@@ -1142,8 +1051,7 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1270,8 +1178,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clone_csharp">
 <a href="#state_clone_csharp" style="color: inherit; text-decoration: inherit;">Clone</a>
@@ -1280,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionname_csharp">
 <a href="#state_connectionname_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -1291,8 +1197,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databaseversion_csharp">
 <a href="#state_databaseversion_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -1307,8 +1212,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_csharp">
 <a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -1317,8 +1221,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkeyname_csharp">
 <a href="#state_encryptionkeyname_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
@@ -1334,8 +1237,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstipaddress_csharp">
 <a href="#state_firstipaddress_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Ip<wbr>Address</a>
@@ -1344,8 +1246,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_csharp">
 <a href="#state_ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1353,8 +1254,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">List&lt;Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancename_csharp">
 <a href="#state_masterinstancename_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -1365,8 +1265,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1375,8 +1274,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_csharp">
 <a href="#state_privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -1385,8 +1283,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1395,8 +1292,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddress_csharp">
 <a href="#state_publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -1405,8 +1301,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1420,8 +1315,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicaconfiguration_csharp">
 <a href="#state_replicaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
@@ -1431,8 +1325,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorebackupcontext_csharp">
 <a href="#state_restorebackupcontext_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
@@ -1440,8 +1333,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_csharp">
 <a href="#state_rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -1450,8 +1342,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1460,8 +1351,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacerts_csharp">
 <a href="#state_servercacerts_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -1469,8 +1359,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">List&lt;Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemailaddress_csharp">
 <a href="#state_serviceaccountemailaddress_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -1480,8 +1369,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1491,13 +1379,11 @@ instance.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clone_go">
 <a href="#state_clone_go" style="color: inherit; text-decoration: inherit;">Clone</a>
@@ -1506,8 +1392,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionname_go">
 <a href="#state_connectionname_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Name</a>
@@ -1517,8 +1402,7 @@ configuration is detailed below. Required if `clone` is not set.
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databaseversion_go">
 <a href="#state_databaseversion_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Version</a>
@@ -1533,8 +1417,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_go">
 <a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -1543,8 +1426,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkeyname_go">
 <a href="#state_encryptionkeyname_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Name</a>
@@ -1560,8 +1442,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstipaddress_go">
 <a href="#state_firstipaddress_go" style="color: inherit; text-decoration: inherit;">First<wbr>Ip<wbr>Address</a>
@@ -1570,8 +1451,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_go">
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1579,8 +1459,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">[]Database<wbr>Instance<wbr>Ip<wbr>Address</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancename_go">
 <a href="#state_masterinstancename_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Name</a>
@@ -1591,8 +1470,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1601,8 +1479,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_go">
 <a href="#state_privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -1611,8 +1488,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1621,8 +1497,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddress_go">
 <a href="#state_publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -1631,8 +1506,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1646,8 +1520,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicaconfiguration_go">
 <a href="#state_replicaconfiguration_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Configuration</a>
@@ -1657,8 +1530,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorebackupcontext_go">
 <a href="#state_restorebackupcontext_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
@@ -1666,8 +1538,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_go">
 <a href="#state_rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -1676,8 +1547,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1686,8 +1556,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacerts_go">
 <a href="#state_servercacerts_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Certs</a>
@@ -1695,8 +1564,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">[]Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemailaddress_go">
 <a href="#state_serviceaccountemailaddress_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -1706,8 +1574,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1717,13 +1584,11 @@ instance.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clone_nodejs">
 <a href="#state_clone_nodejs" style="color: inherit; text-decoration: inherit;">clone</a>
@@ -1732,8 +1597,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionname_nodejs">
 <a href="#state_connectionname_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Name</a>
@@ -1743,8 +1607,7 @@ configuration is detailed below. Required if `clone` is not set.
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databaseversion_nodejs">
 <a href="#state_databaseversion_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Version</a>
@@ -1759,8 +1622,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_nodejs">
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -1769,8 +1631,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionkeyname_nodejs">
 <a href="#state_encryptionkeyname_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Name</a>
@@ -1786,8 +1647,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstipaddress_nodejs">
 <a href="#state_firstipaddress_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Ip<wbr>Address</a>
@@ -1796,8 +1656,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_nodejs">
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -1805,8 +1664,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">Database<wbr>Instance<wbr>Ip<wbr>Address[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancename_nodejs">
 <a href="#state_masterinstancename_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Name</a>
@@ -1817,8 +1675,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1827,8 +1684,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddress_nodejs">
 <a href="#state_privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -1837,8 +1693,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1847,8 +1702,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddress_nodejs">
 <a href="#state_publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -1857,8 +1711,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1872,8 +1725,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicaconfiguration_nodejs">
 <a href="#state_replicaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Configuration</a>
@@ -1883,8 +1735,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorebackupcontext_nodejs">
 <a href="#state_restorebackupcontext_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Context</a>
@@ -1892,8 +1743,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_nodejs">
 <a href="#state_rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
@@ -1902,8 +1752,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1912,8 +1761,7 @@ configuration is detailed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacerts_nodejs">
 <a href="#state_servercacerts_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Certs</a>
@@ -1921,8 +1769,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemailaddress_nodejs">
 <a href="#state_serviceaccountemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email<wbr>Address</a>
@@ -1932,8 +1779,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1943,13 +1789,11 @@ instance.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clone_python">
 <a href="#state_clone_python" style="color: inherit; text-decoration: inherit;">clone</a>
@@ -1958,8 +1802,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type"><a href="#databaseinstanceclone">Database<wbr>Instance<wbr>Clone<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for creating a new instance as a clone of another instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_name_python">
 <a href="#state_connection_name_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>name</a>
@@ -1969,8 +1812,7 @@ configuration is detailed below. Required if `clone` is not set.
     </dt>
     <dd>{{% md %}}The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_version_python">
 <a href="#state_database_version_python" style="color: inherit; text-decoration: inherit;">database_<wbr>version</a>
@@ -1985,8 +1827,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 `SQLSERVER_2017_ENTERPRISE`, `SQLSERVER_2017_EXPRESS`, `SQLSERVER_2017_WEB`.
 [Database Version Policies](https://cloud.google.com/sql/docs/db-versions)
 includes an up-to-date reference of supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_protection_python">
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -1995,8 +1836,7 @@ includes an up-to-date reference of supported versions.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to block Terraform from deleting a SQL Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_key_name_python">
 <a href="#state_encryption_key_name_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>name</a>
@@ -2012,8 +1852,7 @@ granted permission on this key.  This step can currently only be done
 manually, please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#service-account).
 That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decrypter` role on your
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_first_ip_address_python">
 <a href="#state_first_ip_address_python" style="color: inherit; text-decoration: inherit;">first_<wbr>ip_<wbr>address</a>
@@ -2022,8 +1861,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_addresses_python">
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -2031,8 +1869,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">Sequence[Database<wbr>Instance<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_instance_name_python">
 <a href="#state_master_instance_name_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>name</a>
@@ -2043,8 +1880,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
     <dd>{{% md %}}The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 `binary_log_enabled` set, as well as existing backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2053,8 +1889,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_address_python">
 <a href="#state_private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -2063,8 +1898,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first private (`PRIVATE`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2073,8 +1907,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_ip_address_python">
 <a href="#state_public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -2083,8 +1916,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The first public (`PRIMARY`) IPv4 address assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2098,8 +1930,7 @@ A valid region must be provided to use this resource. If a region is not provide
 the provider region will be used instead, but this will be an apply-time error for instances if the provider
 region is not supported with Cloud SQL. If you choose not to provide the `region` argument for this resource,
 make sure you understand this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replica_configuration_python">
 <a href="#state_replica_configuration_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>configuration</a>
@@ -2109,8 +1940,7 @@ make sure you understand this.
     </dt>
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_backup_context_python">
 <a href="#state_restore_backup_context_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>backup_<wbr>context</a>
@@ -2118,8 +1948,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_password_python">
 <a href="#state_root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
@@ -2128,8 +1957,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2138,8 +1966,7 @@ configuration is detailed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_ca_certs_python">
 <a href="#state_server_ca_certs_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>certs</a>
@@ -2147,8 +1974,7 @@ configuration is detailed below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceservercacert">Sequence[Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_email_address_python">
 <a href="#state_service_account_email_address_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email_<wbr>address</a>
@@ -2158,8 +1984,7 @@ configuration is detailed below.
     </dt>
     <dd>{{% md %}}The service account email address assigned to the
 instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -2169,8 +1994,7 @@ instance.
     </dt>
     <dd>{{% md %}}The settings to use for the database. The
 configuration is detailed below. Required if `clone` is not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2185,8 +2009,7 @@ configuration is detailed below. Required if `clone` is not set.
 <h4 id="databaseinstanceclone">Database<wbr>Instance<wbr>Clone</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pointintime_csharp">
 <a href="#pointintime_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
@@ -2195,8 +2018,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_csharp">
 <a href="#sourceinstancename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -2205,13 +2027,11 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pointintime_go">
 <a href="#pointintime_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time</a>
@@ -2220,8 +2040,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_go">
 <a href="#sourceinstancename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance<wbr>Name</a>
@@ -2230,13 +2049,11 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pointintime_nodejs">
 <a href="#pointintime_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time</a>
@@ -2245,8 +2062,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceinstancename_nodejs">
 <a href="#sourceinstancename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance<wbr>Name</a>
@@ -2255,13 +2071,11 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="point_in_time_python">
 <a href="#point_in_time_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time</a>
@@ -2270,8 +2084,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of the point in time that should be restored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_instance_name_python">
 <a href="#source_instance_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance_<wbr>name</a>
@@ -2280,15 +2093,13 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source instance which will be cloned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstanceipaddress">Database<wbr>Instance<wbr>Ip<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2296,8 +2107,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoretire_csharp">
 <a href="#timetoretire_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Retire</a>
@@ -2305,8 +2115,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2314,13 +2123,11 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2328,8 +2135,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoretire_go">
 <a href="#timetoretire_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Retire</a>
@@ -2337,8 +2143,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2346,13 +2151,11 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2360,8 +2163,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timetoretire_nodejs">
 <a href="#timetoretire_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Retire</a>
@@ -2369,8 +2171,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2378,13 +2179,11 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2392,8 +2191,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_to_retire_python">
 <a href="#time_to_retire_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>retire</a>
@@ -2401,8 +2199,7 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2410,15 +2207,13 @@ configuration is detailed below. Required if `clone` is not set.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacertificate_csharp">
 <a href="#cacertificate_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -2428,8 +2223,7 @@ configuration is detailed below. Required if `clone` is not set.
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificate_csharp">
 <a href="#clientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -2439,8 +2233,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_csharp">
 <a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -2450,8 +2243,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The
 corresponding public key in encoded in the `client_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectretryinterval_csharp">
 <a href="#connectretryinterval_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Retry<wbr>Interval</a>
@@ -2461,8 +2253,7 @@ corresponding public key in encoded in the `client_certificate`.
     </dt>
     <dd>{{% md %}}The number of seconds
 between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dumpfilepath_csharp">
 <a href="#dumpfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dump<wbr>File<wbr>Path</a>
@@ -2472,8 +2263,7 @@ between connect retries.
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica
 instances are created. Format is `gs://bucket/filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failovertarget_csharp">
 <a href="#failovertarget_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Target</a>
@@ -2485,8 +2275,7 @@ instances are created. Format is `gs://bucket/filename`.
 If the field is set to true the replica will be designated as a failover replica.
 If the master instance fails, the replica instance will be promoted as
 the new master instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterheartbeatperiod_csharp">
 <a href="#masterheartbeatperiod_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -2496,8 +2285,7 @@ the new master instance.
     </dt>
     <dd>{{% md %}}Time in ms between replication
 heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2506,8 +2294,7 @@ heartbeats.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcipher_csharp">
 <a href="#sslcipher_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -2515,8 +2302,7 @@ heartbeats.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2525,8 +2311,7 @@ heartbeats.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyservercertificate_csharp">
 <a href="#verifyservercertificate_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Server<wbr>Certificate</a>
@@ -2536,13 +2321,11 @@ heartbeats.
     </dt>
     <dd>{{% md %}}True if the master's common name
 value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacertificate_go">
 <a href="#cacertificate_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -2552,8 +2335,7 @@ value is checked during the SSL handshake.
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificate_go">
 <a href="#clientcertificate_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate</a>
@@ -2563,8 +2345,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_go">
 <a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -2574,8 +2355,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The
 corresponding public key in encoded in the `client_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectretryinterval_go">
 <a href="#connectretryinterval_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Retry<wbr>Interval</a>
@@ -2585,8 +2365,7 @@ corresponding public key in encoded in the `client_certificate`.
     </dt>
     <dd>{{% md %}}The number of seconds
 between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dumpfilepath_go">
 <a href="#dumpfilepath_go" style="color: inherit; text-decoration: inherit;">Dump<wbr>File<wbr>Path</a>
@@ -2596,8 +2375,7 @@ between connect retries.
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica
 instances are created. Format is `gs://bucket/filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failovertarget_go">
 <a href="#failovertarget_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Target</a>
@@ -2609,8 +2387,7 @@ instances are created. Format is `gs://bucket/filename`.
 If the field is set to true the replica will be designated as a failover replica.
 If the master instance fails, the replica instance will be promoted as
 the new master instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterheartbeatperiod_go">
 <a href="#masterheartbeatperiod_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Heartbeat<wbr>Period</a>
@@ -2620,8 +2397,7 @@ the new master instance.
     </dt>
     <dd>{{% md %}}Time in ms between replication
 heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2630,8 +2406,7 @@ heartbeats.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcipher_go">
 <a href="#sslcipher_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cipher</a>
@@ -2639,8 +2414,7 @@ heartbeats.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2649,8 +2423,7 @@ heartbeats.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyservercertificate_go">
 <a href="#verifyservercertificate_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Server<wbr>Certificate</a>
@@ -2660,13 +2433,11 @@ heartbeats.
     </dt>
     <dd>{{% md %}}True if the master's common name
 value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacertificate_nodejs">
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
@@ -2676,8 +2447,7 @@ value is checked during the SSL handshake.
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificate_nodejs">
 <a href="#clientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate</a>
@@ -2687,8 +2457,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_nodejs">
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -2698,8 +2467,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The
 corresponding public key in encoded in the `client_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectretryinterval_nodejs">
 <a href="#connectretryinterval_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Retry<wbr>Interval</a>
@@ -2709,8 +2477,7 @@ corresponding public key in encoded in the `client_certificate`.
     </dt>
     <dd>{{% md %}}The number of seconds
 between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dumpfilepath_nodejs">
 <a href="#dumpfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dump<wbr>File<wbr>Path</a>
@@ -2720,8 +2487,7 @@ between connect retries.
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica
 instances are created. Format is `gs://bucket/filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failovertarget_nodejs">
 <a href="#failovertarget_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Target</a>
@@ -2733,8 +2499,7 @@ instances are created. Format is `gs://bucket/filename`.
 If the field is set to true the replica will be designated as a failover replica.
 If the master instance fails, the replica instance will be promoted as
 the new master instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masterheartbeatperiod_nodejs">
 <a href="#masterheartbeatperiod_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Heartbeat<wbr>Period</a>
@@ -2744,8 +2509,7 @@ the new master instance.
     </dt>
     <dd>{{% md %}}Time in ms between replication
 heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2754,8 +2518,7 @@ heartbeats.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcipher_nodejs">
 <a href="#sslcipher_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cipher</a>
@@ -2763,8 +2526,7 @@ heartbeats.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2773,8 +2535,7 @@ heartbeats.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyservercertificate_nodejs">
 <a href="#verifyservercertificate_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Server<wbr>Certificate</a>
@@ -2784,13 +2545,11 @@ heartbeats.
     </dt>
     <dd>{{% md %}}True if the master's common name
 value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_certificate_python">
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
@@ -2800,8 +2559,7 @@ value is checked during the SSL handshake.
     </dt>
     <dd>{{% md %}}PEM representation of the trusted CA's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_python">
 <a href="#client_certificate_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate</a>
@@ -2811,8 +2569,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's x509
 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_key_python">
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -2822,8 +2579,7 @@ certificate.
     </dt>
     <dd>{{% md %}}PEM representation of the replica's private key. The
 corresponding public key in encoded in the `client_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_retry_interval_python">
 <a href="#connect_retry_interval_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>retry_<wbr>interval</a>
@@ -2833,8 +2589,7 @@ corresponding public key in encoded in the `client_certificate`.
     </dt>
     <dd>{{% md %}}The number of seconds
 between connect retries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dump_file_path_python">
 <a href="#dump_file_path_python" style="color: inherit; text-decoration: inherit;">dump_<wbr>file_<wbr>path</a>
@@ -2844,8 +2599,7 @@ between connect retries.
     </dt>
     <dd>{{% md %}}Path to a SQL file in GCS from which replica
 instances are created. Format is `gs://bucket/filename`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_target_python">
 <a href="#failover_target_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>target</a>
@@ -2857,8 +2611,7 @@ instances are created. Format is `gs://bucket/filename`.
 If the field is set to true the replica will be designated as a failover replica.
 If the master instance fails, the replica instance will be promoted as
 the new master instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_heartbeat_period_python">
 <a href="#master_heartbeat_period_python" style="color: inherit; text-decoration: inherit;">master_<wbr>heartbeat_<wbr>period</a>
@@ -2868,8 +2621,7 @@ the new master instance.
     </dt>
     <dd>{{% md %}}Time in ms between replication
 heartbeats.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2878,8 +2630,7 @@ heartbeats.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for the replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cipher_python">
 <a href="#ssl_cipher_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cipher</a>
@@ -2887,8 +2638,7 @@ heartbeats.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2897,8 +2647,7 @@ heartbeats.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for replication connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_server_certificate_python">
 <a href="#verify_server_certificate_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>server_<wbr>certificate</a>
@@ -2908,15 +2657,13 @@ heartbeats.
     </dt>
     <dd>{{% md %}}True if the master's common name
 value is checked during the SSL handshake.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuprunid_csharp">
 <a href="#backuprunid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
@@ -2925,8 +2672,7 @@ value is checked during the SSL handshake.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the backup run to restore from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -2936,8 +2682,7 @@ value is checked during the SSL handshake.
     </dt>
     <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
 this instance's ID will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2946,13 +2691,11 @@ this instance's ID will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuprunid_go">
 <a href="#backuprunid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
@@ -2961,8 +2704,7 @@ this instance's ID will be used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the backup run to restore from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -2972,8 +2714,7 @@ this instance's ID will be used.
     </dt>
     <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
 this instance's ID will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2982,13 +2723,11 @@ this instance's ID will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backuprunid_nodejs">
 <a href="#backuprunid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Run<wbr>Id</a>
@@ -2997,8 +2736,7 @@ this instance's ID will be used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the backup run to restore from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -3008,8 +2746,7 @@ this instance's ID will be used.
     </dt>
     <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
 this instance's ID will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3018,13 +2755,11 @@ this instance's ID will be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_run_id_python">
 <a href="#backup_run_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>run_<wbr>id</a>
@@ -3033,8 +2768,7 @@ this instance's ID will be used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the backup run to restore from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -3044,8 +2778,7 @@ this instance's ID will be used.
     </dt>
     <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
 this instance's ID will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3054,15 +2787,13 @@ this instance's ID will be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full project ID of the source instance.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -3070,8 +2801,7 @@ this instance's ID will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -3079,8 +2809,7 @@ this instance's ID will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -3088,8 +2817,7 @@ this instance's ID will be used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -3099,8 +2827,7 @@ this instance's ID will be used.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1fingerprint_csharp">
 <a href="#sha1fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -3108,13 +2835,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -3122,8 +2847,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -3131,8 +2855,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -3140,8 +2863,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -3151,8 +2873,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1fingerprint_go">
 <a href="#sha1fingerprint_go" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -3160,13 +2881,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -3174,8 +2893,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -3183,8 +2901,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -3192,8 +2909,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -3203,8 +2919,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1fingerprint_nodejs">
 <a href="#sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
@@ -3212,13 +2927,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -3226,8 +2939,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -3235,8 +2947,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -3244,8 +2955,7 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -3255,8 +2965,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1_fingerprint_python">
 <a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
@@ -3264,15 +2973,13 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettings">Database<wbr>Instance<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3283,8 +2990,7 @@ formatted date time string indicating when this whitelist expires.
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
 for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationpolicy_csharp">
 <a href="#activationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
@@ -3294,8 +3000,7 @@ and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Ty
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="authorizedgaeapplications_csharp">
 <a href="#authorizedgaeapplications_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
@@ -3307,8 +3012,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitytype_csharp">
 <a href="#availabilitytype_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -3320,8 +3024,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
 instances, ensure that `settings.backup_configuration.enabled` and
 `settings.backup_configuration.binary_log_enabled` are both set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupconfiguration_csharp">
 <a href="#backupconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
@@ -3329,8 +3032,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="crashsafereplication_csharp">
 <a href="#crashsafereplication_csharp" style="color: inherit; text-decoration: inherit;">Crash<wbr>Safe<wbr>Replication</a>
@@ -3343,8 +3045,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 for information on how to upgrade to Second Generation instances.
 Specific to read instances, indicates
 when crash-safe replication flags are enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="databaseflags_csharp">
 <a href="#databaseflags_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -3352,8 +3053,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">List&lt;Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskautoresize_csharp">
 <a href="#diskautoresize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize</a>
@@ -3362,8 +3062,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_csharp">
 <a href="#disksize_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -3372,8 +3071,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -3382,8 +3080,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD or PD_HDD.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insightsconfig_csharp">
 <a href="#insightsconfig_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Config</a>
@@ -3391,8 +3088,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_csharp">
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
@@ -3400,8 +3096,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationpreference_csharp">
 <a href="#locationpreference_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
@@ -3409,8 +3104,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_csharp">
 <a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -3418,8 +3112,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingplan_csharp">
 <a href="#pricingplan_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
@@ -3428,8 +3121,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance, can only be `PER_USE`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="replicationtype_csharp">
 <a href="#replicationtype_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -3441,8 +3133,7 @@ when crash-safe replication flags are enabled.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="userlabels_csharp">
 <a href="#userlabels_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -3451,8 +3142,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3460,13 +3150,11 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3477,8 +3165,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
 for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationpolicy_go">
 <a href="#activationpolicy_go" style="color: inherit; text-decoration: inherit;">Activation<wbr>Policy</a>
@@ -3488,8 +3175,7 @@ and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Ty
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="authorizedgaeapplications_go">
 <a href="#authorizedgaeapplications_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Gae<wbr>Applications</a>
@@ -3501,8 +3187,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitytype_go">
 <a href="#availabilitytype_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Type</a>
@@ -3514,8 +3199,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
 instances, ensure that `settings.backup_configuration.enabled` and
 `settings.backup_configuration.binary_log_enabled` are both set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupconfiguration_go">
 <a href="#backupconfiguration_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Configuration</a>
@@ -3523,8 +3207,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="crashsafereplication_go">
 <a href="#crashsafereplication_go" style="color: inherit; text-decoration: inherit;">Crash<wbr>Safe<wbr>Replication</a>
@@ -3537,8 +3220,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 for information on how to upgrade to Second Generation instances.
 Specific to read instances, indicates
 when crash-safe replication flags are enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="databaseflags_go">
 <a href="#databaseflags_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Flags</a>
@@ -3546,8 +3228,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">[]Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskautoresize_go">
 <a href="#diskautoresize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Autoresize</a>
@@ -3556,8 +3237,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_go">
 <a href="#disksize_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size</a>
@@ -3566,8 +3246,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -3576,8 +3255,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD or PD_HDD.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insightsconfig_go">
 <a href="#insightsconfig_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Config</a>
@@ -3585,8 +3263,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_go">
 <a href="#ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
@@ -3594,8 +3271,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationpreference_go">
 <a href="#locationpreference_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Preference</a>
@@ -3603,8 +3279,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_go">
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -3612,8 +3287,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingplan_go">
 <a href="#pricingplan_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Plan</a>
@@ -3622,8 +3296,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance, can only be `PER_USE`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="replicationtype_go">
 <a href="#replicationtype_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Type</a>
@@ -3635,8 +3308,7 @@ when crash-safe replication flags are enabled.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="userlabels_go">
 <a href="#userlabels_go" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
@@ -3645,8 +3317,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3654,13 +3325,11 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3671,8 +3340,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
 for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activationpolicy_nodejs">
 <a href="#activationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">activation<wbr>Policy</a>
@@ -3682,8 +3350,7 @@ and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Ty
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="authorizedgaeapplications_nodejs">
 <a href="#authorizedgaeapplications_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Gae<wbr>Applications</a>
@@ -3695,8 +3362,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="availabilitytype_nodejs">
 <a href="#availabilitytype_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Type</a>
@@ -3708,8 +3374,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
 instances, ensure that `settings.backup_configuration.enabled` and
 `settings.backup_configuration.binary_log_enabled` are both set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupconfiguration_nodejs">
 <a href="#backupconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Configuration</a>
@@ -3717,8 +3382,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="crashsafereplication_nodejs">
 <a href="#crashsafereplication_nodejs" style="color: inherit; text-decoration: inherit;">crash<wbr>Safe<wbr>Replication</a>
@@ -3731,8 +3395,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 for information on how to upgrade to Second Generation instances.
 Specific to read instances, indicates
 when crash-safe replication flags are enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="databaseflags_nodejs">
 <a href="#databaseflags_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Flags</a>
@@ -3740,8 +3403,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskautoresize_nodejs">
 <a href="#diskautoresize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Autoresize</a>
@@ -3750,8 +3412,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksize_nodejs">
 <a href="#disksize_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size</a>
@@ -3760,8 +3421,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -3770,8 +3430,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD or PD_HDD.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insightsconfig_nodejs">
 <a href="#insightsconfig_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Config</a>
@@ -3779,8 +3438,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_nodejs">
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
@@ -3788,8 +3446,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locationpreference_nodejs">
 <a href="#locationpreference_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Preference</a>
@@ -3797,8 +3454,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_nodejs">
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -3806,8 +3462,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingplan_nodejs">
 <a href="#pricingplan_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Plan</a>
@@ -3816,8 +3471,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance, can only be `PER_USE`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="replicationtype_nodejs">
 <a href="#replicationtype_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Type</a>
@@ -3829,8 +3483,7 @@ when crash-safe replication flags are enabled.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="userlabels_nodejs">
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
@@ -3839,8 +3492,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3848,13 +3500,11 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -3865,8 +3515,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
     <dd>{{% md %}}The machine type to use. See [tiers](https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers)
 for more details and supported versions. Postgres supports only shared-core machine types such as `db-f1-micro`,
 and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activation_policy_python">
 <a href="#activation_policy_python" style="color: inherit; text-decoration: inherit;">activation_<wbr>policy</a>
@@ -3876,8 +3525,7 @@ and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Ty
     </dt>
     <dd>{{% md %}}This specifies when the instance should be
 active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="authorized_gae_applications_python">
 <a href="#authorized_gae_applications_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>gae_<wbr>applications</a>
@@ -3889,8 +3537,7 @@ active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 A list of Google App Engine (GAE) project names that are allowed to access this instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="availability_type_python">
 <a href="#availability_type_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>type</a>
@@ -3902,8 +3549,7 @@ A list of Google App Engine (GAE) project names that are allowed to access this 
 instance, high availability (`REGIONAL`) or single zone (`ZONAL`).' For MySQL
 instances, ensure that `settings.backup_configuration.enabled` and
 `settings.backup_configuration.binary_log_enabled` are both set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_configuration_python">
 <a href="#backup_configuration_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>configuration</a>
@@ -3911,8 +3557,7 @@ instances, ensure that `settings.backup_configuration.enabled` and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="crash_safe_replication_python">
 <a href="#crash_safe_replication_python" style="color: inherit; text-decoration: inherit;">crash_<wbr>safe_<wbr>replication</a>
@@ -3925,8 +3570,7 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 for information on how to upgrade to Second Generation instances.
 Specific to read instances, indicates
 when crash-safe replication flags are enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="database_flags_python">
 <a href="#database_flags_python" style="color: inherit; text-decoration: inherit;">database_<wbr>flags</a>
@@ -3934,8 +3578,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsdatabaseflag">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_autoresize_python">
 <a href="#disk_autoresize_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>autoresize</a>
@@ -3944,8 +3587,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configuration to increase storage size automatically.  Note that future `pulumi apply` calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_python">
 <a href="#disk_size_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size</a>
@@ -3954,8 +3596,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -3964,8 +3605,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data disk: PD_SSD or PD_HDD.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insights_config_python">
 <a href="#insights_config_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>config</a>
@@ -3973,8 +3613,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_configuration_python">
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
@@ -3982,8 +3621,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_preference_python">
 <a href="#location_preference_python" style="color: inherit; text-decoration: inherit;">location_<wbr>preference</a>
@@ -3991,8 +3629,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_python">
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -4000,8 +3637,7 @@ when crash-safe replication flags are enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricing_plan_python">
 <a href="#pricing_plan_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>plan</a>
@@ -4010,8 +3646,7 @@ when crash-safe replication flags are enabled.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pricing plan for this instance, can only be `PER_USE`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="replication_type_python">
 <a href="#replication_type_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>type</a>
@@ -4023,8 +3658,7 @@ when crash-safe replication flags are enabled.
 First Generation instances are now deprecated, see [here](https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen)
 for information on how to upgrade to Second Generation instances.
 Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property is only applicable to First Generation instances, and First Generation instances are now deprecated.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="user_labels_python">
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
@@ -4033,8 +3667,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value user label pairs to assign to the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4042,15 +3675,13 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarylogenabled_csharp">
 <a href="#binarylogenabled_csharp" style="color: inherit; text-decoration: inherit;">Binary<wbr>Log<wbr>Enabled</a>
@@ -4061,8 +3692,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
     <dd>{{% md %}}True if binary logging is enabled. If
 `settings.backup_configuration.enabled` is false, this must be as well.
 Cannot be used with Postgres.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4071,8 +3701,7 @@ Cannot be used with Postgres.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -4081,8 +3710,7 @@ Cannot be used with Postgres.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the backup will be stored
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pointintimerecoveryenabled_csharp">
 <a href="#pointintimerecoveryenabled_csharp" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
@@ -4091,8 +3719,7 @@ Cannot be used with Postgres.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -4102,13 +3729,11 @@ Cannot be used with Postgres.
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup
 configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarylogenabled_go">
 <a href="#binarylogenabled_go" style="color: inherit; text-decoration: inherit;">Binary<wbr>Log<wbr>Enabled</a>
@@ -4119,8 +3744,7 @@ configuration starts.
     <dd>{{% md %}}True if binary logging is enabled. If
 `settings.backup_configuration.enabled` is false, this must be as well.
 Cannot be used with Postgres.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4129,8 +3753,7 @@ Cannot be used with Postgres.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -4139,8 +3762,7 @@ Cannot be used with Postgres.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the backup will be stored
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pointintimerecoveryenabled_go">
 <a href="#pointintimerecoveryenabled_go" style="color: inherit; text-decoration: inherit;">Point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
@@ -4149,8 +3771,7 @@ Cannot be used with Postgres.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -4160,13 +3781,11 @@ Cannot be used with Postgres.
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup
 configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binarylogenabled_nodejs">
 <a href="#binarylogenabled_nodejs" style="color: inherit; text-decoration: inherit;">binary<wbr>Log<wbr>Enabled</a>
@@ -4177,8 +3796,7 @@ configuration starts.
     <dd>{{% md %}}True if binary logging is enabled. If
 `settings.backup_configuration.enabled` is false, this must be as well.
 Cannot be used with Postgres.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4187,8 +3805,7 @@ Cannot be used with Postgres.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -4197,8 +3814,7 @@ Cannot be used with Postgres.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the backup will be stored
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pointintimerecoveryenabled_nodejs">
 <a href="#pointintimerecoveryenabled_nodejs" style="color: inherit; text-decoration: inherit;">point<wbr>In<wbr>Time<wbr>Recovery<wbr>Enabled</a>
@@ -4207,8 +3823,7 @@ Cannot be used with Postgres.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -4218,13 +3833,11 @@ Cannot be used with Postgres.
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup
 configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binary_log_enabled_python">
 <a href="#binary_log_enabled_python" style="color: inherit; text-decoration: inherit;">binary_<wbr>log_<wbr>enabled</a>
@@ -4235,8 +3848,7 @@ configuration starts.
     <dd>{{% md %}}True if binary logging is enabled. If
 `settings.backup_configuration.enabled` is false, this must be as well.
 Cannot be used with Postgres.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4245,8 +3857,7 @@ Cannot be used with Postgres.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if backup configuration is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -4255,8 +3866,7 @@ Cannot be used with Postgres.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the backup will be stored
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="point_in_time_recovery_enabled_python">
 <a href="#point_in_time_recovery_enabled_python" style="color: inherit; text-decoration: inherit;">point_<wbr>in_<wbr>time_<wbr>recovery_<wbr>enabled</a>
@@ -4265,8 +3875,7 @@ Cannot be used with Postgres.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if Point-in-time recovery is enabled. Will restart database if enabled after instance creation. Valid only for PostgreSQL instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -4276,15 +3885,13 @@ Cannot be used with Postgres.
     </dt>
     <dd>{{% md %}}`HH:MM` format time indicating when backup
 configuration starts.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4293,8 +3900,7 @@ configuration starts.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4305,13 +3911,11 @@ configuration starts.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4320,8 +3924,7 @@ the whitelist to become active.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4332,13 +3935,11 @@ the whitelist to become active.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4347,8 +3948,7 @@ the whitelist to become active.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4359,13 +3959,11 @@ the whitelist to become active.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4374,8 +3972,7 @@ the whitelist to become active.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4386,15 +3983,13 @@ the whitelist to become active.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsinsightsconfig">Database<wbr>Instance<wbr>Settings<wbr>Insights<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="queryinsightsenabled_csharp">
 <a href="#queryinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Insights<wbr>Enabled</a>
@@ -4402,8 +3997,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_csharp">
 <a href="#querystringlength_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -4411,8 +4005,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordapplicationtags_csharp">
 <a href="#recordapplicationtags_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
@@ -4420,8 +4013,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordclientaddress_csharp">
 <a href="#recordclientaddress_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
@@ -4429,13 +4021,11 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="queryinsightsenabled_go">
 <a href="#queryinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Insights<wbr>Enabled</a>
@@ -4443,8 +4033,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_go">
 <a href="#querystringlength_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
@@ -4452,8 +4041,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordapplicationtags_go">
 <a href="#recordapplicationtags_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
@@ -4461,8 +4049,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordclientaddress_go">
 <a href="#recordclientaddress_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
@@ -4470,13 +4057,11 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="queryinsightsenabled_nodejs">
 <a href="#queryinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Insights<wbr>Enabled</a>
@@ -4484,8 +4069,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringlength_nodejs">
 <a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
@@ -4493,8 +4077,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordapplicationtags_nodejs">
 <a href="#recordapplicationtags_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Application<wbr>Tags</a>
@@ -4502,8 +4085,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordclientaddress_nodejs">
 <a href="#recordclientaddress_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Client<wbr>Address</a>
@@ -4511,13 +4093,11 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="query_insights_enabled_python">
 <a href="#query_insights_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>insights_<wbr>enabled</a>
@@ -4525,8 +4105,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_length_python">
 <a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
@@ -4534,8 +4113,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_application_tags_python">
 <a href="#record_application_tags_python" style="color: inherit; text-decoration: inherit;">record_<wbr>application_<wbr>tags</a>
@@ -4543,8 +4121,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_client_address_python">
 <a href="#record_client_address_python" style="color: inherit; text-decoration: inherit;">record_<wbr>client_<wbr>address</a>
@@ -4552,15 +4129,13 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_csharp">
 <a href="#authorizednetworks_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -4568,8 +4143,7 @@ the whitelist to become active.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">List&lt;Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4enabled_csharp">
 <a href="#ipv4enabled_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -4580,8 +4154,7 @@ the whitelist to become active.
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
 a public IPV4 address. Either `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetwork_csharp">
 <a href="#privatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Network</a>
@@ -4594,8 +4167,7 @@ instance is accessible for private IP. For example, projects/myProject/global/n
 Specifying a network enables private IP.
 Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressl_csharp">
 <a href="#requiressl_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -4604,13 +4176,11 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_go">
 <a href="#authorizednetworks_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Networks</a>
@@ -4618,8 +4188,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">[]Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4enabled_go">
 <a href="#ipv4enabled_go" style="color: inherit; text-decoration: inherit;">Ipv4Enabled</a>
@@ -4630,8 +4199,7 @@ This setting can be updated, but it cannot be removed after it is set.
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
 a public IPV4 address. Either `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetwork_go">
 <a href="#privatenetwork_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Network</a>
@@ -4644,8 +4212,7 @@ instance is accessible for private IP. For example, projects/myProject/global/n
 Specifying a network enables private IP.
 Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressl_go">
 <a href="#requiressl_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Ssl</a>
@@ -4654,13 +4221,11 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_nodejs">
 <a href="#authorizednetworks_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Networks</a>
@@ -4668,8 +4233,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4enabled_nodejs">
 <a href="#ipv4enabled_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Enabled</a>
@@ -4680,8 +4244,7 @@ This setting can be updated, but it cannot be removed after it is set.
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
 a public IPV4 address. Either `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatenetwork_nodejs">
 <a href="#privatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Network</a>
@@ -4694,8 +4257,7 @@ instance is accessible for private IP. For example, projects/myProject/global/n
 Specifying a network enables private IP.
 Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressl_nodejs">
 <a href="#requiressl_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Ssl</a>
@@ -4704,13 +4266,11 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorized_networks_python">
 <a href="#authorized_networks_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>networks</a>
@@ -4718,8 +4278,7 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstancesettingsipconfigurationauthorizednetwork">Sequence[Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv4_enabled_python">
 <a href="#ipv4_enabled_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>enabled</a>
@@ -4730,8 +4289,7 @@ This setting can be updated, but it cannot be removed after it is set.
     <dd>{{% md %}}Whether this Cloud SQL instance should be assigned
 a public IPV4 address. Either `ipv4_enabled` must be enabled or a
 `private_network` must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_network_python">
 <a href="#private_network_python" style="color: inherit; text-decoration: inherit;">private_<wbr>network</a>
@@ -4744,8 +4302,7 @@ instance is accessible for private IP. For example, projects/myProject/global/n
 Specifying a network enables private IP.
 Either `ipv4_enabled` must be enabled or a `private_network` must be configured.
 This setting can be updated, but it cannot be removed after it is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_ssl_python">
 <a href="#require_ssl_python" style="color: inherit; text-decoration: inherit;">require_<wbr>ssl</a>
@@ -4754,15 +4311,13 @@ This setting can be updated, but it cannot be removed after it is set.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether SSL connections over IP are enforced or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4773,8 +4328,7 @@ This setting can be updated, but it cannot be removed after it is set.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -4784,8 +4338,7 @@ the whitelist to become active.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4794,13 +4347,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4811,8 +4362,7 @@ formatted date time string indicating when this whitelist expires.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -4822,8 +4372,7 @@ the whitelist to become active.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4832,13 +4381,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4849,8 +4396,7 @@ formatted date time string indicating when this whitelist expires.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -4860,8 +4406,7 @@ the whitelist to become active.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4870,13 +4415,11 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4887,8 +4430,7 @@ formatted date time string indicating when this whitelist expires.
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to
 access this instance. Must be set even if other two attributes are not for
 the whitelist to become active.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -4898,8 +4440,7 @@ the whitelist to become active.
     </dt>
     <dd>{{% md %}}The [RFC 3339](https://tools.ietf.org/html/rfc3339)
 formatted date time string indicating when this whitelist expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4908,15 +4449,13 @@ formatted date time string indicating when this whitelist expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for this whitelist entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followgaeapplication_csharp">
 <a href="#followgaeapplication_csharp" style="color: inherit; text-decoration: inherit;">Follow<wbr>Gae<wbr>Application</a>
@@ -4926,8 +4465,7 @@ formatted date time string indicating when this whitelist expires.
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain
 in. Must be in the same region as this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -4937,13 +4475,11 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}The preferred compute engine
 [zone](https://cloud.google.com/compute/docs/zones?hl=en).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followgaeapplication_go">
 <a href="#followgaeapplication_go" style="color: inherit; text-decoration: inherit;">Follow<wbr>Gae<wbr>Application</a>
@@ -4953,8 +4489,7 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain
 in. Must be in the same region as this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -4964,13 +4499,11 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}The preferred compute engine
 [zone](https://cloud.google.com/compute/docs/zones?hl=en).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="followgaeapplication_nodejs">
 <a href="#followgaeapplication_nodejs" style="color: inherit; text-decoration: inherit;">follow<wbr>Gae<wbr>Application</a>
@@ -4980,8 +4513,7 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain
 in. Must be in the same region as this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -4991,13 +4523,11 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}The preferred compute engine
 [zone](https://cloud.google.com/compute/docs/zones?hl=en).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="follow_gae_application_python">
 <a href="#follow_gae_application_python" style="color: inherit; text-decoration: inherit;">follow_<wbr>gae_<wbr>application</a>
@@ -5007,8 +4537,7 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}A GAE application whose zone to remain
 in. Must be in the same region as this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -5018,15 +4547,13 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}The preferred compute engine
 [zone](https://cloud.google.com/compute/docs/zones?hl=en).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -5035,8 +4562,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_csharp">
 <a href="#hour_csharp" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -5045,8 +4571,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetrack_csharp">
 <a href="#updatetrack_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -5056,13 +4581,11 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later
 (`stable`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -5071,8 +4594,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_go">
 <a href="#hour_go" style="color: inherit; text-decoration: inherit;">Hour</a>
@@ -5081,8 +4603,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetrack_go">
 <a href="#updatetrack_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Track</a>
@@ -5092,13 +4613,11 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later
 (`stable`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -5107,8 +4626,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_nodejs">
 <a href="#hour_nodejs" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -5117,8 +4635,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetrack_nodejs">
 <a href="#updatetrack_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Track</a>
@@ -5128,13 +4645,11 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later
 (`stable`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -5143,8 +4658,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of week (`1-7`), starting on Monday
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_python">
 <a href="#hour_python" style="color: inherit; text-decoration: inherit;">hour</a>
@@ -5153,8 +4667,7 @@ in. Must be in the same region as this instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour of day (`0-23`), ignored if `day` not set
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_track_python">
 <a href="#update_track_python" style="color: inherit; text-decoration: inherit;">update_<wbr>track</a>
@@ -5164,8 +4677,7 @@ in. Must be in the same region as this instance.
     </dt>
     <dd>{{% md %}}Receive updates earlier (`canary`) or later
 (`stable`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

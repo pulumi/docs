@@ -1,8 +1,8 @@
 
 ---
 title: "Rdns"
-title_tag: "Resource Rdns | Package Hetzner Cloud"
-meta_desc: "Explore the Rdns resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Reverse DNS Entry to create, modify and reset reverse dns entries for Hetzner Cloud Floating IPs or servers."
+title_tag: "hcloud.Rdns"
+meta_desc: "Documentation for the hcloud.Rdns resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the Rdns resource of the Hetzner Cloud package, including ex
 Provides a Hetzner Cloud Reverse DNS Entry to create, modify and reset reverse dns entries for Hetzner Cloud Floating IPs or servers.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using HCloud = Pulumi.HCloud;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -75,9 +84,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_hcloud as hcloud
@@ -91,9 +103,12 @@ master = hcloud.Rdns("master",
     dns_ptr="example.com")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,9 +125,16 @@ const master = new hcloud.Rdns("master", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Rdns Resource {#create}
@@ -137,9 +159,7 @@ const master = new hcloud.Rdns("master", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -147,9 +167,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -157,9 +175,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -167,10 +183,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +209,7 @@ const master = new hcloud.Rdns("master", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -206,9 +217,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -216,9 +225,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -226,9 +233,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,18 +241,13 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +255,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +263,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,10 +271,7 @@ const master = new hcloud.Rdns("master", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -293,9 +286,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsptr_csharp">
 <a href="#dnsptr_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ptr</a>
@@ -304,8 +295,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -314,8 +304,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingipid_csharp">
 <a href="#floatingipid_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Id</a>
@@ -324,8 +313,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -334,14 +322,11 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsptr_go">
 <a href="#dnsptr_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ptr</a>
@@ -350,8 +335,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -360,8 +344,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingipid_go">
 <a href="#floatingipid_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Id</a>
@@ -370,8 +353,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -380,14 +362,11 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnsptr_nodejs">
 <a href="#dnsptr_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ptr</a>
@@ -396,8 +375,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -406,8 +384,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingipid_nodejs">
 <a href="#floatingipid_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Id</a>
@@ -416,8 +393,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -426,14 +402,11 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dns_ptr_python">
 <a href="#dns_ptr_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ptr</a>
@@ -442,8 +415,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -452,8 +424,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floating_ip_id_python">
 <a href="#floating_ip_id_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>id</a>
@@ -462,8 +433,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_id_python">
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -472,8 +442,7 @@ The Rdns resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -484,9 +453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -494,14 +461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -509,14 +473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -524,14 +485,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -539,8 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -667,9 +624,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dnsptr_csharp">
 <a href="#state_dnsptr_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ptr</a>
@@ -678,8 +633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingipid_csharp">
 <a href="#state_floatingipid_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Id</a>
@@ -688,8 +642,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -698,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_csharp">
 <a href="#state_serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -708,14 +660,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dnsptr_go">
 <a href="#state_dnsptr_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ptr</a>
@@ -724,8 +673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingipid_go">
 <a href="#state_floatingipid_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Id</a>
@@ -734,8 +682,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -744,8 +691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_go">
 <a href="#state_serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -754,14 +700,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dnsptr_nodejs">
 <a href="#state_dnsptr_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ptr</a>
@@ -770,8 +713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingipid_nodejs">
 <a href="#state_floatingipid_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Id</a>
@@ -780,8 +722,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -790,8 +731,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_nodejs">
 <a href="#state_serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -800,14 +740,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dns_ptr_python">
 <a href="#state_dns_ptr_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ptr</a>
@@ -816,8 +753,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS address the `ip_address` should resolve to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floating_ip_id_python">
 <a href="#state_floating_ip_id_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>id</a>
@@ -826,8 +762,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Floating IP the `ip_address` belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -836,8 +771,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address that should point to `dns_ptr`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_id_python">
 <a href="#state_server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -846,8 +780,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The server the `ip_address` belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

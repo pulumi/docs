@@ -280,8 +280,7 @@ The ServerGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -291,8 +290,7 @@ The ServerGroup resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -303,8 +301,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -315,8 +312,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -325,13 +321,11 @@ this creates a new server group.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -341,8 +335,7 @@ this creates a new server group.
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -353,8 +346,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -365,8 +357,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -375,13 +366,11 @@ this creates a new server group.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -391,8 +380,7 @@ this creates a new server group.
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -403,8 +391,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -415,8 +402,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -425,13 +411,11 @@ this creates a new server group.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -441,8 +425,7 @@ this creates a new server group.
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -453,8 +436,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -465,8 +447,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -475,8 +456,7 @@ this creates a new server group.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -487,8 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -496,8 +475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -506,13 +484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -520,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -530,13 +505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -544,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -554,13 +526,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -568,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -578,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -706,8 +674,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_csharp">
 <a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -716,8 +683,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -727,8 +693,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -739,8 +704,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -751,8 +715,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -761,13 +724,11 @@ this creates a new server group.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_go">
 <a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -776,8 +737,7 @@ this creates a new server group.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -787,8 +747,7 @@ this creates a new server group.
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -799,8 +758,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -811,8 +769,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -821,13 +778,11 @@ this creates a new server group.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_nodejs">
 <a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -836,8 +791,7 @@ this creates a new server group.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -847,8 +801,7 @@ this creates a new server group.
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -859,8 +812,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -871,8 +823,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -881,13 +832,11 @@ this creates a new server group.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_python">
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -896,8 +845,7 @@ this creates a new server group.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The instances that are part of this server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -907,8 +855,7 @@ this creates a new server group.
     </dt>
     <dd>{{% md %}}A unique name for the server group. Changing this creates
 a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -919,8 +866,7 @@ a new server group.
     <dd>{{% md %}}The set of policies for the server group. All policies
 are mutually exclusive. See the Policies section for more information.
 Changing this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -931,8 +877,7 @@ Changing this creates a new server group.
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 If omitted, the `region` argument of the provider is used. Changing
 this creates a new server group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -941,8 +886,7 @@ this creates a new server group.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

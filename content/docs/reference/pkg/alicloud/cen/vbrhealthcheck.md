@@ -341,8 +341,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cenid_csharp">
 <a href="#cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -351,8 +350,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthchecktargetip_csharp">
 <a href="#healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
@@ -361,8 +359,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbrinstanceid_csharp">
 <a href="#vbrinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
@@ -371,8 +368,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbrinstanceregionid_csharp">
 <a href="#vbrinstanceregionid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -381,8 +377,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckinterval_csharp">
 <a href="#healthcheckinterval_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
@@ -391,8 +386,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecksourceip_csharp">
 <a href="#healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
@@ -401,8 +395,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_csharp">
 <a href="#healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -411,8 +404,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vbrinstanceownerid_csharp">
 <a href="#vbrinstanceownerid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -421,13 +413,11 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cenid_go">
 <a href="#cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -436,8 +426,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthchecktargetip_go">
 <a href="#healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
@@ -446,8 +435,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbrinstanceid_go">
 <a href="#vbrinstanceid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
@@ -456,8 +444,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbrinstanceregionid_go">
 <a href="#vbrinstanceregionid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -466,8 +453,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckinterval_go">
 <a href="#healthcheckinterval_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
@@ -476,8 +462,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecksourceip_go">
 <a href="#healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
@@ -486,8 +471,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_go">
 <a href="#healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -496,8 +480,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vbrinstanceownerid_go">
 <a href="#vbrinstanceownerid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -506,13 +489,11 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cenid_nodejs">
 <a href="#cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
@@ -521,8 +502,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthchecktargetip_nodejs">
 <a href="#healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
@@ -531,8 +511,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbrinstanceid_nodejs">
 <a href="#vbrinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Id</a>
@@ -541,8 +520,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbrinstanceregionid_nodejs">
 <a href="#vbrinstanceregionid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -551,8 +529,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckinterval_nodejs">
 <a href="#healthcheckinterval_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval</a>
@@ -561,8 +538,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecksourceip_nodejs">
 <a href="#healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
@@ -571,8 +547,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthythreshold_nodejs">
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
@@ -581,8 +556,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vbrinstanceownerid_nodejs">
 <a href="#vbrinstanceownerid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -591,13 +565,11 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cen_id_python">
 <a href="#cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
@@ -606,8 +578,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_check_target_ip_python">
 <a href="#health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
@@ -616,8 +587,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbr_instance_id_python">
 <a href="#vbr_instance_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>id</a>
@@ -626,8 +596,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vbr_instance_region_id_python">
 <a href="#vbr_instance_region_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>region_<wbr>id</a>
@@ -636,8 +605,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_interval_python">
 <a href="#health_check_interval_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval</a>
@@ -646,8 +614,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_source_ip_python">
 <a href="#health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
@@ -656,8 +623,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthy_threshold_python">
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
@@ -666,8 +632,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vbr_instance_owner_id_python">
 <a href="#vbr_instance_owner_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>owner_<wbr>id</a>
@@ -676,8 +641,7 @@ The VbrHealthCheck resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -688,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -697,13 +660,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -711,13 +672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -725,13 +684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -739,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -867,8 +823,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cenid_csharp">
 <a href="#state_cenid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -877,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckinterval_csharp">
 <a href="#state_healthcheckinterval_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
@@ -887,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecksourceip_csharp">
 <a href="#state_healthchecksourceip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
@@ -897,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktargetip_csharp">
 <a href="#state_healthchecktargetip_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
@@ -907,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_csharp">
 <a href="#state_healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -917,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceid_csharp">
 <a href="#state_vbrinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
@@ -927,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceownerid_csharp">
 <a href="#state_vbrinstanceownerid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -937,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceregionid_csharp">
 <a href="#state_vbrinstanceregionid_csharp" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -947,13 +895,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cenid_go">
 <a href="#state_cenid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Id</a>
@@ -962,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckinterval_go">
 <a href="#state_healthcheckinterval_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval</a>
@@ -972,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecksourceip_go">
 <a href="#state_healthchecksourceip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Source<wbr>Ip</a>
@@ -982,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktargetip_go">
 <a href="#state_healthchecktargetip_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Target<wbr>Ip</a>
@@ -992,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_go">
 <a href="#state_healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -1002,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceid_go">
 <a href="#state_vbrinstanceid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Id</a>
@@ -1012,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceownerid_go">
 <a href="#state_vbrinstanceownerid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -1022,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceregionid_go">
 <a href="#state_vbrinstanceregionid_go" style="color: inherit; text-decoration: inherit;">Vbr<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -1032,13 +971,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cenid_nodejs">
 <a href="#state_cenid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Id</a>
@@ -1047,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckinterval_nodejs">
 <a href="#state_healthcheckinterval_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval</a>
@@ -1057,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecksourceip_nodejs">
 <a href="#state_healthchecksourceip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Source<wbr>Ip</a>
@@ -1067,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktargetip_nodejs">
 <a href="#state_healthchecktargetip_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Target<wbr>Ip</a>
@@ -1077,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthythreshold_nodejs">
 <a href="#state_healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
@@ -1087,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceid_nodejs">
 <a href="#state_vbrinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Id</a>
@@ -1097,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceownerid_nodejs">
 <a href="#state_vbrinstanceownerid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -1107,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbrinstanceregionid_nodejs">
 <a href="#state_vbrinstanceregionid_nodejs" style="color: inherit; text-decoration: inherit;">vbr<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -1117,13 +1047,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cen_id_python">
 <a href="#state_cen_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>id</a>
@@ -1132,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_interval_python">
 <a href="#state_health_check_interval_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval</a>
@@ -1142,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the interval at which the health check sends continuous detection packets. Default value: 2. Value range: 2 to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_source_ip_python">
 <a href="#state_health_check_source_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>source_<wbr>ip</a>
@@ -1152,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_target_ip_python">
 <a href="#state_health_check_target_ip_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>target_<wbr>ip</a>
@@ -1162,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination IP address of health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthy_threshold_python">
 <a href="#state_healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
@@ -1172,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of probe messages sent by the health check. Default value: 8. Value range: 3 to 8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbr_instance_id_python">
 <a href="#state_vbr_instance_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>id</a>
@@ -1182,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VBR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbr_instance_owner_id_python">
 <a href="#state_vbr_instance_owner_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>owner_<wbr>id</a>
@@ -1192,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the account to which the VBR belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vbr_instance_region_id_python">
 <a href="#state_vbr_instance_region_id_python" style="color: inherit; text-decoration: inherit;">vbr_<wbr>instance_<wbr>region_<wbr>id</a>
@@ -1202,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the region to which the VBR belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

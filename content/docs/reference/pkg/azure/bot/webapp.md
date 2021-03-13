@@ -291,8 +291,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoftappid_csharp">
 <a href="#microsoftappid_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>App<wbr>Id</a>
@@ -301,8 +300,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -311,8 +309,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -321,8 +318,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_csharp">
 <a href="#developerappinsightsapikey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -331,8 +327,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_csharp">
 <a href="#developerappinsightsapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -341,8 +336,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightskey_csharp">
 <a href="#developerappinsightskey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Key</a>
@@ -351,8 +345,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -361,8 +354,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -371,8 +363,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -381,8 +372,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -391,8 +381,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luiskey_csharp">
 <a href="#luiskey_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
@@ -401,8 +390,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -411,8 +399,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -421,13 +408,11 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoftappid_go">
 <a href="#microsoftappid_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>App<wbr>Id</a>
@@ -436,8 +421,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -446,8 +430,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -456,8 +439,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_go">
 <a href="#developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -466,8 +448,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_go">
 <a href="#developerappinsightsapplicationid_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -476,8 +457,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightskey_go">
 <a href="#developerappinsightskey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Key</a>
@@ -486,8 +466,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -496,8 +475,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -506,8 +484,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -516,8 +493,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -526,8 +502,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luiskey_go">
 <a href="#luiskey_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
@@ -536,8 +511,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -546,8 +520,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -556,13 +529,11 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoftappid_nodejs">
 <a href="#microsoftappid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>App<wbr>Id</a>
@@ -571,8 +542,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -581,8 +551,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -591,8 +560,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_nodejs">
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -601,8 +569,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_nodejs">
 <a href="#developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -611,8 +578,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerappinsightskey_nodejs">
 <a href="#developerappinsightskey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Key</a>
@@ -621,8 +587,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -631,8 +596,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -641,8 +605,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -651,8 +614,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
@@ -661,8 +623,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luiskey_nodejs">
 <a href="#luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
@@ -671,8 +632,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -681,8 +641,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -691,13 +650,11 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoft_app_id_python">
 <a href="#microsoft_app_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>app_<wbr>id</a>
@@ -706,8 +663,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -716,8 +672,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -726,8 +681,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_api_key_python">
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
@@ -736,8 +690,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_application_id_python">
 <a href="#developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
@@ -746,8 +699,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_key_python">
 <a href="#developer_app_insights_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>key</a>
@@ -756,8 +708,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -766,8 +717,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -776,8 +726,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -786,8 +735,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
@@ -796,8 +744,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="luis_key_python">
 <a href="#luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
@@ -806,8 +753,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -816,8 +762,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -826,8 +771,7 @@ The WebApp resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -838,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -847,13 +790,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -861,13 +802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -875,13 +814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -889,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1017,8 +953,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightsapikey_csharp">
 <a href="#state_developerappinsightsapikey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -1027,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightsapplicationid_csharp">
 <a href="#state_developerappinsightsapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -1037,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightskey_csharp">
 <a href="#state_developerappinsightskey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Key</a>
@@ -1047,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1057,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1067,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1077,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luisappids_csharp">
 <a href="#state_luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -1087,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luiskey_csharp">
 <a href="#state_luiskey_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
@@ -1097,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoftappid_csharp">
 <a href="#state_microsoftappid_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>App<wbr>Id</a>
@@ -1107,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1117,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1127,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_csharp">
 <a href="#state_sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1137,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1147,13 +1070,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightsapikey_go">
 <a href="#state_developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -1162,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightsapplicationid_go">
 <a href="#state_developerappinsightsapplicationid_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -1172,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightskey_go">
 <a href="#state_developerappinsightskey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Key</a>
@@ -1182,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1192,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1202,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1212,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luisappids_go">
 <a href="#state_luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
@@ -1222,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luiskey_go">
 <a href="#state_luiskey_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
@@ -1232,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoftappid_go">
 <a href="#state_microsoftappid_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>App<wbr>Id</a>
@@ -1242,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1252,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1262,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_go">
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1272,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1282,13 +1191,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightsapikey_nodejs">
 <a href="#state_developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
@@ -1297,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightsapplicationid_nodejs">
 <a href="#state_developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
@@ -1307,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerappinsightskey_nodejs">
 <a href="#state_developerappinsightskey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Key</a>
@@ -1317,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1327,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1337,8 +1240,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1347,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luisappids_nodejs">
 <a href="#state_luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
@@ -1357,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luiskey_nodejs">
 <a href="#state_luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
@@ -1367,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoftappid_nodejs">
 <a href="#state_microsoftappid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>App<wbr>Id</a>
@@ -1377,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1387,8 +1285,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1397,8 +1294,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_nodejs">
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1407,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1417,13 +1312,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_developer_app_insights_api_key_python">
 <a href="#state_developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
@@ -1432,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights API Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developer_app_insights_application_id_python">
 <a href="#state_developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
@@ -1442,8 +1334,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Application ID to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developer_app_insights_key_python">
 <a href="#state_developer_app_insights_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>key</a>
@@ -1452,8 +1343,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1462,8 +1352,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Web App Bot will be displayed as. This defaults to `name` if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1472,8 +1361,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Web App Bot endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1482,8 +1370,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luis_app_ids_python">
 <a href="#state_luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
@@ -1492,8 +1379,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of LUIS App IDs to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_luis_key_python">
 <a href="#state_luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
@@ -1502,8 +1388,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS key to associate with the Web App Bot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoft_app_id_python">
 <a href="#state_microsoft_app_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>app_<wbr>id</a>
@@ -1512,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Microsoft Application ID for the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1522,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Web App Bot. Changing this forces a new resource to be created. Must be globally unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1532,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Web App Bot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_python">
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1542,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the Web App Bot. Valid values include `F0` or `S1`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1552,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

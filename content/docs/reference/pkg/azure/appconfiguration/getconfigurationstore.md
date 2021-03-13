@@ -155,8 +155,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -165,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -175,13 +173,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Configuration exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -190,8 +186,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -200,13 +195,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Configuration exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -215,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -225,13 +217,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Configuration exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -240,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -250,8 +239,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the App Configuration exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,8 +252,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -274,8 +261,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint used to access this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -284,8 +270,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -294,8 +279,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the App Configuration exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -303,8 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryreadkeys_csharp">
 <a href="#primaryreadkeys_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Read<wbr>Keys</a>
@@ -313,8 +296,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywritekeys_csharp">
 <a href="#primarywritekeys_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Write<wbr>Keys</a>
@@ -323,8 +305,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -332,8 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryreadkeys_csharp">
 <a href="#secondaryreadkeys_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Read<wbr>Keys</a>
@@ -342,8 +322,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywritekeys_csharp">
 <a href="#secondarywritekeys_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Write<wbr>Keys</a>
@@ -352,8 +331,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">List&lt;Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -362,8 +340,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU used for this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -372,13 +349,11 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the App Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -387,8 +362,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint used to access this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -397,8 +371,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -407,8 +380,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the App Configuration exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -416,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryreadkeys_go">
 <a href="#primaryreadkeys_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Read<wbr>Keys</a>
@@ -426,8 +397,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">[]Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywritekeys_go">
 <a href="#primarywritekeys_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Write<wbr>Keys</a>
@@ -436,8 +406,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">[]Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -445,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryreadkeys_go">
 <a href="#secondaryreadkeys_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Read<wbr>Keys</a>
@@ -455,8 +423,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">[]Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywritekeys_go">
 <a href="#secondarywritekeys_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Write<wbr>Keys</a>
@@ -465,8 +432,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">[]Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -475,8 +441,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU used for this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -485,13 +450,11 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the App Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -500,8 +463,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Endpoint used to access this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -510,8 +472,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -520,8 +481,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the App Configuration exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -529,8 +489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryreadkeys_nodejs">
 <a href="#primaryreadkeys_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Read<wbr>Keys</a>
@@ -539,8 +498,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywritekeys_nodejs">
 <a href="#primarywritekeys_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Write<wbr>Keys</a>
@@ -549,8 +507,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -558,8 +515,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryreadkeys_nodejs">
 <a href="#secondaryreadkeys_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Read<wbr>Keys</a>
@@ -568,8 +524,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywritekeys_nodejs">
 <a href="#secondarywritekeys_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Write<wbr>Keys</a>
@@ -578,8 +533,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -588,8 +542,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU used for this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -598,13 +551,11 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the App Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -613,8 +564,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Endpoint used to access this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -623,8 +573,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -633,8 +582,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the App Configuration exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -642,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_read_keys_python">
 <a href="#primary_read_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>read_<wbr>keys</a>
@@ -652,8 +599,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimaryreadkey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_read_key` block as defined below containing the primary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_write_keys_python">
 <a href="#primary_write_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>write_<wbr>keys</a>
@@ -662,8 +608,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoreprimarywritekey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `primary_write_key` block as defined below containing the primary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -671,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_read_keys_python">
 <a href="#secondary_read_keys_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>read_<wbr>keys</a>
@@ -681,8 +625,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondaryreadkey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_read_key` block as defined below containing the secondary read access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_write_keys_python">
 <a href="#secondary_write_keys_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>write_<wbr>keys</a>
@@ -691,8 +634,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getconfigurationstoresecondarywritekey">Sequence[Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A `secondary_write_key` block as defined below containing the secondary write access key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -701,8 +643,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU used for this App Configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -711,8 +652,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the App Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -726,8 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -736,8 +675,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -746,8 +684,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -756,13 +693,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -771,8 +706,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -781,8 +715,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -791,13 +724,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -806,8 +737,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -816,8 +746,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -826,13 +755,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -841,8 +768,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -851,8 +777,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -861,8 +786,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getconfigurationstoreprimarywritekey">Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key</h4>
@@ -870,8 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -880,8 +803,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -890,8 +812,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -900,13 +821,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -915,8 +834,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -925,8 +843,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -935,13 +852,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -950,8 +865,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -960,8 +874,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -970,13 +883,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -985,8 +896,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -995,8 +905,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1005,8 +914,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getconfigurationstoresecondaryreadkey">Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key</h4>
@@ -1014,8 +922,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1024,8 +931,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1034,8 +940,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1044,13 +949,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1059,8 +962,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1069,8 +971,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1079,13 +980,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1094,8 +993,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1104,8 +1002,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1114,13 +1011,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1129,8 +1024,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1139,8 +1033,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1149,8 +1042,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getconfigurationstoresecondarywritekey">Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key</h4>
@@ -1158,8 +1050,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1168,8 +1059,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1178,8 +1068,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1188,13 +1077,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1203,8 +1090,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1213,8 +1099,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1223,13 +1108,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1238,8 +1121,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1248,8 +1130,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1258,13 +1139,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1273,8 +1152,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1283,8 +1161,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Access Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1293,8 +1170,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secret of the Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

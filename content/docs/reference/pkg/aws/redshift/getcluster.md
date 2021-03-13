@@ -234,8 +234,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_csharp">
 <a href="#clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -244,8 +243,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -254,13 +252,11 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_go">
 <a href="#clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -269,8 +265,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -279,13 +274,11 @@ The following arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusteridentifier_nodejs">
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -294,8 +287,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -304,13 +296,11 @@ The following arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_identifier_python">
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -319,8 +309,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -329,8 +318,7 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -343,8 +331,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowversionupgrade_csharp">
 <a href="#allowversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Version<wbr>Upgrade</a>
@@ -353,8 +340,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="automatedsnapshotretentionperiod_csharp">
 <a href="#automatedsnapshotretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Automated<wbr>Snapshot<wbr>Retention<wbr>Period</a>
@@ -363,8 +349,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The backup retention period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -373,8 +358,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -383,8 +367,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteridentifier_csharp">
 <a href="#clusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -393,8 +376,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterparametergroupname_csharp">
 <a href="#clusterparametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -403,8 +385,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterpublickey_csharp">
 <a href="#clusterpublickey_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Public<wbr>Key</a>
@@ -413,8 +394,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterrevisionnumber_csharp">
 <a href="#clusterrevisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Revision<wbr>Number</a>
@@ -423,8 +403,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster revision number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersecuritygroups_csharp">
 <a href="#clustersecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Groups</a>
@@ -433,8 +412,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersubnetgroupname_csharp">
 <a href="#clustersubnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -443,8 +421,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustertype_csharp">
 <a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -453,8 +430,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterversion_csharp">
 <a href="#clusterversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
@@ -462,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -472,8 +447,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticip_csharp">
 <a href="#elasticip_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip</a>
@@ -482,8 +456,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -492,8 +465,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -502,8 +474,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -512,8 +483,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enhancedvpcrouting_csharp">
 <a href="#enhancedvpcrouting_csharp" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Vpc<wbr>Routing</a>
@@ -522,8 +492,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamroles_csharp">
 <a href="#iamroles_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Roles</a>
@@ -532,8 +501,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -542,8 +510,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -552,8 +519,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterusername_csharp">
 <a href="#masterusername_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
@@ -562,8 +528,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetype_csharp">
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -572,8 +537,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster node type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofnodes_csharp">
 <a href="#numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -582,8 +546,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -592,8 +555,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredmaintenancewindow_csharp">
 <a href="#preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -602,8 +564,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maintenance window
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publiclyaccessible_csharp">
 <a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -612,8 +573,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3keyprefix_csharp">
 <a href="#s3keyprefix_csharp" style="color: inherit; text-decoration: inherit;">S3Key<wbr>Prefix</a>
@@ -622,8 +582,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -632,8 +591,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Id associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_csharp">
 <a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -642,8 +600,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The VPC security group Ids associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -652,13 +609,11 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowversionupgrade_go">
 <a href="#allowversionupgrade_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Version<wbr>Upgrade</a>
@@ -667,8 +622,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="automatedsnapshotretentionperiod_go">
 <a href="#automatedsnapshotretentionperiod_go" style="color: inherit; text-decoration: inherit;">Automated<wbr>Snapshot<wbr>Retention<wbr>Period</a>
@@ -677,8 +631,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The backup retention period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -687,8 +640,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -697,8 +649,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteridentifier_go">
 <a href="#clusteridentifier_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Identifier</a>
@@ -707,8 +658,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterparametergroupname_go">
 <a href="#clusterparametergroupname_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -717,8 +667,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterpublickey_go">
 <a href="#clusterpublickey_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Public<wbr>Key</a>
@@ -727,8 +676,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterrevisionnumber_go">
 <a href="#clusterrevisionnumber_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Revision<wbr>Number</a>
@@ -737,8 +685,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster revision number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersecuritygroups_go">
 <a href="#clustersecuritygroups_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Groups</a>
@@ -747,8 +694,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersubnetgroupname_go">
 <a href="#clustersubnetgroupname_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -757,8 +703,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustertype_go">
 <a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -767,8 +712,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterversion_go">
 <a href="#clusterversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Version</a>
@@ -776,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -786,8 +729,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticip_go">
 <a href="#elasticip_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip</a>
@@ -796,8 +738,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -806,8 +747,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -816,8 +756,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -826,8 +765,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enhancedvpcrouting_go">
 <a href="#enhancedvpcrouting_go" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Vpc<wbr>Routing</a>
@@ -836,8 +774,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamroles_go">
 <a href="#iamroles_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Roles</a>
@@ -846,8 +783,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -856,8 +792,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -866,8 +801,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterusername_go">
 <a href="#masterusername_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
@@ -876,8 +810,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetype_go">
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -886,8 +819,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster node type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofnodes_go">
 <a href="#numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -896,8 +828,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -906,8 +837,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredmaintenancewindow_go">
 <a href="#preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
@@ -916,8 +846,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maintenance window
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publiclyaccessible_go">
 <a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -926,8 +855,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3keyprefix_go">
 <a href="#s3keyprefix_go" style="color: inherit; text-decoration: inherit;">S3Key<wbr>Prefix</a>
@@ -936,8 +864,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -946,8 +873,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Id associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_go">
 <a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -956,8 +882,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The VPC security group Ids associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -966,13 +891,11 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowversionupgrade_nodejs">
 <a href="#allowversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Version<wbr>Upgrade</a>
@@ -981,8 +904,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="automatedsnapshotretentionperiod_nodejs">
 <a href="#automatedsnapshotretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Retention<wbr>Period</a>
@@ -991,8 +913,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The backup retention period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1001,8 +922,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -1011,8 +931,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteridentifier_nodejs">
 <a href="#clusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Identifier</a>
@@ -1021,8 +940,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterparametergroupname_nodejs">
 <a href="#clusterparametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Parameter<wbr>Group<wbr>Name</a>
@@ -1031,8 +949,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterpublickey_nodejs">
 <a href="#clusterpublickey_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Public<wbr>Key</a>
@@ -1041,8 +958,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterrevisionnumber_nodejs">
 <a href="#clusterrevisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Revision<wbr>Number</a>
@@ -1051,8 +967,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster revision number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersecuritygroups_nodejs">
 <a href="#clustersecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Groups</a>
@@ -1061,8 +976,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustersubnetgroupname_nodejs">
 <a href="#clustersubnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Subnet<wbr>Group<wbr>Name</a>
@@ -1071,8 +985,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustertype_nodejs">
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
@@ -1081,8 +994,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterversion_nodejs">
 <a href="#clusterversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Version</a>
@@ -1090,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1100,8 +1011,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticip_nodejs">
 <a href="#elasticip_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip</a>
@@ -1110,8 +1020,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -1120,8 +1029,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -1130,8 +1038,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1140,8 +1047,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enhancedvpcrouting_nodejs">
 <a href="#enhancedvpcrouting_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Vpc<wbr>Routing</a>
@@ -1150,8 +1056,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iamroles_nodejs">
 <a href="#iamroles_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Roles</a>
@@ -1160,8 +1065,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1170,8 +1074,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1180,8 +1083,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterusername_nodejs">
 <a href="#masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Username</a>
@@ -1190,8 +1092,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodetype_nodejs">
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
@@ -1200,8 +1101,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster node type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofnodes_nodejs">
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
@@ -1210,8 +1110,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1220,8 +1119,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredmaintenancewindow_nodejs">
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
@@ -1230,8 +1128,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maintenance window
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publiclyaccessible_nodejs">
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -1240,8 +1137,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3keyprefix_nodejs">
 <a href="#s3keyprefix_nodejs" style="color: inherit; text-decoration: inherit;">s3Key<wbr>Prefix</a>
@@ -1250,8 +1146,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1260,8 +1155,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Id associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_nodejs">
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1270,8 +1164,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The VPC security group Ids associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1280,13 +1173,11 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allow_version_upgrade_python">
 <a href="#allow_version_upgrade_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>version_<wbr>upgrade</a>
@@ -1295,8 +1186,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="automated_snapshot_retention_period_python">
 <a href="#automated_snapshot_retention_period_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>retention_<wbr>period</a>
@@ -1305,8 +1195,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The backup retention period
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1315,8 +1204,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -1325,8 +1213,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_identifier_python">
 <a href="#cluster_identifier_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>identifier</a>
@@ -1335,8 +1222,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster identifier
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_parameter_group_name_python">
 <a href="#cluster_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>parameter_<wbr>group_<wbr>name</a>
@@ -1345,8 +1231,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_public_key_python">
 <a href="#cluster_public_key_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>public_<wbr>key</a>
@@ -1355,8 +1240,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_revision_number_python">
 <a href="#cluster_revision_number_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>revision_<wbr>number</a>
@@ -1365,8 +1249,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster revision number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_security_groups_python">
 <a href="#cluster_security_groups_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>groups</a>
@@ -1375,8 +1258,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_subnet_group_name_python">
 <a href="#cluster_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>subnet_<wbr>group_<wbr>name</a>
@@ -1385,8 +1267,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_type_python">
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
@@ -1395,8 +1276,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_version_python">
 <a href="#cluster_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>version</a>
@@ -1404,8 +1284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1414,8 +1293,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elastic_ip_python">
 <a href="#elastic_ip_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip</a>
@@ -1424,8 +1302,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -1434,8 +1311,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -1444,8 +1320,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1454,8 +1329,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enhanced_vpc_routing_python">
 <a href="#enhanced_vpc_routing_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>vpc_<wbr>routing</a>
@@ -1464,8 +1338,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iam_roles_python">
 <a href="#iam_roles_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>roles</a>
@@ -1474,8 +1347,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1484,8 +1356,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1494,8 +1365,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_username_python">
 <a href="#master_username_python" style="color: inherit; text-decoration: inherit;">master_<wbr>username</a>
@@ -1504,8 +1374,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_type_python">
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
@@ -1514,8 +1383,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster node type
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_of_nodes_python">
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
@@ -1524,8 +1392,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1534,8 +1401,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferred_maintenance_window_python">
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
@@ -1544,8 +1410,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maintenance window
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicly_accessible_python">
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -1554,8 +1419,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3_key_prefix_python">
 <a href="#s3_key_prefix_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>key_<wbr>prefix</a>
@@ -1564,8 +1428,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1574,8 +1437,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Id associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_security_group_ids_python">
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1584,8 +1446,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The VPC security group Ids associated with the cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1594,8 +1455,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Splunk"
-title_tag: "Module Splunk | Package Splunk"
+title_tag: "splunk.Splunk"
 meta_desc: "A Pulumi package for creating and managing splunk cloud resources."
 menu:
     reference:

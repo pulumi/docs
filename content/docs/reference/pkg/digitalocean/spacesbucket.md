@@ -507,8 +507,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -517,8 +516,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_csharp">
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -527,8 +525,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -537,8 +534,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_csharp">
 <a href="#lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
@@ -547,8 +543,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketlifecyclerule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -557,8 +552,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -567,8 +561,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_csharp">
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -577,13 +570,11 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketversioning">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -592,8 +583,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
 <a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -602,8 +592,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -612,8 +601,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_go">
 <a href="#lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
@@ -622,8 +610,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketlifecyclerule">[]Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -632,8 +619,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -642,8 +628,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_go">
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -652,13 +637,11 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -667,8 +650,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsrules_nodejs">
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
@@ -677,8 +659,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -687,8 +668,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecyclerules_nodejs">
 <a href="#lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
@@ -697,8 +677,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -707,8 +686,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -717,8 +695,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_nodejs">
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -727,13 +704,11 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -742,8 +717,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_rules_python">
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
@@ -752,8 +726,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketcorsrule">Sequence[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -762,8 +735,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_rules_python">
 <a href="#lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
@@ -772,8 +744,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketlifecyclerule">Sequence[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -782,8 +753,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -792,8 +762,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_python">
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -802,8 +771,7 @@ The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -814,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bucketdomainname_csharp">
 <a href="#bucketdomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
@@ -824,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucketurn_csharp">
 <a href="#bucketurn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Urn</a>
@@ -834,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -843,13 +808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bucketdomainname_go">
 <a href="#bucketdomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
@@ -858,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucketurn_go">
 <a href="#bucketurn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Urn</a>
@@ -868,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -877,13 +838,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bucketdomainname_nodejs">
 <a href="#bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
@@ -892,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucketurn_nodejs">
 <a href="#bucketurn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Urn</a>
@@ -902,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,13 +868,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="bucket_domain_name_python">
 <a href="#bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
@@ -926,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_urn_python">
 <a href="#bucket_urn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>urn</a>
@@ -936,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -945,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1073,8 +1025,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1083,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_csharp">
 <a href="#state_bucketdomainname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
@@ -1093,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketurn_csharp">
 <a href="#state_bucketurn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Urn</a>
@@ -1103,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_corsrules_csharp">
 <a href="#state_corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -1113,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1123,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_csharp">
 <a href="#state_lifecyclerules_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
@@ -1133,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketlifecyclerule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1143,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1153,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_csharp">
 <a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -1163,13 +1106,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketversioning">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1178,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_go">
 <a href="#state_bucketdomainname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Domain<wbr>Name</a>
@@ -1188,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketurn_go">
 <a href="#state_bucketurn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Urn</a>
@@ -1198,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_corsrules_go">
 <a href="#state_corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -1208,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1218,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_go">
 <a href="#state_lifecyclerules_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Rules</a>
@@ -1228,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketlifecyclerule">[]Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1238,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1248,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_go">
 <a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -1258,13 +1191,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1273,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketdomainname_nodejs">
 <a href="#state_bucketdomainname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Domain<wbr>Name</a>
@@ -1283,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketurn_nodejs">
 <a href="#state_bucketurn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Urn</a>
@@ -1293,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_corsrules_nodejs">
 <a href="#state_corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
@@ -1303,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -1313,8 +1240,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclerules_nodejs">
 <a href="#state_lifecyclerules_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Rules</a>
@@ -1323,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1333,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1343,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_nodejs">
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1353,13 +1276,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1368,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_domain_name_python">
 <a href="#state_bucket_domain_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>domain_<wbr>name</a>
@@ -1378,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_urn_python">
 <a href="#state_bucket_urn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>urn</a>
@@ -1388,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cors_rules_python">
 <a href="#state_cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
@@ -1398,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketcorsrule">Sequence[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -1408,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecycle_rules_python">
 <a href="#state_lifecycle_rules_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>rules</a>
@@ -1418,8 +1334,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketlifecyclerule">Sequence[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration of object lifecycle management (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1428,8 +1343,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1438,8 +1352,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_python">
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1448,8 +1361,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A state of versioning (documented below)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1464,8 +1376,7 @@ The following state arguments are supported:
 <h4 id="spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -1474,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1484,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -1494,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_csharp">
 <a href="#maxageseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
@@ -1504,13 +1412,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -1519,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1529,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -1539,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_go">
 <a href="#maxageseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>Seconds</a>
@@ -1549,13 +1452,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -1564,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -1574,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
@@ -1584,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_nodejs">
 <a href="#maxageseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>Seconds</a>
@@ -1594,13 +1492,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -1609,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -1619,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_headers_python">
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
@@ -1629,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_seconds_python">
 <a href="#max_age_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>seconds</a>
@@ -1639,15 +1532,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1656,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="abortincompletemultipartuploaddays_csharp">
 <a href="#abortincompletemultipartuploaddays_csharp" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
@@ -1667,8 +1557,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart
 upload when the multipart upload must be completed or else Spaces will abort the upload.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1677,8 +1566,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1687,8 +1575,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncurrentversionexpiration_csharp">
 <a href="#noncurrentversionexpiration_csharp" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
@@ -1697,8 +1584,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -1707,13 +1593,11 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1722,8 +1606,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="abortincompletemultipartuploaddays_go">
 <a href="#abortincompletemultipartuploaddays_go" style="color: inherit; text-decoration: inherit;">Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
@@ -1733,8 +1616,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart
 upload when the multipart upload must be completed or else Spaces will abort the upload.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1743,8 +1625,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1753,8 +1634,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncurrentversionexpiration_go">
 <a href="#noncurrentversionexpiration_go" style="color: inherit; text-decoration: inherit;">Noncurrent<wbr>Version<wbr>Expiration</a>
@@ -1763,8 +1643,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -1773,13 +1652,11 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1788,8 +1665,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="abortincompletemultipartuploaddays_nodejs">
 <a href="#abortincompletemultipartuploaddays_nodejs" style="color: inherit; text-decoration: inherit;">abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</a>
@@ -1799,8 +1675,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart
 upload when the multipart upload must be completed or else Spaces will abort the upload.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1809,8 +1684,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1819,8 +1693,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncurrentversionexpiration_nodejs">
 <a href="#noncurrentversionexpiration_nodejs" style="color: inherit; text-decoration: inherit;">noncurrent<wbr>Version<wbr>Expiration</a>
@@ -1829,8 +1702,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
     </dt>
     <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -1839,13 +1711,11 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1854,8 +1724,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies lifecycle rule status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="abort_incomplete_multipart_upload_days_python">
 <a href="#abort_incomplete_multipart_upload_days_python" style="color: inherit; text-decoration: inherit;">abort_<wbr>incomplete_<wbr>multipart_<wbr>upload_<wbr>days</a>
@@ -1865,8 +1734,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
     </dt>
     <dd>{{% md %}}Specifies the number of days after initiating a multipart
 upload when the multipart upload must be completed or else Spaces will abort the upload.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1875,8 +1743,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1885,8 +1752,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noncurrent_version_expiration_python">
 <a href="#noncurrent_version_expiration_python" style="color: inherit; text-decoration: inherit;">noncurrent_<wbr>version_<wbr>expiration</a>
@@ -1895,8 +1761,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -1905,15 +1770,13 @@ upload when the multipart upload must be completed or else Spaces will abort the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="date_csharp">
 <a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -1923,8 +1786,7 @@ upload when the multipart upload must be completed or else Spaces will abort the
     </dt>
     <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
 RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -1933,8 +1795,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiredobjectdeletemarker_csharp">
 <a href="#expiredobjectdeletemarker_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
@@ -1944,13 +1805,11 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
 bucket), setting this to true directs Spaces to delete expired object delete markers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="date_go">
 <a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
@@ -1960,8 +1819,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
     </dt>
     <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
 RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -1970,8 +1828,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiredobjectdeletemarker_go">
 <a href="#expiredobjectdeletemarker_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Object<wbr>Delete<wbr>Marker</a>
@@ -1981,13 +1838,11 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
 bucket), setting this to true directs Spaces to delete expired object delete markers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="date_nodejs">
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
@@ -1997,8 +1852,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
     </dt>
     <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
 RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -2007,8 +1861,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiredobjectdeletemarker_nodejs">
 <a href="#expiredobjectdeletemarker_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Object<wbr>Delete<wbr>Marker</a>
@@ -2018,13 +1871,11 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
 bucket), setting this to true directs Spaces to delete expired object delete markers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="date_python">
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
@@ -2034,8 +1885,7 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
     </dt>
     <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
 RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -2044,8 +1894,7 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_object_delete_marker_python">
 <a href="#expired_object_delete_marker_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>object_<wbr>delete_<wbr>marker</a>
@@ -2055,15 +1904,13 @@ RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
     </dt>
     <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
 bucket), setting this to true directs Spaces to delete expired object delete markers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -2072,13 +1919,11 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -2087,13 +1932,11 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -2102,13 +1945,11 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -2117,15 +1958,13 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2135,13 +1974,11 @@ bucket), setting this to true directs Spaces to delete expired object delete mar
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
 state. You can, however, suspend versioning on that bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2151,13 +1988,11 @@ state. You can, however, suspend versioning on that bucket.
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
 state. You can, however, suspend versioning on that bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2167,13 +2002,11 @@ state. You can, however, suspend versioning on that bucket.
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
 state. You can, however, suspend versioning on that bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2183,8 +2016,7 @@ state. You can, however, suspend versioning on that bucket.
     </dt>
     <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
 state. You can, however, suspend versioning on that bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

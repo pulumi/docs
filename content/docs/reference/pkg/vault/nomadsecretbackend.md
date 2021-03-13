@@ -170,8 +170,7 @@ The NomadSecretBackend resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -181,8 +180,7 @@ The NomadSecretBackend resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -192,8 +190,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -203,8 +200,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcert_csharp">
 <a href="#clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
@@ -213,8 +209,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_csharp">
 <a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -223,8 +218,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_csharp">
 <a href="#defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -233,8 +227,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -243,8 +236,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_csharp">
 <a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -254,8 +246,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_csharp">
 <a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -264,8 +255,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtokennamelength_csharp">
 <a href="#maxtokennamelength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Name<wbr>Length</a>
@@ -276,8 +266,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -286,8 +275,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -296,8 +284,7 @@ by the Nomad version.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -306,13 +293,11 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -322,8 +307,7 @@ by the Nomad version.
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -333,8 +317,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_go">
 <a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -344,8 +327,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcert_go">
 <a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
@@ -354,8 +336,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_go">
 <a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -364,8 +345,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_go">
 <a href="#defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -374,8 +354,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -384,8 +363,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_go">
 <a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -395,8 +373,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_go">
 <a href="#maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -405,8 +382,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtokennamelength_go">
 <a href="#maxtokennamelength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Name<wbr>Length</a>
@@ -417,8 +393,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -427,8 +402,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -437,8 +411,7 @@ by the Nomad version.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -447,13 +420,11 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -463,8 +434,7 @@ by the Nomad version.
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -474,8 +444,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_nodejs">
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -485,8 +454,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcert_nodejs">
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
@@ -495,8 +463,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_nodejs">
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -505,8 +472,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettlseconds_nodejs">
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -515,8 +481,7 @@ x509 PEM encoded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -525,8 +490,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_nodejs">
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
@@ -536,8 +500,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_nodejs">
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -546,8 +509,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtokennamelength_nodejs">
 <a href="#maxtokennamelength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Token<wbr>Name<wbr>Length</a>
@@ -558,8 +520,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -568,8 +529,7 @@ by the Nomad version.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -578,8 +538,7 @@ by the Nomad version.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -588,13 +547,11 @@ by the Nomad version.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -604,8 +561,7 @@ by the Nomad version.
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -615,8 +571,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_cert_python">
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -626,8 +581,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_cert_python">
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
@@ -636,8 +590,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_key_python">
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -646,8 +599,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_lease_ttl_seconds_python">
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -656,8 +608,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -666,8 +617,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_python">
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
@@ -677,8 +627,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_lease_ttl_seconds_python">
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -687,8 +636,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_token_name_length_python">
 <a href="#max_token_name_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>token_<wbr>name_<wbr>length</a>
@@ -699,8 +647,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -709,8 +656,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -719,8 +665,7 @@ by the Nomad version.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -729,8 +674,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -741,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -750,13 +693,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -764,13 +705,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,13 +717,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -792,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -920,8 +856,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -931,8 +866,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -942,8 +876,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacert_csharp">
 <a href="#state_cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -953,8 +886,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcert_csharp">
 <a href="#state_clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
@@ -963,8 +895,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientkey_csharp">
 <a href="#state_clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -973,8 +904,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_csharp">
 <a href="#state_defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -983,8 +913,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -993,8 +922,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_csharp">
 <a href="#state_local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -1004,8 +932,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_csharp">
 <a href="#state_maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1014,8 +941,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtokennamelength_csharp">
 <a href="#state_maxtokennamelength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Name<wbr>Length</a>
@@ -1026,8 +952,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1036,8 +961,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1046,8 +970,7 @@ by the Nomad version.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1056,13 +979,11 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1072,8 +993,7 @@ by the Nomad version.
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1083,8 +1003,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacert_go">
 <a href="#state_cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -1094,8 +1013,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcert_go">
 <a href="#state_clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
@@ -1104,8 +1022,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientkey_go">
 <a href="#state_clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -1114,8 +1031,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_go">
 <a href="#state_defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1124,8 +1040,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1134,8 +1049,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_go">
 <a href="#state_local_go" style="color: inherit; text-decoration: inherit;">Local</a>
@@ -1145,8 +1059,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_go">
 <a href="#state_maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1155,8 +1068,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtokennamelength_go">
 <a href="#state_maxtokennamelength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Name<wbr>Length</a>
@@ -1167,8 +1079,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1177,8 +1088,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1187,8 +1097,7 @@ by the Nomad version.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1197,13 +1106,11 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1213,8 +1120,7 @@ by the Nomad version.
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1224,8 +1130,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacert_nodejs">
 <a href="#state_cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -1235,8 +1140,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcert_nodejs">
 <a href="#state_clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
@@ -1245,8 +1149,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientkey_nodejs">
 <a href="#state_clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -1255,8 +1158,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultleasettlseconds_nodejs">
 <a href="#state_defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1265,8 +1167,7 @@ x509 PEM encoded.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1275,8 +1176,7 @@ x509 PEM encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_nodejs">
 <a href="#state_local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
@@ -1286,8 +1186,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxleasettlseconds_nodejs">
 <a href="#state_maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
@@ -1296,8 +1195,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtokennamelength_nodejs">
 <a href="#state_maxtokennamelength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Token<wbr>Name<wbr>Length</a>
@@ -1308,8 +1206,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -1318,8 +1215,7 @@ by the Nomad version.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1328,8 +1224,7 @@ by the Nomad version.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1338,13 +1233,11 @@ by the Nomad version.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1354,8 +1247,7 @@ by the Nomad version.
     </dt>
     <dd>{{% md %}}Specifies the address of the Nomad instance, provided
 as "protocol://host:port" like "http://127.0.0.1:4646".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1365,8 +1257,7 @@ as "protocol://host:port" like "http://127.0.0.1:4646".
     </dt>
     <dd>{{% md %}}The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `nomad`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_cert_python">
 <a href="#state_ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -1376,8 +1267,7 @@ not begin or end with a `/`. Defaults to `nomad`.
     </dt>
     <dd>{{% md %}}CA certificate to use when verifying the Nomad server certificate, must be
 x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_cert_python">
 <a href="#state_client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
@@ -1386,8 +1276,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_key_python">
 <a href="#state_client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -1396,8 +1285,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate key to provide to the Nomad server, must be x509 PEM encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_lease_ttl_seconds_python">
 <a href="#state_default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -1406,8 +1294,7 @@ x509 PEM encoded.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1416,8 +1303,7 @@ x509 PEM encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the Active Directory backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_python">
 <a href="#state_local_python" style="color: inherit; text-decoration: inherit;">local</a>
@@ -1427,8 +1313,7 @@ x509 PEM encoded.
     </dt>
     <dd>{{% md %}}Mark the secrets engine as local-only. Local engines are not replicated or removed by
 replication.Tolerance duration to use when checking the last rotation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_lease_ttl_seconds_python">
 <a href="#state_max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
@@ -1437,8 +1322,7 @@ replication.Tolerance duration to use when checking the last rotation time.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_token_name_length_python">
 <a href="#state_max_token_name_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>token_<wbr>name_<wbr>length</a>
@@ -1449,8 +1333,7 @@ replication.Tolerance duration to use when checking the last rotation time.
     <dd>{{% md %}}Specifies the maximum length to use for the name of the Nomad token
 generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
 by the Nomad version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1459,8 +1342,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum possible lease duration for secrets in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1469,8 +1351,7 @@ by the Nomad version.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Nomad Management token to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1479,8 +1360,7 @@ by the Nomad version.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the ttl of the lease for the generated token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

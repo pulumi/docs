@@ -162,8 +162,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_csharp">
 <a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -172,8 +171,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -182,8 +180,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -192,8 +189,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -202,8 +198,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingcycle_csharp">
 <a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -212,8 +207,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -222,8 +216,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -232,8 +225,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicies_csharp">
 <a href="#snapshotpolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
@@ -242,13 +234,11 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#volumesnapshotpolicy">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_go">
 <a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -257,8 +247,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -267,8 +256,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -277,8 +265,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -287,8 +274,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingcycle_go">
 <a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -297,8 +283,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -307,8 +292,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -317,8 +301,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicies_go">
 <a href="#snapshotpolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
@@ -327,13 +310,11 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#volumesnapshotpolicy">[]Volume<wbr>Snapshot<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_nodejs">
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -342,8 +323,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -352,8 +332,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -362,8 +341,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -372,8 +350,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingcycle_nodejs">
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
@@ -382,8 +359,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -392,8 +368,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -402,8 +377,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotpolicies_nodejs">
 <a href="#snapshotpolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policies</a>
@@ -412,13 +386,11 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="facility_python">
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -427,8 +399,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -437,8 +408,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -447,8 +417,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -457,8 +426,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_cycle_python">
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
@@ -467,8 +435,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -477,8 +444,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -487,8 +453,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_policies_python">
 <a href="#snapshot_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policies</a>
@@ -497,8 +462,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#volumesnapshotpolicy">Sequence[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -509,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_csharp">
 <a href="#attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -519,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#volumeattachment">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Outputs.<wbr>Volume<wbr>Attachment&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -529,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -538,8 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -548,8 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -558,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -568,13 +526,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_go">
 <a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -583,8 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#volumeattachment">[]Volume<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -593,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,8 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -612,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -622,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -632,13 +583,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_nodejs">
 <a href="#attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -647,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#volumeattachment">Volume<wbr>Attachment[]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -657,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -676,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -686,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -696,13 +640,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_python">
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -711,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#volumeattachment">Sequence[Volume<wbr>Attachment]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -721,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -730,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -740,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -750,8 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -760,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -888,8 +824,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_csharp">
 <a href="#state_attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -898,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumeattachment">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Volume<wbr>Attachment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_csharp">
 <a href="#state_billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -908,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -918,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -928,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_csharp">
 <a href="#state_facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -938,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
 <a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -948,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -958,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -968,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -978,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -988,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotpolicies_csharp">
 <a href="#state_snapshotpolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
@@ -998,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumesnapshotpolicy">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Volume<wbr>Snapshot<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1008,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_csharp">
 <a href="#state_updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1018,13 +941,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_go">
 <a href="#state_attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -1033,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumeattachment">[]Volume<wbr>Attachment<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_go">
 <a href="#state_billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -1043,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1053,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1063,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_go">
 <a href="#state_facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -1073,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
 <a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1083,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1093,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1103,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1113,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1123,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotpolicies_go">
 <a href="#state_snapshotpolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Policies</a>
@@ -1133,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumesnapshotpolicy">[]Volume<wbr>Snapshot<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1143,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_go">
 <a href="#state_updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1153,13 +1062,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_nodejs">
 <a href="#state_attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -1168,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumeattachment">Volume<wbr>Attachment[]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_nodejs">
 <a href="#state_billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
@@ -1178,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1188,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1198,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_nodejs">
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -1208,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1218,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1228,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1238,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1248,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1258,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotpolicies_nodejs">
 <a href="#state_snapshotpolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Policies</a>
@@ -1268,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1278,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_nodejs">
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1288,13 +1183,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_python">
 <a href="#state_attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -1303,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumeattachment">Sequence[Volume<wbr>Attachment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of attachments, each with it's own `href` attribute
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_cycle_python">
 <a href="#state_billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
@@ -1313,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle, defaults to "hourly"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1323,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the volume was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1333,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional description for the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_python">
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -1343,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}The facility to create the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1353,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Lock or unlock the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1363,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1373,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service plan slug of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1383,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metal project ID to deploy the volume in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1393,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GB to make the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_policies_python">
 <a href="#state_snapshot_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>policies</a>
@@ -1403,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#volumesnapshotpolicy">Sequence[Volume<wbr>Snapshot<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional list of snapshot policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1413,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the volume
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_python">
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1423,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the volume was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1439,276 +1319,155 @@ The following state arguments are supported:
 <h4 id="billingcycle">Billing<wbr>Cycle</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Hourly</dt>
-    <dd>hourly</dd>
-    <dt>Monthly</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>Hourly</dt>
+    <dd>hourly</dd><dt>Monthly</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Billing<wbr>Cycle<wbr>Hourly</dt>
-    <dd>hourly</dd>
-    <dt>Billing<wbr>Cycle<wbr>Monthly</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>Billing<wbr>Cycle<wbr>Hourly</dt>
+    <dd>hourly</dd><dt>Billing<wbr>Cycle<wbr>Monthly</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Hourly</dt>
-    <dd>hourly</dd>
-    <dt>Monthly</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>Hourly</dt>
+    <dd>hourly</dd><dt>Monthly</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HOURLY</dt>
-    <dd>hourly</dd>
-    <dt>MONTHLY</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>HOURLY</dt>
+    <dd>hourly</dd><dt>MONTHLY</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facility">Facility</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Facility<wbr>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>Facility<wbr>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>Facility<wbr>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>Facility<wbr>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>Facility<wbr>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>Facility<wbr>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>Facility<wbr>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>Facility<wbr>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>Facility<wbr>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>Facility<wbr>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>Facility<wbr>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>Facility<wbr>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>Facility<wbr>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>Facility<wbr>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>Facility<wbr>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>Facility<wbr>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>Facility<wbr>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>Facility<wbr>AM6</dt>
-    <dd>am6</dd>
-    <dt>Facility<wbr>DC13</dt>
-    <dd>dc13</dd>
-    <dt>Facility<wbr>CH3</dt>
-    <dd>ch3</dd>
-    <dt>Facility<wbr>DA3</dt>
-    <dd>da3</dd>
-    <dt>Facility<wbr>DA11</dt>
-    <dd>da11</dd>
-    <dt>Facility<wbr>LA4</dt>
-    <dd>la4</dd>
-    <dt>Facility<wbr>NY5</dt>
-    <dd>ny5</dd>
-    <dt>Facility<wbr>SG1</dt>
-    <dd>sg1</dd>
-    <dt>Facility<wbr>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>Facility<wbr>EWR1</dt>
+    <dd>ewr1</dd><dt>Facility<wbr>SJC1</dt>
+    <dd>sjc1</dd><dt>Facility<wbr>DFW1</dt>
+    <dd>dfw1</dd><dt>Facility<wbr>DFW2</dt>
+    <dd>dfw2</dd><dt>Facility<wbr>AMS1</dt>
+    <dd>ams1</dd><dt>Facility<wbr>NRT1</dt>
+    <dd>nrt1</dd><dt>Facility<wbr>SEA1</dt>
+    <dd>sea1</dd><dt>Facility<wbr>LAX1</dt>
+    <dd>lax1</dd><dt>Facility<wbr>ORD1</dt>
+    <dd>ord1</dd><dt>Facility<wbr>ATL1</dt>
+    <dd>atl1</dd><dt>Facility<wbr>IAD1</dt>
+    <dd>iad1</dd><dt>Facility<wbr>SIN1</dt>
+    <dd>sin1</dd><dt>Facility<wbr>HKG1</dt>
+    <dd>hkg1</dd><dt>Facility<wbr>SYD1</dt>
+    <dd>syd1</dd><dt>Facility<wbr>MRS1</dt>
+    <dd>mrs1</dd><dt>Facility<wbr>YYZ1</dt>
+    <dd>yyz1</dd><dt>Facility<wbr>FRA2</dt>
+    <dd>fra2</dd><dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd><dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd><dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd><dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd><dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd><dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd><dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd><dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd><dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumeattachment">Volume<wbr>Attachment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="href_csharp">
 <a href="#href_csharp" style="color: inherit; text-decoration: inherit;">Href</a>
@@ -1716,13 +1475,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="href_go">
 <a href="#href_go" style="color: inherit; text-decoration: inherit;">Href</a>
@@ -1730,13 +1487,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="href_nodejs">
 <a href="#href_nodejs" style="color: inherit; text-decoration: inherit;">href</a>
@@ -1744,13 +1499,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="href_python">
 <a href="#href_python" style="color: inherit; text-decoration: inherit;">href</a>
@@ -1758,15 +1511,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumesnapshotpolicy">Volume<wbr>Snapshot<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snapshotcount_csharp">
 <a href="#snapshotcount_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Count</a>
@@ -1774,8 +1525,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotfrequency_csharp">
 <a href="#snapshotfrequency_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Frequency</a>
@@ -1783,13 +1533,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snapshotcount_go">
 <a href="#snapshotcount_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Count</a>
@@ -1797,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotfrequency_go">
 <a href="#snapshotfrequency_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Frequency</a>
@@ -1806,13 +1553,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snapshotcount_nodejs">
 <a href="#snapshotcount_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Count</a>
@@ -1820,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotfrequency_nodejs">
 <a href="#snapshotfrequency_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Frequency</a>
@@ -1829,13 +1573,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snapshot_count_python">
 <a href="#snapshot_count_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>count</a>
@@ -1843,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_frequency_python">
 <a href="#snapshot_frequency_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>frequency</a>
@@ -1852,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

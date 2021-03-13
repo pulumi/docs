@@ -162,8 +162,7 @@ The ComputeClusterVmGroup resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_csharp">
 <a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -174,8 +173,7 @@ The ComputeClusterVmGroup resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -185,8 +183,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineids_csharp">
 <a href="#virtualmachineids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -196,13 +193,11 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_go">
 <a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -213,8 +208,7 @@ group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -224,8 +218,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineids_go">
 <a href="#virtualmachineids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -235,13 +228,11 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_nodejs">
 <a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -252,8 +243,7 @@ group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -263,8 +253,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineids_nodejs">
 <a href="#virtualmachineids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Ids</a>
@@ -274,13 +263,11 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_cluster_id_python">
 <a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -291,8 +278,7 @@ group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -302,8 +288,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_ids_python">
 <a href="#virtual_machine_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>ids</a>
@@ -313,8 +298,7 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -325,8 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -334,13 +317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -348,13 +329,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -362,13 +341,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,8 +353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -504,8 +480,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_csharp">
 <a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -516,8 +491,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -527,8 +501,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineids_csharp">
 <a href="#state_virtualmachineids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -538,13 +511,11 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_go">
 <a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -555,8 +526,7 @@ group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -566,8 +536,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineids_go">
 <a href="#state_virtualmachineids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -577,13 +546,11 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_nodejs">
 <a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -594,8 +561,7 @@ group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -605,8 +571,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineids_nodejs">
 <a href="#state_virtualmachineids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Ids</a>
@@ -616,13 +581,11 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_cluster_id_python">
 <a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -633,8 +596,7 @@ group.
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the group in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -644,8 +606,7 @@ resource if changed.
     </dt>
     <dd>{{% md %}}The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_ids_python">
 <a href="#state_virtual_machine_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>ids</a>
@@ -655,8 +616,7 @@ cluster. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines in this
 group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

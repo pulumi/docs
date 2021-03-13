@@ -600,8 +600,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -610,8 +609,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -620,8 +618,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlanvnid_csharp">
 <a href="#vlanvnid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
@@ -630,8 +627,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcebond_csharp">
 <a href="#forcebond_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
@@ -640,8 +636,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="native_csharp">
 <a href="#native_csharp" style="color: inherit; text-decoration: inherit;">Native</a>
@@ -650,13 +645,11 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -665,8 +658,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -675,8 +667,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlanvnid_go">
 <a href="#vlanvnid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
@@ -685,8 +676,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcebond_go">
 <a href="#forcebond_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
@@ -695,8 +685,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="native_go">
 <a href="#native_go" style="color: inherit; text-decoration: inherit;">Native</a>
@@ -705,13 +694,11 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -720,8 +707,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -730,8 +716,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlanvnid_nodejs">
 <a href="#vlanvnid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Vnid</a>
@@ -740,8 +725,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcebond_nodejs">
 <a href="#forcebond_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Bond</a>
@@ -750,8 +734,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="native_nodejs">
 <a href="#native_nodejs" style="color: inherit; text-decoration: inherit;">native</a>
@@ -760,13 +743,11 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -775,8 +756,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -785,8 +765,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlan_vnid_python">
 <a href="#vlan_vnid_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>vnid</a>
@@ -795,8 +774,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_bond_python">
 <a href="#force_bond_python" style="color: inherit; text-decoration: inherit;">force_<wbr>bond</a>
@@ -805,8 +783,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="native_python">
 <a href="#native_python" style="color: inherit; text-decoration: inherit;">native</a>
@@ -815,8 +792,7 @@ The PortVlanAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -827,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -836,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -845,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vlanid_csharp">
 <a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -854,13 +827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -868,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -877,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vlanid_go">
 <a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -886,13 +855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -909,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vlanid_nodejs">
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
@@ -918,13 +883,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -932,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -941,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vlan_id_python">
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
@@ -950,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1078,8 +1038,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_csharp">
 <a href="#state_deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -1088,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcebond_csharp">
 <a href="#state_forcebond_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
@@ -1098,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_native_csharp">
 <a href="#state_native_csharp" style="color: inherit; text-decoration: inherit;">Native</a>
@@ -1108,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1117,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portname_csharp">
 <a href="#state_portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -1127,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_csharp">
 <a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -1136,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanvnid_csharp">
 <a href="#state_vlanvnid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
@@ -1146,13 +1099,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_go">
 <a href="#state_deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -1161,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcebond_go">
 <a href="#state_forcebond_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Bond</a>
@@ -1171,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_native_go">
 <a href="#state_native_go" style="color: inherit; text-decoration: inherit;">Native</a>
@@ -1181,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1190,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portname_go">
 <a href="#state_portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
@@ -1200,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_go">
 <a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -1209,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanvnid_go">
 <a href="#state_vlanvnid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Vnid</a>
@@ -1219,13 +1164,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_nodejs">
 <a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -1234,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcebond_nodejs">
 <a href="#state_forcebond_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Bond</a>
@@ -1244,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_native_nodejs">
 <a href="#state_native_nodejs" style="color: inherit; text-decoration: inherit;">native</a>
@@ -1254,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -1263,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portname_nodejs">
 <a href="#state_portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
@@ -1273,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_nodejs">
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
@@ -1282,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanvnid_nodejs">
 <a href="#state_vlanvnid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Vnid</a>
@@ -1292,13 +1229,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_device_id_python">
 <a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -1307,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_bond_python">
 <a href="#state_force_bond_python" style="color: inherit; text-decoration: inherit;">force_<wbr>bond</a>
@@ -1317,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Add port back to the bond when this resource is removed. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_native_python">
 <a href="#state_native_python" style="color: inherit; text-decoration: inherit;">native</a>
@@ -1327,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use `depends_on` pointing to another metal_port_vlan_attachment, just like in the layer2-individual example above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -1336,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_name_python">
 <a href="#state_port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
@@ -1346,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of network port to be assigned to the VLAN
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlan_id_python">
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
@@ -1355,8 +1285,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlan_vnid_python">
 <a href="#state_vlan_vnid_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>vnid</a>
@@ -1365,8 +1294,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}VXLAN Network Identifier, integer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

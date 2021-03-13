@@ -162,8 +162,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -172,8 +171,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_csharp">
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -182,8 +180,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtype_csharp">
 <a href="#authtype_csharp" style="color: inherit; text-decoration: inherit;">Authtype</a>
@@ -192,8 +189,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfalifetime_csharp">
 <a href="#mfalifetime_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Lifetime</a>
@@ -202,8 +198,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfaprompt_csharp">
 <a href="#mfaprompt_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Prompt</a>
@@ -212,8 +207,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfarememberdevice_csharp">
 <a href="#mfarememberdevice_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Remember<wbr>Device</a>
@@ -222,8 +216,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfarequired_csharp">
 <a href="#mfarequired_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Required</a>
@@ -232,8 +225,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -242,8 +234,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_csharp">
 <a href="#networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -252,8 +243,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_csharp">
 <a href="#networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -262,8 +252,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_csharp">
 <a href="#networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -272,8 +261,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -283,8 +271,7 @@ The SignonPolicyRule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionidle_csharp">
 <a href="#sessionidle_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Idle</a>
@@ -293,8 +280,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlifetime_csharp">
 <a href="#sessionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -303,8 +289,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionpersistent_csharp">
 <a href="#sessionpersistent_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Persistent</a>
@@ -314,8 +299,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -324,8 +308,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_csharp">
 <a href="#usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -334,13 +317,11 @@ cookies.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -349,8 +330,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_go">
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -359,8 +339,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtype_go">
 <a href="#authtype_go" style="color: inherit; text-decoration: inherit;">Authtype</a>
@@ -369,8 +348,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfalifetime_go">
 <a href="#mfalifetime_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Lifetime</a>
@@ -379,8 +357,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfaprompt_go">
 <a href="#mfaprompt_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Prompt</a>
@@ -389,8 +366,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfarememberdevice_go">
 <a href="#mfarememberdevice_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Remember<wbr>Device</a>
@@ -399,8 +375,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfarequired_go">
 <a href="#mfarequired_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Required</a>
@@ -409,8 +384,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -419,8 +393,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_go">
 <a href="#networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -429,8 +402,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_go">
 <a href="#networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -439,8 +411,7 @@ cookies.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_go">
 <a href="#networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -449,8 +420,7 @@ cookies.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -460,8 +430,7 @@ cookies.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionidle_go">
 <a href="#sessionidle_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Idle</a>
@@ -470,8 +439,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlifetime_go">
 <a href="#sessionlifetime_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -480,8 +448,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionpersistent_go">
 <a href="#sessionpersistent_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Persistent</a>
@@ -491,8 +458,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -501,8 +467,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_go">
 <a href="#usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -511,13 +476,11 @@ cookies.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -526,8 +489,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_nodejs">
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
@@ -536,8 +498,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtype_nodejs">
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">authtype</a>
@@ -546,8 +507,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfalifetime_nodejs">
 <a href="#mfalifetime_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Lifetime</a>
@@ -556,8 +516,7 @@ cookies.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfaprompt_nodejs">
 <a href="#mfaprompt_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Prompt</a>
@@ -566,8 +525,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfarememberdevice_nodejs">
 <a href="#mfarememberdevice_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Remember<wbr>Device</a>
@@ -576,8 +534,7 @@ cookies.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfarequired_nodejs">
 <a href="#mfarequired_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Required</a>
@@ -586,8 +543,7 @@ cookies.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -596,8 +552,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_nodejs">
 <a href="#networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
@@ -606,8 +561,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_nodejs">
 <a href="#networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
@@ -616,8 +570,7 @@ cookies.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_nodejs">
 <a href="#networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
@@ -626,8 +579,7 @@ cookies.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -637,8 +589,7 @@ cookies.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionidle_nodejs">
 <a href="#sessionidle_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Idle</a>
@@ -647,8 +598,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionlifetime_nodejs">
 <a href="#sessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Lifetime</a>
@@ -657,8 +607,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionpersistent_nodejs">
 <a href="#sessionpersistent_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Persistent</a>
@@ -668,8 +617,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -678,8 +626,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_nodejs">
 <a href="#usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
@@ -688,13 +635,11 @@ cookies.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_python">
 <a href="#policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -703,8 +648,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_python">
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
@@ -713,8 +657,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authtype_python">
 <a href="#authtype_python" style="color: inherit; text-decoration: inherit;">authtype</a>
@@ -723,8 +666,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfa_lifetime_python">
 <a href="#mfa_lifetime_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>lifetime</a>
@@ -733,8 +675,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfa_prompt_python">
 <a href="#mfa_prompt_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>prompt</a>
@@ -743,8 +684,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfa_remember_device_python">
 <a href="#mfa_remember_device_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>remember_<wbr>device</a>
@@ -753,8 +693,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfa_required_python">
 <a href="#mfa_required_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>required</a>
@@ -763,8 +702,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -773,8 +711,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_connection_python">
 <a href="#network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
@@ -783,8 +720,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_excludes_python">
 <a href="#network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
@@ -793,8 +729,7 @@ cookies.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_includes_python">
 <a href="#network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
@@ -803,8 +738,7 @@ cookies.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -814,8 +748,7 @@ cookies.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_idle_python">
 <a href="#session_idle_python" style="color: inherit; text-decoration: inherit;">session_<wbr>idle</a>
@@ -824,8 +757,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_lifetime_python">
 <a href="#session_lifetime_python" style="color: inherit; text-decoration: inherit;">session_<wbr>lifetime</a>
@@ -834,8 +766,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_persistent_python">
 <a href="#session_persistent_python" style="color: inherit; text-decoration: inherit;">session_<wbr>persistent</a>
@@ -845,8 +776,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -855,8 +785,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_excludeds_python">
 <a href="#users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
@@ -865,8 +794,7 @@ cookies.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -877,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -886,13 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -900,13 +825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -914,13 +837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -928,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1056,8 +976,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_csharp">
 <a href="#state_access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -1066,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_csharp">
 <a href="#state_authtype_csharp" style="color: inherit; text-decoration: inherit;">Authtype</a>
@@ -1076,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfalifetime_csharp">
 <a href="#state_mfalifetime_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Lifetime</a>
@@ -1086,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfaprompt_csharp">
 <a href="#state_mfaprompt_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Prompt</a>
@@ -1096,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfarememberdevice_csharp">
 <a href="#state_mfarememberdevice_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Remember<wbr>Device</a>
@@ -1106,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfarequired_csharp">
 <a href="#state_mfarequired_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Required</a>
@@ -1116,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1126,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_csharp">
 <a href="#state_networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -1136,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_csharp">
 <a href="#state_networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -1146,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_csharp">
 <a href="#state_networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -1156,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -1166,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1177,8 +1085,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionidle_csharp">
 <a href="#state_sessionidle_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Idle</a>
@@ -1187,8 +1094,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionlifetime_csharp">
 <a href="#state_sessionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -1197,8 +1103,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionpersistent_csharp">
 <a href="#state_sessionpersistent_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Persistent</a>
@@ -1208,8 +1113,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1218,8 +1122,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_csharp">
 <a href="#state_usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -1228,13 +1131,11 @@ cookies.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_go">
 <a href="#state_access_go" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -1243,8 +1144,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_go">
 <a href="#state_authtype_go" style="color: inherit; text-decoration: inherit;">Authtype</a>
@@ -1253,8 +1153,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfalifetime_go">
 <a href="#state_mfalifetime_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Lifetime</a>
@@ -1263,8 +1162,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfaprompt_go">
 <a href="#state_mfaprompt_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Prompt</a>
@@ -1273,8 +1171,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfarememberdevice_go">
 <a href="#state_mfarememberdevice_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Remember<wbr>Device</a>
@@ -1283,8 +1180,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfarequired_go">
 <a href="#state_mfarequired_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Required</a>
@@ -1293,8 +1189,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1303,8 +1198,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_go">
 <a href="#state_networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -1313,8 +1207,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_go">
 <a href="#state_networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -1323,8 +1216,7 @@ cookies.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_go">
 <a href="#state_networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -1333,8 +1225,7 @@ cookies.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -1343,8 +1234,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1354,8 +1244,7 @@ cookies.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionidle_go">
 <a href="#state_sessionidle_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Idle</a>
@@ -1364,8 +1253,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionlifetime_go">
 <a href="#state_sessionlifetime_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Lifetime</a>
@@ -1374,8 +1262,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionpersistent_go">
 <a href="#state_sessionpersistent_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Persistent</a>
@@ -1385,8 +1272,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1395,8 +1281,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_go">
 <a href="#state_usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -1405,13 +1290,11 @@ cookies.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_nodejs">
 <a href="#state_access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
@@ -1420,8 +1303,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_nodejs">
 <a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">authtype</a>
@@ -1430,8 +1312,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfalifetime_nodejs">
 <a href="#state_mfalifetime_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Lifetime</a>
@@ -1440,8 +1321,7 @@ cookies.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfaprompt_nodejs">
 <a href="#state_mfaprompt_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Prompt</a>
@@ -1450,8 +1330,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfarememberdevice_nodejs">
 <a href="#state_mfarememberdevice_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Remember<wbr>Device</a>
@@ -1460,8 +1339,7 @@ cookies.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfarequired_nodejs">
 <a href="#state_mfarequired_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Required</a>
@@ -1470,8 +1348,7 @@ cookies.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1480,8 +1357,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_nodejs">
 <a href="#state_networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
@@ -1490,8 +1366,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_nodejs">
 <a href="#state_networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
@@ -1500,8 +1375,7 @@ cookies.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_nodejs">
 <a href="#state_networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
@@ -1510,8 +1384,7 @@ cookies.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -1520,8 +1393,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1531,8 +1403,7 @@ cookies.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionidle_nodejs">
 <a href="#state_sessionidle_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Idle</a>
@@ -1541,8 +1412,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionlifetime_nodejs">
 <a href="#state_sessionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Lifetime</a>
@@ -1551,8 +1421,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionpersistent_nodejs">
 <a href="#state_sessionpersistent_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Persistent</a>
@@ -1562,8 +1431,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1572,8 +1440,7 @@ cookies.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_nodejs">
 <a href="#state_usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
@@ -1582,13 +1449,11 @@ cookies.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_python">
 <a href="#state_access_python" style="color: inherit; text-decoration: inherit;">access</a>
@@ -1597,8 +1462,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authtype_python">
 <a href="#state_authtype_python" style="color: inherit; text-decoration: inherit;">authtype</a>
@@ -1607,8 +1471,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfa_lifetime_python">
 <a href="#state_mfa_lifetime_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>lifetime</a>
@@ -1617,8 +1480,7 @@ cookies.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfa_prompt_python">
 <a href="#state_mfa_prompt_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>prompt</a>
@@ -1627,8 +1489,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign-on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfa_remember_device_python">
 <a href="#state_mfa_remember_device_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>remember_<wbr>device</a>
@@ -1637,8 +1498,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfa_required_python">
 <a href="#state_mfa_required_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>required</a>
@@ -1647,8 +1507,7 @@ cookies.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1657,8 +1516,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_connection_python">
 <a href="#state_network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
@@ -1667,8 +1525,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_excludes_python">
 <a href="#state_network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
@@ -1677,8 +1534,7 @@ cookies.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_includes_python">
 <a href="#state_network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
@@ -1687,8 +1543,7 @@ cookies.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_python">
 <a href="#state_policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -1697,8 +1552,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1708,8 +1562,7 @@ cookies.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_idle_python">
 <a href="#state_session_idle_python" style="color: inherit; text-decoration: inherit;">session_<wbr>idle</a>
@@ -1718,8 +1571,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_lifetime_python">
 <a href="#state_session_lifetime_python" style="color: inherit; text-decoration: inherit;">session_<wbr>lifetime</a>
@@ -1728,8 +1580,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_persistent_python">
 <a href="#state_session_persistent_python" style="color: inherit; text-decoration: inherit;">session_<wbr>persistent</a>
@@ -1739,8 +1590,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1749,8 +1599,7 @@ cookies.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_excludeds_python">
 <a href="#state_users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
@@ -1759,8 +1608,7 @@ cookies.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

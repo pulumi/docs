@@ -163,8 +163,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snatip_csharp">
 <a href="#snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -173,8 +172,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snattableid_csharp">
 <a href="#snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
@@ -183,8 +181,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatentryname_csharp">
 <a href="#snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
@@ -193,8 +190,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecidr_csharp">
 <a href="#sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
@@ -203,8 +199,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevswitchid_csharp">
 <a href="#sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
@@ -213,13 +208,11 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snatip_go">
 <a href="#snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -228,8 +221,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snattableid_go">
 <a href="#snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
@@ -238,8 +230,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatentryname_go">
 <a href="#snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
@@ -248,8 +239,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecidr_go">
 <a href="#sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
@@ -258,8 +248,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevswitchid_go">
 <a href="#sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
@@ -268,13 +257,11 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snatip_nodejs">
 <a href="#snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
@@ -283,8 +270,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snattableid_nodejs">
 <a href="#snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
@@ -293,8 +279,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatentryname_nodejs">
 <a href="#snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
@@ -303,8 +288,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecidr_nodejs">
 <a href="#sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
@@ -313,8 +297,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevswitchid_nodejs">
 <a href="#sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
@@ -323,13 +306,11 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="snat_ip_python">
 <a href="#snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
@@ -338,8 +319,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snat_table_id_python">
 <a href="#snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
@@ -348,8 +328,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snat_entry_name_python">
 <a href="#snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
@@ -358,8 +337,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_cidr_python">
 <a href="#source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
@@ -368,8 +346,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_vswitch_id_python">
 <a href="#source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
@@ -378,8 +355,7 @@ The SnatEntry resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -390,8 +366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -399,8 +374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snatentryid_csharp">
 <a href="#snatentryid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
@@ -409,13 +383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -423,8 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snatentryid_go">
 <a href="#snatentryid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
@@ -433,13 +404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -447,8 +416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snatentryid_nodejs">
 <a href="#snatentryid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Id</a>
@@ -457,13 +425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -471,8 +437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snat_entry_id_python">
 <a href="#snat_entry_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>id</a>
@@ -481,8 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -609,8 +573,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_snatentryid_csharp">
 <a href="#state_snatentryid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
@@ -619,8 +582,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatentryname_csharp">
 <a href="#state_snatentryname_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
@@ -629,8 +591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatip_csharp">
 <a href="#state_snatip_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -639,8 +600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snattableid_csharp">
 <a href="#state_snattableid_csharp" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
@@ -649,8 +609,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcecidr_csharp">
 <a href="#state_sourcecidr_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
@@ -659,8 +618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevswitchid_csharp">
 <a href="#state_sourcevswitchid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
@@ -669,13 +627,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_snatentryid_go">
 <a href="#state_snatentryid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Id</a>
@@ -684,8 +640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatentryname_go">
 <a href="#state_snatentryname_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Entry<wbr>Name</a>
@@ -694,8 +649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatip_go">
 <a href="#state_snatip_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Ip</a>
@@ -704,8 +658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snattableid_go">
 <a href="#state_snattableid_go" style="color: inherit; text-decoration: inherit;">Snat<wbr>Table<wbr>Id</a>
@@ -714,8 +667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcecidr_go">
 <a href="#state_sourcecidr_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Cidr</a>
@@ -724,8 +676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevswitchid_go">
 <a href="#state_sourcevswitchid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vswitch<wbr>Id</a>
@@ -734,13 +685,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_snatentryid_nodejs">
 <a href="#state_snatentryid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Id</a>
@@ -749,8 +698,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatentryname_nodejs">
 <a href="#state_snatentryname_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Entry<wbr>Name</a>
@@ -759,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatip_nodejs">
 <a href="#state_snatip_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Ip</a>
@@ -769,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snattableid_nodejs">
 <a href="#state_snattableid_nodejs" style="color: inherit; text-decoration: inherit;">snat<wbr>Table<wbr>Id</a>
@@ -779,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcecidr_nodejs">
 <a href="#state_sourcecidr_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Cidr</a>
@@ -789,8 +734,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevswitchid_nodejs">
 <a href="#state_sourcevswitchid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vswitch<wbr>Id</a>
@@ -799,13 +743,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_snat_entry_id_python">
 <a href="#state_snat_entry_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>id</a>
@@ -814,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the snat entry on the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snat_entry_name_python">
 <a href="#state_snat_entry_name_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>entry_<wbr>name</a>
@@ -824,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of snat entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snat_ip_python">
 <a href="#state_snat_ip_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>ip</a>
@@ -834,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SNAT ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snat_table_id_python">
 <a href="#state_snat_table_id_python" style="color: inherit; text-decoration: inherit;">snat_<wbr>table_<wbr>id</a>
@@ -844,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "snat_table_ids".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_cidr_python">
 <a href="#state_source_cidr_python" style="color: inherit; text-decoration: inherit;">source_<wbr>cidr</a>
@@ -854,8 +792,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private network segment of Ecs. This parameter and the `source_vswitch_id` parameter are mutually exclusive and cannot appear at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_vswitch_id_python">
 <a href="#state_source_vswitch_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vswitch_<wbr>id</a>
@@ -864,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vswitch ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

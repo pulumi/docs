@@ -170,8 +170,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customergatewayid_csharp">
 <a href="#customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
@@ -180,8 +179,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localsubnets_csharp">
 <a href="#localsubnets_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
@@ -190,8 +188,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotesubnets_csharp">
 <a href="#remotesubnets_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
@@ -200,8 +197,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -210,8 +206,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effectimmediately_csharp">
 <a href="#effectimmediately_csharp" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
@@ -220,8 +215,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeconfigs_csharp">
 <a href="#ikeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
@@ -230,8 +224,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionikeconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecconfigs_csharp">
 <a href="#ipsecconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
@@ -240,8 +233,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionipsecconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -250,13 +242,11 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customergatewayid_go">
 <a href="#customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
@@ -265,8 +255,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localsubnets_go">
 <a href="#localsubnets_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
@@ -275,8 +264,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotesubnets_go">
 <a href="#remotesubnets_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
@@ -285,8 +273,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -295,8 +282,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effectimmediately_go">
 <a href="#effectimmediately_go" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
@@ -305,8 +291,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeconfigs_go">
 <a href="#ikeconfigs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
@@ -315,8 +300,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionikeconfig">[]Connection<wbr>Ike<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecconfigs_go">
 <a href="#ipsecconfigs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
@@ -325,8 +309,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionipsecconfig">[]Connection<wbr>Ipsec<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -335,13 +318,11 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customergatewayid_nodejs">
 <a href="#customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
@@ -350,8 +331,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localsubnets_nodejs">
 <a href="#localsubnets_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnets</a>
@@ -360,8 +340,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotesubnets_nodejs">
 <a href="#remotesubnets_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnets</a>
@@ -370,8 +349,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -380,8 +358,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effectimmediately_nodejs">
 <a href="#effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
@@ -390,8 +367,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeconfigs_nodejs">
 <a href="#ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
@@ -400,8 +376,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionikeconfig">Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecconfigs_nodejs">
 <a href="#ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
@@ -410,8 +385,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -420,13 +394,11 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customer_gateway_id_python">
 <a href="#customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
@@ -435,8 +407,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="local_subnets_python">
 <a href="#local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
@@ -445,8 +416,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_subnets_python">
 <a href="#remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
@@ -455,8 +425,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -465,8 +434,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_immediately_python">
 <a href="#effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
@@ -475,8 +443,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_configs_python">
 <a href="#ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
@@ -485,8 +452,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionikeconfig">Sequence[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_configs_python">
 <a href="#ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
@@ -495,8 +461,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#connectionipsecconfig">Sequence[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -505,8 +470,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -517,8 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -526,8 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -536,13 +498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -550,8 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -560,13 +519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -574,8 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -584,13 +540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -598,8 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -608,8 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,8 +688,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customergatewayid_csharp">
 <a href="#state_customergatewayid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
@@ -746,8 +697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effectimmediately_csharp">
 <a href="#state_effectimmediately_csharp" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
@@ -756,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeconfigs_csharp">
 <a href="#state_ikeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
@@ -766,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionikeconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecconfigs_csharp">
 <a href="#state_ipsecconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
@@ -776,8 +724,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionipsecconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localsubnets_csharp">
 <a href="#state_localsubnets_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
@@ -786,8 +733,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -796,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotesubnets_csharp">
 <a href="#state_remotesubnets_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
@@ -806,8 +751,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -816,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_csharp">
 <a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -826,13 +769,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customergatewayid_go">
 <a href="#state_customergatewayid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Gateway<wbr>Id</a>
@@ -841,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effectimmediately_go">
 <a href="#state_effectimmediately_go" style="color: inherit; text-decoration: inherit;">Effect<wbr>Immediately</a>
@@ -851,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeconfigs_go">
 <a href="#state_ikeconfigs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Configs</a>
@@ -861,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionikeconfig">[]Connection<wbr>Ike<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecconfigs_go">
 <a href="#state_ipsecconfigs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Configs</a>
@@ -871,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionipsecconfig">[]Connection<wbr>Ipsec<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localsubnets_go">
 <a href="#state_localsubnets_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Subnets</a>
@@ -881,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -891,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotesubnets_go">
 <a href="#state_remotesubnets_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Subnets</a>
@@ -901,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -911,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_go">
 <a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -921,13 +854,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customergatewayid_nodejs">
 <a href="#state_customergatewayid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Gateway<wbr>Id</a>
@@ -936,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effectimmediately_nodejs">
 <a href="#state_effectimmediately_nodejs" style="color: inherit; text-decoration: inherit;">effect<wbr>Immediately</a>
@@ -946,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ikeconfigs_nodejs">
 <a href="#state_ikeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Configs</a>
@@ -956,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionikeconfig">Connection<wbr>Ike<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecconfigs_nodejs">
 <a href="#state_ipsecconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Configs</a>
@@ -966,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localsubnets_nodejs">
 <a href="#state_localsubnets_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Subnets</a>
@@ -976,8 +903,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -986,8 +912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotesubnets_nodejs">
 <a href="#state_remotesubnets_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Subnets</a>
@@ -996,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1006,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_nodejs">
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -1016,13 +939,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customer_gateway_id_python">
 <a href="#state_customer_gateway_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>gateway_<wbr>id</a>
@@ -1031,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effect_immediately_python">
 <a href="#state_effect_immediately_python" style="color: inherit; text-decoration: inherit;">effect_<wbr>immediately</a>
@@ -1041,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to delete a successfully negotiated IPsec tunnel and initiate a negotiation again. Valid value:true,false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ike_configs_python">
 <a href="#state_ike_configs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>configs</a>
@@ -1051,8 +970,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionikeconfig">Sequence[Connection<wbr>Ike<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsec_configs_python">
 <a href="#state_ipsec_configs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>configs</a>
@@ -1061,8 +979,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#connectionipsecconfig">Sequence[Connection<wbr>Ipsec<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configurations of phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_subnets_python">
 <a href="#state_local_subnets_python" style="color: inherit; text-decoration: inherit;">local_<wbr>subnets</a>
@@ -1071,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the VPC to be connected with the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1081,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IPsec connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_subnets_python">
 <a href="#state_remote_subnets_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>subnets</a>
@@ -1091,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the local data center. This parameter is used for phase-two negotiation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1101,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of VPN connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_gateway_id_python">
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -1111,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1127,8 +1039,7 @@ The following state arguments are supported:
 <h4 id="connectionikeconfig">Connection<wbr>Ike<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ikeauthalg_csharp">
 <a href="#ikeauthalg_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Auth<wbr>Alg</a>
@@ -1137,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeencalg_csharp">
 <a href="#ikeencalg_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Enc<wbr>Alg</a>
@@ -1147,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default Valid value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikelifetime_csharp">
 <a href="#ikelifetime_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Lifetime</a>
@@ -1157,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikelocalid_csharp">
 <a href="#ikelocalid_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Local<wbr>Id</a>
@@ -1167,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikemode_csharp">
 <a href="#ikemode_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Mode</a>
@@ -1177,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE V1. Valid value: main (main mode) | aggressive (aggressive mode). Default value: main
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikepfs_csharp">
 <a href="#ikepfs_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Pfs</a>
@@ -1187,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. Valid value: group1 | group2 | group5 | group14 | group24. Default value: group2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeremoteid_csharp">
 <a href="#ikeremoteid_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Remote<wbr>Id</a>
@@ -1197,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_csharp">
 <a href="#ikeversion_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -1207,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. Valid value: ikev1 | ikev2. Default value: ikev1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="psk_csharp">
 <a href="#psk_csharp" style="color: inherit; text-decoration: inherit;">Psk</a>
@@ -1217,13 +1120,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ikeauthalg_go">
 <a href="#ikeauthalg_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Auth<wbr>Alg</a>
@@ -1232,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeencalg_go">
 <a href="#ikeencalg_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Enc<wbr>Alg</a>
@@ -1242,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default Valid value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikelifetime_go">
 <a href="#ikelifetime_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Lifetime</a>
@@ -1252,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikelocalid_go">
 <a href="#ikelocalid_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Local<wbr>Id</a>
@@ -1262,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikemode_go">
 <a href="#ikemode_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Mode</a>
@@ -1272,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE V1. Valid value: main (main mode) | aggressive (aggressive mode). Default value: main
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikepfs_go">
 <a href="#ikepfs_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Pfs</a>
@@ -1282,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. Valid value: group1 | group2 | group5 | group14 | group24. Default value: group2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeremoteid_go">
 <a href="#ikeremoteid_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Remote<wbr>Id</a>
@@ -1292,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_go">
 <a href="#ikeversion_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Version</a>
@@ -1302,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. Valid value: ikev1 | ikev2. Default value: ikev1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="psk_go">
 <a href="#psk_go" style="color: inherit; text-decoration: inherit;">Psk</a>
@@ -1312,13 +1205,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ikeauthalg_nodejs">
 <a href="#ikeauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Auth<wbr>Alg</a>
@@ -1327,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeencalg_nodejs">
 <a href="#ikeencalg_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Enc<wbr>Alg</a>
@@ -1337,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default Valid value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikelifetime_nodejs">
 <a href="#ikelifetime_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Lifetime</a>
@@ -1347,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikelocalid_nodejs">
 <a href="#ikelocalid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Local<wbr>Id</a>
@@ -1357,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikemode_nodejs">
 <a href="#ikemode_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Mode</a>
@@ -1367,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE V1. Valid value: main (main mode) | aggressive (aggressive mode). Default value: main
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikepfs_nodejs">
 <a href="#ikepfs_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Pfs</a>
@@ -1377,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. Valid value: group1 | group2 | group5 | group14 | group24. Default value: group2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeremoteid_nodejs">
 <a href="#ikeremoteid_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Remote<wbr>Id</a>
@@ -1387,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ikeversion_nodejs">
 <a href="#ikeversion_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Version</a>
@@ -1397,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. Valid value: ikev1 | ikev2. Default value: ikev1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="psk_nodejs">
 <a href="#psk_nodejs" style="color: inherit; text-decoration: inherit;">psk</a>
@@ -1407,13 +1290,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ike_auth_alg_python">
 <a href="#ike_auth_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>auth_<wbr>alg</a>
@@ -1422,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_enc_alg_python">
 <a href="#ike_enc_alg_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>enc_<wbr>alg</a>
@@ -1432,8 +1312,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default Valid value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_lifetime_python">
 <a href="#ike_lifetime_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>lifetime</a>
@@ -1442,8 +1321,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. The valid value of n is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_local_id_python">
 <a href="#ike_local_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>local_<wbr>id</a>
@@ -1452,8 +1330,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_mode_python">
 <a href="#ike_mode_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>mode</a>
@@ -1462,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE V1. Valid value: main (main mode) | aggressive (aggressive mode). Default value: main
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_pfs_python">
 <a href="#ike_pfs_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>pfs</a>
@@ -1472,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. Valid value: group1 | group2 | group5 | group14 | group24. Default value: group2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_remote_id_python">
 <a href="#ike_remote_id_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>remote_<wbr>id</a>
@@ -1482,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ike_version_python">
 <a href="#ike_version_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>version</a>
@@ -1492,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. Valid value: ikev1 | ikev2. Default value: ikev1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="psk_python">
 <a href="#psk_python" style="color: inherit; text-decoration: inherit;">psk</a>
@@ -1502,15 +1375,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="connectionipsecconfig">Connection<wbr>Ipsec<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipsecauthalg_csharp">
 <a href="#ipsecauthalg_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Auth<wbr>Alg</a>
@@ -1519,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecencalg_csharp">
 <a href="#ipsecencalg_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Enc<wbr>Alg</a>
@@ -1529,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipseclifetime_csharp">
 <a href="#ipseclifetime_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Lifetime</a>
@@ -1539,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpfs_csharp">
 <a href="#ipsecpfs_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Pfs</a>
@@ -1549,13 +1417,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipsecauthalg_go">
 <a href="#ipsecauthalg_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Auth<wbr>Alg</a>
@@ -1564,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecencalg_go">
 <a href="#ipsecencalg_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Enc<wbr>Alg</a>
@@ -1574,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipseclifetime_go">
 <a href="#ipseclifetime_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Lifetime</a>
@@ -1584,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpfs_go">
 <a href="#ipsecpfs_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Pfs</a>
@@ -1594,13 +1457,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipsecauthalg_nodejs">
 <a href="#ipsecauthalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Auth<wbr>Alg</a>
@@ -1609,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecencalg_nodejs">
 <a href="#ipsecencalg_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Enc<wbr>Alg</a>
@@ -1619,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipseclifetime_nodejs">
 <a href="#ipseclifetime_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Lifetime</a>
@@ -1629,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpfs_nodejs">
 <a href="#ipsecpfs_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Pfs</a>
@@ -1639,13 +1497,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipsec_auth_alg_python">
 <a href="#ipsec_auth_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>auth_<wbr>alg</a>
@@ -1654,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. Valid value: md5 | sha1 | sha256 | sha384 | sha512 |. Default value: sha1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_enc_alg_python">
 <a href="#ipsec_enc_alg_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>enc_<wbr>alg</a>
@@ -1664,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. Valid value: aes | aes192 | aes256 | des | 3des. Default value: aes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_lifetime_python">
 <a href="#ipsec_lifetime_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>lifetime</a>
@@ -1674,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. The valid value is [0, 86400], the unit is second and the default value is 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_pfs_python">
 <a href="#ipsec_pfs_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>pfs</a>
@@ -1684,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. Valid value: group1 | group2 | group5 | group14 | group24| disabled. Default value: group2
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

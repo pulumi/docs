@@ -17,11 +17,17 @@ Branch policy for reviewers on pull requests. Includes the minimum number of rev
 - [Azure DevOps Service REST API 5.1 - Policy Configurations](https://docs.microsoft.com/en-us/rest/api/azure/devops/policy/configurations/create?view=azure-devops-rest-5.1)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -76,15 +82,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
 	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -136,9 +144,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -175,9 +186,12 @@ branch_policy_min_reviewers = azuredevops.BranchPolicyMinReviewers("branchPolicy
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -217,9 +231,16 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BranchPolicyMinReviewers Resource {#create}
@@ -244,9 +265,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -254,9 +273,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -264,9 +281,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -274,10 +289,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -303,9 +315,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -313,9 +323,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -323,9 +331,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -333,9 +339,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -343,18 +347,13 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -362,9 +361,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -372,9 +369,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -382,10 +377,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -400,9 +392,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -411,8 +401,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -421,8 +410,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Policy.<wbr>Inputs.<wbr>Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_csharp">
 <a href="#blocking_csharp" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -431,8 +419,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -441,14 +428,11 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -457,8 +441,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -467,8 +450,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_go">
 <a href="#blocking_go" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -477,8 +459,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -487,14 +468,11 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -503,8 +481,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -513,8 +490,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_nodejs">
 <a href="#blocking_nodejs" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -523,8 +499,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -533,14 +508,11 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -549,8 +521,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -559,8 +530,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_python">
 <a href="#blocking_python" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -569,8 +539,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -579,8 +548,7 @@ The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -591,9 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,14 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -616,14 +579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -631,14 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -646,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -774,9 +730,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_csharp">
 <a href="#state_blocking_csharp" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -785,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -795,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -805,8 +757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -815,14 +766,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Policy.<wbr>Inputs.<wbr>Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_go">
 <a href="#state_blocking_go" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -831,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -841,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -851,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -861,14 +806,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_nodejs">
 <a href="#state_blocking_nodejs" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -877,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -887,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -897,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -907,14 +846,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_python">
 <a href="#state_blocking_python" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -923,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -933,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -943,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -953,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -969,9 +901,7 @@ The following state arguments are supported:
 <h4 id="branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -980,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettingsscope">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Policy.<wbr>Inputs.<wbr>Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcompletionwithrejectsorwaits_csharp">
 <a href="#allowcompletionwithrejectsorwaits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Completion<wbr>With<wbr>Rejects<wbr>Or<wbr>Waits</a>
@@ -990,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastpushercannotapprove_csharp">
 <a href="#lastpushercannotapprove_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Pusher<wbr>Cannot<wbr>Approve</a>
@@ -1000,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlastiterationrequirevote_csharp">
 <a href="#onlastiterationrequirevote_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Last<wbr>Iteration<wbr>Require<wbr>Vote</a>
@@ -1010,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpushresetallvotes_csharp">
 <a href="#onpushresetallvotes_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>All<wbr>Votes</a>
@@ -1020,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpushresetapprovedvotes_csharp">
 <a href="#onpushresetapprovedvotes_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>Approved<wbr>Votes</a>
@@ -1030,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewercount_csharp">
 <a href="#reviewercount_csharp" style="color: inherit; text-decoration: inherit;">Reviewer<wbr>Count</a>
@@ -1040,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of reviewers needed to approve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittercanvote_csharp">
 <a href="#submittercanvote_csharp" style="color: inherit; text-decoration: inherit;">Submitter<wbr>Can<wbr>Vote</a>
@@ -1050,14 +973,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -1066,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettingsscope">[]Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcompletionwithrejectsorwaits_go">
 <a href="#allowcompletionwithrejectsorwaits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Completion<wbr>With<wbr>Rejects<wbr>Or<wbr>Waits</a>
@@ -1076,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastpushercannotapprove_go">
 <a href="#lastpushercannotapprove_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Pusher<wbr>Cannot<wbr>Approve</a>
@@ -1086,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlastiterationrequirevote_go">
 <a href="#onlastiterationrequirevote_go" style="color: inherit; text-decoration: inherit;">On<wbr>Last<wbr>Iteration<wbr>Require<wbr>Vote</a>
@@ -1096,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpushresetallvotes_go">
 <a href="#onpushresetallvotes_go" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>All<wbr>Votes</a>
@@ -1106,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpushresetapprovedvotes_go">
 <a href="#onpushresetapprovedvotes_go" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>Approved<wbr>Votes</a>
@@ -1116,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewercount_go">
 <a href="#reviewercount_go" style="color: inherit; text-decoration: inherit;">Reviewer<wbr>Count</a>
@@ -1126,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of reviewers needed to approve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittercanvote_go">
 <a href="#submittercanvote_go" style="color: inherit; text-decoration: inherit;">Submitter<wbr>Can<wbr>Vote</a>
@@ -1136,14 +1049,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1152,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettingsscope">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Scope[]</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcompletionwithrejectsorwaits_nodejs">
 <a href="#allowcompletionwithrejectsorwaits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Completion<wbr>With<wbr>Rejects<wbr>Or<wbr>Waits</a>
@@ -1162,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastpushercannotapprove_nodejs">
 <a href="#lastpushercannotapprove_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Pusher<wbr>Cannot<wbr>Approve</a>
@@ -1172,8 +1080,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlastiterationrequirevote_nodejs">
 <a href="#onlastiterationrequirevote_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Last<wbr>Iteration<wbr>Require<wbr>Vote</a>
@@ -1182,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpushresetallvotes_nodejs">
 <a href="#onpushresetallvotes_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Push<wbr>Reset<wbr>All<wbr>Votes</a>
@@ -1192,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onpushresetapprovedvotes_nodejs">
 <a href="#onpushresetapprovedvotes_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Push<wbr>Reset<wbr>Approved<wbr>Votes</a>
@@ -1202,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewercount_nodejs">
 <a href="#reviewercount_nodejs" style="color: inherit; text-decoration: inherit;">reviewer<wbr>Count</a>
@@ -1212,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of reviewers needed to approve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submittercanvote_nodejs">
 <a href="#submittercanvote_nodejs" style="color: inherit; text-decoration: inherit;">submitter<wbr>Can<wbr>Vote</a>
@@ -1222,14 +1125,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1238,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicyminreviewerssettingsscope">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_completion_with_rejects_or_waits_python">
 <a href="#allow_completion_with_rejects_or_waits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>completion_<wbr>with_<wbr>rejects_<wbr>or_<wbr>waits</a>
@@ -1248,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_pusher_cannot_approve_python">
 <a href="#last_pusher_cannot_approve_python" style="color: inherit; text-decoration: inherit;">last_<wbr>pusher_<wbr>cannot_<wbr>approve</a>
@@ -1258,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_last_iteration_require_vote_python">
 <a href="#on_last_iteration_require_vote_python" style="color: inherit; text-decoration: inherit;">on_<wbr>last_<wbr>iteration_<wbr>require_<wbr>vote</a>
@@ -1268,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_push_reset_all_votes_python">
 <a href="#on_push_reset_all_votes_python" style="color: inherit; text-decoration: inherit;">on_<wbr>push_<wbr>reset_<wbr>all_<wbr>votes</a>
@@ -1278,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_push_reset_approved_votes_python">
 <a href="#on_push_reset_approved_votes_python" style="color: inherit; text-decoration: inherit;">on_<wbr>push_<wbr>reset_<wbr>approved_<wbr>votes</a>
@@ -1288,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reviewer_count_python">
 <a href="#reviewer_count_python" style="color: inherit; text-decoration: inherit;">reviewer_<wbr>count</a>
@@ -1298,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of reviewers needed to approve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="submitter_can_vote_python">
 <a href="#submitter_can_vote_python" style="color: inherit; text-decoration: inherit;">submitter_<wbr>can_<wbr>vote</a>
@@ -1308,16 +1201,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="branchpolicyminreviewerssettingsscope">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_csharp">
 <a href="#matchtype_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
@@ -1326,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_csharp">
 <a href="#repositoryid_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -1336,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryref_csharp">
 <a href="#repositoryref_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Ref</a>
@@ -1346,14 +1234,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_go">
 <a href="#matchtype_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
@@ -1362,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_go">
 <a href="#repositoryid_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -1372,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryref_go">
 <a href="#repositoryref_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Ref</a>
@@ -1382,14 +1265,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_nodejs">
 <a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
@@ -1398,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_nodejs">
 <a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
@@ -1408,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryref_nodejs">
 <a href="#repositoryref_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Ref</a>
@@ -1418,14 +1296,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="match_type_python">
 <a href="#match_type_python" style="color: inherit; text-decoration: inherit;">match_<wbr>type</a>
@@ -1434,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_id_python">
 <a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
@@ -1444,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_ref_python">
 <a href="#repository_ref_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>ref</a>
@@ -1454,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

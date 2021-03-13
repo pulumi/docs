@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -156,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -167,8 +165,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpid_csharp">
 <a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -177,8 +174,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity provider ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -187,8 +183,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordexpiresat_csharp">
 <a href="#passwordexpiresat_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Expires<wbr>At</a>
@@ -197,8 +192,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query for expired passwords. See the [OpenStack API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolid_csharp">
 <a href="#protocolid_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Id</a>
@@ -207,8 +201,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -217,8 +210,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniqueid_csharp">
 <a href="#uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -227,13 +219,11 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -242,8 +232,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -253,8 +242,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpid_go">
 <a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -263,8 +251,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity provider ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -273,8 +260,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordexpiresat_go">
 <a href="#passwordexpiresat_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Expires<wbr>At</a>
@@ -283,8 +269,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query for expired passwords. See the [OpenStack API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolid_go">
 <a href="#protocolid_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Id</a>
@@ -293,8 +278,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -303,8 +287,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniqueid_go">
 <a href="#uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -313,13 +296,11 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -328,8 +309,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -339,8 +319,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpid_nodejs">
 <a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
@@ -349,8 +328,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity provider ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -359,8 +337,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordexpiresat_nodejs">
 <a href="#passwordexpiresat_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Expires<wbr>At</a>
@@ -369,8 +346,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query for expired passwords. See the [OpenStack API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolid_nodejs">
 <a href="#protocolid_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Id</a>
@@ -379,8 +355,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -389,8 +364,7 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniqueid_nodejs">
 <a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
@@ -399,13 +373,11 @@ values are `true` and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -414,8 +386,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -425,8 +396,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idp_id_python">
 <a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
@@ -435,8 +405,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity provider ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -445,8 +414,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_expires_at_python">
 <a href="#password_expires_at_python" style="color: inherit; text-decoration: inherit;">password_<wbr>expires_<wbr>at</a>
@@ -455,8 +423,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query for expired passwords. See the [OpenStack API docs](https://developer.openstack.org/api-ref/identity/v3/#list-users) for more information on the query format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_id_python">
 <a href="#protocol_id_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>id</a>
@@ -465,8 +432,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol ID of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -475,8 +441,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_id_python">
 <a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
@@ -485,8 +450,7 @@ values are `true` and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -499,8 +463,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprojectid_csharp">
 <a href="#defaultprojectid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
@@ -509,8 +472,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -519,8 +481,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -529,8 +490,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -539,8 +499,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -549,8 +508,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -559,8 +517,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idpid_csharp">
 <a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -569,8 +526,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -579,8 +535,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passwordexpiresat_csharp">
 <a href="#passwordexpiresat_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Expires<wbr>At</a>
@@ -589,8 +544,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolid_csharp">
 <a href="#protocolid_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Id</a>
@@ -599,8 +553,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_csharp">
 <a href="#uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -609,13 +562,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprojectid_go">
 <a href="#defaultprojectid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
@@ -624,8 +575,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -634,8 +584,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -644,8 +593,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -654,8 +602,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -664,8 +611,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -674,8 +620,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idpid_go">
 <a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -684,8 +629,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -694,8 +638,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passwordexpiresat_go">
 <a href="#passwordexpiresat_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Expires<wbr>At</a>
@@ -704,8 +647,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolid_go">
 <a href="#protocolid_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Id</a>
@@ -714,8 +656,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_go">
 <a href="#uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -724,13 +665,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="defaultprojectid_nodejs">
 <a href="#defaultprojectid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Project<wbr>Id</a>
@@ -739,8 +678,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -749,8 +687,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -759,8 +696,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -769,8 +705,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -779,8 +714,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -789,8 +723,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idpid_nodejs">
 <a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
@@ -799,8 +732,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -809,8 +741,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passwordexpiresat_nodejs">
 <a href="#passwordexpiresat_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Expires<wbr>At</a>
@@ -819,8 +750,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolid_nodejs">
 <a href="#protocolid_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Id</a>
@@ -829,8 +759,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_nodejs">
 <a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
@@ -839,13 +768,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="default_project_id_python">
 <a href="#default_project_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>project_<wbr>id</a>
@@ -854,8 +781,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -864,8 +790,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -874,8 +799,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -884,8 +808,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -894,8 +817,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the user is located in.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -904,8 +826,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idp_id_python">
 <a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
@@ -914,8 +835,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -924,8 +844,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="password_expires_at_python">
 <a href="#password_expires_at_python" style="color: inherit; text-decoration: inherit;">password_<wbr>expires_<wbr>at</a>
@@ -934,8 +853,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_id_python">
 <a href="#protocol_id_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>id</a>
@@ -944,8 +862,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_id_python">
 <a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
@@ -954,8 +871,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

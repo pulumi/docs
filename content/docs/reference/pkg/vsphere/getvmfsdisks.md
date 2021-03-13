@@ -192,8 +192,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -203,8 +202,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -214,8 +212,7 @@ the host to look for disks on.
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescan_csharp">
 <a href="#rescan_csharp" style="color: inherit; text-decoration: inherit;">Rescan</a>
@@ -226,13 +223,11 @@ disks with canonical names that match will be included.
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -242,8 +237,7 @@ search. Default: `false`.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -253,8 +247,7 @@ the host to look for disks on.
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescan_go">
 <a href="#rescan_go" style="color: inherit; text-decoration: inherit;">Rescan</a>
@@ -265,13 +258,11 @@ disks with canonical names that match will be included.
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -281,8 +272,7 @@ search. Default: `false`.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -292,8 +282,7 @@ the host to look for disks on.
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescan_nodejs">
 <a href="#rescan_nodejs" style="color: inherit; text-decoration: inherit;">rescan</a>
@@ -304,13 +293,11 @@ disks with canonical names that match will be included.
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -320,8 +307,7 @@ search. Default: `false`.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -331,8 +317,7 @@ the host to look for disks on.
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rescan_python">
 <a href="#rescan_python" style="color: inherit; text-decoration: inherit;">rescan</a>
@@ -343,8 +328,7 @@ disks with canonical names that match will be included.
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -357,8 +341,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -368,8 +351,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -377,8 +359,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -387,8 +368,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -396,8 +376,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rescan_csharp">
 <a href="#rescan_csharp" style="color: inherit; text-decoration: inherit;">Rescan</a>
@@ -405,13 +384,11 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -421,8 +398,7 @@ operation, matching the supplied `filter`, if provided.
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -430,8 +406,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -440,8 +415,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -449,8 +423,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rescan_go">
 <a href="#rescan_go" style="color: inherit; text-decoration: inherit;">Rescan</a>
@@ -458,13 +431,11 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -474,8 +445,7 @@ operation, matching the supplied `filter`, if provided.
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -483,8 +453,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -493,8 +462,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -502,8 +470,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rescan_nodejs">
 <a href="#rescan_nodejs" style="color: inherit; text-decoration: inherit;">rescan</a>
@@ -511,13 +478,11 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -527,8 +492,7 @@ operation, matching the supplied `filter`, if provided.
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -536,8 +500,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -546,8 +509,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -555,8 +517,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rescan_python">
 <a href="#rescan_python" style="color: inherit; text-decoration: inherit;">rescan</a>
@@ -564,8 +525,7 @@ operation, matching the supplied `filter`, if provided.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

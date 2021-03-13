@@ -334,8 +334,7 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_csharp">
 <a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -344,8 +343,7 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -357,8 +355,7 @@ The AttachedDisk resource accepts the following [input]({{< relref "/docs/intro/
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -371,8 +368,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -383,8 +379,7 @@ the instance.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -394,8 +389,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -405,13 +399,11 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_go">
 <a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -420,8 +412,7 @@ READ_WRITE mode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -433,8 +424,7 @@ READ_WRITE mode.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -447,8 +437,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -459,8 +448,7 @@ the instance.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -470,8 +458,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -481,13 +468,11 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_nodejs">
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -496,8 +481,7 @@ READ_WRITE mode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -509,8 +493,7 @@ READ_WRITE mode.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -523,8 +506,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -535,8 +517,7 @@ the instance.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -546,8 +527,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -557,13 +537,11 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_python">
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -572,8 +550,7 @@ READ_WRITE mode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -585,8 +562,7 @@ READ_WRITE mode.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -599,8 +575,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -611,8 +586,7 @@ the instance.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -622,8 +596,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -633,8 +606,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -645,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -654,13 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -668,13 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -682,13 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -696,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -824,8 +788,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_csharp">
 <a href="#state_devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -838,8 +801,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_csharp">
 <a href="#state_disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -848,8 +810,7 @@ the instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -861,8 +822,7 @@ the instance.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_csharp">
 <a href="#state_mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -873,8 +833,7 @@ as properties on the resource or provider.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -884,8 +843,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -895,13 +853,11 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_go">
 <a href="#state_devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -914,8 +870,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_go">
 <a href="#state_disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -924,8 +879,7 @@ the instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -937,8 +891,7 @@ the instance.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_go">
 <a href="#state_mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -949,8 +902,7 @@ as properties on the resource or provider.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -960,8 +912,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -971,13 +922,11 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_devicename_nodejs">
 <a href="#state_devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -990,8 +939,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_nodejs">
 <a href="#state_disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1000,8 +948,7 @@ the instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1013,8 +960,7 @@ the instance.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_nodejs">
 <a href="#state_mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1025,8 +971,7 @@ as properties on the resource or provider.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1036,8 +981,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1047,13 +991,11 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_device_name_python">
 <a href="#state_device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -1066,8 +1008,7 @@ reflected into the /dev/disk/by-id/google-* tree of a Linux operating
 system running within the instance. This name can be used to
 reference the device for mounting, resizing, and so on, from within
 the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_python">
 <a href="#state_disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1076,8 +1017,7 @@ the instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`name` or `self_link` of the disk that will be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1089,8 +1029,7 @@ the instance.
 If the `self_link` is provided then `zone` and `project` are extracted from the
 self link. If only the name is used then `zone` and `project` must be defined
 as properties on the resource or provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mode_python">
 <a href="#state_mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1101,8 +1040,7 @@ as properties on the resource or provider.
     <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or
 READ_ONLY. If not specified, the default is to attach the disk in
 READ_WRITE mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1112,8 +1050,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The project that the referenced compute instance is a part of. If `instance` is referenced by its
 `self_link` the project defined in the link will take precedence.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1123,8 +1060,7 @@ READ_WRITE mode.
     </dt>
     <dd>{{% md %}}The zone that the referenced compute instance is located within. If `instance` is referenced by its
 `self_link` the zone defined in the link will take precedence.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

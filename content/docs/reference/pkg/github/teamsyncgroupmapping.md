@@ -229,8 +229,7 @@ The TeamSyncGroupMapping resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="teamslug_csharp">
 <a href="#teamslug_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
@@ -239,8 +238,7 @@ The TeamSyncGroupMapping resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -250,13 +248,11 @@ The TeamSyncGroupMapping resource accepts the following [input]({{< relref "/doc
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="teamslug_go">
 <a href="#teamslug_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
@@ -265,8 +261,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -276,13 +271,11 @@ ___
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="teamslug_nodejs">
 <a href="#teamslug_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Slug</a>
@@ -291,8 +284,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -302,13 +294,11 @@ ___
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="team_slug_python">
 <a href="#team_slug_python" style="color: inherit; text-decoration: inherit;">team_<wbr>slug</a>
@@ -317,8 +307,7 @@ ___
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -328,8 +317,7 @@ ___
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -340,8 +328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -349,8 +336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -358,13 +344,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -372,8 +356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -381,13 +364,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -395,8 +376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -404,13 +384,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -418,8 +396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -427,8 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -555,8 +531,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -564,8 +539,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -575,8 +549,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamslug_csharp">
 <a href="#state_teamslug_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
@@ -585,13 +558,11 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -599,8 +570,7 @@ ___
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -610,8 +580,7 @@ ___
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamslug_go">
 <a href="#state_teamslug_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Slug</a>
@@ -620,13 +589,11 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -634,8 +601,7 @@ ___
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -645,8 +611,7 @@ ___
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamslug_nodejs">
 <a href="#state_teamslug_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Slug</a>
@@ -655,13 +620,11 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -669,8 +632,7 @@ ___
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -680,8 +642,7 @@ ___
     </dt>
     <dd>{{% md %}}An Array of GitHub Identity Provider Groups (or empty []).  Each `group` block consists of the fields documented below.
 ___
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_team_slug_python">
 <a href="#state_team_slug_python" style="color: inherit; text-decoration: inherit;">team_<wbr>slug</a>
@@ -690,8 +651,7 @@ ___
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slug of the team
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -706,8 +666,7 @@ ___
 <h4 id="teamsyncgroupmappinggroup">Team<wbr>Sync<wbr>Group<wbr>Mapping<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupdescription_csharp">
 <a href="#groupdescription_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Description</a>
@@ -716,8 +675,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -726,8 +684,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -736,13 +693,11 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IdP group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupdescription_go">
 <a href="#groupdescription_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Description</a>
@@ -751,8 +706,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -761,8 +715,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -771,13 +724,11 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IdP group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupdescription_nodejs">
 <a href="#groupdescription_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Description</a>
@@ -786,8 +737,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -796,8 +746,7 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -806,13 +755,11 @@ ___
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IdP group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_description_python">
 <a href="#group_description_python" style="color: inherit; text-decoration: inherit;">group_<wbr>description</a>
@@ -821,8 +768,7 @@ ___
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -831,8 +777,7 @@ ___
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the IdP group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -841,8 +786,7 @@ ___
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IdP group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -162,8 +162,7 @@ The DatastoreClusterVmAntiAffinityRule resource accepts the following [input]({{
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastoreclusterid_csharp">
 <a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -174,8 +173,7 @@ The DatastoreClusterVmAntiAffinityRule resource accepts the following [input]({{
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineids_csharp">
 <a href="#virtualmachineids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -185,8 +183,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -195,8 +192,7 @@ on different datastores from each other.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_csharp">
 <a href="#mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -206,8 +202,7 @@ on different datastores from each other.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -216,13 +211,11 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastoreclusterid_go">
 <a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -233,8 +226,7 @@ machine operations that may violate this rule. Default: `false`.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineids_go">
 <a href="#virtualmachineids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -244,8 +236,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -254,8 +245,7 @@ on different datastores from each other.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_go">
 <a href="#mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -265,8 +255,7 @@ on different datastores from each other.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -275,13 +264,11 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastoreclusterid_nodejs">
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
@@ -292,8 +279,7 @@ machine operations that may violate this rule. Default: `false`.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachineids_nodejs">
 <a href="#virtualmachineids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Ids</a>
@@ -303,8 +289,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -313,8 +298,7 @@ on different datastores from each other.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_nodejs">
 <a href="#mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -324,8 +308,7 @@ on different datastores from each other.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -334,13 +317,11 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_cluster_id_python">
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
@@ -351,8 +332,7 @@ machine operations that may violate this rule. Default: `false`.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machine_ids_python">
 <a href="#virtual_machine_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>ids</a>
@@ -362,8 +342,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -372,8 +351,7 @@ on different datastores from each other.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_python">
 <a href="#mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -383,8 +361,7 @@ on different datastores from each other.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -393,8 +370,7 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -405,8 +381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -414,13 +389,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -428,13 +401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -442,13 +413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -456,8 +425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -584,8 +552,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_csharp">
 <a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -596,8 +563,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -606,8 +572,7 @@ a new resource if changed.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_csharp">
 <a href="#state_mandatory_csharp" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -617,8 +582,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -627,8 +591,7 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineids_csharp">
 <a href="#state_virtualmachineids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -638,13 +601,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_go">
 <a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -655,8 +616,7 @@ on different datastores from each other.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -665,8 +625,7 @@ a new resource if changed.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_go">
 <a href="#state_mandatory_go" style="color: inherit; text-decoration: inherit;">Mandatory</a>
@@ -676,8 +635,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -686,8 +644,7 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineids_go">
 <a href="#state_virtualmachineids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Ids</a>
@@ -697,13 +654,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_nodejs">
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
@@ -714,8 +669,7 @@ on different datastores from each other.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -724,8 +678,7 @@ a new resource if changed.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_nodejs">
 <a href="#state_mandatory_nodejs" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -735,8 +688,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -745,8 +697,7 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachineids_nodejs">
 <a href="#state_virtualmachineids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Ids</a>
@@ -756,13 +707,11 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_cluster_id_python">
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
@@ -773,8 +722,7 @@ on different datastores from each other.
     <dd>{{% md %}}The managed object reference
 ID of the datastore cluster to put the group in.  Forces
 a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -783,8 +731,7 @@ a new resource if changed.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this rule in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mandatory_python">
 <a href="#state_mandatory_python" style="color: inherit; text-decoration: inherit;">mandatory</a>
@@ -794,8 +741,7 @@ a new resource if changed.
     </dt>
     <dd>{{% md %}}When this value is `true`, prevents any virtual
 machine operations that may violate this rule. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -804,8 +750,7 @@ machine operations that may violate this rule. Default: `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule. This must be unique in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_ids_python">
 <a href="#state_virtual_machine_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>ids</a>
@@ -815,8 +760,7 @@ machine operations that may violate this rule. Default: `false`.
     </dt>
     <dd>{{% md %}}The UUIDs of the virtual machines to run
 on different datastores from each other.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

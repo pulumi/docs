@@ -321,8 +321,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -331,8 +330,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -341,8 +339,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#snatorigin">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Ltm.<wbr>Inputs.<wbr>Snat<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autolasthop_csharp">
 <a href="#autolasthop_csharp" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
@@ -351,8 +348,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullpath_csharp">
 <a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
@@ -361,8 +357,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_csharp">
 <a href="#mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -371,8 +366,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_csharp">
 <a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -381,8 +375,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_csharp">
 <a href="#snatpool_csharp" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -391,8 +384,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_csharp">
 <a href="#sourceport_csharp" style="color: inherit; text-decoration: inherit;">Sourceport</a>
@@ -401,8 +393,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translation_csharp">
 <a href="#translation_csharp" style="color: inherit; text-decoration: inherit;">Translation</a>
@@ -411,8 +402,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_csharp">
 <a href="#vlans_csharp" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -421,8 +411,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_csharp">
 <a href="#vlansdisabled_csharp" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
@@ -431,13 +420,11 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -446,8 +433,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -456,8 +442,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#snatorigin">[]Snat<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autolasthop_go">
 <a href="#autolasthop_go" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
@@ -466,8 +451,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullpath_go">
 <a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
@@ -476,8 +460,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_go">
 <a href="#mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -486,8 +469,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_go">
 <a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -496,8 +478,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_go">
 <a href="#snatpool_go" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -506,8 +487,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_go">
 <a href="#sourceport_go" style="color: inherit; text-decoration: inherit;">Sourceport</a>
@@ -516,8 +496,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translation_go">
 <a href="#translation_go" style="color: inherit; text-decoration: inherit;">Translation</a>
@@ -526,8 +505,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_go">
 <a href="#vlans_go" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -536,8 +514,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_go">
 <a href="#vlansdisabled_go" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
@@ -546,13 +523,11 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -561,8 +536,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -571,8 +545,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#snatorigin">Snat<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autolasthop_nodejs">
 <a href="#autolasthop_nodejs" style="color: inherit; text-decoration: inherit;">autolasthop</a>
@@ -581,8 +554,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullpath_nodejs">
 <a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
@@ -591,8 +563,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_nodejs">
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -601,8 +572,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_nodejs">
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -611,8 +581,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_nodejs">
 <a href="#snatpool_nodejs" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -621,8 +590,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_nodejs">
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">sourceport</a>
@@ -631,8 +599,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translation_nodejs">
 <a href="#translation_nodejs" style="color: inherit; text-decoration: inherit;">translation</a>
@@ -641,8 +608,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_nodejs">
 <a href="#vlans_nodejs" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -651,8 +617,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_nodejs">
 <a href="#vlansdisabled_nodejs" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
@@ -661,13 +626,11 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -676,8 +639,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -686,8 +648,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#snatorigin">Sequence[Snat<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autolasthop_python">
 <a href="#autolasthop_python" style="color: inherit; text-decoration: inherit;">autolasthop</a>
@@ -696,8 +657,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_path_python">
 <a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
@@ -706,8 +666,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_python">
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -716,8 +675,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_python">
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -726,8 +684,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snatpool_python">
 <a href="#snatpool_python" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -736,8 +693,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_python">
 <a href="#sourceport_python" style="color: inherit; text-decoration: inherit;">sourceport</a>
@@ -746,8 +702,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="translation_python">
 <a href="#translation_python" style="color: inherit; text-decoration: inherit;">translation</a>
@@ -756,8 +711,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlans_python">
 <a href="#vlans_python" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -766,8 +720,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vlansdisabled_python">
 <a href="#vlansdisabled_python" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
@@ -776,8 +729,7 @@ The Snat resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -788,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -797,13 +748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -811,13 +760,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -825,13 +772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -839,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -967,8 +911,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autolasthop_csharp">
 <a href="#state_autolasthop_csharp" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
@@ -977,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullpath_csharp">
 <a href="#state_fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
@@ -987,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_csharp">
 <a href="#state_mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -997,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1007,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_csharp">
 <a href="#state_origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -1017,8 +956,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#snatorigin">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>Ltm.<wbr>Inputs.<wbr>Snat<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_csharp">
 <a href="#state_partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -1027,8 +965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_csharp">
 <a href="#state_snatpool_csharp" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -1037,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_csharp">
 <a href="#state_sourceport_csharp" style="color: inherit; text-decoration: inherit;">Sourceport</a>
@@ -1047,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translation_csharp">
 <a href="#state_translation_csharp" style="color: inherit; text-decoration: inherit;">Translation</a>
@@ -1057,8 +992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_csharp">
 <a href="#state_vlans_csharp" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -1067,8 +1001,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_csharp">
 <a href="#state_vlansdisabled_csharp" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
@@ -1077,13 +1010,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autolasthop_go">
 <a href="#state_autolasthop_go" style="color: inherit; text-decoration: inherit;">Autolasthop</a>
@@ -1092,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullpath_go">
 <a href="#state_fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
@@ -1102,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_go">
 <a href="#state_mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -1112,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1122,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_go">
 <a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -1132,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#snatorigin">[]Snat<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_go">
 <a href="#state_partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -1142,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_go">
 <a href="#state_snatpool_go" style="color: inherit; text-decoration: inherit;">Snatpool</a>
@@ -1152,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_go">
 <a href="#state_sourceport_go" style="color: inherit; text-decoration: inherit;">Sourceport</a>
@@ -1162,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translation_go">
 <a href="#state_translation_go" style="color: inherit; text-decoration: inherit;">Translation</a>
@@ -1172,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_go">
 <a href="#state_vlans_go" style="color: inherit; text-decoration: inherit;">Vlans</a>
@@ -1182,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_go">
 <a href="#state_vlansdisabled_go" style="color: inherit; text-decoration: inherit;">Vlansdisabled</a>
@@ -1192,13 +1113,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autolasthop_nodejs">
 <a href="#state_autolasthop_nodejs" style="color: inherit; text-decoration: inherit;">autolasthop</a>
@@ -1207,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullpath_nodejs">
 <a href="#state_fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
@@ -1217,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_nodejs">
 <a href="#state_mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1227,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1237,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_nodejs">
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -1247,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#snatorigin">Snat<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_nodejs">
 <a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -1257,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_nodejs">
 <a href="#state_snatpool_nodejs" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -1267,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_nodejs">
 <a href="#state_sourceport_nodejs" style="color: inherit; text-decoration: inherit;">sourceport</a>
@@ -1277,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translation_nodejs">
 <a href="#state_translation_nodejs" style="color: inherit; text-decoration: inherit;">translation</a>
@@ -1287,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_nodejs">
 <a href="#state_vlans_nodejs" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -1297,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_nodejs">
 <a href="#state_vlansdisabled_nodejs" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
@@ -1307,13 +1216,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autolasthop_python">
 <a href="#state_autolasthop_python" style="color: inherit; text-decoration: inherit;">autolasthop</a>
@@ -1322,8 +1229,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-(Optional) Specifies whether to automatically map last hop for pools or not. The default is to use next level's default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_full_path_python">
 <a href="#state_full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
@@ -1332,8 +1238,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fullpath
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_python">
 <a href="#state_mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1342,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables mirroring of SNAT connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1352,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_python">
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -1362,8 +1265,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#snatorigin">Sequence[Snat<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}IP or hostname of the snat
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_python">
 <a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -1372,8 +1274,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snatpool_python">
 <a href="#state_snatpool_python" style="color: inherit; text-decoration: inherit;">snatpool</a>
@@ -1382,8 +1283,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_python">
 <a href="#state_sourceport_python" style="color: inherit; text-decoration: inherit;">sourceport</a>
@@ -1392,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_translation_python">
 <a href="#state_translation_python" style="color: inherit; text-decoration: inherit;">translation</a>
@@ -1402,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlans_python">
 <a href="#state_vlans_python" style="color: inherit; text-decoration: inherit;">vlans</a>
@@ -1412,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlansdisabled_python">
 <a href="#state_vlansdisabled_python" style="color: inherit; text-decoration: inherit;">vlansdisabled</a>
@@ -1422,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disables the SNAT on all VLANs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1438,8 +1334,7 @@ The following state arguments are supported:
 <h4 id="snatorigin">Snat<wbr>Origin</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appservice_csharp">
 <a href="#appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1447,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1457,13 +1351,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appservice_go">
 <a href="#appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1471,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1481,13 +1372,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="appservice_nodejs">
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -1495,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1505,13 +1393,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_service_python">
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -1519,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1529,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the snat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

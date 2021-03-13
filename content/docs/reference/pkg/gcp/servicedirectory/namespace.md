@@ -293,8 +293,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -305,8 +304,7 @@ The Namespace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespaceid_csharp">
 <a href="#namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
@@ -316,8 +314,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -328,8 +325,7 @@ lowercase letters or the hyphen character.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -339,13 +335,11 @@ be no longer than 63 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -356,8 +350,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespaceid_go">
 <a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
@@ -367,8 +360,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -379,8 +371,7 @@ lowercase letters or the hyphen character.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -390,13 +381,11 @@ be no longer than 63 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -407,8 +396,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespaceid_nodejs">
 <a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
@@ -418,8 +406,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -430,8 +417,7 @@ lowercase letters or the hyphen character.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -441,13 +427,11 @@ be no longer than 63 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -458,8 +442,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_id_python">
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
@@ -469,8 +452,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -481,8 +463,7 @@ lowercase letters or the hyphen character.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -492,8 +473,7 @@ be no longer than 63 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -504,8 +484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -513,8 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -523,13 +501,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -537,8 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,13 +522,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -571,13 +543,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -585,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -595,8 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -723,8 +691,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -735,8 +702,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -747,8 +713,7 @@ be no longer than 63 characters.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -757,8 +722,7 @@ A full list of valid locations can be found by running
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespaceid_csharp">
 <a href="#state_namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
@@ -768,8 +732,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -779,13 +742,11 @@ lowercase letters or the hyphen character.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -796,8 +757,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -808,8 +768,7 @@ be no longer than 63 characters.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -818,8 +777,7 @@ A full list of valid locations can be found by running
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespaceid_go">
 <a href="#state_namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
@@ -829,8 +787,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -840,13 +797,11 @@ lowercase letters or the hyphen character.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -857,8 +812,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -869,8 +823,7 @@ be no longer than 63 characters.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +832,7 @@ A full list of valid locations can be found by running
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespaceid_nodejs">
 <a href="#state_namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
@@ -890,8 +842,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -901,13 +852,11 @@ lowercase letters or the hyphen character.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -918,8 +867,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Resource labels associated with this Namespace. No more than 64 user
 labels can be associated with a given resource. Label keys and values can
 be no longer than 63 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -930,8 +878,7 @@ be no longer than 63 characters.
     <dd>{{% md %}}The location for the Namespace.
 A full list of valid locations can be found by running
 `gcloud beta service-directory locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -940,8 +887,7 @@ A full list of valid locations can be found by running
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_id_python">
 <a href="#state_namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
@@ -951,8 +897,7 @@ A full list of valid locations can be found by running
     </dt>
     <dd>{{% md %}}The Resource ID must be 1-63 characters long, including digits,
 lowercase letters or the hyphen character.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -962,8 +907,7 @@ lowercase letters or the hyphen character.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

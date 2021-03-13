@@ -1,8 +1,8 @@
 
 ---
-title: "GetCertificate"
-title_tag: "Function GetCertificate | Package Hetzner Cloud"
-meta_desc: "Explore the GetCertificate function of the Hetzner Cloud package, including examples, input properties, output properties, and supporting types. Provides details about a specific Hetzner Cloud Certificate."
+title: "getCertificate"
+title_tag: "hcloud.getCertificate"
+meta_desc: "Documentation for the hcloud.getCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -15,7 +15,7 @@ Provides details about a specific Hetzner Cloud Certificate.
 
 
 
-## Using GetCertificate {#using}
+## Using getCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -71,8 +68,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withselector_csharp">
 <a href="#withselector_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -81,14 +77,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -97,8 +90,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -107,8 +99,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withselector_go">
 <a href="#withselector_go" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -117,14 +108,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -133,8 +121,7 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -143,8 +130,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withselector_nodejs">
 <a href="#withselector_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Selector</a>
@@ -153,14 +139,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -169,8 +152,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -179,8 +161,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_selector_python">
 <a href="#with_selector_python" style="color: inherit; text-decoration: inherit;">with_<wbr>selector</a>
@@ -189,23 +170,20 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[Label selector](https://docs.hetzner.cloud/#overview-label-selector)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
 
-## GetCertificate Result {#result}
+## getCertificate Result {#result}
 
 The following output properties are available:
 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -214,8 +192,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -224,8 +201,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnames_csharp">
 <a href="#domainnames_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
@@ -234,8 +210,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -244,8 +219,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -254,8 +228,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(int) Unique ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -264,8 +237,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidafter_csharp">
 <a href="#notvalidafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>After</a>
@@ -274,8 +246,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidbefore_csharp">
 <a href="#notvalidbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>Before</a>
@@ -284,8 +255,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -294,8 +264,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withselector_csharp">
 <a href="#withselector_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -303,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -319,8 +285,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -329,8 +294,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnames_go">
 <a href="#domainnames_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
@@ -339,8 +303,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -349,8 +312,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -359,8 +321,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(int) Unique ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -369,8 +330,7 @@ The following output properties are available:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidafter_go">
 <a href="#notvalidafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>After</a>
@@ -379,8 +339,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidbefore_go">
 <a href="#notvalidbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>Before</a>
@@ -389,8 +348,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -399,8 +357,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withselector_go">
 <a href="#withselector_go" style="color: inherit; text-decoration: inherit;">With<wbr>Selector</a>
@@ -408,14 +365,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -424,8 +378,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -434,8 +387,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnames_nodejs">
 <a href="#domainnames_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Names</a>
@@ -444,8 +396,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -454,8 +405,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -464,8 +414,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(int) Unique ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -474,8 +423,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidafter_nodejs">
 <a href="#notvalidafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Valid<wbr>After</a>
@@ -484,8 +432,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidbefore_nodejs">
 <a href="#notvalidbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Valid<wbr>Before</a>
@@ -494,8 +441,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -504,8 +450,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withselector_nodejs">
 <a href="#withselector_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Selector</a>
@@ -513,14 +458,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -529,8 +471,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -539,8 +480,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_names_python">
 <a href="#domain_names_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>names</a>
@@ -549,8 +489,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -559,8 +498,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -569,8 +507,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(int) Unique ID of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -579,8 +516,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}(map) User-defined labels (key-value pairs) assigned to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="not_valid_after_python">
 <a href="#not_valid_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>valid_<wbr>after</a>
@@ -589,8 +525,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="not_valid_before_python">
 <a href="#not_valid_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>valid_<wbr>before</a>
@@ -599,8 +534,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -609,8 +543,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_selector_python">
 <a href="#with_selector_python" style="color: inherit; text-decoration: inherit;">with_<wbr>selector</a>
@@ -618,8 +551,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

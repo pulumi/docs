@@ -341,8 +341,7 @@ The ExpressRouteCircuitAuthorization resource accepts the following [input]({{< 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressroutecircuitname_csharp">
 <a href="#expressroutecircuitname_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -351,8 +350,7 @@ The ExpressRouteCircuitAuthorization resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -362,8 +360,7 @@ The ExpressRouteCircuitAuthorization resource accepts the following [input]({{< 
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -373,13 +370,11 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressroutecircuitname_go">
 <a href="#expressroutecircuitname_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -388,8 +383,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -399,8 +393,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -410,13 +403,11 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressroutecircuitname_nodejs">
 <a href="#expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -425,8 +416,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -436,8 +426,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -447,13 +436,11 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="express_route_circuit_name_python">
 <a href="#express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
@@ -462,8 +449,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -473,8 +459,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -484,8 +469,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -496,8 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationkey_csharp">
 <a href="#authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -506,8 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationusestatus_csharp">
 <a href="#authorizationusestatus_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Use<wbr>Status</a>
@@ -516,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -525,13 +506,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationkey_go">
 <a href="#authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -540,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationusestatus_go">
 <a href="#authorizationusestatus_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Use<wbr>Status</a>
@@ -550,8 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,13 +536,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationkey_nodejs">
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
@@ -574,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationusestatus_nodejs">
 <a href="#authorizationusestatus_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Use<wbr>Status</a>
@@ -584,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,13 +566,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorization_key_python">
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
@@ -608,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_use_status_python">
 <a href="#authorization_use_status_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>use_<wbr>status</a>
@@ -618,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -627,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -755,8 +723,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_csharp">
 <a href="#state_authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -765,8 +732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationusestatus_csharp">
 <a href="#state_authorizationusestatus_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Use<wbr>Status</a>
@@ -775,8 +741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitname_csharp">
 <a href="#state_expressroutecircuitname_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -785,8 +750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -796,8 +760,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -807,13 +770,11 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_go">
 <a href="#state_authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -822,8 +783,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationusestatus_go">
 <a href="#state_authorizationusestatus_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Use<wbr>Status</a>
@@ -832,8 +792,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitname_go">
 <a href="#state_expressroutecircuitname_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -842,8 +801,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -853,8 +811,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -864,13 +821,11 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_nodejs">
 <a href="#state_authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
@@ -879,8 +834,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationusestatus_nodejs">
 <a href="#state_authorizationusestatus_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Use<wbr>Status</a>
@@ -889,8 +843,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitname_nodejs">
 <a href="#state_expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -899,8 +852,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -910,8 +862,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -921,13 +872,11 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_key_python">
 <a href="#state_authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
@@ -936,8 +885,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Authorization Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_use_status_python">
 <a href="#state_authorization_use_status_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>use_<wbr>status</a>
@@ -946,8 +894,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorization use status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_express_route_circuit_name_python">
 <a href="#state_express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
@@ -956,8 +903,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Express Route Circuit in which to create the Authorization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -967,8 +913,7 @@ create the ExpressRoute circuit. Changing this forces a new resource to be creat
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute circuit. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -978,8 +923,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the ExpressRoute circuit. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

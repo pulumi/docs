@@ -301,8 +301,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -311,8 +310,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminenabled_csharp">
 <a href="#adminenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
@@ -321,8 +319,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="georeplicationlocations_csharp">
 <a href="#georeplicationlocations_csharp" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
@@ -331,8 +328,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -341,8 +337,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -351,8 +346,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkruleset_csharp">
 <a href="#networkruleset_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
@@ -361,8 +355,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -371,8 +364,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -381,8 +373,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -391,8 +382,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -401,8 +391,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustpolicy_csharp">
 <a href="#trustpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
@@ -411,13 +400,11 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -426,8 +413,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminenabled_go">
 <a href="#adminenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
@@ -436,8 +422,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="georeplicationlocations_go">
 <a href="#georeplicationlocations_go" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
@@ -446,8 +431,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -456,8 +440,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -466,8 +449,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkruleset_go">
 <a href="#networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
@@ -476,8 +458,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -486,8 +467,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -496,8 +476,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -506,8 +485,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -516,8 +494,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustpolicy_go">
 <a href="#trustpolicy_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
@@ -526,13 +503,11 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -541,8 +516,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminenabled_nodejs">
 <a href="#adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
@@ -551,8 +525,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="georeplicationlocations_nodejs">
 <a href="#georeplicationlocations_nodejs" style="color: inherit; text-decoration: inherit;">georeplication<wbr>Locations</a>
@@ -561,8 +534,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -571,8 +543,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -581,8 +552,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkruleset_nodejs">
 <a href="#networkruleset_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Set</a>
@@ -591,8 +561,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -601,8 +570,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -611,8 +579,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -621,8 +588,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -631,8 +597,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustpolicy_nodejs">
 <a href="#trustpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Policy</a>
@@ -641,13 +606,11 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -656,8 +619,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_enabled_python">
 <a href="#admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
@@ -666,8 +628,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="georeplication_locations_python">
 <a href="#georeplication_locations_python" style="color: inherit; text-decoration: inherit;">georeplication_<wbr>locations</a>
@@ -676,8 +637,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -686,8 +646,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -696,8 +655,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_rule_set_python">
 <a href="#network_rule_set_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>set</a>
@@ -706,8 +664,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -716,8 +673,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -726,8 +682,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -736,8 +691,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -746,8 +700,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trust_policy_python">
 <a href="#trust_policy_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>policy</a>
@@ -756,8 +709,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -768,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -778,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -788,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -797,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loginserver_csharp">
 <a href="#loginserver_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
@@ -807,13 +755,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -822,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -832,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -841,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loginserver_go">
 <a href="#loginserver_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
@@ -851,13 +794,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -866,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -876,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -885,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loginserver_nodejs">
 <a href="#loginserver_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Server</a>
@@ -895,13 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -910,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -920,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -929,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="login_server_python">
 <a href="#login_server_python" style="color: inherit; text-decoration: inherit;">login_<wbr>server</a>
@@ -939,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1067,8 +999,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminenabled_csharp">
 <a href="#state_adminenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
@@ -1077,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminpassword_csharp">
 <a href="#state_adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -1087,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminusername_csharp">
 <a href="#state_adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1097,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_georeplicationlocations_csharp">
 <a href="#state_georeplicationlocations_csharp" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
@@ -1107,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1117,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginserver_csharp">
 <a href="#state_loginserver_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
@@ -1127,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1137,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkruleset_csharp">
 <a href="#state_networkruleset_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
@@ -1147,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1157,8 +1080,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionpolicy_csharp">
 <a href="#state_retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -1167,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_csharp">
 <a href="#state_sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1177,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_csharp">
 <a href="#state_storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1187,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1197,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustpolicy_csharp">
 <a href="#state_trustpolicy_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
@@ -1207,13 +1125,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminenabled_go">
 <a href="#state_adminenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Enabled</a>
@@ -1222,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminpassword_go">
 <a href="#state_adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -1232,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminusername_go">
 <a href="#state_adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -1242,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_georeplicationlocations_go">
 <a href="#state_georeplicationlocations_go" style="color: inherit; text-decoration: inherit;">Georeplication<wbr>Locations</a>
@@ -1252,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1262,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginserver_go">
 <a href="#state_loginserver_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
@@ -1272,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1282,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkruleset_go">
 <a href="#state_networkruleset_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Set</a>
@@ -1292,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1302,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionpolicy_go">
 <a href="#state_retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -1312,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_go">
 <a href="#state_sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -1322,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_go">
 <a href="#state_storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1332,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1342,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustpolicy_go">
 <a href="#state_trustpolicy_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Policy</a>
@@ -1352,13 +1255,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminenabled_nodejs">
 <a href="#state_adminenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Enabled</a>
@@ -1367,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminpassword_nodejs">
 <a href="#state_adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -1377,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminusername_nodejs">
 <a href="#state_adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -1387,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_georeplicationlocations_nodejs">
 <a href="#state_georeplicationlocations_nodejs" style="color: inherit; text-decoration: inherit;">georeplication<wbr>Locations</a>
@@ -1397,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1407,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginserver_nodejs">
 <a href="#state_loginserver_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Server</a>
@@ -1417,8 +1313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1427,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkruleset_nodejs">
 <a href="#state_networkruleset_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Set</a>
@@ -1437,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1447,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionpolicy_nodejs">
 <a href="#state_retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -1457,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_nodejs">
 <a href="#state_sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1467,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_nodejs">
 <a href="#state_storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -1477,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1487,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustpolicy_nodejs">
 <a href="#state_trustpolicy_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Policy</a>
@@ -1497,13 +1385,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_enabled_python">
 <a href="#state_admin_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>enabled</a>
@@ -1512,8 +1398,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the admin user is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_password_python">
 <a href="#state_admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -1522,8 +1407,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Password associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_username_python">
 <a href="#state_admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -1532,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Username associated with the Container Registry Admin account - if the admin account is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_georeplication_locations_python">
 <a href="#state_georeplication_locations_python" style="color: inherit; text-decoration: inherit;">georeplication_<wbr>locations</a>
@@ -1542,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Azure locations where the container registry should be geo-replicated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1552,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_server_python">
 <a href="#state_login_server_python" style="color: inherit; text-decoration: inherit;">login_<wbr>server</a>
@@ -1562,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL that can be used to log into the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1572,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_rule_set_python">
 <a href="#state_network_rule_set_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>set</a>
@@ -1582,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rule_set` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1592,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Container Registry. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_policy_python">
 <a href="#state_retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -1602,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registryretentionpolicy">Registry<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_python">
 <a href="#state_sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -1612,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU name of the container registry. Possible values are  `Basic`, `Standard` and `Premium`. `Classic` (which was previously `Basic`) is supported only for existing resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_id_python">
 <a href="#state_storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -1622,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a Storage Account which must be located in the same Azure Region as the Container Registry.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1632,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_policy_python">
 <a href="#state_trust_policy_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>policy</a>
@@ -1642,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrytrustpolicy">Registry<wbr>Trust<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trust_policy` block as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1658,8 +1530,7 @@ The following state arguments are supported:
 <h4 id="registrynetworkruleset">Registry<wbr>Network<wbr>Rule<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -1668,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching no rules. Either `Allow` or `Deny`. Defaults to `Allow`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -1678,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetiprule">List&lt;Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_csharp">
 <a href="#virtualnetworks_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -1688,13 +1557,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">List&lt;Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -1703,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching no rules. Either `Allow` or `Deny`. Defaults to `Allow`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -1713,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetiprule">[]Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_go">
 <a href="#virtualnetworks_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Networks</a>
@@ -1723,13 +1588,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">[]Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -1738,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching no rules. Either `Allow` or `Deny`. Defaults to `Allow`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -1748,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetiprule">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworks_nodejs">
 <a href="#virtualnetworks_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Networks</a>
@@ -1758,13 +1619,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -1773,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching no rules. Either `Allow` or `Deny`. Defaults to `Allow`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -1783,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetiprule">Sequence[Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_networks_python">
 <a href="#virtual_networks_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>networks</a>
@@ -1793,15 +1650,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#registrynetworkrulesetvirtualnetwork">Sequence[Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `virtual_network` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="registrynetworkrulesetiprule">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1810,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprange_csharp">
 <a href="#iprange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -1820,13 +1674,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1835,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprange_go">
 <a href="#iprange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -1845,13 +1696,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1860,8 +1709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprange_nodejs">
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
@@ -1870,13 +1718,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1885,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_range_python">
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
@@ -1895,15 +1740,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="registrynetworkrulesetvirtualnetwork">Registry<wbr>Network<wbr>Rule<wbr>Set<wbr>Virtual<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1912,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1922,13 +1764,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet id from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1937,8 +1777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1947,13 +1786,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet id from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1962,8 +1799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1972,13 +1808,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet id from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1987,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behaviour for requests matching this rule. At this time the only supported value is `Allow`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1997,15 +1830,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet id from which requests will match the rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="registryretentionpolicy">Registry<wbr>Retention<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -2014,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain an untagged manifest after which it gets purged. Default is `7`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2024,13 +1854,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -2039,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain an untagged manifest after which it gets purged. Default is `7`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2049,13 +1876,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -2064,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days to retain an untagged manifest after which it gets purged. Default is `7`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2074,13 +1898,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -2089,8 +1911,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days to retain an untagged manifest after which it gets purged. Default is `7`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2099,15 +1920,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="registrytrustpolicy">Registry<wbr>Trust<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2116,13 +1935,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2131,13 +1948,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2146,13 +1961,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2161,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that indicates whether the policy is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

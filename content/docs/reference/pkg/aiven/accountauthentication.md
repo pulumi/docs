@@ -166,8 +166,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -176,8 +175,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -186,8 +184,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationid_csharp">
 <a href="#authenticationid_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Id</a>
@@ -196,8 +193,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -206,8 +202,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -216,8 +211,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -226,8 +220,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlacsurl_csharp">
 <a href="#samlacsurl_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Acs<wbr>Url</a>
@@ -236,8 +229,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlcertificate_csharp">
 <a href="#samlcertificate_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Certificate</a>
@@ -246,8 +238,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlentityid_csharp">
 <a href="#samlentityid_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Entity<wbr>Id</a>
@@ -256,8 +247,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlidpurl_csharp">
 <a href="#samlidpurl_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Idp<wbr>Url</a>
@@ -266,8 +256,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlmetadataurl_csharp">
 <a href="#samlmetadataurl_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Metadata<wbr>Url</a>
@@ -276,8 +265,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -286,13 +274,11 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -301,8 +287,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -311,8 +296,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationid_go">
 <a href="#authenticationid_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Id</a>
@@ -321,8 +305,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -331,8 +314,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -341,8 +323,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -351,8 +332,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlacsurl_go">
 <a href="#samlacsurl_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Acs<wbr>Url</a>
@@ -361,8 +341,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlcertificate_go">
 <a href="#samlcertificate_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Certificate</a>
@@ -371,8 +350,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlentityid_go">
 <a href="#samlentityid_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Entity<wbr>Id</a>
@@ -381,8 +359,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlidpurl_go">
 <a href="#samlidpurl_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Idp<wbr>Url</a>
@@ -391,8 +368,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlmetadataurl_go">
 <a href="#samlmetadataurl_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Metadata<wbr>Url</a>
@@ -401,8 +377,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -411,13 +386,11 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -426,8 +399,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -436,8 +408,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticationid_nodejs">
 <a href="#authenticationid_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Id</a>
@@ -446,8 +417,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -456,8 +426,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -466,8 +435,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -476,8 +444,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlacsurl_nodejs">
 <a href="#samlacsurl_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Acs<wbr>Url</a>
@@ -486,8 +453,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlcertificate_nodejs">
 <a href="#samlcertificate_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Certificate</a>
@@ -496,8 +462,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlentityid_nodejs">
 <a href="#samlentityid_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Entity<wbr>Id</a>
@@ -506,8 +471,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlidpurl_nodejs">
 <a href="#samlidpurl_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Idp<wbr>Url</a>
@@ -516,8 +480,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlmetadataurl_nodejs">
 <a href="#samlmetadataurl_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Metadata<wbr>Url</a>
@@ -526,8 +489,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -536,13 +498,11 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -551,8 +511,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -561,8 +520,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_id_python">
 <a href="#authentication_id_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>id</a>
@@ -571,8 +529,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -581,8 +538,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -591,8 +547,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -601,8 +556,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saml_acs_url_python">
 <a href="#saml_acs_url_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>acs_<wbr>url</a>
@@ -611,8 +565,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saml_certificate_python">
 <a href="#saml_certificate_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>certificate</a>
@@ -621,8 +574,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saml_entity_id_python">
 <a href="#saml_entity_id_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>entity_<wbr>id</a>
@@ -631,8 +583,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saml_idp_url_python">
 <a href="#saml_idp_url_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>idp_<wbr>url</a>
@@ -641,8 +592,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saml_metadata_url_python">
 <a href="#saml_metadata_url_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>metadata_<wbr>url</a>
@@ -651,8 +601,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -661,8 +610,7 @@ The AccountAuthentication resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -673,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -682,13 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -696,13 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -710,13 +653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -724,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -852,8 +792,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -862,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticationid_csharp">
 <a href="#state_authenticationid_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Id</a>
@@ -872,8 +810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -882,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -892,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -902,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlacsurl_csharp">
 <a href="#state_samlacsurl_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Acs<wbr>Url</a>
@@ -912,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlcertificate_csharp">
 <a href="#state_samlcertificate_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Certificate</a>
@@ -922,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlentityid_csharp">
 <a href="#state_samlentityid_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Entity<wbr>Id</a>
@@ -932,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlidpurl_csharp">
 <a href="#state_samlidpurl_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Idp<wbr>Url</a>
@@ -942,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlmetadataurl_csharp">
 <a href="#state_samlmetadataurl_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Metadata<wbr>Url</a>
@@ -952,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -962,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -972,13 +900,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -987,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticationid_go">
 <a href="#state_authenticationid_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Id</a>
@@ -997,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1007,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1017,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1027,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlacsurl_go">
 <a href="#state_samlacsurl_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Acs<wbr>Url</a>
@@ -1037,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlcertificate_go">
 <a href="#state_samlcertificate_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Certificate</a>
@@ -1047,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlentityid_go">
 <a href="#state_samlentityid_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Entity<wbr>Id</a>
@@ -1057,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlidpurl_go">
 <a href="#state_samlidpurl_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Idp<wbr>Url</a>
@@ -1067,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlmetadataurl_go">
 <a href="#state_samlmetadataurl_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Metadata<wbr>Url</a>
@@ -1077,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1087,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1097,13 +1012,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1112,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticationid_nodejs">
 <a href="#state_authenticationid_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Id</a>
@@ -1122,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1132,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1142,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1152,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlacsurl_nodejs">
 <a href="#state_samlacsurl_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Acs<wbr>Url</a>
@@ -1162,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlcertificate_nodejs">
 <a href="#state_samlcertificate_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Certificate</a>
@@ -1172,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlentityid_nodejs">
 <a href="#state_samlentityid_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Entity<wbr>Id</a>
@@ -1182,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlidpurl_nodejs">
 <a href="#state_samlidpurl_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Idp<wbr>Url</a>
@@ -1192,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samlmetadataurl_nodejs">
 <a href="#state_samlmetadataurl_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Metadata<wbr>Url</a>
@@ -1202,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1212,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1222,13 +1124,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1237,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_id_python">
 <a href="#state_authentication_id_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>id</a>
@@ -1247,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}account authentication id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1257,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1267,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}defines an authentication method enabled or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1277,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is an account authentication name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saml_acs_url_python">
 <a href="#state_saml_acs_url_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>acs_<wbr>url</a>
@@ -1287,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Assertion Consumer Service URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saml_certificate_python">
 <a href="#state_saml_certificate_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>certificate</a>
@@ -1297,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saml_entity_id_python">
 <a href="#state_saml_entity_id_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>entity_<wbr>id</a>
@@ -1307,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Entity ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saml_idp_url_python">
 <a href="#state_saml_idp_url_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>idp_<wbr>url</a>
@@ -1317,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Idp URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saml_metadata_url_python">
 <a href="#state_saml_metadata_url_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>metadata_<wbr>url</a>
@@ -1327,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a SAML Metadata URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1337,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is an account authentication type, can be one of `internal` and `saml`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1347,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}time of last update.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -48,8 +48,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -59,8 +58,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The path to the AWS secret backend to
 read credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -70,8 +68,7 @@ read credentials from, with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name of the AWS secret backend role to read
 credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -79,8 +76,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -91,8 +87,7 @@ credentials from, with no leading or trailing `/`s.
     <dd>{{% md %}}The specific AWS ARN to use
 from the configured role. If the role does not have multiple ARNs, this does
 not need to be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -103,8 +98,7 @@ not need to be specified.
     <dd>{{% md %}}Specifies the TTL for the use of the STS token. This
 is specified as a string with a duration suffix. Valid only when
 `credential_type` is `assumed_role` or `federation_token`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -116,13 +110,11 @@ is specified as a string with a duration suffix. Valid only when
 to `"creds"`, which just returns an AWS Access Key ID and Secret
 Key. Can also be set to `"sts"`, which will return a security token
 in addition to the keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -132,8 +124,7 @@ in addition to the keys.
     </dt>
     <dd>{{% md %}}The path to the AWS secret backend to
 read credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -143,8 +134,7 @@ read credentials from, with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name of the AWS secret backend role to read
 credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -152,8 +142,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -164,8 +153,7 @@ credentials from, with no leading or trailing `/`s.
     <dd>{{% md %}}The specific AWS ARN to use
 from the configured role. If the role does not have multiple ARNs, this does
 not need to be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -176,8 +164,7 @@ not need to be specified.
     <dd>{{% md %}}Specifies the TTL for the use of the STS token. This
 is specified as a string with a duration suffix. Valid only when
 `credential_type` is `assumed_role` or `federation_token`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -189,13 +176,11 @@ is specified as a string with a duration suffix. Valid only when
 to `"creds"`, which just returns an AWS Access Key ID and Secret
 Key. Can also be set to `"sts"`, which will return a security token
 in addition to the keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -205,8 +190,7 @@ in addition to the keys.
     </dt>
     <dd>{{% md %}}The path to the AWS secret backend to
 read credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -216,8 +200,7 @@ read credentials from, with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name of the AWS secret backend role to read
 credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -225,8 +208,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -237,8 +219,7 @@ credentials from, with no leading or trailing `/`s.
     <dd>{{% md %}}The specific AWS ARN to use
 from the configured role. If the role does not have multiple ARNs, this does
 not need to be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -249,8 +230,7 @@ not need to be specified.
     <dd>{{% md %}}Specifies the TTL for the use of the STS token. This
 is specified as a string with a duration suffix. Valid only when
 `credential_type` is `assumed_role` or `federation_token`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -262,13 +242,11 @@ is specified as a string with a duration suffix. Valid only when
 to `"creds"`, which just returns an AWS Access Key ID and Secret
 Key. Can also be set to `"sts"`, which will return a security token
 in addition to the keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -278,8 +256,7 @@ in addition to the keys.
     </dt>
     <dd>{{% md %}}The path to the AWS secret backend to
 read credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -289,8 +266,7 @@ read credentials from, with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name of the AWS secret backend role to read
 credentials from, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -298,8 +274,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -310,8 +285,7 @@ credentials from, with no leading or trailing `/`s.
     <dd>{{% md %}}The specific AWS ARN to use
 from the configured role. If the role does not have multiple ARNs, this does
 not need to be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -322,8 +296,7 @@ not need to be specified.
     <dd>{{% md %}}Specifies the TTL for the use of the STS token. This
 is specified as a string with a duration suffix. Valid only when
 `credential_type` is `assumed_role` or `federation_token`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -335,8 +308,7 @@ is specified as a string with a duration suffix. Valid only when
 to `"creds"`, which just returns an AWS Access Key ID and Secret
 Key. Can also be set to `"sts"`, which will return a security token
 in addition to the keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -349,8 +321,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -359,8 +330,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Access Key ID returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -368,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -378,8 +347,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_csharp">
 <a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -390,8 +358,7 @@ The following output properties are available:
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseid_csharp">
 <a href="#leaseid_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Id</a>
@@ -400,8 +367,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaserenewable_csharp">
 <a href="#leaserenewable_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Renewable</a>
@@ -409,8 +375,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_csharp">
 <a href="#leasestarttime_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -418,8 +383,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -427,8 +391,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -437,8 +400,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Secret Key returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitytoken_csharp">
 <a href="#securitytoken_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
@@ -447,8 +409,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The STS token returned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -456,8 +417,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -465,8 +425,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -474,8 +433,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -483,13 +441,11 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -498,8 +454,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Access Key ID returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -507,8 +462,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -517,8 +471,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_go">
 <a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -529,8 +482,7 @@ generated with this data may fail to apply.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseid_go">
 <a href="#leaseid_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Id</a>
@@ -539,8 +491,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaserenewable_go">
 <a href="#leaserenewable_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Renewable</a>
@@ -548,8 +499,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_go">
 <a href="#leasestarttime_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Start<wbr>Time</a>
@@ -557,8 +507,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -566,8 +515,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -576,8 +524,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Secret Key returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitytoken_go">
 <a href="#securitytoken_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Token</a>
@@ -586,8 +533,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The STS token returned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -595,8 +541,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -604,8 +549,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -613,8 +557,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -622,13 +565,11 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -637,8 +578,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Access Key ID returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -646,8 +586,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -656,8 +595,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_nodejs">
 <a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
@@ -668,8 +606,7 @@ generated with this data may fail to apply.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseid_nodejs">
 <a href="#leaseid_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Id</a>
@@ -678,8 +615,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaserenewable_nodejs">
 <a href="#leaserenewable_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Renewable</a>
@@ -687,8 +623,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestarttime_nodejs">
 <a href="#leasestarttime_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Start<wbr>Time</a>
@@ -696,8 +631,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -705,8 +639,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -715,8 +648,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Secret Key returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitytoken_nodejs">
 <a href="#securitytoken_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Token</a>
@@ -725,8 +657,7 @@ generated with this data may fail to apply.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The STS token returned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -734,8 +665,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -743,8 +673,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -752,8 +681,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -761,13 +689,11 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -776,8 +702,7 @@ generated with this data may fail to apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Access Key ID returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -785,8 +710,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -795,8 +719,7 @@ generated with this data may fail to apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_duration_python">
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
@@ -807,8 +730,7 @@ generated with this data may fail to apply.
     <dd>{{% md %}}The duration of the secret lease, in seconds relative
 to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_id_python">
 <a href="#lease_id_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>id</a>
@@ -817,8 +739,7 @@ generated with this data may fail to apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lease identifier assigned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_renewable_python">
 <a href="#lease_renewable_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>renewable</a>
@@ -826,8 +747,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_start_time_python">
 <a href="#lease_start_time_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>start_<wbr>time</a>
@@ -835,8 +755,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -844,8 +763,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -854,8 +772,7 @@ generated with this data may fail to apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Secret Key returned by Vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_token_python">
 <a href="#security_token_python" style="color: inherit; text-decoration: inherit;">security_<wbr>token</a>
@@ -864,8 +781,7 @@ generated with this data may fail to apply.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The STS token returned by Vault, if any.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -873,8 +789,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -882,8 +797,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -891,8 +805,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -900,8 +813,7 @@ generated with this data may fail to apply.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

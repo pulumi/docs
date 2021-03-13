@@ -289,8 +289,7 @@ The ImageAccessAccept resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -299,8 +298,7 @@ The ImageAccessAccept resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -310,8 +308,7 @@ The ImageAccessAccept resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberid_csharp">
 <a href="#memberid_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Id</a>
@@ -321,8 +318,7 @@ The ImageAccessAccept resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -334,13 +330,11 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -349,8 +343,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -360,8 +353,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberid_go">
 <a href="#memberid_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Id</a>
@@ -371,8 +363,7 @@ membership.
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -384,13 +375,11 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -399,8 +388,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -410,8 +398,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberid_nodejs">
 <a href="#memberid_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Id</a>
@@ -421,8 +408,7 @@ membership.
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -434,13 +420,11 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -449,8 +433,7 @@ membership.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -460,8 +443,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_id_python">
 <a href="#member_id_python" style="color: inherit; text-decoration: inherit;">member_<wbr>id</a>
@@ -471,8 +453,7 @@ membership.
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -484,8 +465,7 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -496,8 +476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -506,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -515,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -525,8 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -535,13 +511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -550,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -569,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -579,13 +550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -594,8 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -603,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -613,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -623,13 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -638,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -647,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -657,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -667,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -795,8 +755,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -805,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -815,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberid_csharp">
 <a href="#state_memberid_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Id</a>
@@ -826,8 +783,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -839,8 +795,7 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_csharp">
 <a href="#state_schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -849,8 +804,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -860,8 +814,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_csharp">
 <a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -870,13 +823,11 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -885,8 +836,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -895,8 +845,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberid_go">
 <a href="#state_memberid_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Id</a>
@@ -906,8 +855,7 @@ membership.
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -919,8 +867,7 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_go">
 <a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -929,8 +876,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -940,8 +886,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_go">
 <a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -950,13 +895,11 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -965,8 +908,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -975,8 +917,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberid_nodejs">
 <a href="#state_memberid_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Id</a>
@@ -986,8 +927,7 @@ membership.
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -999,8 +939,7 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_nodejs">
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1009,8 +948,7 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1020,8 +958,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_nodejs">
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1030,13 +967,11 @@ membership.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1045,8 +980,7 @@ membership.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -1055,8 +989,7 @@ membership.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proposed image ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_id_python">
 <a href="#state_member_id_python" style="color: inherit; text-decoration: inherit;">member_<wbr>id</a>
@@ -1066,8 +999,7 @@ membership.
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID. Optional
 for admin accounts. Defaults to the current scope project ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1079,8 +1011,7 @@ for admin accounts. Defaults to the current scope project ID.
 A Glance client is needed to manage Image memberships. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_python">
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1089,8 +1020,7 @@ membership.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The membership schema.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1100,8 +1030,7 @@ membership.
     </dt>
     <dd>{{% md %}}The membership proposal status. Can either be
 `accepted`, `rejected` or `pending`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_at_python">
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1110,8 +1039,7 @@ membership.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

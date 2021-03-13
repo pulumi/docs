@@ -1,8 +1,8 @@
 
 ---
-title: "GetConfig"
-title_tag: "Function GetConfig | Package cloudinit"
-meta_desc: "Explore the GetConfig function of the cloudinit package, including examples, input properties, output properties, and supporting types. Renders a [multipart MIME configuration](https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive)"
+title: "getConfig"
+title_tag: "cloudinit.getConfig"
+meta_desc: "Documentation for the cloudinit.getConfig function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -25,11 +25,17 @@ featureset is specialized for the features of cloud-init.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using CloudInit = Pulumi.CloudInit;
@@ -57,9 +63,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -91,9 +100,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudinit as cloudinit
@@ -107,9 +119,12 @@ foo = cloudinit.get_config(base64_encode=False,
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -126,12 +141,19 @@ const foo = pulumi.output(cloudinit.getConfig({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
 
-## Using GetConfig {#using}
+
+
+## Using getConfig {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -166,9 +188,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parts_csharp">
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -180,8 +200,7 @@ The following arguments are supported:
 cloud-init configuration. Use multiple `part` blocks to specify multiple
 files, which will be included in order of declaration in the final MIME
 document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64encode_csharp">
 <a href="#base64encode_csharp" style="color: inherit; text-decoration: inherit;">Base64Encode</a>
@@ -191,8 +210,7 @@ document.
     </dt>
     <dd>{{% md %}}Base64 encoding of the rendered output. Defaults to `true`,
 and cannot be disabled if `gzip` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundary_csharp">
 <a href="#boundary_csharp" style="color: inherit; text-decoration: inherit;">Boundary</a>
@@ -201,8 +219,7 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_csharp">
 <a href="#gzip_csharp" style="color: inherit; text-decoration: inherit;">Gzip</a>
@@ -211,14 +228,11 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether or not to gzip the rendered output. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parts_go">
 <a href="#parts_go" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -230,8 +244,7 @@ and cannot be disabled if `gzip` is `true`.
 cloud-init configuration. Use multiple `part` blocks to specify multiple
 files, which will be included in order of declaration in the final MIME
 document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64encode_go">
 <a href="#base64encode_go" style="color: inherit; text-decoration: inherit;">Base64Encode</a>
@@ -241,8 +254,7 @@ document.
     </dt>
     <dd>{{% md %}}Base64 encoding of the rendered output. Defaults to `true`,
 and cannot be disabled if `gzip` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundary_go">
 <a href="#boundary_go" style="color: inherit; text-decoration: inherit;">Boundary</a>
@@ -251,8 +263,7 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_go">
 <a href="#gzip_go" style="color: inherit; text-decoration: inherit;">Gzip</a>
@@ -261,14 +272,11 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether or not to gzip the rendered output. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parts_nodejs">
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -280,8 +288,7 @@ and cannot be disabled if `gzip` is `true`.
 cloud-init configuration. Use multiple `part` blocks to specify multiple
 files, which will be included in order of declaration in the final MIME
 document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64encode_nodejs">
 <a href="#base64encode_nodejs" style="color: inherit; text-decoration: inherit;">base64Encode</a>
@@ -291,8 +298,7 @@ document.
     </dt>
     <dd>{{% md %}}Base64 encoding of the rendered output. Defaults to `true`,
 and cannot be disabled if `gzip` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundary_nodejs">
 <a href="#boundary_nodejs" style="color: inherit; text-decoration: inherit;">boundary</a>
@@ -301,8 +307,7 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_nodejs">
 <a href="#gzip_nodejs" style="color: inherit; text-decoration: inherit;">gzip</a>
@@ -311,14 +316,11 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify whether or not to gzip the rendered output. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parts_python">
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -330,8 +332,7 @@ and cannot be disabled if `gzip` is `true`.
 cloud-init configuration. Use multiple `part` blocks to specify multiple
 files, which will be included in order of declaration in the final MIME
 document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64_encode_python">
 <a href="#base64_encode_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encode</a>
@@ -341,8 +342,7 @@ document.
     </dt>
     <dd>{{% md %}}Base64 encoding of the rendered output. Defaults to `true`,
 and cannot be disabled if `gzip` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundary_python">
 <a href="#boundary_python" style="color: inherit; text-decoration: inherit;">boundary</a>
@@ -351,8 +351,7 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_python">
 <a href="#gzip_python" style="color: inherit; text-decoration: inherit;">gzip</a>
@@ -361,23 +360,20 @@ and cannot be disabled if `gzip` is `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify whether or not to gzip the rendered output. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
 
 
-## GetConfig Result {#result}
+## getConfig Result {#result}
 
 The following output properties are available:
 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,8 +382,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parts_csharp">
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -395,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconfigpart">List&lt;Pulumi.<wbr>Cloud<wbr>Init.<wbr>Outputs.<wbr>Get<wbr>Config<wbr>Part&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rendered_csharp">
 <a href="#rendered_csharp" style="color: inherit; text-decoration: inherit;">Rendered</a>
@@ -405,8 +399,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The final rendered multi-part cloud-init config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="base64encode_csharp">
 <a href="#base64encode_csharp" style="color: inherit; text-decoration: inherit;">Base64Encode</a>
@@ -414,8 +407,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="boundary_csharp">
 <a href="#boundary_csharp" style="color: inherit; text-decoration: inherit;">Boundary</a>
@@ -423,8 +415,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gzip_csharp">
 <a href="#gzip_csharp" style="color: inherit; text-decoration: inherit;">Gzip</a>
@@ -432,14 +423,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -448,8 +436,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parts_go">
 <a href="#parts_go" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -457,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconfigpart">[]Get<wbr>Config<wbr>Part</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rendered_go">
 <a href="#rendered_go" style="color: inherit; text-decoration: inherit;">Rendered</a>
@@ -467,8 +453,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The final rendered multi-part cloud-init config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="base64encode_go">
 <a href="#base64encode_go" style="color: inherit; text-decoration: inherit;">Base64Encode</a>
@@ -476,8 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="boundary_go">
 <a href="#boundary_go" style="color: inherit; text-decoration: inherit;">Boundary</a>
@@ -485,8 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gzip_go">
 <a href="#gzip_go" style="color: inherit; text-decoration: inherit;">Gzip</a>
@@ -494,14 +477,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -510,8 +490,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parts_nodejs">
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -519,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconfigpart">Get<wbr>Config<wbr>Part[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rendered_nodejs">
 <a href="#rendered_nodejs" style="color: inherit; text-decoration: inherit;">rendered</a>
@@ -529,8 +507,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The final rendered multi-part cloud-init config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="base64encode_nodejs">
 <a href="#base64encode_nodejs" style="color: inherit; text-decoration: inherit;">base64Encode</a>
@@ -538,8 +515,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="boundary_nodejs">
 <a href="#boundary_nodejs" style="color: inherit; text-decoration: inherit;">boundary</a>
@@ -547,8 +523,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gzip_nodejs">
 <a href="#gzip_nodejs" style="color: inherit; text-decoration: inherit;">gzip</a>
@@ -556,14 +531,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -572,8 +544,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parts_python">
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -581,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getconfigpart">Sequence[Get<wbr>Config<wbr>Part]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rendered_python">
 <a href="#rendered_python" style="color: inherit; text-decoration: inherit;">rendered</a>
@@ -591,8 +561,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The final rendered multi-part cloud-init config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="base64_encode_python">
 <a href="#base64_encode_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encode</a>
@@ -600,8 +569,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="boundary_python">
 <a href="#boundary_python" style="color: inherit; text-decoration: inherit;">boundary</a>
@@ -609,8 +577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gzip_python">
 <a href="#gzip_python" style="color: inherit; text-decoration: inherit;">gzip</a>
@@ -618,8 +585,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -633,9 +599,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -644,8 +608,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Body content for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -654,8 +617,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A MIME-style content type to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -664,8 +626,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergetype_csharp">
 <a href="#mergetype_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Type</a>
@@ -675,14 +636,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A value for the `X-Merge-Type` header of the part,
 to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/topics/merging.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -691,8 +649,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Body content for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -701,8 +658,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A MIME-style content type to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -711,8 +667,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergetype_go">
 <a href="#mergetype_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Type</a>
@@ -722,14 +677,11 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
     </dt>
     <dd>{{% md %}}A value for the `X-Merge-Type` header of the part,
 to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/topics/merging.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -738,8 +690,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Body content for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -748,8 +699,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A MIME-style content type to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -758,8 +708,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filename to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergetype_nodejs">
 <a href="#mergetype_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Type</a>
@@ -769,14 +718,11 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
     </dt>
     <dd>{{% md %}}A value for the `X-Merge-Type` header of the part,
 to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/topics/merging.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -785,8 +731,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Body content for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -795,8 +740,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A MIME-style content type to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -805,8 +749,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filename to report in the header for the part.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="merge_type_python">
 <a href="#merge_type_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>type</a>
@@ -816,8 +759,7 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
     </dt>
     <dd>{{% md %}}A value for the `X-Merge-Type` header of the part,
 to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/latest/topics/merging.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

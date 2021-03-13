@@ -1,8 +1,8 @@
 
 ---
 title: "Pool"
-title_tag: "Resource Pool | Package Azure DevOps"
-meta_desc: "Explore the Pool resource of the Azure DevOps package, including examples, input properties, output properties, lookup functions, and supporting types. Manages an agent pool within Azure DevOps."
+title_tag: "azuredevops.Pool"
+meta_desc: "Documentation for the azuredevops.Pool resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Manages an agent pool within Azure DevOps.
 - [Azure DevOps Service REST API 5.1 - Agent Pools](https://docs.microsoft.com/en-us/rest/api/azure/devops/distributedtask/pools?view=azure-devops-rest-5.1)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -38,14 +44,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -62,9 +71,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -72,9 +84,12 @@ import pulumi_azuredevops as azuredevops
 pool = azuredevops.Pool("pool", auto_provision=False)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -85,9 +100,16 @@ const pool = new azuredevops.Pool("pool", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Pool Resource {#create}
@@ -112,9 +134,7 @@ const pool = new azuredevops.Pool("pool", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +142,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +150,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,10 +158,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -171,9 +184,7 @@ const pool = new azuredevops.Pool("pool", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -181,9 +192,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -191,9 +200,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -201,9 +208,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -211,18 +216,13 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -230,9 +230,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,9 +238,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -250,10 +246,7 @@ const pool = new azuredevops.Pool("pool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -268,9 +261,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoprovision_csharp">
 <a href="#autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -279,8 +270,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -289,8 +279,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pooltype_csharp">
 <a href="#pooltype_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Type</a>
@@ -299,14 +288,11 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoprovision_go">
 <a href="#autoprovision_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -315,8 +301,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +310,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pooltype_go">
 <a href="#pooltype_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Type</a>
@@ -335,14 +319,11 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoprovision_nodejs">
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
@@ -351,8 +332,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -361,8 +341,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pooltype_nodejs">
 <a href="#pooltype_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Type</a>
@@ -371,14 +350,11 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_provision_python">
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
@@ -387,8 +363,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -397,8 +372,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_type_python">
 <a href="#pool_type_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>type</a>
@@ -407,8 +381,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -419,9 +392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -429,14 +400,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -444,14 +412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -459,14 +424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -474,8 +436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -602,9 +563,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovision_csharp">
 <a href="#state_autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -613,8 +572,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -623,8 +581,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pooltype_csharp">
 <a href="#state_pooltype_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Type</a>
@@ -633,14 +590,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovision_go">
 <a href="#state_autoprovision_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -649,8 +603,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -659,8 +612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pooltype_go">
 <a href="#state_pooltype_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Type</a>
@@ -669,14 +621,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovision_nodejs">
 <a href="#state_autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
@@ -685,8 +634,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -695,8 +643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pooltype_nodejs">
 <a href="#state_pooltype_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Type</a>
@@ -705,14 +652,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_provision_python">
 <a href="#state_auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
@@ -721,8 +665,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -731,8 +674,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_type_python">
 <a href="#state_pool_type_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>type</a>
@@ -741,8 +683,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment. Defaults to `automation`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

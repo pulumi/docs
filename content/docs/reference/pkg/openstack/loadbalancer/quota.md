@@ -307,8 +307,7 @@ The Quota resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -318,8 +317,7 @@ The Quota resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthmonitor_csharp">
 <a href="#healthmonitor_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitor</a>
@@ -329,8 +327,7 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7policy_csharp">
 <a href="#l7policy_csharp" style="color: inherit; text-decoration: inherit;">L7Policy</a>
@@ -341,8 +338,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7rule_csharp">
 <a href="#l7rule_csharp" style="color: inherit; text-decoration: inherit;">L7Rule</a>
@@ -353,8 +349,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_csharp">
 <a href="#listener_csharp" style="color: inherit; text-decoration: inherit;">Listener</a>
@@ -364,8 +359,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancer_csharp">
 <a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer</a>
@@ -375,8 +369,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_csharp">
 <a href="#member_csharp" style="color: inherit; text-decoration: inherit;">Member</a>
@@ -386,8 +379,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_csharp">
 <a href="#pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -397,8 +389,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -408,13 +399,11 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -424,8 +413,7 @@ creates a new quota. If ommited, the region of the credentials is used.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthmonitor_go">
 <a href="#healthmonitor_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitor</a>
@@ -435,8 +423,7 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7policy_go">
 <a href="#l7policy_go" style="color: inherit; text-decoration: inherit;">L7Policy</a>
@@ -447,8 +434,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7rule_go">
 <a href="#l7rule_go" style="color: inherit; text-decoration: inherit;">L7Rule</a>
@@ -459,8 +445,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_go">
 <a href="#listener_go" style="color: inherit; text-decoration: inherit;">Listener</a>
@@ -470,8 +455,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancer_go">
 <a href="#loadbalancer_go" style="color: inherit; text-decoration: inherit;">Loadbalancer</a>
@@ -481,8 +465,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_go">
 <a href="#member_go" style="color: inherit; text-decoration: inherit;">Member</a>
@@ -492,8 +475,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_go">
 <a href="#pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -503,8 +485,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -514,13 +495,11 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -530,8 +509,7 @@ creates a new quota. If ommited, the region of the credentials is used.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthmonitor_nodejs">
 <a href="#healthmonitor_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Monitor</a>
@@ -541,8 +519,7 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7policy_nodejs">
 <a href="#l7policy_nodejs" style="color: inherit; text-decoration: inherit;">l7Policy</a>
@@ -553,8 +530,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7rule_nodejs">
 <a href="#l7rule_nodejs" style="color: inherit; text-decoration: inherit;">l7Rule</a>
@@ -565,8 +541,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_nodejs">
 <a href="#listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
@@ -576,8 +551,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancer_nodejs">
 <a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer</a>
@@ -587,8 +561,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_nodejs">
 <a href="#member_nodejs" style="color: inherit; text-decoration: inherit;">member</a>
@@ -598,8 +571,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_nodejs">
 <a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -609,8 +581,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -620,13 +591,11 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -636,8 +605,7 @@ creates a new quota. If ommited, the region of the credentials is used.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_monitor_python">
 <a href="#health_monitor_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitor</a>
@@ -647,8 +615,7 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7_policy_python">
 <a href="#l7_policy_python" style="color: inherit; text-decoration: inherit;">l7_<wbr>policy</a>
@@ -659,8 +626,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="l7_rule_python">
 <a href="#l7_rule_python" style="color: inherit; text-decoration: inherit;">l7_<wbr>rule</a>
@@ -671,8 +637,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listener_python">
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
@@ -682,8 +647,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancer_python">
 <a href="#loadbalancer_python" style="color: inherit; text-decoration: inherit;">loadbalancer</a>
@@ -693,8 +657,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_python">
 <a href="#member_python" style="color: inherit; text-decoration: inherit;">member</a>
@@ -704,8 +667,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_python">
 <a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -715,8 +677,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -726,8 +687,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -738,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -747,13 +706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -761,13 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -775,13 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -789,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -917,8 +869,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_healthmonitor_csharp">
 <a href="#state_healthmonitor_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitor</a>
@@ -928,8 +879,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policy_csharp">
 <a href="#state_l7policy_csharp" style="color: inherit; text-decoration: inherit;">L7Policy</a>
@@ -940,8 +890,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7rule_csharp">
 <a href="#state_l7rule_csharp" style="color: inherit; text-decoration: inherit;">L7Rule</a>
@@ -952,8 +901,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_csharp">
 <a href="#state_listener_csharp" style="color: inherit; text-decoration: inherit;">Listener</a>
@@ -963,8 +911,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_csharp">
 <a href="#state_loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer</a>
@@ -974,8 +921,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_csharp">
 <a href="#state_member_csharp" style="color: inherit; text-decoration: inherit;">Member</a>
@@ -985,8 +931,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_csharp">
 <a href="#state_pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -996,8 +941,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1007,8 +951,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1018,13 +961,11 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_healthmonitor_go">
 <a href="#state_healthmonitor_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Monitor</a>
@@ -1034,8 +975,7 @@ creates a new quota. If ommited, the region of the credentials is used.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policy_go">
 <a href="#state_l7policy_go" style="color: inherit; text-decoration: inherit;">L7Policy</a>
@@ -1046,8 +986,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7rule_go">
 <a href="#state_l7rule_go" style="color: inherit; text-decoration: inherit;">L7Rule</a>
@@ -1058,8 +997,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_go">
 <a href="#state_listener_go" style="color: inherit; text-decoration: inherit;">Listener</a>
@@ -1069,8 +1007,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_go">
 <a href="#state_loadbalancer_go" style="color: inherit; text-decoration: inherit;">Loadbalancer</a>
@@ -1080,8 +1017,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_go">
 <a href="#state_member_go" style="color: inherit; text-decoration: inherit;">Member</a>
@@ -1091,8 +1027,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_go">
 <a href="#state_pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -1102,8 +1037,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1113,8 +1047,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1124,13 +1057,11 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_healthmonitor_nodejs">
 <a href="#state_healthmonitor_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Monitor</a>
@@ -1140,8 +1071,7 @@ creates a new quota. If ommited, the region of the credentials is used.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policy_nodejs">
 <a href="#state_l7policy_nodejs" style="color: inherit; text-decoration: inherit;">l7Policy</a>
@@ -1152,8 +1082,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7rule_nodejs">
 <a href="#state_l7rule_nodejs" style="color: inherit; text-decoration: inherit;">l7Rule</a>
@@ -1164,8 +1093,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_nodejs">
 <a href="#state_listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
@@ -1175,8 +1103,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_nodejs">
 <a href="#state_loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer</a>
@@ -1186,8 +1113,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_nodejs">
 <a href="#state_member_nodejs" style="color: inherit; text-decoration: inherit;">member</a>
@@ -1197,8 +1123,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_nodejs">
 <a href="#state_pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -1208,8 +1133,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1219,8 +1143,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1230,13 +1153,11 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_health_monitor_python">
 <a href="#state_health_monitor_python" style="color: inherit; text-decoration: inherit;">health_<wbr>monitor</a>
@@ -1246,8 +1167,7 @@ creates a new quota. If ommited, the region of the credentials is used.
     </dt>
     <dd>{{% md %}}Quota value for health_monitors. Changing
 this updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7_policy_python">
 <a href="#state_l7_policy_python" style="color: inherit; text-decoration: inherit;">l7_<wbr>policy</a>
@@ -1258,8 +1178,7 @@ this updates the existing quota. Omitting it sets it to 0.
     <dd>{{% md %}}Quota value for l7_policies. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7_rule_python">
 <a href="#state_l7_rule_python" style="color: inherit; text-decoration: inherit;">l7_<wbr>rule</a>
@@ -1270,8 +1189,7 @@ Octavia 2.19.
     <dd>{{% md %}}Quota value for l7_rules. Changing this
 updates the existing quota. Omitting it sets it to 0. Available in
 Octavia 2.19.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_python">
 <a href="#state_listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
@@ -1281,8 +1199,7 @@ Octavia 2.19.
     </dt>
     <dd>{{% md %}}Quota value for listeners. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_python">
 <a href="#state_loadbalancer_python" style="color: inherit; text-decoration: inherit;">loadbalancer</a>
@@ -1292,8 +1209,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for loadbalancers. Changing this
 updates the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_python">
 <a href="#state_member_python" style="color: inherit; text-decoration: inherit;">member</a>
@@ -1303,8 +1219,7 @@ updates the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for members. Changing this updates
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_python">
 <a href="#state_pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -1314,8 +1229,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}Quota value for pools. Changing this updates the
 the existing quota. Omitting it sets it to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1325,8 +1239,7 @@ the existing quota. Omitting it sets it to 0.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1336,8 +1249,7 @@ creates a new quota.
     </dt>
     <dd>{{% md %}}Region in which to manage quotas. Changing this
 creates a new quota. If ommited, the region of the credentials is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

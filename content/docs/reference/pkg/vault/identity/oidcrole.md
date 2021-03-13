@@ -170,8 +170,7 @@ The OidcRole resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -181,8 +180,7 @@ The OidcRole resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -192,8 +190,7 @@ before tokens can be issued.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +199,7 @@ tokens issued by this role
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -215,8 +211,7 @@ tokens issued by this role
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -225,13 +220,11 @@ for the template format.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -241,8 +234,7 @@ for the template format.
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -252,8 +244,7 @@ before tokens can be issued.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -262,8 +253,7 @@ tokens issued by this role
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -275,8 +265,7 @@ tokens issued by this role
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -285,13 +274,11 @@ for the template format.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -301,8 +288,7 @@ for the template format.
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -312,8 +298,7 @@ before tokens can be issued.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -322,8 +307,7 @@ tokens issued by this role
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -335,8 +319,7 @@ tokens issued by this role
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -345,13 +328,11 @@ for the template format.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -361,8 +342,7 @@ for the template format.
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -372,8 +352,7 @@ before tokens can be issued.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -382,8 +361,7 @@ tokens issued by this role
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -395,8 +373,7 @@ tokens issued by this role
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -405,8 +382,7 @@ for the template format.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -417,8 +393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -426,13 +401,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -440,13 +413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -454,13 +425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -468,8 +437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -596,8 +564,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -607,8 +574,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -618,8 +584,7 @@ tokens issued by this role
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -628,8 +593,7 @@ before tokens can be issued.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -641,8 +605,7 @@ before tokens can be issued.
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -651,13 +614,11 @@ for the template format.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -667,8 +628,7 @@ for the template format.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
 <a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -678,8 +638,7 @@ tokens issued by this role
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -688,8 +647,7 @@ before tokens can be issued.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -701,8 +659,7 @@ before tokens can be issued.
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -711,13 +668,11 @@ for the template format.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -727,8 +682,7 @@ for the template format.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -738,8 +692,7 @@ tokens issued by this role
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -748,8 +701,7 @@ before tokens can be issued.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -761,8 +713,7 @@ before tokens can be issued.
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -771,13 +722,11 @@ for the template format.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -787,8 +736,7 @@ for the template format.
     </dt>
     <dd>{{% md %}}The value that will be included in the `aud` field of all the OIDC identity
 tokens issued by this role
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -798,8 +746,7 @@ tokens issued by this role
     </dt>
     <dd>{{% md %}}A configured named key, the key must already exist
 before tokens can be issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -808,8 +755,7 @@ before tokens can be issued.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the OIDC Role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -821,8 +767,7 @@ before tokens can be issued.
 string-ified JSON or base64 format. See the
 [documentation](https://www.vaultproject.io/docs/secrets/identity/index.html#token-contents-and-templates)
 for the template format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -831,8 +776,7 @@ for the template format.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL of the tokens generated against the role in number of seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -279,8 +279,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="constraint_csharp">
 <a href="#constraint_csharp" style="color: inherit; text-decoration: inherit;">Constraint</a>
@@ -289,8 +288,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orgid_csharp">
 <a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -299,8 +297,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="booleanpolicy_csharp">
 <a href="#booleanpolicy_csharp" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
@@ -309,8 +306,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listpolicy_csharp">
 <a href="#listpolicy_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
@@ -319,8 +315,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_csharp">
 <a href="#restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -329,8 +324,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -339,13 +333,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="constraint_go">
 <a href="#constraint_go" style="color: inherit; text-decoration: inherit;">Constraint</a>
@@ -354,8 +346,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orgid_go">
 <a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -364,8 +355,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="booleanpolicy_go">
 <a href="#booleanpolicy_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
@@ -374,8 +364,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listpolicy_go">
 <a href="#listpolicy_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
@@ -384,8 +373,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_go">
 <a href="#restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -394,8 +382,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -404,13 +391,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="constraint_nodejs">
 <a href="#constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
@@ -419,8 +404,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orgid_nodejs">
 <a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
@@ -429,8 +413,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="booleanpolicy_nodejs">
 <a href="#booleanpolicy_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policy</a>
@@ -439,8 +422,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listpolicy_nodejs">
 <a href="#listpolicy_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policy</a>
@@ -449,8 +431,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepolicy_nodejs">
 <a href="#restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
@@ -459,8 +440,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -469,13 +449,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="constraint_python">
 <a href="#constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
@@ -484,8 +462,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="org_id_python">
 <a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
@@ -494,8 +471,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boolean_policy_python">
 <a href="#boolean_policy_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policy</a>
@@ -504,8 +480,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="list_policy_python">
 <a href="#list_policy_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policy</a>
@@ -514,8 +489,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_policy_python">
 <a href="#restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
@@ -524,8 +498,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -534,8 +507,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -546,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -556,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -575,13 +544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -590,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -609,13 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -624,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -633,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -643,13 +604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -658,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -667,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -677,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -805,8 +761,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_booleanpolicy_csharp">
 <a href="#state_booleanpolicy_csharp" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
@@ -815,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_csharp">
 <a href="#state_constraint_csharp" style="color: inherit; text-decoration: inherit;">Constraint</a>
@@ -825,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -835,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listpolicy_csharp">
 <a href="#state_listpolicy_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
@@ -845,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_csharp">
 <a href="#state_orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -855,8 +806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_csharp">
 <a href="#state_restorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -865,8 +815,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -875,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -885,13 +833,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_booleanpolicy_go">
 <a href="#state_booleanpolicy_go" style="color: inherit; text-decoration: inherit;">Boolean<wbr>Policy</a>
@@ -900,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_go">
 <a href="#state_constraint_go" style="color: inherit; text-decoration: inherit;">Constraint</a>
@@ -910,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -920,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listpolicy_go">
 <a href="#state_listpolicy_go" style="color: inherit; text-decoration: inherit;">List<wbr>Policy</a>
@@ -930,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_go">
 <a href="#state_orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
@@ -940,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_go">
 <a href="#state_restorepolicy_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Policy</a>
@@ -950,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -960,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -970,13 +909,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_booleanpolicy_nodejs">
 <a href="#state_booleanpolicy_nodejs" style="color: inherit; text-decoration: inherit;">boolean<wbr>Policy</a>
@@ -985,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_nodejs">
 <a href="#state_constraint_nodejs" style="color: inherit; text-decoration: inherit;">constraint</a>
@@ -995,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1005,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listpolicy_nodejs">
 <a href="#state_listpolicy_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Policy</a>
@@ -1015,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orgid_nodejs">
 <a href="#state_orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
@@ -1025,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepolicy_nodejs">
 <a href="#state_restorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Policy</a>
@@ -1035,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1045,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1055,13 +985,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_boolean_policy_python">
 <a href="#state_boolean_policy_python" style="color: inherit; text-decoration: inherit;">boolean_<wbr>policy</a>
@@ -1070,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A boolean policy is a constraint that is either enforced or not. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constraint_python">
 <a href="#state_constraint_python" style="color: inherit; text-decoration: inherit;">constraint</a>
@@ -1080,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1090,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_list_policy_python">
 <a href="#state_list_policy_python" style="color: inherit; text-decoration: inherit;">list_<wbr>policy</a>
@@ -1100,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policylistpolicy">Policy<wbr>List<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_org_id_python">
 <a href="#state_org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
@@ -1110,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to set the policy for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_policy_python">
 <a href="#state_restore_policy_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>policy</a>
@@ -1120,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyrestorepolicy">Policy<wbr>Restore<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A restore policy is a constraint to restore the default policy. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1130,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1140,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Version of the Policy. Default version is 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1156,8 +1076,7 @@ The following state arguments are supported:
 <h4 id="policybooleanpolicy">Policy<wbr>Boolean<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforced_csharp">
 <a href="#enforced_csharp" style="color: inherit; text-decoration: inherit;">Enforced</a>
@@ -1166,13 +1085,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforced_go">
 <a href="#enforced_go" style="color: inherit; text-decoration: inherit;">Enforced</a>
@@ -1181,13 +1098,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforced_nodejs">
 <a href="#enforced_nodejs" style="color: inherit; text-decoration: inherit;">enforced</a>
@@ -1196,13 +1111,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforced_python">
 <a href="#enforced_python" style="color: inherit; text-decoration: inherit;">enforced</a>
@@ -1211,15 +1124,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the Policy is enforced. If false, then any configuration is acceptable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policylistpolicy">Policy<wbr>List<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
@@ -1228,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_csharp">
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
@@ -1237,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inheritfromparent_csharp">
 <a href="#inheritfromparent_csharp" style="color: inherit; text-decoration: inherit;">Inherit<wbr>From<wbr>Parent</a>
@@ -1248,8 +1157,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suggestedvalue_csharp">
 <a href="#suggestedvalue_csharp" style="color: inherit; text-decoration: inherit;">Suggested<wbr>Value</a>
@@ -1258,13 +1166,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
@@ -1273,8 +1179,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_go">
 <a href="#deny_go" style="color: inherit; text-decoration: inherit;">Deny</a>
@@ -1282,8 +1187,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inheritfromparent_go">
 <a href="#inheritfromparent_go" style="color: inherit; text-decoration: inherit;">Inherit<wbr>From<wbr>Parent</a>
@@ -1293,8 +1197,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suggestedvalue_go">
 <a href="#suggestedvalue_go" style="color: inherit; text-decoration: inherit;">Suggested<wbr>Value</a>
@@ -1303,13 +1206,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
@@ -1318,8 +1219,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_nodejs">
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
@@ -1327,8 +1227,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inheritfromparent_nodejs">
 <a href="#inheritfromparent_nodejs" style="color: inherit; text-decoration: inherit;">inherit<wbr>From<wbr>Parent</a>
@@ -1338,8 +1237,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suggestedvalue_nodejs">
 <a href="#suggestedvalue_nodejs" style="color: inherit; text-decoration: inherit;">suggested<wbr>Value</a>
@@ -1348,13 +1246,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
@@ -1363,8 +1259,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type"><a href="#policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}or `deny` - (Optional) One or the other must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_python">
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
@@ -1372,8 +1267,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherit_from_parent_python">
 <a href="#inherit_from_parent_python" style="color: inherit; text-decoration: inherit;">inherit_<wbr>from_<wbr>parent</a>
@@ -1383,8 +1277,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
     </dt>
     <dd>{{% md %}}If set to true, the values from the effective Policy of the parent resource
 are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suggested_value_python">
 <a href="#suggested_value_python" style="color: inherit; text-decoration: inherit;">suggested_<wbr>value</a>
@@ -1393,15 +1286,13 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Console will try to default to a configuration that matches the value specified in this field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policylistpolicyallow">Policy<wbr>List<wbr>Policy<wbr>Allow</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
@@ -1410,8 +1301,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1420,13 +1310,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
@@ -1435,8 +1323,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1445,13 +1332,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
@@ -1460,8 +1345,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1470,13 +1354,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
@@ -1485,8 +1367,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1495,15 +1376,13 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policylistpolicydeny">Policy<wbr>List<wbr>Policy<wbr>Deny</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
@@ -1512,8 +1391,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1522,13 +1400,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
@@ -1537,8 +1413,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1547,13 +1422,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
@@ -1562,8 +1435,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1572,13 +1444,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
@@ -1587,8 +1457,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The policy allows or denies all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1597,15 +1466,13 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The policy can define specific values that are allowed or denied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyrestorepolicy">Policy<wbr>Restore<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -1614,13 +1481,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -1629,13 +1494,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -1644,13 +1507,11 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -1659,8 +1520,7 @@ are inherited, meaning the values set in this Policy are added to the values inh
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}May only be set to true. If set, then the default Policy is restored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

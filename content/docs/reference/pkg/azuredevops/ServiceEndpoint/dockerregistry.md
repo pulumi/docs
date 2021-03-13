@@ -18,11 +18,17 @@ Manages a Docker Registry service endpoint within Azure DevOps.
 - [Docker Registry Service Connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml#sep-docreg)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -62,14 +68,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -110,9 +119,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -139,9 +151,12 @@ otherregistry = azuredevops.ServiceEndpointDockerRegistry("otherregistry",
     registry_type="Others")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -172,9 +187,16 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DockerRegistry Resource {#create}
@@ -199,9 +221,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -209,9 +229,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -219,9 +237,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -229,10 +245,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -258,9 +271,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -268,9 +279,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -278,9 +287,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -288,9 +295,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -298,18 +303,13 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -317,9 +317,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -327,9 +325,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -337,10 +333,7 @@ const otherregistry = new azuredevops.ServiceEndpointDockerRegistry("otherregist
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -355,9 +348,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dockerregistryurl_csharp">
 <a href="#dockerregistryurl_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Registry<wbr>Url</a>
@@ -366,8 +357,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -376,8 +366,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrytype_csharp">
 <a href="#registrytype_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
@@ -386,8 +375,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_csharp">
 <a href="#serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -396,8 +384,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -405,8 +392,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -415,8 +401,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockeremail_csharp">
 <a href="#dockeremail_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Email</a>
@@ -425,8 +410,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerpassword_csharp">
 <a href="#dockerpassword_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password</a>
@@ -435,8 +419,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerusername_csharp">
 <a href="#dockerusername_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Username</a>
@@ -445,14 +428,11 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dockerregistry_go">
 <a href="#dockerregistry_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Registry</a>
@@ -461,8 +441,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -471,8 +450,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrytype_go">
 <a href="#registrytype_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
@@ -481,8 +459,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_go">
 <a href="#serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -491,8 +468,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -500,8 +476,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -510,8 +485,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockeremail_go">
 <a href="#dockeremail_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Email</a>
@@ -520,8 +494,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerpassword_go">
 <a href="#dockerpassword_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password</a>
@@ -530,8 +503,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerusername_go">
 <a href="#dockerusername_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Username</a>
@@ -540,14 +512,11 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dockerregistry_nodejs">
 <a href="#dockerregistry_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Registry</a>
@@ -556,8 +525,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -566,8 +534,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registrytype_nodejs">
 <a href="#registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
@@ -576,8 +543,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_nodejs">
 <a href="#serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -586,8 +552,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -595,8 +560,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -605,8 +569,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockeremail_nodejs">
 <a href="#dockeremail_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Email</a>
@@ -615,8 +578,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerpassword_nodejs">
 <a href="#dockerpassword_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Password</a>
@@ -625,8 +587,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerusername_nodejs">
 <a href="#dockerusername_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Username</a>
@@ -635,14 +596,11 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="docker_registry_python">
 <a href="#docker_registry_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>registry</a>
@@ -651,8 +609,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -661,8 +618,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_type_python">
 <a href="#registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
@@ -671,8 +627,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_name_python">
 <a href="#service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -681,8 +636,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -690,8 +644,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -700,8 +653,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_email_python">
 <a href="#docker_email_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>email</a>
@@ -710,8 +662,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_password_python">
 <a href="#docker_password_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>password</a>
@@ -720,8 +671,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_username_python">
 <a href="#docker_username_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>username</a>
@@ -730,8 +680,7 @@ The DockerRegistry resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -742,9 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dockerpasswordhash_csharp">
 <a href="#dockerpasswordhash_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password<wbr>Hash</a>
@@ -753,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -762,14 +708,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dockerpasswordhash_go">
 <a href="#dockerpasswordhash_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password<wbr>Hash</a>
@@ -778,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -787,14 +729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dockerpasswordhash_nodejs">
 <a href="#dockerpasswordhash_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Password<wbr>Hash</a>
@@ -803,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -812,14 +750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="docker_password_hash_python">
 <a href="#docker_password_hash_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>password_<wbr>hash</a>
@@ -828,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -837,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -965,9 +898,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -975,8 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -985,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockeremail_csharp">
 <a href="#state_dockeremail_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Email</a>
@@ -995,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerpassword_csharp">
 <a href="#state_dockerpassword_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password</a>
@@ -1005,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerpasswordhash_csharp">
 <a href="#state_dockerpasswordhash_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password<wbr>Hash</a>
@@ -1015,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerregistryurl_csharp">
 <a href="#state_dockerregistryurl_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Registry<wbr>Url</a>
@@ -1025,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerusername_csharp">
 <a href="#state_dockerusername_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Username</a>
@@ -1035,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1045,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrytype_csharp">
 <a href="#state_registrytype_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
@@ -1055,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_csharp">
 <a href="#state_serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -1065,14 +987,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1080,8 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1090,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockeremail_go">
 <a href="#state_dockeremail_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Email</a>
@@ -1100,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerpassword_go">
 <a href="#state_dockerpassword_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password</a>
@@ -1110,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerpasswordhash_go">
 <a href="#state_dockerpasswordhash_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Password<wbr>Hash</a>
@@ -1120,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerregistry_go">
 <a href="#state_dockerregistry_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Registry</a>
@@ -1130,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerusername_go">
 <a href="#state_dockerusername_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Username</a>
@@ -1140,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1150,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrytype_go">
 <a href="#state_registrytype_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Type</a>
@@ -1160,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_go">
 <a href="#state_serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -1170,14 +1080,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1185,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1195,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockeremail_nodejs">
 <a href="#state_dockeremail_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Email</a>
@@ -1205,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerpassword_nodejs">
 <a href="#state_dockerpassword_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Password</a>
@@ -1215,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerpasswordhash_nodejs">
 <a href="#state_dockerpasswordhash_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Password<wbr>Hash</a>
@@ -1225,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerregistry_nodejs">
 <a href="#state_dockerregistry_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Registry</a>
@@ -1235,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockerusername_nodejs">
 <a href="#state_dockerusername_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Username</a>
@@ -1245,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1255,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrytype_nodejs">
 <a href="#state_registrytype_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Type</a>
@@ -1265,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_nodejs">
 <a href="#state_serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -1275,14 +1173,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1290,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1300,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_email_python">
 <a href="#state_docker_email_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>email</a>
@@ -1310,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email for Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_password_python">
 <a href="#state_docker_password_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>password</a>
@@ -1320,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the account user identified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_password_hash_python">
 <a href="#state_docker_password_hash_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>password_<wbr>hash</a>
@@ -1330,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A bcrypted hash of the attribute 'docker_password'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_registry_python">
 <a href="#state_docker_registry_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>registry</a>
@@ -1340,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Docker registry. (Default: "https://index.docker.io/v1/")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_username_python">
 <a href="#state_docker_username_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>username</a>
@@ -1350,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the Docker account user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1360,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_type_python">
 <a href="#state_registry_type_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>type</a>
@@ -1370,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be "DockerHub" or "Others" (Default "DockerHub")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_endpoint_name_python">
 <a href="#state_service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -1380,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name you will use to refer to this service connection in task inputs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

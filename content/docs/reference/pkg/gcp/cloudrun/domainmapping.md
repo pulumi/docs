@@ -355,8 +355,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -365,8 +364,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -376,8 +374,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -387,8 +384,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +393,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -408,13 +403,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -423,8 +416,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -434,8 +426,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -445,8 +436,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -455,8 +445,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -466,13 +455,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -481,8 +468,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -492,8 +478,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -503,8 +488,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -513,8 +497,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -524,13 +507,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -539,8 +520,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -550,8 +530,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -561,8 +540,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -571,8 +549,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -582,8 +559,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -594,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -603,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -613,13 +587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainmappingstatus">List&lt;Domain<wbr>Mapping<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -627,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -637,13 +608,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -651,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -661,13 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -675,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -685,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainmappingstatus">Sequence[Domain<wbr>Mapping<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -813,8 +777,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -823,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -834,8 +796,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -844,8 +805,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -855,8 +815,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -866,8 +825,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_csharp">
 <a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -876,13 +834,11 @@ Structure is documented below.
         <span class="property-type"><a href="#domainmappingstatus">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -891,8 +847,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -902,8 +857,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -912,8 +866,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -923,8 +876,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -934,8 +886,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_go">
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -944,13 +895,11 @@ Structure is documented below.
         <span class="property-type"><a href="#domainmappingstatus">[]Domain<wbr>Mapping<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -959,8 +908,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -970,8 +918,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -980,8 +927,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -991,8 +937,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -1002,8 +947,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_nodejs">
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1012,13 +956,11 @@ Structure is documented below.
         <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1027,8 +969,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1038,8 +979,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Metadata associated with this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1048,8 +988,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1059,8 +998,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -1070,8 +1008,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The spec for this DomainMapping.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_python">
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1080,8 +1017,7 @@ Structure is documented below.
         <span class="property-type"><a href="#domainmappingstatus">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the DomainMapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1096,8 +1032,7 @@ Structure is documented below.
 <h4 id="domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1107,8 +1042,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1116,8 +1050,7 @@ project ID or project number.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_csharp">
 <a href="#generation_csharp" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -1127,8 +1060,7 @@ project ID or project number.
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1140,8 +1072,7 @@ A sequence number representing a specific generation of the desired state.
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_csharp">
 <a href="#resourceversion_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -1157,8 +1088,7 @@ resource or set of resources. They may only be valid for a
 particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1168,8 +1098,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_csharp">
 <a href="#uid_csharp" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -1181,13 +1110,11 @@ SelfLink is a URL representing this object.
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1197,8 +1124,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1206,8 +1132,7 @@ project ID or project number.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_go">
 <a href="#generation_go" style="color: inherit; text-decoration: inherit;">Generation</a>
@@ -1217,8 +1142,7 @@ project ID or project number.
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1230,8 +1154,7 @@ A sequence number representing a specific generation of the desired state.
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_go">
 <a href="#resourceversion_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Version</a>
@@ -1247,8 +1170,7 @@ resource or set of resources. They may only be valid for a
 particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1258,8 +1180,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_go">
 <a href="#uid_go" style="color: inherit; text-decoration: inherit;">Uid</a>
@@ -1271,13 +1192,11 @@ SelfLink is a URL representing this object.
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1287,8 +1206,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1296,8 +1214,7 @@ project ID or project number.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_nodejs">
 <a href="#generation_nodejs" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -1307,8 +1224,7 @@ project ID or project number.
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1320,8 +1236,7 @@ A sequence number representing a specific generation of the desired state.
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceversion_nodejs">
 <a href="#resourceversion_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Version</a>
@@ -1337,8 +1252,7 @@ resource or set of resources. They may only be valid for a
 particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1348,8 +1262,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_nodejs">
 <a href="#uid_nodejs" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -1361,13 +1274,11 @@ SelfLink is a URL representing this object.
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1377,8 +1288,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     </dt>
     <dd>{{% md %}}In Cloud Run the namespace must be equal to either the
 project ID or project number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1386,8 +1296,7 @@ project ID or project number.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="generation_python">
 <a href="#generation_python" style="color: inherit; text-decoration: inherit;">generation</a>
@@ -1397,8 +1306,7 @@ project ID or project number.
     </dt>
     <dd>{{% md %}}-
 A sequence number representing a specific generation of the desired state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1410,8 +1318,7 @@ A sequence number representing a specific generation of the desired state.
 (scope and select) objects. May match selectors of replication controllers
 and routes.
 More info: http://kubernetes.io/docs/user-guide/labels
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_version_python">
 <a href="#resource_version_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>version</a>
@@ -1427,8 +1334,7 @@ resource or set of resources. They may only be valid for a
 particular resource or set of resources.
 More info:
 https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1438,8 +1344,7 @@ https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-c
     </dt>
     <dd>{{% md %}}-
 SelfLink is a URL representing this object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uid_python">
 <a href="#uid_python" style="color: inherit; text-decoration: inherit;">uid</a>
@@ -1451,15 +1356,13 @@ SelfLink is a URL representing this object.
 UID is a unique id generated by the server on successful creation of a resource and is not
 allowed to change on PUT operations.
 More info: http://kubernetes.io/docs/user-guide/identifiers#uids
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainmappingspec">Domain<wbr>Mapping<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routename_csharp">
 <a href="#routename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Name</a>
@@ -1469,8 +1372,7 @@ More info: http://kubernetes.io/docs/user-guide/identifiers#uids
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatemode_csharp">
 <a href="#certificatemode_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
@@ -1481,8 +1383,7 @@ The route must exist.
     <dd>{{% md %}}The mode of the certificate.
 Default value is `AUTOMATIC`.
 Possible values are `NONE` and `AUTOMATIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceoverride_csharp">
 <a href="#forceoverride_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Override</a>
@@ -1494,13 +1395,11 @@ Possible values are `NONE` and `AUTOMATIC`.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routename_go">
 <a href="#routename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Name</a>
@@ -1510,8 +1409,7 @@ has given such a warning.
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatemode_go">
 <a href="#certificatemode_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Mode</a>
@@ -1522,8 +1420,7 @@ The route must exist.
     <dd>{{% md %}}The mode of the certificate.
 Default value is `AUTOMATIC`.
 Possible values are `NONE` and `AUTOMATIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceoverride_go">
 <a href="#forceoverride_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Override</a>
@@ -1535,13 +1432,11 @@ Possible values are `NONE` and `AUTOMATIC`.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routename_nodejs">
 <a href="#routename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Name</a>
@@ -1551,8 +1446,7 @@ has given such a warning.
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatemode_nodejs">
 <a href="#certificatemode_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Mode</a>
@@ -1563,8 +1457,7 @@ The route must exist.
     <dd>{{% md %}}The mode of the certificate.
 Default value is `AUTOMATIC`.
 Possible values are `NONE` and `AUTOMATIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceoverride_nodejs">
 <a href="#forceoverride_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Override</a>
@@ -1576,13 +1469,11 @@ Possible values are `NONE` and `AUTOMATIC`.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="route_name_python">
 <a href="#route_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>name</a>
@@ -1592,8 +1483,7 @@ has given such a warning.
     </dt>
     <dd>{{% md %}}The name of the Cloud Run Service that this DomainMapping applies to.
 The route must exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_mode_python">
 <a href="#certificate_mode_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>mode</a>
@@ -1604,8 +1494,7 @@ The route must exist.
     <dd>{{% md %}}The mode of the certificate.
 Default value is `AUTOMATIC`.
 Possible values are `NONE` and `AUTOMATIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_override_python">
 <a href="#force_override_python" style="color: inherit; text-decoration: inherit;">force_<wbr>override</a>
@@ -1617,15 +1506,13 @@ Possible values are `NONE` and `AUTOMATIC`.
 It is recommended that the user leaves this empty to receive an error
 warning about a potential conflict and only set it once the respective UI
 has given such a warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainmappingstatus">Domain<wbr>Mapping<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1633,8 +1520,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedroutename_csharp">
 <a href="#mappedroutename_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Route<wbr>Name</a>
@@ -1642,8 +1528,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_csharp">
 <a href="#observedgeneration_csharp" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
@@ -1651,8 +1536,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_csharp">
 <a href="#resourcerecords_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -1660,13 +1544,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">List&lt;Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1674,8 +1556,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">[]Domain<wbr>Mapping<wbr>Status<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedroutename_go">
 <a href="#mappedroutename_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Route<wbr>Name</a>
@@ -1683,8 +1564,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_go">
 <a href="#observedgeneration_go" style="color: inherit; text-decoration: inherit;">Observed<wbr>Generation</a>
@@ -1692,8 +1572,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_go">
 <a href="#resourcerecords_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -1701,13 +1580,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">[]Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1715,8 +1592,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mappedroutename_nodejs">
 <a href="#mappedroutename_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Route<wbr>Name</a>
@@ -1724,8 +1600,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observedgeneration_nodejs">
 <a href="#observedgeneration_nodejs" style="color: inherit; text-decoration: inherit;">observed<wbr>Generation</a>
@@ -1733,8 +1608,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcerecords_nodejs">
 <a href="#resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
@@ -1742,13 +1616,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1756,8 +1628,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatuscondition">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapped_route_name_python">
 <a href="#mapped_route_name_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>route_<wbr>name</a>
@@ -1765,8 +1636,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="observed_generation_python">
 <a href="#observed_generation_python" style="color: inherit; text-decoration: inherit;">observed_<wbr>generation</a>
@@ -1774,8 +1644,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_records_python">
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
@@ -1783,15 +1652,13 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatusresourcerecord">Sequence[Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1799,8 +1666,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1808,8 +1674,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1817,8 +1682,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1826,13 +1690,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1840,8 +1702,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -1849,8 +1710,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1858,8 +1718,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1867,13 +1726,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1881,8 +1738,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1890,8 +1746,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1899,8 +1754,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1908,13 +1762,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1922,8 +1774,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -1931,8 +1782,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1940,8 +1790,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1949,15 +1798,13 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1966,8 +1813,7 @@ has given such a warning.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_csharp">
 <a href="#rrdata_csharp" style="color: inherit; text-decoration: inherit;">Rrdata</a>
@@ -1975,8 +1821,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1984,13 +1829,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1999,8 +1842,7 @@ has given such a warning.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_go">
 <a href="#rrdata_go" style="color: inherit; text-decoration: inherit;">Rrdata</a>
@@ -2008,8 +1850,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2017,13 +1858,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2032,8 +1871,7 @@ has given such a warning.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_nodejs">
 <a href="#rrdata_nodejs" style="color: inherit; text-decoration: inherit;">rrdata</a>
@@ -2041,8 +1879,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2050,13 +1887,11 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2065,8 +1900,7 @@ has given such a warning.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name should be a verified domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_python">
 <a href="#rrdata_python" style="color: inherit; text-decoration: inherit;">rrdata</a>
@@ -2074,8 +1908,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2083,8 +1916,7 @@ has given such a warning.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

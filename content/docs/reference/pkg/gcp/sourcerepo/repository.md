@@ -393,8 +393,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -404,8 +403,7 @@ The Repository resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -415,8 +413,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubconfigs_csharp">
 <a href="#pubsubconfigs_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Configs</a>
@@ -427,13 +424,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -443,8 +438,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -454,8 +448,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubconfigs_go">
 <a href="#pubsubconfigs_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Configs</a>
@@ -466,13 +459,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -482,8 +473,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -493,8 +483,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubconfigs_nodejs">
 <a href="#pubsubconfigs_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Configs</a>
@@ -505,13 +494,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -521,8 +508,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -532,8 +518,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsub_configs_python">
 <a href="#pubsub_configs_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>configs</a>
@@ -544,8 +529,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -556,8 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -575,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -585,13 +566,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -609,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -619,13 +596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -633,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -643,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -653,13 +626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -667,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -677,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -687,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -815,8 +783,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -826,8 +793,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -837,8 +803,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pubsubconfigs_csharp">
 <a href="#state_pubsubconfigs_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Configs</a>
@@ -849,8 +814,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -859,8 +823,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -869,13 +832,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -885,8 +846,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -896,8 +856,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pubsubconfigs_go">
 <a href="#state_pubsubconfigs_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Configs</a>
@@ -908,8 +867,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -918,8 +876,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -928,13 +885,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -944,8 +899,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -955,8 +909,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pubsubconfigs_nodejs">
 <a href="#state_pubsubconfigs_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Configs</a>
@@ -967,8 +920,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -977,8 +929,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -987,13 +938,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1003,8 +952,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the repository, of the form `{{repo}}`.
 The repo name may contain slashes. eg, `name/with/slash`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1014,8 +962,7 @@ The repo name may contain slashes. eg, `name/with/slash`
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pubsub_configs_python">
 <a href="#state_pubsub_configs_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>configs</a>
@@ -1026,8 +973,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}How this repository publishes a change in the repository through Cloud Pub/Sub.
 Keyed by the topic names.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1036,8 +982,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The disk usage of the repo, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1046,8 +991,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to clone the repository from Google Cloud Source Repositories.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1062,8 +1006,7 @@ Structure is documented below.
 <h4 id="repositorypubsubconfig">Repository<wbr>Pubsub<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageformat_csharp">
 <a href="#messageformat_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
@@ -1075,8 +1018,7 @@ Structure is documented below.
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent.
 Possible values are `PROTOBUF` and `JSON`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -1085,8 +1027,7 @@ Possible values are `PROTOBUF` and `JSON`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_csharp">
 <a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -1098,13 +1039,11 @@ Possible values are `PROTOBUF` and `JSON`.
 This service account needs to be in the same project as the PubsubConfig. When added,
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageformat_go">
 <a href="#messageformat_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Format</a>
@@ -1116,8 +1055,7 @@ If unspecified, it defaults to the compute engine default service account.
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent.
 Possible values are `PROTOBUF` and `JSON`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -1126,8 +1064,7 @@ Possible values are `PROTOBUF` and `JSON`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_go">
 <a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -1139,13 +1076,11 @@ Possible values are `PROTOBUF` and `JSON`.
 This service account needs to be in the same project as the PubsubConfig. When added,
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="messageformat_nodejs">
 <a href="#messageformat_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Format</a>
@@ -1157,8 +1092,7 @@ If unspecified, it defaults to the compute engine default service account.
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent.
 Possible values are `PROTOBUF` and `JSON`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -1167,8 +1101,7 @@ Possible values are `PROTOBUF` and `JSON`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_nodejs">
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
@@ -1180,13 +1113,11 @@ Possible values are `PROTOBUF` and `JSON`.
 This service account needs to be in the same project as the PubsubConfig. When added,
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="message_format_python">
 <a href="#message_format_python" style="color: inherit; text-decoration: inherit;">message_<wbr>format</a>
@@ -1198,8 +1129,7 @@ If unspecified, it defaults to the compute engine default service account.
 - PROTOBUF: The message payload is a serialized protocol buffer of SourceRepoEvent.
 - JSON: The message payload is a JSON string of SourceRepoEvent.
 Possible values are `PROTOBUF` and `JSON`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -1208,8 +1138,7 @@ Possible values are `PROTOBUF` and `JSON`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_email_python">
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
@@ -1221,8 +1150,7 @@ Possible values are `PROTOBUF` and `JSON`.
 This service account needs to be in the same project as the PubsubConfig. When added,
 the caller needs to have iam.serviceAccounts.actAs permission on this service account.
 If unspecified, it defaults to the compute engine default service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

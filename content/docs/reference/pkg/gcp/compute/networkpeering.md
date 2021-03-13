@@ -314,8 +314,7 @@ The NetworkPeering resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -324,8 +323,7 @@ The NetworkPeering resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peernetwork_csharp">
 <a href="#peernetwork_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Network</a>
@@ -335,8 +333,7 @@ The NetworkPeering resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportcustomroutes_csharp">
 <a href="#exportcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -345,8 +342,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportsubnetrouteswithpublicip_csharp">
 <a href="#exportsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -355,8 +351,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importcustomroutes_csharp">
 <a href="#importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -365,8 +360,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importsubnetrouteswithpublicip_csharp">
 <a href="#importsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -375,8 +369,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -385,13 +378,11 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -400,8 +391,7 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peernetwork_go">
 <a href="#peernetwork_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Network</a>
@@ -411,8 +401,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportcustomroutes_go">
 <a href="#exportcustomroutes_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -421,8 +410,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportsubnetrouteswithpublicip_go">
 <a href="#exportsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -431,8 +419,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importcustomroutes_go">
 <a href="#importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -441,8 +428,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importsubnetrouteswithpublicip_go">
 <a href="#importsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -451,8 +437,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -461,13 +446,11 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -476,8 +459,7 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peernetwork_nodejs">
 <a href="#peernetwork_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Network</a>
@@ -487,8 +469,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportcustomroutes_nodejs">
 <a href="#exportcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Custom<wbr>Routes</a>
@@ -497,8 +478,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportsubnetrouteswithpublicip_nodejs">
 <a href="#exportsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -507,8 +487,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importcustomroutes_nodejs">
 <a href="#importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
@@ -517,8 +496,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importsubnetrouteswithpublicip_nodejs">
 <a href="#importsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -527,8 +505,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -537,13 +514,11 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -552,8 +527,7 @@ may belong to a different project.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_network_python">
 <a href="#peer_network_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>network</a>
@@ -563,8 +537,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_custom_routes_python">
 <a href="#export_custom_routes_python" style="color: inherit; text-decoration: inherit;">export_<wbr>custom_<wbr>routes</a>
@@ -573,8 +546,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_subnet_routes_with_public_ip_python">
 <a href="#export_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">export_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
@@ -583,8 +555,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_custom_routes_python">
 <a href="#import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
@@ -593,8 +564,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_subnet_routes_with_public_ip_python">
 <a href="#import_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">import_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
@@ -603,8 +573,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -613,8 +582,7 @@ may belong to a different project.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -625,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -645,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statedetails_csharp">
 <a href="#statedetails_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Details</a>
@@ -655,13 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -669,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -680,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statedetails_go">
 <a href="#statedetails_go" style="color: inherit; text-decoration: inherit;">State<wbr>Details</a>
@@ -690,13 +651,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -704,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -715,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statedetails_nodejs">
 <a href="#statedetails_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Details</a>
@@ -725,13 +682,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -739,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -750,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_details_python">
 <a href="#state_details_python" style="color: inherit; text-decoration: inherit;">state_<wbr>details</a>
@@ -760,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -888,8 +840,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_exportcustomroutes_csharp">
 <a href="#state_exportcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -898,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportsubnetrouteswithpublicip_csharp">
 <a href="#state_exportsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -908,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importcustomroutes_csharp">
 <a href="#state_importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -918,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importsubnetrouteswithpublicip_csharp">
 <a href="#state_importsubnetrouteswithpublicip_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -928,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -938,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -948,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peernetwork_csharp">
 <a href="#state_peernetwork_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Network</a>
@@ -959,8 +904,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -970,8 +914,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statedetails_csharp">
 <a href="#state_statedetails_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Details</a>
@@ -980,13 +923,11 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_exportcustomroutes_go">
 <a href="#state_exportcustomroutes_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -995,8 +936,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportsubnetrouteswithpublicip_go">
 <a href="#state_exportsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -1005,8 +945,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importcustomroutes_go">
 <a href="#state_importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -1015,8 +954,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importsubnetrouteswithpublicip_go">
 <a href="#state_importsubnetrouteswithpublicip_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -1025,8 +963,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1035,8 +972,7 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1045,8 +981,7 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peernetwork_go">
 <a href="#state_peernetwork_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Network</a>
@@ -1056,8 +991,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1067,8 +1001,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statedetails_go">
 <a href="#state_statedetails_go" style="color: inherit; text-decoration: inherit;">State<wbr>Details</a>
@@ -1077,13 +1010,11 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_exportcustomroutes_nodejs">
 <a href="#state_exportcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Custom<wbr>Routes</a>
@@ -1092,8 +1023,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportsubnetrouteswithpublicip_nodejs">
 <a href="#state_exportsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -1102,8 +1032,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importcustomroutes_nodejs">
 <a href="#state_importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
@@ -1112,8 +1041,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importsubnetrouteswithpublicip_nodejs">
 <a href="#state_importsubnetrouteswithpublicip_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Subnet<wbr>Routes<wbr>With<wbr>Public<wbr>Ip</a>
@@ -1122,8 +1050,7 @@ may belong to a different project.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1132,8 +1059,7 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1142,8 +1068,7 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peernetwork_nodejs">
 <a href="#state_peernetwork_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Network</a>
@@ -1153,8 +1078,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1164,8 +1088,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statedetails_nodejs">
 <a href="#state_statedetails_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Details</a>
@@ -1174,13 +1097,11 @@ may belong to a different project.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_export_custom_routes_python">
 <a href="#state_export_custom_routes_python" style="color: inherit; text-decoration: inherit;">export_<wbr>custom_<wbr>routes</a>
@@ -1189,8 +1110,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_export_subnet_routes_with_public_ip_python">
 <a href="#state_export_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">export_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
@@ -1199,8 +1119,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_custom_routes_python">
 <a href="#state_import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
@@ -1209,8 +1128,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes from the peer network. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_subnet_routes_with_public_ip_python">
 <a href="#state_import_subnet_routes_with_public_ip_python" style="color: inherit; text-decoration: inherit;">import_<wbr>subnet_<wbr>routes_<wbr>with_<wbr>public_<wbr>ip</a>
@@ -1219,8 +1137,7 @@ may belong to a different project.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1229,8 +1146,7 @@ may belong to a different project.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1239,8 +1155,7 @@ may belong to a different project.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary network of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_network_python">
 <a href="#state_peer_network_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>network</a>
@@ -1250,8 +1165,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}The peer network in the peering. The peer network
 may belong to a different project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1261,8 +1175,7 @@ may belong to a different project.
     </dt>
     <dd>{{% md %}}State for the peering, either `ACTIVE` or `INACTIVE`. The peering is
 `ACTIVE` when there's a matching configuration in the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_details_python">
 <a href="#state_state_details_python" style="color: inherit; text-decoration: inherit;">state_<wbr>details</a>
@@ -1271,8 +1184,7 @@ may belong to a different project.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Details about the current state of the peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

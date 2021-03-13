@@ -297,8 +297,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -307,8 +306,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -317,8 +315,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -327,8 +324,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -337,8 +333,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypassheadrequest_csharp">
 <a href="#bypassheadrequest_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Head<wbr>Request</a>
@@ -347,8 +342,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -357,8 +351,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slathreshold_csharp">
 <a href="#slathreshold_csharp" style="color: inherit; text-decoration: inherit;">Sla<wbr>Threshold</a>
@@ -367,8 +360,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="treatredirectasfailure_csharp">
 <a href="#treatredirectasfailure_csharp" style="color: inherit; text-decoration: inherit;">Treat<wbr>Redirect<wbr>As<wbr>Failure</a>
@@ -377,8 +369,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -387,8 +378,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationstring_csharp">
 <a href="#validationstring_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>String</a>
@@ -397,8 +387,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyssl_csharp">
 <a href="#verifyssl_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Ssl</a>
@@ -407,13 +396,11 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -422,8 +409,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -432,8 +418,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -442,8 +427,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -452,8 +436,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypassheadrequest_go">
 <a href="#bypassheadrequest_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Head<wbr>Request</a>
@@ -462,8 +445,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,8 +454,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slathreshold_go">
 <a href="#slathreshold_go" style="color: inherit; text-decoration: inherit;">Sla<wbr>Threshold</a>
@@ -482,8 +463,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="treatredirectasfailure_go">
 <a href="#treatredirectasfailure_go" style="color: inherit; text-decoration: inherit;">Treat<wbr>Redirect<wbr>As<wbr>Failure</a>
@@ -492,8 +472,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -502,8 +481,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationstring_go">
 <a href="#validationstring_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>String</a>
@@ -512,8 +490,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyssl_go">
 <a href="#verifyssl_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Ssl</a>
@@ -522,13 +499,11 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -537,8 +512,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -547,8 +521,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -557,8 +530,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -567,8 +539,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypassheadrequest_nodejs">
 <a href="#bypassheadrequest_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Head<wbr>Request</a>
@@ -577,8 +548,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -587,8 +557,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slathreshold_nodejs">
 <a href="#slathreshold_nodejs" style="color: inherit; text-decoration: inherit;">sla<wbr>Threshold</a>
@@ -597,8 +566,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="treatredirectasfailure_nodejs">
 <a href="#treatredirectasfailure_nodejs" style="color: inherit; text-decoration: inherit;">treat<wbr>Redirect<wbr>As<wbr>Failure</a>
@@ -607,8 +575,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -617,8 +584,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationstring_nodejs">
 <a href="#validationstring_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>String</a>
@@ -627,8 +593,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyssl_nodejs">
 <a href="#verifyssl_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Ssl</a>
@@ -637,13 +602,11 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -652,8 +615,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -662,8 +624,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -672,8 +633,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -682,8 +642,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypass_head_request_python">
 <a href="#bypass_head_request_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>head_<wbr>request</a>
@@ -692,8 +651,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -702,8 +660,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sla_threshold_python">
 <a href="#sla_threshold_python" style="color: inherit; text-decoration: inherit;">sla_<wbr>threshold</a>
@@ -712,8 +669,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="treat_redirect_as_failure_python">
 <a href="#treat_redirect_as_failure_python" style="color: inherit; text-decoration: inherit;">treat_<wbr>redirect_<wbr>as_<wbr>failure</a>
@@ -722,8 +678,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -732,8 +687,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validation_string_python">
 <a href="#validation_string_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>string</a>
@@ -742,8 +696,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_ssl_python">
 <a href="#verify_ssl_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>ssl</a>
@@ -752,8 +705,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -764,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -773,13 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -787,13 +736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -801,13 +748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -815,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -943,8 +887,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypassheadrequest_csharp">
 <a href="#state_bypassheadrequest_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Head<wbr>Request</a>
@@ -953,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_csharp">
 <a href="#state_frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -963,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_csharp">
 <a href="#state_locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -973,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -983,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slathreshold_csharp">
 <a href="#state_slathreshold_csharp" style="color: inherit; text-decoration: inherit;">Sla<wbr>Threshold</a>
@@ -993,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1003,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_treatredirectasfailure_csharp">
 <a href="#state_treatredirectasfailure_csharp" style="color: inherit; text-decoration: inherit;">Treat<wbr>Redirect<wbr>As<wbr>Failure</a>
@@ -1013,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1023,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_csharp">
 <a href="#state_uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1033,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validationstring_csharp">
 <a href="#state_validationstring_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>String</a>
@@ -1043,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyssl_csharp">
 <a href="#state_verifyssl_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Ssl</a>
@@ -1053,13 +986,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypassheadrequest_go">
 <a href="#state_bypassheadrequest_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Head<wbr>Request</a>
@@ -1068,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_go">
 <a href="#state_frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1078,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_go">
 <a href="#state_locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1088,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1098,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slathreshold_go">
 <a href="#state_slathreshold_go" style="color: inherit; text-decoration: inherit;">Sla<wbr>Threshold</a>
@@ -1108,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1118,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_treatredirectasfailure_go">
 <a href="#state_treatredirectasfailure_go" style="color: inherit; text-decoration: inherit;">Treat<wbr>Redirect<wbr>As<wbr>Failure</a>
@@ -1128,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1138,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_go">
 <a href="#state_uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1148,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validationstring_go">
 <a href="#state_validationstring_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>String</a>
@@ -1158,8 +1080,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyssl_go">
 <a href="#state_verifyssl_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Ssl</a>
@@ -1168,13 +1089,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypassheadrequest_nodejs">
 <a href="#state_bypassheadrequest_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Head<wbr>Request</a>
@@ -1183,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_nodejs">
 <a href="#state_frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1193,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_nodejs">
 <a href="#state_locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1203,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1213,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slathreshold_nodejs">
 <a href="#state_slathreshold_nodejs" style="color: inherit; text-decoration: inherit;">sla<wbr>Threshold</a>
@@ -1223,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1233,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_treatredirectasfailure_nodejs">
 <a href="#state_treatredirectasfailure_nodejs" style="color: inherit; text-decoration: inherit;">treat<wbr>Redirect<wbr>As<wbr>Failure</a>
@@ -1243,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1253,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_nodejs">
 <a href="#state_uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1263,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validationstring_nodejs">
 <a href="#state_validationstring_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>String</a>
@@ -1273,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyssl_nodejs">
 <a href="#state_verifyssl_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Ssl</a>
@@ -1283,13 +1192,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bypass_head_request_python">
 <a href="#state_bypass_head_request_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>head_<wbr>request</a>
@@ -1298,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bypass HEAD request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_python">
 <a href="#state_frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1308,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval (in minutes) at which this monitor should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locations_python">
 <a href="#state_locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1318,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The locations in which this monitor should be run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1328,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of this monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sla_threshold_python">
 <a href="#state_sla_threshold_python" style="color: inherit; text-decoration: inherit;">sla_<wbr>threshold</a>
@@ -1338,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The base threshold for the SLA report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1348,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitor status (i.e. `ENABLED`, `MUTED`, `DISABLED`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_treat_redirect_as_failure_python">
 <a href="#state_treat_redirect_as_failure_python" style="color: inherit; text-decoration: inherit;">treat_<wbr>redirect_<wbr>as_<wbr>failure</a>
@@ -1358,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fail the monitor check if redirected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1368,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitor type. Valid values are `SIMPLE`, `BROWSER`, `SCRIPT_BROWSER`, and `SCRIPT_API`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_python">
 <a href="#state_uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1378,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI for the monitor to hit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validation_string_python">
 <a href="#state_validation_string_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>string</a>
@@ -1388,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The string to validate against in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verify_ssl_python">
 <a href="#state_verify_ssl_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>ssl</a>
@@ -1398,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Verify SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

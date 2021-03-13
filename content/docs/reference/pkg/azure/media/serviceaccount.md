@@ -326,8 +326,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -336,8 +335,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
@@ -346,8 +344,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#serviceaccountstorageaccount">List&lt;Service<wbr>Account<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -356,8 +353,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -366,8 +362,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -376,8 +371,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageauthenticationtype_csharp">
 <a href="#storageauthenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Authentication<wbr>Type</a>
@@ -387,8 +381,7 @@ The ServiceAccount resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -398,13 +391,11 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -413,8 +404,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
@@ -423,8 +413,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountstorageaccount">[]Service<wbr>Account<wbr>Storage<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -433,8 +422,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -443,8 +431,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -453,8 +440,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageauthenticationtype_go">
 <a href="#storageauthenticationtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Authentication<wbr>Type</a>
@@ -464,8 +450,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -475,13 +460,11 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -490,8 +473,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
@@ -500,8 +482,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountstorageaccount">Service<wbr>Account<wbr>Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -510,8 +491,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -520,8 +500,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -530,8 +509,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageauthenticationtype_nodejs">
 <a href="#storageauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Authentication<wbr>Type</a>
@@ -541,8 +519,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -552,13 +529,11 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -567,8 +542,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
@@ -577,8 +551,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountstorageaccount">Sequence[Service<wbr>Account<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -587,8 +560,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -597,8 +569,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +578,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_authentication_type_python">
 <a href="#storage_authentication_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>authentication_<wbr>type</a>
@@ -618,8 +588,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -629,8 +598,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -641,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -650,13 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -664,13 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,13 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -692,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -820,8 +780,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -830,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -840,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -850,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -860,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccounts_csharp">
 <a href="#state_storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
@@ -870,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceaccountstorageaccount">List&lt;Service<wbr>Account<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageauthenticationtype_csharp">
 <a href="#state_storageauthenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Authentication<wbr>Type</a>
@@ -881,8 +835,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -892,13 +845,11 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -907,8 +858,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -917,8 +867,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -927,8 +876,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -937,8 +885,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccounts_go">
 <a href="#state_storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
@@ -947,8 +894,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountstorageaccount">[]Service<wbr>Account<wbr>Storage<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageauthenticationtype_go">
 <a href="#state_storageauthenticationtype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Authentication<wbr>Type</a>
@@ -958,8 +904,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -969,13 +914,11 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -984,8 +927,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -994,8 +936,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1004,8 +945,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1014,8 +954,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccounts_nodejs">
 <a href="#state_storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
@@ -1024,8 +963,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountstorageaccount">Service<wbr>Account<wbr>Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageauthenticationtype_nodejs">
 <a href="#state_storageauthenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Authentication<wbr>Type</a>
@@ -1035,8 +973,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1046,13 +983,11 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1061,8 +996,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountidentity">Service<wbr>Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1071,8 +1005,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1081,8 +1014,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1091,8 +1023,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_accounts_python">
 <a href="#state_storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
@@ -1101,8 +1032,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type"><a href="#serviceaccountstorageaccount">Sequence[Service<wbr>Account<wbr>Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `storage_account` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_authentication_type_python">
 <a href="#state_storage_authentication_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>authentication_<wbr>type</a>
@@ -1112,8 +1042,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}Specifies the storage authentication type. 
 Possible value is  `ManagedIdentity` or `System`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1123,8 +1052,7 @@ Possible value is  `ManagedIdentity` or `System`.
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 ---
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1139,8 +1067,7 @@ Possible value is  `ManagedIdentity` or `System`.
 <h4 id="serviceaccountidentity">Service<wbr>Account<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1149,8 +1076,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1159,8 +1085,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1169,13 +1094,11 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Media Services Account. Possible value is  `SystemAssigned`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1184,8 +1107,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1194,8 +1116,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1204,13 +1125,11 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Media Services Account. Possible value is  `SystemAssigned`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1219,8 +1138,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1229,8 +1147,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1239,13 +1156,11 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Media Services Account. Possible value is  `SystemAssigned`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1254,8 +1169,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1264,8 +1178,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1274,15 +1187,13 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this Media Services Account. Possible value is  `SystemAssigned`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceaccountstorageaccount">Service<wbr>Account<wbr>Storage<wbr>Account</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1291,8 +1202,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Storage Account that will be associated with the Media Services instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isprimary_csharp">
 <a href="#isprimary_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Primary</a>
@@ -1301,13 +1211,11 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the storage account should be the primary account or not. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1316,8 +1224,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Storage Account that will be associated with the Media Services instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isprimary_go">
 <a href="#isprimary_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Primary</a>
@@ -1326,13 +1233,11 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the storage account should be the primary account or not. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1341,8 +1246,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Storage Account that will be associated with the Media Services instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isprimary_nodejs">
 <a href="#isprimary_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Primary</a>
@@ -1351,13 +1255,11 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the storage account should be the primary account or not. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1366,8 +1268,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Storage Account that will be associated with the Media Services instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_primary_python">
 <a href="#is_primary_python" style="color: inherit; text-decoration: inherit;">is_<wbr>primary</a>
@@ -1376,8 +1277,7 @@ Possible value is  `ManagedIdentity` or `System`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the storage account should be the primary account or not. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -271,8 +271,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -281,8 +280,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -291,8 +289,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -301,8 +298,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepdivergentrefs_csharp">
 <a href="#keepdivergentrefs_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Divergent<wbr>Refs</a>
@@ -311,8 +307,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlyprotectedbranches_csharp">
 <a href="#onlyprotectedbranches_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Protected<wbr>Branches</a>
@@ -321,13 +316,11 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -336,8 +329,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -346,8 +338,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -356,8 +347,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepdivergentrefs_go">
 <a href="#keepdivergentrefs_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Divergent<wbr>Refs</a>
@@ -366,8 +356,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlyprotectedbranches_go">
 <a href="#onlyprotectedbranches_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Protected<wbr>Branches</a>
@@ -376,13 +365,11 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -391,8 +378,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -401,8 +387,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -411,8 +396,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keepdivergentrefs_nodejs">
 <a href="#keepdivergentrefs_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Divergent<wbr>Refs</a>
@@ -421,8 +405,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlyprotectedbranches_nodejs">
 <a href="#onlyprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Protected<wbr>Branches</a>
@@ -431,13 +414,11 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -446,8 +427,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -456,8 +436,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -466,8 +445,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keep_divergent_refs_python">
 <a href="#keep_divergent_refs_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>divergent_<wbr>refs</a>
@@ -476,8 +454,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="only_protected_branches_python">
 <a href="#only_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>protected_<wbr>branches</a>
@@ -486,8 +463,7 @@ The ProjectMirror resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -498,8 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -507,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mirrorid_csharp">
 <a href="#mirrorid_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Id</a>
@@ -516,13 +490,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -530,8 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mirrorid_go">
 <a href="#mirrorid_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Id</a>
@@ -539,13 +510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -553,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mirrorid_nodejs">
 <a href="#mirrorid_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Id</a>
@@ -562,13 +530,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -576,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mirror_id_python">
 <a href="#mirror_id_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>id</a>
@@ -585,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -713,8 +677,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -723,8 +686,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keepdivergentrefs_csharp">
 <a href="#state_keepdivergentrefs_csharp" style="color: inherit; text-decoration: inherit;">Keep<wbr>Divergent<wbr>Refs</a>
@@ -733,8 +695,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirrorid_csharp">
 <a href="#state_mirrorid_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Id</a>
@@ -742,8 +703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlyprotectedbranches_csharp">
 <a href="#state_onlyprotectedbranches_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Protected<wbr>Branches</a>
@@ -752,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -762,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -772,13 +730,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -787,8 +743,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keepdivergentrefs_go">
 <a href="#state_keepdivergentrefs_go" style="color: inherit; text-decoration: inherit;">Keep<wbr>Divergent<wbr>Refs</a>
@@ -797,8 +752,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirrorid_go">
 <a href="#state_mirrorid_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Id</a>
@@ -806,8 +760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlyprotectedbranches_go">
 <a href="#state_onlyprotectedbranches_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Protected<wbr>Branches</a>
@@ -816,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -826,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -836,13 +787,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -851,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keepdivergentrefs_nodejs">
 <a href="#state_keepdivergentrefs_nodejs" style="color: inherit; text-decoration: inherit;">keep<wbr>Divergent<wbr>Refs</a>
@@ -861,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirrorid_nodejs">
 <a href="#state_mirrorid_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Id</a>
@@ -870,8 +817,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlyprotectedbranches_nodejs">
 <a href="#state_onlyprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Protected<wbr>Branches</a>
@@ -880,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -890,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -900,13 +844,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -915,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if the mirror is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keep_divergent_refs_python">
 <a href="#state_keep_divergent_refs_python" style="color: inherit; text-decoration: inherit;">keep_<wbr>divergent_<wbr>refs</a>
@@ -925,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if divergent refs are skipped.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_id_python">
 <a href="#state_mirror_id_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>id</a>
@@ -934,8 +874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_only_protected_branches_python">
 <a href="#state_only_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>protected_<wbr>branches</a>
@@ -944,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if only protected branches are mirrored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -954,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -964,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the remote repository to be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -272,8 +272,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -282,8 +281,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledependentservices_csharp">
 <a href="#disabledependentservices_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Dependent<wbr>Services</a>
@@ -293,8 +291,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableondestroy_csharp">
 <a href="#disableondestroy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Destroy</a>
@@ -303,8 +300,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -313,13 +309,11 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -328,8 +322,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledependentservices_go">
 <a href="#disabledependentservices_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Dependent<wbr>Services</a>
@@ -339,8 +332,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableondestroy_go">
 <a href="#disableondestroy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Destroy</a>
@@ -349,8 +341,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -359,13 +350,11 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -374,8 +363,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledependentservices_nodejs">
 <a href="#disabledependentservices_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Dependent<wbr>Services</a>
@@ -385,8 +373,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableondestroy_nodejs">
 <a href="#disableondestroy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Destroy</a>
@@ -395,8 +382,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -405,13 +391,11 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -420,8 +404,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_dependent_services_python">
 <a href="#disable_dependent_services_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>dependent_<wbr>services</a>
@@ -431,8 +414,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_on_destroy_python">
 <a href="#disable_on_destroy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>destroy</a>
@@ -441,8 +423,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -451,8 +432,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -463,8 +443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -472,13 +451,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -486,13 +463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -500,13 +475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -514,8 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -642,8 +614,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabledependentservices_csharp">
 <a href="#state_disabledependentservices_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Dependent<wbr>Services</a>
@@ -653,8 +624,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableondestroy_csharp">
 <a href="#state_disableondestroy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Destroy</a>
@@ -663,8 +633,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -673,8 +642,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -683,13 +651,11 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabledependentservices_go">
 <a href="#state_disabledependentservices_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Dependent<wbr>Services</a>
@@ -699,8 +665,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableondestroy_go">
 <a href="#state_disableondestroy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Destroy</a>
@@ -709,8 +674,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -719,8 +683,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -729,13 +692,11 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabledependentservices_nodejs">
 <a href="#state_disabledependentservices_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Dependent<wbr>Services</a>
@@ -745,8 +706,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableondestroy_nodejs">
 <a href="#state_disableondestroy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Destroy</a>
@@ -755,8 +715,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -765,8 +724,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -775,13 +733,11 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disable_dependent_services_python">
 <a href="#state_disable_dependent_services_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>dependent_<wbr>services</a>
@@ -791,8 +747,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
     </dt>
     <dd>{{% md %}}If `true`, services that are enabled and which depend on this service should also be disabled when this service is destroyed.
 If `false` or unset, an error will be generated if any enabled services depend on this service when destroying it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_on_destroy_python">
 <a href="#state_disable_on_destroy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>destroy</a>
@@ -801,8 +756,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disable the service when the resource is destroyed.  Defaults to true.  May be useful in the event that a project is long-lived but the infrastructure running in that project changes frequently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -811,8 +765,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. If not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -821,8 +774,7 @@ If `false` or unset, an error will be generated if any enabled services depend o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service to enable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

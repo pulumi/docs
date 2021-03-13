@@ -273,8 +273,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccess_csharp">
 <a href="#groupaccess_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Access</a>
@@ -283,8 +282,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -293,8 +291,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharegroupid_csharp">
 <a href="#sharegroupid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Group<wbr>Id</a>
@@ -303,8 +300,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresat_csharp">
 <a href="#expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -313,13 +309,11 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccess_go">
 <a href="#groupaccess_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Access</a>
@@ -328,8 +322,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -338,8 +331,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharegroupid_go">
 <a href="#sharegroupid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Group<wbr>Id</a>
@@ -348,8 +340,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresat_go">
 <a href="#expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -358,13 +349,11 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccess_nodejs">
 <a href="#groupaccess_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Access</a>
@@ -373,8 +362,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -383,8 +371,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharegroupid_nodejs">
 <a href="#sharegroupid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Group<wbr>Id</a>
@@ -393,8 +380,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiresat_nodejs">
 <a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
@@ -403,13 +389,11 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_access_python">
 <a href="#group_access_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access</a>
@@ -418,8 +402,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -428,8 +411,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="share_group_id_python">
 <a href="#share_group_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>group_<wbr>id</a>
@@ -438,8 +420,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_at_python">
 <a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
@@ -448,8 +429,7 @@ The GroupShareGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -460,8 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -469,13 +448,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -483,13 +460,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -497,13 +472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -511,8 +484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -639,8 +611,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_expiresat_csharp">
 <a href="#state_expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -649,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupaccess_csharp">
 <a href="#state_groupaccess_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Access</a>
@@ -659,8 +629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_csharp">
 <a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -669,8 +638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharegroupid_csharp">
 <a href="#state_sharegroupid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Group<wbr>Id</a>
@@ -679,13 +647,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_expiresat_go">
 <a href="#state_expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -694,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupaccess_go">
 <a href="#state_groupaccess_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Access</a>
@@ -704,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_go">
 <a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -714,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharegroupid_go">
 <a href="#state_sharegroupid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Group<wbr>Id</a>
@@ -724,13 +687,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_expiresat_nodejs">
 <a href="#state_expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
@@ -739,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupaccess_nodejs">
 <a href="#state_groupaccess_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Access</a>
@@ -749,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_nodejs">
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -759,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharegroupid_nodejs">
 <a href="#state_sharegroupid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Group<wbr>Id</a>
@@ -769,13 +727,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_expires_at_python">
 <a href="#state_expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
@@ -784,8 +740,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Share expiration date. Format: `YYYY-MM-DD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_access_python">
 <a href="#state_group_access_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access</a>
@@ -794,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of five levels of access to the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_id_python">
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -804,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the main group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_share_group_id_python">
 <a href="#state_share_group_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>group_<wbr>id</a>
@@ -814,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The id of an additional group which will be shared with the main group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

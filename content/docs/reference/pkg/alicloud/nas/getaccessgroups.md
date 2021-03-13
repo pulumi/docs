@@ -164,8 +164,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessgroupname_csharp">
 <a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
@@ -174,8 +173,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessgrouptype_csharp">
 <a href="#accessgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Type</a>
@@ -184,8 +182,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -194,8 +191,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystemtype_csharp">
 <a href="#filesystemtype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Type</a>
@@ -204,8 +200,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of file system. Valid values: `standard` and `extreme`. Default to `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -214,8 +209,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter AccessGroups by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -223,8 +217,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -233,8 +226,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="useutcdatetime_csharp">
 <a href="#useutcdatetime_csharp" style="color: inherit; text-decoration: inherit;">Useutc<wbr>Date<wbr>Time</a>
@@ -243,13 +235,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the time to return is in UTC. Valid values: true and false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessgroupname_go">
 <a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
@@ -258,8 +248,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessgrouptype_go">
 <a href="#accessgrouptype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Type</a>
@@ -268,8 +257,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -278,8 +266,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystemtype_go">
 <a href="#filesystemtype_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Type</a>
@@ -288,8 +275,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of file system. Valid values: `standard` and `extreme`. Default to `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -298,8 +284,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter AccessGroups by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -307,8 +292,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -317,8 +301,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="useutcdatetime_go">
 <a href="#useutcdatetime_go" style="color: inherit; text-decoration: inherit;">Useutc<wbr>Date<wbr>Time</a>
@@ -327,13 +310,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the time to return is in UTC. Valid values: true and false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessgroupname_nodejs">
 <a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
@@ -342,8 +323,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessgrouptype_nodejs">
 <a href="#accessgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Type</a>
@@ -352,8 +332,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -362,8 +341,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesystemtype_nodejs">
 <a href="#filesystemtype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Type</a>
@@ -372,8 +350,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of file system. Valid values: `standard` and `extreme`. Default to `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
@@ -382,8 +359,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter AccessGroups by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
@@ -391,8 +367,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -401,8 +376,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="useutcdatetime_nodejs">
 <a href="#useutcdatetime_nodejs" style="color: inherit; text-decoration: inherit;">useutc<wbr>Date<wbr>Time</a>
@@ -411,13 +385,11 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the time to return is in UTC. Valid values: true and false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_group_name_python">
 <a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
@@ -426,8 +398,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_group_type_python">
 <a href="#access_group_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>type</a>
@@ -436,8 +407,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -446,8 +416,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_system_type_python">
 <a href="#file_system_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>type</a>
@@ -456,8 +425,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of file system. Valid values: `standard` and `extreme`. Default to `standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
@@ -466,8 +434,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter AccessGroups by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
@@ -475,8 +442,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -485,8 +451,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="useutc_date_time_python">
 <a href="#useutc_date_time_python" style="color: inherit; text-decoration: inherit;">useutc_<wbr>date_<wbr>time</a>
@@ -495,8 +460,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the time to return is in UTC. Valid values: true and false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -509,8 +473,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -519,8 +482,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccessgroupsgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Nas.<wbr>Outputs.<wbr>Get<wbr>Access<wbr>Groups<wbr>Group&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroups. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -529,8 +491,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -539,8 +500,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the item value as `<access_group_id>:<file_system_type>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -549,8 +509,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup names.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessgroupname_csharp">
 <a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
@@ -559,8 +518,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The name of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessgrouptype_csharp">
 <a href="#accessgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Type</a>
@@ -569,8 +527,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The type of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -579,8 +536,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filesystemtype_csharp">
 <a href="#filesystemtype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Type</a>
@@ -588,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -597,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -606,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -616,8 +569,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Deprecated in v1.95.0+) AccessGroupType of the AccessGroup. The Field replace by `access_group_type` after version 1.95.0.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="useutcdatetime_csharp">
 <a href="#useutcdatetime_csharp" style="color: inherit; text-decoration: inherit;">Useutc<wbr>Date<wbr>Time</a>
@@ -625,13 +577,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -640,8 +590,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccessgroupsgroup">[]Get<wbr>Access<wbr>Groups<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroups. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -650,8 +599,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -660,8 +608,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the item value as `<access_group_id>:<file_system_type>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -670,8 +617,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup names.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessgroupname_go">
 <a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
@@ -680,8 +626,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The name of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessgrouptype_go">
 <a href="#accessgrouptype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Type</a>
@@ -690,8 +635,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The type of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -700,8 +644,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filesystemtype_go">
 <a href="#filesystemtype_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Type</a>
@@ -709,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -718,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -727,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -737,8 +677,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Deprecated in v1.95.0+) AccessGroupType of the AccessGroup. The Field replace by `access_group_type` after version 1.95.0.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="useutcdatetime_go">
 <a href="#useutcdatetime_go" style="color: inherit; text-decoration: inherit;">Useutc<wbr>Date<wbr>Time</a>
@@ -746,13 +685,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -761,8 +698,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccessgroupsgroup">Get<wbr>Access<wbr>Groups<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroups. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -771,8 +707,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -781,8 +716,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the item value as `<access_group_id>:<file_system_type>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -791,8 +725,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup names.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessgroupname_nodejs">
 <a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
@@ -801,8 +734,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The name of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accessgrouptype_nodejs">
 <a href="#accessgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Type</a>
@@ -811,8 +743,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The type of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -821,8 +752,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filesystemtype_nodejs">
 <a href="#filesystemtype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Type</a>
@@ -830,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
@@ -839,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
@@ -848,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -858,8 +785,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Deprecated in v1.95.0+) AccessGroupType of the AccessGroup. The Field replace by `access_group_type` after version 1.95.0.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="useutcdatetime_nodejs">
 <a href="#useutcdatetime_nodejs" style="color: inherit; text-decoration: inherit;">useutc<wbr>Date<wbr>Time</a>
@@ -867,13 +793,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -882,8 +806,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getaccessgroupsgroup">Sequence[Get<wbr>Access<wbr>Groups<wbr>Group]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessGroups. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -892,8 +815,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -902,8 +824,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup IDs, the value is set to `names`. After version 1.95.0 the item value as `<access_group_id>:<file_system_type>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -912,8 +833,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AccessGroup names.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_group_name_python">
 <a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
@@ -922,8 +842,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The name of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_group_type_python">
 <a href="#access_group_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>type</a>
@@ -932,8 +851,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Available in 1.95.0+) The type of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -942,8 +860,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="file_system_type_python">
 <a href="#file_system_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>type</a>
@@ -951,8 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
@@ -960,8 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
@@ -969,8 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -979,8 +893,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Deprecated in v1.95.0+) AccessGroupType of the AccessGroup. The Field replace by `access_group_type` after version 1.95.0.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;type&#39; has been deprecated from provider version 1.95.0. New field &#39;access_group_type&#39; replaces it.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="useutc_date_time_python">
 <a href="#useutc_date_time_python" style="color: inherit; text-decoration: inherit;">useutc_<wbr>date_<wbr>time</a>
@@ -988,8 +901,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1003,8 +915,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessgroupname_csharp">
 <a href="#accessgroupname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
@@ -1013,8 +924,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accessgrouptype_csharp">
 <a href="#accessgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Type</a>
@@ -1023,8 +933,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1033,8 +942,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1043,8 +951,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This ID of this AccessGroup. It is formatted to ``<access_group_id>:<file_system_type>``. Before version 1.95.0, the value is `access_group_name`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mounttargetcount_csharp">
 <a href="#mounttargetcount_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Count</a>
@@ -1053,8 +960,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MountTargetCount block of the AccessGroup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulecount_csharp">
 <a href="#rulecount_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Count</a>
@@ -1063,8 +969,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}RuleCount of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1073,13 +978,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessgroupname_go">
 <a href="#accessgroupname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Name</a>
@@ -1088,8 +991,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accessgrouptype_go">
 <a href="#accessgrouptype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Type</a>
@@ -1098,8 +1000,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1108,8 +1009,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1118,8 +1018,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This ID of this AccessGroup. It is formatted to ``<access_group_id>:<file_system_type>``. Before version 1.95.0, the value is `access_group_name`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mounttargetcount_go">
 <a href="#mounttargetcount_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Target<wbr>Count</a>
@@ -1128,8 +1027,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MountTargetCount block of the AccessGroup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulecount_go">
 <a href="#rulecount_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Count</a>
@@ -1138,8 +1036,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}RuleCount of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1148,13 +1045,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessgroupname_nodejs">
 <a href="#accessgroupname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Name</a>
@@ -1163,8 +1058,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accessgrouptype_nodejs">
 <a href="#accessgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Type</a>
@@ -1173,8 +1067,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1183,8 +1076,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1193,8 +1085,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This ID of this AccessGroup. It is formatted to ``<access_group_id>:<file_system_type>``. Before version 1.95.0, the value is `access_group_name`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mounttargetcount_nodejs">
 <a href="#mounttargetcount_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Target<wbr>Count</a>
@@ -1203,8 +1094,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MountTargetCount block of the AccessGroup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rulecount_nodejs">
 <a href="#rulecount_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Count</a>
@@ -1213,8 +1103,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}RuleCount of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1223,13 +1112,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_group_name_python">
 <a href="#access_group_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>name</a>
@@ -1238,8 +1125,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of access group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="access_group_type_python">
 <a href="#access_group_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>type</a>
@@ -1248,8 +1134,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific AccessGroupType.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1258,8 +1143,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific Description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1268,8 +1152,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This ID of this AccessGroup. It is formatted to ``<access_group_id>:<file_system_type>``. Before version 1.95.0, the value is `access_group_name`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mount_target_count_python">
 <a href="#mount_target_count_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>target_<wbr>count</a>
@@ -1278,8 +1161,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MountTargetCount block of the AccessGroup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rule_count_python">
 <a href="#rule_count_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>count</a>
@@ -1288,8 +1170,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}RuleCount of the AccessGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1298,8 +1179,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field `type` has been deprecated from version 1.95.0. Use `access_group_type` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

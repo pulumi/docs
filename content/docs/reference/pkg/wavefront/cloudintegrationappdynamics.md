@@ -14,11 +14,17 @@ Provides a Wavefront Cloud Integration for App Dynamics. This allows app dynamic
 updated, and deleted.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Wavefront = Pulumi.Wavefront;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_wavefront as wavefront
@@ -77,9 +89,12 @@ app_dynamics = wavefront.CloudIntegrationAppDynamics("appDynamics",
     user_name="example")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -92,9 +107,16 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CloudIntegrationAppDynamics Resource {#create}
@@ -119,9 +141,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -129,9 +149,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -139,9 +157,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -149,10 +165,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -178,9 +191,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -188,9 +199,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -198,9 +207,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -208,9 +215,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -218,18 +223,13 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +237,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +245,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +253,7 @@ const appDynamics = new wavefront.CloudIntegrationAppDynamics("app_dynamics", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -275,9 +268,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllername_csharp">
 <a href="#controllername_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Name</a>
@@ -286,8 +277,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptedpassword_csharp">
 <a href="#encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -296,8 +286,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -306,8 +295,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -316,8 +304,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaltags_csharp">
 <a href="#additionaltags_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Tags</a>
@@ -326,8 +313,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appfilterregexes_csharp">
 <a href="#appfilterregexes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Filter<wbr>Regexes</a>
@@ -337,8 +323,7 @@ The CloudIntegrationAppDynamics resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableappinframetrics_csharp">
 <a href="#enableappinframetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>App<wbr>Infra<wbr>Metrics</a>
@@ -347,8 +332,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendmetrics_csharp">
 <a href="#enablebackendmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Metrics</a>
@@ -357,8 +341,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebusinesstrxmetrics_csharp">
 <a href="#enablebusinesstrxmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Business<wbr>Trx<wbr>Metrics</a>
@@ -367,8 +350,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableerrormetrics_csharp">
 <a href="#enableerrormetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Error<wbr>Metrics</a>
@@ -377,8 +359,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableindividualnodemetrics_csharp">
 <a href="#enableindividualnodemetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Individual<wbr>Node<wbr>Metrics</a>
@@ -387,8 +368,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableoverallperfmetrics_csharp">
 <a href="#enableoverallperfmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Overall<wbr>Perf<wbr>Metrics</a>
@@ -397,8 +377,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablerollup_csharp">
 <a href="#enablerollup_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rollup</a>
@@ -408,8 +387,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableserviceendpointmetrics_csharp">
 <a href="#enableserviceendpointmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Service<wbr>Endpoint<wbr>Metrics</a>
@@ -418,8 +396,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcesave_csharp">
 <a href="#forcesave_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Save</a>
@@ -428,8 +405,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -438,8 +414,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicerefreshrateinminutes_csharp">
 <a href="#servicerefreshrateinminutes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Refresh<wbr>Rate<wbr>In<wbr>Minutes</a>
@@ -448,14 +423,11 @@ by default it is `true`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllername_go">
 <a href="#controllername_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Name</a>
@@ -464,8 +436,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptedpassword_go">
 <a href="#encryptedpassword_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -474,8 +445,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -484,8 +454,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -494,8 +463,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaltags_go">
 <a href="#additionaltags_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Tags</a>
@@ -504,8 +472,7 @@ by default it is `true`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appfilterregexes_go">
 <a href="#appfilterregexes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Filter<wbr>Regexes</a>
@@ -515,8 +482,7 @@ by default it is `true`
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableappinframetrics_go">
 <a href="#enableappinframetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>App<wbr>Infra<wbr>Metrics</a>
@@ -525,8 +491,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendmetrics_go">
 <a href="#enablebackendmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Metrics</a>
@@ -535,8 +500,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebusinesstrxmetrics_go">
 <a href="#enablebusinesstrxmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Business<wbr>Trx<wbr>Metrics</a>
@@ -545,8 +509,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableerrormetrics_go">
 <a href="#enableerrormetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Error<wbr>Metrics</a>
@@ -555,8 +518,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableindividualnodemetrics_go">
 <a href="#enableindividualnodemetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Individual<wbr>Node<wbr>Metrics</a>
@@ -565,8 +527,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableoverallperfmetrics_go">
 <a href="#enableoverallperfmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Overall<wbr>Perf<wbr>Metrics</a>
@@ -575,8 +536,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablerollup_go">
 <a href="#enablerollup_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rollup</a>
@@ -586,8 +546,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableserviceendpointmetrics_go">
 <a href="#enableserviceendpointmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Service<wbr>Endpoint<wbr>Metrics</a>
@@ -596,8 +555,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcesave_go">
 <a href="#forcesave_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Save</a>
@@ -606,8 +564,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -616,8 +573,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicerefreshrateinminutes_go">
 <a href="#servicerefreshrateinminutes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Refresh<wbr>Rate<wbr>In<wbr>Minutes</a>
@@ -626,14 +582,11 @@ by default it is `true`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controllername_nodejs">
 <a href="#controllername_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Name</a>
@@ -642,8 +595,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptedpassword_nodejs">
 <a href="#encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
@@ -652,8 +604,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -662,8 +613,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -672,8 +622,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionaltags_nodejs">
 <a href="#additionaltags_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Tags</a>
@@ -682,8 +631,7 @@ by default it is `true`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appfilterregexes_nodejs">
 <a href="#appfilterregexes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Filter<wbr>Regexes</a>
@@ -693,8 +641,7 @@ by default it is `true`
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableappinframetrics_nodejs">
 <a href="#enableappinframetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>App<wbr>Infra<wbr>Metrics</a>
@@ -703,8 +650,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendmetrics_nodejs">
 <a href="#enablebackendmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Metrics</a>
@@ -713,8 +659,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebusinesstrxmetrics_nodejs">
 <a href="#enablebusinesstrxmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Business<wbr>Trx<wbr>Metrics</a>
@@ -723,8 +668,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableerrormetrics_nodejs">
 <a href="#enableerrormetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Error<wbr>Metrics</a>
@@ -733,8 +677,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableindividualnodemetrics_nodejs">
 <a href="#enableindividualnodemetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Individual<wbr>Node<wbr>Metrics</a>
@@ -743,8 +686,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableoverallperfmetrics_nodejs">
 <a href="#enableoverallperfmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Overall<wbr>Perf<wbr>Metrics</a>
@@ -753,8 +695,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablerollup_nodejs">
 <a href="#enablerollup_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rollup</a>
@@ -764,8 +705,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableserviceendpointmetrics_nodejs">
 <a href="#enableserviceendpointmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Service<wbr>Endpoint<wbr>Metrics</a>
@@ -774,8 +714,7 @@ by default it is `true`
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcesave_nodejs">
 <a href="#forcesave_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Save</a>
@@ -784,8 +723,7 @@ by default it is `true`
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -794,8 +732,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicerefreshrateinminutes_nodejs">
 <a href="#servicerefreshrateinminutes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Refresh<wbr>Rate<wbr>In<wbr>Minutes</a>
@@ -804,14 +741,11 @@ by default it is `true`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="controller_name_python">
 <a href="#controller_name_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>name</a>
@@ -820,8 +754,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_password_python">
 <a href="#encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
@@ -830,8 +763,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -840,8 +772,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -850,8 +781,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_tags_python">
 <a href="#additional_tags_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>tags</a>
@@ -860,8 +790,7 @@ by default it is `true`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_filter_regexes_python">
 <a href="#app_filter_regexes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>filter_<wbr>regexes</a>
@@ -871,8 +800,7 @@ by default it is `true`
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_app_infra_metrics_python">
 <a href="#enable_app_infra_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>app_<wbr>infra_<wbr>metrics</a>
@@ -881,8 +809,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_backend_metrics_python">
 <a href="#enable_backend_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>metrics</a>
@@ -891,8 +818,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_business_trx_metrics_python">
 <a href="#enable_business_trx_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>business_<wbr>trx_<wbr>metrics</a>
@@ -901,8 +827,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_error_metrics_python">
 <a href="#enable_error_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>error_<wbr>metrics</a>
@@ -911,8 +836,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_individual_node_metrics_python">
 <a href="#enable_individual_node_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>individual_<wbr>node_<wbr>metrics</a>
@@ -921,8 +845,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_overall_perf_metrics_python">
 <a href="#enable_overall_perf_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>overall_<wbr>perf_<wbr>metrics</a>
@@ -931,8 +854,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_rollup_python">
 <a href="#enable_rollup_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rollup</a>
@@ -942,8 +864,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_service_endpoint_metrics_python">
 <a href="#enable_service_endpoint_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>service_<wbr>endpoint_<wbr>metrics</a>
@@ -952,8 +873,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_save_python">
 <a href="#force_save_python" style="color: inherit; text-decoration: inherit;">force_<wbr>save</a>
@@ -962,8 +882,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -972,8 +891,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_refresh_rate_in_minutes_python">
 <a href="#service_refresh_rate_in_minutes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>refresh_<wbr>rate_<wbr>in_<wbr>minutes</a>
@@ -982,8 +900,7 @@ by default it is `true`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -994,9 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1004,14 +919,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1019,14 +931,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1034,14 +943,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1049,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1177,9 +1082,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionaltags_csharp">
 <a href="#state_additionaltags_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Tags</a>
@@ -1188,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appfilterregexes_csharp">
 <a href="#state_appfilterregexes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Filter<wbr>Regexes</a>
@@ -1199,8 +1101,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controllername_csharp">
 <a href="#state_controllername_csharp" style="color: inherit; text-decoration: inherit;">Controller<wbr>Name</a>
@@ -1209,8 +1110,7 @@ in order to be ingested
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableappinframetrics_csharp">
 <a href="#state_enableappinframetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>App<wbr>Infra<wbr>Metrics</a>
@@ -1219,8 +1119,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackendmetrics_csharp">
 <a href="#state_enablebackendmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Metrics</a>
@@ -1229,8 +1128,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebusinesstrxmetrics_csharp">
 <a href="#state_enablebusinesstrxmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Business<wbr>Trx<wbr>Metrics</a>
@@ -1239,8 +1137,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableerrormetrics_csharp">
 <a href="#state_enableerrormetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Error<wbr>Metrics</a>
@@ -1249,8 +1146,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableindividualnodemetrics_csharp">
 <a href="#state_enableindividualnodemetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Individual<wbr>Node<wbr>Metrics</a>
@@ -1259,8 +1155,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableoverallperfmetrics_csharp">
 <a href="#state_enableoverallperfmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Overall<wbr>Perf<wbr>Metrics</a>
@@ -1269,8 +1164,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablerollup_csharp">
 <a href="#state_enablerollup_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rollup</a>
@@ -1280,8 +1174,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableserviceendpointmetrics_csharp">
 <a href="#state_enableserviceendpointmetrics_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Service<wbr>Endpoint<wbr>Metrics</a>
@@ -1290,8 +1183,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedpassword_csharp">
 <a href="#state_encryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -1300,8 +1192,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcesave_csharp">
 <a href="#state_forcesave_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Save</a>
@@ -1310,8 +1201,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1320,8 +1210,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1330,8 +1219,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicerefreshrateinminutes_csharp">
 <a href="#state_servicerefreshrateinminutes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Refresh<wbr>Rate<wbr>In<wbr>Minutes</a>
@@ -1340,8 +1228,7 @@ by default it is `true`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1350,14 +1237,11 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionaltags_go">
 <a href="#state_additionaltags_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Tags</a>
@@ -1366,8 +1250,7 @@ by default it is `true`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appfilterregexes_go">
 <a href="#state_appfilterregexes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Filter<wbr>Regexes</a>
@@ -1377,8 +1260,7 @@ by default it is `true`
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controllername_go">
 <a href="#state_controllername_go" style="color: inherit; text-decoration: inherit;">Controller<wbr>Name</a>
@@ -1387,8 +1269,7 @@ in order to be ingested
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableappinframetrics_go">
 <a href="#state_enableappinframetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>App<wbr>Infra<wbr>Metrics</a>
@@ -1397,8 +1278,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackendmetrics_go">
 <a href="#state_enablebackendmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Metrics</a>
@@ -1407,8 +1287,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebusinesstrxmetrics_go">
 <a href="#state_enablebusinesstrxmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Business<wbr>Trx<wbr>Metrics</a>
@@ -1417,8 +1296,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableerrormetrics_go">
 <a href="#state_enableerrormetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Error<wbr>Metrics</a>
@@ -1427,8 +1305,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableindividualnodemetrics_go">
 <a href="#state_enableindividualnodemetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Individual<wbr>Node<wbr>Metrics</a>
@@ -1437,8 +1314,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableoverallperfmetrics_go">
 <a href="#state_enableoverallperfmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Overall<wbr>Perf<wbr>Metrics</a>
@@ -1447,8 +1323,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablerollup_go">
 <a href="#state_enablerollup_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Rollup</a>
@@ -1458,8 +1333,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableserviceendpointmetrics_go">
 <a href="#state_enableserviceendpointmetrics_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Service<wbr>Endpoint<wbr>Metrics</a>
@@ -1468,8 +1342,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedpassword_go">
 <a href="#state_encryptedpassword_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Password</a>
@@ -1478,8 +1351,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcesave_go">
 <a href="#state_forcesave_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Save</a>
@@ -1488,8 +1360,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1498,8 +1369,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1508,8 +1378,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicerefreshrateinminutes_go">
 <a href="#state_servicerefreshrateinminutes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Refresh<wbr>Rate<wbr>In<wbr>Minutes</a>
@@ -1518,8 +1387,7 @@ by default it is `true`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1528,14 +1396,11 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionaltags_nodejs">
 <a href="#state_additionaltags_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Tags</a>
@@ -1544,8 +1409,7 @@ by default it is `true`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appfilterregexes_nodejs">
 <a href="#state_appfilterregexes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Filter<wbr>Regexes</a>
@@ -1555,8 +1419,7 @@ by default it is `true`
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controllername_nodejs">
 <a href="#state_controllername_nodejs" style="color: inherit; text-decoration: inherit;">controller<wbr>Name</a>
@@ -1565,8 +1428,7 @@ in order to be ingested
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableappinframetrics_nodejs">
 <a href="#state_enableappinframetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>App<wbr>Infra<wbr>Metrics</a>
@@ -1575,8 +1437,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebackendmetrics_nodejs">
 <a href="#state_enablebackendmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Metrics</a>
@@ -1585,8 +1446,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebusinesstrxmetrics_nodejs">
 <a href="#state_enablebusinesstrxmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Business<wbr>Trx<wbr>Metrics</a>
@@ -1595,8 +1455,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableerrormetrics_nodejs">
 <a href="#state_enableerrormetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Error<wbr>Metrics</a>
@@ -1605,8 +1464,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableindividualnodemetrics_nodejs">
 <a href="#state_enableindividualnodemetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Individual<wbr>Node<wbr>Metrics</a>
@@ -1615,8 +1473,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableoverallperfmetrics_nodejs">
 <a href="#state_enableoverallperfmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Overall<wbr>Perf<wbr>Metrics</a>
@@ -1625,8 +1482,7 @@ in order to be ingested
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablerollup_nodejs">
 <a href="#state_enablerollup_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Rollup</a>
@@ -1636,8 +1492,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableserviceendpointmetrics_nodejs">
 <a href="#state_enableserviceendpointmetrics_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Service<wbr>Endpoint<wbr>Metrics</a>
@@ -1646,8 +1501,7 @@ by default it is `true`
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedpassword_nodejs">
 <a href="#state_encryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Password</a>
@@ -1656,8 +1510,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcesave_nodejs">
 <a href="#state_forcesave_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Save</a>
@@ -1666,8 +1519,7 @@ by default it is `true`
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1676,8 +1528,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1686,8 +1537,7 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicerefreshrateinminutes_nodejs">
 <a href="#state_servicerefreshrateinminutes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Refresh<wbr>Rate<wbr>In<wbr>Minutes</a>
@@ -1696,8 +1546,7 @@ by default it is `true`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -1706,14 +1555,11 @@ by default it is `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additional_tags_python">
 <a href="#state_additional_tags_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>tags</a>
@@ -1722,8 +1568,7 @@ by default it is `true`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of point tag key-values to add to every point ingested using this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_filter_regexes_python">
 <a href="#state_app_filter_regexes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>filter_<wbr>regexes</a>
@@ -1733,8 +1578,7 @@ by default it is `true`
     </dt>
     <dd>{{% md %}}List of regular expressions that a application name must match (case-insensitively) 
 in order to be ingested
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_controller_name_python">
 <a href="#state_controller_name_python" style="color: inherit; text-decoration: inherit;">controller_<wbr>name</a>
@@ -1743,8 +1587,7 @@ in order to be ingested
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SaaS controller
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_app_infra_metrics_python">
 <a href="#state_enable_app_infra_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>app_<wbr>infra_<wbr>metrics</a>
@@ -1753,8 +1596,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Application Infrastructure metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_backend_metrics_python">
 <a href="#state_enable_backend_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>metrics</a>
@@ -1763,8 +1605,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Backend metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_business_trx_metrics_python">
 <a href="#state_enable_business_trx_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>business_<wbr>trx_<wbr>metrics</a>
@@ -1773,8 +1614,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Business Transaction metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_error_metrics_python">
 <a href="#state_enable_error_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>error_<wbr>metrics</a>
@@ -1783,8 +1623,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Error metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_individual_node_metrics_python">
 <a href="#state_enable_individual_node_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>individual_<wbr>node_<wbr>metrics</a>
@@ -1793,8 +1632,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Individual Node metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_overall_perf_metrics_python">
 <a href="#state_enable_overall_perf_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>overall_<wbr>perf_<wbr>metrics</a>
@@ -1803,8 +1641,7 @@ in order to be ingested
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Overall Performance metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_rollup_python">
 <a href="#state_enable_rollup_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>rollup</a>
@@ -1814,8 +1651,7 @@ in order to be ingested
     </dt>
     <dd>{{% md %}}Set this to `false` to get separate results for all values within the time range, 
 by default it is `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_service_endpoint_metrics_python">
 <a href="#state_enable_service_endpoint_metrics_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>service_<wbr>endpoint_<wbr>metrics</a>
@@ -1824,8 +1660,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to control Service End point metric injection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_password_python">
 <a href="#state_encrypted_password_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>password</a>
@@ -1834,8 +1669,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for AppDynamics user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_save_python">
 <a href="#state_force_save_python" style="color: inherit; text-decoration: inherit;">force_<wbr>save</a>
@@ -1844,8 +1678,7 @@ by default it is `true`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Forces this resource to save, even if errors are present
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1854,8 +1687,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable name of this integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1864,8 +1696,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value denoting which cloud service this service integrates with
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_refresh_rate_in_minutes_python">
 <a href="#state_service_refresh_rate_in_minutes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>refresh_<wbr>rate_<wbr>in_<wbr>minutes</a>
@@ -1874,8 +1705,7 @@ by default it is `true`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in minutes, to refresh the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_python">
 <a href="#state_user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -1884,8 +1714,7 @@ by default it is `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username is a combination of userName and the account name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

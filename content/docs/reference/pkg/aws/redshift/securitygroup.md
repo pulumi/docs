@@ -272,8 +272,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ingress_csharp">
 <a href="#ingress_csharp" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -282,8 +281,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -292,8 +290,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -302,13 +299,11 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ingress_go">
 <a href="#ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -317,8 +312,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -327,8 +321,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -337,13 +330,11 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ingress_nodejs">
 <a href="#ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -352,8 +343,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -362,8 +352,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -372,13 +361,11 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ingress_python">
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -387,8 +374,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#securitygroupingress">Sequence[Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -397,8 +383,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -407,8 +392,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -419,8 +403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -428,13 +411,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,13 +423,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -456,13 +435,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -470,8 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -598,8 +574,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -608,8 +583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_csharp">
 <a href="#state_ingress_csharp" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -618,8 +592,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitygroupingress">List&lt;Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -628,13 +601,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -643,8 +614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_go">
 <a href="#state_ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -653,8 +623,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitygroupingress">[]Security<wbr>Group<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -663,13 +632,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -678,8 +645,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_nodejs">
 <a href="#state_ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -688,8 +654,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitygroupingress">Security<wbr>Group<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -698,13 +663,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -713,8 +676,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Redshift security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_python">
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -723,8 +685,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitygroupingress">Sequence[Security<wbr>Group<wbr>Ingress<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of ingress rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -733,8 +694,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Redshift security group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -749,8 +709,7 @@ The following state arguments are supported:
 <h4 id="securitygroupingress">Security<wbr>Group<wbr>Ingress</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -759,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block to accept
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupname_csharp">
 <a href="#securitygroupname_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Name</a>
@@ -769,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group to authorize
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupownerid_csharp">
 <a href="#securitygroupownerid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Owner<wbr>Id</a>
@@ -780,13 +737,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The owner Id of the security group provided
 by `security_group_name`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -795,8 +750,7 @@ by `security_group_name`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block to accept
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupname_go">
 <a href="#securitygroupname_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Name</a>
@@ -805,8 +759,7 @@ by `security_group_name`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group to authorize
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupownerid_go">
 <a href="#securitygroupownerid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Owner<wbr>Id</a>
@@ -816,13 +769,11 @@ by `security_group_name`.
     </dt>
     <dd>{{% md %}}The owner Id of the security group provided
 by `security_group_name`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -831,8 +782,7 @@ by `security_group_name`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block to accept
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupname_nodejs">
 <a href="#securitygroupname_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Name</a>
@@ -841,8 +791,7 @@ by `security_group_name`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group to authorize
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupownerid_nodejs">
 <a href="#securitygroupownerid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Owner<wbr>Id</a>
@@ -852,13 +801,11 @@ by `security_group_name`.
     </dt>
     <dd>{{% md %}}The owner Id of the security group provided
 by `security_group_name`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -867,8 +814,7 @@ by `security_group_name`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block to accept
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_name_python">
 <a href="#security_group_name_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>name</a>
@@ -877,8 +823,7 @@ by `security_group_name`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the security group to authorize
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_owner_id_python">
 <a href="#security_group_owner_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>owner_<wbr>id</a>
@@ -888,8 +833,7 @@ by `security_group_name`.
     </dt>
     <dd>{{% md %}}The owner Id of the security group provided
 by `security_group_name`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

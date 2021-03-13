@@ -434,8 +434,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -444,8 +443,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -454,8 +452,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_csharp">
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -464,8 +461,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -474,8 +470,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodes_csharp">
 <a href="#maxnodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Nodes</a>
@@ -484,8 +479,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodes_csharp">
 <a href="#minnodes_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Nodes</a>
@@ -494,8 +488,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -504,8 +497,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -514,8 +506,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -524,13 +515,11 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -539,8 +528,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -549,8 +537,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_go">
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -559,8 +546,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -569,8 +555,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodes_go">
 <a href="#maxnodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Nodes</a>
@@ -579,8 +564,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodes_go">
 <a href="#minnodes_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Nodes</a>
@@ -589,8 +573,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -599,8 +582,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -609,8 +591,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -619,13 +600,11 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -634,8 +613,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -644,8 +622,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_nodejs">
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
@@ -654,8 +631,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -664,8 +640,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnodes_nodejs">
 <a href="#maxnodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
@@ -674,8 +649,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodes_nodejs">
 <a href="#minnodes_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
@@ -684,8 +658,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -694,8 +667,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -704,8 +676,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -714,13 +685,11 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -729,8 +698,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -739,8 +707,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scale_python">
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
@@ -749,8 +716,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -759,8 +725,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_nodes_python">
 <a href="#max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
@@ -769,8 +734,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodes_python">
 <a href="#min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
@@ -779,8 +743,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -789,8 +752,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -799,8 +761,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -809,8 +770,7 @@ The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -821,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actualnodecount_csharp">
 <a href="#actualnodecount_csharp" style="color: inherit; text-decoration: inherit;">Actual<wbr>Node<wbr>Count</a>
@@ -831,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -840,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -850,13 +807,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesnodepoolnode">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Kubernetes<wbr>Node<wbr>Pool<wbr>Node&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actualnodecount_go">
 <a href="#actualnodecount_go" style="color: inherit; text-decoration: inherit;">Actual<wbr>Node<wbr>Count</a>
@@ -865,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -874,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -884,13 +837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesnodepoolnode">[]Kubernetes<wbr>Node<wbr>Pool<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actualnodecount_nodejs">
 <a href="#actualnodecount_nodejs" style="color: inherit; text-decoration: inherit;">actual<wbr>Node<wbr>Count</a>
@@ -899,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -908,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -918,13 +867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actual_node_count_python">
 <a href="#actual_node_count_python" style="color: inherit; text-decoration: inherit;">actual_<wbr>node_<wbr>count</a>
@@ -933,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -942,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -952,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubernetesnodepoolnode">Sequence[Kubernetes<wbr>Node<wbr>Pool<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1080,8 +1024,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actualnodecount_csharp">
 <a href="#state_actualnodecount_csharp" style="color: inherit; text-decoration: inherit;">Actual<wbr>Node<wbr>Count</a>
@@ -1090,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_csharp">
 <a href="#state_autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -1100,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1110,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1120,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxnodes_csharp">
 <a href="#state_maxnodes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Nodes</a>
@@ -1130,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minnodes_csharp">
 <a href="#state_minnodes_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Nodes</a>
@@ -1140,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1150,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_csharp">
 <a href="#state_nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1160,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_csharp">
 <a href="#state_nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1170,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesnodepoolnode">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Kubernetes<wbr>Node<wbr>Pool<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1180,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1190,13 +1123,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actualnodecount_go">
 <a href="#state_actualnodecount_go" style="color: inherit; text-decoration: inherit;">Actual<wbr>Node<wbr>Count</a>
@@ -1205,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_go">
 <a href="#state_autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -1215,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1225,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1235,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxnodes_go">
 <a href="#state_maxnodes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Nodes</a>
@@ -1245,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minnodes_go">
 <a href="#state_minnodes_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Nodes</a>
@@ -1255,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1265,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_go">
 <a href="#state_nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1275,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_go">
 <a href="#state_nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1285,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesnodepoolnode">[]Kubernetes<wbr>Node<wbr>Pool<wbr>Node</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1295,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1305,13 +1226,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actualnodecount_nodejs">
 <a href="#state_actualnodecount_nodejs" style="color: inherit; text-decoration: inherit;">actual<wbr>Node<wbr>Count</a>
@@ -1320,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_nodejs">
 <a href="#state_autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
@@ -1330,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1340,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1350,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxnodes_nodejs">
 <a href="#state_maxnodes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Nodes</a>
@@ -1360,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minnodes_nodejs">
 <a href="#state_minnodes_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Nodes</a>
@@ -1370,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1380,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_nodejs">
 <a href="#state_nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -1390,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_nodejs">
 <a href="#state_nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1400,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1410,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">Droplet<wbr>Slug</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1420,13 +1329,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actual_node_count_python">
 <a href="#state_actual_node_count_python" style="color: inherit; text-decoration: inherit;">actual_<wbr>node_<wbr>count</a>
@@ -1435,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A computed field representing the actual number of nodes in the node pool, which is especially useful when auto-scaling is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scale_python">
 <a href="#state_auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
@@ -1445,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable auto-scaling of the number of nodes in the node pool within the given min/max range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1455,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Kubernetes cluster to which the node pool is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1465,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs to apply to nodes in the pool. The labels are exposed in the Kubernetes API as labels in the metadata of the corresponding [Node resources](https://kubernetes.io/docs/concepts/architecture/nodes/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_nodes_python">
 <a href="#state_max_nodes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>nodes</a>
@@ -1475,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the maximum number of nodes that the node pool can be scaled up to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_nodes_python">
 <a href="#state_min_nodes_python" style="color: inherit; text-decoration: inherit;">min_<wbr>nodes</a>
@@ -1485,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If auto-scaling is enabled, this represents the minimum number of nodes that the node pool can be scaled down to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1495,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_count_python">
 <a href="#state_node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1505,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Droplet instances in the node pool. If auto-scaling is enabled, this should only be set if the desired result is to explicitly reset the number of nodes to this value. If auto-scaling is enabled, and the node count is outside of the given min/max range, it will use the min nodes value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_python">
 <a href="#state_nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1515,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#kubernetesnodepoolnode">Sequence[Kubernetes<wbr>Node<wbr>Pool<wbr>Node<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes in the pool. Each node exports the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1525,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the type of Droplet to be used as workers in the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1535,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1551,8 +1447,7 @@ The following state arguments are supported:
 <h4 id="kubernetesnodepoolnode">Kubernetes<wbr>Node<wbr>Pool<wbr>Node</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1561,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropletid_csharp">
 <a href="#dropletid_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Id</a>
@@ -1571,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the node's droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1581,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1591,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1601,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string indicating the current status of the individual node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1611,13 +1501,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1626,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropletid_go">
 <a href="#dropletid_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Id</a>
@@ -1636,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the node's droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1646,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1656,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1666,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string indicating the current status of the individual node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1676,13 +1559,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1691,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropletid_nodejs">
 <a href="#dropletid_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Id</a>
@@ -1701,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the node's droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1711,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1721,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1731,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string indicating the current status of the individual node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1741,13 +1617,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1756,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="droplet_id_python">
 <a href="#droplet_id_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>id</a>
@@ -1766,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the node's droplet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1776,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique ID that can be used to identify and reference the node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1786,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the node pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1796,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string indicating the current status of the individual node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1806,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time when the node was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

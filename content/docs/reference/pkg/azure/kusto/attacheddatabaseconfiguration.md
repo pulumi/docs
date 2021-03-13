@@ -243,8 +243,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -253,8 +252,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourceid_csharp">
 <a href="#clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -263,8 +261,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -273,8 +270,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -283,8 +279,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprincipalmodificationkind_csharp">
 <a href="#defaultprincipalmodificationkind_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Principal<wbr>Modification<wbr>Kind</a>
@@ -293,8 +288,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -303,8 +297,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -313,13 +306,11 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -328,8 +319,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourceid_go">
 <a href="#clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -338,8 +328,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -348,8 +337,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -358,8 +346,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprincipalmodificationkind_go">
 <a href="#defaultprincipalmodificationkind_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Principal<wbr>Modification<wbr>Kind</a>
@@ -368,8 +355,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -378,8 +364,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,13 +373,11 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -403,8 +386,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clusterresourceid_nodejs">
 <a href="#clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
@@ -413,8 +395,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -423,8 +404,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -433,8 +413,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprincipalmodificationkind_nodejs">
 <a href="#defaultprincipalmodificationkind_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Principal<wbr>Modification<wbr>Kind</a>
@@ -443,8 +422,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -453,8 +431,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -463,13 +440,11 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -478,8 +453,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cluster_resource_id_python">
 <a href="#cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
@@ -488,8 +462,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -498,8 +471,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -508,8 +480,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_principal_modification_kind_python">
 <a href="#default_principal_modification_kind_python" style="color: inherit; text-decoration: inherit;">default_<wbr>principal_<wbr>modification_<wbr>kind</a>
@@ -518,8 +489,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -528,8 +498,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -538,8 +507,7 @@ The AttachedDatabaseConfiguration resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attacheddatabasenames_csharp">
 <a href="#attacheddatabasenames_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Names</a>
@@ -560,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -569,13 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attacheddatabasenames_go">
 <a href="#attacheddatabasenames_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Names</a>
@@ -584,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -593,13 +556,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attacheddatabasenames_nodejs">
 <a href="#attacheddatabasenames_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Database<wbr>Names</a>
@@ -608,8 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -617,13 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attached_database_names_python">
 <a href="#attached_database_names_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>database_<wbr>names</a>
@@ -632,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -641,8 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -769,8 +725,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attacheddatabasenames_csharp">
 <a href="#state_attacheddatabasenames_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Names</a>
@@ -779,8 +734,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_csharp">
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -789,8 +743,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterresourceid_csharp">
 <a href="#state_clusterresourceid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -799,8 +752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -809,8 +761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprincipalmodificationkind_csharp">
 <a href="#state_defaultprincipalmodificationkind_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Principal<wbr>Modification<wbr>Kind</a>
@@ -819,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -829,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -839,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -849,13 +797,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attacheddatabasenames_go">
 <a href="#state_attacheddatabasenames_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Database<wbr>Names</a>
@@ -864,8 +810,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_go">
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -874,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterresourceid_go">
 <a href="#state_clusterresourceid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Resource<wbr>Id</a>
@@ -884,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -894,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprincipalmodificationkind_go">
 <a href="#state_defaultprincipalmodificationkind_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Principal<wbr>Modification<wbr>Kind</a>
@@ -904,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -914,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -924,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -934,13 +873,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attacheddatabasenames_nodejs">
 <a href="#state_attacheddatabasenames_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Database<wbr>Names</a>
@@ -949,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_nodejs">
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -959,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterresourceid_nodejs">
 <a href="#state_clusterresourceid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Resource<wbr>Id</a>
@@ -969,8 +904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -979,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprincipalmodificationkind_nodejs">
 <a href="#state_defaultprincipalmodificationkind_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Principal<wbr>Modification<wbr>Kind</a>
@@ -989,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -999,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1009,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1019,13 +949,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attached_database_names_python">
 <a href="#state_attached_database_names_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>database_<wbr>names</a>
@@ -1034,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of databases from the `cluster_resource_id` which are currently attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_name_python">
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -1044,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_resource_id_python">
 <a href="#state_cluster_resource_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>resource_<wbr>id</a>
@@ -1054,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of the cluster where the databases you would like to attach reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1064,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database which you would like to attach, use * if you want to follow all current and future databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_principal_modification_kind_python">
 <a href="#state_default_principal_modification_kind_python" style="color: inherit; text-decoration: inherit;">default_<wbr>principal_<wbr>modification_<wbr>kind</a>
@@ -1074,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default principals modification kind. Valid values are: `None` (default), `Replace` and `Union`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1084,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1094,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Attached Database Configuration to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1104,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the resource group of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

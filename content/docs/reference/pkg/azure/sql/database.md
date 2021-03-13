@@ -392,8 +392,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -402,8 +401,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -412,8 +410,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_csharp">
 <a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -422,8 +419,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -432,8 +428,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_csharp">
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -442,8 +437,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticpoolname_csharp">
 <a href="#elasticpoolname_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Name</a>
@@ -452,8 +446,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="extendedauditingpolicy_csharp">
 <a href="#extendedauditingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
@@ -462,8 +455,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="import_csharp">
 <a href="#import_csharp" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -472,8 +464,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -482,8 +473,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_csharp">
 <a href="#maxsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -492,8 +482,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizegb_csharp">
 <a href="#maxsizegb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
@@ -501,8 +490,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -511,8 +499,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readscale_csharp">
 <a href="#readscale_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
@@ -521,8 +508,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedserviceobjectiveid_csharp">
 <a href="#requestedserviceobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Id</a>
@@ -532,8 +518,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedserviceobjectivename_csharp">
 <a href="#requestedserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -542,8 +527,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepointintime_csharp">
 <a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -552,8 +536,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabasedeletiondate_csharp">
 <a href="#sourcedatabasedeletiondate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -562,8 +545,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabaseid_csharp">
 <a href="#sourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -572,8 +554,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -582,8 +563,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatdetectionpolicy_csharp">
 <a href="#threatdetectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
@@ -592,8 +572,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneredundant_csharp">
 <a href="#zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -602,13 +581,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -617,8 +594,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -627,8 +603,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_go">
 <a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -637,8 +612,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -647,8 +621,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_go">
 <a href="#edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -657,8 +630,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticpoolname_go">
 <a href="#elasticpoolname_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Name</a>
@@ -667,8 +639,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="extendedauditingpolicy_go">
 <a href="#extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
@@ -677,8 +648,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="import_go">
 <a href="#import_go" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -687,8 +657,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -697,8 +666,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_go">
 <a href="#maxsizebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -707,8 +675,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizegb_go">
 <a href="#maxsizegb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
@@ -716,8 +683,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -726,8 +692,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readscale_go">
 <a href="#readscale_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
@@ -736,8 +701,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedserviceobjectiveid_go">
 <a href="#requestedserviceobjectiveid_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Id</a>
@@ -747,8 +711,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedserviceobjectivename_go">
 <a href="#requestedserviceobjectivename_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -757,8 +720,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepointintime_go">
 <a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -767,8 +729,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabasedeletiondate_go">
 <a href="#sourcedatabasedeletiondate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -777,8 +738,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabaseid_go">
 <a href="#sourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -787,8 +747,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -797,8 +756,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatdetectionpolicy_go">
 <a href="#threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
@@ -807,8 +765,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneredundant_go">
 <a href="#zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -817,13 +774,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -832,8 +787,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -842,8 +796,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_nodejs">
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -852,8 +805,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -862,8 +814,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_nodejs">
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -872,8 +823,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticpoolname_nodejs">
 <a href="#elasticpoolname_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Name</a>
@@ -882,8 +832,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="extendedauditingpolicy_nodejs">
 <a href="#extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
@@ -892,8 +841,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="import_nodejs">
 <a href="#import_nodejs" style="color: inherit; text-decoration: inherit;">import</a>
@@ -902,8 +850,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -912,8 +859,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_nodejs">
 <a href="#maxsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Bytes</a>
@@ -922,8 +868,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizegb_nodejs">
 <a href="#maxsizegb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Gb</a>
@@ -931,8 +876,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -941,8 +885,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readscale_nodejs">
 <a href="#readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
@@ -951,8 +894,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedserviceobjectiveid_nodejs">
 <a href="#requestedserviceobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Service<wbr>Objective<wbr>Id</a>
@@ -962,8 +904,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestedserviceobjectivename_nodejs">
 <a href="#requestedserviceobjectivename_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -972,8 +913,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepointintime_nodejs">
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -982,8 +922,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabasedeletiondate_nodejs">
 <a href="#sourcedatabasedeletiondate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -992,8 +931,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabaseid_nodejs">
 <a href="#sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
@@ -1002,8 +940,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1012,8 +949,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threatdetectionpolicy_nodejs">
 <a href="#threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
@@ -1022,8 +958,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneredundant_nodejs">
 <a href="#zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
@@ -1032,13 +967,11 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1047,8 +980,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -1057,8 +989,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_python">
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -1067,8 +998,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -1077,8 +1007,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_python">
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -1087,8 +1016,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elastic_pool_name_python">
 <a href="#elastic_pool_name_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>name</a>
@@ -1097,8 +1025,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="extended_auditing_policy_python">
 <a href="#extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
@@ -1107,8 +1034,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="import__python">
 <a href="#import__python" style="color: inherit; text-decoration: inherit;">import_</a>
@@ -1117,8 +1043,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1127,8 +1052,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_bytes_python">
 <a href="#max_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>bytes</a>
@@ -1137,8 +1061,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_gb_python">
 <a href="#max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
@@ -1146,8 +1069,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1156,8 +1078,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_scale_python">
 <a href="#read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
@@ -1166,8 +1087,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requested_service_objective_id_python">
 <a href="#requested_service_objective_id_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>service_<wbr>objective_<wbr>id</a>
@@ -1177,8 +1097,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requested_service_objective_name_python">
 <a href="#requested_service_objective_name_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>service_<wbr>objective_<wbr>name</a>
@@ -1187,8 +1106,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_point_in_time_python">
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
@@ -1197,8 +1115,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_database_deletion_date_python">
 <a href="#source_database_deletion_date_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>deletion_<wbr>date</a>
@@ -1207,8 +1124,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_database_id_python">
 <a href="#source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
@@ -1217,8 +1133,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1227,8 +1142,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threat_detection_policy_python">
 <a href="#threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
@@ -1237,8 +1151,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_redundant_python">
 <a href="#zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
@@ -1247,8 +1160,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1259,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1269,8 +1180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_csharp">
 <a href="#defaultsecondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -1279,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -1288,8 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1297,13 +1205,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1312,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_go">
 <a href="#defaultsecondarylocation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -1322,8 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -1331,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1340,13 +1243,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -1355,8 +1256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsecondarylocation_nodejs">
 <a href="#defaultsecondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Location</a>
@@ -1365,8 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -1374,8 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1383,13 +1281,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -1398,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_secondary_location_python">
 <a href="#default_secondary_location_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>location</a>
@@ -1408,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -1417,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1426,8 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1554,8 +1446,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collation_csharp">
 <a href="#state_collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -1564,8 +1455,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createmode_csharp">
 <a href="#state_createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -1574,8 +1464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_csharp">
 <a href="#state_creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1584,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondarylocation_csharp">
 <a href="#state_defaultsecondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -1594,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_csharp">
 <a href="#state_edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -1604,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticpoolname_csharp">
 <a href="#state_elasticpoolname_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Name</a>
@@ -1614,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_csharp">
 <a href="#state_encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -1623,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_extendedauditingpolicy_csharp">
 <a href="#state_extendedauditingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
@@ -1633,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_csharp">
 <a href="#state_import_csharp" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -1643,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1653,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizebytes_csharp">
 <a href="#state_maxsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -1663,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizegb_csharp">
 <a href="#state_maxsizegb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
@@ -1672,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1682,8 +1561,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readscale_csharp">
 <a href="#state_readscale_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
@@ -1692,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedserviceobjectiveid_csharp">
 <a href="#state_requestedserviceobjectiveid_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Id</a>
@@ -1703,8 +1580,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedserviceobjectivename_csharp">
 <a href="#state_requestedserviceobjectivename_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -1713,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1723,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepointintime_csharp">
 <a href="#state_restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -1733,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_csharp">
 <a href="#state_servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1743,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatabasedeletiondate_csharp">
 <a href="#state_sourcedatabasedeletiondate_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -1753,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatabaseid_csharp">
 <a href="#state_sourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -1763,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1773,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threatdetectionpolicy_csharp">
 <a href="#state_threatdetectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
@@ -1783,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneredundant_csharp">
 <a href="#state_zoneredundant_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -1793,13 +1661,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collation_go">
 <a href="#state_collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -1808,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createmode_go">
 <a href="#state_createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -1818,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_go">
 <a href="#state_creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1828,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondarylocation_go">
 <a href="#state_defaultsecondarylocation_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Secondary<wbr>Location</a>
@@ -1838,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_go">
 <a href="#state_edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -1848,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticpoolname_go">
 <a href="#state_elasticpoolname_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Pool<wbr>Name</a>
@@ -1858,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_go">
 <a href="#state_encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -1867,8 +1727,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_extendedauditingpolicy_go">
 <a href="#state_extendedauditingpolicy_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Auditing<wbr>Policy</a>
@@ -1877,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_go">
 <a href="#state_import_go" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -1887,8 +1745,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1897,8 +1754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizebytes_go">
 <a href="#state_maxsizebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -1907,8 +1763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizegb_go">
 <a href="#state_maxsizegb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Gb</a>
@@ -1916,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1926,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readscale_go">
 <a href="#state_readscale_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Scale</a>
@@ -1936,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedserviceobjectiveid_go">
 <a href="#state_requestedserviceobjectiveid_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Id</a>
@@ -1947,8 +1799,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedserviceobjectivename_go">
 <a href="#state_requestedserviceobjectivename_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -1957,8 +1808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1967,8 +1817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepointintime_go">
 <a href="#state_restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -1977,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_go">
 <a href="#state_servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1987,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatabasedeletiondate_go">
 <a href="#state_sourcedatabasedeletiondate_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -1997,8 +1844,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatabaseid_go">
 <a href="#state_sourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -2007,8 +1853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2017,8 +1862,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threatdetectionpolicy_go">
 <a href="#state_threatdetectionpolicy_go" style="color: inherit; text-decoration: inherit;">Threat<wbr>Detection<wbr>Policy</a>
@@ -2027,8 +1871,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneredundant_go">
 <a href="#state_zoneredundant_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Redundant</a>
@@ -2037,13 +1880,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collation_nodejs">
 <a href="#state_collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -2052,8 +1893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createmode_nodejs">
 <a href="#state_createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -2062,8 +1902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_nodejs">
 <a href="#state_creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -2072,8 +1911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsecondarylocation_nodejs">
 <a href="#state_defaultsecondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Secondary<wbr>Location</a>
@@ -2082,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_nodejs">
 <a href="#state_edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -2092,8 +1929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticpoolname_nodejs">
 <a href="#state_elasticpoolname_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Pool<wbr>Name</a>
@@ -2102,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_nodejs">
 <a href="#state_encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -2111,8 +1946,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_extendedauditingpolicy_nodejs">
 <a href="#state_extendedauditingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Auditing<wbr>Policy</a>
@@ -2121,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_nodejs">
 <a href="#state_import_nodejs" style="color: inherit; text-decoration: inherit;">import</a>
@@ -2131,8 +1964,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2141,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizebytes_nodejs">
 <a href="#state_maxsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Bytes</a>
@@ -2151,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxsizegb_nodejs">
 <a href="#state_maxsizegb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Gb</a>
@@ -2160,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2170,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readscale_nodejs">
 <a href="#state_readscale_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Scale</a>
@@ -2180,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedserviceobjectiveid_nodejs">
 <a href="#state_requestedserviceobjectiveid_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Service<wbr>Objective<wbr>Id</a>
@@ -2191,8 +2018,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedserviceobjectivename_nodejs">
 <a href="#state_requestedserviceobjectivename_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Service<wbr>Objective<wbr>Name</a>
@@ -2201,8 +2027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2211,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorepointintime_nodejs">
 <a href="#state_restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -2221,8 +2045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_nodejs">
 <a href="#state_servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -2231,8 +2054,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatabasedeletiondate_nodejs">
 <a href="#state_sourcedatabasedeletiondate_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Deletion<wbr>Date</a>
@@ -2241,8 +2063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedatabaseid_nodejs">
 <a href="#state_sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
@@ -2251,8 +2072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2261,8 +2081,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threatdetectionpolicy_nodejs">
 <a href="#state_threatdetectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">threat<wbr>Detection<wbr>Policy</a>
@@ -2271,8 +2090,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneredundant_nodejs">
 <a href="#state_zoneredundant_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Redundant</a>
@@ -2281,13 +2099,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collation_python">
 <a href="#state_collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -2296,8 +2112,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the collation. Applies only if `create_mode` is `Default`.  Azure default is `SQL_LATIN1_GENERAL_CP1_CI_AS`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_mode_python">
 <a href="#state_create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -2306,8 +2121,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to create the database. Valid values are: `Default`, `Copy`, `OnlineSecondary`, `NonReadableSecondary`,  `PointInTimeRestore`, `Recovery`, `Restore` or `RestoreLongTermRetentionBackup`. Must be `Default` to create a new database. Defaults to `Default`. Please see [Azure SQL Database REST API](https://docs.microsoft.com/en-us/rest/api/sql/databases/createorupdate#createmode)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_date_python">
 <a href="#state_creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -2316,8 +2130,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_secondary_location_python">
 <a href="#state_default_secondary_location_python" style="color: inherit; text-decoration: inherit;">default_<wbr>secondary_<wbr>location</a>
@@ -2326,8 +2139,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default secondary location of the SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_python">
 <a href="#state_edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -2336,8 +2148,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The edition of the database to be created. Applies only if `create_mode` is `Default`. Valid values are: `Basic`, `Standard`, `Premium`, `DataWarehouse`, `Business`, `BusinessCritical`, `Free`, `GeneralPurpose`, `Hyperscale`, `Premium`, `PremiumRS`, `Standard`, `Stretch`, `System`, `System2`, or `Web`. Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elastic_pool_name_python">
 <a href="#state_elastic_pool_name_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>pool_<wbr>name</a>
@@ -2346,8 +2157,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the elastic database pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_python">
 <a href="#state_encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -2355,8 +2165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_extended_auditing_policy_python">
 <a href="#state_extended_auditing_policy_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>auditing_<wbr>policy</a>
@@ -2365,8 +2174,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `extended_auditing_policy` block as defined below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}the `extended_auditing_policy` block has been moved to `azurerm_mssql_server_extended_auditing_policy` and `azurerm_mssql_database_extended_auditing_policy`. This block will be removed in version 3.0 of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_import__python">
 <a href="#state_import__python" style="color: inherit; text-decoration: inherit;">import_</a>
@@ -2375,8 +2183,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databaseimport">Database<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Database Import block as documented below. `create_mode` must be set to `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2385,8 +2192,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_bytes_python">
 <a href="#state_max_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>bytes</a>
@@ -2395,8 +2201,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum size that the database can grow to. Applies only if `create_mode` is `Default`.  Please see [Azure SQL Database Service Tiers](https://azure.microsoft.com/en-gb/documentation/articles/sql-database-service-tiers/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_size_gb_python">
 <a href="#state_max_size_gb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>gb</a>
@@ -2404,8 +2209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2414,8 +2218,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_read_scale_python">
 <a href="#state_read_scale_python" style="color: inherit; text-decoration: inherit;">read_<wbr>scale</a>
@@ -2424,8 +2227,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read-only connections will be redirected to a high-available replica. Please see [Use read-only replicas to load-balance read-only query workloads](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-read-scale-out).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requested_service_objective_id_python">
 <a href="#state_requested_service_objective_id_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>service_<wbr>objective_<wbr>id</a>
@@ -2435,8 +2237,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A GUID/UUID corresponding to a configured Service Level Objective for the Azure SQL database which can be used to configure a performance level.
 .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requested_service_objective_name_python">
 <a href="#state_requested_service_objective_name_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>service_<wbr>objective_<wbr>name</a>
@@ -2445,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service objective name for the database. Valid values depend on edition and location and may include `S0`, `S1`, `S2`, `S3`, `P1`, `P2`, `P4`, `P6`, `P11` and `ElasticPool`. You can list the available names with the cli: ```shell az sql db list-editions -l westus -o table ```. For further information please see [Azure CLI - az sql db](https://docs.microsoft.com/en-us/cli/azure/sql/db?view=azure-cli-latest#az-sql-db-list-editions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2455,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the database.  This must be the same as Database Server resource group currently.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_point_in_time_python">
 <a href="#state_restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
@@ -2465,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The point in time for the restore. Only applies if `create_mode` is `PointInTimeRestore` e.g. 2013-11-08T22:00:40Z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_name_python">
 <a href="#state_server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -2475,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SQL Server on which to create the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_database_deletion_date_python">
 <a href="#state_source_database_deletion_date_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>deletion_<wbr>date</a>
@@ -2485,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deletion date time of the source database. Only applies to deleted databases where `create_mode` is `PointInTimeRestore`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_database_id_python">
 <a href="#state_source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
@@ -2495,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the source database if `create_mode` value is not `Default`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2505,8 +2300,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threat_detection_policy_python">
 <a href="#state_threat_detection_policy_python" style="color: inherit; text-decoration: inherit;">threat_<wbr>detection_<wbr>policy</a>
@@ -2515,8 +2309,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Threat detection policy configuration. The `threat_detection_policy` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_redundant_python">
 <a href="#state_zone_redundant_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>redundant</a>
@@ -2525,8 +2318,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2541,8 +2333,7 @@ The following state arguments are supported:
 <h4 id="databaseextendedauditingpolicy">Database<wbr>Extended<wbr>Auditing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logmonitoringenabled_csharp">
 <a href="#logmonitoringenabled_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
@@ -2550,8 +2341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -2560,8 +2350,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_csharp">
 <a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -2570,8 +2359,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_csharp">
 <a href="#storageaccountaccesskeyissecondary_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -2580,8 +2368,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_csharp">
 <a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -2590,13 +2377,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logmonitoringenabled_go">
 <a href="#logmonitoringenabled_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
@@ -2604,8 +2389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -2614,8 +2398,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_go">
 <a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -2624,8 +2407,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_go">
 <a href="#storageaccountaccesskeyissecondary_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -2634,8 +2416,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_go">
 <a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -2644,13 +2425,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="logmonitoringenabled_nodejs">
 <a href="#logmonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Monitoring<wbr>Enabled</a>
@@ -2658,8 +2437,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -2668,8 +2446,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_nodejs">
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -2678,8 +2455,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskeyissecondary_nodejs">
 <a href="#storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
@@ -2688,8 +2464,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_nodejs">
 <a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
@@ -2698,13 +2473,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="log_monitoring_enabled_python">
 <a href="#log_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>monitoring_<wbr>enabled</a>
@@ -2712,8 +2485,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -2722,8 +2494,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to retain logs for in the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_python">
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -2732,8 +2503,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_is_secondary_python">
 <a href="#storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
@@ -2742,8 +2512,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether `storage_account_access_key` value is the storage's secondary key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_endpoint_python">
 <a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
@@ -2752,15 +2521,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseimport">Database<wbr>Import</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administratorlogin_csharp">
 <a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
@@ -2769,8 +2536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administratorloginpassword_csharp">
 <a href="#administratorloginpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
@@ -2779,8 +2545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationtype_csharp">
 <a href="#authenticationtype_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -2789,8 +2554,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of authentication used to access the server. Valid values are `SQL` or `ADPassword`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagekey_csharp">
 <a href="#storagekey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Key</a>
@@ -2799,8 +2563,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagekeytype_csharp">
 <a href="#storagekeytype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Key<wbr>Type</a>
@@ -2809,8 +2572,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of access key for the storage account. Valid values are `StorageAccessKey` or `SharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_csharp">
 <a href="#storageuri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
@@ -2819,8 +2581,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob URI of the .bacpac file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationmode_csharp">
 <a href="#operationmode_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Mode</a>
@@ -2829,13 +2590,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of import operation being performed. The only allowable value is `Import`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administratorlogin_go">
 <a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
@@ -2844,8 +2603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administratorloginpassword_go">
 <a href="#administratorloginpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login<wbr>Password</a>
@@ -2854,8 +2612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationtype_go">
 <a href="#authenticationtype_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Type</a>
@@ -2864,8 +2621,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of authentication used to access the server. Valid values are `SQL` or `ADPassword`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagekey_go">
 <a href="#storagekey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Key</a>
@@ -2874,8 +2630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagekeytype_go">
 <a href="#storagekeytype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Key<wbr>Type</a>
@@ -2884,8 +2639,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of access key for the storage account. Valid values are `StorageAccessKey` or `SharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_go">
 <a href="#storageuri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
@@ -2894,8 +2648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob URI of the .bacpac file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationmode_go">
 <a href="#operationmode_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Mode</a>
@@ -2904,13 +2657,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of import operation being performed. The only allowable value is `Import`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administratorlogin_nodejs">
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
@@ -2919,8 +2670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administratorloginpassword_nodejs">
 <a href="#administratorloginpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login<wbr>Password</a>
@@ -2929,8 +2679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authenticationtype_nodejs">
 <a href="#authenticationtype_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Type</a>
@@ -2939,8 +2688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of authentication used to access the server. Valid values are `SQL` or `ADPassword`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagekey_nodejs">
 <a href="#storagekey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Key</a>
@@ -2949,8 +2697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagekeytype_nodejs">
 <a href="#storagekeytype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Key<wbr>Type</a>
@@ -2959,8 +2706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of access key for the storage account. Valid values are `StorageAccessKey` or `SharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageuri_nodejs">
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
@@ -2969,8 +2715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob URI of the .bacpac file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationmode_nodejs">
 <a href="#operationmode_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Mode</a>
@@ -2979,13 +2724,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of import operation being performed. The only allowable value is `Import`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administrator_login_python">
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
@@ -2994,8 +2737,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="administrator_login_password_python">
 <a href="#administrator_login_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login_<wbr>password</a>
@@ -3004,8 +2746,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the password of the SQL administrator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authentication_type_python">
 <a href="#authentication_type_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>type</a>
@@ -3014,8 +2755,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of authentication used to access the server. Valid values are `SQL` or `ADPassword`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_key_python">
 <a href="#storage_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>key</a>
@@ -3024,8 +2764,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_key_type_python">
 <a href="#storage_key_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>key_<wbr>type</a>
@@ -3034,8 +2773,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of access key for the storage account. Valid values are `StorageAccessKey` or `SharedAccessKey`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_uri_python">
 <a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
@@ -3044,8 +2782,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob URI of the .bacpac file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_mode_python">
 <a href="#operation_mode_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>mode</a>
@@ -3054,15 +2791,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of import operation being performed. The only allowable value is `Import`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databasethreatdetectionpolicy">Database<wbr>Threat<wbr>Detection<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabledalerts_csharp">
 <a href="#disabledalerts_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
@@ -3071,8 +2806,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Sql_Injection` and `Sql_Injection_Vulnerability`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaccountadmins_csharp">
 <a href="#emailaccountadmins_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
@@ -3081,8 +2815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_csharp">
 <a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -3091,8 +2824,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email addresses which alerts should be sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondays_csharp">
 <a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -3101,8 +2833,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3111,8 +2842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_csharp">
 <a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -3121,8 +2851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_csharp">
 <a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -3131,8 +2860,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useserverdefault_csharp">
 <a href="#useserverdefault_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Server<wbr>Default</a>
@@ -3140,13 +2868,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabledalerts_go">
 <a href="#disabledalerts_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
@@ -3155,8 +2881,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Sql_Injection` and `Sql_Injection_Vulnerability`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaccountadmins_go">
 <a href="#emailaccountadmins_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
@@ -3165,8 +2890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_go">
 <a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -3175,8 +2899,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email addresses which alerts should be sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondays_go">
 <a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -3185,8 +2908,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3195,8 +2917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_go">
 <a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -3205,8 +2926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_go">
 <a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -3215,8 +2935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useserverdefault_go">
 <a href="#useserverdefault_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Server<wbr>Default</a>
@@ -3224,13 +2943,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabledalerts_nodejs">
 <a href="#disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
@@ -3239,8 +2956,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Sql_Injection` and `Sql_Injection_Vulnerability`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaccountadmins_nodejs">
 <a href="#emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
@@ -3249,8 +2965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_nodejs">
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
@@ -3259,8 +2974,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses which alerts should be sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondays_nodejs">
 <a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
@@ -3269,8 +2983,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3279,8 +2992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_nodejs">
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -3289,8 +3001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_nodejs">
 <a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
@@ -3299,8 +3010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useserverdefault_nodejs">
 <a href="#useserverdefault_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Server<wbr>Default</a>
@@ -3308,13 +3018,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabled_alerts_python">
 <a href="#disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
@@ -3323,8 +3031,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of alerts which should be disabled. Possible values include `Access_Anomaly`, `Sql_Injection` and `Sql_Injection_Vulnerability`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_account_admins_python">
 <a href="#email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
@@ -3333,8 +3040,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Should the account administrators be emailed when this alert is triggered?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_addresses_python">
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
@@ -3343,8 +3049,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses which alerts should be sent to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_days_python">
 <a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
@@ -3353,8 +3058,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3363,8 +3067,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The State of the Policy. Possible values are `Enabled`, `Disabled` or `New`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_python">
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -3373,8 +3076,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_endpoint_python">
 <a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
@@ -3383,8 +3085,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs. Required if `state` is `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="use_server_default_python">
 <a href="#use_server_default_python" style="color: inherit; text-decoration: inherit;">use_<wbr>server_<wbr>default</a>
@@ -3392,8 +3093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is now non-functional and thus will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 ## Import
 

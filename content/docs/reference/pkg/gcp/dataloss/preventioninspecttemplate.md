@@ -1103,8 +1103,7 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1117,8 +1116,7 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1127,8 +1125,7 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1137,8 +1134,7 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inspectconfig_csharp">
 <a href="#inspectconfig_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
@@ -1148,13 +1144,11 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1167,8 +1161,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1177,8 +1170,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1187,8 +1179,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inspectconfig_go">
 <a href="#inspectconfig_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
@@ -1198,13 +1189,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1217,8 +1206,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1227,8 +1215,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1237,8 +1224,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inspectconfig_nodejs">
 <a href="#inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
@@ -1248,13 +1234,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1267,8 +1251,7 @@ Structure is documented below.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1277,8 +1260,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1287,8 +1269,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inspect_config_python">
 <a href="#inspect_config_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>config</a>
@@ -1298,8 +1279,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1310,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1319,8 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1330,13 +1308,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1344,8 +1320,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1355,13 +1330,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1369,8 +1342,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1380,13 +1352,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1394,8 +1364,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1405,8 +1374,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1533,8 +1501,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1543,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1553,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inspectconfig_csharp">
 <a href="#state_inspectconfig_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
@@ -1564,8 +1529,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1575,8 +1539,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1589,13 +1552,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1604,8 +1565,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1614,8 +1574,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inspectconfig_go">
 <a href="#state_inspectconfig_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
@@ -1625,8 +1584,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1636,8 +1594,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -1650,13 +1607,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1665,8 +1620,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1675,8 +1629,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inspectconfig_nodejs">
 <a href="#state_inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
@@ -1686,8 +1639,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1697,8 +1649,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1711,13 +1662,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1726,8 +1675,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1736,8 +1684,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inspect_config_python">
 <a href="#state_inspect_config_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>config</a>
@@ -1747,8 +1694,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1758,8 +1704,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -1772,8 +1717,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `projects/{{project}}/locations/{{location}}`
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1788,8 +1732,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
 <h4 id="preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentoptions_csharp">
 <a href="#contentoptions_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Options</a>
@@ -1799,8 +1742,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custominfotypes_csharp">
 <a href="#custominfotypes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
@@ -1810,8 +1752,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_csharp">
 <a href="#excludeinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
@@ -1821,8 +1762,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includequote_csharp">
 <a href="#includequote_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Quote</a>
@@ -1831,8 +1771,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -1842,8 +1781,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_csharp">
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
@@ -1853,8 +1791,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlikelihood_csharp">
 <a href="#minlikelihood_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Likelihood</a>
@@ -1865,8 +1802,7 @@ Structure is documented below.
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_csharp">
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -1877,13 +1813,11 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentoptions_go">
 <a href="#contentoptions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Options</a>
@@ -1893,8 +1827,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custominfotypes_go">
 <a href="#custominfotypes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
@@ -1904,8 +1837,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_go">
 <a href="#excludeinfotypes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
@@ -1915,8 +1847,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includequote_go">
 <a href="#includequote_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Quote</a>
@@ -1925,8 +1856,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -1936,8 +1866,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_go">
 <a href="#limits_go" style="color: inherit; text-decoration: inherit;">Limits</a>
@@ -1947,8 +1876,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlikelihood_go">
 <a href="#minlikelihood_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Likelihood</a>
@@ -1959,8 +1887,7 @@ Structure is documented below.
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_go">
 <a href="#rulesets_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
@@ -1971,13 +1898,11 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentoptions_nodejs">
 <a href="#contentoptions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Options</a>
@@ -1987,8 +1912,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custominfotypes_nodejs">
 <a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
@@ -1998,8 +1922,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_nodejs">
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
@@ -2009,8 +1932,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includequote_nodejs">
 <a href="#includequote_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Quote</a>
@@ -2019,8 +1941,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
@@ -2030,8 +1951,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_nodejs">
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
@@ -2041,8 +1961,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlikelihood_nodejs">
 <a href="#minlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Likelihood</a>
@@ -2053,8 +1972,7 @@ Structure is documented below.
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulesets_nodejs">
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
@@ -2065,13 +1983,11 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_options_python">
 <a href="#content_options_python" style="color: inherit; text-decoration: inherit;">content_<wbr>options</a>
@@ -2081,8 +1997,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_info_types_python">
 <a href="#custom_info_types_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>info_<wbr>types</a>
@@ -2092,8 +2007,7 @@ Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_info_types_python">
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
@@ -2103,8 +2017,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_quote_python">
 <a href="#include_quote_python" style="color: inherit; text-decoration: inherit;">include_<wbr>quote</a>
@@ -2113,8 +2026,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
@@ -2124,8 +2036,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limits_python">
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
@@ -2135,8 +2046,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_likelihood_python">
 <a href="#min_likelihood_python" style="color: inherit; text-decoration: inherit;">min_<wbr>likelihood</a>
@@ -2147,8 +2057,7 @@ Structure is documented below.
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_sets_python">
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
@@ -2159,15 +2068,13 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     <dd>{{% md %}}Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the set are executed in the end,
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotype_csharp">
 <a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
@@ -2180,8 +2087,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_csharp">
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
@@ -2191,8 +2097,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusiontype_csharp">
 <a href="#exclusiontype_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
@@ -2202,8 +2107,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="likelihood_csharp">
 <a href="#likelihood_csharp" style="color: inherit; text-decoration: inherit;">Likelihood</a>
@@ -2215,8 +2119,7 @@ Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_csharp">
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
@@ -2226,8 +2129,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storedtype_csharp">
 <a href="#storedtype_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
@@ -2237,13 +2139,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotype_go">
 <a href="#infotype_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
@@ -2256,8 +2156,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_go">
 <a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
@@ -2267,8 +2166,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusiontype_go">
 <a href="#exclusiontype_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
@@ -2278,8 +2176,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="likelihood_go">
 <a href="#likelihood_go" style="color: inherit; text-decoration: inherit;">Likelihood</a>
@@ -2291,8 +2188,7 @@ Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_go">
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
@@ -2302,8 +2198,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storedtype_go">
 <a href="#storedtype_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
@@ -2313,13 +2208,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotype_nodejs">
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
@@ -2332,8 +2225,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_nodejs">
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
@@ -2343,8 +2235,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusiontype_nodejs">
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
@@ -2354,8 +2245,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="likelihood_nodejs">
 <a href="#likelihood_nodejs" style="color: inherit; text-decoration: inherit;">likelihood</a>
@@ -2367,8 +2257,7 @@ Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_nodejs">
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
@@ -2378,8 +2267,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storedtype_nodejs">
 <a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
@@ -2389,13 +2277,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_type_python">
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
@@ -2408,8 +2294,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_python">
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
@@ -2419,8 +2304,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusion_type_python">
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
@@ -2430,8 +2314,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="likelihood_python">
 <a href="#likelihood_python" style="color: inherit; text-decoration: inherit;">likelihood</a>
@@ -2443,8 +2326,7 @@ Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_python">
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
@@ -2454,8 +2336,7 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stored_type_python">
 <a href="#stored_type_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>type</a>
@@ -2465,15 +2346,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_csharp">
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
@@ -2483,8 +2362,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wordlist_csharp">
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
@@ -2494,13 +2372,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_go">
 <a href="#cloudstoragepath_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
@@ -2510,8 +2386,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wordlist_go">
 <a href="#wordlist_go" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
@@ -2521,13 +2396,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_nodejs">
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
@@ -2537,8 +2410,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wordlist_nodejs">
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
@@ -2548,13 +2420,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloud_storage_path_python">
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
@@ -2564,8 +2434,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="word_list_python">
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
@@ -2575,15 +2444,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2592,13 +2459,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2607,13 +2472,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2622,13 +2485,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2637,15 +2498,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_csharp">
 <a href="#words_csharp" style="color: inherit; text-decoration: inherit;">Words</a>
@@ -2655,13 +2514,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_go">
 <a href="#words_go" style="color: inherit; text-decoration: inherit;">Words</a>
@@ -2671,13 +2528,11 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_nodejs">
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
@@ -2687,13 +2542,11 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_python">
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
@@ -2703,15 +2556,13 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2721,13 +2572,11 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2737,13 +2586,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2753,13 +2600,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2769,15 +2614,13 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -2787,8 +2630,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
@@ -2797,13 +2639,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -2813,8 +2653,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
@@ -2823,13 +2662,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -2839,8 +2676,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
@@ -2849,13 +2685,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -2865,8 +2699,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
@@ -2875,15 +2708,13 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2893,13 +2724,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2909,13 +2738,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2925,13 +2752,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2941,15 +2766,13 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2959,13 +2782,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2975,13 +2796,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2991,13 +2810,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3007,15 +2824,13 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxfindingsperitem_csharp">
 <a href="#maxfindingsperitem_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Item</a>
@@ -3024,8 +2839,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfindingsperrequest_csharp">
 <a href="#maxfindingsperrequest_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Request</a>
@@ -3034,8 +2848,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfindingsperinfotypes_csharp">
 <a href="#maxfindingsperinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
@@ -3045,13 +2858,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxfindingsperitem_go">
 <a href="#maxfindingsperitem_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Item</a>
@@ -3060,8 +2871,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfindingsperrequest_go">
 <a href="#maxfindingsperrequest_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Request</a>
@@ -3070,8 +2880,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfindingsperinfotypes_go">
 <a href="#maxfindingsperinfotypes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
@@ -3081,13 +2890,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxfindingsperitem_nodejs">
 <a href="#maxfindingsperitem_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Item</a>
@@ -3096,8 +2903,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfindingsperrequest_nodejs">
 <a href="#maxfindingsperrequest_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Request</a>
@@ -3106,8 +2912,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfindingsperinfotypes_nodejs">
 <a href="#maxfindingsperinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
@@ -3117,13 +2922,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_findings_per_item_python">
 <a href="#max_findings_per_item_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>item</a>
@@ -3132,8 +2935,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_findings_per_request_python">
 <a href="#max_findings_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>request</a>
@@ -3142,8 +2944,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_findings_per_info_types_python">
 <a href="#max_findings_per_info_types_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>info_<wbr>types</a>
@@ -3153,15 +2954,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotype_csharp">
 <a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
@@ -3174,8 +2973,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfindings_csharp">
 <a href="#maxfindings_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings</a>
@@ -3184,13 +2982,11 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotype_go">
 <a href="#infotype_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
@@ -3203,8 +2999,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfindings_go">
 <a href="#maxfindings_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings</a>
@@ -3213,13 +3008,11 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotype_nodejs">
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
@@ -3232,8 +3025,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfindings_nodejs">
 <a href="#maxfindings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings</a>
@@ -3242,13 +3034,11 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_type_python">
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
@@ -3261,8 +3051,7 @@ infoTypes and that infoType is specified in `info_types` field. Specifying the l
 one detected by the system. If built-in info type is not specified in `info_types` list then the name is
 treated as a custom info type.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_findings_python">
 <a href="#max_findings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings</a>
@@ -3271,15 +3060,13 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3289,13 +3076,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3305,13 +3090,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3321,13 +3104,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3337,15 +3118,13 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -3355,8 +3134,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -3366,13 +3144,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -3382,8 +3158,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -3393,13 +3168,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
@@ -3409,8 +3182,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -3420,13 +3192,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
@@ -3436,8 +3206,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -3447,15 +3216,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3465,13 +3232,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3481,13 +3246,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3497,13 +3260,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3513,15 +3274,13 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclusionrule_csharp">
 <a href="#exclusionrule_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Rule</a>
@@ -3531,8 +3290,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hotwordrule_csharp">
 <a href="#hotwordrule_csharp" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Rule</a>
@@ -3542,13 +3300,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclusionrule_go">
 <a href="#exclusionrule_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Rule</a>
@@ -3558,8 +3314,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hotwordrule_go">
 <a href="#hotwordrule_go" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Rule</a>
@@ -3569,13 +3324,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclusionrule_nodejs">
 <a href="#exclusionrule_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Rule</a>
@@ -3585,8 +3338,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hotwordrule_nodejs">
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
@@ -3596,13 +3348,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclusion_rule_python">
 <a href="#exclusion_rule_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>rule</a>
@@ -3612,8 +3362,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hotword_rule_python">
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
@@ -3623,15 +3372,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchingtype_csharp">
 <a href="#matchingtype_csharp" style="color: inherit; text-decoration: inherit;">Matching<wbr>Type</a>
@@ -3641,8 +3388,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_csharp">
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
@@ -3652,8 +3398,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_csharp">
 <a href="#excludeinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
@@ -3663,8 +3408,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_csharp">
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
@@ -3674,13 +3418,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchingtype_go">
 <a href="#matchingtype_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Type</a>
@@ -3690,8 +3432,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_go">
 <a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
@@ -3701,8 +3442,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_go">
 <a href="#excludeinfotypes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
@@ -3712,8 +3452,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_go">
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
@@ -3723,13 +3462,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchingtype_nodejs">
 <a href="#matchingtype_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Type</a>
@@ -3739,8 +3476,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_nodejs">
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
@@ -3750,8 +3486,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_nodejs">
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
@@ -3761,8 +3496,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_nodejs">
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
@@ -3772,13 +3506,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matching_type_python">
 <a href="#matching_type_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>type</a>
@@ -3788,8 +3520,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dictionary_python">
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
@@ -3799,8 +3530,7 @@ Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, a
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_info_types_python">
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
@@ -3810,8 +3540,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_python">
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
@@ -3821,15 +3550,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_csharp">
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
@@ -3839,8 +3566,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wordlist_csharp">
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
@@ -3850,13 +3576,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_go">
 <a href="#cloudstoragepath_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
@@ -3866,8 +3590,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wordlist_go">
 <a href="#wordlist_go" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
@@ -3877,13 +3600,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_nodejs">
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
@@ -3893,8 +3614,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wordlist_nodejs">
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
@@ -3904,13 +3624,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloud_storage_path_python">
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
@@ -3920,8 +3638,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="word_list_python">
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
@@ -3931,15 +3648,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3948,13 +3663,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3963,13 +3676,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3978,13 +3689,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3993,15 +3702,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_csharp">
 <a href="#words_csharp" style="color: inherit; text-decoration: inherit;">Words</a>
@@ -4011,13 +3718,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_go">
 <a href="#words_go" style="color: inherit; text-decoration: inherit;">Words</a>
@@ -4027,13 +3732,11 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_nodejs">
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
@@ -4043,13 +3746,11 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="words_python">
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
@@ -4059,15 +3760,13 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -4077,13 +3776,11 @@ phrase and every phrase must contain at least 2 characters that are letters or d
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
@@ -4093,13 +3790,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
@@ -4109,13 +3804,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
@@ -4125,15 +3818,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4143,13 +3834,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4159,13 +3848,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4175,13 +3862,11 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4191,15 +3876,13 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4209,8 +3892,7 @@ or `projects/project-id/storedInfoTypes/432452342`.
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
@@ -4219,13 +3901,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4235,8 +3915,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
@@ -4245,13 +3924,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -4261,8 +3938,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
@@ -4271,13 +3947,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -4287,8 +3961,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
@@ -4297,15 +3970,13 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hotwordregex_csharp">
 <a href="#hotwordregex_csharp" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Regex</a>
@@ -4315,8 +3986,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="likelihoodadjustment_csharp">
 <a href="#likelihoodadjustment_csharp" style="color: inherit; text-decoration: inherit;">Likelihood<wbr>Adjustment</a>
@@ -4326,8 +3996,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="proximity_csharp">
 <a href="#proximity_csharp" style="color: inherit; text-decoration: inherit;">Proximity</a>
@@ -4341,13 +4010,11 @@ used to match substrings of the finding itself. For example, the certainty of a 
 `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hotwordregex_go">
 <a href="#hotwordregex_go" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Regex</a>
@@ -4357,8 +4024,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="likelihoodadjustment_go">
 <a href="#likelihoodadjustment_go" style="color: inherit; text-decoration: inherit;">Likelihood<wbr>Adjustment</a>
@@ -4368,8 +4034,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="proximity_go">
 <a href="#proximity_go" style="color: inherit; text-decoration: inherit;">Proximity</a>
@@ -4383,13 +4048,11 @@ used to match substrings of the finding itself. For example, the certainty of a 
 `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hotwordregex_nodejs">
 <a href="#hotwordregex_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Regex</a>
@@ -4399,8 +4062,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="likelihoodadjustment_nodejs">
 <a href="#likelihoodadjustment_nodejs" style="color: inherit; text-decoration: inherit;">likelihood<wbr>Adjustment</a>
@@ -4410,8 +4072,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="proximity_nodejs">
 <a href="#proximity_nodejs" style="color: inherit; text-decoration: inherit;">proximity</a>
@@ -4425,13 +4086,11 @@ used to match substrings of the finding itself. For example, the certainty of a 
 `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hotword_regex_python">
 <a href="#hotword_regex_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>regex</a>
@@ -4441,8 +4100,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="likelihood_adjustment_python">
 <a href="#likelihood_adjustment_python" style="color: inherit; text-decoration: inherit;">likelihood_<wbr>adjustment</a>
@@ -4452,8 +4110,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="proximity_python">
 <a href="#proximity_python" style="color: inherit; text-decoration: inherit;">proximity</a>
@@ -4467,15 +4124,13 @@ used to match substrings of the finding itself. For example, the certainty of a 
 `(\d{3}) \d{3}-\d{4}` could be adjusted upwards if the area code is known to be the local area code of a company
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4485,8 +4140,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
@@ -4495,13 +4149,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4511,8 +4163,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
@@ -4521,13 +4172,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -4537,8 +4186,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
@@ -4547,13 +4195,11 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -4563,8 +4209,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
@@ -4573,15 +4218,13 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixedlikelihood_csharp">
 <a href="#fixedlikelihood_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Likelihood</a>
@@ -4591,8 +4234,7 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativelikelihood_csharp">
 <a href="#relativelikelihood_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Likelihood</a>
@@ -4606,13 +4248,11 @@ then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKEL
 Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixedlikelihood_go">
 <a href="#fixedlikelihood_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Likelihood</a>
@@ -4622,8 +4262,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativelikelihood_go">
 <a href="#relativelikelihood_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Likelihood</a>
@@ -4637,13 +4276,11 @@ then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKEL
 Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixedlikelihood_nodejs">
 <a href="#fixedlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Likelihood</a>
@@ -4653,8 +4290,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativelikelihood_nodejs">
 <a href="#relativelikelihood_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Likelihood</a>
@@ -4668,13 +4304,11 @@ then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKEL
 Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_likelihood_python">
 <a href="#fixed_likelihood_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>likelihood</a>
@@ -4684,8 +4318,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_likelihood_python">
 <a href="#relative_likelihood_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>likelihood</a>
@@ -4699,15 +4332,13 @@ then it is upgraded to LIKELY, while a value of -1 would downgrade it to UNLIKEL
 Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying an
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowafter_csharp">
 <a href="#windowafter_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>After</a>
@@ -4716,8 +4347,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowbefore_csharp">
 <a href="#windowbefore_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Before</a>
@@ -4726,13 +4356,11 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowafter_go">
 <a href="#windowafter_go" style="color: inherit; text-decoration: inherit;">Window<wbr>After</a>
@@ -4741,8 +4369,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowbefore_go">
 <a href="#windowbefore_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Before</a>
@@ -4751,13 +4378,11 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="windowafter_nodejs">
 <a href="#windowafter_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>After</a>
@@ -4766,8 +4391,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowbefore_nodejs">
 <a href="#windowbefore_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Before</a>
@@ -4776,13 +4400,11 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="window_after_python">
 <a href="#window_after_python" style="color: inherit; text-decoration: inherit;">window_<wbr>after</a>
@@ -4791,8 +4413,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_before_python">
 <a href="#window_before_python" style="color: inherit; text-decoration: inherit;">window_<wbr>before</a>
@@ -4801,8 +4422,7 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

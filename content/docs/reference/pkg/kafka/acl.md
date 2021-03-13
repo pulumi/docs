@@ -280,8 +280,7 @@ The Acl resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aclhost_csharp">
 <a href="#aclhost_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Host</a>
@@ -291,8 +290,7 @@ The Acl resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acloperation_csharp">
 <a href="#acloperation_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation</a>
@@ -303,8 +301,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclpermissiontype_csharp">
 <a href="#aclpermissiontype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Permission<wbr>Type</a>
@@ -314,8 +311,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclprincipal_csharp">
 <a href="#aclprincipal_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Principal</a>
@@ -324,8 +320,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclresourcename_csharp">
 <a href="#aclresourcename_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
@@ -334,8 +329,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclresourcetype_csharp">
 <a href="#aclresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
@@ -345,8 +339,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepatterntypefilter_csharp">
 <a href="#resourcepatterntypefilter_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pattern<wbr>Type<wbr>Filter</a>
@@ -356,13 +349,11 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aclhost_go">
 <a href="#aclhost_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Host</a>
@@ -372,8 +363,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acloperation_go">
 <a href="#acloperation_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation</a>
@@ -384,8 +374,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclpermissiontype_go">
 <a href="#aclpermissiontype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Permission<wbr>Type</a>
@@ -395,8 +384,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclprincipal_go">
 <a href="#aclprincipal_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Principal</a>
@@ -405,8 +393,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclresourcename_go">
 <a href="#aclresourcename_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
@@ -415,8 +402,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclresourcetype_go">
 <a href="#aclresourcetype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
@@ -426,8 +412,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepatterntypefilter_go">
 <a href="#resourcepatterntypefilter_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pattern<wbr>Type<wbr>Filter</a>
@@ -437,13 +422,11 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aclhost_nodejs">
 <a href="#aclhost_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Host</a>
@@ -453,8 +436,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acloperation_nodejs">
 <a href="#acloperation_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Operation</a>
@@ -465,8 +447,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclpermissiontype_nodejs">
 <a href="#aclpermissiontype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Permission<wbr>Type</a>
@@ -476,8 +457,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclprincipal_nodejs">
 <a href="#aclprincipal_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Principal</a>
@@ -486,8 +466,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclresourcename_nodejs">
 <a href="#aclresourcename_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Name</a>
@@ -496,8 +475,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aclresourcetype_nodejs">
 <a href="#aclresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Type</a>
@@ -507,8 +485,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepatterntypefilter_nodejs">
 <a href="#resourcepatterntypefilter_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pattern<wbr>Type<wbr>Filter</a>
@@ -518,13 +495,11 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acl_host_python">
 <a href="#acl_host_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>host</a>
@@ -534,8 +509,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acl_operation_python">
 <a href="#acl_operation_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>operation</a>
@@ -546,8 +520,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acl_permission_type_python">
 <a href="#acl_permission_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>permission_<wbr>type</a>
@@ -557,8 +530,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acl_principal_python">
 <a href="#acl_principal_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>principal</a>
@@ -567,8 +539,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acl_resource_name_python">
 <a href="#acl_resource_name_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>name</a>
@@ -577,8 +548,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="acl_resource_type_python">
 <a href="#acl_resource_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>type</a>
@@ -588,8 +558,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_pattern_type_filter_python">
 <a href="#resource_pattern_type_filter_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pattern_<wbr>type_<wbr>filter</a>
@@ -599,8 +568,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -611,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -620,13 +587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,13 +599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -648,13 +611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -662,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -790,8 +750,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aclhost_csharp">
 <a href="#state_aclhost_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Host</a>
@@ -801,8 +760,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acloperation_csharp">
 <a href="#state_acloperation_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation</a>
@@ -813,8 +771,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclpermissiontype_csharp">
 <a href="#state_aclpermissiontype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Permission<wbr>Type</a>
@@ -824,8 +781,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclprincipal_csharp">
 <a href="#state_aclprincipal_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Principal</a>
@@ -834,8 +790,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcename_csharp">
 <a href="#state_aclresourcename_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
@@ -844,8 +799,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcetype_csharp">
 <a href="#state_aclresourcetype_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
@@ -855,8 +809,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepatterntypefilter_csharp">
 <a href="#state_resourcepatterntypefilter_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pattern<wbr>Type<wbr>Filter</a>
@@ -866,13 +819,11 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aclhost_go">
 <a href="#state_aclhost_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Host</a>
@@ -882,8 +833,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acloperation_go">
 <a href="#state_acloperation_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Operation</a>
@@ -894,8 +844,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclpermissiontype_go">
 <a href="#state_aclpermissiontype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Permission<wbr>Type</a>
@@ -905,8 +854,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclprincipal_go">
 <a href="#state_aclprincipal_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Principal</a>
@@ -915,8 +863,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcename_go">
 <a href="#state_aclresourcename_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Name</a>
@@ -925,8 +872,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcetype_go">
 <a href="#state_aclresourcetype_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Resource<wbr>Type</a>
@@ -936,8 +882,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepatterntypefilter_go">
 <a href="#state_resourcepatterntypefilter_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pattern<wbr>Type<wbr>Filter</a>
@@ -947,13 +892,11 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aclhost_nodejs">
 <a href="#state_aclhost_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Host</a>
@@ -963,8 +906,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acloperation_nodejs">
 <a href="#state_acloperation_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Operation</a>
@@ -975,8 +917,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclpermissiontype_nodejs">
 <a href="#state_aclpermissiontype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Permission<wbr>Type</a>
@@ -986,8 +927,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclprincipal_nodejs">
 <a href="#state_aclprincipal_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Principal</a>
@@ -996,8 +936,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcename_nodejs">
 <a href="#state_aclresourcename_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Name</a>
@@ -1006,8 +945,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aclresourcetype_nodejs">
 <a href="#state_aclresourcetype_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Resource<wbr>Type</a>
@@ -1017,8 +955,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepatterntypefilter_nodejs">
 <a href="#state_resourcepatterntypefilter_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pattern<wbr>Type<wbr>Filter</a>
@@ -1028,13 +965,11 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_host_python">
 <a href="#state_acl_host_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>host</a>
@@ -1044,8 +979,7 @@ are `Prefixed`, `Any`, `Match`, `Literal`.
     </dt>
     <dd>{{% md %}}Host from which principal listed in `acl_principal`
 will have access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_operation_python">
 <a href="#state_acl_operation_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>operation</a>
@@ -1056,8 +990,7 @@ will have access.
     <dd>{{% md %}}Operation that is being allowed or denied. Valid
 values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`,
 `Describe`, `ClusterAction`, `DescribeConfigs`, `AlterConfigs`, `IdempotentWrite`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_permission_type_python">
 <a href="#state_acl_permission_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>permission_<wbr>type</a>
@@ -1067,8 +1000,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}Type of permission. Valid values are `Unknown`,
 `Any`, `Allow`, `Deny`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_principal_python">
 <a href="#state_acl_principal_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>principal</a>
@@ -1077,8 +1009,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal that is being allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_resource_name_python">
 <a href="#state_acl_resource_name_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>name</a>
@@ -1087,8 +1018,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acl_resource_type_python">
 <a href="#state_acl_resource_type_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>resource_<wbr>type</a>
@@ -1098,8 +1028,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The type of resource. Valid values are `Unknown`,
 `Any`, `Topic`, `Group`, `Cluster`, `TransactionalID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_pattern_type_filter_python">
 <a href="#state_resource_pattern_type_filter_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pattern_<wbr>type_<wbr>filter</a>
@@ -1109,8 +1038,7 @@ values are `Unknown`, `Any`, `All`, `Read`, `Write`, `Create`, `Delete`, `Alter`
     </dt>
     <dd>{{% md %}}The pattern filter. Valid values
 are `Prefixed`, `Any`, `Match`, `Literal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

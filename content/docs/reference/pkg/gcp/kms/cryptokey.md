@@ -403,8 +403,7 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyring_csharp">
 <a href="#keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -414,8 +413,7 @@ The CryptoKey resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -424,8 +422,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -434,8 +431,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_csharp">
 <a href="#purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -448,8 +444,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotationperiod_csharp">
 <a href="#rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
@@ -461,8 +456,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipinitialversioncreation_csharp">
 <a href="#skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
@@ -472,8 +466,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versiontemplate_csharp">
 <a href="#versiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
@@ -483,13 +476,11 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyring_go">
 <a href="#keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -499,8 +490,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -509,8 +499,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -519,8 +508,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_go">
 <a href="#purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -533,8 +521,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotationperiod_go">
 <a href="#rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
@@ -546,8 +533,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipinitialversioncreation_go">
 <a href="#skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
@@ -557,8 +543,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versiontemplate_go">
 <a href="#versiontemplate_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
@@ -568,13 +553,11 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyring_nodejs">
 <a href="#keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
@@ -584,8 +567,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -594,8 +576,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -604,8 +585,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_nodejs">
 <a href="#purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -618,8 +598,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotationperiod_nodejs">
 <a href="#rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
@@ -631,8 +610,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipinitialversioncreation_nodejs">
 <a href="#skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
@@ -642,8 +620,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versiontemplate_nodejs">
 <a href="#versiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Template</a>
@@ -653,13 +630,11 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_ring_python">
 <a href="#key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
@@ -669,8 +644,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -679,8 +653,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -689,8 +662,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="purpose_python">
 <a href="#purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -703,8 +675,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotation_period_python">
 <a href="#rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
@@ -716,8 +687,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_initial_version_creation_python">
 <a href="#skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
@@ -727,8 +697,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_template_python">
 <a href="#version_template_python" style="color: inherit; text-decoration: inherit;">version_<wbr>template</a>
@@ -738,8 +707,7 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -750,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -759,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -769,13 +735,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -783,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -793,13 +756,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -807,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -817,13 +777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -831,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -841,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -969,8 +925,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_csharp">
 <a href="#state_keyring_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -980,8 +935,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -990,8 +944,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1000,8 +953,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_csharp">
 <a href="#state_purpose_csharp" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -1014,8 +966,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotationperiod_csharp">
 <a href="#state_rotationperiod_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
@@ -1027,8 +978,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1037,8 +987,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipinitialversioncreation_csharp">
 <a href="#state_skipinitialversioncreation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
@@ -1048,8 +997,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versiontemplate_csharp">
 <a href="#state_versiontemplate_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
@@ -1059,13 +1007,11 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_go">
 <a href="#state_keyring_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ring</a>
@@ -1075,8 +1021,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1085,8 +1030,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1095,8 +1039,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_go">
 <a href="#state_purpose_go" style="color: inherit; text-decoration: inherit;">Purpose</a>
@@ -1109,8 +1052,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotationperiod_go">
 <a href="#state_rotationperiod_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Period</a>
@@ -1122,8 +1064,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1132,8 +1073,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipinitialversioncreation_go">
 <a href="#state_skipinitialversioncreation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Initial<wbr>Version<wbr>Creation</a>
@@ -1143,8 +1083,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versiontemplate_go">
 <a href="#state_versiontemplate_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Template</a>
@@ -1154,13 +1093,11 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keyring_nodejs">
 <a href="#state_keyring_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ring</a>
@@ -1170,8 +1107,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1180,8 +1116,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1190,8 +1125,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_nodejs">
 <a href="#state_purpose_nodejs" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -1204,8 +1138,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotationperiod_nodejs">
 <a href="#state_rotationperiod_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Period</a>
@@ -1217,8 +1150,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1227,8 +1159,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipinitialversioncreation_nodejs">
 <a href="#state_skipinitialversioncreation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Initial<wbr>Version<wbr>Creation</a>
@@ -1238,8 +1169,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versiontemplate_nodejs">
 <a href="#state_versiontemplate_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Template</a>
@@ -1249,13 +1179,11 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_key_ring_python">
 <a href="#state_key_ring_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ring</a>
@@ -1265,8 +1193,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1275,8 +1202,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1285,8 +1211,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_purpose_python">
 <a href="#state_purpose_python" style="color: inherit; text-decoration: inherit;">purpose</a>
@@ -1299,8 +1224,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 for possible inputs.
 Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotation_period_python">
 <a href="#state_rotation_period_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>period</a>
@@ -1312,8 +1236,7 @@ Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYP
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1322,8 +1245,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link of the created KeyRing in the format projects/{project}/locations/{location}/keyRings/{name}.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of id, which contains an identical value. This field will be removed in the next major release of the provider.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_skip_initial_version_creation_python">
 <a href="#state_skip_initial_version_creation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>initial_<wbr>version_<wbr>creation</a>
@@ -1333,8 +1255,7 @@ letter `s` (seconds). It must be greater than a day (ie, 86400).
     </dt>
     <dd>{{% md %}}If set to true, the request will create a CryptoKey without any CryptoKeyVersions.
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_template_python">
 <a href="#state_version_template_python" style="color: inherit; text-decoration: inherit;">version_<wbr>template</a>
@@ -1344,8 +1265,7 @@ You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVers
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1360,8 +1280,7 @@ Structure is documented below.
 <h4 id="cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1371,8 +1290,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectionlevel_csharp">
 <a href="#protectionlevel_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
@@ -1383,13 +1301,11 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
 Default value is `SOFTWARE`.
 Possible values are `SOFTWARE` and `HSM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1399,8 +1315,7 @@ Possible values are `SOFTWARE` and `HSM`.
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectionlevel_go">
 <a href="#protectionlevel_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Level</a>
@@ -1411,13 +1326,11 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
 Default value is `SOFTWARE`.
 Possible values are `SOFTWARE` and `HSM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1427,8 +1340,7 @@ Possible values are `SOFTWARE` and `HSM`.
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectionlevel_nodejs">
 <a href="#protectionlevel_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Level</a>
@@ -1439,13 +1351,11 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
 Default value is `SOFTWARE`.
 Possible values are `SOFTWARE` and `HSM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1455,8 +1365,7 @@ Possible values are `SOFTWARE` and `HSM`.
     </dt>
     <dd>{{% md %}}The algorithm to use when creating a version based on this template.
 See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protection_level_python">
 <a href="#protection_level_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>level</a>
@@ -1467,8 +1376,7 @@ See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v
     <dd>{{% md %}}The protection level to use when creating a version based on this template.
 Default value is `SOFTWARE`.
 Possible values are `SOFTWARE` and `HSM`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

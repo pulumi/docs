@@ -301,8 +301,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -311,8 +310,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datafactoryname_csharp">
 <a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -321,8 +319,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -331,8 +328,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_csharp">
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -341,8 +337,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -351,8 +346,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -361,8 +355,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationruntimename_csharp">
 <a href="#integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -371,8 +364,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -382,8 +374,7 @@ The LinkedServiceAzureSqlDatabase resource accepts the following [input]({{< rel
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -392,13 +383,11 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -407,8 +396,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datafactoryname_go">
 <a href="#datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -417,8 +405,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -427,8 +414,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_go">
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -437,8 +423,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -447,8 +432,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -457,8 +441,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationruntimename_go">
 <a href="#integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -467,8 +450,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -478,8 +460,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -488,13 +469,11 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -503,8 +482,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datafactoryname_nodejs">
 <a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
@@ -513,8 +491,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -523,8 +500,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_nodejs">
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
@@ -533,8 +509,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -543,8 +518,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -553,8 +527,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationruntimename_nodejs">
 <a href="#integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
@@ -563,8 +536,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +546,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -584,13 +555,11 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -599,8 +568,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_factory_name_python">
 <a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
@@ -609,8 +577,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -619,8 +586,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_properties_python">
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
@@ -629,8 +595,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -639,8 +604,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -649,8 +613,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_runtime_name_python">
 <a href="#integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
@@ -659,8 +622,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +632,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -680,8 +641,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -692,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -701,13 +660,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -715,13 +672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -729,13 +684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -743,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -871,8 +823,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalproperties_csharp">
 <a href="#state_additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -881,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -891,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_csharp">
 <a href="#state_connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -901,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_csharp">
 <a href="#state_datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -911,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -921,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationruntimename_csharp">
 <a href="#state_integrationruntimename_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -931,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -942,8 +887,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -952,8 +896,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -962,13 +905,11 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalproperties_go">
 <a href="#state_additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -977,8 +918,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -987,8 +927,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_go">
 <a href="#state_connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -997,8 +936,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_go">
 <a href="#state_datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -1007,8 +945,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1017,8 +954,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationruntimename_go">
 <a href="#state_integrationruntimename_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Runtime<wbr>Name</a>
@@ -1027,8 +963,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1038,8 +973,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1048,8 +982,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1058,13 +991,11 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalproperties_nodejs">
 <a href="#state_additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
@@ -1073,8 +1004,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1083,8 +1013,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_nodejs">
 <a href="#state_connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1093,8 +1022,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_nodejs">
 <a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
@@ -1103,8 +1031,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1113,8 +1040,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationruntimename_nodejs">
 <a href="#state_integrationruntimename_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Runtime<wbr>Name</a>
@@ -1123,8 +1049,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1134,8 +1059,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1144,8 +1068,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1154,13 +1077,11 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additional_properties_python">
 <a href="#state_additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
@@ -1169,8 +1090,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of additional properties to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1179,8 +1099,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_string_python">
 <a href="#state_connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1189,8 +1108,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string in which to authenticate with Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_factory_name_python">
 <a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
@@ -1199,8 +1117,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Data Factory name in which to associate the Linked Service with. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1209,8 +1126,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_runtime_name_python">
 <a href="#state_integration_runtime_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>runtime_<wbr>name</a>
@@ -1219,8 +1135,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration runtime reference to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1230,8 +1145,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created. Must be unique within a data
 factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1240,8 +1154,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service Azure SQL Database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1250,8 +1163,7 @@ factory. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azur
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service Azure SQL Database. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

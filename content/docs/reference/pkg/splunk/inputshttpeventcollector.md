@@ -1,8 +1,8 @@
 
 ---
 title: "InputsHttpEventCollector"
-title_tag: "Resource InputsHttpEventCollector | Package Splunk"
-meta_desc: "Explore the InputsHttpEventCollector resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsHttpEventCollector"
+title_tag: "splunk.InputsHttpEventCollector"
+meta_desc: "Documentation for the splunk.InputsHttpEventCollector resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -39,9 +39,7 @@ Create or update HTTP Event Collector input configuration tokens.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -49,9 +47,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,9 +55,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -69,10 +63,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -98,9 +89,7 @@ Create or update HTTP Event Collector input configuration tokens.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -108,9 +97,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -118,9 +105,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -128,9 +113,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -138,18 +121,13 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +135,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +143,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +151,7 @@ Create or update HTTP Event Collector input configuration tokens.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -195,9 +166,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -206,8 +175,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -216,8 +184,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -226,8 +193,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -236,8 +202,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexes_csharp">
 <a href="#indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
@@ -246,8 +211,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +220,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -266,8 +229,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -276,8 +238,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -286,8 +247,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useack_csharp">
 <a href="#useack_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ack</a>
@@ -296,14 +256,11 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -312,8 +269,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -322,8 +278,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -332,8 +287,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_go">
 <a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -342,8 +296,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexes_go">
 <a href="#indexes_go" style="color: inherit; text-decoration: inherit;">Indexes</a>
@@ -352,8 +305,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -362,8 +314,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -372,8 +323,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -382,8 +332,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -392,8 +341,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useack_go">
 <a href="#useack_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ack</a>
@@ -402,14 +350,11 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -418,8 +363,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -428,8 +372,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -438,8 +381,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_nodejs">
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -448,8 +390,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexes_nodejs">
 <a href="#indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
@@ -458,8 +399,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -468,8 +408,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -478,8 +417,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -488,8 +426,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -498,8 +435,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useack_nodejs">
 <a href="#useack_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ack</a>
@@ -508,14 +444,11 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -524,8 +457,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -534,8 +466,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -544,8 +475,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_python">
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -554,8 +484,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexes_python">
 <a href="#indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
@@ -564,8 +493,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +502,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -584,8 +511,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_python">
 <a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -594,8 +520,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -604,8 +529,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_ack_python">
 <a href="#use_ack_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ack</a>
@@ -614,8 +538,7 @@ The InputsHttpEventCollector resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -626,9 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,14 +557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -651,14 +569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -681,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,9 +720,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -820,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -830,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -840,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_csharp">
 <a href="#state_index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -850,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexes_csharp">
 <a href="#state_indexes_csharp" style="color: inherit; text-decoration: inherit;">Indexes</a>
@@ -860,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -870,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -880,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_csharp">
 <a href="#state_sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -890,8 +792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -900,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useack_csharp">
 <a href="#state_useack_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ack</a>
@@ -910,14 +810,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -926,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -936,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -946,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_go">
 <a href="#state_index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -956,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexes_go">
 <a href="#state_indexes_go" style="color: inherit; text-decoration: inherit;">Indexes</a>
@@ -966,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -976,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -986,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_go">
 <a href="#state_sourcetype_go" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -996,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1006,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useack_go">
 <a href="#state_useack_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ack</a>
@@ -1016,14 +904,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1032,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1042,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1052,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_nodejs">
 <a href="#state_index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1062,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexes_nodejs">
 <a href="#state_indexes_nodejs" style="color: inherit; text-decoration: inherit;">indexes</a>
@@ -1072,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1082,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1092,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_nodejs">
 <a href="#state_sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -1102,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1112,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useack_nodejs">
 <a href="#state_useack_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ack</a>
@@ -1122,14 +998,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1138,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1148,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Input disabled indicator
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1158,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default host value for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_python">
 <a href="#state_index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1168,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Index to store generated events
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexes_python">
 <a href="#state_indexes_python" style="color: inherit; text-decoration: inherit;">indexes</a>
@@ -1178,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of indexes allowed for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1188,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token name (inputs.conf key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1198,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default source for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_python">
 <a href="#state_sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -1208,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default source type for events with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1218,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token value for sending data to collector/event endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_ack_python">
 <a href="#state_use_ack_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ack</a>
@@ -1228,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indexer acknowledgement for this token
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1244,9 +1107,7 @@ The following state arguments are supported:
 <h4 id="inputshttpeventcollectoracl">Inputs<wbr>Http<wbr>Event<wbr>Collector<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1254,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1263,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1272,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1281,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1290,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1299,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1308,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1317,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1326,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1335,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1344,14 +1195,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1359,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1368,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1377,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1386,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1395,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1404,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1413,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1422,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1431,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1440,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1449,14 +1287,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1464,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -1473,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -1482,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -1491,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -1500,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -1509,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1518,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1527,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1536,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1545,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1554,14 +1379,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1569,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -1578,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -1587,8 +1407,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -1596,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -1605,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -1614,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1623,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1632,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1641,8 +1455,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1650,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1659,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

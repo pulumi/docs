@@ -366,8 +366,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="programtext_csharp">
 <a href="#programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -376,8 +375,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axesincludezero_csharp">
 <a href="#axesincludezero_csharp" style="color: inherit; text-decoration: inherit;">Axes<wbr>Include<wbr>Zero</a>
@@ -386,8 +384,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axesprecision_csharp">
 <a href="#axesprecision_csharp" style="color: inherit; text-decoration: inherit;">Axes<wbr>Precision</a>
@@ -396,8 +393,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axisleft_csharp">
 <a href="#axisleft_csharp" style="color: inherit; text-decoration: inherit;">Axis<wbr>Left</a>
@@ -406,8 +402,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisleft">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axisright_csharp">
 <a href="#axisright_csharp" style="color: inherit; text-decoration: inherit;">Axis<wbr>Right</a>
@@ -416,8 +411,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisright">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorby_csharp">
 <a href="#colorby_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
@@ -426,8 +420,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -436,8 +429,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesampling_csharp">
 <a href="#disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -446,8 +438,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -456,8 +447,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventoptions_csharp">
 <a href="#eventoptions_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Options</a>
@@ -466,8 +456,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharteventoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="histogramoptions_csharp">
 <a href="#histogramoptions_csharp" style="color: inherit; text-decoration: inherit;">Histogram<wbr>Options</a>
@@ -476,8 +465,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharthistogramoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="legendfieldstohides_csharp">
 <a href="#legendfieldstohides_csharp" style="color: inherit; text-decoration: inherit;">Legend<wbr>Fields<wbr>To<wbr>Hides</a>
@@ -486,8 +474,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="legendoptionsfields_csharp">
 <a href="#legendoptionsfields_csharp" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
@@ -496,8 +483,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartlegendoptionsfield">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdelay_csharp">
 <a href="#maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -506,8 +492,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_csharp">
 <a href="#minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -516,8 +501,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -526,8 +510,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onchartlegenddimension_csharp">
 <a href="#onchartlegenddimension_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Chart<wbr>Legend<wbr>Dimension</a>
@@ -536,8 +519,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plottype_csharp">
 <a href="#plottype_csharp" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
@@ -546,8 +528,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="showdatamarkers_csharp">
 <a href="#showdatamarkers_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
@@ -556,8 +537,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="showeventlines_csharp">
 <a href="#showeventlines_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
@@ -566,8 +546,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stacked_csharp">
 <a href="#stacked_csharp" style="color: inherit; text-decoration: inherit;">Stacked</a>
@@ -576,8 +555,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -586,8 +564,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -596,8 +573,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timerange_csharp">
 <a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -606,8 +582,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -616,8 +591,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unitprefix_csharp">
 <a href="#unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -626,8 +600,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vizoptions_csharp">
 <a href="#vizoptions_csharp" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
@@ -636,13 +609,11 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartvizoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="programtext_go">
 <a href="#programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -651,8 +622,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axesincludezero_go">
 <a href="#axesincludezero_go" style="color: inherit; text-decoration: inherit;">Axes<wbr>Include<wbr>Zero</a>
@@ -661,8 +631,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axesprecision_go">
 <a href="#axesprecision_go" style="color: inherit; text-decoration: inherit;">Axes<wbr>Precision</a>
@@ -671,8 +640,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axisleft_go">
 <a href="#axisleft_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Left</a>
@@ -681,8 +649,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axisright_go">
 <a href="#axisright_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Right</a>
@@ -691,8 +658,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorby_go">
 <a href="#colorby_go" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
@@ -701,8 +667,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -711,8 +676,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesampling_go">
 <a href="#disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -721,8 +685,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -731,8 +694,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventoptions_go">
 <a href="#eventoptions_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Options</a>
@@ -741,8 +703,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharteventoption">[]Time<wbr>Chart<wbr>Event<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="histogramoptions_go">
 <a href="#histogramoptions_go" style="color: inherit; text-decoration: inherit;">Histogram<wbr>Options</a>
@@ -751,8 +712,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharthistogramoption">[]Time<wbr>Chart<wbr>Histogram<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="legendfieldstohides_go">
 <a href="#legendfieldstohides_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Fields<wbr>To<wbr>Hides</a>
@@ -761,8 +721,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="legendoptionsfields_go">
 <a href="#legendoptionsfields_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
@@ -771,8 +730,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartlegendoptionsfield">[]Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdelay_go">
 <a href="#maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -781,8 +739,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_go">
 <a href="#minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -791,8 +748,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -801,8 +757,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onchartlegenddimension_go">
 <a href="#onchartlegenddimension_go" style="color: inherit; text-decoration: inherit;">On<wbr>Chart<wbr>Legend<wbr>Dimension</a>
@@ -811,8 +766,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plottype_go">
 <a href="#plottype_go" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
@@ -821,8 +775,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="showdatamarkers_go">
 <a href="#showdatamarkers_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
@@ -831,8 +784,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="showeventlines_go">
 <a href="#showeventlines_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
@@ -841,8 +793,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stacked_go">
 <a href="#stacked_go" style="color: inherit; text-decoration: inherit;">Stacked</a>
@@ -851,8 +802,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -861,8 +811,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -871,8 +820,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timerange_go">
 <a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -881,8 +829,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -891,8 +838,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unitprefix_go">
 <a href="#unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -901,8 +847,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vizoptions_go">
 <a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
@@ -911,13 +856,11 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartvizoption">[]Time<wbr>Chart<wbr>Viz<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="programtext_nodejs">
 <a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
@@ -926,8 +869,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axesincludezero_nodejs">
 <a href="#axesincludezero_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Include<wbr>Zero</a>
@@ -936,8 +878,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axesprecision_nodejs">
 <a href="#axesprecision_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Precision</a>
@@ -946,8 +887,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axisleft_nodejs">
 <a href="#axisleft_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Left</a>
@@ -956,8 +896,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axisright_nodejs">
 <a href="#axisright_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Right</a>
@@ -966,8 +905,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorby_nodejs">
 <a href="#colorby_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>By</a>
@@ -976,8 +914,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -986,8 +923,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesampling_nodejs">
 <a href="#disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
@@ -996,8 +932,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1006,8 +941,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventoptions_nodejs">
 <a href="#eventoptions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Options</a>
@@ -1016,8 +950,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharteventoption">Time<wbr>Chart<wbr>Event<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="histogramoptions_nodejs">
 <a href="#histogramoptions_nodejs" style="color: inherit; text-decoration: inherit;">histogram<wbr>Options</a>
@@ -1026,8 +959,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharthistogramoption">Time<wbr>Chart<wbr>Histogram<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="legendfieldstohides_nodejs">
 <a href="#legendfieldstohides_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Fields<wbr>To<wbr>Hides</a>
@@ -1036,8 +968,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="legendoptionsfields_nodejs">
 <a href="#legendoptionsfields_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Options<wbr>Fields</a>
@@ -1046,8 +977,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartlegendoptionsfield">Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdelay_nodejs">
 <a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
@@ -1056,8 +986,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_nodejs">
 <a href="#minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
@@ -1066,8 +995,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1076,8 +1004,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onchartlegenddimension_nodejs">
 <a href="#onchartlegenddimension_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Chart<wbr>Legend<wbr>Dimension</a>
@@ -1086,8 +1013,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plottype_nodejs">
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
@@ -1096,8 +1022,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="showdatamarkers_nodejs">
 <a href="#showdatamarkers_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Data<wbr>Markers</a>
@@ -1106,8 +1031,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="showeventlines_nodejs">
 <a href="#showeventlines_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Event<wbr>Lines</a>
@@ -1116,8 +1040,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stacked_nodejs">
 <a href="#stacked_nodejs" style="color: inherit; text-decoration: inherit;">stacked</a>
@@ -1126,8 +1049,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1136,8 +1058,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1146,8 +1067,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timerange_nodejs">
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
@@ -1156,8 +1076,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1166,8 +1085,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unitprefix_nodejs">
 <a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
@@ -1176,8 +1094,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vizoptions_nodejs">
 <a href="#vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
@@ -1186,13 +1103,11 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartvizoption">Time<wbr>Chart<wbr>Viz<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="program_text_python">
 <a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
@@ -1201,8 +1116,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axes_include_zero_python">
 <a href="#axes_include_zero_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>include_<wbr>zero</a>
@@ -1211,8 +1125,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axes_precision_python">
 <a href="#axes_precision_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>precision</a>
@@ -1221,8 +1134,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axis_left_python">
 <a href="#axis_left_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>left</a>
@@ -1231,8 +1143,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axis_right_python">
 <a href="#axis_right_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>right</a>
@@ -1241,8 +1152,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_by_python">
 <a href="#color_by_python" style="color: inherit; text-decoration: inherit;">color_<wbr>by</a>
@@ -1251,8 +1161,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1261,8 +1170,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_sampling_python">
 <a href="#disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
@@ -1271,8 +1179,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1281,8 +1188,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_options_python">
 <a href="#event_options_python" style="color: inherit; text-decoration: inherit;">event_<wbr>options</a>
@@ -1291,8 +1197,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharteventoption">Sequence[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="histogram_options_python">
 <a href="#histogram_options_python" style="color: inherit; text-decoration: inherit;">histogram_<wbr>options</a>
@@ -1301,8 +1206,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timecharthistogramoption">Sequence[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="legend_fields_to_hides_python">
 <a href="#legend_fields_to_hides_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>fields_<wbr>to_<wbr>hides</a>
@@ -1311,8 +1215,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="legend_options_fields_python">
 <a href="#legend_options_fields_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>options_<wbr>fields</a>
@@ -1321,8 +1224,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartlegendoptionsfield">Sequence[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delay_python">
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
@@ -1331,8 +1233,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_resolution_python">
 <a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
@@ -1341,8 +1242,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1351,8 +1251,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_chart_legend_dimension_python">
 <a href="#on_chart_legend_dimension_python" style="color: inherit; text-decoration: inherit;">on_<wbr>chart_<wbr>legend_<wbr>dimension</a>
@@ -1361,8 +1260,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plot_type_python">
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
@@ -1371,8 +1269,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="show_data_markers_python">
 <a href="#show_data_markers_python" style="color: inherit; text-decoration: inherit;">show_<wbr>data_<wbr>markers</a>
@@ -1381,8 +1278,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="show_event_lines_python">
 <a href="#show_event_lines_python" style="color: inherit; text-decoration: inherit;">show_<wbr>event_<wbr>lines</a>
@@ -1391,8 +1287,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stacked_python">
 <a href="#stacked_python" style="color: inherit; text-decoration: inherit;">stacked</a>
@@ -1401,8 +1296,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1411,8 +1305,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1421,8 +1314,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="time_range_python">
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
@@ -1431,8 +1323,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1441,8 +1332,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_prefix_python">
 <a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
@@ -1451,8 +1341,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viz_options_python">
 <a href="#viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
@@ -1461,8 +1350,7 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#timechartvizoption">Sequence[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1473,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1482,8 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1492,13 +1378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1506,8 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1516,13 +1399,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1530,8 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1540,13 +1420,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1554,8 +1432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1564,8 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1692,8 +1568,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_axesincludezero_csharp">
 <a href="#state_axesincludezero_csharp" style="color: inherit; text-decoration: inherit;">Axes<wbr>Include<wbr>Zero</a>
@@ -1702,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axesprecision_csharp">
 <a href="#state_axesprecision_csharp" style="color: inherit; text-decoration: inherit;">Axes<wbr>Precision</a>
@@ -1712,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axisleft_csharp">
 <a href="#state_axisleft_csharp" style="color: inherit; text-decoration: inherit;">Axis<wbr>Left</a>
@@ -1722,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisleft">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axisright_csharp">
 <a href="#state_axisright_csharp" style="color: inherit; text-decoration: inherit;">Axis<wbr>Right</a>
@@ -1732,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisright">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_colorby_csharp">
 <a href="#state_colorby_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
@@ -1742,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1752,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_csharp">
 <a href="#state_disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -1762,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_csharp">
 <a href="#state_endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1772,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventoptions_csharp">
 <a href="#state_eventoptions_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Options</a>
@@ -1782,8 +1649,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharteventoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_histogramoptions_csharp">
 <a href="#state_histogramoptions_csharp" style="color: inherit; text-decoration: inherit;">Histogram<wbr>Options</a>
@@ -1792,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharthistogramoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_legendfieldstohides_csharp">
 <a href="#state_legendfieldstohides_csharp" style="color: inherit; text-decoration: inherit;">Legend<wbr>Fields<wbr>To<wbr>Hides</a>
@@ -1802,8 +1667,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_legendoptionsfields_csharp">
 <a href="#state_legendoptionsfields_csharp" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
@@ -1812,8 +1676,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartlegendoptionsfield">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_csharp">
 <a href="#state_maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -1822,8 +1685,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_csharp">
 <a href="#state_minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -1832,8 +1694,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1842,8 +1703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onchartlegenddimension_csharp">
 <a href="#state_onchartlegenddimension_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Chart<wbr>Legend<wbr>Dimension</a>
@@ -1852,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plottype_csharp">
 <a href="#state_plottype_csharp" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
@@ -1862,8 +1721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_programtext_csharp">
 <a href="#state_programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -1872,8 +1730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_showdatamarkers_csharp">
 <a href="#state_showdatamarkers_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
@@ -1882,8 +1739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_showeventlines_csharp">
 <a href="#state_showeventlines_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
@@ -1892,8 +1748,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stacked_csharp">
 <a href="#state_stacked_csharp" style="color: inherit; text-decoration: inherit;">Stacked</a>
@@ -1902,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1912,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1922,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerange_csharp">
 <a href="#state_timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -1932,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_csharp">
 <a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -1942,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_csharp">
 <a href="#state_unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -1952,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1962,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vizoptions_csharp">
 <a href="#state_vizoptions_csharp" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
@@ -1972,13 +1820,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartvizoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_axesincludezero_go">
 <a href="#state_axesincludezero_go" style="color: inherit; text-decoration: inherit;">Axes<wbr>Include<wbr>Zero</a>
@@ -1987,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axesprecision_go">
 <a href="#state_axesprecision_go" style="color: inherit; text-decoration: inherit;">Axes<wbr>Precision</a>
@@ -1997,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axisleft_go">
 <a href="#state_axisleft_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Left</a>
@@ -2007,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axisright_go">
 <a href="#state_axisright_go" style="color: inherit; text-decoration: inherit;">Axis<wbr>Right</a>
@@ -2017,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_colorby_go">
 <a href="#state_colorby_go" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
@@ -2027,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2037,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_go">
 <a href="#state_disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -2047,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_go">
 <a href="#state_endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2057,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventoptions_go">
 <a href="#state_eventoptions_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Options</a>
@@ -2067,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharteventoption">[]Time<wbr>Chart<wbr>Event<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_histogramoptions_go">
 <a href="#state_histogramoptions_go" style="color: inherit; text-decoration: inherit;">Histogram<wbr>Options</a>
@@ -2077,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharthistogramoption">[]Time<wbr>Chart<wbr>Histogram<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_legendfieldstohides_go">
 <a href="#state_legendfieldstohides_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Fields<wbr>To<wbr>Hides</a>
@@ -2087,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_legendoptionsfields_go">
 <a href="#state_legendoptionsfields_go" style="color: inherit; text-decoration: inherit;">Legend<wbr>Options<wbr>Fields</a>
@@ -2097,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartlegendoptionsfield">[]Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_go">
 <a href="#state_maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -2107,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_go">
 <a href="#state_minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -2117,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2127,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onchartlegenddimension_go">
 <a href="#state_onchartlegenddimension_go" style="color: inherit; text-decoration: inherit;">On<wbr>Chart<wbr>Legend<wbr>Dimension</a>
@@ -2137,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plottype_go">
 <a href="#state_plottype_go" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
@@ -2147,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_programtext_go">
 <a href="#state_programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -2157,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_showdatamarkers_go">
 <a href="#state_showdatamarkers_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Data<wbr>Markers</a>
@@ -2167,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_showeventlines_go">
 <a href="#state_showeventlines_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Event<wbr>Lines</a>
@@ -2177,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stacked_go">
 <a href="#state_stacked_go" style="color: inherit; text-decoration: inherit;">Stacked</a>
@@ -2187,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_go">
 <a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2197,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2207,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerange_go">
 <a href="#state_timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -2217,8 +2040,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_go">
 <a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -2227,8 +2049,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_go">
 <a href="#state_unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -2237,8 +2058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2247,8 +2067,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vizoptions_go">
 <a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
@@ -2257,13 +2076,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartvizoption">[]Time<wbr>Chart<wbr>Viz<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_axesincludezero_nodejs">
 <a href="#state_axesincludezero_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Include<wbr>Zero</a>
@@ -2272,8 +2089,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axesprecision_nodejs">
 <a href="#state_axesprecision_nodejs" style="color: inherit; text-decoration: inherit;">axes<wbr>Precision</a>
@@ -2282,8 +2098,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axisleft_nodejs">
 <a href="#state_axisleft_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Left</a>
@@ -2292,8 +2107,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axisright_nodejs">
 <a href="#state_axisright_nodejs" style="color: inherit; text-decoration: inherit;">axis<wbr>Right</a>
@@ -2302,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_colorby_nodejs">
 <a href="#state_colorby_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>By</a>
@@ -2312,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2322,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_nodejs">
 <a href="#state_disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
@@ -2332,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_nodejs">
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2342,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventoptions_nodejs">
 <a href="#state_eventoptions_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Options</a>
@@ -2352,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharteventoption">Time<wbr>Chart<wbr>Event<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_histogramoptions_nodejs">
 <a href="#state_histogramoptions_nodejs" style="color: inherit; text-decoration: inherit;">histogram<wbr>Options</a>
@@ -2362,8 +2170,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharthistogramoption">Time<wbr>Chart<wbr>Histogram<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_legendfieldstohides_nodejs">
 <a href="#state_legendfieldstohides_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Fields<wbr>To<wbr>Hides</a>
@@ -2372,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_legendoptionsfields_nodejs">
 <a href="#state_legendoptionsfields_nodejs" style="color: inherit; text-decoration: inherit;">legend<wbr>Options<wbr>Fields</a>
@@ -2382,8 +2188,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartlegendoptionsfield">Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_nodejs">
 <a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
@@ -2392,8 +2197,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_nodejs">
 <a href="#state_minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
@@ -2402,8 +2206,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2412,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onchartlegenddimension_nodejs">
 <a href="#state_onchartlegenddimension_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Chart<wbr>Legend<wbr>Dimension</a>
@@ -2422,8 +2224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plottype_nodejs">
 <a href="#state_plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
@@ -2432,8 +2233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_programtext_nodejs">
 <a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
@@ -2442,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_showdatamarkers_nodejs">
 <a href="#state_showdatamarkers_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Data<wbr>Markers</a>
@@ -2452,8 +2251,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_showeventlines_nodejs">
 <a href="#state_showeventlines_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Event<wbr>Lines</a>
@@ -2462,8 +2260,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stacked_nodejs">
 <a href="#state_stacked_nodejs" style="color: inherit; text-decoration: inherit;">stacked</a>
@@ -2472,8 +2269,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2482,8 +2278,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2492,8 +2287,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerange_nodejs">
 <a href="#state_timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
@@ -2502,8 +2296,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_nodejs">
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -2512,8 +2305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_nodejs">
 <a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
@@ -2522,8 +2314,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2532,8 +2323,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vizoptions_nodejs">
 <a href="#state_vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
@@ -2542,13 +2332,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartvizoption">Time<wbr>Chart<wbr>Viz<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_axes_include_zero_python">
 <a href="#state_axes_include_zero_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>include_<wbr>zero</a>
@@ -2557,8 +2345,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Force the chart to display zero on the y-axes, even if none of the data is near zero.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axes_precision_python">
 <a href="#state_axes_precision_python" style="color: inherit; text-decoration: inherit;">axes_<wbr>precision</a>
@@ -2567,8 +2354,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the digits SignalFx displays for values plotted on the chart. Defaults to `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axis_left_python">
 <a href="#state_axis_left_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>left</a>
@@ -2577,8 +2363,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_axis_right_python">
 <a href="#state_axis_right_python" style="color: inherit; text-decoration: inherit;">axis_<wbr>right</a>
@@ -2587,8 +2372,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of axis options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_color_by_python">
 <a href="#state_color_by_python" style="color: inherit; text-decoration: inherit;">color_<wbr>by</a>
@@ -2597,8 +2381,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"` or `"Metric"`. `"Dimension"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2607,8 +2390,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_sampling_python">
 <a href="#state_disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
@@ -2617,8 +2399,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_end_time_python">
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2627,8 +2408,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_options_python">
 <a href="#state_event_options_python" style="color: inherit; text-decoration: inherit;">event_<wbr>options</a>
@@ -2637,8 +2417,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharteventoption">Sequence[Time<wbr>Chart<wbr>Event<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Event customization options, associated with a publish statement. You will need to use this to change settings for any `events(…)` statements you use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_histogram_options_python">
 <a href="#state_histogram_options_python" style="color: inherit; text-decoration: inherit;">histogram_<wbr>options</a>
@@ -2647,8 +2426,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timecharthistogramoption">Sequence[Time<wbr>Chart<wbr>Histogram<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Only used when `plot_type` is `"Histogram"`. Histogram specific options.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_legend_fields_to_hides_python">
 <a href="#state_legend_fields_to_hides_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>fields_<wbr>to_<wbr>hides</a>
@@ -2657,8 +2435,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of properties that should not be displayed in the chart legend (i.e. dimension names). All the properties are visible by default. Deprecated, please use `legend_options_fields`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use legend_options_fields{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_legend_options_fields_python">
 <a href="#state_legend_options_fields_python" style="color: inherit; text-decoration: inherit;">legend_<wbr>options_<wbr>fields</a>
@@ -2667,8 +2444,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartlegendoptionsfield">Sequence[Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of property names and enabled flags that should be displayed in the data table for the chart, in the order provided. This option cannot be used with `legend_fields_to_hide`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_delay_python">
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
@@ -2677,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_resolution_python">
 <a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
@@ -2687,8 +2462,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2697,8 +2471,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_on_chart_legend_dimension_python">
 <a href="#state_on_chart_legend_dimension_python" style="color: inherit; text-decoration: inherit;">on_<wbr>chart_<wbr>legend_<wbr>dimension</a>
@@ -2707,8 +2480,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dimensions to show in the on-chart legend. On-chart legend is off unless a dimension is specified. Allowed: `"metric"`, `"plot_label"` and any dimension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plot_type_python">
 <a href="#state_plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
@@ -2717,8 +2489,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_program_text_python">
 <a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
@@ -2727,8 +2498,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_show_data_markers_python">
 <a href="#state_show_data_markers_python" style="color: inherit; text-decoration: inherit;">show_<wbr>data_<wbr>markers</a>
@@ -2737,8 +2507,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show markers (circles) for each datapoint used to draw line or area charts. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_show_event_lines_python">
 <a href="#state_show_event_lines_python" style="color: inherit; text-decoration: inherit;">show_<wbr>event_<wbr>lines</a>
@@ -2747,8 +2516,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether vertical highlight lines should be drawn in the visualizations at times when events occurred. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stacked_python">
 <a href="#state_stacked_python" style="color: inherit; text-decoration: inherit;">stacked</a>
@@ -2757,8 +2525,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether area and bar charts in the visualization should be stacked. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2767,8 +2534,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization. Conflicts with `time_range`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2777,8 +2543,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags associated with the chart
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}signalfx_time_chart.tags is being removed in the next release{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_range_python">
 <a href="#state_time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
@@ -2787,8 +2552,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds ago from which to display data. For example, the last hour would be `3600`, etc. Conflicts with `start_time` and `end_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_python">
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -2797,8 +2561,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time zone that SignalFlow uses as the basis of calendar window transformation methods. For example, if you set "timezone": "Europe/Paris" and then use the transformation sum(cycle="week", cycle_start="Monday") in your chart's SignalFlow program, the calendar window starts on Monday, Paris time. See the [full list of timezones for more](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_supported_signalflow_time_zones). `"UTC"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unit_prefix_python">
 <a href="#state_unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
@@ -2807,8 +2570,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2817,8 +2579,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viz_options_python">
 <a href="#state_viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
@@ -2827,8 +2588,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#timechartvizoption">Sequence[Time<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2843,8 +2603,7 @@ The following state arguments are supported:
 <h4 id="timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="highwatermark_csharp">
 <a href="#highwatermark_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark</a>
@@ -2853,8 +2612,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highwatermarklabel_csharp">
 <a href="#highwatermarklabel_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark<wbr>Label</a>
@@ -2863,8 +2621,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2873,8 +2630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermark_csharp">
 <a href="#lowwatermark_csharp" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark</a>
@@ -2883,8 +2639,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermarklabel_csharp">
 <a href="#lowwatermarklabel_csharp" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark<wbr>Label</a>
@@ -2893,8 +2648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_csharp">
 <a href="#maxvalue_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -2903,8 +2657,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_csharp">
 <a href="#minvalue_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -2913,8 +2666,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_csharp">
 <a href="#watermarks_csharp" style="color: inherit; text-decoration: inherit;">Watermarks</a>
@@ -2922,13 +2674,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisleftwatermark">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="highwatermark_go">
 <a href="#highwatermark_go" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark</a>
@@ -2937,8 +2687,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highwatermarklabel_go">
 <a href="#highwatermarklabel_go" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark<wbr>Label</a>
@@ -2947,8 +2696,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2957,8 +2705,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermark_go">
 <a href="#lowwatermark_go" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark</a>
@@ -2967,8 +2714,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermarklabel_go">
 <a href="#lowwatermarklabel_go" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark<wbr>Label</a>
@@ -2977,8 +2723,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_go">
 <a href="#maxvalue_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -2987,8 +2732,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_go">
 <a href="#minvalue_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -2997,8 +2741,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_go">
 <a href="#watermarks_go" style="color: inherit; text-decoration: inherit;">Watermarks</a>
@@ -3006,13 +2749,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisleftwatermark">[]Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="highwatermark_nodejs">
 <a href="#highwatermark_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark</a>
@@ -3021,8 +2762,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highwatermarklabel_nodejs">
 <a href="#highwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark<wbr>Label</a>
@@ -3031,8 +2771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3041,8 +2780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermark_nodejs">
 <a href="#lowwatermark_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark</a>
@@ -3051,8 +2789,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermarklabel_nodejs">
 <a href="#lowwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark<wbr>Label</a>
@@ -3061,8 +2798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_nodejs">
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
@@ -3071,8 +2807,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_nodejs">
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
@@ -3081,8 +2816,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_nodejs">
 <a href="#watermarks_nodejs" style="color: inherit; text-decoration: inherit;">watermarks</a>
@@ -3090,13 +2824,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisleftwatermark">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="high_watermark_python">
 <a href="#high_watermark_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark</a>
@@ -3105,8 +2837,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="high_watermark_label_python">
 <a href="#high_watermark_label_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark_<wbr>label</a>
@@ -3115,8 +2846,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3125,8 +2855,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="low_watermark_python">
 <a href="#low_watermark_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark</a>
@@ -3135,8 +2864,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="low_watermark_label_python">
 <a href="#low_watermark_label_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark_<wbr>label</a>
@@ -3145,8 +2873,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_value_python">
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
@@ -3155,8 +2882,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_value_python">
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
@@ -3165,8 +2891,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_python">
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
@@ -3174,15 +2899,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisleftwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timechartaxisleftwatermark">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3190,8 +2913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3200,13 +2922,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3214,8 +2934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3224,13 +2943,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3238,8 +2955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3248,13 +2964,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3262,8 +2976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3272,15 +2985,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="highwatermark_csharp">
 <a href="#highwatermark_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark</a>
@@ -3289,8 +3000,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highwatermarklabel_csharp">
 <a href="#highwatermarklabel_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark<wbr>Label</a>
@@ -3299,8 +3009,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3309,8 +3018,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermark_csharp">
 <a href="#lowwatermark_csharp" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark</a>
@@ -3319,8 +3027,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermarklabel_csharp">
 <a href="#lowwatermarklabel_csharp" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark<wbr>Label</a>
@@ -3329,8 +3036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_csharp">
 <a href="#maxvalue_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -3339,8 +3045,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_csharp">
 <a href="#minvalue_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -3349,8 +3054,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_csharp">
 <a href="#watermarks_csharp" style="color: inherit; text-decoration: inherit;">Watermarks</a>
@@ -3358,13 +3062,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisrightwatermark">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="highwatermark_go">
 <a href="#highwatermark_go" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark</a>
@@ -3373,8 +3075,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highwatermarklabel_go">
 <a href="#highwatermarklabel_go" style="color: inherit; text-decoration: inherit;">High<wbr>Watermark<wbr>Label</a>
@@ -3383,8 +3084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3393,8 +3093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermark_go">
 <a href="#lowwatermark_go" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark</a>
@@ -3403,8 +3102,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermarklabel_go">
 <a href="#lowwatermarklabel_go" style="color: inherit; text-decoration: inherit;">Low<wbr>Watermark<wbr>Label</a>
@@ -3413,8 +3111,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_go">
 <a href="#maxvalue_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -3423,8 +3120,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_go">
 <a href="#minvalue_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -3433,8 +3129,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_go">
 <a href="#watermarks_go" style="color: inherit; text-decoration: inherit;">Watermarks</a>
@@ -3442,13 +3137,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisrightwatermark">[]Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="highwatermark_nodejs">
 <a href="#highwatermark_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark</a>
@@ -3457,8 +3150,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highwatermarklabel_nodejs">
 <a href="#highwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Watermark<wbr>Label</a>
@@ -3467,8 +3159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3477,8 +3168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermark_nodejs">
 <a href="#lowwatermark_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark</a>
@@ -3487,8 +3177,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lowwatermarklabel_nodejs">
 <a href="#lowwatermarklabel_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Watermark<wbr>Label</a>
@@ -3497,8 +3186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_nodejs">
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
@@ -3507,8 +3195,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_nodejs">
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
@@ -3517,8 +3204,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_nodejs">
 <a href="#watermarks_nodejs" style="color: inherit; text-decoration: inherit;">watermarks</a>
@@ -3526,13 +3212,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisrightwatermark">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="high_watermark_python">
 <a href="#high_watermark_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark</a>
@@ -3541,8 +3225,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A line to draw as a high watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="high_watermark_label_python">
 <a href="#high_watermark_label_python" style="color: inherit; text-decoration: inherit;">high_<wbr>watermark_<wbr>label</a>
@@ -3551,8 +3234,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label to attach to the high watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3561,8 +3243,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="low_watermark_python">
 <a href="#low_watermark_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark</a>
@@ -3571,8 +3252,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A line to draw as a low watermark.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="low_watermark_label_python">
 <a href="#low_watermark_label_python" style="color: inherit; text-decoration: inherit;">low_<wbr>watermark_<wbr>label</a>
@@ -3581,8 +3261,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A label to attach to the low watermark line.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_value_python">
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
@@ -3591,8 +3270,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_value_python">
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
@@ -3601,8 +3279,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value for the right axis.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="watermarks_python">
 <a href="#watermarks_python" style="color: inherit; text-decoration: inherit;">watermarks</a>
@@ -3610,15 +3287,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timechartaxisrightwatermark">Sequence[Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timechartaxisrightwatermark">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3626,8 +3301,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3636,13 +3310,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3650,8 +3322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3660,13 +3331,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3674,8 +3343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3684,13 +3352,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3698,8 +3364,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3708,15 +3373,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timecharteventoption">Time<wbr>Chart<wbr>Event<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3725,8 +3388,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -3735,8 +3397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3745,13 +3406,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3760,8 +3419,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -3770,8 +3428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -3780,13 +3437,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3795,8 +3450,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -3805,8 +3459,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -3815,13 +3468,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3830,8 +3481,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -3840,8 +3490,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -3850,15 +3499,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timecharthistogramoption">Time<wbr>Chart<wbr>Histogram<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colortheme_csharp">
 <a href="#colortheme_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Theme</a>
@@ -3867,13 +3514,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colortheme_go">
 <a href="#colortheme_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Theme</a>
@@ -3882,13 +3527,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colortheme_nodejs">
 <a href="#colortheme_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Theme</a>
@@ -3897,13 +3540,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="color_theme_python">
 <a href="#color_theme_python" style="color: inherit; text-decoration: inherit;">color_<wbr>theme</a>
@@ -3912,15 +3553,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine, red, gold, greenyellow, chartreuse, jade
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timechartlegendoptionsfield">Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -3929,8 +3568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the property to display. Note the special values of `plot_label` (corresponding with the API's `sf_metric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3939,13 +3577,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True or False depending on if you want the property to be shown or hidden.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -3954,8 +3590,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the property to display. Note the special values of `plot_label` (corresponding with the API's `sf_metric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3964,13 +3599,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True or False depending on if you want the property to be shown or hidden.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -3979,8 +3612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the property to display. Note the special values of `plot_label` (corresponding with the API's `sf_metric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3989,13 +3621,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True or False depending on if you want the property to be shown or hidden.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -4004,8 +3634,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the property to display. Note the special values of `plot_label` (corresponding with the API's `sf_metric`) which shows the label of the time series `publish()` and `metric` (corresponding with the API's `sf_originatingMetric`) that shows the name of the metric for the time series being displayed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4014,15 +3643,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True or False depending on if you want the property to be shown or hidden.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timechartvizoption">Time<wbr>Chart<wbr>Viz<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -4031,8 +3658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axis_csharp">
 <a href="#axis_csharp" style="color: inherit; text-decoration: inherit;">Axis</a>
@@ -4041,8 +3667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Y-axis associated with values for this plot. Must be either `right` or `left`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -4051,8 +3676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -4061,8 +3685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plottype_csharp">
 <a href="#plottype_csharp" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
@@ -4071,8 +3694,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueprefix_csharp">
 <a href="#valueprefix_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Prefix</a>
@@ -4080,8 +3702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesuffix_csharp">
 <a href="#valuesuffix_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Suffix</a>
@@ -4089,8 +3710,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueunit_csharp">
 <a href="#valueunit_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Unit</a>
@@ -4100,13 +3720,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -4115,8 +3733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axis_go">
 <a href="#axis_go" style="color: inherit; text-decoration: inherit;">Axis</a>
@@ -4125,8 +3742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Y-axis associated with values for this plot. Must be either `right` or `left`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -4135,8 +3751,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -4145,8 +3760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plottype_go">
 <a href="#plottype_go" style="color: inherit; text-decoration: inherit;">Plot<wbr>Type</a>
@@ -4155,8 +3769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueprefix_go">
 <a href="#valueprefix_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Prefix</a>
@@ -4164,8 +3777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesuffix_go">
 <a href="#valuesuffix_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Suffix</a>
@@ -4173,8 +3785,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueunit_go">
 <a href="#valueunit_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Unit</a>
@@ -4184,13 +3795,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -4199,8 +3808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axis_nodejs">
 <a href="#axis_nodejs" style="color: inherit; text-decoration: inherit;">axis</a>
@@ -4209,8 +3817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Y-axis associated with values for this plot. Must be either `right` or `left`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -4219,8 +3826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -4229,8 +3835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plottype_nodejs">
 <a href="#plottype_nodejs" style="color: inherit; text-decoration: inherit;">plot<wbr>Type</a>
@@ -4239,8 +3844,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueprefix_nodejs">
 <a href="#valueprefix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
@@ -4248,8 +3852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuesuffix_nodejs">
 <a href="#valuesuffix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Suffix</a>
@@ -4257,8 +3860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueunit_nodejs">
 <a href="#valueunit_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Unit</a>
@@ -4268,13 +3870,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -4283,8 +3883,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the event query you want to customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="axis_python">
 <a href="#axis_python" style="color: inherit; text-decoration: inherit;">axis</a>
@@ -4293,8 +3892,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Y-axis associated with values for this plot. Must be either `right` or `left`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -4303,8 +3901,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -4313,8 +3910,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plot_type_python">
 <a href="#plot_type_python" style="color: inherit; text-decoration: inherit;">plot_<wbr>type</a>
@@ -4323,8 +3919,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visualization style to use. Must be `"LineChart"`, `"AreaChart"`, `"ColumnChart"`, or `"Histogram"`. Chart level `plot_type` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_prefix_python">
 <a href="#value_prefix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>prefix</a>
@@ -4332,8 +3927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_suffix_python">
 <a href="#value_suffix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>suffix</a>
@@ -4341,8 +3935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_unit_python">
 <a href="#value_unit_python" style="color: inherit; text-decoration: inherit;">value_<wbr>unit</a>
@@ -4352,8 +3945,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

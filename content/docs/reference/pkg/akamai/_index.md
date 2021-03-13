@@ -1,6 +1,6 @@
 ---
 title: "Akamai"
-title_tag: "Package Akamai"
+title_tag: "Akamai Package"
 meta_desc: "A Pulumi package for creating and managing akamai cloud resources."
 menu:
     reference:

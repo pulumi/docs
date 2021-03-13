@@ -329,8 +329,7 @@ The Exchange resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -340,8 +339,7 @@ The Exchange resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -350,8 +348,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_csharp">
 <a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -360,13 +357,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -376,8 +371,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -386,8 +380,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_go">
 <a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -396,13 +389,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -412,8 +403,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -422,8 +412,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_nodejs">
 <a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -432,13 +421,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -448,8 +435,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -458,8 +444,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_python">
 <a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -468,8 +453,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -480,8 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,13 +472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -503,13 +484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -517,13 +496,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -531,8 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -659,8 +635,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -669,8 +644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -680,8 +654,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
 <a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -690,13 +663,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -705,8 +676,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -716,8 +686,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
 <a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -726,13 +695,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -741,8 +708,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -752,8 +718,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
 <a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -762,13 +727,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -777,8 +740,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -788,8 +750,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
 <a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -798,8 +759,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -814,8 +774,7 @@ described below.
 <h4 id="exchangesettings">Exchange<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -824,8 +783,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_csharp">
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -834,8 +792,7 @@ described below.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Additional key/value settings for the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodelete_csharp">
 <a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -845,8 +802,7 @@ described below.
     </dt>
     <dd>{{% md %}}Whether the exchange will self-delete when all
 queues have finished using it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="durable_csharp">
 <a href="#durable_csharp" style="color: inherit; text-decoration: inherit;">Durable</a>
@@ -856,13 +812,11 @@ queues have finished using it.
     </dt>
     <dd>{{% md %}}Whether the exchange survives server restarts.
 Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -871,8 +825,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_go">
 <a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -881,8 +834,7 @@ Defaults to `false`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Additional key/value settings for the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodelete_go">
 <a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -892,8 +844,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Whether the exchange will self-delete when all
 queues have finished using it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="durable_go">
 <a href="#durable_go" style="color: inherit; text-decoration: inherit;">Durable</a>
@@ -903,13 +854,11 @@ queues have finished using it.
     </dt>
     <dd>{{% md %}}Whether the exchange survives server restarts.
 Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -918,8 +867,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_nodejs">
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -928,8 +876,7 @@ Defaults to `false`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Additional key/value settings for the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodelete_nodejs">
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
@@ -939,8 +886,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Whether the exchange will self-delete when all
 queues have finished using it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="durable_nodejs">
 <a href="#durable_nodejs" style="color: inherit; text-decoration: inherit;">durable</a>
@@ -950,13 +896,11 @@ queues have finished using it.
     </dt>
     <dd>{{% md %}}Whether the exchange survives server restarts.
 Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -965,8 +909,7 @@ Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_python">
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -975,8 +918,7 @@ Defaults to `false`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Additional key/value settings for the exchange.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_delete_python">
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
@@ -986,8 +928,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Whether the exchange will self-delete when all
 queues have finished using it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="durable_python">
 <a href="#durable_python" style="color: inherit; text-decoration: inherit;">durable</a>
@@ -997,8 +938,7 @@ queues have finished using it.
     </dt>
     <dd>{{% md %}}Whether the exchange survives server restarts.
 Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

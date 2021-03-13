@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressscopeid_csharp">
 <a href="#addressscopeid_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -157,8 +156,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The Neutron address scope that subnetpools
 is assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprefixlen_csharp">
 <a href="#defaultprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -168,8 +166,7 @@ is assigned to.
     </dt>
     <dd>{{% md %}}The size of the subnetpool default prefix
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultquota_csharp">
 <a href="#defaultquota_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -179,8 +176,7 @@ length.
     </dt>
     <dd>{{% md %}}The per-project quota on the prefix space that
 can be allocated from the subnetpool for project subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -189,8 +185,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -199,8 +194,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -209,8 +203,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the subnetpool is default subnetpool or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxprefixlen_csharp">
 <a href="#maxprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -219,8 +212,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool max prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minprefixlen_csharp">
 <a href="#minprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -229,8 +221,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool min prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -239,8 +230,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -249,8 +239,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -261,8 +250,7 @@ can be allocated from the subnetpool for project subnets.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to retrieve a subnetpool id. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_csharp">
 <a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -271,8 +259,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this subnetpool is shared across all projects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -281,13 +268,11 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of subnetpool tags to filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressscopeid_go">
 <a href="#addressscopeid_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -297,8 +282,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
     </dt>
     <dd>{{% md %}}The Neutron address scope that subnetpools
 is assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprefixlen_go">
 <a href="#defaultprefixlen_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -308,8 +292,7 @@ is assigned to.
     </dt>
     <dd>{{% md %}}The size of the subnetpool default prefix
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultquota_go">
 <a href="#defaultquota_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -319,8 +302,7 @@ length.
     </dt>
     <dd>{{% md %}}The per-project quota on the prefix space that
 can be allocated from the subnetpool for project subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -329,8 +311,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -339,8 +320,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -349,8 +329,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the subnetpool is default subnetpool or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxprefixlen_go">
 <a href="#maxprefixlen_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -359,8 +338,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool max prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minprefixlen_go">
 <a href="#minprefixlen_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -369,8 +347,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool min prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -379,8 +356,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -389,8 +365,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -401,8 +376,7 @@ can be allocated from the subnetpool for project subnets.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to retrieve a subnetpool id. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_go">
 <a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -411,8 +385,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this subnetpool is shared across all projects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -421,13 +394,11 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of subnetpool tags to filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="addressscopeid_nodejs">
 <a href="#addressscopeid_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Scope<wbr>Id</a>
@@ -437,8 +408,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
     </dt>
     <dd>{{% md %}}The Neutron address scope that subnetpools
 is assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprefixlen_nodejs">
 <a href="#defaultprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Prefixlen</a>
@@ -448,8 +418,7 @@ is assigned to.
     </dt>
     <dd>{{% md %}}The size of the subnetpool default prefix
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultquota_nodejs">
 <a href="#defaultquota_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Quota</a>
@@ -459,8 +428,7 @@ length.
     </dt>
     <dd>{{% md %}}The per-project quota on the prefix space that
 can be allocated from the subnetpool for project subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -469,8 +437,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -479,8 +446,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -489,8 +455,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the subnetpool is default subnetpool or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxprefixlen_nodejs">
 <a href="#maxprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixlen</a>
@@ -499,8 +464,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool max prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minprefixlen_nodejs">
 <a href="#minprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Prefixlen</a>
@@ -509,8 +473,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool min prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -519,8 +482,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -529,8 +491,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -541,8 +502,7 @@ can be allocated from the subnetpool for project subnets.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to retrieve a subnetpool id. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_nodejs">
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -551,8 +511,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this subnetpool is shared across all projects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -561,13 +520,11 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of subnetpool tags to filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_scope_id_python">
 <a href="#address_scope_id_python" style="color: inherit; text-decoration: inherit;">address_<wbr>scope_<wbr>id</a>
@@ -577,8 +534,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
     </dt>
     <dd>{{% md %}}The Neutron address scope that subnetpools
 is assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_prefixlen_python">
 <a href="#default_prefixlen_python" style="color: inherit; text-decoration: inherit;">default_<wbr>prefixlen</a>
@@ -588,8 +544,7 @@ is assigned to.
     </dt>
     <dd>{{% md %}}The size of the subnetpool default prefix
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_quota_python">
 <a href="#default_quota_python" style="color: inherit; text-decoration: inherit;">default_<wbr>quota</a>
@@ -599,8 +554,7 @@ length.
     </dt>
     <dd>{{% md %}}The per-project quota on the prefix space that
 can be allocated from the subnetpool for project subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -609,8 +563,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -619,8 +572,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -629,8 +581,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the subnetpool is default subnetpool or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_prefixlen_python">
 <a href="#max_prefixlen_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixlen</a>
@@ -639,8 +590,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool max prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_prefixlen_python">
 <a href="#min_prefixlen_python" style="color: inherit; text-decoration: inherit;">min_<wbr>prefixlen</a>
@@ -649,8 +599,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the subnetpool min prefix length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -659,8 +608,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -669,8 +617,7 @@ can be allocated from the subnetpool for project subnets.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -681,8 +628,7 @@ can be allocated from the subnetpool for project subnets.
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to retrieve a subnetpool id. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_python">
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -691,8 +637,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this subnetpool is shared across all projects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -701,8 +646,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of subnetpool tags to filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -715,8 +659,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addressscopeid_csharp">
 <a href="#addressscopeid_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -726,8 +669,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 * `ip_version` -The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -736,8 +678,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -746,8 +687,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprefixlen_csharp">
 <a href="#defaultprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -756,8 +696,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultquota_csharp">
 <a href="#defaultquota_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -766,8 +705,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -776,8 +714,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -786,8 +723,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -795,8 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -805,8 +740,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxprefixlen_csharp">
 <a href="#maxprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -815,8 +749,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minprefixlen_csharp">
 <a href="#minprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -825,8 +758,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -835,8 +767,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prefixes_csharp">
 <a href="#prefixes_csharp" style="color: inherit; text-decoration: inherit;">Prefixes</a>
@@ -845,8 +776,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -855,8 +785,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -865,8 +794,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_csharp">
 <a href="#revisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -875,8 +803,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_csharp">
 <a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -885,8 +812,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -895,8 +821,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -904,13 +829,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addressscopeid_go">
 <a href="#addressscopeid_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -920,8 +843,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 * `ip_version` -The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -930,8 +852,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -940,8 +861,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprefixlen_go">
 <a href="#defaultprefixlen_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -950,8 +870,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultquota_go">
 <a href="#defaultquota_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -960,8 +879,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -970,8 +888,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -980,8 +897,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -989,8 +905,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -999,8 +914,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxprefixlen_go">
 <a href="#maxprefixlen_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -1009,8 +923,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minprefixlen_go">
 <a href="#minprefixlen_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -1019,8 +932,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1029,8 +941,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prefixes_go">
 <a href="#prefixes_go" style="color: inherit; text-decoration: inherit;">Prefixes</a>
@@ -1039,8 +950,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1049,8 +959,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1059,8 +968,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_go">
 <a href="#revisionnumber_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1069,8 +977,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_go">
 <a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1079,8 +986,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1089,8 +995,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1098,13 +1003,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="addressscopeid_nodejs">
 <a href="#addressscopeid_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Scope<wbr>Id</a>
@@ -1114,8 +1017,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 * `ip_version` -The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1124,8 +1026,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1134,8 +1035,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprefixlen_nodejs">
 <a href="#defaultprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Prefixlen</a>
@@ -1144,8 +1044,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultquota_nodejs">
 <a href="#defaultquota_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Quota</a>
@@ -1154,8 +1053,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1164,8 +1062,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1174,8 +1071,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -1183,8 +1079,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -1193,8 +1088,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxprefixlen_nodejs">
 <a href="#maxprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixlen</a>
@@ -1203,8 +1097,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minprefixlen_nodejs">
 <a href="#minprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Prefixlen</a>
@@ -1213,8 +1106,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1223,8 +1115,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prefixes_nodejs">
 <a href="#prefixes_nodejs" style="color: inherit; text-decoration: inherit;">prefixes</a>
@@ -1233,8 +1124,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1243,8 +1133,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1253,8 +1142,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_nodejs">
 <a href="#revisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Number</a>
@@ -1263,8 +1151,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_nodejs">
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1273,8 +1160,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1283,8 +1169,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1292,13 +1177,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_scope_id_python">
 <a href="#address_scope_id_python" style="color: inherit; text-decoration: inherit;">address_<wbr>scope_<wbr>id</a>
@@ -1308,8 +1191,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 * `ip_version` -The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1318,8 +1200,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of string tags applied on the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1328,8 +1209,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_prefixlen_python">
 <a href="#default_prefixlen_python" style="color: inherit; text-decoration: inherit;">default_<wbr>prefixlen</a>
@@ -1338,8 +1218,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_quota_python">
 <a href="#default_quota_python" style="color: inherit; text-decoration: inherit;">default_<wbr>quota</a>
@@ -1348,8 +1227,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1358,8 +1236,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1368,8 +1245,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -1377,8 +1253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -1387,8 +1262,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_prefixlen_python">
 <a href="#max_prefixlen_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixlen</a>
@@ -1397,8 +1271,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_prefixlen_python">
 <a href="#min_prefixlen_python" style="color: inherit; text-decoration: inherit;">min_<wbr>prefixlen</a>
@@ -1407,8 +1280,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1417,8 +1289,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prefixes_python">
 <a href="#prefixes_python" style="color: inherit; text-decoration: inherit;">prefixes</a>
@@ -1427,8 +1298,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1437,8 +1307,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1447,8 +1316,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revision_number_python">
 <a href="#revision_number_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>number</a>
@@ -1457,8 +1325,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shared_python">
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1467,8 +1334,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1477,8 +1343,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1486,8 +1351,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

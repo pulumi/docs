@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceDependency"
-title_tag: "Resource ServiceDependency | Package PagerDuty"
-meta_desc: "Explore the ServiceDependency resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation."
+title_tag: "pagerduty.ServiceDependency"
+meta_desc: "Documentation for the pagerduty.ServiceDependency resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the ServiceDependency resource of the PagerDuty package, inc
 A [service dependency](https://developer.pagerduty.com/api-reference/reference/REST/openapiv3.json/paths/~1service_dependencies~1associate/post) is a relationship between a business service and technical and business services that this service uses, or that are used by this service, and are critical for successful operation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Pagerduty = Pulumi.Pagerduty;
@@ -81,9 +87,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -141,9 +150,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_pagerduty as pagerduty
@@ -170,9 +182,12 @@ bar = pagerduty.ServiceDependency("bar", dependencies=[pagerduty.ServiceDependen
 )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -200,9 +215,16 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
 }]});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceDependency Resource {#create}
@@ -227,9 +249,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +257,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +265,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +273,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +299,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -296,9 +307,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +315,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +323,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,18 +331,13 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -345,9 +345,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -355,9 +353,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -365,10 +361,7 @@ const bar = new pagerduty.ServiceDependency("bar", {dependencies: [{
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -383,9 +376,7 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependencies_csharp">
 <a href="#dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -394,14 +385,11 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#servicedependencydependency">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependencies_go">
 <a href="#dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -410,14 +398,11 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependencies_nodejs">
 <a href="#dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -426,14 +411,11 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency[]</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependencies_python">
 <a href="#dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -442,8 +424,7 @@ The ServiceDependency resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#servicedependencydependency">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -454,9 +435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -464,14 +443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -479,14 +455,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -494,14 +467,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -509,8 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -637,9 +606,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dependencies_csharp">
 <a href="#state_dependencies_csharp" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -648,14 +615,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependency">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dependencies_go">
 <a href="#state_dependencies_go" style="color: inherit; text-decoration: inherit;">Dependencies</a>
@@ -664,14 +628,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependency">[]Service<wbr>Dependency<wbr>Dependency</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dependencies_nodejs">
 <a href="#state_dependencies_nodejs" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -680,14 +641,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependency">Service<wbr>Dependency<wbr>Dependency[]</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dependencies_python">
 <a href="#state_dependencies_python" style="color: inherit; text-decoration: inherit;">dependencies</a>
@@ -696,8 +654,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependency">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The relationship between the `supporting_service` and `dependent_service`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -712,9 +669,7 @@ The following state arguments are supported:
 <h4 id="servicedependencydependency">Service<wbr>Dependency<wbr>Dependency</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependentservices_csharp">
 <a href="#dependentservices_csharp" style="color: inherit; text-decoration: inherit;">Dependent<wbr>Services</a>
@@ -723,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencydependentservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportingservices_csharp">
 <a href="#supportingservices_csharp" style="color: inherit; text-decoration: inherit;">Supporting<wbr>Services</a>
@@ -733,8 +687,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">List&lt;Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -742,14 +695,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependentservices_go">
 <a href="#dependentservices_go" style="color: inherit; text-decoration: inherit;">Dependent<wbr>Services</a>
@@ -758,8 +708,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencydependentservice">[]Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportingservices_go">
 <a href="#supportingservices_go" style="color: inherit; text-decoration: inherit;">Supporting<wbr>Services</a>
@@ -768,8 +717,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">[]Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -777,14 +725,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependentservices_nodejs">
 <a href="#dependentservices_nodejs" style="color: inherit; text-decoration: inherit;">dependent<wbr>Services</a>
@@ -793,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencydependentservice">Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportingservices_nodejs">
 <a href="#supportingservices_nodejs" style="color: inherit; text-decoration: inherit;">supporting<wbr>Services</a>
@@ -803,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -812,14 +755,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dependent_services_python">
 <a href="#dependent_services_python" style="color: inherit; text-decoration: inherit;">dependent_<wbr>services</a>
@@ -828,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencydependentservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The service that id dependent on the supporting service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supporting_services_python">
 <a href="#supporting_services_python" style="color: inherit; text-decoration: inherit;">supporting_<wbr>services</a>
@@ -838,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicedependencydependencysupportingservice">Sequence[Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The service that supports  the  dependent service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -847,16 +785,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicedependencydependencydependentservice">Service<wbr>Dependency<wbr>Dependency<wbr>Dependent<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -865,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -874,14 +808,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -890,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -899,14 +829,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -915,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -924,14 +850,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -940,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -949,16 +871,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicedependencydependencysupportingservice">Service<wbr>Dependency<wbr>Dependency<wbr>Supporting<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -967,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -976,14 +894,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -992,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1001,14 +915,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1017,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1026,14 +936,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1042,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service dependency.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1051,8 +957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

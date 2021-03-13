@@ -407,8 +407,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -418,8 +417,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisks_csharp">
 <a href="#datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -428,8 +426,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">List&lt;Image<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervgeneration_csharp">
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -438,8 +435,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -449,8 +445,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -460,8 +455,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_csharp">
 <a href="#osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -470,8 +464,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachineid_csharp">
 <a href="#sourcevirtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine<wbr>Id</a>
@@ -480,8 +473,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -490,8 +482,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_csharp">
 <a href="#zoneresilient_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -500,13 +491,11 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -516,8 +505,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisks_go">
 <a href="#datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -526,8 +514,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -536,8 +523,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -547,8 +533,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -558,8 +543,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_go">
 <a href="#osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -568,8 +552,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachineid_go">
 <a href="#sourcevirtualmachineid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine<wbr>Id</a>
@@ -578,8 +561,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -588,8 +570,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_go">
 <a href="#zoneresilient_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -598,13 +579,11 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -614,8 +593,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisks_nodejs">
 <a href="#datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -624,8 +602,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">Image<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hypervgeneration_nodejs">
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
@@ -634,8 +611,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -645,8 +621,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -656,8 +631,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osdisk_nodejs">
 <a href="#osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
@@ -666,8 +640,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachineid_nodejs">
 <a href="#sourcevirtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Virtual<wbr>Machine<wbr>Id</a>
@@ -676,8 +649,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -686,8 +658,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneresilient_nodejs">
 <a href="#zoneresilient_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Resilient</a>
@@ -696,13 +667,11 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -712,8 +681,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_disks_python">
 <a href="#data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -722,8 +690,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">Sequence[Image<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
@@ -732,8 +699,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -743,8 +709,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -754,8 +719,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_disk_python">
 <a href="#os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
@@ -764,8 +728,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_virtual_machine_id_python">
 <a href="#source_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>virtual_<wbr>machine_<wbr>id</a>
@@ -774,8 +737,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -784,8 +746,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_resilient_python">
 <a href="#zone_resilient_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>resilient</a>
@@ -794,8 +755,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -806,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -815,13 +774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -829,13 +786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -843,13 +798,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -857,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -985,8 +937,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadisks_csharp">
 <a href="#state_datadisks_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -995,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagedatadisk">List&lt;Image<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervgeneration_csharp">
 <a href="#state_hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -1005,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1016,8 +965,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1027,8 +975,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisk_csharp">
 <a href="#state_osdisk_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -1037,8 +984,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1048,8 +994,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevirtualmachineid_csharp">
 <a href="#state_sourcevirtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine<wbr>Id</a>
@@ -1058,8 +1003,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1068,8 +1012,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneresilient_csharp">
 <a href="#state_zoneresilient_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -1078,13 +1021,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadisks_go">
 <a href="#state_datadisks_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disks</a>
@@ -1093,8 +1034,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">[]Image<wbr>Data<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervgeneration_go">
 <a href="#state_hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
@@ -1103,8 +1043,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1114,8 +1053,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1125,8 +1063,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisk_go">
 <a href="#state_osdisk_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk</a>
@@ -1135,8 +1072,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1146,8 +1082,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevirtualmachineid_go">
 <a href="#state_sourcevirtualmachineid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Virtual<wbr>Machine<wbr>Id</a>
@@ -1156,8 +1091,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1166,8 +1100,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneresilient_go">
 <a href="#state_zoneresilient_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Resilient</a>
@@ -1176,13 +1109,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datadisks_nodejs">
 <a href="#state_datadisks_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disks</a>
@@ -1191,8 +1122,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">Image<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hypervgeneration_nodejs">
 <a href="#state_hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
@@ -1201,8 +1131,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1212,8 +1141,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1223,8 +1151,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osdisk_nodejs">
 <a href="#state_osdisk_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk</a>
@@ -1233,8 +1160,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1244,8 +1170,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevirtualmachineid_nodejs">
 <a href="#state_sourcevirtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Virtual<wbr>Machine<wbr>Id</a>
@@ -1254,8 +1179,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1264,8 +1188,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneresilient_nodejs">
 <a href="#state_zoneresilient_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Resilient</a>
@@ -1274,13 +1197,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_data_disks_python">
 <a href="#state_data_disks_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disks</a>
@@ -1289,8 +1210,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type"><a href="#imagedatadisk">Sequence[Image<wbr>Data<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `data_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hyper_v_generation_python">
 <a href="#state_hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
@@ -1299,8 +1219,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HyperVGenerationType of the VirtualMachine created from the image as `V1`, `V2`. The default is `V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1310,8 +1229,7 @@ the image. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specified the supported Azure location where the resource exists.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1321,8 +1239,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the image. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_disk_python">
 <a href="#state_os_disk_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk</a>
@@ -1331,8 +1248,7 @@ new resource to be created.
         <span class="property-type"><a href="#imageosdisk">Image<wbr>Os<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}One or more `os_disk` elements as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1342,8 +1258,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create
 the image. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_virtual_machine_id_python">
 <a href="#state_source_virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>virtual_<wbr>machine_<wbr>id</a>
@@ -1352,8 +1267,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Machine ID from which to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1362,8 +1276,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_resilient_python">
 <a href="#state_zone_resilient_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>resilient</a>
@@ -1372,8 +1285,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is zone resiliency enabled?  Defaults to `false`.  Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1388,8 +1300,7 @@ the image. Changing this forces a new resource to be created.
 <h4 id="imagedatadisk">Image<wbr>Data<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloburi_csharp">
 <a href="#bloburi_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -1398,8 +1309,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -1408,8 +1318,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1418,8 +1327,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_csharp">
 <a href="#manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -1428,8 +1336,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizegb_csharp">
 <a href="#sizegb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -1438,13 +1345,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloburi_go">
 <a href="#bloburi_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -1453,8 +1358,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -1463,8 +1367,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
@@ -1473,8 +1376,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_go">
 <a href="#manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -1483,8 +1385,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizegb_go">
 <a href="#sizegb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -1493,13 +1394,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloburi_nodejs">
 <a href="#bloburi_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
@@ -1508,8 +1407,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -1518,8 +1416,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1528,8 +1425,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_nodejs">
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
@@ -1538,8 +1434,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizegb_nodejs">
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
@@ -1548,13 +1443,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_uri_python">
 <a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
@@ -1563,8 +1456,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -1573,8 +1465,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
@@ -1583,8 +1474,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the logical unit number of the data disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_id_python">
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
@@ -1593,8 +1483,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_gb_python">
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
@@ -1603,15 +1492,13 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imageosdisk">Image<wbr>Os<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloburi_csharp">
 <a href="#bloburi_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -1620,8 +1507,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_csharp">
 <a href="#caching_csharp" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -1630,8 +1516,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_csharp">
 <a href="#manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -1640,8 +1525,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osstate_csharp">
 <a href="#osstate_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
@@ -1650,8 +1534,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1660,8 +1543,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizegb_csharp">
 <a href="#sizegb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -1670,13 +1552,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloburi_go">
 <a href="#bloburi_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Uri</a>
@@ -1685,8 +1565,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_go">
 <a href="#caching_go" style="color: inherit; text-decoration: inherit;">Caching</a>
@@ -1695,8 +1574,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_go">
 <a href="#manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -1705,8 +1583,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osstate_go">
 <a href="#osstate_go" style="color: inherit; text-decoration: inherit;">Os<wbr>State</a>
@@ -1715,8 +1592,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1725,8 +1601,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizegb_go">
 <a href="#sizegb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -1735,13 +1610,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bloburi_nodejs">
 <a href="#bloburi_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Uri</a>
@@ -1750,8 +1623,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_nodejs">
 <a href="#caching_nodejs" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -1760,8 +1632,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_nodejs">
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
@@ -1770,8 +1641,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osstate_nodejs">
 <a href="#osstate_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>State</a>
@@ -1780,8 +1650,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1790,8 +1659,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sizegb_nodejs">
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
@@ -1800,13 +1668,11 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="blob_uri_python">
 <a href="#blob_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>uri</a>
@@ -1815,8 +1681,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the URI in Azure storage of the blob that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="caching_python">
 <a href="#caching_python" style="color: inherit; text-decoration: inherit;">caching</a>
@@ -1825,8 +1690,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching mode as `ReadWrite`, `ReadOnly`, or `None`. The default is `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_id_python">
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
@@ -1835,8 +1699,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the managed disk resource that you want to use to create the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_state_python">
 <a href="#os_state_python" style="color: inherit; text-decoration: inherit;">os_<wbr>state</a>
@@ -1845,8 +1708,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the operating system contained in the blob. Currently, the only value is Generalized.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1855,8 +1717,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of operating system contained in the virtual machine image. Possible values are: Windows or Linux.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_gb_python">
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
@@ -1865,8 +1726,7 @@ the image. Changing this forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the size of the image to be created. The target size can't be smaller than the source size.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

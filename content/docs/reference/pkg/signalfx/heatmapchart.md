@@ -393,8 +393,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="programtext_csharp">
 <a href="#programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -403,8 +402,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorrange_csharp">
 <a href="#colorrange_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
@@ -413,8 +411,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorscales_csharp">
 <a href="#colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
@@ -423,8 +420,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -433,8 +429,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesampling_csharp">
 <a href="#disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -443,8 +438,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_csharp">
 <a href="#groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -453,8 +447,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidetimestamp_csharp">
 <a href="#hidetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
@@ -463,8 +456,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdelay_csharp">
 <a href="#maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -473,8 +465,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_csharp">
 <a href="#minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -483,8 +474,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -493,8 +483,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_csharp">
 <a href="#refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
@@ -503,8 +492,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortby_csharp">
 <a href="#sortby_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
@@ -513,8 +501,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -523,8 +510,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unitprefix_csharp">
 <a href="#unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -533,13 +519,11 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="programtext_go">
 <a href="#programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -548,8 +532,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorrange_go">
 <a href="#colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
@@ -558,8 +541,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorscales_go">
 <a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
@@ -568,8 +550,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -578,8 +559,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesampling_go">
 <a href="#disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -588,8 +568,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_go">
 <a href="#groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -598,8 +577,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidetimestamp_go">
 <a href="#hidetimestamp_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
@@ -608,8 +586,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdelay_go">
 <a href="#maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -618,8 +595,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_go">
 <a href="#minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -628,8 +604,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -638,8 +613,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_go">
 <a href="#refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
@@ -648,8 +622,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortby_go">
 <a href="#sortby_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
@@ -658,8 +631,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -668,8 +640,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unitprefix_go">
 <a href="#unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -678,13 +649,11 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="programtext_nodejs">
 <a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
@@ -693,8 +662,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorrange_nodejs">
 <a href="#colorrange_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Range</a>
@@ -703,8 +671,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colorscales_nodejs">
 <a href="#colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
@@ -713,8 +680,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -723,8 +689,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesampling_nodejs">
 <a href="#disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
@@ -733,8 +698,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_nodejs">
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
@@ -743,8 +707,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidetimestamp_nodejs">
 <a href="#hidetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Timestamp</a>
@@ -753,8 +716,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdelay_nodejs">
 <a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
@@ -763,8 +725,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_nodejs">
 <a href="#minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
@@ -773,8 +734,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -783,8 +743,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_nodejs">
 <a href="#refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
@@ -793,8 +752,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortby_nodejs">
 <a href="#sortby_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By</a>
@@ -803,8 +761,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -813,8 +770,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unitprefix_nodejs">
 <a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
@@ -823,13 +779,11 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="program_text_python">
 <a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
@@ -838,8 +792,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_range_python">
 <a href="#color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
@@ -848,8 +801,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_scales_python">
 <a href="#color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
@@ -858,8 +810,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#heatmapchartcolorscale">Sequence[Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -868,8 +819,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_sampling_python">
 <a href="#disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
@@ -878,8 +828,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_bies_python">
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
@@ -888,8 +837,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_timestamp_python">
 <a href="#hide_timestamp_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>timestamp</a>
@@ -898,8 +846,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delay_python">
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
@@ -908,8 +855,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_resolution_python">
 <a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
@@ -918,8 +864,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -928,8 +873,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_interval_python">
 <a href="#refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
@@ -938,8 +882,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_by_python">
 <a href="#sort_by_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by</a>
@@ -948,8 +891,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -958,8 +900,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_prefix_python">
 <a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
@@ -968,8 +909,7 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -980,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -989,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -999,13 +937,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1013,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1023,13 +958,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1037,8 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1047,13 +979,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1061,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1071,8 +1000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1199,8 +1127,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_colorrange_csharp">
 <a href="#state_colorrange_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
@@ -1209,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_csharp">
 <a href="#state_colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
@@ -1219,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1229,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_csharp">
 <a href="#state_disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -1239,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_csharp">
 <a href="#state_groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -1249,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidetimestamp_csharp">
 <a href="#state_hidetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
@@ -1259,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_csharp">
 <a href="#state_maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -1269,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_csharp">
 <a href="#state_minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -1279,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1289,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_programtext_csharp">
 <a href="#state_programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -1299,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_csharp">
 <a href="#state_refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
@@ -1309,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sortby_csharp">
 <a href="#state_sortby_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
@@ -1319,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_csharp">
 <a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -1329,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_csharp">
 <a href="#state_unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -1339,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1349,13 +1262,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_colorrange_go">
 <a href="#state_colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
@@ -1364,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_go">
 <a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
@@ -1374,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1384,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_go">
 <a href="#state_disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
@@ -1394,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_go">
 <a href="#state_groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -1404,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidetimestamp_go">
 <a href="#state_hidetimestamp_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
@@ -1414,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_go">
 <a href="#state_maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
@@ -1424,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_go">
 <a href="#state_minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
@@ -1434,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1444,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_programtext_go">
 <a href="#state_programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
@@ -1454,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_go">
 <a href="#state_refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
@@ -1464,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sortby_go">
 <a href="#state_sortby_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
@@ -1474,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_go">
 <a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -1484,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_go">
 <a href="#state_unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
@@ -1494,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1504,13 +1401,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_colorrange_nodejs">
 <a href="#state_colorrange_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Range</a>
@@ -1519,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_nodejs">
 <a href="#state_colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
@@ -1529,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1539,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_nodejs">
 <a href="#state_disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
@@ -1549,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_nodejs">
 <a href="#state_groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
@@ -1559,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidetimestamp_nodejs">
 <a href="#state_hidetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Timestamp</a>
@@ -1569,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_nodejs">
 <a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
@@ -1579,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_nodejs">
 <a href="#state_minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
@@ -1589,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1599,8 +1486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_programtext_nodejs">
 <a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
@@ -1609,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_nodejs">
 <a href="#state_refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
@@ -1619,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sortby_nodejs">
 <a href="#state_sortby_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By</a>
@@ -1629,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_nodejs">
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1639,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_nodejs">
 <a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
@@ -1649,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1659,13 +1540,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_color_range_python">
 <a href="#state_color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
@@ -1674,8 +1553,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_color_scales_python">
 <a href="#state_color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
@@ -1684,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#heatmapchartcolorscale">Sequence[Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1694,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_sampling_python">
 <a href="#state_disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
@@ -1704,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_bies_python">
 <a href="#state_group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
@@ -1714,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_timestamp_python">
 <a href="#state_hide_timestamp_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>timestamp</a>
@@ -1724,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_delay_python">
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
@@ -1734,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_resolution_python">
 <a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
@@ -1744,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1754,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_program_text_python">
 <a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
@@ -1764,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_interval_python">
 <a href="#state_refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
@@ -1774,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sort_by_python">
 <a href="#state_sort_by_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by</a>
@@ -1784,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_python">
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1794,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (default UTC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unit_prefix_python">
 <a href="#state_unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
@@ -1804,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1814,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1830,8 +1694,7 @@ The following state arguments are supported:
 <h4 id="heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -1840,8 +1703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_csharp">
 <a href="#maxvalue_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -1850,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_csharp">
 <a href="#minvalue_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -1860,13 +1721,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -1875,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_go">
 <a href="#maxvalue_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -1885,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_go">
 <a href="#minvalue_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -1895,13 +1752,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -1910,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_nodejs">
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
@@ -1920,8 +1774,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_nodejs">
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
@@ -1930,13 +1783,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -1945,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_value_python">
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
@@ -1955,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_value_python">
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
@@ -1965,15 +1814,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -1982,8 +1829,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gt_csharp">
 <a href="#gt_csharp" style="color: inherit; text-decoration: inherit;">Gt</a>
@@ -1992,8 +1838,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gte_csharp">
 <a href="#gte_csharp" style="color: inherit; text-decoration: inherit;">Gte</a>
@@ -2002,8 +1847,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lt_csharp">
 <a href="#lt_csharp" style="color: inherit; text-decoration: inherit;">Lt</a>
@@ -2012,8 +1856,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lte_csharp">
 <a href="#lte_csharp" style="color: inherit; text-decoration: inherit;">Lte</a>
@@ -2022,13 +1865,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -2037,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gt_go">
 <a href="#gt_go" style="color: inherit; text-decoration: inherit;">Gt</a>
@@ -2047,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gte_go">
 <a href="#gte_go" style="color: inherit; text-decoration: inherit;">Gte</a>
@@ -2057,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lt_go">
 <a href="#lt_go" style="color: inherit; text-decoration: inherit;">Lt</a>
@@ -2067,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lte_go">
 <a href="#lte_go" style="color: inherit; text-decoration: inherit;">Lte</a>
@@ -2077,13 +1914,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2092,8 +1927,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gt_nodejs">
 <a href="#gt_nodejs" style="color: inherit; text-decoration: inherit;">gt</a>
@@ -2102,8 +1936,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gte_nodejs">
 <a href="#gte_nodejs" style="color: inherit; text-decoration: inherit;">gte</a>
@@ -2112,8 +1945,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lt_nodejs">
 <a href="#lt_nodejs" style="color: inherit; text-decoration: inherit;">lt</a>
@@ -2122,8 +1954,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lte_nodejs">
 <a href="#lte_nodejs" style="color: inherit; text-decoration: inherit;">lte</a>
@@ -2132,13 +1963,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2147,8 +1976,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gt_python">
 <a href="#gt_python" style="color: inherit; text-decoration: inherit;">gt</a>
@@ -2157,8 +1985,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gte_python">
 <a href="#gte_python" style="color: inherit; text-decoration: inherit;">gte</a>
@@ -2167,8 +1994,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lt_python">
 <a href="#lt_python" style="color: inherit; text-decoration: inherit;">lt</a>
@@ -2177,8 +2003,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lte_python">
 <a href="#lte_python" style="color: inherit; text-decoration: inherit;">lte</a>
@@ -2187,8 +2012,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

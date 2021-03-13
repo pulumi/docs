@@ -308,8 +308,7 @@ The Grafana resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -320,8 +319,7 @@ The Grafana resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -332,8 +330,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -348,8 +345,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafanaserver_csharp">
 <a href="#grafanaserver_csharp" style="color: inherit; text-decoration: inherit;">Grafana<wbr>Server</a>
@@ -359,8 +355,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafanauserconfig_csharp">
 <a href="#grafanauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
@@ -370,8 +365,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -381,8 +375,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -392,8 +385,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -409,8 +401,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -424,8 +415,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -434,8 +424,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">List&lt;Grafana<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -448,13 +437,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -465,8 +452,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -477,8 +463,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -493,8 +478,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
 <a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -504,8 +488,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafanauserconfig_go">
 <a href="#grafanauserconfig_go" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
@@ -515,8 +498,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -526,8 +508,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -537,8 +518,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -554,8 +534,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -569,8 +548,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -579,8 +557,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">[]Grafana<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -593,13 +570,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -610,8 +585,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -622,8 +596,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -638,8 +611,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -649,8 +621,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafanauserconfig_nodejs">
 <a href="#grafanauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">grafana<wbr>User<wbr>Config</a>
@@ -660,8 +631,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -671,8 +641,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -682,8 +651,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -699,8 +667,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -714,8 +681,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -724,8 +690,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">Grafana<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -738,13 +703,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -755,8 +718,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -767,8 +729,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -783,8 +744,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -794,8 +754,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grafana_user_config_python">
 <a href="#grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
@@ -805,8 +764,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -816,8 +774,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -827,8 +784,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -844,8 +800,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -859,8 +814,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -869,8 +823,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">Sequence[Grafana<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -883,8 +836,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -895,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -905,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#grafanacomponent">List&lt;Grafana<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -914,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -924,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -934,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -944,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -954,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -964,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -974,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -984,13 +927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -999,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#grafanacomponent">[]Grafana<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1008,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1018,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1028,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1038,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1048,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1058,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1068,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1078,13 +1011,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1093,8 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#grafanacomponent">Grafana<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1102,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1112,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1122,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1132,8 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1142,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1152,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1162,8 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1172,13 +1095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1187,8 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#grafanacomponent">Sequence[Grafana<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1196,8 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1206,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1216,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1226,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1236,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1246,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1256,8 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1266,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1394,8 +1306,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
 <a href="#state_cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1410,8 +1321,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_csharp">
 <a href="#state_components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1420,8 +1330,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#grafanacomponent">List&lt;Grafana<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafanaserver_csharp">
 <a href="#state_grafanaserver_csharp" style="color: inherit; text-decoration: inherit;">Grafana<wbr>Server</a>
@@ -1431,8 +1340,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafanauserconfig_csharp">
 <a href="#state_grafanauserconfig_csharp" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
@@ -1442,8 +1350,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_csharp">
 <a href="#state_maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1453,8 +1360,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_csharp">
 <a href="#state_maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1464,8 +1370,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1481,8 +1386,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1493,8 +1397,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_csharp">
 <a href="#state_projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1508,8 +1411,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_csharp">
 <a href="#state_servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1518,8 +1420,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_csharp">
 <a href="#state_serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1528,8 +1429,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">List&lt;Grafana<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1540,8 +1440,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_csharp">
 <a href="#state_servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1550,8 +1449,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_csharp">
 <a href="#state_serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1560,8 +1458,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1570,8 +1467,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_csharp">
 <a href="#state_serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1580,8 +1476,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_csharp">
 <a href="#state_serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1590,8 +1485,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1600,8 +1494,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1614,13 +1507,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
 <a href="#state_cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1635,8 +1526,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_go">
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1645,8 +1535,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#grafanacomponent">[]Grafana<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafana_go">
 <a href="#state_grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -1656,8 +1545,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafanauserconfig_go">
 <a href="#state_grafanauserconfig_go" style="color: inherit; text-decoration: inherit;">Grafana<wbr>User<wbr>Config</a>
@@ -1667,8 +1555,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_go">
 <a href="#state_maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1678,8 +1565,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_go">
 <a href="#state_maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1689,8 +1575,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1706,8 +1591,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1718,8 +1602,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_go">
 <a href="#state_projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1733,8 +1616,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_go">
 <a href="#state_servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1743,8 +1625,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_go">
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1753,8 +1634,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">[]Grafana<wbr>Service<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1765,8 +1645,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_go">
 <a href="#state_servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1775,8 +1654,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_go">
 <a href="#state_serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1785,8 +1663,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1795,8 +1672,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_go">
 <a href="#state_serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1805,8 +1681,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_go">
 <a href="#state_serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1815,8 +1690,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1825,8 +1699,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1839,13 +1712,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1860,8 +1731,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_nodejs">
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1870,8 +1740,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#grafanacomponent">Grafana<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafana_nodejs">
 <a href="#state_grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -1881,8 +1750,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafanauserconfig_nodejs">
 <a href="#state_grafanauserconfig_nodejs" style="color: inherit; text-decoration: inherit;">grafana<wbr>User<wbr>Config</a>
@@ -1892,8 +1760,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_nodejs">
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -1903,8 +1770,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_nodejs">
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -1914,8 +1780,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1931,8 +1796,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1943,8 +1807,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_nodejs">
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -1958,8 +1821,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_nodejs">
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1968,8 +1830,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_nodejs">
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -1978,8 +1839,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">Grafana<wbr>Service<wbr>Integration[]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1990,8 +1850,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_nodejs">
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -2000,8 +1859,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_nodejs">
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -2010,8 +1868,7 @@ intended service usage rather than current attributes.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -2020,8 +1877,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_nodejs">
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -2030,8 +1886,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_nodejs">
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -2040,8 +1895,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2050,8 +1904,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -2064,13 +1917,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -2085,8 +1936,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_python">
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -2095,8 +1945,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#grafanacomponent">Sequence[Grafana<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafana_python">
 <a href="#state_grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -2106,8 +1955,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grafana_user_config_python">
 <a href="#state_grafana_user_config_python" style="color: inherit; text-decoration: inherit;">grafana_<wbr>user_<wbr>config</a>
@@ -2117,8 +1965,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}defines Grafana specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_dow_python">
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -2128,8 +1975,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_time_python">
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -2139,8 +1985,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2156,8 +2001,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2168,8 +2012,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_vpc_id_python">
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -2183,8 +2026,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_host_python">
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -2193,8 +2035,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Grafana hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_integrations_python">
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -2203,8 +2044,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#grafanaserviceintegration">Sequence[Grafana<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service integrations to specify when creating a service. Not applied after initial service creation
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -2215,8 +2055,7 @@ significant amount of time to complete if the service has a lot of data.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_password_python">
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -2225,8 +2064,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_port_python">
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -2235,8 +2073,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Grafana port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -2245,8 +2082,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_uri_python">
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -2255,8 +2091,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Grafana service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_username_python">
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -2265,8 +2100,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Grafana service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2275,8 +2109,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -2289,8 +2122,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2305,8 +2137,7 @@ deletion is done.
 <h4 id="grafanacomponent">Grafana<wbr>Component</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2314,8 +2145,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2324,8 +2154,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2333,8 +2162,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2343,8 +2171,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2352,8 +2179,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2361,8 +2187,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2370,13 +2195,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2384,8 +2207,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2394,8 +2216,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2403,8 +2224,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2413,8 +2233,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2422,8 +2241,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2431,8 +2249,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2440,13 +2257,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2454,8 +2269,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2464,8 +2278,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2473,8 +2286,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2483,8 +2295,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2492,8 +2303,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2501,8 +2311,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2510,13 +2319,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2524,8 +2331,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2534,8 +2340,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2543,8 +2348,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2553,8 +2357,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2562,8 +2365,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2571,8 +2373,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2580,15 +2381,13 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfig">Grafana<wbr>Grafana<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertingenabled_csharp">
 <a href="#alertingenabled_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Enabled</a>
@@ -2597,8 +2396,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable Grafana alerting functionality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertingerrorortimeout_csharp">
 <a href="#alertingerrorortimeout_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Error<wbr>Or<wbr>Timeout</a>
@@ -2607,8 +2405,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertingnodataornullvalues_csharp">
 <a href="#alertingnodataornullvalues_csharp" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
@@ -2618,8 +2415,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}Default value for 'no data or null values' for
 new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowembedding_csharp">
 <a href="#allowembedding_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Embedding</a>
@@ -2629,8 +2425,7 @@ new alerting rules
     </dt>
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authbasicenabled_csharp">
 <a href="#authbasicenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Basic<wbr>Enabled</a>
@@ -2640,8 +2435,7 @@ tags. Disabled by default to limit impact of clickjacking
     </dt>
     <dd>{{% md %}}Enable or disable basic authentication form, used by Grafana 
 built-in login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgenericoauth_csharp">
 <a href="#authgenericoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Generic<wbr>Oauth</a>
@@ -2650,8 +2444,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgithub_csharp">
 <a href="#authgithub_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Github</a>
@@ -2660,8 +2453,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgitlab_csharp">
 <a href="#authgitlab_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Gitlab</a>
@@ -2670,8 +2462,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgoogle_csharp">
 <a href="#authgoogle_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Google</a>
@@ -2680,8 +2471,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiesamesite_csharp">
 <a href="#cookiesamesite_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Samesite</a>
@@ -2691,8 +2481,7 @@ built-in login.
     </dt>
     <dd>{{% md %}}Cookie SameSite attribute: 'strict' prevents sending cookie for 
 cross-site requests, effectively disabling direct linking from other sites to Grafana. 'lax' is the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
 <a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -2701,8 +2490,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardsminrefreshinterval_csharp">
 <a href="#dashboardsminrefreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
@@ -2712,8 +2500,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
     </dt>
     <dd>{{% md %}}Signed sequence of decimal numbers, followed 
 by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardsversionstokeep_csharp">
 <a href="#dashboardsversionstokeep_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
@@ -2722,8 +2509,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dashboard versions to keep per dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxysenduserheader_csharp">
 <a href="#dataproxysenduserheader_csharp" style="color: inherit; text-decoration: inherit;">Dataproxy<wbr>Send<wbr>User<wbr>Header</a>
@@ -2732,8 +2518,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Send 'X-Grafana-User' header to data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxytimeout_csharp">
 <a href="#dataproxytimeout_csharp" style="color: inherit; text-decoration: inherit;">Dataproxy<wbr>Timeout</a>
@@ -2742,8 +2527,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegravatar_csharp">
 <a href="#disablegravatar_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Gravatar</a>
@@ -2753,8 +2537,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Set to true to disable gravatar. Defaults to false 
 (gravatar is enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editorscanadmin_csharp">
 <a href="#editorscanadmin_csharp" style="color: inherit; text-decoration: inherit;">Editors<wbr>Can<wbr>Admin</a>
@@ -2763,8 +2546,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Editors can manage folders, teams and dashboards created by them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalimagestorage_csharp">
 <a href="#externalimagestorage_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Image<wbr>Storage</a>
@@ -2773,8 +2555,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleanalyticsuaid_csharp">
 <a href="#googleanalyticsuaid_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Analytics<wbr>Ua<wbr>Id</a>
@@ -2783,8 +2564,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Analytics Universal Analytics ID for tracking Grafana usage
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2793,8 +2573,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_csharp">
 <a href="#metricsenabled_csharp" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Enabled</a>
@@ -2803,8 +2582,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Grafana /metrics endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2812,8 +2590,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_csharp">
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2822,8 +2599,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2833,8 +2609,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2843,8 +2618,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_csharp">
 <a href="#recoverybasebackupname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
@@ -2853,8 +2627,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2864,8 +2637,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtpserver_csharp">
 <a href="#smtpserver_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
@@ -2874,8 +2646,7 @@ when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userautoassignorg_csharp">
 <a href="#userautoassignorg_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org</a>
@@ -2885,8 +2656,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Auto-assign new users on signup to main organization. 
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userautoassignorgrole_csharp">
 <a href="#userautoassignorgrole_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org<wbr>Role</a>
@@ -2895,8 +2665,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set role for new signups. Defaults to Viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewerscanedit_csharp">
 <a href="#viewerscanedit_csharp" style="color: inherit; text-decoration: inherit;">Viewers<wbr>Can<wbr>Edit</a>
@@ -2905,13 +2674,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertingenabled_go">
 <a href="#alertingenabled_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Enabled</a>
@@ -2920,8 +2687,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable Grafana alerting functionality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertingerrorortimeout_go">
 <a href="#alertingerrorortimeout_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Error<wbr>Or<wbr>Timeout</a>
@@ -2930,8 +2696,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertingnodataornullvalues_go">
 <a href="#alertingnodataornullvalues_go" style="color: inherit; text-decoration: inherit;">Alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
@@ -2941,8 +2706,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Default value for 'no data or null values' for
 new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowembedding_go">
 <a href="#allowembedding_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Embedding</a>
@@ -2952,8 +2716,7 @@ new alerting rules
     </dt>
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authbasicenabled_go">
 <a href="#authbasicenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Basic<wbr>Enabled</a>
@@ -2963,8 +2726,7 @@ tags. Disabled by default to limit impact of clickjacking
     </dt>
     <dd>{{% md %}}Enable or disable basic authentication form, used by Grafana 
 built-in login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgenericoauth_go">
 <a href="#authgenericoauth_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Generic<wbr>Oauth</a>
@@ -2973,8 +2735,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgithub_go">
 <a href="#authgithub_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Github</a>
@@ -2983,8 +2744,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgitlab_go">
 <a href="#authgitlab_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Gitlab</a>
@@ -2993,8 +2753,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgoogle_go">
 <a href="#authgoogle_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Google</a>
@@ -3003,8 +2762,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiesamesite_go">
 <a href="#cookiesamesite_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Samesite</a>
@@ -3014,8 +2772,7 @@ built-in login.
     </dt>
     <dd>{{% md %}}Cookie SameSite attribute: 'strict' prevents sending cookie for 
 cross-site requests, effectively disabling direct linking from other sites to Grafana. 'lax' is the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
 <a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -3024,8 +2781,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardsminrefreshinterval_go">
 <a href="#dashboardsminrefreshinterval_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
@@ -3035,8 +2791,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
     </dt>
     <dd>{{% md %}}Signed sequence of decimal numbers, followed 
 by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardsversionstokeep_go">
 <a href="#dashboardsversionstokeep_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
@@ -3045,8 +2800,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dashboard versions to keep per dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxysenduserheader_go">
 <a href="#dataproxysenduserheader_go" style="color: inherit; text-decoration: inherit;">Dataproxy<wbr>Send<wbr>User<wbr>Header</a>
@@ -3055,8 +2809,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Send 'X-Grafana-User' header to data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxytimeout_go">
 <a href="#dataproxytimeout_go" style="color: inherit; text-decoration: inherit;">Dataproxy<wbr>Timeout</a>
@@ -3065,8 +2818,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegravatar_go">
 <a href="#disablegravatar_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Gravatar</a>
@@ -3076,8 +2828,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Set to true to disable gravatar. Defaults to false 
 (gravatar is enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editorscanadmin_go">
 <a href="#editorscanadmin_go" style="color: inherit; text-decoration: inherit;">Editors<wbr>Can<wbr>Admin</a>
@@ -3086,8 +2837,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Editors can manage folders, teams and dashboards created by them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalimagestorage_go">
 <a href="#externalimagestorage_go" style="color: inherit; text-decoration: inherit;">External<wbr>Image<wbr>Storage</a>
@@ -3096,8 +2846,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleanalyticsuaid_go">
 <a href="#googleanalyticsuaid_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Analytics<wbr>Ua<wbr>Id</a>
@@ -3106,8 +2855,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Analytics Universal Analytics ID for tracking Grafana usage
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -3116,8 +2864,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_go">
 <a href="#metricsenabled_go" style="color: inherit; text-decoration: inherit;">Metrics<wbr>Enabled</a>
@@ -3126,8 +2873,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Grafana /metrics endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -3135,8 +2881,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_go">
 <a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -3145,8 +2890,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -3156,8 +2900,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -3166,8 +2909,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_go">
 <a href="#recoverybasebackupname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
@@ -3176,8 +2918,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3187,8 +2928,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtpserver_go">
 <a href="#smtpserver_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Server</a>
@@ -3197,8 +2937,7 @@ when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userautoassignorg_go">
 <a href="#userautoassignorg_go" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org</a>
@@ -3208,8 +2947,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Auto-assign new users on signup to main organization. 
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userautoassignorgrole_go">
 <a href="#userautoassignorgrole_go" style="color: inherit; text-decoration: inherit;">User<wbr>Auto<wbr>Assign<wbr>Org<wbr>Role</a>
@@ -3218,8 +2956,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set role for new signups. Defaults to Viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewerscanedit_go">
 <a href="#viewerscanedit_go" style="color: inherit; text-decoration: inherit;">Viewers<wbr>Can<wbr>Edit</a>
@@ -3228,13 +2965,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alertingenabled_nodejs">
 <a href="#alertingenabled_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Enabled</a>
@@ -3243,8 +2978,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable Grafana alerting functionality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertingerrorortimeout_nodejs">
 <a href="#alertingerrorortimeout_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Error<wbr>Or<wbr>Timeout</a>
@@ -3253,8 +2987,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertingnodataornullvalues_nodejs">
 <a href="#alertingnodataornullvalues_nodejs" style="color: inherit; text-decoration: inherit;">alerting<wbr>Nodata<wbr>Or<wbr>Nullvalues</a>
@@ -3264,8 +2997,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Default value for 'no data or null values' for
 new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowembedding_nodejs">
 <a href="#allowembedding_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Embedding</a>
@@ -3275,8 +3007,7 @@ new alerting rules
     </dt>
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authbasicenabled_nodejs">
 <a href="#authbasicenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Basic<wbr>Enabled</a>
@@ -3286,8 +3017,7 @@ tags. Disabled by default to limit impact of clickjacking
     </dt>
     <dd>{{% md %}}Enable or disable basic authentication form, used by Grafana 
 built-in login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgenericoauth_nodejs">
 <a href="#authgenericoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Generic<wbr>Oauth</a>
@@ -3296,8 +3026,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgithub_nodejs">
 <a href="#authgithub_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Github</a>
@@ -3306,8 +3035,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgitlab_nodejs">
 <a href="#authgitlab_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Gitlab</a>
@@ -3316,8 +3044,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authgoogle_nodejs">
 <a href="#authgoogle_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Google</a>
@@ -3326,8 +3053,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiesamesite_nodejs">
 <a href="#cookiesamesite_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Samesite</a>
@@ -3337,8 +3063,7 @@ built-in login.
     </dt>
     <dd>{{% md %}}Cookie SameSite attribute: 'strict' prevents sending cookie for 
 cross-site requests, effectively disabling direct linking from other sites to Grafana. 'lax' is the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
@@ -3347,8 +3072,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardsminrefreshinterval_nodejs">
 <a href="#dashboardsminrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
@@ -3358,8 +3082,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
     </dt>
     <dd>{{% md %}}Signed sequence of decimal numbers, followed 
 by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardsversionstokeep_nodejs">
 <a href="#dashboardsversionstokeep_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
@@ -3368,8 +3091,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dashboard versions to keep per dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxysenduserheader_nodejs">
 <a href="#dataproxysenduserheader_nodejs" style="color: inherit; text-decoration: inherit;">dataproxy<wbr>Send<wbr>User<wbr>Header</a>
@@ -3378,8 +3100,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Send 'X-Grafana-User' header to data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxytimeout_nodejs">
 <a href="#dataproxytimeout_nodejs" style="color: inherit; text-decoration: inherit;">dataproxy<wbr>Timeout</a>
@@ -3388,8 +3109,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegravatar_nodejs">
 <a href="#disablegravatar_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Gravatar</a>
@@ -3399,8 +3119,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Set to true to disable gravatar. Defaults to false 
 (gravatar is enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editorscanadmin_nodejs">
 <a href="#editorscanadmin_nodejs" style="color: inherit; text-decoration: inherit;">editors<wbr>Can<wbr>Admin</a>
@@ -3409,8 +3128,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Editors can manage folders, teams and dashboards created by them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalimagestorage_nodejs">
 <a href="#externalimagestorage_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Image<wbr>Storage</a>
@@ -3419,8 +3137,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleanalyticsuaid_nodejs">
 <a href="#googleanalyticsuaid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Analytics<wbr>Ua<wbr>Id</a>
@@ -3429,8 +3146,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Google Analytics Universal Analytics ID for tracking Grafana usage
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -3439,8 +3155,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsenabled_nodejs">
 <a href="#metricsenabled_nodejs" style="color: inherit; text-decoration: inherit;">metrics<wbr>Enabled</a>
@@ -3449,8 +3164,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable Grafana /metrics endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -3458,8 +3172,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_nodejs">
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
@@ -3468,8 +3181,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
@@ -3479,8 +3191,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -3489,8 +3200,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_nodejs">
 <a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
@@ -3499,8 +3209,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3510,8 +3219,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtpserver_nodejs">
 <a href="#smtpserver_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Server</a>
@@ -3520,8 +3228,7 @@ when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userautoassignorg_nodejs">
 <a href="#userautoassignorg_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org</a>
@@ -3531,8 +3238,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Auto-assign new users on signup to main organization. 
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userautoassignorgrole_nodejs">
 <a href="#userautoassignorgrole_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Auto<wbr>Assign<wbr>Org<wbr>Role</a>
@@ -3541,8 +3247,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set role for new signups. Defaults to Viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewerscanedit_nodejs">
 <a href="#viewerscanedit_nodejs" style="color: inherit; text-decoration: inherit;">viewers<wbr>Can<wbr>Edit</a>
@@ -3551,13 +3256,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alerting_enabled_python">
 <a href="#alerting_enabled_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>enabled</a>
@@ -3566,8 +3269,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable or disable Grafana alerting functionality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerting_error_or_timeout_python">
 <a href="#alerting_error_or_timeout_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>error_<wbr>or_<wbr>timeout</a>
@@ -3576,8 +3278,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default error or timeout setting for new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerting_nodata_or_nullvalues_python">
 <a href="#alerting_nodata_or_nullvalues_python" style="color: inherit; text-decoration: inherit;">alerting_<wbr>nodata_<wbr>or_<wbr>nullvalues</a>
@@ -3587,8 +3288,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Default value for 'no data or null values' for
 new alerting rules
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_embedding_python">
 <a href="#allow_embedding_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>embedding</a>
@@ -3598,8 +3298,7 @@ new alerting rules
     </dt>
     <dd>{{% md %}}Allow embedding Grafana dashboards with iframe/frame/object/embed 
 tags. Disabled by default to limit impact of clickjacking
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_basic_enabled_python">
 <a href="#auth_basic_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>basic_<wbr>enabled</a>
@@ -3609,8 +3308,7 @@ tags. Disabled by default to limit impact of clickjacking
     </dt>
     <dd>{{% md %}}Enable or disable basic authentication form, used by Grafana 
 built-in login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_generic_oauth_python">
 <a href="#auth_generic_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>generic_<wbr>oauth</a>
@@ -3619,8 +3317,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Generic OAuth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_github_python">
 <a href="#auth_github_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>github</a>
@@ -3629,8 +3326,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_gitlab_python">
 <a href="#auth_gitlab_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>gitlab</a>
@@ -3639,8 +3335,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}GitLab Auth integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_google_python">
 <a href="#auth_google_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>google</a>
@@ -3649,8 +3344,7 @@ built-in login.
         <span class="property-type"><a href="#grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google Auth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_samesite_python">
 <a href="#cookie_samesite_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>samesite</a>
@@ -3660,8 +3354,7 @@ built-in login.
     </dt>
     <dd>{{% md %}}Cookie SameSite attribute: 'strict' prevents sending cookie for 
 cross-site requests, effectively disabling direct linking from other sites to Grafana. 'lax' is the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
@@ -3670,8 +3363,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboards_min_refresh_interval_python">
 <a href="#dashboards_min_refresh_interval_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>min_<wbr>refresh_<wbr>interval</a>
@@ -3681,8 +3373,7 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
     </dt>
     <dd>{{% md %}}Signed sequence of decimal numbers, followed 
 by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboards_versions_to_keep_python">
 <a href="#dashboards_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>versions_<wbr>to_<wbr>keep</a>
@@ -3691,8 +3382,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dashboard versions to keep per dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxy_send_user_header_python">
 <a href="#dataproxy_send_user_header_python" style="color: inherit; text-decoration: inherit;">dataproxy_<wbr>send_<wbr>user_<wbr>header</a>
@@ -3701,8 +3391,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Send 'X-Grafana-User' header to data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataproxy_timeout_python">
 <a href="#dataproxy_timeout_python" style="color: inherit; text-decoration: inherit;">dataproxy_<wbr>timeout</a>
@@ -3711,8 +3400,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timeout for data proxy requests in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_gravatar_python">
 <a href="#disable_gravatar_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>gravatar</a>
@@ -3722,8 +3410,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Set to true to disable gravatar. Defaults to false 
 (gravatar is enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editors_can_admin_python">
 <a href="#editors_can_admin_python" style="color: inherit; text-decoration: inherit;">editors_<wbr>can_<wbr>admin</a>
@@ -3732,8 +3419,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Editors can manage folders, teams and dashboards created by them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_image_storage_python">
 <a href="#external_image_storage_python" style="color: inherit; text-decoration: inherit;">external_<wbr>image_<wbr>storage</a>
@@ -3742,8 +3428,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}External image store settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="google_analytics_ua_id_python">
 <a href="#google_analytics_ua_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>analytics_<wbr>ua_<wbr>id</a>
@@ -3752,8 +3437,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Google Analytics Universal Analytics ID for tracking Grafana usage
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -3762,8 +3446,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_enabled_python">
 <a href="#metrics_enabled_python" style="color: inherit; text-decoration: inherit;">metrics_<wbr>enabled</a>
@@ -3772,8 +3455,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable Grafana /metrics endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -3781,8 +3463,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelink_access_python">
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
@@ -3791,8 +3472,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
         <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3802,8 +3482,7 @@ by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has 
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -3812,8 +3491,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_basebackup_name_python">
 <a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
@@ -3822,8 +3500,7 @@ effect only when a new service is being created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3833,8 +3510,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtp_server_python">
 <a href="#smtp_server_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>server</a>
@@ -3843,8 +3519,7 @@ when a new service is being created.
         <span class="property-type"><a href="#grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SMTP server settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_auto_assign_org_python">
 <a href="#user_auto_assign_org_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org</a>
@@ -3854,8 +3529,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Auto-assign new users on signup to main organization. 
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_auto_assign_org_role_python">
 <a href="#user_auto_assign_org_role_python" style="color: inherit; text-decoration: inherit;">user_<wbr>auto_<wbr>assign_<wbr>org_<wbr>role</a>
@@ -3864,8 +3538,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set role for new signups. Defaults to Viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viewers_can_edit_python">
 <a href="#viewers_can_edit_python" style="color: inherit; text-decoration: inherit;">viewers_<wbr>can_<wbr>edit</a>
@@ -3874,15 +3547,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Users with view-only permission can edit but not save dashboards.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigauthgenericoauth">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Generic<wbr>Oauth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
 <a href="#allowsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -3891,8 +3562,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_csharp">
 <a href="#alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -3901,8 +3571,7 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorganizations_csharp">
 <a href="#allowedorganizations_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Organizations</a>
@@ -3911,8 +3580,7 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_csharp">
 <a href="#apiurl_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -3921,8 +3589,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_csharp">
 <a href="#authurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -3931,8 +3598,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -3941,8 +3607,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -3951,8 +3616,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3961,8 +3625,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OAuth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -3971,8 +3634,7 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Scope must be non-empty string without whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenurl_csharp">
 <a href="#tokenurl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
@@ -3981,13 +3643,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
 <a href="#allowsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -3996,8 +3656,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_go">
 <a href="#alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -4006,8 +3665,7 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorganizations_go">
 <a href="#allowedorganizations_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Organizations</a>
@@ -4016,8 +3674,7 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_go">
 <a href="#apiurl_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -4026,8 +3683,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_go">
 <a href="#authurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -4036,8 +3692,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4046,8 +3701,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4056,8 +3710,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4066,8 +3719,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OAuth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -4076,8 +3728,7 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Scope must be non-empty string without whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenurl_go">
 <a href="#tokenurl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
@@ -4086,13 +3737,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
@@ -4101,8 +3750,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_nodejs">
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
@@ -4111,8 +3759,7 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorganizations_nodejs">
 <a href="#allowedorganizations_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Organizations</a>
@@ -4121,8 +3768,7 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_nodejs">
 <a href="#apiurl_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
@@ -4131,8 +3777,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_nodejs">
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
@@ -4141,8 +3786,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4151,8 +3795,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -4161,8 +3804,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4171,8 +3813,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the OAuth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -4181,8 +3822,7 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Scope must be non-empty string without whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenurl_nodejs">
 <a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
@@ -4191,13 +3831,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
@@ -4206,8 +3844,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_domains_python">
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
@@ -4216,8 +3853,7 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_organizations_python">
 <a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
@@ -4226,8 +3862,7 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_url_python">
 <a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
@@ -4236,8 +3871,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_url_python">
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
@@ -4246,8 +3880,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4256,8 +3889,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -4266,8 +3898,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4276,8 +3907,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the OAuth integration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -4286,8 +3916,7 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Scope must be non-empty string without whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_url_python">
 <a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
@@ -4296,15 +3925,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigauthgithub">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Github</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
 <a href="#allowsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -4313,8 +3940,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorganizations_csharp">
 <a href="#allowedorganizations_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Organizations</a>
@@ -4323,8 +3949,7 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4333,8 +3958,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4343,8 +3967,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamids_csharp">
 <a href="#teamids_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Ids</a>
@@ -4353,13 +3976,11 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given team IDs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
 <a href="#allowsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -4368,8 +3989,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorganizations_go">
 <a href="#allowedorganizations_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Organizations</a>
@@ -4378,8 +3998,7 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4388,8 +4007,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4398,8 +4016,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamids_go">
 <a href="#teamids_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Ids</a>
@@ -4408,13 +4025,11 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given team IDs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
@@ -4423,8 +4038,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorganizations_nodejs">
 <a href="#allowedorganizations_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Organizations</a>
@@ -4433,8 +4047,7 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4443,8 +4056,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -4453,8 +4065,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teamids_nodejs">
 <a href="#teamids_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Ids</a>
@@ -4463,13 +4074,11 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given team IDs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
@@ -4478,8 +4087,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_organizations_python">
 <a href="#allowed_organizations_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>organizations</a>
@@ -4488,8 +4096,7 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters and dashes"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4498,8 +4105,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -4508,8 +4114,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="team_ids_python">
 <a href="#team_ids_python" style="color: inherit; text-decoration: inherit;">team_<wbr>ids</a>
@@ -4518,15 +4123,13 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given team IDs
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigauthgitlab">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Gitlab</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
 <a href="#allowsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -4535,8 +4138,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedgroups_csharp">
 <a href="#allowedgroups_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Groups</a>
@@ -4545,8 +4147,7 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given groups
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_csharp">
 <a href="#apiurl_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -4555,8 +4156,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_csharp">
 <a href="#authurl_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -4565,8 +4165,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4575,8 +4174,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4585,8 +4183,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenurl_csharp">
 <a href="#tokenurl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
@@ -4595,13 +4192,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
 <a href="#allowsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -4610,8 +4205,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedgroups_go">
 <a href="#allowedgroups_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Groups</a>
@@ -4620,8 +4214,7 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given groups
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_go">
 <a href="#apiurl_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -4630,8 +4223,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_go">
 <a href="#authurl_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Url</a>
@@ -4640,8 +4232,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4650,8 +4241,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4660,8 +4250,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenurl_go">
 <a href="#tokenurl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Url</a>
@@ -4670,13 +4259,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
@@ -4685,8 +4272,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedgroups_nodejs">
 <a href="#allowedgroups_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Groups</a>
@@ -4695,8 +4281,7 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given groups
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiurl_nodejs">
 <a href="#apiurl_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
@@ -4705,8 +4290,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authurl_nodejs">
 <a href="#authurl_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Url</a>
@@ -4715,8 +4299,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4725,8 +4308,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -4735,8 +4317,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenurl_nodejs">
 <a href="#tokenurl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Url</a>
@@ -4745,13 +4326,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
@@ -4760,8 +4339,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_groups_python">
 <a href="#allowed_groups_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>groups</a>
@@ -4770,8 +4348,7 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Require users to belong to one of given groups
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_url_python">
 <a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
@@ -4780,8 +4357,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_url_python">
 <a href="#auth_url_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>url</a>
@@ -4790,8 +4366,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authorization URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4800,8 +4375,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -4810,8 +4384,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_url_python">
 <a href="#token_url_python" style="color: inherit; text-decoration: inherit;">token_<wbr>url</a>
@@ -4820,15 +4393,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token URL. This only needs to be set when using self hosted GitLab
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigauthgoogle">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Auth<wbr>Google</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
 <a href="#allowsignup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -4837,8 +4408,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_csharp">
 <a href="#alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -4847,8 +4417,7 @@ Defaults to false.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4857,8 +4426,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4867,13 +4435,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
 <a href="#allowsignup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Sign<wbr>Up</a>
@@ -4882,8 +4448,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_go">
 <a href="#alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -4892,8 +4457,7 @@ Defaults to false.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4902,8 +4466,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -4912,13 +4475,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
 <a href="#allowsignup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Sign<wbr>Up</a>
@@ -4927,8 +4488,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_nodejs">
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
@@ -4937,8 +4497,7 @@ Defaults to false.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4947,8 +4506,7 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -4957,13 +4515,11 @@ Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
 <a href="#allow_sign_up_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>sign_<wbr>up</a>
@@ -4972,8 +4528,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Automatically sign-up users on successful sign-in
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_domains_python">
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
@@ -4982,8 +4537,7 @@ Defaults to false.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed domain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4992,8 +4546,7 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ID from provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -5002,15 +4555,13 @@ Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client secret from provider
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigexternalimagestorage">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>External<wbr>Image<wbr>Storage</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -5020,8 +4571,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketurl_csharp">
 <a href="#bucketurl_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Url</a>
@@ -5030,8 +4580,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket URL for S3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_csharp">
 <a href="#provider_csharp" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -5040,8 +4589,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provider type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -5050,13 +4598,11 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 secret key
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -5066,8 +4612,7 @@ s3:PutObject and s3:PutObjectAcl actions
     </dt>
     <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketurl_go">
 <a href="#bucketurl_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Url</a>
@@ -5076,8 +4621,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket URL for S3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_go">
 <a href="#provider_go" style="color: inherit; text-decoration: inherit;">Provider</a>
@@ -5086,8 +4630,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provider type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -5096,13 +4639,11 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 secret key
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -5112,8 +4653,7 @@ s3:PutObject and s3:PutObjectAcl actions
     </dt>
     <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketurl_nodejs">
 <a href="#bucketurl_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Url</a>
@@ -5122,8 +4662,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket URL for S3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_nodejs">
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -5132,8 +4671,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provider type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -5142,13 +4680,11 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 secret key
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -5158,8 +4694,7 @@ s3:PutObject and s3:PutObjectAcl actions
     </dt>
     <dd>{{% md %}}S3 access key. Requires permissions to the S3 bucket for the 
 s3:PutObject and s3:PutObjectAcl actions
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_url_python">
 <a href="#bucket_url_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>url</a>
@@ -5168,8 +4703,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket URL for S3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_python">
 <a href="#provider_python" style="color: inherit; text-decoration: inherit;">provider</a>
@@ -5178,8 +4712,7 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provider type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -5188,15 +4721,13 @@ s3:PutObject and s3:PutObjectAcl actions
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 secret key
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_csharp">
 <a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -5206,13 +4737,11 @@ s3:PutObject and s3:PutObjectAcl actions
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
 <a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -5222,13 +4751,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -5238,13 +4765,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -5254,15 +4779,13 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_csharp">
 <a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -5272,13 +4795,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
 <a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -5288,13 +4809,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -5304,13 +4823,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -5320,15 +4837,13 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigpublicaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_csharp">
 <a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -5338,13 +4853,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
 <a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
@@ -5354,13 +4867,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
 <a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -5370,13 +4881,11 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
 <a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
@@ -5386,15 +4895,13 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
 are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigsmtpserver">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Smtp<wbr>Server</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fromaddress_csharp">
 <a href="#fromaddress_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Address</a>
@@ -5403,8 +4910,7 @@ are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address used for sending emails
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromname_csharp">
 <a href="#fromname_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Name</a>
@@ -5413,8 +4919,7 @@ are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used in outgoing emails, defaults to Grafana
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -5423,8 +4928,7 @@ are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -5433,8 +4937,7 @@ are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -5443,8 +4946,7 @@ are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipverify_csharp">
 <a href="#skipverify_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Verify</a>
@@ -5453,8 +4955,7 @@ are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttlspolicy_csharp">
 <a href="#starttlspolicy_csharp" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
@@ -5464,8 +4965,7 @@ are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
 Default is OpportunisticStartTLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5474,13 +4974,11 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for SMTP authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fromaddress_go">
 <a href="#fromaddress_go" style="color: inherit; text-decoration: inherit;">From<wbr>Address</a>
@@ -5489,8 +4987,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address used for sending emails
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromname_go">
 <a href="#fromname_go" style="color: inherit; text-decoration: inherit;">From<wbr>Name</a>
@@ -5499,8 +4996,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used in outgoing emails, defaults to Grafana
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -5509,8 +5005,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -5519,8 +5014,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -5529,8 +5023,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipverify_go">
 <a href="#skipverify_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Verify</a>
@@ -5539,8 +5032,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttlspolicy_go">
 <a href="#starttlspolicy_go" style="color: inherit; text-decoration: inherit;">Starttls<wbr>Policy</a>
@@ -5550,8 +5042,7 @@ Default is OpportunisticStartTLS.
     </dt>
     <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
 Default is OpportunisticStartTLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -5560,13 +5051,11 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for SMTP authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fromaddress_nodejs">
 <a href="#fromaddress_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Address</a>
@@ -5575,8 +5064,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address used for sending emails
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromname_nodejs">
 <a href="#fromname_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Name</a>
@@ -5585,8 +5073,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used in outgoing emails, defaults to Grafana
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -5595,8 +5082,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -5605,8 +5091,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5615,8 +5100,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipverify_nodejs">
 <a href="#skipverify_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Verify</a>
@@ -5625,8 +5109,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttlspolicy_nodejs">
 <a href="#starttlspolicy_nodejs" style="color: inherit; text-decoration: inherit;">starttls<wbr>Policy</a>
@@ -5636,8 +5119,7 @@ Default is OpportunisticStartTLS.
     </dt>
     <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
 Default is OpportunisticStartTLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5646,13 +5128,11 @@ Default is OpportunisticStartTLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for SMTP authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="from_address_python">
 <a href="#from_address_python" style="color: inherit; text-decoration: inherit;">from_<wbr>address</a>
@@ -5661,8 +5141,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address used for sending emails
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="from_name_python">
 <a href="#from_name_python" style="color: inherit; text-decoration: inherit;">from_<wbr>name</a>
@@ -5671,8 +5150,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used in outgoing emails, defaults to Grafana
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -5681,8 +5159,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server hostname or IP
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -5691,8 +5168,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -5701,8 +5177,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SMTP server port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_verify_python">
 <a href="#skip_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>verify</a>
@@ -5711,8 +5186,7 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Skip verifying server certificate. Defaults to false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttls_policy_python">
 <a href="#starttls_policy_python" style="color: inherit; text-decoration: inherit;">starttls_<wbr>policy</a>
@@ -5722,8 +5196,7 @@ Default is OpportunisticStartTLS.
     </dt>
     <dd>{{% md %}}Either OpportunisticStartTLS, MandatoryStartTLS or NoStartTLS. 
 Default is OpportunisticStartTLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -5732,15 +5205,13 @@ Default is OpportunisticStartTLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for SMTP authentication
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="grafanaserviceintegration">Grafana<wbr>Service<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -5748,8 +5219,7 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -5757,13 +5227,11 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -5771,8 +5239,7 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -5780,13 +5247,11 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -5794,8 +5259,7 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -5803,13 +5267,11 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -5817,8 +5279,7 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -5826,8 +5287,7 @@ Default is OpportunisticStartTLS.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

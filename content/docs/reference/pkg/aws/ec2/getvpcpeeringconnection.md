@@ -193,8 +193,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -203,8 +202,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -213,8 +211,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -223,8 +220,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -233,8 +229,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peercidrblock_csharp">
 <a href="#peercidrblock_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block</a>
@@ -243,8 +238,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerownerid_csharp">
 <a href="#peerownerid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -253,8 +247,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -263,8 +256,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peervpcid_csharp">
 <a href="#peervpcid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -273,8 +265,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -283,8 +274,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -293,8 +283,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -304,8 +293,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -314,13 +302,11 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -329,8 +315,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -339,8 +324,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -349,8 +333,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -359,8 +342,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peercidrblock_go">
 <a href="#peercidrblock_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block</a>
@@ -369,8 +351,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerownerid_go">
 <a href="#peerownerid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -379,8 +360,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -389,8 +369,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peervpcid_go">
 <a href="#peervpcid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -399,8 +378,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -409,8 +387,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -419,8 +396,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -430,8 +406,7 @@ a pair on the desired VPC Peering Connection.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -440,13 +415,11 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -455,8 +428,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -465,8 +437,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -475,8 +446,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -485,8 +455,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peercidrblock_nodejs">
 <a href="#peercidrblock_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidr<wbr>Block</a>
@@ -495,8 +464,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerownerid_nodejs">
 <a href="#peerownerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Owner<wbr>Id</a>
@@ -505,8 +473,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
@@ -515,8 +482,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peervpcid_nodejs">
 <a href="#peervpcid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vpc<wbr>Id</a>
@@ -525,8 +491,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -535,8 +500,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -545,8 +509,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -556,8 +519,7 @@ a pair on the desired VPC Peering Connection.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -566,13 +528,11 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -581,8 +541,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -591,8 +550,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -601,8 +559,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -611,8 +568,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_cidr_block_python">
 <a href="#peer_cidr_block_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidr_<wbr>block</a>
@@ -621,8 +577,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_owner_id_python">
 <a href="#peer_owner_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>owner_<wbr>id</a>
@@ -631,8 +586,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
@@ -641,8 +595,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_vpc_id_python">
 <a href="#peer_vpc_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vpc_<wbr>id</a>
@@ -651,8 +604,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -661,8 +613,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -671,8 +622,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -682,8 +632,7 @@ a pair on the desired VPC Peering Connection.
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -692,8 +641,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -706,8 +654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepter_csharp">
 <a href="#accepter_csharp" style="color: inherit; text-decoration: inherit;">Accepter</a>
@@ -717,8 +664,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -727,8 +673,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrblocksets_csharp">
 <a href="#cidrblocksets_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block<wbr>Sets</a>
@@ -737,8 +682,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -746,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -755,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercidrblock_csharp">
 <a href="#peercidrblock_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block</a>
@@ -764,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercidrblocksets_csharp">
 <a href="#peercidrblocksets_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block<wbr>Sets</a>
@@ -774,8 +715,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerownerid_csharp">
 <a href="#peerownerid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -783,8 +723,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -792,8 +731,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervpcid_csharp">
 <a href="#peervpcid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -801,8 +739,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -810,8 +747,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requester_csharp">
 <a href="#requester_csharp" style="color: inherit; text-decoration: inherit;">Requester</a>
@@ -821,8 +757,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -830,8 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -839,8 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -848,8 +781,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -857,13 +789,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepter_go">
 <a href="#accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
@@ -873,8 +803,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -883,8 +812,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrblocksets_go">
 <a href="#cidrblocksets_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block<wbr>Sets</a>
@@ -893,8 +821,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -902,8 +829,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -911,8 +837,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercidrblock_go">
 <a href="#peercidrblock_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block</a>
@@ -920,8 +845,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercidrblocksets_go">
 <a href="#peercidrblocksets_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block<wbr>Sets</a>
@@ -930,8 +854,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerownerid_go">
 <a href="#peerownerid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -939,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -948,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervpcid_go">
 <a href="#peervpcid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -957,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -966,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requester_go">
 <a href="#requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
@@ -977,8 +896,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -986,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -995,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1004,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1013,13 +928,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepter_nodejs">
 <a href="#accepter_nodejs" style="color: inherit; text-decoration: inherit;">accepter</a>
@@ -1029,8 +942,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1039,8 +951,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrblocksets_nodejs">
 <a href="#cidrblocksets_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block<wbr>Sets</a>
@@ -1049,8 +960,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1058,8 +968,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -1067,8 +976,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercidrblock_nodejs">
 <a href="#peercidrblock_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidr<wbr>Block</a>
@@ -1076,8 +984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercidrblocksets_nodejs">
 <a href="#peercidrblocksets_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidr<wbr>Block<wbr>Sets</a>
@@ -1086,8 +993,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerownerid_nodejs">
 <a href="#peerownerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Owner<wbr>Id</a>
@@ -1095,8 +1001,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
@@ -1104,8 +1009,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervpcid_nodejs">
 <a href="#peervpcid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vpc<wbr>Id</a>
@@ -1113,8 +1017,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1122,8 +1025,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requester_nodejs">
 <a href="#requester_nodejs" style="color: inherit; text-decoration: inherit;">requester</a>
@@ -1133,8 +1035,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1142,8 +1043,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1151,8 +1051,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1160,8 +1059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1169,13 +1067,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepter_python">
 <a href="#accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
@@ -1185,8 +1081,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1195,8 +1090,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_block_sets_python">
 <a href="#cidr_block_sets_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block_<wbr>sets</a>
@@ -1205,8 +1099,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1214,8 +1107,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -1223,8 +1115,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_cidr_block_python">
 <a href="#peer_cidr_block_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidr_<wbr>block</a>
@@ -1232,8 +1123,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_cidr_block_sets_python">
 <a href="#peer_cidr_block_sets_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidr_<wbr>block_<wbr>sets</a>
@@ -1242,8 +1132,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set]</a></span>
     </dt>
     <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_owner_id_python">
 <a href="#peer_owner_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>owner_<wbr>id</a>
@@ -1251,8 +1140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
@@ -1260,8 +1148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_vpc_id_python">
 <a href="#peer_vpc_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vpc_<wbr>id</a>
@@ -1269,8 +1156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1278,8 +1164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requester_python">
 <a href="#requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
@@ -1289,8 +1174,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1298,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1307,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1316,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1325,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1340,8 +1220,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1350,13 +1229,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1365,13 +1242,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1380,13 +1255,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1395,8 +1268,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</h4>
@@ -1404,8 +1276,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1415,8 +1286,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1426,13 +1296,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1442,8 +1310,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1453,13 +1320,11 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1469,8 +1334,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1480,13 +1344,11 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1496,8 +1358,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcPeeringConnections.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1507,8 +1368,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getvpcpeeringconnectionpeercidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set</h4>
@@ -1516,8 +1376,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1526,13 +1385,11 @@ A VPC Peering Connection will be selected if any one of the given values matches
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1541,13 +1398,11 @@ A VPC Peering Connection will be selected if any one of the given values matches
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1556,13 +1411,11 @@ A VPC Peering Connection will be selected if any one of the given values matches
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1571,8 +1424,7 @@ A VPC Peering Connection will be selected if any one of the given values matches
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

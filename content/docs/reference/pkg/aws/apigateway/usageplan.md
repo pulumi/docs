@@ -163,8 +163,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apistages_csharp">
 <a href="#apistages_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
@@ -173,8 +172,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanapistage">List&lt;Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -183,8 +181,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +190,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productcode_csharp">
 <a href="#productcode_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -203,8 +199,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotasettings_csharp">
 <a href="#quotasettings_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
@@ -213,8 +208,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -223,8 +217,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlesettings_csharp">
 <a href="#throttlesettings_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -233,13 +226,11 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apistages_go">
 <a href="#apistages_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
@@ -248,8 +239,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -258,8 +248,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -268,8 +257,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productcode_go">
 <a href="#productcode_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -278,8 +266,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotasettings_go">
 <a href="#quotasettings_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
@@ -288,8 +275,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -298,8 +284,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlesettings_go">
 <a href="#throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -308,13 +293,11 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apistages_nodejs">
 <a href="#apistages_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Stages</a>
@@ -323,8 +306,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanapistage">Usage<wbr>Plan<wbr>Api<wbr>Stage[]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -333,8 +315,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -343,8 +324,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productcode_nodejs">
 <a href="#productcode_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code</a>
@@ -353,8 +333,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quotasettings_nodejs">
 <a href="#quotasettings_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Settings</a>
@@ -363,8 +342,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -373,8 +351,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlesettings_nodejs">
 <a href="#throttlesettings_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Settings</a>
@@ -383,13 +360,11 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_stages_python">
 <a href="#api_stages_python" style="color: inherit; text-decoration: inherit;">api_<wbr>stages</a>
@@ -398,8 +373,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanapistage">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -408,8 +382,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +391,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_code_python">
 <a href="#product_code_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code</a>
@@ -428,8 +400,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quota_settings_python">
 <a href="#quota_settings_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>settings</a>
@@ -438,8 +409,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -448,8 +418,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttle_settings_python">
 <a href="#throttle_settings_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>settings</a>
@@ -458,8 +427,7 @@ The UsagePlan resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -470,8 +438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -480,8 +447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,13 +455,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -504,8 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -513,13 +476,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -528,8 +489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -537,13 +497,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -552,8 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -689,8 +645,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apistages_csharp">
 <a href="#state_apistages_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
@@ -699,8 +654,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanapistage">List&lt;Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -709,8 +663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -719,8 +672,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -729,8 +681,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_productcode_csharp">
 <a href="#state_productcode_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -739,8 +690,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotasettings_csharp">
 <a href="#state_quotasettings_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
@@ -749,8 +699,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -759,8 +708,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_csharp">
 <a href="#state_throttlesettings_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -769,13 +717,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apistages_go">
 <a href="#state_apistages_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Stages</a>
@@ -784,8 +730,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanapistage">[]Usage<wbr>Plan<wbr>Api<wbr>Stage</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -794,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -804,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -814,8 +757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_productcode_go">
 <a href="#state_productcode_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Code</a>
@@ -824,8 +766,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotasettings_go">
 <a href="#state_quotasettings_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Settings</a>
@@ -834,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -844,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_go">
 <a href="#state_throttlesettings_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Settings</a>
@@ -854,13 +793,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apistages_nodejs">
 <a href="#state_apistages_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Stages</a>
@@ -869,8 +806,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanapistage">Usage<wbr>Plan<wbr>Api<wbr>Stage[]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -879,8 +815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -889,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -899,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_productcode_nodejs">
 <a href="#state_productcode_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Code</a>
@@ -909,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quotasettings_nodejs">
 <a href="#state_quotasettings_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Settings</a>
@@ -919,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -929,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlesettings_nodejs">
 <a href="#state_throttlesettings_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Settings</a>
@@ -939,13 +869,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_stages_python">
 <a href="#state_api_stages_python" style="color: inherit; text-decoration: inherit;">api_<wbr>stages</a>
@@ -954,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanapistage">Sequence[Usage<wbr>Plan<wbr>Api<wbr>Stage<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The associated API stages of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -964,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -974,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -984,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_code_python">
 <a href="#state_product_code_python" style="color: inherit; text-decoration: inherit;">product_<wbr>code</a>
@@ -994,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quota_settings_python">
 <a href="#state_quota_settings_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>settings</a>
@@ -1004,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The quota settings of the usage plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1014,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttle_settings_python">
 <a href="#state_throttle_settings_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>settings</a>
@@ -1024,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The throttling limits of the usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1040,8 +960,7 @@ The following state arguments are supported:
 <h4 id="usageplanapistage">Usage<wbr>Plan<wbr>Api<wbr>Stage</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1050,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_csharp">
 <a href="#stage_csharp" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -1060,13 +978,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1075,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_go">
 <a href="#stage_go" style="color: inherit; text-decoration: inherit;">Stage</a>
@@ -1085,13 +1000,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -1100,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_nodejs">
 <a href="#stage_nodejs" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -1110,13 +1022,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -1125,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Id of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stage_python">
 <a href="#stage_python" style="color: inherit; text-decoration: inherit;">stage</a>
@@ -1135,15 +1044,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API stage name of the associated API stage in a usage plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="usageplanquotasettings">Usage<wbr>Plan<wbr>Quota<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -1152,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1162,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_csharp">
 <a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -1172,13 +1077,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -1187,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1197,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_go">
 <a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -1207,13 +1108,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -1222,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1232,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_nodejs">
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -1242,13 +1139,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -1257,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of requests that can be made in a given time period.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1267,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time period in which the limit applies. Valid values are "DAY", "WEEK" or "MONTH".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_python">
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -1277,15 +1170,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of requests subtracted from the given limit in the initial time period.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="usageplanthrottlesettings">Usage<wbr>Plan<wbr>Throttle<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burstlimit_csharp">
 <a href="#burstlimit_csharp" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
@@ -1294,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_csharp">
 <a href="#ratelimit_csharp" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
@@ -1304,13 +1194,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burstlimit_go">
 <a href="#burstlimit_go" style="color: inherit; text-decoration: inherit;">Burst<wbr>Limit</a>
@@ -1319,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_go">
 <a href="#ratelimit_go" style="color: inherit; text-decoration: inherit;">Rate<wbr>Limit</a>
@@ -1329,13 +1216,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burstlimit_nodejs">
 <a href="#burstlimit_nodejs" style="color: inherit; text-decoration: inherit;">burst<wbr>Limit</a>
@@ -1344,8 +1229,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_nodejs">
 <a href="#ratelimit_nodejs" style="color: inherit; text-decoration: inherit;">rate<wbr>Limit</a>
@@ -1354,13 +1238,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="burst_limit_python">
 <a href="#burst_limit_python" style="color: inherit; text-decoration: inherit;">burst_<wbr>limit</a>
@@ -1369,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rate_limit_python">
 <a href="#rate_limit_python" style="color: inherit; text-decoration: inherit;">rate_<wbr>limit</a>
@@ -1379,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The API request steady-state rate limit.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

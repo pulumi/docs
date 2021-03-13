@@ -265,8 +265,7 @@ The SamlKey resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="x5cs_csharp">
 <a href="#x5cs_csharp" style="color: inherit; text-decoration: inherit;">X5cs</a>
@@ -275,13 +274,11 @@ The SamlKey resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="x5cs_go">
 <a href="#x5cs_go" style="color: inherit; text-decoration: inherit;">X5cs</a>
@@ -290,13 +287,11 @@ The SamlKey resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="x5cs_nodejs">
 <a href="#x5cs_nodejs" style="color: inherit; text-decoration: inherit;">x5cs</a>
@@ -305,13 +300,11 @@ The SamlKey resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="x5cs_python">
 <a href="#x5cs_python" style="color: inherit; text-decoration: inherit;">x5cs</a>
@@ -320,8 +313,7 @@ The SamlKey resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -332,8 +324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -342,8 +333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiresat_csharp">
 <a href="#expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -352,8 +342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -361,8 +350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kid_csharp">
 <a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -371,8 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kty_csharp">
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -381,8 +368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_csharp">
 <a href="#use_csharp" style="color: inherit; text-decoration: inherit;">Use</a>
@@ -391,8 +377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="x5ts256_csharp">
 <a href="#x5ts256_csharp" style="color: inherit; text-decoration: inherit;">X5t<wbr>S256</a>
@@ -401,13 +386,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -416,8 +399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiresat_go">
 <a href="#expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -426,8 +408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -435,8 +416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kid_go">
 <a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -445,8 +425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kty_go">
 <a href="#kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -455,8 +434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_go">
 <a href="#use_go" style="color: inherit; text-decoration: inherit;">Use</a>
@@ -465,8 +443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="x5ts256_go">
 <a href="#x5ts256_go" style="color: inherit; text-decoration: inherit;">X5t<wbr>S256</a>
@@ -475,13 +452,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -490,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiresat_nodejs">
 <a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
@@ -500,8 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -509,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kid_nodejs">
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -519,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kty_nodejs">
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -529,8 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_nodejs">
 <a href="#use_nodejs" style="color: inherit; text-decoration: inherit;">use</a>
@@ -539,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="x5ts256_nodejs">
 <a href="#x5ts256_nodejs" style="color: inherit; text-decoration: inherit;">x5t<wbr>S256</a>
@@ -549,13 +518,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -564,8 +531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expires_at_python">
 <a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
@@ -574,8 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -583,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kid_python">
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -593,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kty_python">
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -603,8 +566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="use_python">
 <a href="#use_python" style="color: inherit; text-decoration: inherit;">use</a>
@@ -613,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="x5t_s256_python">
 <a href="#x5t_s256_python" style="color: inherit; text-decoration: inherit;">x5t_<wbr>s256</a>
@@ -623,8 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -751,8 +711,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -761,8 +720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiresat_csharp">
 <a href="#state_expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -771,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_csharp">
 <a href="#state_kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -781,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kty_csharp">
 <a href="#state_kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -791,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_csharp">
 <a href="#state_use_csharp" style="color: inherit; text-decoration: inherit;">Use</a>
@@ -801,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5cs_csharp">
 <a href="#state_x5cs_csharp" style="color: inherit; text-decoration: inherit;">X5cs</a>
@@ -811,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5ts256_csharp">
 <a href="#state_x5ts256_csharp" style="color: inherit; text-decoration: inherit;">X5t<wbr>S256</a>
@@ -821,13 +774,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -836,8 +787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiresat_go">
 <a href="#state_expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
@@ -846,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_go">
 <a href="#state_kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -856,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kty_go">
 <a href="#state_kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -866,8 +814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_go">
 <a href="#state_use_go" style="color: inherit; text-decoration: inherit;">Use</a>
@@ -876,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5cs_go">
 <a href="#state_x5cs_go" style="color: inherit; text-decoration: inherit;">X5cs</a>
@@ -886,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5ts256_go">
 <a href="#state_x5ts256_go" style="color: inherit; text-decoration: inherit;">X5t<wbr>S256</a>
@@ -896,13 +841,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -911,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiresat_nodejs">
 <a href="#state_expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
@@ -921,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_nodejs">
 <a href="#state_kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -931,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kty_nodejs">
 <a href="#state_kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -941,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_nodejs">
 <a href="#state_use_nodejs" style="color: inherit; text-decoration: inherit;">use</a>
@@ -951,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5cs_nodejs">
 <a href="#state_x5cs_nodejs" style="color: inherit; text-decoration: inherit;">x5cs</a>
@@ -961,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5ts256_nodejs">
 <a href="#state_x5ts256_nodejs" style="color: inherit; text-decoration: inherit;">x5t<wbr>S256</a>
@@ -971,13 +908,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -986,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expires_at_python">
 <a href="#state_expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
@@ -996,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the cert expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kid_python">
 <a href="#state_kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -1006,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kty_python">
 <a href="#state_kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -1016,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the cryptographic algorithm family used with the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_python">
 <a href="#state_use_python" style="color: inherit; text-decoration: inherit;">use</a>
@@ -1026,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Intended use of the public key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5cs_python">
 <a href="#state_x5cs_python" style="color: inherit; text-decoration: inherit;">x5cs</a>
@@ -1036,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}base64-encoded X.509 certificate chain with DER encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x5t_s256_python">
 <a href="#state_x5t_s256_python" style="color: inherit; text-decoration: inherit;">x5t_<wbr>s256</a>
@@ -1046,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}base64url-encoded SHA-256 thumbprint of the DER encoding of an X.509 certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -349,8 +349,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_csharp">
 <a href="#compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
@@ -359,8 +358,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -369,8 +367,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -379,8 +376,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_csharp">
 <a href="#groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -389,13 +385,11 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricgroupby">List&lt;Logs<wbr>Metric<wbr>Group<wbr>By<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_go">
 <a href="#compute_go" style="color: inherit; text-decoration: inherit;">Compute</a>
@@ -404,8 +398,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -414,8 +407,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -424,8 +416,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_go">
 <a href="#groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -434,13 +425,11 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricgroupby">[]Logs<wbr>Metric<wbr>Group<wbr>By</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_nodejs">
 <a href="#compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
@@ -449,8 +438,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -459,8 +447,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -469,8 +456,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_nodejs">
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
@@ -479,13 +465,11 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricgroupby">Logs<wbr>Metric<wbr>Group<wbr>By[]</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_python">
 <a href="#compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
@@ -494,8 +478,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -504,8 +487,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -514,8 +496,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_bies_python">
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
@@ -524,8 +505,7 @@ The LogsMetric resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#logsmetricgroupby">Sequence[Logs<wbr>Metric<wbr>Group<wbr>By<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -536,8 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -545,13 +524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,13 +536,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -573,13 +548,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -587,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -715,8 +687,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_csharp">
 <a href="#state_compute_csharp" style="color: inherit; text-decoration: inherit;">Compute</a>
@@ -725,8 +696,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -735,8 +705,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_csharp">
 <a href="#state_groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -745,8 +714,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricgroupby">List&lt;Logs<wbr>Metric<wbr>Group<wbr>By<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -755,13 +723,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_go">
 <a href="#state_compute_go" style="color: inherit; text-decoration: inherit;">Compute</a>
@@ -770,8 +736,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -780,8 +745,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_go">
 <a href="#state_groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -790,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricgroupby">[]Logs<wbr>Metric<wbr>Group<wbr>By</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -800,13 +763,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_nodejs">
 <a href="#state_compute_nodejs" style="color: inherit; text-decoration: inherit;">compute</a>
@@ -815,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -825,8 +785,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_nodejs">
 <a href="#state_groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
@@ -835,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricgroupby">Logs<wbr>Metric<wbr>Group<wbr>By[]</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -845,13 +803,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_python">
 <a href="#state_compute_python" style="color: inherit; text-decoration: inherit;">compute</a>
@@ -860,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetriccompute">Logs<wbr>Metric<wbr>Compute<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The compute rule to compute the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -870,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricfilter">Logs<wbr>Metric<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The log-based metric filter. Logs matching this filter will be aggregated in this metric.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_bies_python">
 <a href="#state_group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
@@ -880,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsmetricgroupby">Sequence[Logs<wbr>Metric<wbr>Group<wbr>By<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The rules for the group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -890,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the log-based metric. This field can't be updated after creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -906,8 +858,7 @@ The following state arguments are supported:
 <h4 id="logsmetriccompute">Logs<wbr>Metric<wbr>Compute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationtype_csharp">
 <a href="#aggregationtype_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Type</a>
@@ -915,8 +866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -924,13 +874,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationtype_go">
 <a href="#aggregationtype_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Type</a>
@@ -938,8 +886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -947,13 +894,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationtype_nodejs">
 <a href="#aggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Type</a>
@@ -961,8 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -970,13 +914,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregation_type_python">
 <a href="#aggregation_type_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>type</a>
@@ -984,8 +926,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -993,15 +934,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsmetricfilter">Logs<wbr>Metric<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1009,13 +948,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1023,13 +960,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1037,13 +972,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1051,15 +984,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsmetricgroupby">Logs<wbr>Metric<wbr>Group<wbr>By</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1067,8 +998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagname_csharp">
 <a href="#tagname_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Name</a>
@@ -1076,13 +1006,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1090,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagname_go">
 <a href="#tagname_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Name</a>
@@ -1099,13 +1026,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1113,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tagname_nodejs">
 <a href="#tagname_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Name</a>
@@ -1122,13 +1046,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1136,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_name_python">
 <a href="#tag_name_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>name</a>
@@ -1145,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

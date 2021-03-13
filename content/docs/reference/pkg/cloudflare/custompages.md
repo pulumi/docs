@@ -271,8 +271,7 @@ The CustomPages resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -284,8 +283,7 @@ The CustomPages resource accepts the following [input]({{< relref "/docs/intro/c
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -294,8 +292,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -306,8 +303,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -315,8 +311,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -326,13 +321,11 @@ updated. Either `account_id` or `zone_id` must be provided. If
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -344,8 +337,7 @@ updated. Either `zone_id` or `account_id` must be provided.
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -354,8 +346,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -366,8 +357,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -375,8 +365,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -386,13 +375,11 @@ updated. Either `account_id` or `zone_id` must be provided. If
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -404,8 +391,7 @@ updated. Either `zone_id` or `account_id` must be provided.
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -414,8 +400,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -426,8 +411,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -435,8 +419,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -446,13 +429,11 @@ updated. Either `account_id` or `zone_id` must be provided. If
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -464,8 +445,7 @@ updated. Either `zone_id` or `account_id` must be provided.
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -474,8 +454,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -486,8 +465,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -495,8 +473,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -506,8 +483,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -518,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -527,13 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -541,13 +514,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -555,13 +526,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -569,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -697,8 +665,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -709,8 +676,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -718,8 +684,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -731,8 +696,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -741,8 +705,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -752,13 +715,11 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -769,8 +730,7 @@ updated. Either `zone_id` or `account_id` must be provided.
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -778,8 +738,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -791,8 +750,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -801,8 +759,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -812,13 +769,11 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -829,8 +784,7 @@ updated. Either `zone_id` or `account_id` must be provided.
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -838,8 +792,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -851,8 +804,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -861,8 +813,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -872,13 +823,11 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -889,8 +838,7 @@ updated. Either `zone_id` or `account_id` must be provided.
     <dd>{{% md %}}The account ID where the custom pages should be
 updated. Either `account_id` or `zone_id` must be provided. If
 `account_id` is present, it will override the zone setting.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -898,8 +846,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -911,8 +858,7 @@ updated. Either `account_id` or `zone_id` must be provided. If
 be one of `basic_challenge`, `waf_challenge`, `waf_block`,
 `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`,
 `500_errors`, `1000_errors`, `always_online`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -921,8 +867,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of where the custom page source is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -932,8 +877,7 @@ be one of `basic_challenge`, `waf_challenge`, `waf_block`,
     </dt>
     <dd>{{% md %}}The zone ID where the custom pages should be
 updated. Either `zone_id` or `account_id` must be provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -352,8 +352,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -362,8 +361,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -372,8 +370,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -382,8 +379,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -392,8 +388,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachecontrol_csharp">
 <a href="#cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -402,8 +397,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -412,8 +406,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentbase64_csharp">
 <a href="#contentbase64_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
@@ -422,8 +415,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_csharp">
 <a href="#contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -432,8 +424,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_csharp">
 <a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -442,8 +433,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_csharp">
 <a href="#contentlanguage_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -452,8 +442,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -462,8 +451,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -472,8 +460,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -483,8 +470,7 @@ The SpacesBucketObject resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -493,8 +479,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -503,8 +488,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websiteredirect_csharp">
 <a href="#websiteredirect_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
@@ -513,13 +497,11 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -528,8 +510,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -538,8 +519,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -548,8 +528,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -558,8 +537,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachecontrol_go">
 <a href="#cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -568,8 +546,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -578,8 +555,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentbase64_go">
 <a href="#contentbase64_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
@@ -588,8 +564,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_go">
 <a href="#contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -598,8 +573,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_go">
 <a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -608,8 +582,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_go">
 <a href="#contentlanguage_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -618,8 +591,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -628,8 +600,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -638,8 +609,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -649,8 +619,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -659,8 +628,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -669,8 +637,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websiteredirect_go">
 <a href="#websiteredirect_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
@@ -679,13 +646,11 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -694,8 +659,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -704,8 +668,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -714,8 +677,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -724,8 +686,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachecontrol_nodejs">
 <a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
@@ -734,8 +695,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -744,8 +704,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentbase64_nodejs">
 <a href="#contentbase64_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
@@ -754,8 +713,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentdisposition_nodejs">
 <a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
@@ -764,8 +722,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentencoding_nodejs">
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
@@ -774,8 +731,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentlanguage_nodejs">
 <a href="#contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
@@ -784,8 +740,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -794,8 +749,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -804,8 +758,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -815,8 +768,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -825,8 +777,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -835,8 +786,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="websiteredirect_nodejs">
 <a href="#websiteredirect_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Redirect</a>
@@ -845,13 +795,11 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -860,8 +808,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -870,8 +817,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -880,8 +826,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -890,8 +835,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_control_python">
 <a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
@@ -900,8 +844,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -910,8 +853,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_base64_python">
 <a href="#content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
@@ -920,8 +862,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_disposition_python">
 <a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
@@ -930,8 +871,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_encoding_python">
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
@@ -940,8 +880,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_language_python">
 <a href="#content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
@@ -950,8 +889,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -960,8 +898,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -970,8 +907,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -981,8 +917,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -991,8 +926,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1001,8 +935,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="website_redirect_python">
 <a href="#website_redirect_python" style="color: inherit; text-decoration: inherit;">website_<wbr>redirect</a>
@@ -1011,8 +944,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1023,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1032,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionid_csharp">
 <a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1042,13 +972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1056,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionid_go">
 <a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1066,13 +993,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1080,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionid_nodejs">
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -1090,13 +1014,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1104,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_id_python">
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -1114,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1242,8 +1162,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1252,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1262,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachecontrol_csharp">
 <a href="#state_cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -1272,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_csharp">
 <a href="#state_content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1282,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentbase64_csharp">
 <a href="#state_contentbase64_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
@@ -1292,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentdisposition_csharp">
 <a href="#state_contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -1302,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_csharp">
 <a href="#state_contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -1312,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlanguage_csharp">
 <a href="#state_contentlanguage_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -1322,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
 <a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1332,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1342,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1353,8 +1262,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1363,8 +1271,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1373,8 +1280,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1383,8 +1289,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1393,8 +1298,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionid_csharp">
 <a href="#state_versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1403,8 +1307,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websiteredirect_csharp">
 <a href="#state_websiteredirect_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
@@ -1413,13 +1316,11 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1428,8 +1329,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1438,8 +1338,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachecontrol_go">
 <a href="#state_cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -1448,8 +1347,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_go">
 <a href="#state_content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1458,8 +1356,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentbase64_go">
 <a href="#state_contentbase64_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Base64</a>
@@ -1468,8 +1365,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentdisposition_go">
 <a href="#state_contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -1478,8 +1374,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_go">
 <a href="#state_contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -1488,8 +1383,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlanguage_go">
 <a href="#state_contentlanguage_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -1498,8 +1392,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
 <a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1508,8 +1401,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1518,8 +1410,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1529,8 +1420,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
 <a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1539,8 +1429,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1549,8 +1438,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1559,8 +1447,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1569,8 +1456,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionid_go">
 <a href="#state_versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -1579,8 +1465,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websiteredirect_go">
 <a href="#state_websiteredirect_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Redirect</a>
@@ -1589,13 +1474,11 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1604,8 +1487,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1614,8 +1496,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachecontrol_nodejs">
 <a href="#state_cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
@@ -1624,8 +1505,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_nodejs">
 <a href="#state_content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1634,8 +1514,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentbase64_nodejs">
 <a href="#state_contentbase64_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Base64</a>
@@ -1644,8 +1523,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentdisposition_nodejs">
 <a href="#state_contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
@@ -1654,8 +1532,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentencoding_nodejs">
 <a href="#state_contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
@@ -1664,8 +1541,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentlanguage_nodejs">
 <a href="#state_contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
@@ -1674,8 +1550,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -1684,8 +1559,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1694,8 +1568,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -1705,8 +1578,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1715,8 +1587,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1725,8 +1596,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1735,8 +1605,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1745,8 +1614,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionid_nodejs">
 <a href="#state_versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -1755,8 +1623,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_websiteredirect_nodejs">
 <a href="#state_websiteredirect_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Redirect</a>
@@ -1765,13 +1632,11 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1780,8 +1645,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canned ACL to apply. DigitalOcean supports "private" and "public-read". (Defaults to "private".)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1790,8 +1654,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket to put the file in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cache_control_python">
 <a href="#state_cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
@@ -1800,8 +1663,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_python">
 <a href="#state_content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1810,8 +1672,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_base64_python">
 <a href="#state_content_base64_python" style="color: inherit; text-decoration: inherit;">content_<wbr>base64</a>
@@ -1820,8 +1681,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_disposition_python">
 <a href="#state_content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
@@ -1830,8 +1690,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_encoding_python">
 <a href="#state_content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
@@ -1840,8 +1699,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_language_python">
 <a href="#state_content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
@@ -1850,8 +1708,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language the content is in e.g. en-US or en-GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1860,8 +1717,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1870,8 +1726,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to trigger updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -1881,8 +1736,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
     </dt>
     <dd>{{% md %}}Allow the object to be deleted by removing any legal hold on any object version.
 Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1891,8 +1745,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object once it is in the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1901,8 +1754,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1911,8 +1763,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1921,8 +1772,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to a file that will be read and uploaded as raw bytes for the object content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_id_python">
 <a href="#state_version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -1931,8 +1781,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique version ID value for the object, if bucket versioning is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_website_redirect_python">
 <a href="#state_website_redirect_python" style="color: inherit; text-decoration: inherit;">website_<wbr>redirect</a>
@@ -1941,8 +1790,7 @@ Default is `false`. This value should be set to `true` only if the bucket has S3
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

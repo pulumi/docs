@@ -294,8 +294,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -304,8 +303,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -315,8 +313,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -326,8 +323,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenboundcidrs_csharp">
 <a href="#tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -336,8 +332,7 @@ using this role.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenexplicitmaxttl_csharp">
 <a href="#tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -346,8 +341,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenmaxttl_csharp">
 <a href="#tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -356,8 +350,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokennodefaultpolicy_csharp">
 <a href="#tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -366,8 +359,7 @@ using this role.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokennumuses_csharp">
 <a href="#tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -376,8 +368,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenperiod_csharp">
 <a href="#tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -386,8 +377,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenpolicies_csharp">
 <a href="#tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -396,8 +386,7 @@ using this role.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenttl_csharp">
 <a href="#tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -406,8 +395,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -416,13 +404,11 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -431,8 +417,7 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -442,8 +427,7 @@ using this role.
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -453,8 +437,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenboundcidrs_go">
 <a href="#tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -463,8 +446,7 @@ using this role.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenexplicitmaxttl_go">
 <a href="#tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -473,8 +455,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenmaxttl_go">
 <a href="#tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -483,8 +464,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokennodefaultpolicy_go">
 <a href="#tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -493,8 +473,7 @@ using this role.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokennumuses_go">
 <a href="#tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -503,8 +482,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenperiod_go">
 <a href="#tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -513,8 +491,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenpolicies_go">
 <a href="#tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -523,8 +500,7 @@ using this role.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenttl_go">
 <a href="#tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -533,8 +509,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -543,13 +518,11 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -558,8 +531,7 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -569,8 +541,7 @@ using this role.
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -580,8 +551,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenboundcidrs_nodejs">
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
@@ -590,8 +560,7 @@ using this role.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenexplicitmaxttl_nodejs">
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -600,8 +569,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenmaxttl_nodejs">
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
@@ -610,8 +578,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokennodefaultpolicy_nodejs">
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -620,8 +587,7 @@ using this role.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokennumuses_nodejs">
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
@@ -630,8 +596,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenperiod_nodejs">
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
@@ -640,8 +605,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenpolicies_nodejs">
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
@@ -650,8 +614,7 @@ using this role.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokenttl_nodejs">
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
@@ -660,8 +623,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -670,13 +632,11 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -685,8 +645,7 @@ using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -696,8 +655,7 @@ using this role.
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -707,8 +665,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_bound_cidrs_python">
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
@@ -717,8 +674,7 @@ using this role.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_explicit_max_ttl_python">
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
@@ -727,8 +683,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_max_ttl_python">
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
@@ -737,8 +692,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_no_default_policy_python">
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
@@ -747,8 +701,7 @@ using this role.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_num_uses_python">
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
@@ -757,8 +710,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_period_python">
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
@@ -767,8 +719,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_policies_python">
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
@@ -777,8 +728,7 @@ using this role.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_ttl_python">
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
@@ -787,8 +737,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -797,8 +746,7 @@ using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -809,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -818,13 +765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -832,13 +777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,13 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -860,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -988,8 +928,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -999,8 +938,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1010,8 +948,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenboundcidrs_csharp">
 <a href="#state_tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -1020,8 +957,7 @@ using this role.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenexplicitmaxttl_csharp">
 <a href="#state_tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1030,8 +966,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenmaxttl_csharp">
 <a href="#state_tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -1040,8 +975,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokennodefaultpolicy_csharp">
 <a href="#state_tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1050,8 +984,7 @@ using this role.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokennumuses_csharp">
 <a href="#state_tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -1060,8 +993,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenperiod_csharp">
 <a href="#state_tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -1070,8 +1002,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenpolicies_csharp">
 <a href="#state_tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -1080,8 +1011,7 @@ using this role.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenttl_csharp">
 <a href="#state_tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -1090,8 +1020,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokentype_csharp">
 <a href="#state_tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1100,8 +1029,7 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1110,13 +1038,11 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1126,8 +1052,7 @@ using this role.
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1137,8 +1062,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenboundcidrs_go">
 <a href="#state_tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -1147,8 +1071,7 @@ using this role.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenexplicitmaxttl_go">
 <a href="#state_tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1157,8 +1080,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenmaxttl_go">
 <a href="#state_tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -1167,8 +1089,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokennodefaultpolicy_go">
 <a href="#state_tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1177,8 +1098,7 @@ using this role.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokennumuses_go">
 <a href="#state_tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -1187,8 +1107,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenperiod_go">
 <a href="#state_tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -1197,8 +1116,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenpolicies_go">
 <a href="#state_tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -1207,8 +1125,7 @@ using this role.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenttl_go">
 <a href="#state_tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -1217,8 +1134,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokentype_go">
 <a href="#state_tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1227,8 +1143,7 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_go">
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -1237,13 +1152,11 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1253,8 +1166,7 @@ using this role.
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1264,8 +1176,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenboundcidrs_nodejs">
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
@@ -1274,8 +1185,7 @@ using this role.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenexplicitmaxttl_nodejs">
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1284,8 +1194,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenmaxttl_nodejs">
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
@@ -1294,8 +1203,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokennodefaultpolicy_nodejs">
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1304,8 +1212,7 @@ using this role.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokennumuses_nodejs">
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
@@ -1314,8 +1221,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenperiod_nodejs">
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
@@ -1324,8 +1230,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenpolicies_nodejs">
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
@@ -1334,8 +1239,7 @@ using this role.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokenttl_nodejs">
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
@@ -1344,8 +1248,7 @@ using this role.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tokentype_nodejs">
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -1354,8 +1257,7 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_nodejs">
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -1364,13 +1266,11 @@ using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1380,8 +1280,7 @@ using this role.
     </dt>
     <dd>{{% md %}}Path where the github auth backend is mounted. Defaults to `github`
 if not specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1391,8 +1290,7 @@ if not specified.
     </dt>
     <dd>{{% md %}}An array of strings specifying the policies to be set on tokens issued
 using this role.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_bound_cidrs_python">
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
@@ -1401,8 +1299,7 @@ using this role.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the blocks of IP addresses which are allowed to use the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_explicit_max_ttl_python">
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
@@ -1411,8 +1308,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Explicit Maximum TTL in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_max_ttl_python">
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
@@ -1421,8 +1317,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime of the generated token
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_no_default_policy_python">
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
@@ -1431,8 +1326,7 @@ using this role.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the 'default' policy will not automatically be added to generated tokens
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_num_uses_python">
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
@@ -1441,8 +1335,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of times a token may be used, a value of zero means unlimited
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_period_python">
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
@@ -1451,8 +1344,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Generated Token's Period
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_policies_python">
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
@@ -1461,8 +1353,7 @@ using this role.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Generated Token's Policies
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_ttl_python">
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
@@ -1471,8 +1362,7 @@ using this role.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The initial ttl of the token to generate in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_token_type_python">
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -1481,8 +1371,7 @@ using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token to generate, service or batch
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter should be moved to the Github Auth backend config block. It does nothing in a user/team block.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_python">
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -1491,8 +1380,7 @@ using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}GitHub user name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

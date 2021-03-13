@@ -114,8 +114,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -126,8 +125,7 @@ The following arguments are supported:
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
 [describe-instances in the AWS CLI reference][1].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="getpassworddata_csharp">
 <a href="#getpassworddata_csharp" style="color: inherit; text-decoration: inherit;">Get<wbr>Password<wbr>Data</a>
@@ -136,8 +134,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="getuserdata_csharp">
 <a href="#getuserdata_csharp" style="color: inherit; text-decoration: inherit;">Get<wbr>User<wbr>Data</a>
@@ -146,8 +143,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Retrieve Base64 encoded User Data contents into the `user_data_base64` attribute. A SHA-1 hash of the User Data contents will always be present in the `user_data` attribute. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -156,8 +152,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the exact Instance ID with which to populate the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetags_csharp">
 <a href="#instancetags_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
@@ -167,8 +162,7 @@ several valid keys, for a full reference, check out
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on the desired Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -177,13 +171,11 @@ exactly match a pair on the desired Instance.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -194,8 +186,7 @@ exactly match a pair on the desired Instance.
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
 [describe-instances in the AWS CLI reference][1].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="getpassworddata_go">
 <a href="#getpassworddata_go" style="color: inherit; text-decoration: inherit;">Get<wbr>Password<wbr>Data</a>
@@ -204,8 +195,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="getuserdata_go">
 <a href="#getuserdata_go" style="color: inherit; text-decoration: inherit;">Get<wbr>User<wbr>Data</a>
@@ -214,8 +204,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Retrieve Base64 encoded User Data contents into the `user_data_base64` attribute. A SHA-1 hash of the User Data contents will always be present in the `user_data` attribute. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -224,8 +213,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the exact Instance ID with which to populate the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetags_go">
 <a href="#instancetags_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
@@ -235,8 +223,7 @@ several valid keys, for a full reference, check out
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on the desired Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -245,13 +232,11 @@ exactly match a pair on the desired Instance.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -262,8 +247,7 @@ exactly match a pair on the desired Instance.
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
 [describe-instances in the AWS CLI reference][1].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="getpassworddata_nodejs">
 <a href="#getpassworddata_nodejs" style="color: inherit; text-decoration: inherit;">get<wbr>Password<wbr>Data</a>
@@ -272,8 +256,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="getuserdata_nodejs">
 <a href="#getuserdata_nodejs" style="color: inherit; text-decoration: inherit;">get<wbr>User<wbr>Data</a>
@@ -282,8 +265,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Retrieve Base64 encoded User Data contents into the `user_data_base64` attribute. A SHA-1 hash of the User Data contents will always be present in the `user_data` attribute. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -292,8 +274,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the exact Instance ID with which to populate the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetags_nodejs">
 <a href="#instancetags_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tags</a>
@@ -303,8 +284,7 @@ several valid keys, for a full reference, check out
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on the desired Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -313,13 +293,11 @@ exactly match a pair on the desired Instance.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -330,8 +308,7 @@ exactly match a pair on the desired Instance.
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are
 several valid keys, for a full reference, check out
 [describe-instances in the AWS CLI reference][1].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="get_password_data_python">
 <a href="#get_password_data_python" style="color: inherit; text-decoration: inherit;">get_<wbr>password_<wbr>data</a>
@@ -340,8 +317,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="get_user_data_python">
 <a href="#get_user_data_python" style="color: inherit; text-decoration: inherit;">get_<wbr>user_<wbr>data</a>
@@ -350,8 +326,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Retrieve Base64 encoded User Data contents into the `user_data_base64` attribute. A SHA-1 hash of the User Data contents will always be present in the `user_data` attribute. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -360,8 +335,7 @@ several valid keys, for a full reference, check out
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the exact Instance ID with which to populate the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_tags_python">
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
@@ -371,8 +345,7 @@ several valid keys, for a full reference, check out
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must
 exactly match a pair on the desired Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -381,8 +354,7 @@ exactly match a pair on the desired Instance.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -395,8 +367,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ami_csharp">
 <a href="#ami_csharp" style="color: inherit; text-decoration: inherit;">Ami</a>
@@ -405,8 +376,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -415,8 +385,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associatepublicipaddress_csharp">
 <a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -425,8 +394,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the Instance is associated with a public IP address or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -435,8 +403,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creditspecifications_csharp">
 <a href="#creditspecifications_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specifications</a>
@@ -445,8 +412,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancecreditspecification">List&lt;Get<wbr>Instance<wbr>Credit<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}The credit specification of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableapitermination_csharp">
 <a href="#disableapitermination_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -454,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsblockdevices_csharp">
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -464,8 +429,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceebsblockdevice">List&lt;Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}The EBS block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -474,8 +438,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Instance is EBS optimized or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclaveoptions_csharp">
 <a href="#enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
@@ -484,8 +447,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceenclaveoption">List&lt;Get<wbr>Instance<wbr>Enclave<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ephemeralblockdevices_csharp">
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -494,8 +456,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceephemeralblockdevice">List&lt;Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ephemeral block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -504,8 +465,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the dedicated host the instance will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iaminstanceprofile_csharp">
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -514,8 +474,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile associated with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -524,8 +483,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancestate_csharp">
 <a href="#instancestate_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>State</a>
@@ -534,8 +492,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetags_csharp">
 <a href="#instancetags_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
@@ -543,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -553,8 +509,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -563,8 +518,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataoptions_csharp">
 <a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -573,8 +527,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancemetadataoption">List&lt;Get<wbr>Instance<wbr>Metadata<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}The metadata options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -583,8 +536,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed monitoring is enabled or disabled for the Instance (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaceid_csharp">
 <a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -593,8 +545,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that was created with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpostarn_csharp">
 <a href="#outpostarn_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
@@ -603,8 +554,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passworddata_csharp">
 <a href="#passworddata_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Data</a>
@@ -616,8 +566,7 @@ The following output properties are available:
 Useful for getting the administrator password for instances running Microsoft Windows.
 This attribute is only exported if `get_password_data` is true.
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placementgroup_csharp">
 <a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -626,8 +575,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement group of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_csharp">
 <a href="#privatedns_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
@@ -638,8 +586,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
     <dd>{{% md %}}The private DNS name assigned to the Instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateip_csharp">
 <a href="#privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
@@ -648,8 +595,7 @@ for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdns_csharp">
 <a href="#publicdns_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
@@ -659,8 +605,7 @@ for your VPC.
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the Instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_csharp">
 <a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
@@ -669,8 +614,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootblockdevices_csharp">
 <a href="#rootblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
@@ -679,8 +623,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancerootblockdevice">List&lt;Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}The root block device mappings of the Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryprivateips_csharp">
 <a href="#secondaryprivateips_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Private<wbr>Ips</a>
@@ -689,8 +632,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -699,8 +641,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedestcheck_csharp">
 <a href="#sourcedestcheck_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Dest<wbr>Check</a>
@@ -709,8 +650,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the network interface performs source/destination checking (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -719,8 +659,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC subnet ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -729,8 +668,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenancy_csharp">
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -739,8 +677,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance: `dedicated`, `default`, `host`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -749,8 +686,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA-1 hash of User Data supplied to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdatabase64_csharp">
 <a href="#userdatabase64_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Base64</a>
@@ -759,8 +695,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded contents of User Data supplied to the Instance. This attribute is only exported if `get_user_data` is true.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_csharp">
 <a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -769,8 +704,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The associated security groups in a non-default VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -778,8 +712,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancefilter">List&lt;Get<wbr>Instance<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="getpassworddata_csharp">
 <a href="#getpassworddata_csharp" style="color: inherit; text-decoration: inherit;">Get<wbr>Password<wbr>Data</a>
@@ -787,8 +720,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="getuserdata_csharp">
 <a href="#getuserdata_csharp" style="color: inherit; text-decoration: inherit;">Get<wbr>User<wbr>Data</a>
@@ -796,8 +728,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -805,13 +736,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ami_go">
 <a href="#ami_go" style="color: inherit; text-decoration: inherit;">Ami</a>
@@ -820,8 +749,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -830,8 +758,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associatepublicipaddress_go">
 <a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -840,8 +767,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the Instance is associated with a public IP address or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -850,8 +776,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creditspecifications_go">
 <a href="#creditspecifications_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specifications</a>
@@ -860,8 +785,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancecreditspecification">[]Get<wbr>Instance<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The credit specification of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableapitermination_go">
 <a href="#disableapitermination_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -869,8 +793,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsblockdevices_go">
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -879,8 +802,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceebsblockdevice">[]Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}The EBS block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -889,8 +811,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Instance is EBS optimized or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclaveoptions_go">
 <a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
@@ -899,8 +820,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceenclaveoption">[]Get<wbr>Instance<wbr>Enclave<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ephemeralblockdevices_go">
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -909,8 +829,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceephemeralblockdevice">[]Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}The ephemeral block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -919,8 +838,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the dedicated host the instance will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iaminstanceprofile_go">
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -929,8 +847,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile associated with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -939,8 +856,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancestate_go">
 <a href="#instancestate_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>State</a>
@@ -949,8 +865,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetags_go">
 <a href="#instancetags_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Tags</a>
@@ -958,8 +873,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -968,8 +882,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -978,8 +891,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataoptions_go">
 <a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -988,8 +900,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancemetadataoption">[]Get<wbr>Instance<wbr>Metadata<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The metadata options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -998,8 +909,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed monitoring is enabled or disabled for the Instance (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaceid_go">
 <a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -1008,8 +918,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that was created with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpostarn_go">
 <a href="#outpostarn_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Arn</a>
@@ -1018,8 +927,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passworddata_go">
 <a href="#passworddata_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Data</a>
@@ -1031,8 +939,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 Useful for getting the administrator password for instances running Microsoft Windows.
 This attribute is only exported if `get_password_data` is true.
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placementgroup_go">
 <a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -1041,8 +948,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement group of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_go">
 <a href="#privatedns_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
@@ -1053,8 +959,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
     <dd>{{% md %}}The private DNS name assigned to the Instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateip_go">
 <a href="#privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
@@ -1063,8 +968,7 @@ for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdns_go">
 <a href="#publicdns_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
@@ -1074,8 +978,7 @@ for your VPC.
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the Instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_go">
 <a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
@@ -1084,8 +987,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootblockdevices_go">
 <a href="#rootblockdevices_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
@@ -1094,8 +996,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancerootblockdevice">[]Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}The root block device mappings of the Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryprivateips_go">
 <a href="#secondaryprivateips_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Private<wbr>Ips</a>
@@ -1104,8 +1005,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1114,8 +1014,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedestcheck_go">
 <a href="#sourcedestcheck_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Dest<wbr>Check</a>
@@ -1124,8 +1023,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the network interface performs source/destination checking (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1134,8 +1032,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC subnet ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1144,8 +1041,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenancy_go">
 <a href="#tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -1154,8 +1050,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance: `dedicated`, `default`, `host`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1164,8 +1059,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA-1 hash of User Data supplied to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdatabase64_go">
 <a href="#userdatabase64_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data<wbr>Base64</a>
@@ -1174,8 +1068,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded contents of User Data supplied to the Instance. This attribute is only exported if `get_user_data` is true.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_go">
 <a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1184,8 +1077,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The associated security groups in a non-default VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1193,8 +1085,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancefilter">[]Get<wbr>Instance<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="getpassworddata_go">
 <a href="#getpassworddata_go" style="color: inherit; text-decoration: inherit;">Get<wbr>Password<wbr>Data</a>
@@ -1202,8 +1093,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="getuserdata_go">
 <a href="#getuserdata_go" style="color: inherit; text-decoration: inherit;">Get<wbr>User<wbr>Data</a>
@@ -1211,8 +1101,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1220,13 +1109,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ami_nodejs">
 <a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
@@ -1235,8 +1122,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1245,8 +1131,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associatepublicipaddress_nodejs">
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -1255,8 +1140,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the Instance is associated with a public IP address or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1265,8 +1149,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creditspecifications_nodejs">
 <a href="#creditspecifications_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specifications</a>
@@ -1275,8 +1158,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancecreditspecification">Get<wbr>Instance<wbr>Credit<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}The credit specification of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableapitermination_nodejs">
 <a href="#disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
@@ -1284,8 +1166,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsblockdevices_nodejs">
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -1294,8 +1175,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceebsblockdevice">Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}The EBS block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -1304,8 +1184,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the Instance is EBS optimized or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclaveoptions_nodejs">
 <a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
@@ -1314,8 +1193,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceenclaveoption">Get<wbr>Instance<wbr>Enclave<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -1324,8 +1202,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceephemeralblockdevice">Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}The ephemeral block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
@@ -1334,8 +1211,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the dedicated host the instance will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iaminstanceprofile_nodejs">
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -1344,8 +1220,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile associated with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1354,8 +1229,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancestate_nodejs">
 <a href="#instancestate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>State</a>
@@ -1364,8 +1238,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetags_nodejs">
 <a href="#instancetags_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Tags</a>
@@ -1373,8 +1246,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1383,8 +1255,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -1393,8 +1264,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataoptions_nodejs">
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
@@ -1403,8 +1273,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancemetadataoption">Get<wbr>Instance<wbr>Metadata<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The metadata options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -1413,8 +1282,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether detailed monitoring is enabled or disabled for the Instance (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaceid_nodejs">
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
@@ -1423,8 +1291,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that was created with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpostarn_nodejs">
 <a href="#outpostarn_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Arn</a>
@@ -1433,8 +1300,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="passworddata_nodejs">
 <a href="#passworddata_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Data</a>
@@ -1446,8 +1312,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 Useful for getting the administrator password for instances running Microsoft Windows.
 This attribute is only exported if `get_password_data` is true.
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placementgroup_nodejs">
 <a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
@@ -1456,8 +1321,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The placement group of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_nodejs">
 <a href="#privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
@@ -1468,8 +1332,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
     <dd>{{% md %}}The private DNS name assigned to the Instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateip_nodejs">
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
@@ -1478,8 +1341,7 @@ for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdns_nodejs">
 <a href="#publicdns_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Dns</a>
@@ -1489,8 +1351,7 @@ for your VPC.
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the Instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_nodejs">
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
@@ -1499,8 +1360,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootblockdevices_nodejs">
 <a href="#rootblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Devices</a>
@@ -1509,8 +1369,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancerootblockdevice">Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}The root block device mappings of the Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryprivateips_nodejs">
 <a href="#secondaryprivateips_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Private<wbr>Ips</a>
@@ -1519,8 +1378,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1529,8 +1387,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedestcheck_nodejs">
 <a href="#sourcedestcheck_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Dest<wbr>Check</a>
@@ -1539,8 +1396,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the network interface performs source/destination checking (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1549,8 +1405,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC subnet ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1559,8 +1414,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenancy_nodejs">
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -1569,8 +1423,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance: `dedicated`, `default`, `host`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -1579,8 +1432,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA-1 hash of User Data supplied to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdatabase64_nodejs">
 <a href="#userdatabase64_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data<wbr>Base64</a>
@@ -1589,8 +1441,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded contents of User Data supplied to the Instance. This attribute is only exported if `get_user_data` is true.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_nodejs">
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1599,8 +1450,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The associated security groups in a non-default VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1608,8 +1458,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancefilter">Get<wbr>Instance<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="getpassworddata_nodejs">
 <a href="#getpassworddata_nodejs" style="color: inherit; text-decoration: inherit;">get<wbr>Password<wbr>Data</a>
@@ -1617,8 +1466,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="getuserdata_nodejs">
 <a href="#getuserdata_nodejs" style="color: inherit; text-decoration: inherit;">get<wbr>User<wbr>Data</a>
@@ -1626,8 +1474,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1635,13 +1482,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ami_python">
 <a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
@@ -1650,8 +1495,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AMI used to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1660,8 +1504,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associate_public_ip_address_python">
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -1670,8 +1513,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the Instance is associated with a public IP address or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1680,8 +1522,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credit_specifications_python">
 <a href="#credit_specifications_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specifications</a>
@@ -1690,8 +1531,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancecreditspecification">Sequence[Get<wbr>Instance<wbr>Credit<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}The credit specification of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disable_api_termination_python">
 <a href="#disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
@@ -1699,8 +1539,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebs_block_devices_python">
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -1709,8 +1548,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceebsblockdevice">Sequence[Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The EBS block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -1719,8 +1557,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Instance is EBS optimized or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclave_options_python">
 <a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
@@ -1729,8 +1566,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceenclaveoption">Sequence[Get<wbr>Instance<wbr>Enclave<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ephemeral_block_devices_python">
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -1739,8 +1575,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstanceephemeralblockdevice">Sequence[Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The ephemeral block device mappings of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
@@ -1749,8 +1584,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the dedicated host the instance will be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iam_instance_profile_python">
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -1759,8 +1593,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile associated with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1769,8 +1602,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_state_python">
 <a href="#instance_state_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>state</a>
@@ -1779,8 +1611,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_tags_python">
 <a href="#instance_tags_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>tags</a>
@@ -1788,8 +1619,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1798,8 +1628,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -1808,8 +1637,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_options_python">
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
@@ -1818,8 +1646,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancemetadataoption">Sequence[Get<wbr>Instance<wbr>Metadata<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}The metadata options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -1828,8 +1655,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether detailed monitoring is enabled or disabled for the Instance (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_interface_id_python">
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
@@ -1838,8 +1664,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that was created with the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpost_arn_python">
 <a href="#outpost_arn_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>arn</a>
@@ -1848,8 +1673,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Outpost.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="password_data_python">
 <a href="#password_data_python" style="color: inherit; text-decoration: inherit;">password_<wbr>data</a>
@@ -1861,8 +1685,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 Useful for getting the administrator password for instances running Microsoft Windows.
 This attribute is only exported if `get_password_data` is true.
 See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placement_group_python">
 <a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
@@ -1871,8 +1694,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The placement group of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_dns_python">
 <a href="#private_dns_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns</a>
@@ -1883,8 +1705,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
     <dd>{{% md %}}The private DNS name assigned to the Instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
 for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_python">
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
@@ -1893,8 +1714,7 @@ for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_dns_python">
 <a href="#public_dns_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns</a>
@@ -1904,8 +1724,7 @@ for your VPC.
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the Instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_python">
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
@@ -1914,8 +1733,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the Instance, if applicable. **NOTE**: If you are using an `aws.ec2.Eip` with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_block_devices_python">
 <a href="#root_block_devices_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>devices</a>
@@ -1924,8 +1742,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="#getinstancerootblockdevice">Sequence[Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device]</a></span>
     </dt>
     <dd>{{% md %}}The root block device mappings of the Instance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_private_ips_python">
 <a href="#secondary_private_ips_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>private_<wbr>ips</a>
@@ -1934,8 +1751,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -1944,8 +1760,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_dest_check_python">
 <a href="#source_dest_check_python" style="color: inherit; text-decoration: inherit;">source_<wbr>dest_<wbr>check</a>
@@ -1954,8 +1769,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the network interface performs source/destination checking (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1964,8 +1778,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC subnet ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1974,8 +1787,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenancy_python">
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -1984,8 +1796,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance: `dedicated`, `default`, `host`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -1994,8 +1805,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SHA-1 hash of User Data supplied to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_data_base64_python">
 <a href="#user_data_base64_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data_<wbr>base64</a>
@@ -2004,8 +1814,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded contents of User Data supplied to the Instance. This attribute is only exported if `get_user_data` is true.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_security_group_ids_python">
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -2014,8 +1823,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The associated security groups in a non-default VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -2023,8 +1831,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancefilter">Sequence[Get<wbr>Instance<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="get_password_data_python">
 <a href="#get_password_data_python" style="color: inherit; text-decoration: inherit;">get_<wbr>password_<wbr>data</a>
@@ -2032,8 +1839,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="get_user_data_python">
 <a href="#get_user_data_python" style="color: inherit; text-decoration: inherit;">get_<wbr>user_<wbr>data</a>
@@ -2041,8 +1847,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -2050,8 +1855,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2065,8 +1869,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucredits_csharp">
 <a href="#cpucredits_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -2074,13 +1877,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucredits_go">
 <a href="#cpucredits_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -2088,13 +1889,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucredits_nodejs">
 <a href="#cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
@@ -2102,13 +1901,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpu_credits_python">
 <a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
@@ -2116,8 +1913,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceebsblockdevice">Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
@@ -2125,8 +1921,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2135,8 +1930,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2145,8 +1939,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2155,8 +1948,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2165,8 +1957,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2174,8 +1965,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2184,8 +1974,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2194,8 +1983,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -2204,8 +1992,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -2213,8 +2000,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2223,8 +2009,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2233,13 +2018,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -2248,8 +2031,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2258,8 +2040,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -2268,8 +2049,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2278,8 +2058,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2287,8 +2066,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2297,8 +2075,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2307,8 +2084,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -2317,8 +2093,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -2326,8 +2101,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2336,8 +2110,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2346,13 +2119,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -2361,8 +2132,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2371,8 +2141,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2381,8 +2150,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2391,8 +2159,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -2400,8 +2167,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -2410,8 +2176,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2420,8 +2185,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -2430,8 +2194,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -2439,8 +2202,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -2449,8 +2211,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -2459,13 +2220,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -2474,8 +2233,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2484,8 +2242,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2494,8 +2251,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2504,8 +2260,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -2513,8 +2268,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -2523,8 +2277,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2533,8 +2286,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -2543,8 +2295,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -2552,8 +2303,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -2562,8 +2312,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -2572,8 +2321,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceenclaveoption">Get<wbr>Instance<wbr>Enclave<wbr>Option</h4>
@@ -2581,8 +2329,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2591,13 +2338,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2606,13 +2351,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2621,13 +2364,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2636,8 +2377,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceephemeralblockdevice">Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
@@ -2645,8 +2385,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2655,8 +2394,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodevice_csharp">
 <a href="#nodevice_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
@@ -2665,8 +2403,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the specified device included in the device mapping was suppressed or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -2675,13 +2412,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual device name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2690,8 +2425,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodevice_go">
 <a href="#nodevice_go" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
@@ -2700,8 +2434,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the specified device included in the device mapping was suppressed or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -2710,13 +2443,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual device name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2725,8 +2456,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodevice_nodejs">
 <a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
@@ -2735,8 +2465,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the specified device included in the device mapping was suppressed or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
@@ -2745,13 +2474,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual device name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2760,8 +2487,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_device_python">
 <a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
@@ -2770,8 +2496,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the specified device included in the device mapping was suppressed or not (Boolean).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_name_python">
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
@@ -2780,8 +2505,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual device name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancefilter">Get<wbr>Instance<wbr>Filter</h4>
@@ -2789,8 +2513,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2798,8 +2521,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2807,13 +2529,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2821,8 +2541,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2830,13 +2549,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2844,8 +2561,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2853,13 +2569,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2867,8 +2581,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2876,8 +2589,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancemetadataoption">Get<wbr>Instance<wbr>Metadata<wbr>Option</h4>
@@ -2885,8 +2597,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpendpoint_csharp">
 <a href="#httpendpoint_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
@@ -2895,8 +2606,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_csharp">
 <a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2905,8 +2615,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptokens_csharp">
 <a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -2915,13 +2624,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpendpoint_go">
 <a href="#httpendpoint_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
@@ -2930,8 +2637,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_go">
 <a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2940,8 +2646,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptokens_go">
 <a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -2950,13 +2655,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpendpoint_nodejs">
 <a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
@@ -2965,8 +2668,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_nodejs">
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2975,8 +2677,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptokens_nodejs">
 <a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
@@ -2985,13 +2686,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_endpoint_python">
 <a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
@@ -3000,8 +2699,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_put_response_hop_limit_python">
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
@@ -3010,8 +2708,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_tokens_python">
 <a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
@@ -3020,8 +2717,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancerootblockdevice">Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
@@ -3029,8 +2725,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -3039,8 +2734,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -3049,8 +2743,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -3059,8 +2752,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -3069,8 +2761,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -3078,8 +2769,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3088,8 +2778,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -3098,8 +2787,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -3107,8 +2795,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -3117,8 +2804,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -3127,13 +2813,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -3142,8 +2826,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -3152,8 +2835,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -3162,8 +2844,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -3172,8 +2853,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -3181,8 +2861,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3191,8 +2870,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -3201,8 +2879,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -3210,8 +2887,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -3220,8 +2896,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -3230,13 +2905,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -3245,8 +2918,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -3255,8 +2927,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -3265,8 +2936,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -3275,8 +2945,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -3284,8 +2953,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3294,8 +2962,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -3304,8 +2971,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -3313,8 +2979,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -3323,8 +2988,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -3333,13 +2997,11 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -3348,8 +3010,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -3358,8 +3019,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The physical name of the device.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -3368,8 +3028,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the EBS volume is encrypted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -3378,8 +3037,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}`0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -3387,8 +3045,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3397,8 +3054,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the Instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -3407,8 +3063,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of the volume, in MiB/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -3416,8 +3071,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -3426,8 +3080,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -3436,8 +3089,7 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

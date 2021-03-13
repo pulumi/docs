@@ -352,8 +352,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_csharp">
 <a href="#node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -362,8 +361,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_csharp">
 <a href="#pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -372,8 +370,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_csharp">
 <a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -382,8 +379,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionratelimit_csharp">
 <a href="#connectionratelimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
@@ -392,8 +388,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicratio_csharp">
 <a href="#dynamicratio_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
@@ -402,8 +397,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdnautopopulate_csharp">
 <a href="#fqdnautopopulate_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
@@ -412,8 +406,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prioritygroup_csharp">
 <a href="#prioritygroup_csharp" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
@@ -422,8 +415,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_csharp">
 <a href="#ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -432,13 +424,11 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_go">
 <a href="#node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -447,8 +437,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_go">
 <a href="#pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -457,8 +446,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_go">
 <a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -467,8 +455,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionratelimit_go">
 <a href="#connectionratelimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
@@ -477,8 +464,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicratio_go">
 <a href="#dynamicratio_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
@@ -487,8 +473,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdnautopopulate_go">
 <a href="#fqdnautopopulate_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
@@ -497,8 +482,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prioritygroup_go">
 <a href="#prioritygroup_go" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
@@ -507,8 +491,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_go">
 <a href="#ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -517,13 +500,11 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_nodejs">
 <a href="#node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -532,8 +513,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_nodejs">
 <a href="#pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -542,8 +522,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_nodejs">
 <a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -552,8 +531,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionratelimit_nodejs">
 <a href="#connectionratelimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Rate<wbr>Limit</a>
@@ -562,8 +540,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamicratio_nodejs">
 <a href="#dynamicratio_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Ratio</a>
@@ -572,8 +549,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdnautopopulate_nodejs">
 <a href="#fqdnautopopulate_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Autopopulate</a>
@@ -582,8 +558,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prioritygroup_nodejs">
 <a href="#prioritygroup_nodejs" style="color: inherit; text-decoration: inherit;">priority<wbr>Group</a>
@@ -592,8 +567,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_nodejs">
 <a href="#ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -602,13 +576,11 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_python">
 <a href="#node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -617,8 +589,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_python">
 <a href="#pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -627,8 +598,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_limit_python">
 <a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -637,8 +607,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_rate_limit_python">
 <a href="#connection_rate_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>rate_<wbr>limit</a>
@@ -647,8 +616,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dynamic_ratio_python">
 <a href="#dynamic_ratio_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>ratio</a>
@@ -657,8 +625,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_autopopulate_python">
 <a href="#fqdn_autopopulate_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>autopopulate</a>
@@ -667,8 +634,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_group_python">
 <a href="#priority_group_python" style="color: inherit; text-decoration: inherit;">priority_<wbr>group</a>
@@ -677,8 +643,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratio_python">
 <a href="#ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -687,8 +652,7 @@ The PoolAttachment resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -699,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -708,13 +671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -722,13 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,13 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -750,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -878,8 +834,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_csharp">
 <a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -888,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionratelimit_csharp">
 <a href="#state_connectionratelimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
@@ -898,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamicratio_csharp">
 <a href="#state_dynamicratio_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
@@ -908,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdnautopopulate_csharp">
 <a href="#state_fqdnautopopulate_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
@@ -918,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_csharp">
 <a href="#state_node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -928,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_csharp">
 <a href="#state_pool_csharp" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -938,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prioritygroup_csharp">
 <a href="#state_prioritygroup_csharp" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
@@ -948,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_csharp">
 <a href="#state_ratio_csharp" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -958,13 +906,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_go">
 <a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -973,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionratelimit_go">
 <a href="#state_connectionratelimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Rate<wbr>Limit</a>
@@ -983,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamicratio_go">
 <a href="#state_dynamicratio_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Ratio</a>
@@ -993,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdnautopopulate_go">
 <a href="#state_fqdnautopopulate_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Autopopulate</a>
@@ -1003,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_go">
 <a href="#state_node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -1013,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_go">
 <a href="#state_pool_go" style="color: inherit; text-decoration: inherit;">Pool</a>
@@ -1023,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prioritygroup_go">
 <a href="#state_prioritygroup_go" style="color: inherit; text-decoration: inherit;">Priority<wbr>Group</a>
@@ -1033,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_go">
 <a href="#state_ratio_go" style="color: inherit; text-decoration: inherit;">Ratio</a>
@@ -1043,13 +982,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_nodejs">
 <a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -1058,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionratelimit_nodejs">
 <a href="#state_connectionratelimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Rate<wbr>Limit</a>
@@ -1068,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamicratio_nodejs">
 <a href="#state_dynamicratio_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Ratio</a>
@@ -1078,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdnautopopulate_nodejs">
 <a href="#state_fqdnautopopulate_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Autopopulate</a>
@@ -1088,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_nodejs">
 <a href="#state_node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -1098,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_nodejs">
 <a href="#state_pool_nodejs" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -1108,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prioritygroup_nodejs">
 <a href="#state_prioritygroup_nodejs" style="color: inherit; text-decoration: inherit;">priority<wbr>Group</a>
@@ -1118,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_nodejs">
 <a href="#state_ratio_nodejs" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -1128,13 +1058,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connection_limit_python">
 <a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -1143,8 +1071,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a maximum established connection limit for a pool member or node.The default is 0, meaning that there is no limit to the number of connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_rate_limit_python">
 <a href="#state_connection_rate_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>rate_<wbr>limit</a>
@@ -1153,8 +1080,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum number of connections-per-second allowed for a pool member,The default is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dynamic_ratio_python">
 <a href="#state_dynamic_ratio_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>ratio</a>
@@ -1163,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the fixed ratio value used for a node during ratio load balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_autopopulate_python">
 <a href="#state_fqdn_autopopulate_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>autopopulate</a>
@@ -1173,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN. The default is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_python">
 <a href="#state_node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -1183,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pool member address/fqdn with service port, (ex: `1.1.1.1:80/www.google.com:80`). (Note: Member will be in same partition of Pool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_python">
 <a href="#state_pool_python" style="color: inherit; text-decoration: inherit;">pool</a>
@@ -1193,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the pool to which members should be attached,it should be "full path".The full path is the combination of the partition + name of the pool.(For example `/Common/my-pool`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_group_python">
 <a href="#state_priority_group_python" style="color: inherit; text-decoration: inherit;">priority_<wbr>group</a>
@@ -1203,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a number representing the priority group for the pool member. The default is 0, meaning that the member has no priority
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ratio_python">
 <a href="#state_ratio_python" style="color: inherit; text-decoration: inherit;">ratio</a>
@@ -1213,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}"Specifies the ratio weight to assign to the pool member. Valid values range from 1 through 65535. The default is 1, which means that each pool member has an equal ratio proportion.".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

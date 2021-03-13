@@ -155,8 +155,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -165,8 +164,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -175,13 +173,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the App Service exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -190,8 +186,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -200,13 +195,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the App Service exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -215,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -225,13 +217,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the App Service exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -240,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -250,8 +239,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the App Service exists.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,8 +252,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appserviceplanid_csharp">
 <a href="#appserviceplanid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Plan<wbr>Id</a>
@@ -274,8 +261,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service Plan within which the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="appsettings_csharp">
 <a href="#appsettings_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings</a>
@@ -284,8 +270,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings for the App Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientaffinityenabled_csharp">
 <a href="#clientaffinityenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
@@ -294,8 +279,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientcertenabled_csharp">
 <a href="#clientcertenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Enabled</a>
@@ -304,8 +288,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service require client certificates for incoming requests?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_csharp">
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -314,8 +297,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappserviceconnectionstring">List&lt;Get<wbr>App<wbr>Service<wbr>Connection<wbr>String&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomainverificationid_csharp">
 <a href="#customdomainverificationid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain<wbr>Verification<wbr>Id</a>
@@ -324,8 +306,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsitehostname_csharp">
 <a href="#defaultsitehostname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Site<wbr>Hostname</a>
@@ -334,8 +315,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service - such as `mysite.azurewebsites.net`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -344,8 +324,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the App Service Enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpsonly_csharp">
 <a href="#httpsonly_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Only</a>
@@ -354,8 +333,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can the App Service only be accessed via HTTPS?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -364,8 +342,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -374,8 +351,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -384,8 +360,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundipaddresslists_csharp">
 <a href="#outboundipaddresslists_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
@@ -394,8 +369,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundipaddresses_csharp">
 <a href="#outboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
@@ -404,8 +378,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possibleoutboundipaddresslists_csharp">
 <a href="#possibleoutboundipaddresslists_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
@@ -414,8 +387,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possibleoutboundipaddresses_csharp">
 <a href="#possibleoutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -424,8 +396,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12,52.143.43.17` - not all of which are necessarily in use. Superset of `outbound_ip_addresses`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -433,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="siteconfigs_csharp">
 <a href="#siteconfigs_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Configs</a>
@@ -443,8 +413,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfig">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sitecredentials_csharp">
 <a href="#sitecredentials_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
@@ -452,8 +421,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesitecredential">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcecontrols_csharp">
 <a href="#sourcecontrols_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
@@ -462,8 +430,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesourcecontrol">List&lt;Get<wbr>App<wbr>Service<wbr>Source<wbr>Control&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -472,13 +439,11 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appserviceplanid_go">
 <a href="#appserviceplanid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Plan<wbr>Id</a>
@@ -487,8 +452,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service Plan within which the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="appsettings_go">
 <a href="#appsettings_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings</a>
@@ -497,8 +461,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings for the App Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientaffinityenabled_go">
 <a href="#clientaffinityenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Affinity<wbr>Enabled</a>
@@ -507,8 +470,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientcertenabled_go">
 <a href="#clientcertenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>Enabled</a>
@@ -517,8 +479,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service require client certificates for incoming requests?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_go">
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -527,8 +488,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappserviceconnectionstring">[]Get<wbr>App<wbr>Service<wbr>Connection<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomainverificationid_go">
 <a href="#customdomainverificationid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain<wbr>Verification<wbr>Id</a>
@@ -537,8 +497,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsitehostname_go">
 <a href="#defaultsitehostname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Site<wbr>Hostname</a>
@@ -547,8 +506,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service - such as `mysite.azurewebsites.net`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -557,8 +515,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the App Service Enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpsonly_go">
 <a href="#httpsonly_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Only</a>
@@ -567,8 +524,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can the App Service only be accessed via HTTPS?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -577,8 +533,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -587,8 +542,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -597,8 +551,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundipaddresslists_go">
 <a href="#outboundipaddresslists_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
@@ -607,8 +560,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundipaddresses_go">
 <a href="#outboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
@@ -617,8 +569,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possibleoutboundipaddresslists_go">
 <a href="#possibleoutboundipaddresslists_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
@@ -627,8 +578,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possibleoutboundipaddresses_go">
 <a href="#possibleoutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -637,8 +587,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12,52.143.43.17` - not all of which are necessarily in use. Superset of `outbound_ip_addresses`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -646,8 +595,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="siteconfigs_go">
 <a href="#siteconfigs_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Configs</a>
@@ -656,8 +604,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfig">[]Get<wbr>App<wbr>Service<wbr>Site<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sitecredentials_go">
 <a href="#sitecredentials_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Credentials</a>
@@ -665,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesitecredential">[]Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcecontrols_go">
 <a href="#sourcecontrols_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Controls</a>
@@ -675,8 +621,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesourcecontrol">[]Get<wbr>App<wbr>Service<wbr>Source<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -685,13 +630,11 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appserviceplanid_nodejs">
 <a href="#appserviceplanid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service<wbr>Plan<wbr>Id</a>
@@ -700,8 +643,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service Plan within which the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="appsettings_nodejs">
 <a href="#appsettings_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings</a>
@@ -710,8 +652,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings for the App Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientaffinityenabled_nodejs">
 <a href="#clientaffinityenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Affinity<wbr>Enabled</a>
@@ -720,8 +661,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does the App Service send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientcertenabled_nodejs">
 <a href="#clientcertenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>Enabled</a>
@@ -730,8 +670,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does the App Service require client certificates for incoming requests?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
@@ -740,8 +679,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappserviceconnectionstring">Get<wbr>App<wbr>Service<wbr>Connection<wbr>String[]</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customdomainverificationid_nodejs">
 <a href="#customdomainverificationid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain<wbr>Verification<wbr>Id</a>
@@ -750,8 +688,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultsitehostname_nodejs">
 <a href="#defaultsitehostname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Site<wbr>Hostname</a>
@@ -760,8 +697,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service - such as `mysite.azurewebsites.net`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -770,8 +706,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the App Service Enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpsonly_nodejs">
 <a href="#httpsonly_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Only</a>
@@ -780,8 +715,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can the App Service only be accessed via HTTPS?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -790,8 +724,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -800,8 +733,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -810,8 +742,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundipaddresslists_nodejs">
 <a href="#outboundipaddresslists_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
@@ -820,8 +751,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundipaddresses_nodejs">
 <a href="#outboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Addresses</a>
@@ -830,8 +760,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possibleoutboundipaddresslists_nodejs">
 <a href="#possibleoutboundipaddresslists_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
@@ -840,8 +769,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possibleoutboundipaddresses_nodejs">
 <a href="#possibleoutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -850,8 +778,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12,52.143.43.17` - not all of which are necessarily in use. Superset of `outbound_ip_addresses`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -859,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="siteconfigs_nodejs">
 <a href="#siteconfigs_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Configs</a>
@@ -869,8 +795,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfig">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sitecredentials_nodejs">
 <a href="#sitecredentials_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Credentials</a>
@@ -878,8 +803,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesitecredential">Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcecontrols_nodejs">
 <a href="#sourcecontrols_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Controls</a>
@@ -888,8 +812,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesourcecontrol">Get<wbr>App<wbr>Service<wbr>Source<wbr>Control[]</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -898,13 +821,11 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="app_service_plan_id_python">
 <a href="#app_service_plan_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>plan_<wbr>id</a>
@@ -913,8 +834,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service Plan within which the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="app_settings_python">
 <a href="#app_settings_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings</a>
@@ -923,8 +843,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A key-value pair of App Settings for the App Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_affinity_enabled_python">
 <a href="#client_affinity_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>affinity_<wbr>enabled</a>
@@ -933,8 +852,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service send session affinity cookies, which route client requests in the same session to the same instance?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_cert_enabled_python">
 <a href="#client_cert_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>enabled</a>
@@ -943,8 +861,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service require client certificates for incoming requests?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_strings_python">
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
@@ -953,8 +870,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappserviceconnectionstring">Sequence[Get<wbr>App<wbr>Service<wbr>Connection<wbr>String]</a></span>
     </dt>
     <dd>{{% md %}}An `connection_string` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="custom_domain_verification_id_python">
 <a href="#custom_domain_verification_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain_<wbr>verification_<wbr>id</a>
@@ -963,8 +879,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An identifier used by App Service to perform domain ownership verification via DNS TXT record.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_site_hostname_python">
 <a href="#default_site_hostname_python" style="color: inherit; text-decoration: inherit;">default_<wbr>site_<wbr>hostname</a>
@@ -973,8 +888,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service - such as `mysite.azurewebsites.net`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -983,8 +897,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the App Service Enabled?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="https_only_python">
 <a href="#https_only_python" style="color: inherit; text-decoration: inherit;">https_<wbr>only</a>
@@ -993,8 +906,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can the App Service only be accessed via HTTPS?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1003,8 +915,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1013,8 +924,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the App Service exists.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1023,8 +933,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbound_ip_address_lists_python">
 <a href="#outbound_ip_address_lists_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>address_<wbr>lists</a>
@@ -1033,8 +942,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbound_ip_addresses_python">
 <a href="#outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>addresses</a>
@@ -1043,8 +951,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possible_outbound_ip_address_lists_python">
 <a href="#possible_outbound_ip_address_lists_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>outbound_<wbr>ip_<wbr>address_<wbr>lists</a>
@@ -1053,8 +960,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="possible_outbound_ip_addresses_python">
 <a href="#possible_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
@@ -1063,8 +969,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12,52.143.43.17` - not all of which are necessarily in use. Superset of `outbound_ip_addresses`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1072,8 +977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="site_configs_python">
 <a href="#site_configs_python" style="color: inherit; text-decoration: inherit;">site_<wbr>configs</a>
@@ -1082,8 +986,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfig">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}A `site_config` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="site_credentials_python">
 <a href="#site_credentials_python" style="color: inherit; text-decoration: inherit;">site_<wbr>credentials</a>
@@ -1091,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getappservicesitecredential">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_controls_python">
 <a href="#source_controls_python" style="color: inherit; text-decoration: inherit;">source_<wbr>controls</a>
@@ -1101,8 +1003,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesourcecontrol">Sequence[Get<wbr>App<wbr>Service<wbr>Source<wbr>Control]</a></span>
     </dt>
     <dd>{{% md %}}A `source_control` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1111,8 +1012,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1126,8 +1026,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1136,8 +1035,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1146,8 +1044,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Connection String.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1156,13 +1053,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the Connection String.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1171,8 +1066,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1181,8 +1075,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Connection String.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1191,13 +1084,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the Connection String.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1206,8 +1097,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1216,8 +1106,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Connection String.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1226,13 +1115,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value for the Connection String.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1241,8 +1128,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1251,8 +1137,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Connection String.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1261,8 +1146,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value for the Connection String.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappservicesiteconfig">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config</h4>
@@ -1270,8 +1154,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alwayson_csharp">
 <a href="#alwayson_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
@@ -1280,8 +1163,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the app loaded at all times?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="appcommandline_csharp">
 <a href="#appcommandline_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Command<wbr>Line</a>
@@ -1290,8 +1172,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App command line to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cors_csharp">
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
@@ -1300,8 +1181,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigcor">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultdocuments_csharp">
 <a href="#defaultdocuments_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Documents</a>
@@ -1310,8 +1190,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ordering of default documents to load, if an address isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dotnetframeworkversion_csharp">
 <a href="#dotnetframeworkversion_csharp" style="color: inherit; text-decoration: inherit;">Dotnet<wbr>Framework<wbr>Version</a>
@@ -1320,8 +1199,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ftpsstate_csharp">
 <a href="#ftpsstate_csharp" style="color: inherit; text-decoration: inherit;">Ftps<wbr>State</a>
@@ -1330,8 +1208,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthcheckpath_csharp">
 <a href="#healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -1340,8 +1217,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check path to be pinged by App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http2enabled_csharp">
 <a href="#http2enabled_csharp" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
@@ -1350,8 +1226,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprestrictions_csharp">
 <a href="#iprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
@@ -1360,8 +1235,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigiprestriction">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javacontainer_csharp">
 <a href="#javacontainer_csharp" style="color: inherit; text-decoration: inherit;">Java<wbr>Container</a>
@@ -1370,8 +1244,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javacontainerversion_csharp">
 <a href="#javacontainerversion_csharp" style="color: inherit; text-decoration: inherit;">Java<wbr>Container<wbr>Version</a>
@@ -1380,8 +1253,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javaversion_csharp">
 <a href="#javaversion_csharp" style="color: inherit; text-decoration: inherit;">Java<wbr>Version</a>
@@ -1390,8 +1262,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Java in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linuxfxversion_csharp">
 <a href="#linuxfxversion_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
@@ -1400,8 +1271,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version for the AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localmysqlenabled_csharp">
 <a href="#localmysqlenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Mysql<wbr>Enabled</a>
@@ -1410,8 +1280,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is "MySQL In App" Enabled? This runs a local MySQL instance with your app and shares resources from the App Service plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedpipelinemode_csharp">
 <a href="#managedpipelinemode_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Pipeline<wbr>Mode</a>
@@ -1420,8 +1289,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Pipeline Mode used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -1430,8 +1298,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofworkers_csharp">
 <a href="#numberofworkers_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -1440,8 +1307,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phpversion_csharp">
 <a href="#phpversion_csharp" style="color: inherit; text-decoration: inherit;">Php<wbr>Version</a>
@@ -1450,8 +1316,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of PHP used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pythonversion_csharp">
 <a href="#pythonversion_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
@@ -1460,8 +1325,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Python used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedebuggingenabled_csharp">
 <a href="#remotedebuggingenabled_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Debugging<wbr>Enabled</a>
@@ -1470,8 +1334,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Remote Debugging Enabled in this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedebuggingversion_csharp">
 <a href="#remotedebuggingversion_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Debugging<wbr>Version</a>
@@ -1480,8 +1343,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which version of Visual Studio is the Remote Debugger compatible with?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmiprestrictions_csharp">
 <a href="#scmiprestrictions_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
@@ -1490,8 +1352,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">List&lt;Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmtype_csharp">
 <a href="#scmtype_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
@@ -1500,8 +1361,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Source Control enabled for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmusemainiprestriction_csharp">
 <a href="#scmusemainiprestriction_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
@@ -1510,8 +1370,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use32bitworkerprocess_csharp">
 <a href="#use32bitworkerprocess_csharp" style="color: inherit; text-decoration: inherit;">Use32Bit<wbr>Worker<wbr>Process</a>
@@ -1520,8 +1379,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_csharp">
 <a href="#websocketsenabled_csharp" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
@@ -1530,8 +1388,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are WebSockets enabled for this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="windowsfxversion_csharp">
 <a href="#windowsfxversion_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Fx<wbr>Version</a>
@@ -1540,13 +1397,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Windows Container Docker Image for the AppService.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alwayson_go">
 <a href="#alwayson_go" style="color: inherit; text-decoration: inherit;">Always<wbr>On</a>
@@ -1555,8 +1410,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the app loaded at all times?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="appcommandline_go">
 <a href="#appcommandline_go" style="color: inherit; text-decoration: inherit;">App<wbr>Command<wbr>Line</a>
@@ -1565,8 +1419,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App command line to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cors_go">
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
@@ -1575,8 +1428,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigcor">[]Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultdocuments_go">
 <a href="#defaultdocuments_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Documents</a>
@@ -1585,8 +1437,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ordering of default documents to load, if an address isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dotnetframeworkversion_go">
 <a href="#dotnetframeworkversion_go" style="color: inherit; text-decoration: inherit;">Dotnet<wbr>Framework<wbr>Version</a>
@@ -1595,8 +1446,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ftpsstate_go">
 <a href="#ftpsstate_go" style="color: inherit; text-decoration: inherit;">Ftps<wbr>State</a>
@@ -1605,8 +1455,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthcheckpath_go">
 <a href="#healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -1615,8 +1464,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check path to be pinged by App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http2enabled_go">
 <a href="#http2enabled_go" style="color: inherit; text-decoration: inherit;">Http2Enabled</a>
@@ -1625,8 +1473,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprestrictions_go">
 <a href="#iprestrictions_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Restrictions</a>
@@ -1635,8 +1482,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigiprestriction">[]Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javacontainer_go">
 <a href="#javacontainer_go" style="color: inherit; text-decoration: inherit;">Java<wbr>Container</a>
@@ -1645,8 +1491,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javacontainerversion_go">
 <a href="#javacontainerversion_go" style="color: inherit; text-decoration: inherit;">Java<wbr>Container<wbr>Version</a>
@@ -1655,8 +1500,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javaversion_go">
 <a href="#javaversion_go" style="color: inherit; text-decoration: inherit;">Java<wbr>Version</a>
@@ -1665,8 +1509,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Java in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linuxfxversion_go">
 <a href="#linuxfxversion_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Fx<wbr>Version</a>
@@ -1675,8 +1518,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version for the AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localmysqlenabled_go">
 <a href="#localmysqlenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Mysql<wbr>Enabled</a>
@@ -1685,8 +1527,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is "MySQL In App" Enabled? This runs a local MySQL instance with your app and shares resources from the App Service plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedpipelinemode_go">
 <a href="#managedpipelinemode_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Pipeline<wbr>Mode</a>
@@ -1695,8 +1536,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Pipeline Mode used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -1705,8 +1545,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofworkers_go">
 <a href="#numberofworkers_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -1715,8 +1554,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phpversion_go">
 <a href="#phpversion_go" style="color: inherit; text-decoration: inherit;">Php<wbr>Version</a>
@@ -1725,8 +1563,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of PHP used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pythonversion_go">
 <a href="#pythonversion_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
@@ -1735,8 +1572,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Python used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedebuggingenabled_go">
 <a href="#remotedebuggingenabled_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Debugging<wbr>Enabled</a>
@@ -1745,8 +1581,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Remote Debugging Enabled in this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedebuggingversion_go">
 <a href="#remotedebuggingversion_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Debugging<wbr>Version</a>
@@ -1755,8 +1590,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which version of Visual Studio is the Remote Debugger compatible with?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmiprestrictions_go">
 <a href="#scmiprestrictions_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Ip<wbr>Restrictions</a>
@@ -1765,8 +1599,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">[]Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmtype_go">
 <a href="#scmtype_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Type</a>
@@ -1775,8 +1608,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Source Control enabled for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmusemainiprestriction_go">
 <a href="#scmusemainiprestriction_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
@@ -1785,8 +1617,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use32bitworkerprocess_go">
 <a href="#use32bitworkerprocess_go" style="color: inherit; text-decoration: inherit;">Use32Bit<wbr>Worker<wbr>Process</a>
@@ -1795,8 +1626,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_go">
 <a href="#websocketsenabled_go" style="color: inherit; text-decoration: inherit;">Websockets<wbr>Enabled</a>
@@ -1805,8 +1635,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are WebSockets enabled for this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="windowsfxversion_go">
 <a href="#windowsfxversion_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Fx<wbr>Version</a>
@@ -1815,13 +1644,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Windows Container Docker Image for the AppService.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alwayson_nodejs">
 <a href="#alwayson_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>On</a>
@@ -1830,8 +1657,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the app loaded at all times?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="appcommandline_nodejs">
 <a href="#appcommandline_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Command<wbr>Line</a>
@@ -1840,8 +1666,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}App command line to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cors_nodejs">
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
@@ -1850,8 +1675,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigcor">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor[]</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultdocuments_nodejs">
 <a href="#defaultdocuments_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Documents</a>
@@ -1860,8 +1684,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ordering of default documents to load, if an address isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dotnetframeworkversion_nodejs">
 <a href="#dotnetframeworkversion_nodejs" style="color: inherit; text-decoration: inherit;">dotnet<wbr>Framework<wbr>Version</a>
@@ -1870,8 +1693,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ftpsstate_nodejs">
 <a href="#ftpsstate_nodejs" style="color: inherit; text-decoration: inherit;">ftps<wbr>State</a>
@@ -1880,8 +1702,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="healthcheckpath_nodejs">
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
@@ -1890,8 +1711,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check path to be pinged by App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http2enabled_nodejs">
 <a href="#http2enabled_nodejs" style="color: inherit; text-decoration: inherit;">http2Enabled</a>
@@ -1900,8 +1720,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iprestrictions_nodejs">
 <a href="#iprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Restrictions</a>
@@ -1910,8 +1729,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigiprestriction">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javacontainer_nodejs">
 <a href="#javacontainer_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Container</a>
@@ -1920,8 +1738,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javacontainerversion_nodejs">
 <a href="#javacontainerversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Container<wbr>Version</a>
@@ -1930,8 +1747,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="javaversion_nodejs">
 <a href="#javaversion_nodejs" style="color: inherit; text-decoration: inherit;">java<wbr>Version</a>
@@ -1940,8 +1756,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Java in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linuxfxversion_nodejs">
 <a href="#linuxfxversion_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Fx<wbr>Version</a>
@@ -1950,8 +1765,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version for the AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localmysqlenabled_nodejs">
 <a href="#localmysqlenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Mysql<wbr>Enabled</a>
@@ -1960,8 +1774,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is "MySQL In App" Enabled? This runs a local MySQL instance with your app and shares resources from the App Service plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedpipelinemode_nodejs">
 <a href="#managedpipelinemode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Pipeline<wbr>Mode</a>
@@ -1970,8 +1783,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Managed Pipeline Mode used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -1980,8 +1792,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="numberofworkers_nodejs">
 <a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
@@ -1990,8 +1801,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phpversion_nodejs">
 <a href="#phpversion_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Version</a>
@@ -2000,8 +1810,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of PHP used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pythonversion_nodejs">
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
@@ -2010,8 +1819,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Python used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedebuggingenabled_nodejs">
 <a href="#remotedebuggingenabled_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Enabled</a>
@@ -2020,8 +1828,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Remote Debugging Enabled in this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remotedebuggingversion_nodejs">
 <a href="#remotedebuggingversion_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Debugging<wbr>Version</a>
@@ -2030,8 +1837,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which version of Visual Studio is the Remote Debugger compatible with?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmiprestrictions_nodejs">
 <a href="#scmiprestrictions_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Ip<wbr>Restrictions</a>
@@ -2040,8 +1846,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmtype_nodejs">
 <a href="#scmtype_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Type</a>
@@ -2050,8 +1855,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Source Control enabled for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scmusemainiprestriction_nodejs">
 <a href="#scmusemainiprestriction_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Use<wbr>Main<wbr>Ip<wbr>Restriction</a>
@@ -2060,8 +1864,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use32bitworkerprocess_nodejs">
 <a href="#use32bitworkerprocess_nodejs" style="color: inherit; text-decoration: inherit;">use32Bit<wbr>Worker<wbr>Process</a>
@@ -2070,8 +1873,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websocketsenabled_nodejs">
 <a href="#websocketsenabled_nodejs" style="color: inherit; text-decoration: inherit;">websockets<wbr>Enabled</a>
@@ -2080,8 +1882,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Are WebSockets enabled for this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="windowsfxversion_nodejs">
 <a href="#windowsfxversion_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Fx<wbr>Version</a>
@@ -2090,13 +1891,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Windows Container Docker Image for the AppService.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="always_on_python">
 <a href="#always_on_python" style="color: inherit; text-decoration: inherit;">always_<wbr>on</a>
@@ -2105,8 +1904,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the app loaded at all times?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="app_command_line_python">
 <a href="#app_command_line_python" style="color: inherit; text-decoration: inherit;">app_<wbr>command_<wbr>line</a>
@@ -2115,8 +1913,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}App command line to launch.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cors_python">
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
@@ -2125,8 +1922,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigcor">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="default_documents_python">
 <a href="#default_documents_python" style="color: inherit; text-decoration: inherit;">default_<wbr>documents</a>
@@ -2135,8 +1931,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ordering of default documents to load, if an address isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dotnet_framework_version_python">
 <a href="#dotnet_framework_version_python" style="color: inherit; text-decoration: inherit;">dotnet_<wbr>framework_<wbr>version</a>
@@ -2145,8 +1940,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the .net framework's CLR used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ftps_state_python">
 <a href="#ftps_state_python" style="color: inherit; text-decoration: inherit;">ftps_<wbr>state</a>
@@ -2155,8 +1949,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of FTP / FTPS service for this AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="health_check_path_python">
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
@@ -2165,8 +1958,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health check path to be pinged by App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http2_enabled_python">
 <a href="#http2_enabled_python" style="color: inherit; text-decoration: inherit;">http2_<wbr>enabled</a>
@@ -2175,8 +1967,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is HTTP2 Enabled on this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_restrictions_python">
 <a href="#ip_restrictions_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>restrictions</a>
@@ -2185,8 +1976,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigiprestriction">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="java_container_python">
 <a href="#java_container_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container</a>
@@ -2195,8 +1985,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="java_container_version_python">
 <a href="#java_container_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>container_<wbr>version</a>
@@ -2205,8 +1994,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the Java Container in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="java_version_python">
 <a href="#java_version_python" style="color: inherit; text-decoration: inherit;">java_<wbr>version</a>
@@ -2215,8 +2003,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Java in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linux_fx_version_python">
 <a href="#linux_fx_version_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>fx_<wbr>version</a>
@@ -2225,8 +2012,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Linux App Framework and version for the AppService.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="local_mysql_enabled_python">
 <a href="#local_mysql_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>mysql_<wbr>enabled</a>
@@ -2235,8 +2021,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is "MySQL In App" Enabled? This runs a local MySQL instance with your app and shares resources from the App Service plan.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_pipeline_mode_python">
 <a href="#managed_pipeline_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>pipeline_<wbr>mode</a>
@@ -2245,8 +2030,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Managed Pipeline Mode used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -2255,8 +2039,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="number_of_workers_python">
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
@@ -2265,8 +2048,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The scaled number of workers (for per site scaling) of this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="php_version_python">
 <a href="#php_version_python" style="color: inherit; text-decoration: inherit;">php_<wbr>version</a>
@@ -2275,8 +2057,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of PHP used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="python_version_python">
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
@@ -2285,8 +2066,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Python used in this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_debugging_enabled_python">
 <a href="#remote_debugging_enabled_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>enabled</a>
@@ -2295,8 +2075,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Remote Debugging Enabled in this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_debugging_version_python">
 <a href="#remote_debugging_version_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>debugging_<wbr>version</a>
@@ -2305,8 +2084,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which version of Visual Studio is the Remote Debugger compatible with?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scm_ip_restrictions_python">
 <a href="#scm_ip_restrictions_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>ip_<wbr>restrictions</a>
@@ -2315,8 +2093,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getappservicesiteconfigscmiprestriction">Sequence[Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm_ip_restriction` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scm_type_python">
 <a href="#scm_type_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>type</a>
@@ -2325,8 +2102,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Source Control enabled for this App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scm_use_main_ip_restriction_python">
 <a href="#scm_use_main_ip_restriction_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>use_<wbr>main_<wbr>ip_<wbr>restriction</a>
@@ -2335,8 +2111,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IP security restrictions for scm to use main.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use32_bit_worker_process_python">
 <a href="#use32_bit_worker_process_python" style="color: inherit; text-decoration: inherit;">use32_<wbr>bit_<wbr>worker_<wbr>process</a>
@@ -2345,8 +2120,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the App Service run in 32 bit mode, rather than 64 bit mode?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websockets_enabled_python">
 <a href="#websockets_enabled_python" style="color: inherit; text-decoration: inherit;">websockets_<wbr>enabled</a>
@@ -2355,8 +2129,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are WebSockets enabled for this App Service?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="windows_fx_version_python">
 <a href="#windows_fx_version_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>fx_<wbr>version</a>
@@ -2365,8 +2138,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Windows Container Docker Image for the AppService.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappservicesiteconfigcor">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor</h4>
@@ -2374,8 +2146,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -2384,8 +2155,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of origins which are able to make cross-origin calls.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportcredentials_csharp">
 <a href="#supportcredentials_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Credentials</a>
@@ -2394,13 +2164,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are credentials supported?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -2409,8 +2177,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of origins which are able to make cross-origin calls.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportcredentials_go">
 <a href="#supportcredentials_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Credentials</a>
@@ -2419,13 +2186,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are credentials supported?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -2434,8 +2199,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of origins which are able to make cross-origin calls.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportcredentials_nodejs">
 <a href="#supportcredentials_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Credentials</a>
@@ -2444,13 +2208,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Are credentials supported?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -2459,8 +2221,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of origins which are able to make cross-origin calls.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="support_credentials_python">
 <a href="#support_credentials_python" style="color: inherit; text-decoration: inherit;">support_<wbr>credentials</a>
@@ -2469,8 +2230,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Are credentials supported?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappservicesiteconfigiprestriction">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
@@ -2478,8 +2238,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2488,8 +2247,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2498,8 +2256,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2508,8 +2265,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2518,8 +2274,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetag_csharp">
 <a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
@@ -2528,8 +2283,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2537,8 +2291,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetid_csharp">
 <a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
@@ -2547,13 +2300,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2562,8 +2313,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2572,8 +2322,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2582,8 +2331,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2592,8 +2340,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetag_go">
 <a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
@@ -2602,8 +2349,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2611,8 +2357,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetid_go">
 <a href="#virtualnetworksubnetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
@@ -2621,13 +2366,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2636,8 +2379,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2646,8 +2388,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2656,8 +2397,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2666,8 +2406,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetag_nodejs">
 <a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
@@ -2676,8 +2415,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2685,8 +2423,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetid_nodejs">
 <a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
@@ -2695,13 +2432,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2710,8 +2445,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2720,8 +2454,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2730,8 +2463,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2740,8 +2472,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_tag_python">
 <a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
@@ -2750,8 +2481,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -2759,8 +2489,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_subnet_id_python">
 <a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
@@ -2769,8 +2498,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappservicesiteconfigscmiprestriction">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Scm<wbr>Ip<wbr>Restriction</h4>
@@ -2778,8 +2506,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2788,8 +2515,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2798,8 +2524,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2808,8 +2533,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2818,8 +2542,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetag_csharp">
 <a href="#servicetag_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
@@ -2828,8 +2551,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2837,8 +2559,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetid_csharp">
 <a href="#virtualnetworksubnetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
@@ -2847,13 +2568,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2862,8 +2581,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2872,8 +2590,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2882,8 +2599,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2892,8 +2608,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetag_go">
 <a href="#servicetag_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tag</a>
@@ -2902,8 +2617,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -2911,8 +2625,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetid_go">
 <a href="#virtualnetworksubnetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
@@ -2921,13 +2634,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2936,8 +2647,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2946,8 +2656,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2956,8 +2665,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2966,8 +2674,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicetag_nodejs">
 <a href="#servicetag_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tag</a>
@@ -2976,8 +2683,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2985,8 +2691,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetid_nodejs">
 <a href="#virtualnetworksubnetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Id</a>
@@ -2995,13 +2700,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -3010,8 +2713,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or Deny access for this IP range. Defaults to Allow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -3020,8 +2722,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP Address used for this IP Restriction in CIDR notation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3030,8 +2731,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -3040,8 +2740,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_tag_python">
 <a href="#service_tag_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tag</a>
@@ -3050,8 +2749,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Tag used for this IP Restriction.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -3059,8 +2757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_subnet_id_python">
 <a href="#virtual_network_subnet_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>id</a>
@@ -3069,8 +2766,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Network Subnet ID used for this IP Restriction.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappservicesitecredential">Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential</h4>
@@ -3078,8 +2774,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3087,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3096,13 +2790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3110,8 +2802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3119,13 +2810,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3133,8 +2822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3142,13 +2830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3156,8 +2842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3165,8 +2850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getappservicesourcecontrol">Get<wbr>App<wbr>Service<wbr>Source<wbr>Control</h4>
@@ -3174,8 +2858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -3184,8 +2867,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch of the remote repository in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manualintegration_csharp">
 <a href="#manualintegration_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
@@ -3194,8 +2876,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limits to manual integration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repourl_csharp">
 <a href="#repourl_csharp" style="color: inherit; text-decoration: inherit;">Repo<wbr>Url</a>
@@ -3204,8 +2885,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the source code repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollbackenabled_csharp">
 <a href="#rollbackenabled_csharp" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
@@ -3214,8 +2894,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is roll-back enabled for the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usemercurial_csharp">
 <a href="#usemercurial_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
@@ -3224,13 +2903,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -3239,8 +2916,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch of the remote repository in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manualintegration_go">
 <a href="#manualintegration_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Integration</a>
@@ -3249,8 +2925,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limits to manual integration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repourl_go">
 <a href="#repourl_go" style="color: inherit; text-decoration: inherit;">Repo<wbr>Url</a>
@@ -3259,8 +2934,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the source code repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollbackenabled_go">
 <a href="#rollbackenabled_go" style="color: inherit; text-decoration: inherit;">Rollback<wbr>Enabled</a>
@@ -3269,8 +2943,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is roll-back enabled for the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usemercurial_go">
 <a href="#usemercurial_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Mercurial</a>
@@ -3279,13 +2952,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -3294,8 +2965,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch of the remote repository in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manualintegration_nodejs">
 <a href="#manualintegration_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Integration</a>
@@ -3304,8 +2974,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limits to manual integration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repourl_nodejs">
 <a href="#repourl_nodejs" style="color: inherit; text-decoration: inherit;">repo<wbr>Url</a>
@@ -3314,8 +2983,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the source code repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollbackenabled_nodejs">
 <a href="#rollbackenabled_nodejs" style="color: inherit; text-decoration: inherit;">rollback<wbr>Enabled</a>
@@ -3324,8 +2992,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is roll-back enabled for the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usemercurial_nodejs">
 <a href="#usemercurial_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Mercurial</a>
@@ -3334,13 +3001,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -3349,8 +3014,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The branch of the remote repository in use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manual_integration_python">
 <a href="#manual_integration_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>integration</a>
@@ -3359,8 +3023,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limits to manual integration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repo_url_python">
 <a href="#repo_url_python" style="color: inherit; text-decoration: inherit;">repo_<wbr>url</a>
@@ -3369,8 +3032,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the source code repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rollback_enabled_python">
 <a href="#rollback_enabled_python" style="color: inherit; text-decoration: inherit;">rollback_<wbr>enabled</a>
@@ -3379,8 +3041,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is roll-back enabled for the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use_mercurial_python">
 <a href="#use_mercurial_python" style="color: inherit; text-decoration: inherit;">use_<wbr>mercurial</a>
@@ -3389,8 +3050,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Uses Mercurial if `true`, otherwise uses Git.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -178,8 +178,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_csharp">
 <a href="#api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
@@ -188,8 +187,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openapidocuments_csharp">
 <a href="#openapidocuments_csharp" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Documents</a>
@@ -199,8 +197,7 @@ The ApiConfig resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfigid_csharp">
 <a href="#apiconfigid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id</a>
@@ -209,8 +206,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfigidprefix_csharp">
 <a href="#apiconfigidprefix_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id<wbr>Prefix</a>
@@ -220,8 +216,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -230,8 +225,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayconfig_csharp">
 <a href="#gatewayconfig_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -242,8 +236,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -252,8 +245,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -263,13 +255,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_go">
 <a href="#api_go" style="color: inherit; text-decoration: inherit;">Api</a>
@@ -278,8 +268,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openapidocuments_go">
 <a href="#openapidocuments_go" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Documents</a>
@@ -289,8 +278,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfigid_go">
 <a href="#apiconfigid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id</a>
@@ -299,8 +287,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfigidprefix_go">
 <a href="#apiconfigidprefix_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id<wbr>Prefix</a>
@@ -310,8 +297,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -320,8 +306,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayconfig_go">
 <a href="#gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -332,8 +317,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -342,8 +326,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -353,13 +336,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_nodejs">
 <a href="#api_nodejs" style="color: inherit; text-decoration: inherit;">api</a>
@@ -368,8 +349,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openapidocuments_nodejs">
 <a href="#openapidocuments_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Documents</a>
@@ -379,8 +359,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfigid_nodejs">
 <a href="#apiconfigid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id</a>
@@ -389,8 +368,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiconfigidprefix_nodejs">
 <a href="#apiconfigidprefix_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id<wbr>Prefix</a>
@@ -400,8 +378,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -410,8 +387,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayconfig_nodejs">
 <a href="#gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
@@ -422,8 +398,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -432,8 +407,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -443,13 +417,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_python">
 <a href="#api_python" style="color: inherit; text-decoration: inherit;">api</a>
@@ -458,8 +430,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openapi_documents_python">
 <a href="#openapi_documents_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>documents</a>
@@ -469,8 +440,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_config_id_python">
 <a href="#api_config_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id</a>
@@ -479,8 +449,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_config_id_prefix_python">
 <a href="#api_config_id_prefix_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id_<wbr>prefix</a>
@@ -490,8 +459,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -500,8 +468,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_config_python">
 <a href="#gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
@@ -512,8 +479,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -522,8 +488,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -533,8 +498,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -545,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -554,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -564,8 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceconfigid_csharp">
 <a href="#serviceconfigid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Config<wbr>Id</a>
@@ -574,13 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -598,8 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceconfigid_go">
 <a href="#serviceconfigid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Config<wbr>Id</a>
@@ -608,13 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -622,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -632,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceconfigid_nodejs">
 <a href="#serviceconfigid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Config<wbr>Id</a>
@@ -642,13 +595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -656,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -666,8 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_config_id_python">
 <a href="#service_config_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>config_<wbr>id</a>
@@ -676,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -804,8 +752,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_csharp">
 <a href="#state_api_csharp" style="color: inherit; text-decoration: inherit;">Api</a>
@@ -814,8 +761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiconfigid_csharp">
 <a href="#state_apiconfigid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id</a>
@@ -824,8 +770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiconfigidprefix_csharp">
 <a href="#state_apiconfigidprefix_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id<wbr>Prefix</a>
@@ -835,8 +780,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -845,8 +789,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayconfig_csharp">
 <a href="#state_gatewayconfig_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -857,8 +800,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -867,8 +809,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -877,8 +818,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapidocuments_csharp">
 <a href="#state_openapidocuments_csharp" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Documents</a>
@@ -888,8 +828,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -899,8 +838,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceconfigid_csharp">
 <a href="#state_serviceconfigid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Config<wbr>Id</a>
@@ -909,13 +847,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_go">
 <a href="#state_api_go" style="color: inherit; text-decoration: inherit;">Api</a>
@@ -924,8 +860,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiconfigid_go">
 <a href="#state_apiconfigid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id</a>
@@ -934,8 +869,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiconfigidprefix_go">
 <a href="#state_apiconfigidprefix_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Config<wbr>Id<wbr>Prefix</a>
@@ -945,8 +879,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -955,8 +888,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayconfig_go">
 <a href="#state_gatewayconfig_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Config</a>
@@ -967,8 +899,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -977,8 +908,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -987,8 +917,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapidocuments_go">
 <a href="#state_openapidocuments_go" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Documents</a>
@@ -998,8 +927,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1009,8 +937,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceconfigid_go">
 <a href="#state_serviceconfigid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Config<wbr>Id</a>
@@ -1019,13 +946,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_nodejs">
 <a href="#state_api_nodejs" style="color: inherit; text-decoration: inherit;">api</a>
@@ -1034,8 +959,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiconfigid_nodejs">
 <a href="#state_apiconfigid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id</a>
@@ -1044,8 +968,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiconfigidprefix_nodejs">
 <a href="#state_apiconfigidprefix_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Config<wbr>Id<wbr>Prefix</a>
@@ -1055,8 +978,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1065,8 +987,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayconfig_nodejs">
 <a href="#state_gatewayconfig_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Config</a>
@@ -1077,8 +998,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1087,8 +1007,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1097,8 +1016,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapidocuments_nodejs">
 <a href="#state_openapidocuments_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Documents</a>
@@ -1108,8 +1026,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1119,8 +1036,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceconfigid_nodejs">
 <a href="#state_serviceconfigid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Config<wbr>Id</a>
@@ -1129,13 +1045,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_python">
 <a href="#state_api_python" style="color: inherit; text-decoration: inherit;">api</a>
@@ -1144,8 +1058,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API to attach the config to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_config_id_python">
 <a href="#state_api_config_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id</a>
@@ -1154,8 +1067,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_config_id_prefix_python">
 <a href="#state_api_config_id_prefix_python" style="color: inherit; text-decoration: inherit;">api_<wbr>config_<wbr>id_<wbr>prefix</a>
@@ -1165,8 +1077,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the
 specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1175,8 +1086,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-visible name for the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_config_python">
 <a href="#state_gateway_config_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>config</a>
@@ -1187,8 +1097,7 @@ specified prefix. If this and api_config_id are unspecified, a random value is c
     <dd>{{% md %}}Immutable. Gateway specific configuration.
 If not specified, backend authentication will be set to use OIDC authentication using the default compute service account
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1197,8 +1106,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1207,8 +1115,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the API Config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapi_documents_python">
 <a href="#state_openapi_documents_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>documents</a>
@@ -1218,8 +1125,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An OpenAPI Specification Document describing an API.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1229,8 +1135,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_config_id_python">
 <a href="#state_service_config_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>config_<wbr>id</a>
@@ -1239,8 +1144,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1255,8 +1159,7 @@ If it is not provided, the provider project is used.
 <h4 id="apiconfiggatewayconfig">Api<wbr>Config<wbr>Gateway<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendconfig_csharp">
 <a href="#backendconfig_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Config</a>
@@ -1266,13 +1169,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendconfig_go">
 <a href="#backendconfig_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Config</a>
@@ -1282,13 +1183,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendconfig_nodejs">
 <a href="#backendconfig_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Config</a>
@@ -1298,13 +1197,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_config_python">
 <a href="#backend_config_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>config</a>
@@ -1314,15 +1211,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Backend settings that are applied to all backends of the Gateway.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiconfiggatewayconfigbackendconfig">Api<wbr>Config<wbr>Gateway<wbr>Config<wbr>Backend<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="googleserviceaccount_csharp">
 <a href="#googleserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Service<wbr>Account</a>
@@ -1332,13 +1227,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
 (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="googleserviceaccount_go">
 <a href="#googleserviceaccount_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Service<wbr>Account</a>
@@ -1348,13 +1241,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
 (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="googleserviceaccount_nodejs">
 <a href="#googleserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Service<wbr>Account</a>
@@ -1364,13 +1255,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
 (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="google_service_account_python">
 <a href="#google_service_account_python" style="color: inherit; text-decoration: inherit;">google_<wbr>service_<wbr>account</a>
@@ -1380,15 +1269,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
 (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiconfigopenapidocument">Api<wbr>Config<wbr>Openapi<wbr>Document</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="document_csharp">
 <a href="#document_csharp" style="color: inherit; text-decoration: inherit;">Document</a>
@@ -1398,13 +1285,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="document_go">
 <a href="#document_go" style="color: inherit; text-decoration: inherit;">Document</a>
@@ -1414,13 +1299,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="document_nodejs">
 <a href="#document_nodejs" style="color: inherit; text-decoration: inherit;">document</a>
@@ -1430,13 +1313,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="document_python">
 <a href="#document_python" style="color: inherit; text-decoration: inherit;">document</a>
@@ -1446,15 +1327,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The OpenAPI Specification document file.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiconfigopenapidocumentdocument">Api<wbr>Config<wbr>Openapi<wbr>Document<wbr>Document</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_csharp">
 <a href="#contents_csharp" style="color: inherit; text-decoration: inherit;">Contents</a>
@@ -1463,8 +1342,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded content of the file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1473,13 +1351,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_go">
 <a href="#contents_go" style="color: inherit; text-decoration: inherit;">Contents</a>
@@ -1488,8 +1364,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded content of the file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1498,13 +1373,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_nodejs">
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
@@ -1513,8 +1386,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded content of the file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1523,13 +1395,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_python">
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
@@ -1538,8 +1408,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded content of the file.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1548,8 +1417,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file path (full or relative path). This is typically the path of the file when it is uploaded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

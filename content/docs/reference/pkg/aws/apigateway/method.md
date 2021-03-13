@@ -474,8 +474,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -484,8 +483,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -494,8 +492,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -504,8 +501,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -514,8 +510,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_csharp">
 <a href="#apikeyrequired_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -524,8 +519,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_csharp">
 <a href="#authorizationscopes_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -534,8 +528,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_csharp">
 <a href="#authorizerid_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -544,8 +537,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
 <a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -554,8 +546,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_csharp">
 <a href="#requestmodels_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -566,8 +557,7 @@ The Method resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_csharp">
 <a href="#requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -577,8 +567,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestvalidatorid_csharp">
 <a href="#requestvalidatorid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Validator<wbr>Id</a>
@@ -587,13 +576,11 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -602,8 +589,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -612,8 +598,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -622,8 +607,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -632,8 +616,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_go">
 <a href="#apikeyrequired_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -642,8 +625,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_go">
 <a href="#authorizationscopes_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -652,8 +634,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_go">
 <a href="#authorizerid_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -662,8 +643,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
 <a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -672,8 +652,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_go">
 <a href="#requestmodels_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -684,8 +663,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_go">
 <a href="#requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -695,8 +673,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestvalidatorid_go">
 <a href="#requestvalidatorid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Validator<wbr>Id</a>
@@ -705,13 +682,11 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -720,8 +695,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -730,8 +704,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -740,8 +713,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -750,8 +722,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_nodejs">
 <a href="#apikeyrequired_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Required</a>
@@ -760,8 +731,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_nodejs">
 <a href="#authorizationscopes_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Scopes</a>
@@ -770,8 +740,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_nodejs">
 <a href="#authorizerid_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Id</a>
@@ -780,8 +749,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
 <a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -790,8 +758,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_nodejs">
 <a href="#requestmodels_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Models</a>
@@ -802,8 +769,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestparameters_nodejs">
 <a href="#requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -813,8 +779,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestvalidatorid_nodejs">
 <a href="#requestvalidatorid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Validator<wbr>Id</a>
@@ -823,13 +788,11 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -838,8 +801,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -848,8 +810,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -858,8 +819,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -868,8 +828,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_required_python">
 <a href="#api_key_required_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>required</a>
@@ -878,8 +837,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_scopes_python">
 <a href="#authorization_scopes_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>scopes</a>
@@ -888,8 +846,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizer_id_python">
 <a href="#authorizer_id_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>id</a>
@@ -898,8 +855,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
 <a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -908,8 +864,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_models_python">
 <a href="#request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
@@ -920,8 +875,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_parameters_python">
 <a href="#request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -931,8 +885,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_validator_id_python">
 <a href="#request_validator_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>validator_<wbr>id</a>
@@ -941,8 +894,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -953,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -962,13 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -976,13 +925,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -990,13 +937,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1004,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1132,8 +1076,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apikeyrequired_csharp">
 <a href="#state_apikeyrequired_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -1142,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1152,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationscopes_csharp">
 <a href="#state_authorizationscopes_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -1162,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizerid_csharp">
 <a href="#state_authorizerid_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -1172,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_csharp">
 <a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1182,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operationname_csharp">
 <a href="#state_operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -1192,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestmodels_csharp">
 <a href="#state_requestmodels_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -1204,8 +1141,7 @@ The following state arguments are supported:
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_csharp">
 <a href="#state_requestparameters_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -1215,8 +1151,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestvalidatorid_csharp">
 <a href="#state_requestvalidatorid_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Validator<wbr>Id</a>
@@ -1225,8 +1160,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1235,8 +1169,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -1245,13 +1178,11 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apikeyrequired_go">
 <a href="#state_apikeyrequired_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -1260,8 +1191,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1270,8 +1200,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationscopes_go">
 <a href="#state_authorizationscopes_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -1280,8 +1209,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizerid_go">
 <a href="#state_authorizerid_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -1290,8 +1218,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_go">
 <a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1300,8 +1227,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operationname_go">
 <a href="#state_operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -1310,8 +1236,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestmodels_go">
 <a href="#state_requestmodels_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -1322,8 +1247,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_go">
 <a href="#state_requestparameters_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Parameters</a>
@@ -1333,8 +1257,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestvalidatorid_go">
 <a href="#state_requestvalidatorid_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Validator<wbr>Id</a>
@@ -1343,8 +1266,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1353,8 +1275,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -1363,13 +1284,11 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apikeyrequired_nodejs">
 <a href="#state_apikeyrequired_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Required</a>
@@ -1378,8 +1297,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1388,8 +1306,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationscopes_nodejs">
 <a href="#state_authorizationscopes_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Scopes</a>
@@ -1398,8 +1315,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizerid_nodejs">
 <a href="#state_authorizerid_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Id</a>
@@ -1408,8 +1324,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_nodejs">
 <a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -1418,8 +1333,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operationname_nodejs">
 <a href="#state_operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -1428,8 +1342,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestmodels_nodejs">
 <a href="#state_requestmodels_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Models</a>
@@ -1440,8 +1353,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestparameters_nodejs">
 <a href="#state_requestparameters_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Parameters</a>
@@ -1451,8 +1363,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestvalidatorid_nodejs">
 <a href="#state_requestvalidatorid_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Validator<wbr>Id</a>
@@ -1461,8 +1372,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1471,8 +1381,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -1481,13 +1390,11 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_key_required_python">
 <a href="#state_api_key_required_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>required</a>
@@ -1496,8 +1403,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the method requires an API key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1506,8 +1412,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_scopes_python">
 <a href="#state_authorization_scopes_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>scopes</a>
@@ -1516,8 +1421,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizer_id_python">
 <a href="#state_authorizer_id_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>id</a>
@@ -1526,8 +1430,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_method_python">
 <a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1536,8 +1439,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_name_python">
 <a href="#state_operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -1546,8 +1448,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_models_python">
 <a href="#state_request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
@@ -1558,8 +1459,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
     <dd>{{% md %}}A map of the API models used for the request's content type
 where key is the content type (e.g. `application/json`)
 and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_parameters_python">
 <a href="#state_request_parameters_python" style="color: inherit; text-decoration: inherit;">request_<wbr>parameters</a>
@@ -1569,8 +1469,7 @@ and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`
     </dt>
     <dd>{{% md %}}A map of request parameters (from the path, query string and headers) that should be passed to the integration. The boolean value indicates whether the parameter is required (`true`) or optional (`false`).
 For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_validator_id_python">
 <a href="#state_request_validator_id_python" style="color: inherit; text-decoration: inherit;">request_<wbr>validator_<wbr>id</a>
@@ -1579,8 +1478,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of a `aws.apigateway.RequestValidator`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1589,8 +1487,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -1599,8 +1496,7 @@ For example: `request_parameters = {"method.request.header.X-Some-Header" = true
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

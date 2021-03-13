@@ -149,8 +149,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -159,8 +158,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uptimecheckips_csharp">
 <a href="#uptimecheckips_csharp" style="color: inherit; text-decoration: inherit;">Uptime<wbr>Check<wbr>Ips</a>
@@ -169,13 +167,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getuptimecheckipsuptimecheckip">List&lt;Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +180,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uptimecheckips_go">
 <a href="#uptimecheckips_go" style="color: inherit; text-decoration: inherit;">Uptime<wbr>Check<wbr>Ips</a>
@@ -194,13 +189,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getuptimecheckipsuptimecheckip">[]Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip</a></span>
     </dt>
     <dd>{{% md %}}A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -209,8 +202,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uptimecheckips_nodejs">
 <a href="#uptimecheckips_nodejs" style="color: inherit; text-decoration: inherit;">uptime<wbr>Check<wbr>Ips</a>
@@ -219,13 +211,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getuptimecheckipsuptimecheckip">Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip[]</a></span>
     </dt>
     <dd>{{% md %}}A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -234,8 +224,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uptime_check_ips_python">
 <a href="#uptime_check_ips_python" style="color: inherit; text-decoration: inherit;">uptime_<wbr>check_<wbr>ips</a>
@@ -244,8 +233,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getuptimecheckipsuptimecheckip">Sequence[Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip]</a></span>
     </dt>
     <dd>{{% md %}}A list of uptime check IPs used by Stackdriver Monitoring. Each `uptime_check_ip` contains:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -259,8 +247,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -272,8 +259,7 @@ The following output properties are available:
 (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format; however, one should not
 rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
 IPv4 or IPv6 format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -283,8 +269,7 @@ IPv4 or IPv6 format.
     </dt>
     <dd>{{% md %}}A more specific location within the region that typically encodes a particular city/town/metro
 (and its containing state/province or country) within the broader umbrella region category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -293,13 +278,11 @@ IPv4 or IPv6 format.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A broad region category in which the IP address is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -311,8 +294,7 @@ IPv4 or IPv6 format.
 (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format; however, one should not
 rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
 IPv4 or IPv6 format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -322,8 +304,7 @@ IPv4 or IPv6 format.
     </dt>
     <dd>{{% md %}}A more specific location within the region that typically encodes a particular city/town/metro
 (and its containing state/province or country) within the broader umbrella region category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -332,13 +313,11 @@ IPv4 or IPv6 format.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A broad region category in which the IP address is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -350,8 +329,7 @@ IPv4 or IPv6 format.
 (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format; however, one should not
 rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
 IPv4 or IPv6 format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -361,8 +339,7 @@ IPv4 or IPv6 format.
     </dt>
     <dd>{{% md %}}A more specific location within the region that typically encodes a particular city/town/metro
 (and its containing state/province or country) within the broader umbrella region category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -371,13 +348,11 @@ IPv4 or IPv6 format.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A broad region category in which the IP address is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -389,8 +364,7 @@ IPv4 or IPv6 format.
 (not an IP address range). Most IP addresses, as of this publication, are in IPv4 format; however, one should not
 rely on the IP addresses being in IPv4 format indefinitely, and should support interpreting this field in either
 IPv4 or IPv6 format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -400,8 +374,7 @@ IPv4 or IPv6 format.
     </dt>
     <dd>{{% md %}}A more specific location within the region that typically encodes a particular city/town/metro
 (and its containing state/province or country) within the broader umbrella region category.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -410,8 +383,7 @@ IPv4 or IPv6 format.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A broad region category in which the IP address is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

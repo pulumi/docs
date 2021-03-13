@@ -576,8 +576,7 @@ The RouterNat resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natipallocateoption_csharp">
 <a href="#natipallocateoption_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
@@ -589,8 +588,7 @@ The RouterNat resource accepts the following [input]({{< relref "/docs/intro/con
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -599,8 +597,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcesubnetworkiprangestonat_csharp">
 <a href="#sourcesubnetworkiprangestonat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
@@ -619,8 +616,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainnatips_csharp">
 <a href="#drainnatips_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
@@ -630,8 +626,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableendpointindependentmapping_csharp">
 <a href="#enableendpointindependentmapping_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
@@ -641,8 +636,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpidletimeoutsec_csharp">
 <a href="#icmpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -651,8 +645,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -662,8 +655,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minportspervm_csharp">
 <a href="#minportspervm_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
@@ -672,8 +664,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -682,8 +673,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natips_csharp">
 <a href="#natips_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
@@ -693,8 +683,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -704,8 +693,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -714,8 +702,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_csharp">
 <a href="#subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
@@ -726,8 +713,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpestablishedidletimeoutsec_csharp">
 <a href="#tcpestablishedidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -737,8 +723,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcptransitoryidletimeoutsec_csharp">
 <a href="#tcptransitoryidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -748,8 +733,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="udpidletimeoutsec_csharp">
 <a href="#udpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -758,13 +742,11 @@ Defaults to 30s if not set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natipallocateoption_go">
 <a href="#natipallocateoption_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
@@ -776,8 +758,7 @@ Defaults to 30s if not set.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -786,8 +767,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcesubnetworkiprangestonat_go">
 <a href="#sourcesubnetworkiprangestonat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
@@ -806,8 +786,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainnatips_go">
 <a href="#drainnatips_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
@@ -817,8 +796,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableendpointindependentmapping_go">
 <a href="#enableendpointindependentmapping_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
@@ -828,8 +806,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpidletimeoutsec_go">
 <a href="#icmpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -838,8 +815,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -849,8 +825,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minportspervm_go">
 <a href="#minportspervm_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
@@ -859,8 +834,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -869,8 +843,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natips_go">
 <a href="#natips_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
@@ -880,8 +853,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -891,8 +863,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -901,8 +872,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_go">
 <a href="#subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
@@ -913,8 +883,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpestablishedidletimeoutsec_go">
 <a href="#tcpestablishedidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -924,8 +893,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcptransitoryidletimeoutsec_go">
 <a href="#tcptransitoryidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -935,8 +903,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="udpidletimeoutsec_go">
 <a href="#udpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -945,13 +912,11 @@ Defaults to 30s if not set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natipallocateoption_nodejs">
 <a href="#natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
@@ -963,8 +928,7 @@ Defaults to 30s if not set.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -973,8 +937,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcesubnetworkiprangestonat_nodejs">
 <a href="#sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
@@ -993,8 +956,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drainnatips_nodejs">
 <a href="#drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
@@ -1004,8 +966,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableendpointindependentmapping_nodejs">
 <a href="#enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
@@ -1015,8 +976,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpidletimeoutsec_nodejs">
 <a href="#icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1025,8 +985,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -1036,8 +995,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minportspervm_nodejs">
 <a href="#minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
@@ -1046,8 +1004,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1056,8 +1013,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="natips_nodejs">
 <a href="#natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
@@ -1067,8 +1023,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1078,8 +1033,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1088,8 +1042,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_nodejs">
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
@@ -1100,8 +1053,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpestablishedidletimeoutsec_nodejs">
 <a href="#tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1111,8 +1063,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcptransitoryidletimeoutsec_nodejs">
 <a href="#tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1122,8 +1073,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="udpidletimeoutsec_nodejs">
 <a href="#udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1132,13 +1082,11 @@ Defaults to 30s if not set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nat_ip_allocate_option_python">
 <a href="#nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
@@ -1150,8 +1098,7 @@ Defaults to 30s if not set.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1160,8 +1107,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_subnetwork_ip_ranges_to_nat_python">
 <a href="#source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
@@ -1180,8 +1126,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drain_nat_ips_python">
 <a href="#drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
@@ -1191,8 +1136,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_endpoint_independent_mapping_python">
 <a href="#enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
@@ -1202,8 +1146,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmp_idle_timeout_sec_python">
 <a href="#icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -1212,8 +1155,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -1223,8 +1165,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_ports_per_vm_python">
 <a href="#min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
@@ -1233,8 +1174,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1243,8 +1183,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nat_ips_python">
 <a href="#nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
@@ -1254,8 +1193,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1265,8 +1203,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1275,8 +1212,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_python">
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
@@ -1287,8 +1223,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_established_idle_timeout_sec_python">
 <a href="#tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -1298,8 +1233,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_transitory_idle_timeout_sec_python">
 <a href="#tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -1309,8 +1243,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="udp_idle_timeout_sec_python">
 <a href="#udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -1319,8 +1252,7 @@ Defaults to 30s if not set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1331,8 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1340,13 +1271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1354,13 +1283,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1368,13 +1295,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1382,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1510,8 +1434,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drainnatips_csharp">
 <a href="#state_drainnatips_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
@@ -1521,8 +1444,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableendpointindependentmapping_csharp">
 <a href="#state_enableendpointindependentmapping_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
@@ -1532,8 +1454,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmpidletimeoutsec_csharp">
 <a href="#state_icmpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1542,8 +1463,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
 <a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1553,8 +1473,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minportspervm_csharp">
 <a href="#state_minportspervm_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
@@ -1563,8 +1482,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1573,8 +1491,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_natipallocateoption_csharp">
 <a href="#state_natipallocateoption_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
@@ -1586,8 +1503,7 @@ Structure is documented below.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_natips_csharp">
 <a href="#state_natips_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
@@ -1597,8 +1513,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1608,8 +1523,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1618,8 +1532,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_csharp">
 <a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1628,8 +1541,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesubnetworkiprangestonat_csharp">
 <a href="#state_sourcesubnetworkiprangestonat_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
@@ -1648,8 +1560,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetworks_csharp">
 <a href="#state_subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
@@ -1660,8 +1571,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcpestablishedidletimeoutsec_csharp">
 <a href="#state_tcpestablishedidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1671,8 +1581,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcptransitoryidletimeoutsec_csharp">
 <a href="#state_tcptransitoryidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1682,8 +1591,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_udpidletimeoutsec_csharp">
 <a href="#state_udpidletimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1692,13 +1600,11 @@ Defaults to 30s if not set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drainnatips_go">
 <a href="#state_drainnatips_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Nat<wbr>Ips</a>
@@ -1708,8 +1614,7 @@ Defaults to 30s if not set.
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableendpointindependentmapping_go">
 <a href="#state_enableendpointindependentmapping_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
@@ -1719,8 +1624,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmpidletimeoutsec_go">
 <a href="#state_icmpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1729,8 +1633,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1740,8 +1643,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minportspervm_go">
 <a href="#state_minportspervm_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ports<wbr>Per<wbr>Vm</a>
@@ -1750,8 +1652,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1760,8 +1661,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_natipallocateoption_go">
 <a href="#state_natipallocateoption_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
@@ -1773,8 +1673,7 @@ Structure is documented below.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_natips_go">
 <a href="#state_natips_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ips</a>
@@ -1784,8 +1683,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1795,8 +1693,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1805,8 +1702,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_go">
 <a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1815,8 +1711,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesubnetworkiprangestonat_go">
 <a href="#state_sourcesubnetworkiprangestonat_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
@@ -1835,8 +1730,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetworks_go">
 <a href="#state_subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
@@ -1847,8 +1741,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcpestablishedidletimeoutsec_go">
 <a href="#state_tcpestablishedidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1858,8 +1751,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcptransitoryidletimeoutsec_go">
 <a href="#state_tcptransitoryidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1869,8 +1761,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_udpidletimeoutsec_go">
 <a href="#state_udpidletimeoutsec_go" style="color: inherit; text-decoration: inherit;">Udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1879,13 +1770,11 @@ Defaults to 30s if not set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drainnatips_nodejs">
 <a href="#state_drainnatips_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Nat<wbr>Ips</a>
@@ -1895,8 +1784,7 @@ Defaults to 30s if not set.
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableendpointindependentmapping_nodejs">
 <a href="#state_enableendpointindependentmapping_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Endpoint<wbr>Independent<wbr>Mapping</a>
@@ -1906,8 +1794,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmpidletimeoutsec_nodejs">
 <a href="#state_icmpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -1916,8 +1803,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -1927,8 +1813,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minportspervm_nodejs">
 <a href="#state_minportspervm_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ports<wbr>Per<wbr>Vm</a>
@@ -1937,8 +1822,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1947,8 +1831,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_natipallocateoption_nodejs">
 <a href="#state_natipallocateoption_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip<wbr>Allocate<wbr>Option</a>
@@ -1960,8 +1843,7 @@ Structure is documented below.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_natips_nodejs">
 <a href="#state_natips_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ips</a>
@@ -1971,8 +1853,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1982,8 +1863,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1992,8 +1872,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_nodejs">
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -2002,8 +1881,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesubnetworkiprangestonat_nodejs">
 <a href="#state_sourcesubnetworkiprangestonat_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Subnetwork<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nat</a>
@@ -2022,8 +1900,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetworks_nodejs">
 <a href="#state_subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
@@ -2034,8 +1911,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcpestablishedidletimeoutsec_nodejs">
 <a href="#state_tcpestablishedidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Established<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -2045,8 +1921,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcptransitoryidletimeoutsec_nodejs">
 <a href="#state_tcptransitoryidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Transitory<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -2056,8 +1931,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_udpidletimeoutsec_nodejs">
 <a href="#state_udpidletimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">udp<wbr>Idle<wbr>Timeout<wbr>Sec</a>
@@ -2066,13 +1940,11 @@ Defaults to 30s if not set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drain_nat_ips_python">
 <a href="#state_drain_nat_ips_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>nat_<wbr>ips</a>
@@ -2082,8 +1954,7 @@ Defaults to 30s if not set.
     </dt>
     <dd>{{% md %}}A list of URLs of the IP resources to be drained. These IPs must be
 valid static external IPs that have been assigned to the NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_endpoint_independent_mapping_python">
 <a href="#state_enable_endpoint_independent_mapping_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>endpoint_<wbr>independent_<wbr>mapping</a>
@@ -2093,8 +1964,7 @@ valid static external IPs that have been assigned to the NAT.
     </dt>
     <dd>{{% md %}}Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
 see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icmp_idle_timeout_sec_python">
 <a href="#state_icmp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -2103,8 +1973,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -2114,8 +1983,7 @@ see the [official documentation](https://cloud.google.com/nat/docs/overview#spec
     </dt>
     <dd>{{% md %}}Configuration for logging on NAT
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_ports_per_vm_python">
 <a href="#state_min_ports_per_vm_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ports_<wbr>per_<wbr>vm</a>
@@ -2124,8 +1992,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of ports allocated to a VM from this NAT.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2134,8 +2001,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nat_ip_allocate_option_python">
 <a href="#state_nat_ip_allocate_option_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip_<wbr>allocate_<wbr>option</a>
@@ -2147,8 +2013,7 @@ Structure is documented below.
 `AUTO_ONLY` for only allowing NAT IPs allocated by Google Cloud
 Platform, or `MANUAL_ONLY` for only user-allocated NAT IP addresses.
 Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nat_ips_python">
 <a href="#state_nat_ips_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ips</a>
@@ -2158,8 +2023,7 @@ Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
     </dt>
     <dd>{{% md %}}Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2169,8 +2033,7 @@ is set to MANUAL_ONLY.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2179,8 +2042,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where the router and NAT reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_python">
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -2189,8 +2051,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this NAT will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_subnetwork_ip_ranges_to_nat_python">
 <a href="#state_source_subnetwork_ip_ranges_to_nat_python" style="color: inherit; text-decoration: inherit;">source_<wbr>subnetwork_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nat</a>
@@ -2209,8 +2070,7 @@ contains ALL_SUBNETWORKS_ALL_IP_RANGES or
 ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region.
 Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetworks_python">
 <a href="#state_subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
@@ -2221,8 +2081,7 @@ Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMAR
     <dd>{{% md %}}One or more subnetwork NAT configurations. Only used if
 `source_subnetwork_ip_ranges_to_nat` is set to `LIST_OF_SUBNETWORKS`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcp_established_idle_timeout_sec_python">
 <a href="#state_tcp_established_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>established_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -2232,8 +2091,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tcp_transitory_idle_timeout_sec_python">
 <a href="#state_tcp_transitory_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>transitory_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -2243,8 +2101,7 @@ Defaults to 1200s if not set.
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_udp_idle_timeout_sec_python">
 <a href="#state_udp_idle_timeout_sec_python" style="color: inherit; text-decoration: inherit;">udp_<wbr>idle_<wbr>timeout_<wbr>sec</a>
@@ -2253,8 +2110,7 @@ Defaults to 30s if not set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2269,8 +2125,7 @@ Defaults to 30s if not set.
 <h4 id="routernatlogconfig">Router<wbr>Nat<wbr>Log<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -2279,8 +2134,7 @@ Defaults to 30s if not set.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -2290,13 +2144,11 @@ Defaults to 30s if not set.
     </dt>
     <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
@@ -2305,8 +2157,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -2316,13 +2167,11 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
     </dt>
     <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -2331,8 +2180,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -2342,13 +2190,11 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
     </dt>
     <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
@@ -2357,8 +2203,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not to export logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -2368,15 +2213,13 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
     </dt>
     <dd>{{% md %}}Specifies the desired filtering of logs on this NAT.
 Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="routernatsubnetwork">Router<wbr>Nat<wbr>Subnetwork</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2385,8 +2228,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceiprangestonats_csharp">
 <a href="#sourceiprangestonats_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
@@ -2398,8 +2240,7 @@ Possible values are `ERRORS_ONLY`, `TRANSLATIONS_ONLY`, and `ALL`.
 should have NAT enabled. Supported values include:
 `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
 `PRIMARY_IP_RANGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryiprangenames_csharp">
 <a href="#secondaryiprangenames_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Range<wbr>Names</a>
@@ -2411,13 +2252,11 @@ should have NAT enabled. Supported values include:
 to use NAT. This can be populated only if
 `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
 sourceIpRangesToNat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2426,8 +2265,7 @@ sourceIpRangesToNat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceiprangestonats_go">
 <a href="#sourceiprangestonats_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
@@ -2439,8 +2277,7 @@ sourceIpRangesToNat
 should have NAT enabled. Supported values include:
 `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
 `PRIMARY_IP_RANGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryiprangenames_go">
 <a href="#secondaryiprangenames_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Ip<wbr>Range<wbr>Names</a>
@@ -2452,13 +2289,11 @@ should have NAT enabled. Supported values include:
 to use NAT. This can be populated only if
 `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
 sourceIpRangesToNat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2467,8 +2302,7 @@ sourceIpRangesToNat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceiprangestonats_nodejs">
 <a href="#sourceiprangestonats_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Ranges<wbr>To<wbr>Nats</a>
@@ -2480,8 +2314,7 @@ sourceIpRangesToNat
 should have NAT enabled. Supported values include:
 `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
 `PRIMARY_IP_RANGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryiprangenames_nodejs">
 <a href="#secondaryiprangenames_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Ip<wbr>Range<wbr>Names</a>
@@ -2493,13 +2326,11 @@ should have NAT enabled. Supported values include:
 to use NAT. This can be populated only if
 `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
 sourceIpRangesToNat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2508,8 +2339,7 @@ sourceIpRangesToNat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Self-link of subnetwork to NAT
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_ip_ranges_to_nats_python">
 <a href="#source_ip_ranges_to_nats_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>ranges_<wbr>to_<wbr>nats</a>
@@ -2521,8 +2351,7 @@ sourceIpRangesToNat
 should have NAT enabled. Supported values include:
 `ALL_IP_RANGES`, `LIST_OF_SECONDARY_IP_RANGES`,
 `PRIMARY_IP_RANGE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_ip_range_names_python">
 <a href="#secondary_ip_range_names_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>ip_<wbr>range_<wbr>names</a>
@@ -2534,8 +2363,7 @@ should have NAT enabled. Supported values include:
 to use NAT. This can be populated only if
 `LIST_OF_SECONDARY_IP_RANGES` is one of the values in
 sourceIpRangesToNat
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

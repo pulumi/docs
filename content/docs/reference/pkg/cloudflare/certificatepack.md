@@ -170,8 +170,7 @@ The CertificatePack resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -182,8 +181,7 @@ The CertificatePack resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +191,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -203,8 +200,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_csharp">
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -215,8 +211,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudflarebranding_csharp">
 <a href="#cloudflarebranding_csharp" style="color: inherit; text-decoration: inherit;">Cloudflare<wbr>Branding</a>
@@ -227,8 +222,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationmethod_csharp">
 <a href="#validationmethod_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Method</a>
@@ -238,8 +232,7 @@ if set to `true`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validitydays_csharp">
 <a href="#validitydays_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>Days</a>
@@ -250,13 +243,11 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -267,8 +258,7 @@ Allowed values: 14, 30, 90, 365.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -278,8 +268,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -288,8 +277,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_go">
 <a href="#certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -300,8 +288,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudflarebranding_go">
 <a href="#cloudflarebranding_go" style="color: inherit; text-decoration: inherit;">Cloudflare<wbr>Branding</a>
@@ -312,8 +299,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationmethod_go">
 <a href="#validationmethod_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Method</a>
@@ -323,8 +309,7 @@ if set to `true`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validitydays_go">
 <a href="#validitydays_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>Days</a>
@@ -335,13 +320,11 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -352,8 +335,7 @@ Allowed values: 14, 30, 90, 365.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -363,8 +345,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -373,8 +354,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_nodejs">
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -385,8 +365,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudflarebranding_nodejs">
 <a href="#cloudflarebranding_nodejs" style="color: inherit; text-decoration: inherit;">cloudflare<wbr>Branding</a>
@@ -397,8 +376,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validationmethod_nodejs">
 <a href="#validationmethod_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Method</a>
@@ -408,8 +386,7 @@ if set to `true`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validitydays_nodejs">
 <a href="#validitydays_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>Days</a>
@@ -420,13 +397,11 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -437,8 +412,7 @@ Allowed values: 14, 30, 90, 365.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -448,8 +422,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -458,8 +431,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_authority_python">
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -470,8 +442,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudflare_branding_python">
 <a href="#cloudflare_branding_python" style="color: inherit; text-decoration: inherit;">cloudflare_<wbr>branding</a>
@@ -482,8 +453,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validation_method_python">
 <a href="#validation_method_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>method</a>
@@ -493,8 +463,7 @@ if set to `true`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validity_days_python">
 <a href="#validity_days_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>days</a>
@@ -505,8 +474,7 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -517,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -526,13 +493,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -540,13 +505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -554,13 +517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -568,8 +529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -696,8 +656,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_csharp">
 <a href="#state_certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -708,8 +667,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudflarebranding_csharp">
 <a href="#state_cloudflarebranding_csharp" style="color: inherit; text-decoration: inherit;">Cloudflare<wbr>Branding</a>
@@ -720,8 +678,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_csharp">
 <a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -732,8 +689,7 @@ if set to `true`.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -743,8 +699,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validationmethod_csharp">
 <a href="#state_validationmethod_csharp" style="color: inherit; text-decoration: inherit;">Validation<wbr>Method</a>
@@ -754,8 +709,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validitydays_csharp">
 <a href="#state_validitydays_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>Days</a>
@@ -766,8 +720,7 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -776,13 +729,11 @@ Allowed values: 14, 30, 90, 365.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_go">
 <a href="#state_certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -793,8 +744,7 @@ Allowed values: 14, 30, 90, 365.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudflarebranding_go">
 <a href="#state_cloudflarebranding_go" style="color: inherit; text-decoration: inherit;">Cloudflare<wbr>Branding</a>
@@ -805,8 +755,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_go">
 <a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -817,8 +766,7 @@ if set to `true`.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -828,8 +776,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validationmethod_go">
 <a href="#state_validationmethod_go" style="color: inherit; text-decoration: inherit;">Validation<wbr>Method</a>
@@ -839,8 +786,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validitydays_go">
 <a href="#state_validitydays_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>Days</a>
@@ -851,8 +797,7 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -861,13 +806,11 @@ Allowed values: 14, 30, 90, 365.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_nodejs">
 <a href="#state_certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -878,8 +821,7 @@ Allowed values: 14, 30, 90, 365.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudflarebranding_nodejs">
 <a href="#state_cloudflarebranding_nodejs" style="color: inherit; text-decoration: inherit;">cloudflare<wbr>Branding</a>
@@ -890,8 +832,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_nodejs">
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -902,8 +843,7 @@ if set to `true`.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -913,8 +853,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validationmethod_nodejs">
 <a href="#state_validationmethod_nodejs" style="color: inherit; text-decoration: inherit;">validation<wbr>Method</a>
@@ -924,8 +863,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validitydays_nodejs">
 <a href="#state_validitydays_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>Days</a>
@@ -936,8 +874,7 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -946,13 +883,11 @@ Allowed values: 14, 30, 90, 365.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_authority_python">
 <a href="#state_certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -963,8 +898,7 @@ Allowed values: 14, 30, 90, 365.
     <dd>{{% md %}}Which certificate
 authority to issue the certificate pack. Allowed values: `"digicert"`,
 `"lets_encrypt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudflare_branding_python">
 <a href="#state_cloudflare_branding_python" style="color: inherit; text-decoration: inherit;">cloudflare_<wbr>branding</a>
@@ -975,8 +909,7 @@ authority to issue the certificate pack. Allowed values: `"digicert"`,
     <dd>{{% md %}}Whether or not to include
 Cloudflare branding. This will add `sni.cloudflaressl.com` as the Common Name
 if set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_python">
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -987,8 +920,7 @@ if set to `true`.
     <dd>{{% md %}}List of hostnames to provision the certificate pack for.
 Note: If using Let's Encrypt, you cannot use individual subdomains and only a
 wildcard for subdomain is available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -998,8 +930,7 @@ wildcard for subdomain is available.
     </dt>
     <dd>{{% md %}}Certificate pack configuration type.
 Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validation_method_python">
 <a href="#state_validation_method_python" style="color: inherit; text-decoration: inherit;">validation_<wbr>method</a>
@@ -1009,8 +940,7 @@ Allowed values: `"custom"`, `"dedicated_custom"`, `"advanced"`.
     </dt>
     <dd>{{% md %}}Which validation method to
 use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validity_days_python">
 <a href="#state_validity_days_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>days</a>
@@ -1021,8 +951,7 @@ use in order to prove domain ownership. Allowed values: `"txt"`, `"http"`, `"ema
     <dd>{{% md %}}How long the certificate is valid
 for. Note: If using Let's Encrypt, this value can only be 90 days.
 Allowed values: 14, 30, 90, 365.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1031,8 +960,7 @@ Allowed values: 14, 30, 90, 365.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the certificate pack should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

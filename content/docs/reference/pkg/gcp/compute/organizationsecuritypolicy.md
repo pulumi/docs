@@ -169,8 +169,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -179,8 +178,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -190,8 +188,7 @@ The OrganizationSecurityPolicy resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -200,8 +197,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -214,13 +210,11 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -229,8 +223,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -240,8 +233,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -250,8 +242,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -264,13 +255,11 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -279,8 +268,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -290,8 +278,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -300,8 +287,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -314,13 +300,11 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -329,8 +313,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -340,8 +323,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -350,8 +332,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -364,8 +345,7 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -376,8 +356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -386,8 +365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -395,8 +373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -405,13 +382,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -420,8 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -429,8 +403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -439,13 +412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -454,8 +425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -463,8 +433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -473,13 +442,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -488,8 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -497,8 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -507,8 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -635,8 +599,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -645,8 +608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -655,8 +617,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -665,8 +626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -676,8 +636,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -686,8 +645,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -700,13 +658,11 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -715,8 +671,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -725,8 +680,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -735,8 +689,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -746,8 +699,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -756,8 +708,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -770,13 +721,11 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -785,8 +734,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -795,8 +743,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -805,8 +752,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -816,8 +762,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -826,8 +771,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -840,13 +784,11 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -855,8 +797,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A textual description for the organization security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -865,8 +806,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A textual name of the security policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -875,8 +815,7 @@ Possible values are `FIREWALL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -886,8 +825,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The parent of this OrganizationSecurityPolicy in the Cloud Resource Hierarchy.
 Format: organizations/{organization_id} or folders/{folder_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -896,8 +834,7 @@ Format: organizations/{organization_id} or folders/{folder_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource. This identifier is defined by the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -910,8 +847,7 @@ For organization security policies, the only supported type
 is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

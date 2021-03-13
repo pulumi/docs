@@ -170,8 +170,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nexthop_csharp">
 <a href="#nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -180,8 +179,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publishvpc_csharp">
 <a href="#publishvpc_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Vpc</a>
@@ -190,8 +188,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routedest_csharp">
 <a href="#routedest_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Dest</a>
@@ -200,8 +197,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -210,8 +206,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -220,13 +215,11 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nexthop_go">
 <a href="#nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -235,8 +228,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publishvpc_go">
 <a href="#publishvpc_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Vpc</a>
@@ -245,8 +237,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routedest_go">
 <a href="#routedest_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Dest</a>
@@ -255,8 +246,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -265,8 +255,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -275,13 +264,11 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nexthop_nodejs">
 <a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
@@ -290,8 +277,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publishvpc_nodejs">
 <a href="#publishvpc_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Vpc</a>
@@ -300,8 +286,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routedest_nodejs">
 <a href="#routedest_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Dest</a>
@@ -310,8 +295,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -320,8 +304,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -330,13 +313,11 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="next_hop_python">
 <a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
@@ -345,8 +326,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publish_vpc_python">
 <a href="#publish_vpc_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>vpc</a>
@@ -355,8 +335,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_dest_python">
 <a href="#route_dest_python" style="color: inherit; text-decoration: inherit;">route_<wbr>dest</a>
@@ -365,8 +344,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -375,8 +353,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -385,8 +362,7 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -397,8 +373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -406,13 +381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -420,13 +393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -434,13 +405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -576,8 +544,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_nexthop_csharp">
 <a href="#state_nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -586,8 +553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishvpc_csharp">
 <a href="#state_publishvpc_csharp" style="color: inherit; text-decoration: inherit;">Publish<wbr>Vpc</a>
@@ -596,8 +562,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routedest_csharp">
 <a href="#state_routedest_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Dest</a>
@@ -606,8 +571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_csharp">
 <a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -616,8 +580,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_csharp">
 <a href="#state_weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -626,13 +589,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_nexthop_go">
 <a href="#state_nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -641,8 +602,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishvpc_go">
 <a href="#state_publishvpc_go" style="color: inherit; text-decoration: inherit;">Publish<wbr>Vpc</a>
@@ -651,8 +611,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routedest_go">
 <a href="#state_routedest_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Dest</a>
@@ -661,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_go">
 <a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -671,8 +629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_go">
 <a href="#state_weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -681,13 +638,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_nexthop_nodejs">
 <a href="#state_nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
@@ -696,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishvpc_nodejs">
 <a href="#state_publishvpc_nodejs" style="color: inherit; text-decoration: inherit;">publish<wbr>Vpc</a>
@@ -706,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routedest_nodejs">
 <a href="#state_routedest_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Dest</a>
@@ -716,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_nodejs">
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -726,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_nodejs">
 <a href="#state_weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -736,13 +687,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_python">
 <a href="#state_next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
@@ -751,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The next hop of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publish_vpc_python">
 <a href="#state_publish_vpc_python" style="color: inherit; text-decoration: inherit;">publish_<wbr>vpc</a>
@@ -761,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to issue the destination route to the VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_route_dest_python">
 <a href="#state_route_dest_python" style="color: inherit; text-decoration: inherit;">route_<wbr>dest</a>
@@ -771,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination network segment of the destination route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_gateway_id_python">
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -781,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the vpn gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_python">
 <a href="#state_weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -791,8 +736,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value should be 0 or 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

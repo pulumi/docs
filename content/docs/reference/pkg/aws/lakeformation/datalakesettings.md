@@ -372,8 +372,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admins_csharp">
 <a href="#admins_csharp" style="color: inherit; text-decoration: inherit;">Admins</a>
@@ -382,8 +381,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -392,8 +390,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdatabasedefaultpermissions_csharp">
 <a href="#createdatabasedefaultpermissions_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
@@ -402,8 +399,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">List&lt;Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtabledefaultpermissions_csharp">
 <a href="#createtabledefaultpermissions_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
@@ -412,8 +408,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">List&lt;Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedresourceowners_csharp">
 <a href="#trustedresourceowners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Resource<wbr>Owners</a>
@@ -422,13 +417,11 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admins_go">
 <a href="#admins_go" style="color: inherit; text-decoration: inherit;">Admins</a>
@@ -437,8 +430,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -447,8 +439,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdatabasedefaultpermissions_go">
 <a href="#createdatabasedefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
@@ -457,8 +448,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtabledefaultpermissions_go">
 <a href="#createtabledefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
@@ -467,8 +457,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedresourceowners_go">
 <a href="#trustedresourceowners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Resource<wbr>Owners</a>
@@ -477,13 +466,11 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admins_nodejs">
 <a href="#admins_nodejs" style="color: inherit; text-decoration: inherit;">admins</a>
@@ -492,8 +479,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -502,8 +488,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdatabasedefaultpermissions_nodejs">
 <a href="#createdatabasedefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database<wbr>Default<wbr>Permissions</a>
@@ -512,8 +497,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtabledefaultpermissions_nodejs">
 <a href="#createtabledefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Table<wbr>Default<wbr>Permissions</a>
@@ -522,8 +506,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedresourceowners_nodejs">
 <a href="#trustedresourceowners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Resource<wbr>Owners</a>
@@ -532,13 +515,11 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admins_python">
 <a href="#admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
@@ -547,8 +528,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -557,8 +537,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_database_default_permissions_python">
 <a href="#create_database_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database_<wbr>default_<wbr>permissions</a>
@@ -567,8 +546,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_table_default_permissions_python">
 <a href="#create_table_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>table_<wbr>default_<wbr>permissions</a>
@@ -577,8 +555,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_resource_owners_python">
 <a href="#trusted_resource_owners_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>resource_<wbr>owners</a>
@@ -587,8 +564,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -599,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -608,13 +583,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -622,13 +595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -636,13 +607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -650,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -778,8 +746,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admins_csharp">
 <a href="#state_admins_csharp" style="color: inherit; text-decoration: inherit;">Admins</a>
@@ -788,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_csharp">
 <a href="#state_catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -798,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdatabasedefaultpermissions_csharp">
 <a href="#state_createdatabasedefaultpermissions_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
@@ -808,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">List&lt;Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtabledefaultpermissions_csharp">
 <a href="#state_createtabledefaultpermissions_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
@@ -818,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">List&lt;Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedresourceowners_csharp">
 <a href="#state_trustedresourceowners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Resource<wbr>Owners</a>
@@ -828,13 +791,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admins_go">
 <a href="#state_admins_go" style="color: inherit; text-decoration: inherit;">Admins</a>
@@ -843,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_go">
 <a href="#state_catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -853,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdatabasedefaultpermissions_go">
 <a href="#state_createdatabasedefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Database<wbr>Default<wbr>Permissions</a>
@@ -863,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtabledefaultpermissions_go">
 <a href="#state_createtabledefaultpermissions_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Table<wbr>Default<wbr>Permissions</a>
@@ -873,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">[]Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedresourceowners_go">
 <a href="#state_trustedresourceowners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Resource<wbr>Owners</a>
@@ -883,13 +840,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admins_nodejs">
 <a href="#state_admins_nodejs" style="color: inherit; text-decoration: inherit;">admins</a>
@@ -898,8 +853,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_nodejs">
 <a href="#state_catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -908,8 +862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdatabasedefaultpermissions_nodejs">
 <a href="#state_createdatabasedefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Database<wbr>Default<wbr>Permissions</a>
@@ -918,8 +871,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtabledefaultpermissions_nodejs">
 <a href="#state_createtabledefaultpermissions_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Table<wbr>Default<wbr>Permissions</a>
@@ -928,8 +880,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedresourceowners_nodejs">
 <a href="#state_trustedresourceowners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Resource<wbr>Owners</a>
@@ -938,13 +889,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admins_python">
 <a href="#state_admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
@@ -953,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_catalog_id_python">
 <a href="#state_catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -963,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, the account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_database_default_permissions_python">
 <a href="#state_create_database_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>database_<wbr>default_<wbr>permissions</a>
@@ -973,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatedatabasedefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_table_default_permissions_python">
 <a href="#state_create_table_default_permissions_python" style="color: inherit; text-decoration: inherit;">create_<wbr>table_<wbr>default_<wbr>permissions</a>
@@ -983,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datalakesettingscreatetabledefaultpermission">Sequence[Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusted_resource_owners_python">
 <a href="#state_trusted_resource_owners_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>resource_<wbr>owners</a>
@@ -993,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1009,8 +953,7 @@ The following state arguments are supported:
 <h4 id="datalakesettingscreatedatabasedefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -1019,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_csharp">
 <a href="#principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -1029,13 +971,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -1044,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_go">
 <a href="#principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -1054,13 +993,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1069,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_nodejs">
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1079,13 +1015,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1094,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_python">
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1104,15 +1037,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datalakesettingscreatetabledefaultpermission">Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -1121,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_csharp">
 <a href="#principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -1131,13 +1061,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -1146,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_go">
 <a href="#principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -1156,13 +1083,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1171,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_nodejs">
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1181,13 +1105,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1196,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_python">
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -1206,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal who is granted permissions. To enforce metadata and underlying data access control only by IAM on new databases and tables set `principal` to `IAM_ALLOWED_PRINCIPALS` and `permissions` to `["ALL"]`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

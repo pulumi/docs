@@ -272,8 +272,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boundissuer_csharp">
 <a href="#boundissuer_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Issuer</a>
@@ -282,8 +281,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrole_csharp">
 <a href="#defaultrole_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -292,8 +290,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -302,8 +299,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwkscapem_csharp">
 <a href="#jwkscapem_csharp" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Ca<wbr>Pem</a>
@@ -312,8 +308,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwksurl_csharp">
 <a href="#jwksurl_csharp" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Url</a>
@@ -322,8 +317,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtsupportedalgs_csharp">
 <a href="#jwtsupportedalgs_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Supported<wbr>Algs</a>
@@ -332,8 +326,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtvalidationpubkeys_csharp">
 <a href="#jwtvalidationpubkeys_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Validation<wbr>Pubkeys</a>
@@ -342,8 +335,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientid_csharp">
 <a href="#oidcclientid_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Id</a>
@@ -352,8 +344,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientsecret_csharp">
 <a href="#oidcclientsecret_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Secret</a>
@@ -362,8 +353,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcdiscoverycapem_csharp">
 <a href="#oidcdiscoverycapem_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
@@ -372,8 +362,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcdiscoveryurl_csharp">
 <a href="#oidcdiscoveryurl_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Url</a>
@@ -382,8 +371,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -392,8 +380,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerconfig_csharp">
 <a href="#providerconfig_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
@@ -402,8 +389,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_csharp">
 <a href="#tune_csharp" style="color: inherit; text-decoration: inherit;">Tune</a>
@@ -411,8 +397,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -421,13 +406,11 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boundissuer_go">
 <a href="#boundissuer_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Issuer</a>
@@ -436,8 +419,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrole_go">
 <a href="#defaultrole_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -446,8 +428,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -456,8 +437,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwkscapem_go">
 <a href="#jwkscapem_go" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Ca<wbr>Pem</a>
@@ -466,8 +446,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwksurl_go">
 <a href="#jwksurl_go" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Url</a>
@@ -476,8 +455,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtsupportedalgs_go">
 <a href="#jwtsupportedalgs_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Supported<wbr>Algs</a>
@@ -486,8 +464,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtvalidationpubkeys_go">
 <a href="#jwtvalidationpubkeys_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Validation<wbr>Pubkeys</a>
@@ -496,8 +473,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientid_go">
 <a href="#oidcclientid_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Id</a>
@@ -506,8 +482,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientsecret_go">
 <a href="#oidcclientsecret_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Secret</a>
@@ -516,8 +491,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcdiscoverycapem_go">
 <a href="#oidcdiscoverycapem_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
@@ -526,8 +500,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcdiscoveryurl_go">
 <a href="#oidcdiscoveryurl_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Url</a>
@@ -536,8 +509,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -546,8 +518,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerconfig_go">
 <a href="#providerconfig_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
@@ -556,8 +527,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_go">
 <a href="#tune_go" style="color: inherit; text-decoration: inherit;">Tune</a>
@@ -565,8 +535,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -575,13 +544,11 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="boundissuer_nodejs">
 <a href="#boundissuer_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Issuer</a>
@@ -590,8 +557,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrole_nodejs">
 <a href="#defaultrole_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Role</a>
@@ -600,8 +566,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -610,8 +575,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwkscapem_nodejs">
 <a href="#jwkscapem_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Ca<wbr>Pem</a>
@@ -620,8 +584,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwksurl_nodejs">
 <a href="#jwksurl_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Url</a>
@@ -630,8 +593,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtsupportedalgs_nodejs">
 <a href="#jwtsupportedalgs_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Supported<wbr>Algs</a>
@@ -640,8 +602,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwtvalidationpubkeys_nodejs">
 <a href="#jwtvalidationpubkeys_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Validation<wbr>Pubkeys</a>
@@ -650,8 +611,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientid_nodejs">
 <a href="#oidcclientid_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Id</a>
@@ -660,8 +620,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcclientsecret_nodejs">
 <a href="#oidcclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Secret</a>
@@ -670,8 +629,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcdiscoverycapem_nodejs">
 <a href="#oidcdiscoverycapem_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
@@ -680,8 +638,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidcdiscoveryurl_nodejs">
 <a href="#oidcdiscoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Url</a>
@@ -690,8 +647,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -700,8 +656,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerconfig_nodejs">
 <a href="#providerconfig_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Config</a>
@@ -710,8 +665,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_nodejs">
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
@@ -719,8 +673,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -729,13 +682,11 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bound_issuer_python">
 <a href="#bound_issuer_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>issuer</a>
@@ -744,8 +695,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_role_python">
 <a href="#default_role_python" style="color: inherit; text-decoration: inherit;">default_<wbr>role</a>
@@ -754,8 +704,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -764,8 +713,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwks_ca_pem_python">
 <a href="#jwks_ca_pem_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>ca_<wbr>pem</a>
@@ -774,8 +722,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwks_url_python">
 <a href="#jwks_url_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>url</a>
@@ -784,8 +731,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwt_supported_algs_python">
 <a href="#jwt_supported_algs_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>supported_<wbr>algs</a>
@@ -794,8 +740,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwt_validation_pubkeys_python">
 <a href="#jwt_validation_pubkeys_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>validation_<wbr>pubkeys</a>
@@ -804,8 +749,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_client_id_python">
 <a href="#oidc_client_id_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>id</a>
@@ -814,8 +758,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_client_secret_python">
 <a href="#oidc_client_secret_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>secret</a>
@@ -824,8 +767,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_discovery_ca_pem_python">
 <a href="#oidc_discovery_ca_pem_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>ca_<wbr>pem</a>
@@ -834,8 +776,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_discovery_url_python">
 <a href="#oidc_discovery_url_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>url</a>
@@ -844,8 +785,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -854,8 +794,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_config_python">
 <a href="#provider_config_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>config</a>
@@ -864,8 +803,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tune_python">
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
@@ -873,8 +811,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -883,8 +820,7 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -895,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_csharp">
 <a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -905,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -914,13 +848,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_go">
 <a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -929,8 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -938,13 +869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_nodejs">
 <a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -953,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -962,13 +890,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessor_python">
 <a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -977,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -986,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1114,8 +1038,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_csharp">
 <a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -1124,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundissuer_csharp">
 <a href="#state_boundissuer_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Issuer</a>
@@ -1134,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrole_csharp">
 <a href="#state_defaultrole_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -1144,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1154,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwkscapem_csharp">
 <a href="#state_jwkscapem_csharp" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Ca<wbr>Pem</a>
@@ -1164,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwksurl_csharp">
 <a href="#state_jwksurl_csharp" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Url</a>
@@ -1174,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtsupportedalgs_csharp">
 <a href="#state_jwtsupportedalgs_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Supported<wbr>Algs</a>
@@ -1184,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtvalidationpubkeys_csharp">
 <a href="#state_jwtvalidationpubkeys_csharp" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Validation<wbr>Pubkeys</a>
@@ -1194,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientid_csharp">
 <a href="#state_oidcclientid_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Id</a>
@@ -1204,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientsecret_csharp">
 <a href="#state_oidcclientsecret_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Secret</a>
@@ -1214,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcdiscoverycapem_csharp">
 <a href="#state_oidcdiscoverycapem_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
@@ -1224,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcdiscoveryurl_csharp">
 <a href="#state_oidcdiscoveryurl_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Url</a>
@@ -1234,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1244,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerconfig_csharp">
 <a href="#state_providerconfig_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
@@ -1254,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_csharp">
 <a href="#state_tune_csharp" style="color: inherit; text-decoration: inherit;">Tune</a>
@@ -1263,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1273,13 +1181,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_go">
 <a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
@@ -1288,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundissuer_go">
 <a href="#state_boundissuer_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Issuer</a>
@@ -1298,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrole_go">
 <a href="#state_defaultrole_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Role</a>
@@ -1308,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1318,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwkscapem_go">
 <a href="#state_jwkscapem_go" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Ca<wbr>Pem</a>
@@ -1328,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwksurl_go">
 <a href="#state_jwksurl_go" style="color: inherit; text-decoration: inherit;">Jwks<wbr>Url</a>
@@ -1338,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtsupportedalgs_go">
 <a href="#state_jwtsupportedalgs_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Supported<wbr>Algs</a>
@@ -1348,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtvalidationpubkeys_go">
 <a href="#state_jwtvalidationpubkeys_go" style="color: inherit; text-decoration: inherit;">Jwt<wbr>Validation<wbr>Pubkeys</a>
@@ -1358,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientid_go">
 <a href="#state_oidcclientid_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Id</a>
@@ -1368,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientsecret_go">
 <a href="#state_oidcclientsecret_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Client<wbr>Secret</a>
@@ -1378,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcdiscoverycapem_go">
 <a href="#state_oidcdiscoverycapem_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
@@ -1388,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcdiscoveryurl_go">
 <a href="#state_oidcdiscoveryurl_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Discovery<wbr>Url</a>
@@ -1398,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1408,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerconfig_go">
 <a href="#state_providerconfig_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
@@ -1418,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_go">
 <a href="#state_tune_go" style="color: inherit; text-decoration: inherit;">Tune</a>
@@ -1427,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1437,13 +1328,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_nodejs">
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1452,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundissuer_nodejs">
 <a href="#state_boundissuer_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Issuer</a>
@@ -1462,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrole_nodejs">
 <a href="#state_defaultrole_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Role</a>
@@ -1472,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1482,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwkscapem_nodejs">
 <a href="#state_jwkscapem_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Ca<wbr>Pem</a>
@@ -1492,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwksurl_nodejs">
 <a href="#state_jwksurl_nodejs" style="color: inherit; text-decoration: inherit;">jwks<wbr>Url</a>
@@ -1502,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtsupportedalgs_nodejs">
 <a href="#state_jwtsupportedalgs_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Supported<wbr>Algs</a>
@@ -1512,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwtvalidationpubkeys_nodejs">
 <a href="#state_jwtvalidationpubkeys_nodejs" style="color: inherit; text-decoration: inherit;">jwt<wbr>Validation<wbr>Pubkeys</a>
@@ -1522,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientid_nodejs">
 <a href="#state_oidcclientid_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Id</a>
@@ -1532,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcclientsecret_nodejs">
 <a href="#state_oidcclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Client<wbr>Secret</a>
@@ -1542,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcdiscoverycapem_nodejs">
 <a href="#state_oidcdiscoverycapem_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Ca<wbr>Pem</a>
@@ -1552,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcdiscoveryurl_nodejs">
 <a href="#state_oidcdiscoveryurl_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Discovery<wbr>Url</a>
@@ -1562,8 +1440,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1572,8 +1449,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerconfig_nodejs">
 <a href="#state_providerconfig_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Config</a>
@@ -1582,8 +1458,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_nodejs">
 <a href="#state_tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
@@ -1591,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1601,13 +1475,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessor_python">
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
@@ -1616,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bound_issuer_python">
 <a href="#state_bound_issuer_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>issuer</a>
@@ -1626,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value against which to match the iss claim in a JWT
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_role_python">
 <a href="#state_default_role_python" style="color: inherit; text-decoration: inherit;">default_<wbr>role</a>
@@ -1636,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default role to use if none is provided during login
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1646,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwks_ca_pem_python">
 <a href="#state_jwks_ca_pem_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>ca_<wbr>pem</a>
@@ -1656,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwks_url_python">
 <a href="#state_jwks_url_python" style="color: inherit; text-decoration: inherit;">jwks_<wbr>url</a>
@@ -1666,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwt_supported_algs_python">
 <a href="#state_jwt_supported_algs_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>supported_<wbr>algs</a>
@@ -1676,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwt_validation_pubkeys_python">
 <a href="#state_jwt_validation_pubkeys_python" style="color: inherit; text-decoration: inherit;">jwt_<wbr>validation_<wbr>pubkeys</a>
@@ -1686,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with `oidc_discovery_url`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_client_id_python">
 <a href="#state_oidc_client_id_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>id</a>
@@ -1696,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client ID used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_client_secret_python">
 <a href="#state_oidc_client_secret_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>client_<wbr>secret</a>
@@ -1706,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client Secret used for OIDC backends
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_discovery_ca_pem_python">
 <a href="#state_oidc_discovery_ca_pem_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>ca_<wbr>pem</a>
@@ -1716,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_discovery_url_python">
 <a href="#state_oidc_discovery_url_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>discovery_<wbr>url</a>
@@ -1726,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with `jwt_validation_pubkeys`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1736,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_config_python">
 <a href="#state_provider_config_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>config</a>
@@ -1746,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Provider specific handling configuration
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tune_python">
 <a href="#state_tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
@@ -1755,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1765,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of auth backend. Should be one of `jwt` or `oidc`. Default - `jwt`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1781,8 +1637,7 @@ The following state arguments are supported:
 <h4 id="authbackendtune">Auth<wbr>Backend<wbr>Tune</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedresponseheaders_csharp">
 <a href="#allowedresponseheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Response<wbr>Headers</a>
@@ -1792,8 +1647,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditnonhmacrequestkeys_csharp">
 <a href="#auditnonhmacrequestkeys_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</a>
@@ -1803,8 +1657,7 @@ a plugin to include them in the response.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditnonhmacresponsekeys_csharp">
 <a href="#auditnonhmacresponsekeys_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</a>
@@ -1814,8 +1667,7 @@ not be HMAC'd by audit devices in the request data object.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettl_csharp">
 <a href="#defaultleasettl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl</a>
@@ -1826,8 +1678,7 @@ not be HMAC'd by audit devices in the response data object.
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listingvisibility_csharp">
 <a href="#listingvisibility_csharp" style="color: inherit; text-decoration: inherit;">Listing<wbr>Visibility</a>
@@ -1837,8 +1688,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettl_csharp">
 <a href="#maxleasettl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl</a>
@@ -1849,8 +1699,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughrequestheaders_csharp">
 <a href="#passthroughrequestheaders_csharp" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Request<wbr>Headers</a>
@@ -1860,8 +1709,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1871,13 +1719,11 @@ pass from the request to the backend.
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedresponseheaders_go">
 <a href="#allowedresponseheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Response<wbr>Headers</a>
@@ -1887,8 +1733,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditnonhmacrequestkeys_go">
 <a href="#auditnonhmacrequestkeys_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</a>
@@ -1898,8 +1743,7 @@ a plugin to include them in the response.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditnonhmacresponsekeys_go">
 <a href="#auditnonhmacresponsekeys_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</a>
@@ -1909,8 +1753,7 @@ not be HMAC'd by audit devices in the request data object.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettl_go">
 <a href="#defaultleasettl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl</a>
@@ -1921,8 +1764,7 @@ not be HMAC'd by audit devices in the response data object.
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listingvisibility_go">
 <a href="#listingvisibility_go" style="color: inherit; text-decoration: inherit;">Listing<wbr>Visibility</a>
@@ -1932,8 +1774,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettl_go">
 <a href="#maxleasettl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl</a>
@@ -1944,8 +1785,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughrequestheaders_go">
 <a href="#passthroughrequestheaders_go" style="color: inherit; text-decoration: inherit;">Passthrough<wbr>Request<wbr>Headers</a>
@@ -1955,8 +1795,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1966,13 +1805,11 @@ pass from the request to the backend.
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedresponseheaders_nodejs">
 <a href="#allowedresponseheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Response<wbr>Headers</a>
@@ -1982,8 +1819,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditnonhmacrequestkeys_nodejs">
 <a href="#auditnonhmacrequestkeys_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</a>
@@ -1993,8 +1829,7 @@ a plugin to include them in the response.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auditnonhmacresponsekeys_nodejs">
 <a href="#auditnonhmacresponsekeys_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</a>
@@ -2004,8 +1839,7 @@ not be HMAC'd by audit devices in the request data object.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultleasettl_nodejs">
 <a href="#defaultleasettl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl</a>
@@ -2016,8 +1850,7 @@ not be HMAC'd by audit devices in the response data object.
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listingvisibility_nodejs">
 <a href="#listingvisibility_nodejs" style="color: inherit; text-decoration: inherit;">listing<wbr>Visibility</a>
@@ -2027,8 +1860,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxleasettl_nodejs">
 <a href="#maxleasettl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl</a>
@@ -2039,8 +1871,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthroughrequestheaders_nodejs">
 <a href="#passthroughrequestheaders_nodejs" style="color: inherit; text-decoration: inherit;">passthrough<wbr>Request<wbr>Headers</a>
@@ -2050,8 +1881,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -2061,13 +1891,11 @@ pass from the request to the backend.
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_response_headers_python">
 <a href="#allowed_response_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>response_<wbr>headers</a>
@@ -2077,8 +1905,7 @@ the mount. Valid values are "default-service", "default-batch", "service", "batc
     </dt>
     <dd>{{% md %}}List of headers to whitelist and allowing
 a plugin to include them in the response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audit_non_hmac_request_keys_python">
 <a href="#audit_non_hmac_request_keys_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>non_<wbr>hmac_<wbr>request_<wbr>keys</a>
@@ -2088,8 +1915,7 @@ a plugin to include them in the response.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the request data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audit_non_hmac_response_keys_python">
 <a href="#audit_non_hmac_response_keys_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>non_<wbr>hmac_<wbr>response_<wbr>keys</a>
@@ -2099,8 +1925,7 @@ not be HMAC'd by audit devices in the request data object.
     </dt>
     <dd>{{% md %}}Specifies the list of keys that will
 not be HMAC'd by audit devices in the response data object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_lease_ttl_python">
 <a href="#default_lease_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl</a>
@@ -2111,8 +1936,7 @@ not be HMAC'd by audit devices in the response data object.
     <dd>{{% md %}}Specifies the default time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="listing_visibility_python">
 <a href="#listing_visibility_python" style="color: inherit; text-decoration: inherit;">listing_<wbr>visibility</a>
@@ -2122,8 +1946,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_lease_ttl_python">
 <a href="#max_lease_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl</a>
@@ -2134,8 +1957,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
     <dd>{{% md %}}Specifies the maximum time-to-live.
 If set, this overrides the global default.
 Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passthrough_request_headers_python">
 <a href="#passthrough_request_headers_python" style="color: inherit; text-decoration: inherit;">passthrough_<wbr>request_<wbr>headers</a>
@@ -2145,8 +1967,7 @@ Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
     </dt>
     <dd>{{% md %}}List of headers to whitelist and
 pass from the request to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -2156,8 +1977,7 @@ pass from the request to the backend.
     </dt>
     <dd>{{% md %}}Specifies the type of tokens that should be returned by
 the mount. Valid values are "default-service", "default-batch", "service", "batch".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -258,8 +258,7 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachable_csharp">
 <a href="#attachable_csharp" style="color: inherit; text-decoration: inherit;">Attachable</a>
@@ -269,8 +268,7 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkduplicate_csharp">
 <a href="#checkduplicate_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate</a>
@@ -280,8 +278,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driver_csharp">
 <a href="#driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -291,8 +288,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_csharp">
 <a href="#ingress_csharp" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -302,8 +298,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_csharp">
 <a href="#internal_csharp" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -313,8 +308,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamconfigs_csharp">
 <a href="#ipamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Configs</a>
@@ -324,8 +318,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamdriver_csharp">
 <a href="#ipamdriver_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Driver</a>
@@ -335,8 +328,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -346,8 +338,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -356,8 +347,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">List&lt;Network<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -366,8 +356,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -377,13 +366,11 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachable_go">
 <a href="#attachable_go" style="color: inherit; text-decoration: inherit;">Attachable</a>
@@ -393,8 +380,7 @@ the drivers.
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkduplicate_go">
 <a href="#checkduplicate_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate</a>
@@ -404,8 +390,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driver_go">
 <a href="#driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -415,8 +400,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_go">
 <a href="#ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -426,8 +410,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_go">
 <a href="#internal_go" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -437,8 +420,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamconfigs_go">
 <a href="#ipamconfigs_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Configs</a>
@@ -448,8 +430,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamdriver_go">
 <a href="#ipamdriver_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Driver</a>
@@ -459,8 +440,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -470,8 +450,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -480,8 +459,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">[]Network<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -490,8 +468,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -501,13 +478,11 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachable_nodejs">
 <a href="#attachable_nodejs" style="color: inherit; text-decoration: inherit;">attachable</a>
@@ -517,8 +492,7 @@ the drivers.
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkduplicate_nodejs">
 <a href="#checkduplicate_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate</a>
@@ -528,8 +502,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driver_nodejs">
 <a href="#driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -539,8 +512,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_nodejs">
 <a href="#ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -550,8 +522,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_nodejs">
 <a href="#internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -561,8 +532,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamconfigs_nodejs">
 <a href="#ipamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Configs</a>
@@ -572,8 +542,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamdriver_nodejs">
 <a href="#ipamdriver_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Driver</a>
@@ -583,8 +552,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -594,8 +562,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -604,8 +571,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">Network<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -614,8 +580,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -625,13 +590,11 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachable_python">
 <a href="#attachable_python" style="color: inherit; text-decoration: inherit;">attachable</a>
@@ -641,8 +604,7 @@ the drivers.
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_duplicate_python">
 <a href="#check_duplicate_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate</a>
@@ -652,8 +614,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="driver_python">
 <a href="#driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -663,8 +624,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_python">
 <a href="#ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -674,8 +634,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internal_python">
 <a href="#internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -685,8 +644,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipam_configs_python">
 <a href="#ipam_configs_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>configs</a>
@@ -696,8 +654,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipam_driver_python">
 <a href="#ipam_driver_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>driver</a>
@@ -707,8 +664,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -718,8 +674,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -728,8 +683,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">Sequence[Network<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -738,8 +692,7 @@ Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -749,8 +702,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -761,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -770,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -779,13 +729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -793,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -802,13 +749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -816,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -825,13 +769,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -839,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -848,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -976,8 +916,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachable_csharp">
 <a href="#state_attachable_csharp" style="color: inherit; text-decoration: inherit;">Attachable</a>
@@ -987,8 +926,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkduplicate_csharp">
 <a href="#state_checkduplicate_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate</a>
@@ -998,8 +936,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_csharp">
 <a href="#state_driver_csharp" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -1009,8 +946,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_csharp">
 <a href="#state_ingress_csharp" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -1020,8 +956,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_csharp">
 <a href="#state_internal_csharp" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -1031,8 +966,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamconfigs_csharp">
 <a href="#state_ipamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Configs</a>
@@ -1042,8 +976,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamdriver_csharp">
 <a href="#state_ipamdriver_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Driver</a>
@@ -1053,8 +986,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_csharp">
 <a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1064,8 +996,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1074,8 +1005,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">List&lt;Network<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1084,8 +1014,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_csharp">
 <a href="#state_options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -1095,8 +1024,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_csharp">
 <a href="#state_scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1104,13 +1032,11 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachable_go">
 <a href="#state_attachable_go" style="color: inherit; text-decoration: inherit;">Attachable</a>
@@ -1120,8 +1046,7 @@ the drivers.
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkduplicate_go">
 <a href="#state_checkduplicate_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Duplicate</a>
@@ -1131,8 +1056,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_go">
 <a href="#state_driver_go" style="color: inherit; text-decoration: inherit;">Driver</a>
@@ -1142,8 +1066,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_go">
 <a href="#state_ingress_go" style="color: inherit; text-decoration: inherit;">Ingress</a>
@@ -1153,8 +1076,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_go">
 <a href="#state_internal_go" style="color: inherit; text-decoration: inherit;">Internal</a>
@@ -1164,8 +1086,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamconfigs_go">
 <a href="#state_ipamconfigs_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Configs</a>
@@ -1175,8 +1096,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamdriver_go">
 <a href="#state_ipamdriver_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Driver</a>
@@ -1186,8 +1106,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_go">
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1197,8 +1116,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1207,8 +1125,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">[]Network<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1217,8 +1134,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_go">
 <a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -1228,8 +1144,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_go">
 <a href="#state_scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1237,13 +1152,11 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachable_nodejs">
 <a href="#state_attachable_nodejs" style="color: inherit; text-decoration: inherit;">attachable</a>
@@ -1253,8 +1166,7 @@ the drivers.
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkduplicate_nodejs">
 <a href="#state_checkduplicate_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Duplicate</a>
@@ -1264,8 +1176,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_nodejs">
 <a href="#state_driver_nodejs" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -1275,8 +1186,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_nodejs">
 <a href="#state_ingress_nodejs" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -1286,8 +1196,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_nodejs">
 <a href="#state_internal_nodejs" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -1297,8 +1206,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamconfigs_nodejs">
 <a href="#state_ipamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Configs</a>
@@ -1308,8 +1216,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamdriver_nodejs">
 <a href="#state_ipamdriver_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Driver</a>
@@ -1319,8 +1226,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_nodejs">
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1330,8 +1236,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1340,8 +1245,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">Network<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1350,8 +1254,7 @@ Defaults to `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_nodejs">
 <a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -1361,8 +1264,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_nodejs">
 <a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1370,13 +1272,11 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachable_python">
 <a href="#state_attachable_python" style="color: inherit; text-decoration: inherit;">attachable</a>
@@ -1386,8 +1286,7 @@ the drivers.
     </dt>
     <dd>{{% md %}}Enable manual container attachment to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_duplicate_python">
 <a href="#state_check_duplicate_python" style="color: inherit; text-decoration: inherit;">check_<wbr>duplicate</a>
@@ -1397,8 +1296,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Requests daemon to check for networks
 with same name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_python">
 <a href="#state_driver_python" style="color: inherit; text-decoration: inherit;">driver</a>
@@ -1408,8 +1306,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Name of the network driver to use. Defaults to
 `bridge` driver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_python">
 <a href="#state_ingress_python" style="color: inherit; text-decoration: inherit;">ingress</a>
@@ -1419,8 +1316,7 @@ with same name.
     </dt>
     <dd>{{% md %}}Create swarm routing-mesh network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_python">
 <a href="#state_internal_python" style="color: inherit; text-decoration: inherit;">internal</a>
@@ -1430,8 +1326,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Restrict external access to the network.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipam_configs_python">
 <a href="#state_ipam_configs_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>configs</a>
@@ -1441,8 +1336,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}See IPAM config below for
 details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipam_driver_python">
 <a href="#state_ipam_driver_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>driver</a>
@@ -1452,8 +1346,7 @@ details.
     </dt>
     <dd>{{% md %}}Driver used by the custom IP scheme of the
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_python">
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1463,8 +1356,7 @@ network.
     </dt>
     <dd>{{% md %}}Enable IPv6 networking.
 Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1473,8 +1365,7 @@ Defaults to `false`.
         <span class="property-type"><a href="#networklabel">Sequence[Network<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See Labels below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1483,8 +1374,7 @@ Defaults to `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Docker network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_python">
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -1494,8 +1384,7 @@ Defaults to `false`.
     </dt>
     <dd>{{% md %}}Network specific options to be used by
 the drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_python">
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1503,8 +1392,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1519,8 +1407,7 @@ the drivers.
 <h4 id="networkipamconfig">Network<wbr>Ipam<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxaddress_csharp">
 <a href="#auxaddress_csharp" style="color: inherit; text-decoration: inherit;">Aux<wbr>Address</a>
@@ -1528,8 +1415,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1537,8 +1423,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprange_csharp">
 <a href="#iprange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -1546,8 +1431,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1555,13 +1439,11 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxaddress_go">
 <a href="#auxaddress_go" style="color: inherit; text-decoration: inherit;">Aux<wbr>Address</a>
@@ -1569,8 +1451,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1578,8 +1459,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprange_go">
 <a href="#iprange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Range</a>
@@ -1587,8 +1467,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1596,13 +1475,11 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxaddress_nodejs">
 <a href="#auxaddress_nodejs" style="color: inherit; text-decoration: inherit;">aux<wbr>Address</a>
@@ -1610,8 +1487,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1619,8 +1495,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprange_nodejs">
 <a href="#iprange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Range</a>
@@ -1628,8 +1503,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1637,13 +1511,11 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aux_address_python">
 <a href="#aux_address_python" style="color: inherit; text-decoration: inherit;">aux_<wbr>address</a>
@@ -1651,8 +1523,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1660,8 +1531,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_range_python">
 <a href="#ip_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>range</a>
@@ -1669,8 +1539,7 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1678,15 +1547,13 @@ the drivers.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networklabel">Network<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1695,8 +1562,7 @@ the drivers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1705,13 +1571,11 @@ the drivers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1720,8 +1584,7 @@ the drivers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1730,13 +1593,11 @@ the drivers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1745,8 +1606,7 @@ the drivers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1755,13 +1615,11 @@ the drivers.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1770,8 +1628,7 @@ the drivers.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the label
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1780,8 +1637,7 @@ the drivers.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the label
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

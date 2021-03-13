@@ -276,8 +276,7 @@ The Source resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -290,8 +289,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -301,8 +299,7 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -311,13 +308,11 @@ lives in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -330,8 +325,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -341,8 +335,7 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -351,13 +344,11 @@ lives in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -370,8 +361,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -381,8 +371,7 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -391,13 +380,11 @@ lives in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -410,8 +397,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -421,8 +407,7 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -431,8 +416,7 @@ lives in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -443,8 +427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -452,8 +435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -462,13 +444,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -476,8 +456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -486,13 +465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -500,8 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -510,13 +486,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -524,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -534,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -662,8 +634,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -672,8 +643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -686,8 +656,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -696,8 +665,7 @@ and underscores, and can be no longer than 32 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_csharp">
 <a href="#state_organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -707,13 +675,11 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -722,8 +688,7 @@ lives in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -736,8 +701,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -746,8 +710,7 @@ and underscores, and can be no longer than 32 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_go">
 <a href="#state_organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -757,13 +720,11 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -772,8 +733,7 @@ lives in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -786,8 +746,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -796,8 +755,7 @@ and underscores, and can be no longer than 32 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_nodejs">
 <a href="#state_organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -807,13 +765,11 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -822,8 +778,7 @@ lives in.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the source (max of 1024 characters).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -836,8 +791,7 @@ amongst its siblings, for example, two sources with the same parent
 can't share the same display name. The display name must start and end
 with a letter or digit, may contain letters, digits, spaces, hyphens,
 and underscores, and can be no longer than 32 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -846,8 +800,7 @@ and underscores, and can be no longer than 32 characters.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_python">
 <a href="#state_organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -857,8 +810,7 @@ and underscores, and can be no longer than 32 characters.
     </dt>
     <dd>{{% md %}}The organization whose Cloud Security Command Center the Source
 lives in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

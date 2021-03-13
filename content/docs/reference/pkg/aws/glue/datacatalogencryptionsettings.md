@@ -295,8 +295,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacatalogencryptionsettingsconfig_csharp">
 <a href="#datacatalogencryptionsettingsconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Config</a>
@@ -305,8 +304,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -315,13 +313,11 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacatalogencryptionsettings_go">
 <a href="#datacatalogencryptionsettings_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a>
@@ -330,8 +326,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -340,13 +335,11 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacatalogencryptionsettings_nodejs">
 <a href="#datacatalogencryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Encryption<wbr>Settings</a>
@@ -355,8 +348,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -365,13 +357,11 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_catalog_encryption_settings_python">
 <a href="#data_catalog_encryption_settings_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>encryption_<wbr>settings</a>
@@ -380,8 +370,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -390,8 +379,7 @@ The DataCatalogEncryptionSettings resource accepts the following [input]({{< rel
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -402,8 +390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -411,13 +398,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -425,13 +410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -439,13 +422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -453,8 +434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,8 +561,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_csharp">
 <a href="#state_catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -591,8 +570,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacatalogencryptionsettingsconfig_csharp">
 <a href="#state_datacatalogencryptionsettingsconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Config</a>
@@ -601,13 +579,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_go">
 <a href="#state_catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -616,8 +592,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacatalogencryptionsettings_go">
 <a href="#state_datacatalogencryptionsettings_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a>
@@ -626,13 +601,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_catalogid_nodejs">
 <a href="#state_catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -641,8 +614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacatalogencryptionsettings_nodejs">
 <a href="#state_datacatalogencryptionsettings_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Encryption<wbr>Settings</a>
@@ -651,13 +623,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_catalog_id_python">
 <a href="#state_catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -666,8 +636,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_catalog_encryption_settings_python">
 <a href="#state_data_catalog_encryption_settings_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>encryption_<wbr>settings</a>
@@ -676,8 +645,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security configuration to set. see Data Catalog Encryption Settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -692,8 +660,7 @@ The following state arguments are supported:
 <h4 id="datacatalogencryptionsettingsdatacatalogencryptionsettings">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionpasswordencryption_csharp">
 <a href="#connectionpasswordencryption_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Password<wbr>Encryption</a>
@@ -702,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionatrest_csharp">
 <a href="#encryptionatrest_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest</a>
@@ -712,13 +678,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionpasswordencryption_go">
 <a href="#connectionpasswordencryption_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Password<wbr>Encryption</a>
@@ -727,8 +691,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionatrest_go">
 <a href="#encryptionatrest_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest</a>
@@ -737,13 +700,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionpasswordencryption_nodejs">
 <a href="#connectionpasswordencryption_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Password<wbr>Encryption</a>
@@ -752,8 +713,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionatrest_nodejs">
 <a href="#encryptionatrest_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rest</a>
@@ -762,13 +722,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_password_encryption_python">
 <a href="#connection_password_encryption_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>password_<wbr>encryption</a>
@@ -777,8 +735,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryption_at_rest_python">
 <a href="#encryption_at_rest_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rest</a>
@@ -787,15 +744,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datacatalogencryptionsettingsdatacatalogencryptionsettingsconnectionpasswordencryption">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Connection<wbr>Password<wbr>Encryption</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="returnconnectionpasswordencrypted_csharp">
 <a href="#returnconnectionpasswordencrypted_csharp" style="color: inherit; text-decoration: inherit;">Return<wbr>Connection<wbr>Password<wbr>Encrypted</a>
@@ -804,8 +759,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awskmskeyid_csharp">
 <a href="#awskmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -814,13 +768,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A KMS key ARN that is used to encrypt the connection password. If connection password protection is enabled, the caller of CreateConnection and UpdateConnection needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="returnconnectionpasswordencrypted_go">
 <a href="#returnconnectionpasswordencrypted_go" style="color: inherit; text-decoration: inherit;">Return<wbr>Connection<wbr>Password<wbr>Encrypted</a>
@@ -829,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awskmskeyid_go">
 <a href="#awskmskeyid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -839,13 +790,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A KMS key ARN that is used to encrypt the connection password. If connection password protection is enabled, the caller of CreateConnection and UpdateConnection needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="returnconnectionpasswordencrypted_nodejs">
 <a href="#returnconnectionpasswordencrypted_nodejs" style="color: inherit; text-decoration: inherit;">return<wbr>Connection<wbr>Password<wbr>Encrypted</a>
@@ -854,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awskmskeyid_nodejs">
 <a href="#awskmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -864,13 +812,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A KMS key ARN that is used to encrypt the connection password. If connection password protection is enabled, the caller of CreateConnection and UpdateConnection needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="return_connection_password_encrypted_python">
 <a href="#return_connection_password_encrypted_python" style="color: inherit; text-decoration: inherit;">return_<wbr>connection_<wbr>password_<wbr>encrypted</a>
@@ -879,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to `true`, passwords remain encrypted in the responses of GetConnection and GetConnections. This encryption takes effect independently of the catalog encryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_kms_key_id_python">
 <a href="#aws_kms_key_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms_<wbr>key_<wbr>id</a>
@@ -889,15 +834,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A KMS key ARN that is used to encrypt the connection password. If connection password protection is enabled, the caller of CreateConnection and UpdateConnection needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datacatalogencryptionsettingsdatacatalogencryptionsettingsencryptionatrest">Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Data<wbr>Catalog<wbr>Encryption<wbr>Settings<wbr>Encryption<wbr>At<wbr>Rest</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogencryptionmode_csharp">
 <a href="#catalogencryptionmode_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Encryption<wbr>Mode</a>
@@ -906,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sseawskmskeyid_csharp">
 <a href="#sseawskmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Sse<wbr>Aws<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -916,13 +858,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS KMS key to use for encryption at rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogencryptionmode_go">
 <a href="#catalogencryptionmode_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Encryption<wbr>Mode</a>
@@ -931,8 +871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sseawskmskeyid_go">
 <a href="#sseawskmskeyid_go" style="color: inherit; text-decoration: inherit;">Sse<wbr>Aws<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -941,13 +880,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS KMS key to use for encryption at rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogencryptionmode_nodejs">
 <a href="#catalogencryptionmode_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Encryption<wbr>Mode</a>
@@ -956,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sseawskmskeyid_nodejs">
 <a href="#sseawskmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">sse<wbr>Aws<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -966,13 +902,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS KMS key to use for encryption at rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_encryption_mode_python">
 <a href="#catalog_encryption_mode_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>encryption_<wbr>mode</a>
@@ -981,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sse_aws_kms_key_id_python">
 <a href="#sse_aws_kms_key_id_python" style="color: inherit; text-decoration: inherit;">sse_<wbr>aws_<wbr>kms_<wbr>key_<wbr>id</a>
@@ -991,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS KMS key to use for encryption at rest.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

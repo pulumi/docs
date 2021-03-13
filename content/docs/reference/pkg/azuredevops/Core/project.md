@@ -21,11 +21,17 @@ Manages a project within Azure DevOps.
 - **Project & Team**: Read, Write, & Manage
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -51,14 +57,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,9 +91,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -100,9 +112,12 @@ project = azuredevops.Project("project",
     work_item_template="Agile")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,9 +135,16 @@ const project = new azuredevops.Project("project", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Project Resource {#create}
@@ -147,9 +169,7 @@ const project = new azuredevops.Project("project", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +177,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +185,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +193,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -206,9 +219,7 @@ const project = new azuredevops.Project("project", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -216,9 +227,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -226,9 +235,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -236,9 +243,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -246,18 +251,13 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -265,9 +265,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,9 +273,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -285,10 +281,7 @@ const project = new azuredevops.Project("project", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -303,9 +296,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -314,8 +305,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -325,8 +315,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -335,8 +324,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioncontrol_csharp">
 <a href="#versioncontrol_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Control</a>
@@ -345,8 +333,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -355,8 +342,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workitemtemplate_csharp">
 <a href="#workitemtemplate_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Item<wbr>Template</a>
@@ -365,14 +351,11 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -381,8 +364,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -392,8 +374,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -402,8 +383,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioncontrol_go">
 <a href="#versioncontrol_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Control</a>
@@ -412,8 +392,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -422,8 +401,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workitemtemplate_go">
 <a href="#workitemtemplate_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Item<wbr>Template</a>
@@ -432,14 +410,11 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -448,8 +423,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -459,8 +433,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -469,8 +442,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioncontrol_nodejs">
 <a href="#versioncontrol_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Control</a>
@@ -479,8 +451,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -489,8 +460,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workitemtemplate_nodejs">
 <a href="#workitemtemplate_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Item<wbr>Template</a>
@@ -499,14 +469,11 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -515,8 +482,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -526,8 +492,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -536,8 +501,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_control_python">
 <a href="#version_control_python" style="color: inherit; text-decoration: inherit;">version_<wbr>control</a>
@@ -546,8 +510,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -556,8 +519,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="work_item_template_python">
 <a href="#work_item_template_python" style="color: inherit; text-decoration: inherit;">work_<wbr>item_<wbr>template</a>
@@ -566,8 +528,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -578,9 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processtemplateid_csharp">
 <a href="#processtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Template<wbr>Id</a>
@@ -598,14 +556,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -613,8 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processtemplateid_go">
 <a href="#processtemplateid_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Template<wbr>Id</a>
@@ -623,14 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -638,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processtemplateid_nodejs">
 <a href="#processtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Template<wbr>Id</a>
@@ -648,14 +598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -663,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="process_template_id_python">
 <a href="#process_template_id_python" style="color: inherit; text-decoration: inherit;">process_<wbr>template_<wbr>id</a>
@@ -673,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,9 +746,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -812,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_csharp">
 <a href="#state_features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -823,8 +765,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -833,8 +774,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processtemplateid_csharp">
 <a href="#state_processtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Template<wbr>Id</a>
@@ -843,8 +783,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioncontrol_csharp">
 <a href="#state_versioncontrol_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Control</a>
@@ -853,8 +792,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_csharp">
 <a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -863,8 +801,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workitemtemplate_csharp">
 <a href="#state_workitemtemplate_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Item<wbr>Template</a>
@@ -873,14 +810,11 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -889,8 +823,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_go">
 <a href="#state_features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -900,8 +833,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -910,8 +842,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processtemplateid_go">
 <a href="#state_processtemplateid_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Template<wbr>Id</a>
@@ -920,8 +851,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioncontrol_go">
 <a href="#state_versioncontrol_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Control</a>
@@ -930,8 +860,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_go">
 <a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -940,8 +869,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workitemtemplate_go">
 <a href="#state_workitemtemplate_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Item<wbr>Template</a>
@@ -950,14 +878,11 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -966,8 +891,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_nodejs">
 <a href="#state_features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -977,8 +901,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -987,8 +910,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processtemplateid_nodejs">
 <a href="#state_processtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Template<wbr>Id</a>
@@ -997,8 +919,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioncontrol_nodejs">
 <a href="#state_versioncontrol_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Control</a>
@@ -1007,8 +928,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_nodejs">
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1017,8 +937,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workitemtemplate_nodejs">
 <a href="#state_workitemtemplate_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Item<wbr>Template</a>
@@ -1027,14 +946,11 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1043,8 +959,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Description of the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_python">
 <a href="#state_features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -1054,8 +969,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
     </dt>
     <dd>{{% md %}}Defines the status (`enabled`, `disabled`) of the project features.  
 Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1064,8 +978,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Project Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_process_template_id_python">
 <a href="#state_process_template_id_python" style="color: inherit; text-decoration: inherit;">process_<wbr>template_<wbr>id</a>
@@ -1074,8 +987,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Process Template ID used by the Project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_control_python">
 <a href="#state_version_control_python" style="color: inherit; text-decoration: inherit;">version_<wbr>control</a>
@@ -1084,8 +996,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version control system. Valid values: `Git` or `Tfvc`. Defaults to `Git`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_python">
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1094,8 +1005,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the visibility of the Project. Valid values: `private` or `public`. Defaults to `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_work_item_template_python">
 <a href="#state_work_item_template_python" style="color: inherit; text-decoration: inherit;">work_<wbr>item_<wbr>template</a>
@@ -1104,8 +1014,7 @@ Valid features `boards`, `repositories`, `pipelines`, `testplans`, `artifacts`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the work item template. Defaults to `Agile`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

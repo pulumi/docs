@@ -289,8 +289,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -300,8 +299,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_csharp">
 <a href="#charset_csharp" style="color: inherit; text-decoration: inherit;">Charset</a>
@@ -314,8 +312,7 @@ ID.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_csharp">
 <a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -328,8 +325,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -339,8 +335,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -350,13 +345,11 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -366,8 +359,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_go">
 <a href="#charset_go" style="color: inherit; text-decoration: inherit;">Charset</a>
@@ -380,8 +372,7 @@ ID.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_go">
 <a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -394,8 +385,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -405,8 +395,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -416,13 +405,11 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -432,8 +419,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_nodejs">
 <a href="#charset_nodejs" style="color: inherit; text-decoration: inherit;">charset</a>
@@ -446,8 +432,7 @@ ID.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_nodejs">
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -460,8 +445,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -471,8 +455,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -482,13 +465,11 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -498,8 +479,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_python">
 <a href="#charset_python" style="color: inherit; text-decoration: inherit;">charset</a>
@@ -512,8 +492,7 @@ ID.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_python">
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -526,8 +505,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -537,8 +515,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -548,8 +525,7 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -560,8 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -569,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -579,13 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -593,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -603,13 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -617,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -627,13 +595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -641,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -651,8 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -779,8 +743,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_charset_csharp">
 <a href="#state_charset_csharp" style="color: inherit; text-decoration: inherit;">Charset</a>
@@ -793,8 +756,7 @@ The following state arguments are supported:
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_collation_csharp">
 <a href="#state_collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -807,8 +769,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -818,8 +779,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -829,8 +789,7 @@ ID.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -840,8 +799,7 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -850,13 +808,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_charset_go">
 <a href="#state_charset_go" style="color: inherit; text-decoration: inherit;">Charset</a>
@@ -869,8 +825,7 @@ If it is not provided, the provider project is used.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_collation_go">
 <a href="#state_collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -883,8 +838,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -894,8 +848,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -905,8 +858,7 @@ ID.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -916,8 +868,7 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -926,13 +877,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_charset_nodejs">
 <a href="#state_charset_nodejs" style="color: inherit; text-decoration: inherit;">charset</a>
@@ -945,8 +894,7 @@ If it is not provided, the provider project is used.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_collation_nodejs">
 <a href="#state_collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -959,8 +907,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -970,8 +917,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -981,8 +927,7 @@ ID.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -992,8 +937,7 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1002,13 +946,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_charset_python">
 <a href="#state_charset_python" style="color: inherit; text-decoration: inherit;">charset</a>
@@ -1021,8 +963,7 @@ If it is not provided, the provider project is used.
 and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html)
 for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_collation_python">
 <a href="#state_collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -1035,8 +976,7 @@ a value of `UTF8` at creation time.
 and Postgres' [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1046,8 +986,7 @@ a value of `en_US.UTF8` at creation time.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. This does not include the project
 ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1057,8 +996,7 @@ ID.
     </dt>
     <dd>{{% md %}}The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1068,8 +1006,7 @@ This does not include the project ID or instance name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1078,8 +1015,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

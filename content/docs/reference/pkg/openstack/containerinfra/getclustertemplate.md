@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -156,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -168,13 +166,11 @@ The following arguments are supported:
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -183,8 +179,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -195,13 +190,11 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -210,8 +203,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -222,13 +214,11 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -237,8 +227,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -249,8 +238,7 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The region in which to obtain the V1 Container Infra
 client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -263,8 +251,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiserverport_csharp">
 <a href="#apiserverport_csharp" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Port</a>
@@ -274,8 +261,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The API server port for the Container Orchestration
 Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterdistro_csharp">
 <a href="#clusterdistro_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Distro</a>
@@ -284,8 +270,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distro for the cluster (fedora-atomic, coreos, etc.).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coe_csharp">
 <a href="#coe_csharp" style="color: inherit; text-decoration: inherit;">Coe</a>
@@ -294,8 +279,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container Orchestration Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -304,8 +288,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsnameserver_csharp">
 <a href="#dnsnameserver_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameserver</a>
@@ -315,8 +298,7 @@ Engine for this cluster template.
     </dt>
     <dd>{{% md %}}Address of the DNS nameserver that is used in nodes of the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockerstoragedriver_csharp">
 <a href="#dockerstoragedriver_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Storage<wbr>Driver</a>
@@ -326,8 +308,7 @@ cluster.
     </dt>
     <dd>{{% md %}}Docker storage driver. Changing this updates the
 Docker storage driver of the existing cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockervolumesize_csharp">
 <a href="#dockervolumesize_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Size</a>
@@ -336,8 +317,7 @@ Docker storage driver of the existing cluster template.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalnetworkid_csharp">
 <a href="#externalnetworkid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
@@ -347,8 +327,7 @@ Docker storage driver of the existing cluster template.
     </dt>
     <dd>{{% md %}}The ID of the external network that will be used for
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixednetwork_csharp">
 <a href="#fixednetwork_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Network</a>
@@ -357,8 +336,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed network that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedsubnet_csharp">
 <a href="#fixedsubnet_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Subnet</a>
@@ -367,8 +345,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}=The fixed subnet that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_csharp">
 <a href="#flavor_csharp" style="color: inherit; text-decoration: inherit;">Flavor</a>
@@ -377,8 +354,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floatingipenabled_csharp">
 <a href="#floatingipenabled_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
@@ -388,8 +364,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should create IP
 floating IP for every node or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpproxy_csharp">
 <a href="#httpproxy_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
@@ -399,8 +374,7 @@ floating IP for every node or not.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTP requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpsproxy_csharp">
 <a href="#httpsproxy_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
@@ -410,8 +384,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTPS requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -420,8 +393,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -430,8 +402,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to an image that is used for nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="insecureregistry_csharp">
 <a href="#insecureregistry_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Registry</a>
@@ -440,8 +411,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The insecure registry URL for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypairid_csharp">
 <a href="#keypairid_csharp" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Id</a>
@@ -450,8 +420,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -461,8 +430,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties
 of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterflavor_csharp">
 <a href="#masterflavor_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Flavor</a>
@@ -471,8 +439,7 @@ of the cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterlbenabled_csharp">
 <a href="#masterlbenabled_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Lb<wbr>Enabled</a>
@@ -482,8 +449,7 @@ of the cluster template.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should has a
 loadbalancer for master nodes or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -492,8 +458,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkdriver_csharp">
 <a href="#networkdriver_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Driver</a>
@@ -502,8 +467,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver for the container network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noproxy_csharp">
 <a href="#noproxy_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
@@ -513,8 +477,7 @@ loadbalancer for master nodes or not.
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses that shouldn't be used in
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -523,8 +486,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -533,8 +495,7 @@ the cluster.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether cluster template should be public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -543,8 +504,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registryenabled_csharp">
 <a href="#registryenabled_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Enabled</a>
@@ -554,8 +514,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether Docker registry is enabled in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servertype_csharp">
 <a href="#servertype_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
@@ -564,8 +523,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server type for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsdisabled_csharp">
 <a href="#tlsdisabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Disabled</a>
@@ -574,8 +532,7 @@ cluster.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the TLS should be disabled in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -584,8 +541,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -594,8 +550,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumedriver_csharp">
 <a href="#volumedriver_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Driver</a>
@@ -605,13 +560,11 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the driver that is used for the volumes of the
 cluster nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiserverport_go">
 <a href="#apiserverport_go" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Port</a>
@@ -621,8 +574,7 @@ cluster nodes.
     </dt>
     <dd>{{% md %}}The API server port for the Container Orchestration
 Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterdistro_go">
 <a href="#clusterdistro_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Distro</a>
@@ -631,8 +583,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distro for the cluster (fedora-atomic, coreos, etc.).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coe_go">
 <a href="#coe_go" style="color: inherit; text-decoration: inherit;">Coe</a>
@@ -641,8 +592,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container Orchestration Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -651,8 +601,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsnameserver_go">
 <a href="#dnsnameserver_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Nameserver</a>
@@ -662,8 +611,7 @@ Engine for this cluster template.
     </dt>
     <dd>{{% md %}}Address of the DNS nameserver that is used in nodes of the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockerstoragedriver_go">
 <a href="#dockerstoragedriver_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Storage<wbr>Driver</a>
@@ -673,8 +621,7 @@ cluster.
     </dt>
     <dd>{{% md %}}Docker storage driver. Changing this updates the
 Docker storage driver of the existing cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockervolumesize_go">
 <a href="#dockervolumesize_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Volume<wbr>Size</a>
@@ -683,8 +630,7 @@ Docker storage driver of the existing cluster template.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalnetworkid_go">
 <a href="#externalnetworkid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Network<wbr>Id</a>
@@ -694,8 +640,7 @@ Docker storage driver of the existing cluster template.
     </dt>
     <dd>{{% md %}}The ID of the external network that will be used for
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixednetwork_go">
 <a href="#fixednetwork_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Network</a>
@@ -704,8 +649,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed network that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedsubnet_go">
 <a href="#fixedsubnet_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Subnet</a>
@@ -714,8 +658,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}=The fixed subnet that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_go">
 <a href="#flavor_go" style="color: inherit; text-decoration: inherit;">Flavor</a>
@@ -724,8 +667,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floatingipenabled_go">
 <a href="#floatingipenabled_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip<wbr>Enabled</a>
@@ -735,8 +677,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should create IP
 floating IP for every node or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpproxy_go">
 <a href="#httpproxy_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Proxy</a>
@@ -746,8 +687,7 @@ floating IP for every node or not.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTP requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpsproxy_go">
 <a href="#httpsproxy_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Proxy</a>
@@ -757,8 +697,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTPS requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -767,8 +706,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -777,8 +715,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to an image that is used for nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="insecureregistry_go">
 <a href="#insecureregistry_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Registry</a>
@@ -787,8 +724,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The insecure registry URL for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypairid_go">
 <a href="#keypairid_go" style="color: inherit; text-decoration: inherit;">Keypair<wbr>Id</a>
@@ -797,8 +733,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -808,8 +743,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties
 of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterflavor_go">
 <a href="#masterflavor_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Flavor</a>
@@ -818,8 +752,7 @@ of the cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterlbenabled_go">
 <a href="#masterlbenabled_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Lb<wbr>Enabled</a>
@@ -829,8 +762,7 @@ of the cluster template.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should has a
 loadbalancer for master nodes or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -839,8 +771,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkdriver_go">
 <a href="#networkdriver_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Driver</a>
@@ -849,8 +780,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver for the container network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noproxy_go">
 <a href="#noproxy_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy</a>
@@ -860,8 +790,7 @@ loadbalancer for master nodes or not.
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses that shouldn't be used in
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -870,8 +799,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -880,8 +808,7 @@ the cluster.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether cluster template should be public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -890,8 +817,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registryenabled_go">
 <a href="#registryenabled_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Enabled</a>
@@ -901,8 +827,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether Docker registry is enabled in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servertype_go">
 <a href="#servertype_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Type</a>
@@ -911,8 +836,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server type for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsdisabled_go">
 <a href="#tlsdisabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Disabled</a>
@@ -921,8 +845,7 @@ cluster.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the TLS should be disabled in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -931,8 +854,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -941,8 +863,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumedriver_go">
 <a href="#volumedriver_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Driver</a>
@@ -952,13 +873,11 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the driver that is used for the volumes of the
 cluster nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiserverport_nodejs">
 <a href="#apiserverport_nodejs" style="color: inherit; text-decoration: inherit;">apiserver<wbr>Port</a>
@@ -968,8 +887,7 @@ cluster nodes.
     </dt>
     <dd>{{% md %}}The API server port for the Container Orchestration
 Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusterdistro_nodejs">
 <a href="#clusterdistro_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Distro</a>
@@ -978,8 +896,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distro for the cluster (fedora-atomic, coreos, etc.).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coe_nodejs">
 <a href="#coe_nodejs" style="color: inherit; text-decoration: inherit;">coe</a>
@@ -988,8 +905,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Container Orchestration Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -998,8 +914,7 @@ Engine for this cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsnameserver_nodejs">
 <a href="#dnsnameserver_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Nameserver</a>
@@ -1009,8 +924,7 @@ Engine for this cluster template.
     </dt>
     <dd>{{% md %}}Address of the DNS nameserver that is used in nodes of the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockerstoragedriver_nodejs">
 <a href="#dockerstoragedriver_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Storage<wbr>Driver</a>
@@ -1020,8 +934,7 @@ cluster.
     </dt>
     <dd>{{% md %}}Docker storage driver. Changing this updates the
 Docker storage driver of the existing cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockervolumesize_nodejs">
 <a href="#dockervolumesize_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Volume<wbr>Size</a>
@@ -1030,8 +943,7 @@ Docker storage driver of the existing cluster template.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalnetworkid_nodejs">
 <a href="#externalnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Network<wbr>Id</a>
@@ -1041,8 +953,7 @@ Docker storage driver of the existing cluster template.
     </dt>
     <dd>{{% md %}}The ID of the external network that will be used for
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixednetwork_nodejs">
 <a href="#fixednetwork_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Network</a>
@@ -1051,8 +962,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fixed network that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixedsubnet_nodejs">
 <a href="#fixedsubnet_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Subnet</a>
@@ -1061,8 +971,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}=The fixed subnet that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_nodejs">
 <a href="#flavor_nodejs" style="color: inherit; text-decoration: inherit;">flavor</a>
@@ -1071,8 +980,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floatingipenabled_nodejs">
 <a href="#floatingipenabled_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip<wbr>Enabled</a>
@@ -1082,8 +990,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should create IP
 floating IP for every node or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpproxy_nodejs">
 <a href="#httpproxy_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Proxy</a>
@@ -1093,8 +1000,7 @@ floating IP for every node or not.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTP requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpsproxy_nodejs">
 <a href="#httpsproxy_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Proxy</a>
@@ -1104,8 +1010,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTPS requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1114,8 +1019,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1124,8 +1028,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reference to an image that is used for nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="insecureregistry_nodejs">
 <a href="#insecureregistry_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Registry</a>
@@ -1134,8 +1037,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The insecure registry URL for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypairid_nodejs">
 <a href="#keypairid_nodejs" style="color: inherit; text-decoration: inherit;">keypair<wbr>Id</a>
@@ -1144,8 +1046,7 @@ relay them.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1155,8 +1056,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties
 of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterflavor_nodejs">
 <a href="#masterflavor_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Flavor</a>
@@ -1165,8 +1065,7 @@ of the cluster template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterlbenabled_nodejs">
 <a href="#masterlbenabled_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Lb<wbr>Enabled</a>
@@ -1176,8 +1075,7 @@ of the cluster template.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should has a
 loadbalancer for master nodes or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1186,8 +1084,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkdriver_nodejs">
 <a href="#networkdriver_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Driver</a>
@@ -1196,8 +1093,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver for the container network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="noproxy_nodejs">
 <a href="#noproxy_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy</a>
@@ -1207,8 +1103,7 @@ loadbalancer for master nodes or not.
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses that shouldn't be used in
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1217,8 +1112,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1227,8 +1121,7 @@ the cluster.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether cluster template should be public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1237,8 +1130,7 @@ the cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registryenabled_nodejs">
 <a href="#registryenabled_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Enabled</a>
@@ -1248,8 +1140,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether Docker registry is enabled in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servertype_nodejs">
 <a href="#servertype_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Type</a>
@@ -1258,8 +1149,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server type for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsdisabled_nodejs">
 <a href="#tlsdisabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Disabled</a>
@@ -1268,8 +1158,7 @@ cluster.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the TLS should be disabled in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1278,8 +1167,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -1288,8 +1176,7 @@ cluster.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumedriver_nodejs">
 <a href="#volumedriver_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Driver</a>
@@ -1299,13 +1186,11 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the driver that is used for the volumes of the
 cluster nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apiserver_port_python">
 <a href="#apiserver_port_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>port</a>
@@ -1315,8 +1200,7 @@ cluster nodes.
     </dt>
     <dd>{{% md %}}The API server port for the Container Orchestration
 Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_distro_python">
 <a href="#cluster_distro_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>distro</a>
@@ -1325,8 +1209,7 @@ Engine for this cluster template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The distro for the cluster (fedora-atomic, coreos, etc.).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="coe_python">
 <a href="#coe_python" style="color: inherit; text-decoration: inherit;">coe</a>
@@ -1335,8 +1218,7 @@ Engine for this cluster template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Container Orchestration Engine for this cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1345,8 +1227,7 @@ Engine for this cluster template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_nameserver_python">
 <a href="#dns_nameserver_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>nameserver</a>
@@ -1356,8 +1237,7 @@ Engine for this cluster template.
     </dt>
     <dd>{{% md %}}Address of the DNS nameserver that is used in nodes of the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="docker_storage_driver_python">
 <a href="#docker_storage_driver_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>storage_<wbr>driver</a>
@@ -1367,8 +1247,7 @@ cluster.
     </dt>
     <dd>{{% md %}}Docker storage driver. Changing this updates the
 Docker storage driver of the existing cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="docker_volume_size_python">
 <a href="#docker_volume_size_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>volume_<wbr>size</a>
@@ -1377,8 +1256,7 @@ Docker storage driver of the existing cluster template.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size (in GB) of the Docker volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="external_network_id_python">
 <a href="#external_network_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>network_<wbr>id</a>
@@ -1388,8 +1266,7 @@ Docker storage driver of the existing cluster template.
     </dt>
     <dd>{{% md %}}The ID of the external network that will be used for
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixed_network_python">
 <a href="#fixed_network_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>network</a>
@@ -1398,8 +1275,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fixed network that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fixed_subnet_python">
 <a href="#fixed_subnet_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>subnet</a>
@@ -1408,8 +1284,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}=The fixed subnet that will be attached to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flavor_python">
 <a href="#flavor_python" style="color: inherit; text-decoration: inherit;">flavor</a>
@@ -1418,8 +1293,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flavor for the nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="floating_ip_enabled_python">
 <a href="#floating_ip_enabled_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip_<wbr>enabled</a>
@@ -1429,8 +1303,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should create IP
 floating IP for every node or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_proxy_python">
 <a href="#http_proxy_python" style="color: inherit; text-decoration: inherit;">http_<wbr>proxy</a>
@@ -1440,8 +1313,7 @@ floating IP for every node or not.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTP requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="https_proxy_python">
 <a href="#https_proxy_python" style="color: inherit; text-decoration: inherit;">https_<wbr>proxy</a>
@@ -1451,8 +1323,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The address of a proxy for receiving all HTTPS requests and
 relay them.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1461,8 +1332,7 @@ relay them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1471,8 +1341,7 @@ relay them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reference to an image that is used for nodes of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="insecure_registry_python">
 <a href="#insecure_registry_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>registry</a>
@@ -1481,8 +1350,7 @@ relay them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The insecure registry URL for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keypair_id_python">
 <a href="#keypair_id_python" style="color: inherit; text-decoration: inherit;">keypair_<wbr>id</a>
@@ -1491,8 +1359,7 @@ relay them.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Compute service SSH keypair.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1502,8 +1369,7 @@ relay them.
     </dt>
     <dd>{{% md %}}The list of key value pairs representing additional properties
 of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_flavor_python">
 <a href="#master_flavor_python" style="color: inherit; text-decoration: inherit;">master_<wbr>flavor</a>
@@ -1512,8 +1378,7 @@ of the cluster template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flavor for the master nodes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_lb_enabled_python">
 <a href="#master_lb_enabled_python" style="color: inherit; text-decoration: inherit;">master_<wbr>lb_<wbr>enabled</a>
@@ -1523,8 +1388,7 @@ of the cluster template.
     </dt>
     <dd>{{% md %}}Indicates whether created cluster should has a
 loadbalancer for master nodes or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1533,8 +1397,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_driver_python">
 <a href="#network_driver_python" style="color: inherit; text-decoration: inherit;">network_<wbr>driver</a>
@@ -1543,8 +1406,7 @@ loadbalancer for master nodes or not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver for the container network.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="no_proxy_python">
 <a href="#no_proxy_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy</a>
@@ -1554,8 +1416,7 @@ loadbalancer for master nodes or not.
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses that shouldn't be used in
 the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1564,8 +1425,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1574,8 +1434,7 @@ the cluster.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether cluster template should be public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1584,8 +1443,7 @@ the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="registry_enabled_python">
 <a href="#registry_enabled_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>enabled</a>
@@ -1595,8 +1453,7 @@ the cluster.
     </dt>
     <dd>{{% md %}}Indicates whether Docker registry is enabled in the
 cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_type_python">
 <a href="#server_type_python" style="color: inherit; text-decoration: inherit;">server_<wbr>type</a>
@@ -1605,8 +1462,7 @@ cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server type for the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_disabled_python">
 <a href="#tls_disabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>disabled</a>
@@ -1615,8 +1471,7 @@ cluster.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the TLS should be disabled in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1625,8 +1480,7 @@ cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which cluster template was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -1635,8 +1489,7 @@ cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user of the cluster template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_driver_python">
 <a href="#volume_driver_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>driver</a>
@@ -1646,8 +1499,7 @@ cluster.
     </dt>
     <dd>{{% md %}}The name of the driver that is used for the volumes of the
 cluster nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

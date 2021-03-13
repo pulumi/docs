@@ -326,8 +326,7 @@ The QuoteSetV3 resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -337,8 +336,7 @@ The QuoteSetV3 resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupgigabytes_csharp">
 <a href="#backupgigabytes_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Gigabytes</a>
@@ -348,8 +346,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_csharp">
 <a href="#backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -359,8 +356,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gigabytes_csharp">
 <a href="#gigabytes_csharp" style="color: inherit; text-decoration: inherit;">Gigabytes</a>
@@ -370,8 +366,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -381,8 +376,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pervolumegigabytes_csharp">
 <a href="#pervolumegigabytes_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Volume<wbr>Gigabytes</a>
@@ -392,8 +386,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -404,8 +397,7 @@ Changing this updates the existing quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_csharp">
 <a href="#snapshots_csharp" style="color: inherit; text-decoration: inherit;">Snapshots</a>
@@ -415,8 +407,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetypequota_csharp">
 <a href="#volumetypequota_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
@@ -427,8 +418,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -438,13 +428,11 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -454,8 +442,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupgigabytes_go">
 <a href="#backupgigabytes_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Gigabytes</a>
@@ -465,8 +452,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_go">
 <a href="#backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -476,8 +462,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gigabytes_go">
 <a href="#gigabytes_go" style="color: inherit; text-decoration: inherit;">Gigabytes</a>
@@ -487,8 +472,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -498,8 +482,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pervolumegigabytes_go">
 <a href="#pervolumegigabytes_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Volume<wbr>Gigabytes</a>
@@ -509,8 +492,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -521,8 +503,7 @@ Changing this updates the existing quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_go">
 <a href="#snapshots_go" style="color: inherit; text-decoration: inherit;">Snapshots</a>
@@ -532,8 +513,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetypequota_go">
 <a href="#volumetypequota_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
@@ -544,8 +524,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_go">
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -555,13 +534,11 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -571,8 +548,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupgigabytes_nodejs">
 <a href="#backupgigabytes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Gigabytes</a>
@@ -582,8 +558,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_nodejs">
 <a href="#backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -593,8 +568,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gigabytes_nodejs">
 <a href="#gigabytes_nodejs" style="color: inherit; text-decoration: inherit;">gigabytes</a>
@@ -604,8 +578,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -615,8 +588,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pervolumegigabytes_nodejs">
 <a href="#pervolumegigabytes_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Volume<wbr>Gigabytes</a>
@@ -626,8 +598,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -638,8 +609,7 @@ Changing this updates the existing quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_nodejs">
 <a href="#snapshots_nodejs" style="color: inherit; text-decoration: inherit;">snapshots</a>
@@ -649,8 +619,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetypequota_nodejs">
 <a href="#volumetypequota_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type<wbr>Quota</a>
@@ -661,8 +630,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -672,13 +640,11 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -688,8 +654,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_gigabytes_python">
 <a href="#backup_gigabytes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>gigabytes</a>
@@ -699,8 +664,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backups_python">
 <a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -710,8 +674,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gigabytes_python">
 <a href="#gigabytes_python" style="color: inherit; text-decoration: inherit;">gigabytes</a>
@@ -721,8 +684,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -732,8 +694,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_volume_gigabytes_python">
 <a href="#per_volume_gigabytes_python" style="color: inherit; text-decoration: inherit;">per_<wbr>volume_<wbr>gigabytes</a>
@@ -743,8 +704,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -755,8 +715,7 @@ Changing this updates the existing quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshots_python">
 <a href="#snapshots_python" style="color: inherit; text-decoration: inherit;">snapshots</a>
@@ -766,8 +725,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_quota_python">
 <a href="#volume_type_quota_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type_<wbr>quota</a>
@@ -778,8 +736,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -789,8 +746,7 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -810,13 +765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -824,13 +777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -838,13 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -852,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -980,8 +928,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backupgigabytes_csharp">
 <a href="#state_backupgigabytes_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Gigabytes</a>
@@ -991,8 +938,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backups_csharp">
 <a href="#state_backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -1002,8 +948,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gigabytes_csharp">
 <a href="#state_gigabytes_csharp" style="color: inherit; text-decoration: inherit;">Gigabytes</a>
@@ -1013,8 +958,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1024,8 +968,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pervolumegigabytes_csharp">
 <a href="#state_pervolumegigabytes_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Volume<wbr>Gigabytes</a>
@@ -1035,8 +978,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1046,8 +988,7 @@ Changing this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1058,8 +999,7 @@ creates a new quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshots_csharp">
 <a href="#state_snapshots_csharp" style="color: inherit; text-decoration: inherit;">Snapshots</a>
@@ -1069,8 +1009,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumetypequota_csharp">
 <a href="#state_volumetypequota_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
@@ -1081,8 +1020,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_csharp">
 <a href="#state_volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -1092,13 +1030,11 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backupgigabytes_go">
 <a href="#state_backupgigabytes_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Gigabytes</a>
@@ -1108,8 +1044,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backups_go">
 <a href="#state_backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -1119,8 +1054,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gigabytes_go">
 <a href="#state_gigabytes_go" style="color: inherit; text-decoration: inherit;">Gigabytes</a>
@@ -1130,8 +1064,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1141,8 +1074,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pervolumegigabytes_go">
 <a href="#state_pervolumegigabytes_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Volume<wbr>Gigabytes</a>
@@ -1152,8 +1084,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1163,8 +1094,7 @@ Changing this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1175,8 +1105,7 @@ creates a new quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshots_go">
 <a href="#state_snapshots_go" style="color: inherit; text-decoration: inherit;">Snapshots</a>
@@ -1186,8 +1115,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumetypequota_go">
 <a href="#state_volumetypequota_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
@@ -1198,8 +1126,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_go">
 <a href="#state_volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -1209,13 +1136,11 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backupgigabytes_nodejs">
 <a href="#state_backupgigabytes_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Gigabytes</a>
@@ -1225,8 +1150,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backups_nodejs">
 <a href="#state_backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -1236,8 +1160,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gigabytes_nodejs">
 <a href="#state_gigabytes_nodejs" style="color: inherit; text-decoration: inherit;">gigabytes</a>
@@ -1247,8 +1170,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1258,8 +1180,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pervolumegigabytes_nodejs">
 <a href="#state_pervolumegigabytes_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Volume<wbr>Gigabytes</a>
@@ -1269,8 +1190,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1280,8 +1200,7 @@ Changing this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1292,8 +1211,7 @@ creates a new quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshots_nodejs">
 <a href="#state_snapshots_nodejs" style="color: inherit; text-decoration: inherit;">snapshots</a>
@@ -1303,8 +1221,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumetypequota_nodejs">
 <a href="#state_volumetypequota_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type<wbr>Quota</a>
@@ -1315,8 +1232,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_nodejs">
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -1326,13 +1242,11 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_gigabytes_python">
 <a href="#state_backup_gigabytes_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>gigabytes</a>
@@ -1342,8 +1256,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backups_python">
 <a href="#state_backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -1353,8 +1266,7 @@ this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gigabytes_python">
 <a href="#state_gigabytes_python" style="color: inherit; text-decoration: inherit;">gigabytes</a>
@@ -1364,8 +1276,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1375,8 +1286,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_per_volume_gigabytes_python">
 <a href="#state_per_volume_gigabytes_python" style="color: inherit; text-decoration: inherit;">per_<wbr>volume_<wbr>gigabytes</a>
@@ -1386,8 +1296,7 @@ existing quotaset.
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1397,8 +1306,7 @@ Changing this updates the existing quotaset.
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1409,8 +1317,7 @@ creates a new quotaset.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshots_python">
 <a href="#state_snapshots_python" style="color: inherit; text-decoration: inherit;">snapshots</a>
@@ -1420,8 +1327,7 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_type_quota_python">
 <a href="#state_volume_type_quota_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type_<wbr>quota</a>
@@ -1432,8 +1338,7 @@ existing quotaset.
     <dd>{{% md %}}Key/Value pairs for setting quota for
 volumes types. Possible keys are `snapshots_<volume_type_name>`,
 `volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumes_python">
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -1443,8 +1348,7 @@ volumes types. Possible keys are `snapshots_<volume_type_name>`,
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

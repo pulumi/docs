@@ -364,8 +364,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_csharp">
 <a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -374,8 +373,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -386,8 +384,7 @@ The GroupMembership resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberkey_csharp">
 <a href="#memberkey_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Key</a>
@@ -396,8 +393,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmemberkey_csharp">
 <a href="#preferredmemberkey_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Key</a>
@@ -407,13 +403,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_go">
 <a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -422,8 +416,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -434,8 +427,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberkey_go">
 <a href="#memberkey_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Key</a>
@@ -444,8 +436,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmemberkey_go">
 <a href="#preferredmemberkey_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Key</a>
@@ -455,13 +446,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_nodejs">
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -470,8 +459,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -482,8 +470,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberkey_nodejs">
 <a href="#memberkey_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Key</a>
@@ -492,8 +479,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredmemberkey_nodejs">
 <a href="#preferredmemberkey_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Member<wbr>Key</a>
@@ -503,13 +489,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_python">
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -518,8 +502,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -530,8 +513,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="member_key_python">
 <a href="#member_key_python" style="color: inherit; text-decoration: inherit;">member_<wbr>key</a>
@@ -540,8 +522,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_member_key_python">
 <a href="#preferred_member_key_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>key</a>
@@ -551,8 +532,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -563,8 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -573,8 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -582,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -593,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -603,8 +579,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -613,13 +588,11 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -628,8 +601,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -637,8 +609,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -648,8 +619,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -658,8 +628,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -668,13 +637,11 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -683,8 +650,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -692,8 +658,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -703,8 +668,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -713,8 +677,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -723,13 +686,11 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -738,8 +699,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -747,8 +707,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -758,8 +717,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -768,8 +726,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -778,8 +735,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -906,8 +862,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -916,8 +871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_csharp">
 <a href="#state_group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -926,8 +880,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberkey_csharp">
 <a href="#state_memberkey_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Key</a>
@@ -936,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -947,8 +899,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmemberkey_csharp">
 <a href="#state_preferredmemberkey_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Key</a>
@@ -958,8 +909,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -970,8 +920,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -980,8 +929,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -990,13 +938,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1005,8 +951,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_go">
 <a href="#state_group_go" style="color: inherit; text-decoration: inherit;">Group</a>
@@ -1015,8 +960,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberkey_go">
 <a href="#state_memberkey_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Key</a>
@@ -1025,8 +969,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1036,8 +979,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmemberkey_go">
 <a href="#state_preferredmemberkey_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Member<wbr>Key</a>
@@ -1047,8 +989,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1059,8 +1000,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1069,8 +1009,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1079,13 +1018,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1094,8 +1031,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_nodejs">
 <a href="#state_group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
@@ -1104,8 +1040,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memberkey_nodejs">
 <a href="#state_memberkey_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Key</a>
@@ -1114,8 +1049,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1125,8 +1059,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferredmemberkey_nodejs">
 <a href="#state_preferredmemberkey_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Member<wbr>Key</a>
@@ -1136,8 +1069,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1148,8 +1080,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1158,8 +1089,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1168,13 +1098,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1183,8 +1111,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_python">
 <a href="#state_group_python" style="color: inherit; text-decoration: inherit;">group</a>
@@ -1193,8 +1120,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Group to create this membership in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_key_python">
 <a href="#state_member_key_python" style="color: inherit; text-decoration: inherit;">member_<wbr>key</a>
@@ -1203,8 +1129,7 @@ Structure is documented below.
         <span class="property-type"><a href="#groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}EntityKey of the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1214,8 +1139,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preferred_member_key_python">
 <a href="#state_preferred_member_key_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>member_<wbr>key</a>
@@ -1225,8 +1149,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}EntityKey of the member.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1237,8 +1160,7 @@ Structure is documented below.
     <dd>{{% md %}}The MembershipRoles that apply to the Membership.
 Must not contain duplicate MembershipRoles with the same name.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1247,8 +1169,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the membership.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1257,8 +1178,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the Membership was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1273,8 +1193,7 @@ Structure is documented below.
 <h4 id="groupmembershipmemberkey">Group<wbr>Membership<wbr>Member<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1288,8 +1207,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1303,13 +1221,11 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1323,8 +1239,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1338,13 +1253,11 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1358,8 +1271,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1373,13 +1285,11 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1393,8 +1303,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1408,15 +1317,13 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="groupmembershippreferredmemberkey">Group<wbr>Membership<wbr>Preferred<wbr>Member<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1430,8 +1337,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1445,13 +1351,11 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1465,8 +1369,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1480,13 +1383,11 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1500,8 +1401,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1515,13 +1415,11 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1535,8 +1433,7 @@ group or user.
 For external-identity-mapped entities, the id must be a string conforming
 to the Identity Source's requirements.
 Must be unique within a namespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1550,15 +1447,13 @@ such as a Google user or a Google Group.
 If specified, the EntityKey represents an external-identity-mapped group.
 The namespace must correspond to an identity source created in Admin Console
 and must be in the form of `identitysources/{identity_source_id}`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="groupmembershiprole">Group<wbr>Membership<wbr>Role</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1568,13 +1463,11 @@ and must be in the form of `identitysources/{identity_source_id}`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1584,13 +1477,11 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1600,13 +1491,11 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1616,8 +1505,7 @@ Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
     </dt>
     <dd>{{% md %}}The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
 Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

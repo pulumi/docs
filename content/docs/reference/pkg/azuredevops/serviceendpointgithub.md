@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceEndpointGitHub"
-title_tag: "Resource ServiceEndpointGitHub | Package Azure DevOps"
-meta_desc: "Explore the ServiceEndpointGitHub resource of the Azure DevOps package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a GitHub service endpoint within Azure DevOps."
+title_tag: "azuredevops.ServiceEndpointGitHub"
+meta_desc: "Documentation for the azuredevops.ServiceEndpointGitHub resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Manages a GitHub service endpoint within Azure DevOps.
 - [Azure DevOps Service REST API 5.1 - Service Endpoints](https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -49,15 +55,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
 	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -86,9 +94,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -105,9 +116,12 @@ serviceendpoint_gh1 = azuredevops.ServiceEndpointGitHub("serviceendpointGh1",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -127,9 +141,16 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceEndpointGitHub Resource {#create}
@@ -154,9 +175,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +183,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +191,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +199,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -213,9 +225,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -223,9 +233,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +241,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +249,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,18 +257,13 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +271,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +279,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,10 +287,7 @@ const serviceendpointGh1 = new azuredevops.ServiceEndpointGitHub("serviceendpoin
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -310,9 +302,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -321,8 +311,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_csharp">
 <a href="#serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -331,8 +320,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authoauth_csharp">
 <a href="#authoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Oauth</a>
@@ -341,8 +329,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authpersonal_csharp">
 <a href="#authpersonal_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Personal</a>
@@ -351,8 +338,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -360,8 +346,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -369,14 +354,11 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -385,8 +367,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_go">
 <a href="#serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -395,8 +376,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authoauth_go">
 <a href="#authoauth_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Oauth</a>
@@ -405,8 +385,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authpersonal_go">
 <a href="#authpersonal_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Personal</a>
@@ -415,8 +394,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -424,8 +402,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -433,14 +410,11 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -449,8 +423,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_nodejs">
 <a href="#serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -459,8 +432,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authoauth_nodejs">
 <a href="#authoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Oauth</a>
@@ -469,8 +441,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authpersonal_nodejs">
 <a href="#authpersonal_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Personal</a>
@@ -479,8 +450,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -488,8 +458,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -497,14 +466,11 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -513,8 +479,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_name_python">
 <a href="#service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -523,8 +488,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_oauth_python">
 <a href="#auth_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>oauth</a>
@@ -533,8 +497,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_personal_python">
 <a href="#auth_personal_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>personal</a>
@@ -543,8 +506,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -552,8 +514,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -561,8 +522,7 @@ The ServiceEndpointGitHub resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -573,9 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -583,14 +541,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -598,14 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -613,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -628,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -756,9 +704,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authoauth_csharp">
 <a href="#state_authoauth_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Oauth</a>
@@ -767,8 +713,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authpersonal_csharp">
 <a href="#state_authpersonal_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Personal</a>
@@ -777,8 +722,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -786,8 +730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -795,8 +738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -805,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_csharp">
 <a href="#state_serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -815,14 +756,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authoauth_go">
 <a href="#state_authoauth_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Oauth</a>
@@ -831,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authpersonal_go">
 <a href="#state_authpersonal_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Personal</a>
@@ -841,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -850,8 +786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -859,8 +794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -869,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_go">
 <a href="#state_serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -879,14 +812,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authoauth_nodejs">
 <a href="#state_authoauth_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Oauth</a>
@@ -895,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authpersonal_nodejs">
 <a href="#state_authpersonal_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Personal</a>
@@ -905,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -914,8 +842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -923,8 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -933,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_nodejs">
 <a href="#state_serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -943,14 +868,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auth_oauth_python">
 <a href="#state_auth_oauth_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>oauth</a>
@@ -959,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_oauth` block as documented below. Allows connecting using an Oauth token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_personal_python">
 <a href="#state_auth_personal_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>personal</a>
@@ -969,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auth_personal` block as documented below. Allows connecting using a personal access token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -978,8 +898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -987,8 +906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -997,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_endpoint_name_python">
 <a href="#state_service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -1007,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1023,9 +939,7 @@ The following state arguments are supported:
 <h4 id="serviceendpointgithubauthoauth">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Oauth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauthconfigurationid_csharp">
 <a href="#oauthconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Configuration<wbr>Id</a>
@@ -1033,14 +947,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauthconfigurationid_go">
 <a href="#oauthconfigurationid_go" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Configuration<wbr>Id</a>
@@ -1048,14 +959,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauthconfigurationid_nodejs">
 <a href="#oauthconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Configuration<wbr>Id</a>
@@ -1063,14 +971,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauth_configuration_id_python">
 <a href="#oauth_configuration_id_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>configuration_<wbr>id</a>
@@ -1078,16 +983,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceendpointgithubauthpersonal">Service<wbr>Endpoint<wbr>Git<wbr>Hub<wbr>Auth<wbr>Personal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="personalaccesstoken_csharp">
 <a href="#personalaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Access<wbr>Token</a>
@@ -1096,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Personal Access Token for Github.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personalaccesstokenhash_csharp">
 <a href="#personalaccesstokenhash_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Access<wbr>Token<wbr>Hash</a>
@@ -1105,14 +1006,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="personalaccesstoken_go">
 <a href="#personalaccesstoken_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Access<wbr>Token</a>
@@ -1121,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Personal Access Token for Github.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personalaccesstokenhash_go">
 <a href="#personalaccesstokenhash_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Access<wbr>Token<wbr>Hash</a>
@@ -1130,14 +1027,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="personalaccesstoken_nodejs">
 <a href="#personalaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Access<wbr>Token</a>
@@ -1146,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Personal Access Token for Github.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personalaccesstokenhash_nodejs">
 <a href="#personalaccesstokenhash_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Access<wbr>Token<wbr>Hash</a>
@@ -1155,14 +1048,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="personal_access_token_python">
 <a href="#personal_access_token_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>access_<wbr>token</a>
@@ -1171,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Personal Access Token for Github.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personal_access_token_hash_python">
 <a href="#personal_access_token_hash_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>access_<wbr>token_<wbr>hash</a>
@@ -1180,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

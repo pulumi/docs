@@ -333,8 +333,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audited_csharp">
 <a href="#audited_csharp" style="color: inherit; text-decoration: inherit;">Audited</a>
@@ -347,8 +346,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -358,8 +356,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -369,8 +366,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -382,8 +378,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -394,8 +389,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_csharp">
 <a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -408,8 +402,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -417,8 +410,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -427,13 +419,11 @@ can specify if the policy should be shared.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audited_go">
 <a href="#audited_go" style="color: inherit; text-decoration: inherit;">Audited</a>
@@ -446,8 +436,7 @@ can specify if the policy should be shared.
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -457,8 +446,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -468,8 +456,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -481,8 +468,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -493,8 +479,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_go">
 <a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -507,8 +492,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -516,8 +500,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -526,13 +509,11 @@ can specify if the policy should be shared.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audited_nodejs">
 <a href="#audited_nodejs" style="color: inherit; text-decoration: inherit;">audited</a>
@@ -545,8 +526,7 @@ can specify if the policy should be shared.
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -556,8 +536,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -567,8 +546,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -580,8 +558,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -592,8 +569,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_nodejs">
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -606,8 +582,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -615,8 +590,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -625,13 +599,11 @@ can specify if the policy should be shared.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audited_python">
 <a href="#audited_python" style="color: inherit; text-decoration: inherit;">audited</a>
@@ -644,8 +616,7 @@ can specify if the policy should be shared.
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -655,8 +626,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -666,8 +636,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -679,8 +648,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -691,8 +659,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_python">
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -705,8 +672,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -714,8 +680,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -724,8 +689,7 @@ can specify if the policy should be shared.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -745,13 +708,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -759,13 +720,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,13 +732,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -915,8 +871,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_audited_csharp">
 <a href="#state_audited_csharp" style="color: inherit; text-decoration: inherit;">Audited</a>
@@ -929,8 +884,7 @@ The following state arguments are supported:
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -940,8 +894,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -951,8 +904,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -964,8 +916,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -976,8 +927,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_csharp">
 <a href="#state_shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -990,8 +940,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -999,8 +948,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1009,13 +957,11 @@ can specify if the policy should be shared.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_audited_go">
 <a href="#state_audited_go" style="color: inherit; text-decoration: inherit;">Audited</a>
@@ -1028,8 +974,7 @@ can specify if the policy should be shared.
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1039,8 +984,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1050,8 +994,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1063,8 +1006,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1075,8 +1017,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_go">
 <a href="#state_shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1089,8 +1030,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1098,8 +1038,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1108,13 +1047,11 @@ can specify if the policy should be shared.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_audited_nodejs">
 <a href="#state_audited_nodejs" style="color: inherit; text-decoration: inherit;">audited</a>
@@ -1127,8 +1064,7 @@ can specify if the policy should be shared.
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1138,8 +1074,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1149,8 +1084,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1162,8 +1096,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1174,8 +1107,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_nodejs">
 <a href="#state_shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1188,8 +1120,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1197,8 +1128,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1207,13 +1137,11 @@ can specify if the policy should be shared.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_audited_python">
 <a href="#state_audited_python" style="color: inherit; text-decoration: inherit;">audited</a>
@@ -1226,8 +1154,7 @@ can specify if the policy should be shared.
 This status is set to "false" whenever the firewall policy or any of its
 rules are changed. Changing this updates the `audited` status of an existing
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1237,8 +1164,7 @@ firewall policy.
     </dt>
     <dd>{{% md %}}A description for the firewall policy. Changing
 this updates the `description` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1248,8 +1174,7 @@ this updates the `description` of an existing firewall policy.
     </dt>
     <dd>{{% md %}}A name for the firewall policy. Changing this
 updates the `name` of an existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1261,8 +1186,7 @@ updates the `name` of an existing firewall policy.
 A networking client is needed to create a firewall policy. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1273,8 +1197,7 @@ firewall policy.
     <dd>{{% md %}}An array of one or more firewall rules that comprise
 the policy. Changing this results in adding/removing rules from the
 existing firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_python">
 <a href="#state_shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1287,8 +1210,7 @@ or "false" if provided). If this is "true" the policy is visible to, and
 can be used in, firewalls in other tenants. Changing this updates the
 `shared` status of an existing firewall policy. Only administrative users
 can specify if the policy should be shared.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1296,8 +1218,7 @@ can specify if the policy should be shared.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1306,8 +1227,7 @@ can specify if the policy should be shared.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

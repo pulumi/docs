@@ -1,6 +1,6 @@
 ---
 title: "Hetzner Cloud"
-title_tag: "Module Hetzner Cloud | Package Hetzner Cloud"
+title_tag: "hcloud.Hetzner Cloud"
 meta_desc: "A Pulumi package for creating and managing hcloud cloud resources."
 menu:
     reference:

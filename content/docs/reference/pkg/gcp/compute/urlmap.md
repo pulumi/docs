@@ -3071,8 +3071,7 @@ The URLMap resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultrouteaction_csharp">
 <a href="#defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
@@ -3086,8 +3085,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultservice_csharp">
 <a href="#defaultservice_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
@@ -3096,8 +3094,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulturlredirect_csharp">
 <a href="#defaulturlredirect_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
@@ -3109,8 +3106,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3119,8 +3115,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -3133,8 +3128,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostrules_csharp">
 <a href="#hostrules_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rules</a>
@@ -3144,8 +3138,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3155,8 +3148,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathmatchers_csharp">
 <a href="#pathmatchers_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Matchers</a>
@@ -3166,8 +3158,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -3177,8 +3168,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tests_csharp">
 <a href="#tests_csharp" style="color: inherit; text-decoration: inherit;">Tests</a>
@@ -3190,13 +3180,11 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultrouteaction_go">
 <a href="#defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
@@ -3210,8 +3198,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultservice_go">
 <a href="#defaultservice_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
@@ -3220,8 +3207,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulturlredirect_go">
 <a href="#defaulturlredirect_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
@@ -3233,8 +3219,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3243,8 +3228,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -3257,8 +3241,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostrules_go">
 <a href="#hostrules_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rules</a>
@@ -3268,8 +3251,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3279,8 +3261,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathmatchers_go">
 <a href="#pathmatchers_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Matchers</a>
@@ -3290,8 +3271,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -3301,8 +3281,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tests_go">
 <a href="#tests_go" style="color: inherit; text-decoration: inherit;">Tests</a>
@@ -3314,13 +3293,11 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultrouteaction_nodejs">
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
@@ -3334,8 +3311,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultservice_nodejs">
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
@@ -3344,8 +3320,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulturlredirect_nodejs">
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
@@ -3357,8 +3332,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3367,8 +3341,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -3381,8 +3354,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostrules_nodejs">
 <a href="#hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
@@ -3392,8 +3364,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3403,8 +3374,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathmatchers_nodejs">
 <a href="#pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
@@ -3414,8 +3384,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3425,8 +3394,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tests_nodejs">
 <a href="#tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
@@ -3438,13 +3406,11 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_route_action_python">
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
@@ -3458,8 +3424,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_service_python">
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
@@ -3468,8 +3433,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_url_redirect_python">
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
@@ -3481,8 +3445,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3491,8 +3454,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -3505,8 +3467,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_rules_python">
 <a href="#host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
@@ -3516,8 +3477,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3527,8 +3487,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_matchers_python">
 <a href="#path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
@@ -3538,8 +3497,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3549,8 +3507,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tests_python">
 <a href="#tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
@@ -3562,8 +3519,7 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3574,8 +3530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3584,8 +3539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -3594,8 +3548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3603,8 +3556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mapid_csharp">
 <a href="#mapid_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Id</a>
@@ -3613,8 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3623,13 +3574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3638,8 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -3648,8 +3596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3657,8 +3604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mapid_go">
 <a href="#mapid_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Id</a>
@@ -3667,8 +3613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -3677,13 +3622,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -3692,8 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -3702,8 +3644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3711,8 +3652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mapid_nodejs">
 <a href="#mapid_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Id</a>
@@ -3721,8 +3661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -3731,13 +3670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -3746,8 +3683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -3756,8 +3692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3765,8 +3700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="map_id_python">
 <a href="#map_id_python" style="color: inherit; text-decoration: inherit;">map_<wbr>id</a>
@@ -3775,8 +3709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -3785,8 +3718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3913,8 +3845,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -3923,8 +3854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrouteaction_csharp">
 <a href="#state_defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
@@ -3938,8 +3868,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultservice_csharp">
 <a href="#state_defaultservice_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
@@ -3948,8 +3877,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulturlredirect_csharp">
 <a href="#state_defaulturlredirect_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
@@ -3961,8 +3889,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3971,8 +3898,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -3981,8 +3907,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headeraction_csharp">
 <a href="#state_headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -3995,8 +3920,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostrules_csharp">
 <a href="#state_hostrules_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rules</a>
@@ -4006,8 +3930,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapid_csharp">
 <a href="#state_mapid_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Id</a>
@@ -4016,8 +3939,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4027,8 +3949,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pathmatchers_csharp">
 <a href="#state_pathmatchers_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Matchers</a>
@@ -4038,8 +3959,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -4049,8 +3969,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -4059,8 +3978,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tests_csharp">
 <a href="#state_tests_csharp" style="color: inherit; text-decoration: inherit;">Tests</a>
@@ -4072,13 +3990,11 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -4087,8 +4003,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrouteaction_go">
 <a href="#state_defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
@@ -4102,8 +4017,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultservice_go">
 <a href="#state_defaultservice_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
@@ -4112,8 +4026,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulturlredirect_go">
 <a href="#state_defaulturlredirect_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
@@ -4125,8 +4038,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4135,8 +4047,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -4145,8 +4056,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headeraction_go">
 <a href="#state_headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -4159,8 +4069,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostrules_go">
 <a href="#state_hostrules_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rules</a>
@@ -4170,8 +4079,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapid_go">
 <a href="#state_mapid_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Id</a>
@@ -4180,8 +4088,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4191,8 +4098,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pathmatchers_go">
 <a href="#state_pathmatchers_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Matchers</a>
@@ -4202,8 +4108,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -4213,8 +4118,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -4223,8 +4127,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tests_go">
 <a href="#state_tests_go" style="color: inherit; text-decoration: inherit;">Tests</a>
@@ -4236,13 +4139,11 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -4251,8 +4152,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrouteaction_nodejs">
 <a href="#state_defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
@@ -4266,8 +4166,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultservice_nodejs">
 <a href="#state_defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
@@ -4276,8 +4175,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulturlredirect_nodejs">
 <a href="#state_defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
@@ -4289,8 +4187,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4299,8 +4196,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -4309,8 +4205,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headeraction_nodejs">
 <a href="#state_headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -4323,8 +4218,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostrules_nodejs">
 <a href="#state_hostrules_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rules</a>
@@ -4334,8 +4228,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapid_nodejs">
 <a href="#state_mapid_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Id</a>
@@ -4344,8 +4237,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4355,8 +4247,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pathmatchers_nodejs">
 <a href="#state_pathmatchers_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matchers</a>
@@ -4366,8 +4257,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -4377,8 +4267,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -4387,8 +4276,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tests_nodejs">
 <a href="#state_tests_nodejs" style="color: inherit; text-decoration: inherit;">tests</a>
@@ -4400,13 +4288,11 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -4415,8 +4301,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_route_action_python">
 <a href="#state_default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
@@ -4430,8 +4315,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_service_python">
 <a href="#state_default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
@@ -4440,8 +4324,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_url_redirect_python">
 <a href="#state_default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
@@ -4453,8 +4336,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4463,8 +4345,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -4473,8 +4354,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_header_action_python">
 <a href="#state_header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -4487,8 +4367,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_rules_python">
 <a href="#state_host_rules_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rules</a>
@@ -4498,8 +4377,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_map_id_python">
 <a href="#state_map_id_python" style="color: inherit; text-decoration: inherit;">map_<wbr>id</a>
@@ -4508,8 +4386,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4519,8 +4396,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_matchers_python">
 <a href="#state_path_matchers_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matchers</a>
@@ -4530,8 +4406,7 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -4541,8 +4416,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -4551,8 +4425,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tests_python">
 <a href="#state_tests_python" style="color: inherit; text-decoration: inherit;">tests</a>
@@ -4564,8 +4437,7 @@ If it is not provided, the provider project is used.
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4580,8 +4452,7 @@ Structure is documented below.
 <h4 id="urlmapdefaultrouteaction">URLMap<wbr>Default<wbr>Route<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_csharp">
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -4592,8 +4463,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_csharp">
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -4607,8 +4477,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_csharp">
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -4620,8 +4489,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -4631,8 +4499,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -4644,8 +4511,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_csharp">
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -4655,8 +4521,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_csharp">
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -4672,13 +4537,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_go">
 <a href="#corspolicy_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -4689,8 +4552,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_go">
 <a href="#faultinjectionpolicy_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -4704,8 +4566,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_go">
 <a href="#requestmirrorpolicy_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -4717,8 +4578,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -4728,8 +4588,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -4741,8 +4600,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_go">
 <a href="#urlrewrite_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -4752,8 +4610,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_go">
 <a href="#weightedbackendservices_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -4769,13 +4626,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_nodejs">
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
@@ -4786,8 +4641,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_nodejs">
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
@@ -4801,8 +4655,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_nodejs">
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
@@ -4814,8 +4667,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -4825,8 +4677,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -4838,8 +4689,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_nodejs">
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
@@ -4849,8 +4699,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_nodejs">
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
@@ -4866,13 +4715,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_policy_python">
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
@@ -4883,8 +4730,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fault_injection_policy_python">
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
@@ -4898,8 +4744,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_mirror_policy_python">
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
@@ -4911,8 +4756,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -4922,8 +4766,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -4935,8 +4778,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_rewrite_python">
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
@@ -4946,8 +4788,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_backend_services_python">
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
@@ -4963,15 +4804,13 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactioncorspolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -4981,8 +4820,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_csharp">
 <a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -4991,8 +4829,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_csharp">
 <a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -5001,8 +4838,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_csharp">
 <a href="#alloworiginregexes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -5013,8 +4849,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_csharp">
 <a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -5024,8 +4859,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -5034,8 +4868,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_csharp">
 <a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -5044,8 +4877,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -5055,13 +4887,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -5071,8 +4901,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_go">
 <a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -5081,8 +4910,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_go">
 <a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -5091,8 +4919,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_go">
 <a href="#alloworiginregexes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -5103,8 +4930,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_go">
 <a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -5114,8 +4940,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -5124,8 +4949,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_go">
 <a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -5134,8 +4958,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -5145,13 +4968,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -5161,8 +4982,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_nodejs">
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
@@ -5171,8 +4991,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_nodejs">
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
@@ -5181,8 +5000,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_nodejs">
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
@@ -5193,8 +5011,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_nodejs">
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
@@ -5204,8 +5021,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -5214,8 +5030,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_nodejs">
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
@@ -5224,8 +5039,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -5235,13 +5049,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -5251,8 +5063,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_headers_python">
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
@@ -5261,8 +5072,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_methods_python">
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
@@ -5271,8 +5081,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origin_regexes_python">
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
@@ -5283,8 +5092,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origins_python">
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
@@ -5294,8 +5102,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -5304,8 +5111,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expose_headers_python">
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
@@ -5314,8 +5120,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -5325,15 +5130,13 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_csharp">
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -5343,8 +5146,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -5354,13 +5156,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_go">
 <a href="#abort_go" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -5370,8 +5170,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -5381,13 +5180,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_nodejs">
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -5397,8 +5194,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -5408,13 +5204,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_python">
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -5424,8 +5218,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -5435,15 +5228,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_csharp">
 <a href="#httpstatus_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -5453,8 +5244,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -5464,13 +5254,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_go">
 <a href="#httpstatus_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -5480,8 +5268,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -5491,13 +5278,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_nodejs">
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
@@ -5507,8 +5292,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -5518,13 +5302,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="http_status_python">
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
@@ -5534,8 +5316,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -5545,15 +5326,13 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_csharp">
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -5563,8 +5342,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -5574,13 +5352,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_go">
 <a href="#fixeddelay_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -5590,8 +5366,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -5601,13 +5376,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_nodejs">
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
@@ -5617,8 +5390,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -5628,13 +5400,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_delay_python">
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
@@ -5644,8 +5414,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -5655,15 +5424,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -5673,8 +5440,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -5684,13 +5450,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -5700,8 +5464,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -5711,13 +5474,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -5727,8 +5488,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -5738,13 +5498,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -5754,8 +5512,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -5765,15 +5522,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -5782,13 +5537,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -5797,13 +5550,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -5812,13 +5563,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -5827,15 +5576,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionretrypolicy">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_csharp">
 <a href="#numretries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -5844,8 +5591,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_csharp">
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -5857,8 +5603,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_csharp">
 <a href="#retryconditions_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -5881,13 +5626,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_go">
 <a href="#numretries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -5896,8 +5639,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_go">
 <a href="#pertrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -5909,8 +5651,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_go">
 <a href="#retryconditions_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -5933,13 +5674,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_nodejs">
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
@@ -5948,8 +5687,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_nodejs">
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
@@ -5961,8 +5699,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_nodejs">
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
@@ -5985,13 +5722,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="num_retries_python">
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
@@ -6000,8 +5735,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_try_timeout_python">
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
@@ -6013,8 +5747,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_conditions_python">
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
@@ -6037,15 +5770,13 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -6055,8 +5786,7 @@ This reset type indicates that it is safe to retry.
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -6066,13 +5796,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -6082,8 +5810,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -6093,13 +5820,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -6109,8 +5834,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -6120,13 +5844,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -6136,8 +5858,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -6147,15 +5868,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactiontimeout">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -6165,8 +5884,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -6176,13 +5894,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -6192,8 +5908,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -6203,13 +5918,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -6219,8 +5932,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -6230,13 +5942,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -6246,8 +5956,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -6257,15 +5966,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionurlrewrite">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_csharp">
 <a href="#hostrewrite_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -6276,8 +5983,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_csharp">
 <a href="#pathprefixrewrite_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -6288,13 +5994,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_go">
 <a href="#hostrewrite_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -6305,8 +6009,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_go">
 <a href="#pathprefixrewrite_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -6317,13 +6020,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_nodejs">
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
@@ -6334,8 +6035,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_nodejs">
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
@@ -6346,13 +6046,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_rewrite_python">
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
@@ -6363,8 +6061,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_prefix_rewrite_python">
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
@@ -6375,15 +6072,13 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionweightedbackendservice">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -6392,8 +6087,7 @@ The value must be between 1 and 1024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -6406,8 +6100,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -6421,13 +6114,11 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -6436,8 +6127,7 @@ The value must be between 0 and 1000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -6450,8 +6140,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -6465,13 +6154,11 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -6480,8 +6167,7 @@ The value must be between 0 and 1000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -6494,8 +6180,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -6509,13 +6194,11 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -6524,8 +6207,7 @@ The value must be between 0 and 1000
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -6538,8 +6220,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -6553,15 +6234,13 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -6571,8 +6250,7 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -6582,8 +6260,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -6593,8 +6270,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -6604,13 +6280,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -6620,8 +6294,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -6631,8 +6304,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -6642,8 +6314,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -6653,13 +6324,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -6669,8 +6338,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -6680,8 +6348,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -6691,8 +6358,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -6702,13 +6368,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -6718,8 +6382,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -6729,8 +6392,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -6740,8 +6402,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -6751,15 +6412,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -6768,8 +6427,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -6778,8 +6436,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -6789,13 +6446,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -6804,8 +6459,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -6814,8 +6468,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -6825,13 +6478,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -6840,8 +6491,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -6850,8 +6500,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -6861,13 +6510,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -6876,8 +6523,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -6886,8 +6532,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -6897,15 +6542,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -6914,8 +6557,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -6924,8 +6566,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -6935,13 +6576,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -6950,8 +6589,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -6960,8 +6598,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -6971,13 +6608,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -6986,8 +6621,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -6996,8 +6630,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -7007,13 +6640,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -7022,8 +6653,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -7032,8 +6662,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -7043,15 +6672,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapdefaulturlredirect">URLMap<wbr>Default<wbr>Url<wbr>Redirect</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_csharp">
 <a href="#stripquery_csharp" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -7063,8 +6690,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_csharp">
 <a href="#hostredirect_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -7074,8 +6700,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_csharp">
 <a href="#httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -7087,8 +6712,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_csharp">
 <a href="#pathredirect_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -7101,8 +6725,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_csharp">
 <a href="#prefixredirect_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -7115,8 +6738,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_csharp">
 <a href="#redirectresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -7132,13 +6754,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_go">
 <a href="#stripquery_go" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -7150,8 +6770,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_go">
 <a href="#hostredirect_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -7161,8 +6780,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_go">
 <a href="#httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -7174,8 +6792,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_go">
 <a href="#pathredirect_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -7188,8 +6805,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_go">
 <a href="#prefixredirect_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -7202,8 +6818,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_go">
 <a href="#redirectresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -7219,13 +6834,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_nodejs">
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
@@ -7237,8 +6850,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_nodejs">
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
@@ -7248,8 +6860,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_nodejs">
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
@@ -7261,8 +6872,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_nodejs">
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
@@ -7275,8 +6885,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_nodejs">
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
@@ -7289,8 +6898,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_nodejs">
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
@@ -7306,13 +6914,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="strip_query_python">
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
@@ -7324,8 +6930,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_redirect_python">
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
@@ -7335,8 +6940,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_redirect_python">
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
@@ -7348,8 +6952,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_redirect_python">
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
@@ -7362,8 +6965,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_redirect_python">
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
@@ -7376,8 +6978,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_response_code_python">
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
@@ -7393,15 +6994,13 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapheaderaction">URLMap<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -7411,8 +7010,7 @@ the request method will be retained.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -7422,8 +7020,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -7433,8 +7030,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -7444,13 +7040,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -7460,8 +7054,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -7471,8 +7064,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -7482,8 +7074,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -7493,13 +7084,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -7509,8 +7098,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -7520,8 +7108,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -7531,8 +7118,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -7542,13 +7128,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -7558,8 +7142,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -7569,8 +7152,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -7580,8 +7162,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -7591,15 +7172,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapheaderactionrequestheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -7608,8 +7187,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -7618,8 +7196,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -7629,13 +7206,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -7644,8 +7219,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -7654,8 +7228,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -7665,13 +7238,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -7680,8 +7251,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -7690,8 +7260,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -7701,13 +7270,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -7716,8 +7283,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -7726,8 +7292,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -7737,15 +7302,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmapheaderactionresponseheaderstoadd">URLMap<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -7754,8 +7317,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -7764,8 +7326,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -7775,13 +7336,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -7790,8 +7349,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -7800,8 +7358,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -7811,13 +7368,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -7826,8 +7381,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -7836,8 +7390,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -7847,13 +7400,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -7862,8 +7413,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -7872,8 +7422,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -7883,15 +7432,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmaphostrule">URLMap<wbr>Host<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -7902,8 +7449,7 @@ If true, headerValue is set for the header, discarding any values that were set 
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
 and must be followed in the pattern by either - or ..
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathmatcher_csharp">
 <a href="#pathmatcher_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Matcher</a>
@@ -7913,8 +7459,7 @@ and must be followed in the pattern by either - or ..
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7923,13 +7468,11 @@ hostRule matches the URL's host portion.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -7940,8 +7483,7 @@ hostRule matches the URL's host portion.
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
 and must be followed in the pattern by either - or ..
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathmatcher_go">
 <a href="#pathmatcher_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Matcher</a>
@@ -7951,8 +7493,7 @@ and must be followed in the pattern by either - or ..
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7961,13 +7502,11 @@ hostRule matches the URL's host portion.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -7978,8 +7517,7 @@ hostRule matches the URL's host portion.
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
 and must be followed in the pattern by either - or ..
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathmatcher_nodejs">
 <a href="#pathmatcher_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Matcher</a>
@@ -7989,8 +7527,7 @@ and must be followed in the pattern by either - or ..
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -7999,13 +7536,11 @@ hostRule matches the URL's host portion.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -8016,8 +7551,7 @@ hostRule matches the URL's host portion.
     <dd>{{% md %}}The list of host patterns to match. They must be valid hostnames, except * will
 match any string of ([a-z0-9-.]*). In that case, * must be the first character
 and must be followed in the pattern by either - or ..
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_matcher_python">
 <a href="#path_matcher_python" style="color: inherit; text-decoration: inherit;">path_<wbr>matcher</a>
@@ -8027,8 +7561,7 @@ and must be followed in the pattern by either - or ..
     </dt>
     <dd>{{% md %}}The name of the PathMatcher to use to match the path portion of the URL if the
 hostRule matches the URL's host portion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -8037,15 +7570,13 @@ hostRule matches the URL's host portion.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcher">URLMap<wbr>Path<wbr>Matcher</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8055,8 +7586,7 @@ hostRule matches the URL's host portion.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrouteaction_csharp">
 <a href="#defaultrouteaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
@@ -8070,8 +7600,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultservice_csharp">
 <a href="#defaultservice_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
@@ -8080,8 +7609,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulturlredirect_csharp">
 <a href="#defaulturlredirect_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
@@ -8093,8 +7621,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -8103,8 +7630,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -8117,8 +7643,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathrules_csharp">
 <a href="#pathrules_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
@@ -8133,8 +7658,7 @@ basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
 given pathMatcher, only one of pathRules or routeRules must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routerules_csharp">
 <a href="#routerules_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Rules</a>
@@ -8149,13 +7673,11 @@ action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8165,8 +7687,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrouteaction_go">
 <a href="#defaultrouteaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Route<wbr>Action</a>
@@ -8180,8 +7701,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultservice_go">
 <a href="#defaultservice_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Service</a>
@@ -8190,8 +7710,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulturlredirect_go">
 <a href="#defaulturlredirect_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Url<wbr>Redirect</a>
@@ -8203,8 +7722,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -8213,8 +7731,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -8227,8 +7744,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathrules_go">
 <a href="#pathrules_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Rules</a>
@@ -8243,8 +7759,7 @@ basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
 given pathMatcher, only one of pathRules or routeRules must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routerules_go">
 <a href="#routerules_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Rules</a>
@@ -8259,13 +7774,11 @@ action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8275,8 +7788,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrouteaction_nodejs">
 <a href="#defaultrouteaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Route<wbr>Action</a>
@@ -8290,8 +7802,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultservice_nodejs">
 <a href="#defaultservice_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Service</a>
@@ -8300,8 +7811,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulturlredirect_nodejs">
 <a href="#defaulturlredirect_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Url<wbr>Redirect</a>
@@ -8313,8 +7823,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -8323,8 +7832,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -8337,8 +7845,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathrules_nodejs">
 <a href="#pathrules_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Rules</a>
@@ -8353,8 +7860,7 @@ basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
 given pathMatcher, only one of pathRules or routeRules must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routerules_nodejs">
 <a href="#routerules_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Rules</a>
@@ -8369,13 +7875,11 @@ action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8385,8 +7889,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_route_action_python">
 <a href="#default_route_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>route_<wbr>action</a>
@@ -8400,8 +7903,7 @@ to the selected backend. If defaultRouteAction specifies any weightedBackendServ
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 Only one of defaultRouteAction or defaultUrlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_service_python">
 <a href="#default_service_python" style="color: inherit; text-decoration: inherit;">default_<wbr>service</a>
@@ -8410,8 +7912,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket to use when none of the given paths match.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_url_redirect_python">
 <a href="#default_url_redirect_python" style="color: inherit; text-decoration: inherit;">default_<wbr>url_<wbr>redirect</a>
@@ -8423,8 +7924,7 @@ Structure is documented below.
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
 defaultRouteAction must not be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -8433,8 +7933,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -8447,8 +7946,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_rules_python">
 <a href="#path_rules_python" style="color: inherit; text-decoration: inherit;">path_<wbr>rules</a>
@@ -8463,8 +7961,7 @@ basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
 given pathMatcher, only one of pathRules or routeRules must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_rules_python">
 <a href="#route_rules_python" style="color: inherit; text-decoration: inherit;">route_<wbr>rules</a>
@@ -8479,15 +7976,13 @@ action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
 External load balancers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_csharp">
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -8498,8 +7993,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_csharp">
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -8513,8 +8007,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_csharp">
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -8526,8 +8019,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -8537,8 +8029,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -8550,8 +8041,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_csharp">
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -8561,8 +8051,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_csharp">
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -8578,13 +8067,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_go">
 <a href="#corspolicy_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -8595,8 +8082,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_go">
 <a href="#faultinjectionpolicy_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -8610,8 +8096,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_go">
 <a href="#requestmirrorpolicy_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -8623,8 +8108,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -8634,8 +8118,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -8647,8 +8130,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_go">
 <a href="#urlrewrite_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -8658,8 +8140,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_go">
 <a href="#weightedbackendservices_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -8675,13 +8156,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_nodejs">
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
@@ -8692,8 +8171,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_nodejs">
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
@@ -8707,8 +8185,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_nodejs">
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
@@ -8720,8 +8197,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -8731,8 +8207,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -8744,8 +8219,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_nodejs">
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
@@ -8755,8 +8229,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_nodejs">
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
@@ -8772,13 +8245,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_policy_python">
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
@@ -8789,8 +8260,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fault_injection_policy_python">
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
@@ -8804,8 +8274,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_mirror_policy_python">
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
@@ -8817,8 +8286,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -8828,8 +8296,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -8841,8 +8308,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_rewrite_python">
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
@@ -8852,8 +8318,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_backend_services_python">
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
@@ -8869,15 +8334,13 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -8887,8 +8350,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_csharp">
 <a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -8897,8 +8359,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_csharp">
 <a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -8907,8 +8368,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_csharp">
 <a href="#alloworiginregexes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -8919,8 +8379,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_csharp">
 <a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -8930,8 +8389,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -8940,8 +8398,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_csharp">
 <a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -8950,8 +8407,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -8961,13 +8417,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -8977,8 +8431,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_go">
 <a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -8987,8 +8440,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_go">
 <a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -8997,8 +8449,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_go">
 <a href="#alloworiginregexes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -9009,8 +8460,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_go">
 <a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -9020,8 +8470,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -9030,8 +8479,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_go">
 <a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -9040,8 +8488,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -9051,13 +8498,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -9067,8 +8512,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_nodejs">
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
@@ -9077,8 +8521,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_nodejs">
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
@@ -9087,8 +8530,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_nodejs">
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
@@ -9099,8 +8541,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_nodejs">
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
@@ -9110,8 +8551,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -9120,8 +8560,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_nodejs">
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
@@ -9130,8 +8569,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -9141,13 +8579,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -9157,8 +8593,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_headers_python">
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
@@ -9167,8 +8602,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_methods_python">
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
@@ -9177,8 +8611,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origin_regexes_python">
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
@@ -9189,8 +8622,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origins_python">
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
@@ -9200,8 +8632,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -9210,8 +8641,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expose_headers_python">
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
@@ -9220,8 +8650,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -9231,15 +8660,13 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_csharp">
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -9249,8 +8676,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -9260,13 +8686,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_go">
 <a href="#abort_go" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -9276,8 +8700,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -9287,13 +8710,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_nodejs">
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -9303,8 +8724,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -9314,13 +8734,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_python">
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -9330,8 +8748,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -9341,15 +8758,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_csharp">
 <a href="#httpstatus_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -9359,8 +8774,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -9370,13 +8784,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_go">
 <a href="#httpstatus_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -9386,8 +8798,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -9397,13 +8808,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_nodejs">
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
@@ -9413,8 +8822,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -9424,13 +8832,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="http_status_python">
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
@@ -9440,8 +8846,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -9451,15 +8856,13 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_csharp">
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -9469,8 +8872,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -9480,13 +8882,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_go">
 <a href="#fixeddelay_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -9496,8 +8896,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -9507,13 +8906,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_nodejs">
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
@@ -9523,8 +8920,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -9534,13 +8930,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_delay_python">
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
@@ -9550,8 +8944,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -9561,15 +8954,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -9579,8 +8970,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -9590,13 +8980,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -9606,8 +8994,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -9617,13 +9004,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -9633,8 +9018,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -9644,13 +9028,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -9660,8 +9042,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -9671,15 +9052,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -9688,13 +9067,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -9703,13 +9080,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -9718,13 +9093,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -9733,15 +9106,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_csharp">
 <a href="#numretries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -9750,8 +9121,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_csharp">
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -9763,8 +9133,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_csharp">
 <a href="#retryconditions_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -9787,13 +9156,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_go">
 <a href="#numretries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -9802,8 +9169,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_go">
 <a href="#pertrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -9815,8 +9181,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_go">
 <a href="#retryconditions_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -9839,13 +9204,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_nodejs">
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
@@ -9854,8 +9217,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_nodejs">
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
@@ -9867,8 +9229,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_nodejs">
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
@@ -9891,13 +9252,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="num_retries_python">
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
@@ -9906,8 +9265,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_try_timeout_python">
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
@@ -9919,8 +9277,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_conditions_python">
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
@@ -9943,15 +9300,13 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -9961,8 +9316,7 @@ This reset type indicates that it is safe to retry.
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -9972,13 +9326,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -9988,8 +9340,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -9999,13 +9350,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -10015,8 +9364,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -10026,13 +9374,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -10042,8 +9388,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -10053,15 +9398,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -10071,8 +9414,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -10082,13 +9424,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -10098,8 +9438,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -10109,13 +9448,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -10125,8 +9462,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -10136,13 +9472,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -10152,8 +9486,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -10163,15 +9496,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_csharp">
 <a href="#hostrewrite_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -10182,8 +9513,7 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_csharp">
 <a href="#pathprefixrewrite_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -10194,13 +9524,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_go">
 <a href="#hostrewrite_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -10211,8 +9539,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_go">
 <a href="#pathprefixrewrite_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -10223,13 +9550,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_nodejs">
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
@@ -10240,8 +9565,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_nodejs">
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
@@ -10252,13 +9576,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_rewrite_python">
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
@@ -10269,8 +9591,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_prefix_rewrite_python">
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
@@ -10281,15 +9602,13 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -10298,8 +9617,7 @@ The value must be between 1 and 1024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -10312,8 +9630,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -10327,13 +9644,11 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -10342,8 +9657,7 @@ The value must be between 0 and 1000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -10356,8 +9670,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -10371,13 +9684,11 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -10386,8 +9697,7 @@ The value must be between 0 and 1000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -10400,8 +9710,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -10415,13 +9724,11 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -10430,8 +9737,7 @@ The value must be between 0 and 1000
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -10444,8 +9750,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -10459,15 +9764,13 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -10477,8 +9780,7 @@ The value must be between 0 and 1000
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -10488,8 +9790,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -10499,8 +9800,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -10510,13 +9810,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -10526,8 +9824,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -10537,8 +9834,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -10548,8 +9844,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -10559,13 +9854,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -10575,8 +9868,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -10586,8 +9878,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -10597,8 +9888,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -10608,13 +9898,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -10624,8 +9912,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -10635,8 +9922,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -10646,8 +9932,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -10657,15 +9942,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -10674,8 +9957,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -10684,8 +9966,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -10695,13 +9976,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -10710,8 +9989,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -10720,8 +9998,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -10731,13 +10008,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -10746,8 +10021,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -10756,8 +10030,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -10767,13 +10040,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -10782,8 +10053,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -10792,8 +10062,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -10803,15 +10072,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaultrouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -10820,8 +10087,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -10830,8 +10096,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -10841,13 +10106,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -10856,8 +10119,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -10866,8 +10128,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -10877,13 +10138,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -10892,8 +10151,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -10902,8 +10160,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -10913,13 +10170,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -10928,8 +10183,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -10938,8 +10192,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -10949,15 +10202,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherdefaulturlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Default<wbr>Url<wbr>Redirect</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_csharp">
 <a href="#stripquery_csharp" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -10969,8 +10220,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_csharp">
 <a href="#hostredirect_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -10980,8 +10230,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_csharp">
 <a href="#httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -10993,8 +10242,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_csharp">
 <a href="#pathredirect_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -11007,8 +10255,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_csharp">
 <a href="#prefixredirect_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -11021,8 +10268,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_csharp">
 <a href="#redirectresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -11038,13 +10284,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_go">
 <a href="#stripquery_go" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -11056,8 +10300,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_go">
 <a href="#hostredirect_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -11067,8 +10310,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_go">
 <a href="#httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -11080,8 +10322,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_go">
 <a href="#pathredirect_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -11094,8 +10335,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_go">
 <a href="#prefixredirect_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -11108,8 +10348,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_go">
 <a href="#redirectresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -11125,13 +10364,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_nodejs">
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
@@ -11143,8 +10380,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_nodejs">
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
@@ -11154,8 +10390,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_nodejs">
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
@@ -11167,8 +10402,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_nodejs">
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
@@ -11181,8 +10415,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_nodejs">
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
@@ -11195,8 +10428,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_nodejs">
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
@@ -11212,13 +10444,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="strip_query_python">
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
@@ -11230,8 +10460,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_redirect_python">
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
@@ -11241,8 +10470,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_redirect_python">
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
@@ -11254,8 +10482,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_redirect_python">
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
@@ -11268,8 +10495,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_redirect_python">
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
@@ -11282,8 +10508,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_response_code_python">
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
@@ -11299,15 +10524,13 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -11317,8 +10540,7 @@ the request method will be retained.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -11328,8 +10550,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -11339,8 +10560,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -11350,13 +10570,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -11366,8 +10584,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -11377,8 +10594,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -11388,8 +10604,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -11399,13 +10614,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -11415,8 +10628,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -11426,8 +10638,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -11437,8 +10648,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -11448,13 +10658,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -11464,8 +10672,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -11475,8 +10682,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -11486,8 +10692,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -11497,15 +10702,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -11514,8 +10717,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -11524,8 +10726,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -11535,13 +10736,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -11550,8 +10749,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -11560,8 +10758,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -11571,13 +10768,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -11586,8 +10781,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -11596,8 +10790,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -11607,13 +10800,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -11622,8 +10813,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -11632,8 +10822,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -11643,15 +10832,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -11660,8 +10847,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -11670,8 +10856,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -11681,13 +10866,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -11696,8 +10879,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -11706,8 +10888,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -11717,13 +10898,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -11732,8 +10911,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -11742,8 +10920,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -11753,13 +10930,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -11768,8 +10943,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -11778,8 +10952,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -11789,15 +10962,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrule">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -11809,8 +10980,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 * is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeaction_csharp">
 <a href="#routeaction_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Action</a>
@@ -11825,8 +10995,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -11835,8 +11004,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirect_csharp">
 <a href="#urlredirect_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect</a>
@@ -11848,13 +11016,11 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -11866,8 +11032,7 @@ Structure is documented below.
 * is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeaction_go">
 <a href="#routeaction_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Action</a>
@@ -11882,8 +11047,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -11892,8 +11056,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirect_go">
 <a href="#urlredirect_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect</a>
@@ -11905,13 +11068,11 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -11923,8 +11084,7 @@ Structure is documented below.
 * is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeaction_nodejs">
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
@@ -11939,8 +11099,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -11949,8 +11108,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirect_nodejs">
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
@@ -11962,13 +11120,11 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -11980,8 +11136,7 @@ Structure is documented below.
 * is allowed is at the end following a /. The string fed to the path matcher
 does not include any text after the first ? or #, and those chars are not
 allowed here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_action_python">
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
@@ -11996,8 +11151,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -12006,8 +11160,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_redirect_python">
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
@@ -12019,15 +11172,13 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_csharp">
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -12038,8 +11189,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_csharp">
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -12053,8 +11203,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_csharp">
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -12066,8 +11215,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -12077,8 +11225,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -12090,8 +11237,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_csharp">
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -12101,8 +11247,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_csharp">
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -12118,13 +11263,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_go">
 <a href="#corspolicy_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -12135,8 +11278,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_go">
 <a href="#faultinjectionpolicy_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -12150,8 +11292,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_go">
 <a href="#requestmirrorpolicy_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -12163,8 +11304,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -12174,8 +11314,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -12187,8 +11326,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_go">
 <a href="#urlrewrite_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -12198,8 +11336,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_go">
 <a href="#weightedbackendservices_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -12215,13 +11352,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_nodejs">
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
@@ -12232,8 +11367,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_nodejs">
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
@@ -12247,8 +11381,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_nodejs">
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
@@ -12260,8 +11393,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -12271,8 +11403,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -12284,8 +11415,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_nodejs">
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
@@ -12295,8 +11425,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_nodejs">
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
@@ -12312,13 +11441,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_policy_python">
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
@@ -12329,8 +11456,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fault_injection_policy_python">
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
@@ -12344,8 +11470,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_mirror_policy_python">
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
@@ -12357,8 +11482,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -12368,8 +11492,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -12381,8 +11504,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_rewrite_python">
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
@@ -12392,8 +11514,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_backend_services_python">
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
@@ -12409,15 +11530,13 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -12426,8 +11545,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -12437,8 +11555,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_csharp">
 <a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -12447,8 +11564,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_csharp">
 <a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -12457,8 +11573,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_csharp">
 <a href="#alloworiginregexes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -12469,8 +11584,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_csharp">
 <a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -12480,8 +11594,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_csharp">
 <a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -12490,8 +11603,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -12501,13 +11613,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -12516,8 +11626,7 @@ This translates to the Access-Control-Max-Age header.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -12527,8 +11636,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_go">
 <a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -12537,8 +11645,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_go">
 <a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -12547,8 +11654,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_go">
 <a href="#alloworiginregexes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -12559,8 +11665,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_go">
 <a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -12570,8 +11675,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_go">
 <a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -12580,8 +11684,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -12591,13 +11694,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -12606,8 +11707,7 @@ This translates to the Access-Control-Max-Age header.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -12617,8 +11717,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_nodejs">
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
@@ -12627,8 +11726,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_nodejs">
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
@@ -12637,8 +11735,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_nodejs">
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
@@ -12649,8 +11746,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_nodejs">
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
@@ -12660,8 +11756,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_nodejs">
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
@@ -12670,8 +11765,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -12681,13 +11775,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -12696,8 +11788,7 @@ This translates to the Access-Control-Max-Age header.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -12707,8 +11798,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_headers_python">
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
@@ -12717,8 +11807,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_methods_python">
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
@@ -12727,8 +11816,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origin_regexes_python">
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
@@ -12739,8 +11827,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origins_python">
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
@@ -12750,8 +11837,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expose_headers_python">
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
@@ -12760,8 +11846,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -12771,15 +11856,13 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_csharp">
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -12789,8 +11872,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -12800,13 +11882,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_go">
 <a href="#abort_go" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -12816,8 +11896,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -12827,13 +11906,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_nodejs">
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -12843,8 +11920,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -12854,13 +11930,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_python">
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -12870,8 +11944,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -12881,15 +11954,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpstatus_csharp">
 <a href="#httpstatus_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -12899,8 +11970,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -12910,13 +11980,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpstatus_go">
 <a href="#httpstatus_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -12926,8 +11994,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -12937,13 +12004,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpstatus_nodejs">
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
@@ -12953,8 +12018,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -12964,13 +12028,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_status_python">
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
@@ -12980,8 +12042,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -12991,15 +12052,13 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fixeddelay_csharp">
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -13009,8 +12068,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -13020,13 +12078,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fixeddelay_go">
 <a href="#fixeddelay_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -13036,8 +12092,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -13047,13 +12102,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fixeddelay_nodejs">
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
@@ -13063,8 +12116,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -13074,13 +12126,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fixed_delay_python">
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
@@ -13090,8 +12140,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -13101,15 +12150,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -13119,8 +12166,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -13130,13 +12176,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -13146,8 +12190,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -13157,13 +12200,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -13173,8 +12214,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -13184,13 +12224,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -13200,8 +12238,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -13211,15 +12248,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -13228,13 +12263,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -13243,13 +12276,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -13258,13 +12289,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -13273,15 +12302,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_csharp">
 <a href="#numretries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -13290,8 +12317,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_csharp">
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -13303,8 +12329,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_csharp">
 <a href="#retryconditions_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -13327,13 +12352,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_go">
 <a href="#numretries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -13342,8 +12365,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_go">
 <a href="#pertrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -13355,8 +12377,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_go">
 <a href="#retryconditions_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -13379,13 +12400,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numretries_nodejs">
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
@@ -13394,8 +12413,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_nodejs">
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
@@ -13407,8 +12425,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_nodejs">
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
@@ -13431,13 +12448,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="num_retries_python">
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
@@ -13446,8 +12461,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_try_timeout_python">
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
@@ -13459,8 +12473,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_conditions_python">
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
@@ -13483,15 +12496,13 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -13501,8 +12512,7 @@ This reset type indicates that it is safe to retry.
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -13512,13 +12522,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -13528,8 +12536,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -13539,13 +12546,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -13555,8 +12560,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -13566,13 +12570,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -13582,8 +12584,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -13593,15 +12594,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -13611,8 +12610,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -13622,13 +12620,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -13638,8 +12634,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -13649,13 +12644,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -13665,8 +12658,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -13676,13 +12668,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -13692,8 +12682,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -13703,15 +12692,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_csharp">
 <a href="#hostrewrite_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -13722,8 +12709,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_csharp">
 <a href="#pathprefixrewrite_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -13734,13 +12720,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_go">
 <a href="#hostrewrite_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -13751,8 +12735,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_go">
 <a href="#pathprefixrewrite_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -13763,13 +12746,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_nodejs">
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
@@ -13780,8 +12761,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_nodejs">
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
@@ -13792,13 +12772,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_rewrite_python">
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
@@ -13809,8 +12787,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_prefix_rewrite_python">
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
@@ -13821,15 +12798,13 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -13838,8 +12813,7 @@ The value must be between 1 and 1024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -13853,8 +12827,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -13867,13 +12840,11 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -13882,8 +12853,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -13897,8 +12867,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -13911,13 +12880,11 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -13926,8 +12893,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -13941,8 +12907,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -13955,13 +12920,11 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -13970,8 +12933,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -13985,8 +12947,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -13999,15 +12960,13 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -14017,8 +12976,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -14028,8 +12986,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -14039,8 +12996,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -14050,13 +13006,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -14066,8 +13020,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -14077,8 +13030,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -14088,8 +13040,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -14099,13 +13050,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -14115,8 +13064,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -14126,8 +13074,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -14137,8 +13084,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -14148,13 +13094,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -14164,8 +13108,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -14175,8 +13118,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -14186,8 +13128,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -14197,15 +13138,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -14214,8 +13153,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -14224,8 +13162,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -14235,13 +13172,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -14250,8 +13185,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -14260,8 +13194,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -14271,13 +13204,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -14286,8 +13217,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -14296,8 +13226,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -14307,13 +13236,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -14322,8 +13249,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -14332,8 +13258,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -14343,15 +13268,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -14360,8 +13283,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -14370,8 +13292,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -14381,13 +13302,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -14396,8 +13315,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -14406,8 +13324,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -14417,13 +13334,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -14432,8 +13347,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -14442,8 +13356,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -14453,13 +13366,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -14468,8 +13379,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -14478,8 +13388,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -14489,15 +13398,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherpathruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_csharp">
 <a href="#stripquery_csharp" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -14509,8 +13416,7 @@ If true, headerValue is set for the header, discarding any values that were set 
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_csharp">
 <a href="#hostredirect_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -14520,8 +13426,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_csharp">
 <a href="#httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -14533,8 +13438,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_csharp">
 <a href="#pathredirect_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -14547,8 +13451,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_csharp">
 <a href="#prefixredirect_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -14561,8 +13464,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_csharp">
 <a href="#redirectresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -14578,13 +13480,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_go">
 <a href="#stripquery_go" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -14596,8 +13496,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_go">
 <a href="#hostredirect_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -14607,8 +13506,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_go">
 <a href="#httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -14620,8 +13518,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_go">
 <a href="#pathredirect_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -14634,8 +13531,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_go">
 <a href="#prefixredirect_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -14648,8 +13544,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_go">
 <a href="#redirectresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -14665,13 +13560,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="stripquery_nodejs">
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
@@ -14683,8 +13576,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_nodejs">
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
@@ -14694,8 +13586,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_nodejs">
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
@@ -14707,8 +13598,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_nodejs">
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
@@ -14721,8 +13611,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_nodejs">
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
@@ -14735,8 +13624,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_nodejs">
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
@@ -14752,13 +13640,11 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="strip_query_python">
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
@@ -14770,8 +13656,7 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_redirect_python">
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
@@ -14781,8 +13666,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_redirect_python">
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
@@ -14794,8 +13678,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_redirect_python">
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
@@ -14808,8 +13691,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_redirect_python">
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
@@ -14822,8 +13704,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_response_code_python">
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
@@ -14839,15 +13720,13 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -14868,8 +13747,7 @@ in the future without affecting the rest of the rules. For example,
 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
 you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
 future without any impact on existing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -14882,8 +13760,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchrules_csharp">
 <a href="#matchrules_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Rules</a>
@@ -14893,8 +13770,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeaction_csharp">
 <a href="#routeaction_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Action</a>
@@ -14909,8 +13785,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -14919,8 +13794,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirect_csharp">
 <a href="#urlredirect_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect</a>
@@ -14932,13 +13806,11 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -14959,8 +13831,7 @@ in the future without affecting the rest of the rules. For example,
 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
 you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
 future without any impact on existing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -14973,8 +13844,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchrules_go">
 <a href="#matchrules_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Rules</a>
@@ -14984,8 +13854,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeaction_go">
 <a href="#routeaction_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Action</a>
@@ -15000,8 +13869,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -15010,8 +13878,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirect_go">
 <a href="#urlredirect_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect</a>
@@ -15023,13 +13890,11 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -15050,8 +13915,7 @@ in the future without affecting the rest of the rules. For example,
 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
 you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
 future without any impact on existing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -15064,8 +13928,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchrules_nodejs">
 <a href="#matchrules_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Rules</a>
@@ -15075,8 +13938,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeaction_nodejs">
 <a href="#routeaction_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Action</a>
@@ -15091,8 +13953,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -15101,8 +13962,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirect_nodejs">
 <a href="#urlredirect_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect</a>
@@ -15114,13 +13974,11 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -15141,8 +13999,7 @@ in the future without affecting the rest of the rules. For example,
 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which
 you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the
 future without any impact on existing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -15155,8 +14012,7 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_rules_python">
 <a href="#match_rules_python" style="color: inherit; text-decoration: inherit;">match_<wbr>rules</a>
@@ -15166,8 +14022,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The rules for determining a match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_action_python">
 <a href="#route_action_python" style="color: inherit; text-decoration: inherit;">route_<wbr>action</a>
@@ -15182,8 +14037,7 @@ weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
 or urlRedirect must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -15192,8 +14046,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_redirect_python">
 <a href="#url_redirect_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect</a>
@@ -15205,15 +14058,13 @@ Structure is documented below.
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
 set.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouteruleheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -15223,8 +14074,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -15234,8 +14084,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -15245,8 +14094,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -15256,13 +14104,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -15272,8 +14118,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -15283,8 +14128,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -15294,8 +14138,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -15305,13 +14148,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -15321,8 +14162,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -15332,8 +14172,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -15343,8 +14182,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -15354,13 +14192,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -15370,8 +14206,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -15381,8 +14216,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -15392,8 +14226,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -15403,15 +14236,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouteruleheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -15420,8 +14251,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -15430,8 +14260,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -15441,13 +14270,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -15456,8 +14283,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -15466,8 +14292,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -15477,13 +14302,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -15492,8 +14315,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -15502,8 +14324,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -15513,13 +14334,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -15528,8 +14347,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -15538,8 +14356,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -15549,15 +14366,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouteruleheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -15566,8 +14381,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -15576,8 +14390,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -15587,13 +14400,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -15602,8 +14413,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -15612,8 +14422,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -15623,13 +14432,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -15638,8 +14445,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -15648,8 +14454,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -15659,13 +14464,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -15674,8 +14477,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -15684,8 +14486,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -15695,15 +14496,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulematchrule">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fullpathmatch_csharp">
 <a href="#fullpathmatch_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path<wbr>Match</a>
@@ -15716,8 +14515,7 @@ match the value specified in fullPathMatch after removing any query parameters
 and anchor that may be part of the original URL. FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headermatches_csharp">
 <a href="#headermatches_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Matches</a>
@@ -15728,8 +14526,7 @@ be specified.
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorecase_csharp">
 <a href="#ignorecase_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Case</a>
@@ -15739,8 +14536,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_csharp">
 <a href="#metadatafilters_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -15760,8 +14556,7 @@ here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_csharp">
 <a href="#prefixmatch_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
@@ -15772,8 +14567,7 @@ Structure is documented below.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparametermatches_csharp">
 <a href="#queryparametermatches_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Matches</a>
@@ -15784,8 +14578,7 @@ must be set.
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_csharp">
 <a href="#regexmatch_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match</a>
@@ -15797,13 +14590,11 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fullpathmatch_go">
 <a href="#fullpathmatch_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path<wbr>Match</a>
@@ -15816,8 +14607,7 @@ match the value specified in fullPathMatch after removing any query parameters
 and anchor that may be part of the original URL. FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headermatches_go">
 <a href="#headermatches_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Matches</a>
@@ -15828,8 +14618,7 @@ be specified.
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorecase_go">
 <a href="#ignorecase_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Case</a>
@@ -15839,8 +14628,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_go">
 <a href="#metadatafilters_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Filters</a>
@@ -15860,8 +14648,7 @@ here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_go">
 <a href="#prefixmatch_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
@@ -15872,8 +14659,7 @@ Structure is documented below.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparametermatches_go">
 <a href="#queryparametermatches_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Matches</a>
@@ -15884,8 +14670,7 @@ must be set.
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_go">
 <a href="#regexmatch_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match</a>
@@ -15897,13 +14682,11 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fullpathmatch_nodejs">
 <a href="#fullpathmatch_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path<wbr>Match</a>
@@ -15916,8 +14699,7 @@ match the value specified in fullPathMatch after removing any query parameters
 and anchor that may be part of the original URL. FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headermatches_nodejs">
 <a href="#headermatches_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Matches</a>
@@ -15928,8 +14710,7 @@ be specified.
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorecase_nodejs">
 <a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
@@ -15939,8 +14720,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatafilters_nodejs">
 <a href="#metadatafilters_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Filters</a>
@@ -15960,8 +14740,7 @@ here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_nodejs">
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
@@ -15972,8 +14751,7 @@ Structure is documented below.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryparametermatches_nodejs">
 <a href="#queryparametermatches_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Matches</a>
@@ -15984,8 +14762,7 @@ must be set.
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_nodejs">
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
@@ -15997,13 +14774,11 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="full_path_match_python">
 <a href="#full_path_match_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path_<wbr>match</a>
@@ -16016,8 +14791,7 @@ match the value specified in fullPathMatch after removing any query parameters
 and anchor that may be part of the original URL. FullPathMatch must be between 1
 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_matches_python">
 <a href="#header_matches_python" style="color: inherit; text-decoration: inherit;">header_<wbr>matches</a>
@@ -16028,8 +14802,7 @@ be specified.
     <dd>{{% md %}}Specifies a list of header match criteria, all of which must match corresponding
 headers in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_case_python">
 <a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
@@ -16039,8 +14812,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_filters_python">
 <a href="#metadata_filters_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>filters</a>
@@ -16060,8 +14832,7 @@ here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_match_python">
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
@@ -16072,8 +14843,7 @@ Structure is documented below.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_parameter_matches_python">
 <a href="#query_parameter_matches_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>matches</a>
@@ -16084,8 +14854,7 @@ must be set.
     <dd>{{% md %}}Specifies a list of query parameter match criteria, all of which must match
 corresponding query parameters in the request.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_match_python">
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
@@ -16097,15 +14866,13 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulematchruleheadermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -16114,8 +14881,7 @@ exactMatch and regexMatch must be set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exactmatch_csharp">
 <a href="#exactmatch_csharp" style="color: inherit; text-decoration: inherit;">Exact<wbr>Match</a>
@@ -16126,8 +14892,7 @@ exactMatch and regexMatch must be set.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invertmatch_csharp">
 <a href="#invertmatch_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Match</a>
@@ -16138,8 +14903,7 @@ must be set.
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_csharp">
 <a href="#prefixmatch_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
@@ -16150,8 +14914,7 @@ match criteria above are NOT met. Defaults to false.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presentmatch_csharp">
 <a href="#presentmatch_csharp" style="color: inherit; text-decoration: inherit;">Present<wbr>Match</a>
@@ -16162,8 +14925,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangematch_csharp">
 <a href="#rangematch_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Match</a>
@@ -16178,8 +14940,7 @@ not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_csharp">
 <a href="#regexmatch_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match</a>
@@ -16191,8 +14952,7 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suffixmatch_csharp">
 <a href="#suffixmatch_csharp" style="color: inherit; text-decoration: inherit;">Suffix<wbr>Match</a>
@@ -16203,13 +14963,11 @@ exactMatch and regexMatch must be set.
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -16218,8 +14976,7 @@ must be set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exactmatch_go">
 <a href="#exactmatch_go" style="color: inherit; text-decoration: inherit;">Exact<wbr>Match</a>
@@ -16230,8 +14987,7 @@ must be set.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invertmatch_go">
 <a href="#invertmatch_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Match</a>
@@ -16242,8 +14998,7 @@ must be set.
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_go">
 <a href="#prefixmatch_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
@@ -16254,8 +15009,7 @@ match criteria above are NOT met. Defaults to false.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presentmatch_go">
 <a href="#presentmatch_go" style="color: inherit; text-decoration: inherit;">Present<wbr>Match</a>
@@ -16266,8 +15020,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangematch_go">
 <a href="#rangematch_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Match</a>
@@ -16282,8 +15035,7 @@ not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_go">
 <a href="#regexmatch_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match</a>
@@ -16295,8 +15047,7 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suffixmatch_go">
 <a href="#suffixmatch_go" style="color: inherit; text-decoration: inherit;">Suffix<wbr>Match</a>
@@ -16307,13 +15058,11 @@ exactMatch and regexMatch must be set.
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -16322,8 +15071,7 @@ must be set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exactmatch_nodejs">
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
@@ -16334,8 +15082,7 @@ must be set.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invertmatch_nodejs">
 <a href="#invertmatch_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Match</a>
@@ -16346,8 +15093,7 @@ must be set.
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_nodejs">
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
@@ -16358,8 +15104,7 @@ match criteria above are NOT met. Defaults to false.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presentmatch_nodejs">
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
@@ -16370,8 +15115,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangematch_nodejs">
 <a href="#rangematch_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Match</a>
@@ -16386,8 +15130,7 @@ not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_nodejs">
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
@@ -16399,8 +15142,7 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suffixmatch_nodejs">
 <a href="#suffixmatch_nodejs" style="color: inherit; text-decoration: inherit;">suffix<wbr>Match</a>
@@ -16411,13 +15153,11 @@ exactMatch and regexMatch must be set.
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -16426,8 +15166,7 @@ must be set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exact_match_python">
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
@@ -16438,8 +15177,7 @@ must be set.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invert_match_python">
 <a href="#invert_match_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>match</a>
@@ -16450,8 +15188,7 @@ must be set.
     <dd>{{% md %}}If set to false, the headerMatch is considered a match if the match criteria
 above are met. If set to true, the headerMatch is considered a match if the
 match criteria above are NOT met. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_match_python">
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
@@ -16462,8 +15199,7 @@ match criteria above are NOT met. Defaults to false.
     <dd>{{% md %}}The value of the header must start with the contents of prefixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="present_match_python">
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
@@ -16474,8 +15210,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="range_match_python">
 <a href="#range_match_python" style="color: inherit; text-decoration: inherit;">range_<wbr>match</a>
@@ -16490,8 +15225,7 @@ not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_match_python">
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
@@ -16503,8 +15237,7 @@ Structure is documented below.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suffix_match_python">
 <a href="#suffix_match_python" style="color: inherit; text-decoration: inherit;">suffix_<wbr>match</a>
@@ -16515,15 +15248,13 @@ exactMatch and regexMatch must be set.
     <dd>{{% md %}}The value of the header must end with the contents of suffixMatch. Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
 must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulematchruleheadermatchrangematch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rangeend_csharp">
 <a href="#rangeend_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>End</a>
@@ -16532,8 +15263,7 @@ must be set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rangestart_csharp">
 <a href="#rangestart_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Start</a>
@@ -16542,13 +15272,11 @@ must be set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rangeend_go">
 <a href="#rangeend_go" style="color: inherit; text-decoration: inherit;">Range<wbr>End</a>
@@ -16557,8 +15285,7 @@ must be set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rangestart_go">
 <a href="#rangestart_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Start</a>
@@ -16567,13 +15294,11 @@ must be set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rangeend_nodejs">
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
@@ -16582,8 +15307,7 @@ must be set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rangestart_nodejs">
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
@@ -16592,13 +15316,11 @@ must be set.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_end_python">
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
@@ -16607,8 +15329,7 @@ must be set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end of the range (exclusive).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_start_python">
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
@@ -16617,15 +15338,13 @@ must be set.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start of the range (inclusive).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulematchrulemetadatafilter">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterlabels_csharp">
 <a href="#filterlabels_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Labels</a>
@@ -16637,8 +15356,7 @@ must be set.
 based on filterMatchCriteria  This list must not be empty and can have at the
 most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtermatchcriteria_csharp">
 <a href="#filtermatchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
@@ -16653,13 +15371,11 @@ provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterlabels_go">
 <a href="#filterlabels_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Labels</a>
@@ -16671,8 +15387,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 based on filterMatchCriteria  This list must not be empty and can have at the
 most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtermatchcriteria_go">
 <a href="#filtermatchcriteria_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Match<wbr>Criteria</a>
@@ -16687,13 +15402,11 @@ provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filterlabels_nodejs">
 <a href="#filterlabels_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Labels</a>
@@ -16705,8 +15418,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 based on filterMatchCriteria  This list must not be empty and can have at the
 most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filtermatchcriteria_nodejs">
 <a href="#filtermatchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Match<wbr>Criteria</a>
@@ -16721,13 +15433,11 @@ provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_labels_python">
 <a href="#filter_labels_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>labels</a>
@@ -16739,8 +15449,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 based on filterMatchCriteria  This list must not be empty and can have at the
 most 64 entries.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filter_match_criteria_python">
 <a href="#filter_match_criteria_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>match_<wbr>criteria</a>
@@ -16755,15 +15464,13 @@ provided metadata.
 - MATCH_ALL: All filterLabels must have matching labels in
 the provided metadata.
 Possible values are `MATCH_ALL` and `MATCH_ANY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulematchrulemetadatafilterfilterlabel">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -16773,8 +15480,7 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -16784,13 +15490,11 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -16800,8 +15504,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -16811,13 +15514,11 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -16827,8 +15528,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -16838,13 +15538,11 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -16854,8 +15552,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -16865,15 +15562,13 @@ request, in the absence of which the request match fails.
     </dt>
     <dd>{{% md %}}The value of the label must match the specified value. value can have a maximum
 length of 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulematchrulequeryparametermatch">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -16883,8 +15578,7 @@ length of 1024 characters.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exactmatch_csharp">
 <a href="#exactmatch_csharp" style="color: inherit; text-decoration: inherit;">Exact<wbr>Match</a>
@@ -16895,8 +15589,7 @@ request, in the absence of which the request match fails.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presentmatch_csharp">
 <a href="#presentmatch_csharp" style="color: inherit; text-decoration: inherit;">Present<wbr>Match</a>
@@ -16907,8 +15600,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_csharp">
 <a href="#regexmatch_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match</a>
@@ -16920,13 +15612,11 @@ presentMatch, exactMatch and regexMatch must be set.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -16936,8 +15626,7 @@ exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exactmatch_go">
 <a href="#exactmatch_go" style="color: inherit; text-decoration: inherit;">Exact<wbr>Match</a>
@@ -16948,8 +15637,7 @@ request, in the absence of which the request match fails.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presentmatch_go">
 <a href="#presentmatch_go" style="color: inherit; text-decoration: inherit;">Present<wbr>Match</a>
@@ -16960,8 +15648,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_go">
 <a href="#regexmatch_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>Match</a>
@@ -16973,13 +15660,11 @@ presentMatch, exactMatch and regexMatch must be set.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -16989,8 +15674,7 @@ exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exactmatch_nodejs">
 <a href="#exactmatch_nodejs" style="color: inherit; text-decoration: inherit;">exact<wbr>Match</a>
@@ -17001,8 +15685,7 @@ request, in the absence of which the request match fails.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presentmatch_nodejs">
 <a href="#presentmatch_nodejs" style="color: inherit; text-decoration: inherit;">present<wbr>Match</a>
@@ -17013,8 +15696,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regexmatch_nodejs">
 <a href="#regexmatch_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>Match</a>
@@ -17026,13 +15708,11 @@ presentMatch, exactMatch and regexMatch must be set.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -17042,8 +15722,7 @@ exactMatch and regexMatch must be set.
     </dt>
     <dd>{{% md %}}The name of the query parameter to match. The query parameter must exist in the
 request, in the absence of which the request match fails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exact_match_python">
 <a href="#exact_match_python" style="color: inherit; text-decoration: inherit;">exact_<wbr>match</a>
@@ -17054,8 +15733,7 @@ request, in the absence of which the request match fails.
     <dd>{{% md %}}The queryParameterMatch matches if the value of the parameter exactly matches
 the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch
 must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="present_match_python">
 <a href="#present_match_python" style="color: inherit; text-decoration: inherit;">present_<wbr>match</a>
@@ -17066,8 +15744,7 @@ must be set.
     <dd>{{% md %}}Specifies that the queryParameterMatch matches if the request contains the query
 parameter, irrespective of whether the parameter has a value or not. Only one of
 presentMatch, exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regex_match_python">
 <a href="#regex_match_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>match</a>
@@ -17079,15 +15756,13 @@ presentMatch, exactMatch and regexMatch must be set.
 regular expression specified by regexMatch. For the regular expression grammar,
 please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of presentMatch,
 exactMatch and regexMatch must be set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_csharp">
 <a href="#corspolicy_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -17098,8 +15773,7 @@ exactMatch and regexMatch must be set.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_csharp">
 <a href="#faultinjectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -17113,8 +15787,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_csharp">
 <a href="#requestmirrorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -17126,8 +15799,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_csharp">
 <a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -17137,8 +15809,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -17150,8 +15821,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_csharp">
 <a href="#urlrewrite_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -17161,8 +15831,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_csharp">
 <a href="#weightedbackendservices_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -17178,13 +15847,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_go">
 <a href="#corspolicy_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Policy</a>
@@ -17195,8 +15862,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_go">
 <a href="#faultinjectionpolicy_go" style="color: inherit; text-decoration: inherit;">Fault<wbr>Injection<wbr>Policy</a>
@@ -17210,8 +15876,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_go">
 <a href="#requestmirrorpolicy_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Mirror<wbr>Policy</a>
@@ -17223,8 +15888,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_go">
 <a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
@@ -17234,8 +15898,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -17247,8 +15910,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_go">
 <a href="#urlrewrite_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite</a>
@@ -17258,8 +15920,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_go">
 <a href="#weightedbackendservices_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Backend<wbr>Services</a>
@@ -17275,13 +15936,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corspolicy_nodejs">
 <a href="#corspolicy_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Policy</a>
@@ -17292,8 +15951,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="faultinjectionpolicy_nodejs">
 <a href="#faultinjectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">fault<wbr>Injection<wbr>Policy</a>
@@ -17307,8 +15965,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmirrorpolicy_nodejs">
 <a href="#requestmirrorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Mirror<wbr>Policy</a>
@@ -17320,8 +15977,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retrypolicy_nodejs">
 <a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
@@ -17331,8 +15987,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -17344,8 +15999,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewrite_nodejs">
 <a href="#urlrewrite_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite</a>
@@ -17355,8 +16009,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedbackendservices_nodejs">
 <a href="#weightedbackendservices_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Backend<wbr>Services</a>
@@ -17372,13 +16025,11 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_policy_python">
 <a href="#cors_policy_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>policy</a>
@@ -17389,8 +16040,7 @@ Structure is documented below.
     <dd>{{% md %}}The specification for allowing client side cross-origin requests. Please see
 [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fault_injection_policy_python">
 <a href="#fault_injection_policy_python" style="color: inherit; text-decoration: inherit;">fault_<wbr>injection_<wbr>policy</a>
@@ -17404,8 +16054,7 @@ percentage of requests before sending those request to the backend service. Simi
 by the Loadbalancer for a percentage of requests.
 timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_mirror_policy_python">
 <a href="#request_mirror_policy_python" style="color: inherit; text-decoration: inherit;">request_<wbr>mirror_<wbr>policy</a>
@@ -17417,8 +16066,7 @@ Structure is documented below.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
 the host / authority header is suffixed with -shadow.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_policy_python">
 <a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
@@ -17428,8 +16076,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies the retry policy associated with this route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -17441,8 +16088,7 @@ Structure is documented below.
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 If not specified, will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_rewrite_python">
 <a href="#url_rewrite_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite</a>
@@ -17452,8 +16098,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The spec to modify the URL of the request, prior to forwarding the request to the matched service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_backend_services_python">
 <a href="#weighted_backend_services_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>backend_<wbr>services</a>
@@ -17469,15 +16114,13 @@ Once a backendService is identified and before forwarding the request to the bac
 advanced routing actions like Url rewrites and header transformations are applied depending on
 additional settings specified in this HttpRouteAction.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactioncorspolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -17487,8 +16130,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_csharp">
 <a href="#allowheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -17497,8 +16139,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_csharp">
 <a href="#allowmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -17507,8 +16148,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_csharp">
 <a href="#alloworiginregexes_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -17519,8 +16159,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_csharp">
 <a href="#alloworigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -17530,8 +16169,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -17540,8 +16178,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_csharp">
 <a href="#exposeheaders_csharp" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -17550,8 +16187,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -17561,13 +16197,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -17577,8 +16211,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_go">
 <a href="#allowheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Headers</a>
@@ -17587,8 +16220,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_go">
 <a href="#allowmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Methods</a>
@@ -17597,8 +16229,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_go">
 <a href="#alloworiginregexes_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origin<wbr>Regexes</a>
@@ -17609,8 +16240,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_go">
 <a href="#alloworigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Origins</a>
@@ -17620,8 +16250,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -17630,8 +16259,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_go">
 <a href="#exposeheaders_go" style="color: inherit; text-decoration: inherit;">Expose<wbr>Headers</a>
@@ -17640,8 +16268,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -17651,13 +16278,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -17667,8 +16292,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowheaders_nodejs">
 <a href="#allowheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Headers</a>
@@ -17677,8 +16301,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowmethods_nodejs">
 <a href="#allowmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Methods</a>
@@ -17687,8 +16310,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworiginregexes_nodejs">
 <a href="#alloworiginregexes_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origin<wbr>Regexes</a>
@@ -17699,8 +16321,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloworigins_nodejs">
 <a href="#alloworigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Origins</a>
@@ -17710,8 +16331,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -17720,8 +16340,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exposeheaders_nodejs">
 <a href="#exposeheaders_nodejs" style="color: inherit; text-decoration: inherit;">expose<wbr>Headers</a>
@@ -17730,8 +16349,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -17741,13 +16359,11 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -17757,8 +16373,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
 This translates to the Access-Control-Allow-Credentials header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_headers_python">
 <a href="#allow_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>headers</a>
@@ -17767,8 +16382,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_methods_python">
 <a href="#allow_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>methods</a>
@@ -17777,8 +16391,7 @@ This translates to the Access-Control-Allow-Credentials header.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Allow-Methods header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origin_regexes_python">
 <a href="#allow_origin_regexes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origin_<wbr>regexes</a>
@@ -17789,8 +16402,7 @@ This translates to the Access-Control-Allow-Credentials header.
     <dd>{{% md %}}Specifies the regular expression patterns that match allowed origins. For regular expression grammar
 please see en.cppreference.com/w/cpp/regex/ecmascript
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_origins_python">
 <a href="#allow_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>origins</a>
@@ -17800,8 +16412,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies the list of origins that will be allowed to do CORS requests.
 An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -17810,8 +16421,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, specifies the CORS policy is disabled. The default value is false, which indicates that the CORS policy is in effect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expose_headers_python">
 <a href="#expose_headers_python" style="color: inherit; text-decoration: inherit;">expose_<wbr>headers</a>
@@ -17820,8 +16430,7 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the content for the Access-Control-Expose-Headers header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -17831,15 +16440,13 @@ An origin is allowed if it matches either an item in allowOrigins or an item in 
     </dt>
     <dd>{{% md %}}Specifies how long results of a preflight request can be cached in seconds.
 This translates to the Access-Control-Max-Age header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionfaultinjectionpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_csharp">
 <a href="#abort_csharp" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -17849,8 +16456,7 @@ This translates to the Access-Control-Max-Age header.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
 <a href="#delay_csharp" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -17860,13 +16466,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_go">
 <a href="#abort_go" style="color: inherit; text-decoration: inherit;">Abort</a>
@@ -17876,8 +16480,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_go">
 <a href="#delay_go" style="color: inherit; text-decoration: inherit;">Delay</a>
@@ -17887,13 +16490,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_nodejs">
 <a href="#abort_nodejs" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -17903,8 +16504,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
 <a href="#delay_nodejs" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -17914,13 +16514,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="abort_python">
 <a href="#abort_python" style="color: inherit; text-decoration: inherit;">abort</a>
@@ -17930,8 +16528,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are aborted as part of fault injection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delay_python">
 <a href="#delay_python" style="color: inherit; text-decoration: inherit;">delay</a>
@@ -17941,15 +16538,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_csharp">
 <a href="#httpstatus_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -17959,8 +16554,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -17970,13 +16564,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_go">
 <a href="#httpstatus_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Status</a>
@@ -17986,8 +16578,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -17997,13 +16588,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpstatus_nodejs">
 <a href="#httpstatus_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Status</a>
@@ -18013,8 +16602,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -18024,13 +16612,11 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="http_status_python">
 <a href="#http_status_python" style="color: inherit; text-decoration: inherit;">http_<wbr>status</a>
@@ -18040,8 +16626,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}The HTTP status code used to abort the request.
 The value must be between 200 and 599 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -18051,15 +16636,13 @@ The value must be between 200 and 599 inclusive.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_csharp">
 <a href="#fixeddelay_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -18069,8 +16652,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -18080,13 +16662,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_go">
 <a href="#fixeddelay_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Delay</a>
@@ -18096,8 +16676,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -18107,13 +16686,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_nodejs">
 <a href="#fixeddelay_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Delay</a>
@@ -18123,8 +16700,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -18134,13 +16710,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_delay_python">
 <a href="#fixed_delay_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>delay</a>
@@ -18150,8 +16724,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Specifies the value of the fixed delay interval.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -18161,15 +16734,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -18179,8 +16750,7 @@ The value must be between 0.0 and 100.0 inclusive.
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -18190,13 +16760,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -18206,8 +16774,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -18217,13 +16784,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -18233,8 +16798,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -18244,13 +16808,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -18260,8 +16822,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -18271,15 +16832,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionrequestmirrorpolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -18288,13 +16847,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -18303,13 +16860,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -18318,13 +16873,11 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -18333,15 +16886,13 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionretrypolicy">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="numretries_csharp">
 <a href="#numretries_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -18350,8 +16901,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_csharp">
 <a href="#pertrytimeout_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -18363,8 +16913,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_csharp">
 <a href="#retryconditions_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -18387,13 +16936,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="numretries_go">
 <a href="#numretries_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Retries</a>
@@ -18402,8 +16949,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_go">
 <a href="#pertrytimeout_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Try<wbr>Timeout</a>
@@ -18415,8 +16961,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_go">
 <a href="#retryconditions_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Conditions</a>
@@ -18439,13 +16984,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="numretries_nodejs">
 <a href="#numretries_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Retries</a>
@@ -18454,8 +16997,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pertrytimeout_nodejs">
 <a href="#pertrytimeout_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Try<wbr>Timeout</a>
@@ -18467,8 +17009,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryconditions_nodejs">
 <a href="#retryconditions_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Conditions</a>
@@ -18491,13 +17032,11 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="num_retries_python">
 <a href="#num_retries_python" style="color: inherit; text-decoration: inherit;">num_<wbr>retries</a>
@@ -18506,8 +17045,7 @@ This reset type indicates that it is safe to retry.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_try_timeout_python">
 <a href="#per_try_timeout_python" style="color: inherit; text-decoration: inherit;">per_<wbr>try_<wbr>timeout</a>
@@ -18519,8 +17057,7 @@ This reset type indicates that it is safe to retry.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
 will use the largest timeout among all backend services associated with the route.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_conditions_python">
 <a href="#retry_conditions_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>conditions</a>
@@ -18543,15 +17080,13 @@ This reset type indicates that it is safe to retry.
 * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded
 * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -18561,8 +17096,7 @@ This reset type indicates that it is safe to retry.
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -18572,13 +17106,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -18588,8 +17120,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -18599,13 +17130,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -18615,8 +17144,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -18626,13 +17154,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -18642,8 +17168,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -18653,15 +17178,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactiontimeout">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -18671,8 +17194,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -18682,13 +17204,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -18698,8 +17218,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -18709,13 +17228,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -18725,8 +17242,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -18736,13 +17252,11 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -18752,8 +17266,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.
 Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -18763,15 +17276,13 @@ Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.2
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are
 represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionurlrewrite">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_csharp">
 <a href="#hostrewrite_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -18782,8 +17293,7 @@ represented with a 0 seconds field and a positive nanos field. Must be from 0 to
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_csharp">
 <a href="#pathprefixrewrite_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -18794,13 +17304,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_go">
 <a href="#hostrewrite_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Rewrite</a>
@@ -18811,8 +17319,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_go">
 <a href="#pathprefixrewrite_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix<wbr>Rewrite</a>
@@ -18823,13 +17330,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_nodejs">
 <a href="#hostrewrite_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Rewrite</a>
@@ -18840,8 +17345,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathprefixrewrite_nodejs">
 <a href="#pathprefixrewrite_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix<wbr>Rewrite</a>
@@ -18852,13 +17356,11 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_rewrite_python">
 <a href="#host_rewrite_python" style="color: inherit; text-decoration: inherit;">host_<wbr>rewrite</a>
@@ -18869,8 +17371,7 @@ The value must be between 1 and 1024 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected service, the request's host header is replaced
 with contents of hostRewrite.
 The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_prefix_rewrite_python">
 <a href="#path_prefix_rewrite_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix_<wbr>rewrite</a>
@@ -18881,15 +17382,13 @@ The value must be between 1 and 255 characters.
     <dd>{{% md %}}Prior to forwarding the request to the selected backend service, the matching portion of the
 request's path is replaced by pathPrefixRewrite.
 The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionweightedbackendservice">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -18898,8 +17397,7 @@ The value must be between 1 and 1024 characters.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -18913,8 +17411,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_csharp">
 <a href="#headeraction_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -18927,13 +17424,11 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -18942,8 +17437,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -18957,8 +17451,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_go">
 <a href="#headeraction_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action</a>
@@ -18971,13 +17464,11 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -18986,8 +17477,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -19001,8 +17491,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headeraction_nodejs">
 <a href="#headeraction_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action</a>
@@ -19015,13 +17504,11 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -19030,8 +17517,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL to the BackendService resource being mirrored to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -19045,8 +17531,7 @@ The selection of a backend service is determined only for new traffic. Once a us
 has been directed to a backendService, subsequent requests will be sent to the same backendService
 as determined by the BackendService's session affinity policy.
 The value must be between 0 and 1000
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_action_python">
 <a href="#header_action_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action</a>
@@ -19059,15 +17544,13 @@ the selected backendService.
 headerAction specified here take effect before headerAction in the enclosing
 HttpRouteRule, PathMatcher and UrlMap.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
 <a href="#requestheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -19077,8 +17560,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_csharp">
 <a href="#requestheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -19088,8 +17570,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_csharp">
 <a href="#responseheaderstoadds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -19099,8 +17580,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_csharp">
 <a href="#responseheaderstoremoves_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -19110,13 +17590,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
 <a href="#requestheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -19126,8 +17604,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_go">
 <a href="#requestheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -19137,8 +17614,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_go">
 <a href="#responseheaderstoadds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -19148,8 +17624,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_go">
 <a href="#responseheaderstoremoves_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -19159,13 +17634,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
 <a href="#requestheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -19175,8 +17648,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoremoves_nodejs">
 <a href="#requestheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -19186,8 +17658,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoadds_nodejs">
 <a href="#responseheaderstoadds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Adds</a>
@@ -19197,8 +17668,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderstoremoves_nodejs">
 <a href="#responseheaderstoremoves_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>To<wbr>Removes</a>
@@ -19208,13 +17678,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
 <a href="#request_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -19224,8 +17692,7 @@ response back to the client.
     </dt>
     <dd>{{% md %}}Headers to add to a matching request prior to forwarding the request to the backendService.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_removes_python">
 <a href="#request_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -19235,8 +17702,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the request prior to
 forwarding the request to the backendService.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_adds_python">
 <a href="#response_headers_to_adds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>adds</a>
@@ -19246,8 +17712,7 @@ forwarding the request to the backendService.
     </dt>
     <dd>{{% md %}}Headers to add the response prior to sending the response back to the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_to_removes_python">
 <a href="#response_headers_to_removes_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>to_<wbr>removes</a>
@@ -19257,15 +17722,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -19274,8 +17737,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -19284,8 +17746,7 @@ response back to the client.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -19295,13 +17756,11 @@ response back to the client.
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -19310,8 +17769,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -19320,8 +17778,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -19331,13 +17788,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -19346,8 +17801,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -19356,8 +17810,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -19367,13 +17820,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -19382,8 +17833,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -19392,8 +17842,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -19403,15 +17852,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -19420,8 +17867,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -19430,8 +17876,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_csharp">
 <a href="#replace_csharp" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -19441,13 +17886,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -19456,8 +17899,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -19466,8 +17908,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_go">
 <a href="#replace_go" style="color: inherit; text-decoration: inherit;">Replace</a>
@@ -19477,13 +17918,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -19492,8 +17931,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -19502,8 +17940,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_nodejs">
 <a href="#replace_nodejs" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -19513,13 +17950,11 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -19528,8 +17963,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -19538,8 +17972,7 @@ If true, headerValue is set for the header, discarding any values that were set 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header to add.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replace_python">
 <a href="#replace_python" style="color: inherit; text-decoration: inherit;">replace</a>
@@ -19549,15 +17982,13 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}If false, headerValue is appended to any values that already exist for the header.
 If true, headerValue is set for the header, discarding any values that were set for that header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmappathmatcherrouteruleurlredirect">URLMap<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_csharp">
 <a href="#hostredirect_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -19567,8 +17998,7 @@ If true, headerValue is set for the header, discarding any values that were set 
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_csharp">
 <a href="#httpsredirect_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -19580,8 +18010,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_csharp">
 <a href="#pathredirect_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -19594,8 +18023,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_csharp">
 <a href="#prefixredirect_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -19608,8 +18036,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_csharp">
 <a href="#redirectresponsecode_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -19625,8 +18052,7 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stripquery_csharp">
 <a href="#stripquery_csharp" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -19638,13 +18064,11 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_go">
 <a href="#hostredirect_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Redirect</a>
@@ -19654,8 +18078,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_go">
 <a href="#httpsredirect_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Redirect</a>
@@ -19667,8 +18090,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_go">
 <a href="#pathredirect_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Redirect</a>
@@ -19681,8 +18103,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_go">
 <a href="#prefixredirect_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Redirect</a>
@@ -19695,8 +18116,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_go">
 <a href="#redirectresponsecode_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Response<wbr>Code</a>
@@ -19712,8 +18132,7 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stripquery_go">
 <a href="#stripquery_go" style="color: inherit; text-decoration: inherit;">Strip<wbr>Query</a>
@@ -19725,13 +18144,11 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostredirect_nodejs">
 <a href="#hostredirect_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Redirect</a>
@@ -19741,8 +18158,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsredirect_nodejs">
 <a href="#httpsredirect_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Redirect</a>
@@ -19754,8 +18170,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pathredirect_nodejs">
 <a href="#pathredirect_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Redirect</a>
@@ -19768,8 +18183,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixredirect_nodejs">
 <a href="#prefixredirect_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Redirect</a>
@@ -19782,8 +18196,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectresponsecode_nodejs">
 <a href="#redirectresponsecode_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Response<wbr>Code</a>
@@ -19799,8 +18212,7 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stripquery_nodejs">
 <a href="#stripquery_nodejs" style="color: inherit; text-decoration: inherit;">strip<wbr>Query</a>
@@ -19812,13 +18224,11 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_redirect_python">
 <a href="#host_redirect_python" style="color: inherit; text-decoration: inherit;">host_<wbr>redirect</a>
@@ -19828,8 +18238,7 @@ This field is required to ensure an empty block is not set. The normal default v
     </dt>
     <dd>{{% md %}}The host that will be used in the redirect response instead of the one that was
 supplied in the request. The value must be between 1 and 255 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_redirect_python">
 <a href="#https_redirect_python" style="color: inherit; text-decoration: inherit;">https_<wbr>redirect</a>
@@ -19841,8 +18250,7 @@ supplied in the request. The value must be between 1 and 255 characters.
 false, the URL scheme of the redirected request will remain the same as that of the
 request. This must only be set for UrlMaps used in TargetHttpProxys. Setting this
 true for TargetHttpsProxy is not permitted. The default is set to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_redirect_python">
 <a href="#path_redirect_python" style="color: inherit; text-decoration: inherit;">path_<wbr>redirect</a>
@@ -19855,8 +18263,7 @@ supplied in the request. pathRedirect cannot be supplied together with
 prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the
 original request will be used for the redirect. The value must be between 1 and 1024
 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_redirect_python">
 <a href="#prefix_redirect_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>redirect</a>
@@ -19869,8 +18276,7 @@ retaining the remaining portion of the URL before redirecting the request.
 prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or
 neither. If neither is supplied, the path of the original request will be used for
 the redirect. The value must be between 1 and 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_response_code_python">
 <a href="#redirect_response_code_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>response_<wbr>code</a>
@@ -19886,8 +18292,7 @@ the redirect. The value must be between 1 and 1024 characters.
 will be retained.
 * PERMANENT_REDIRECT, which corresponds to 308. In this case,
 the request method will be retained.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strip_query_python">
 <a href="#strip_query_python" style="color: inherit; text-decoration: inherit;">strip_<wbr>query</a>
@@ -19899,15 +18304,13 @@ the request method will be retained.
 to redirecting the request. If set to false, the query portion of the original URL is
 retained. The default is set to false.
 This field is required to ensure an empty block is not set. The normal default value is false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="urlmaptest">URLMap<wbr>Test</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -19916,8 +18319,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -19926,8 +18328,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -19936,8 +18337,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -19946,13 +18346,11 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -19961,8 +18359,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -19971,8 +18368,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -19981,8 +18377,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -19991,13 +18386,11 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -20006,8 +18399,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -20016,8 +18408,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -20026,8 +18417,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -20036,13 +18426,11 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -20051,8 +18439,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -20061,8 +18448,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path portion of the URL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -20071,8 +18457,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backend service or backend bucket link that should be matched by this test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -20081,8 +18466,7 @@ This field is required to ensure an empty block is not set. The normal default v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of this test case.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

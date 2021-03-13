@@ -584,8 +584,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementloggerid_csharp">
 <a href="#apimanagementloggerid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Logger<wbr>Id</a>
@@ -594,8 +593,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apimanagementname_csharp">
 <a href="#apimanagementname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -604,8 +602,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apiname_csharp">
 <a href="#apiname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Name</a>
@@ -614,8 +611,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identifier_csharp">
 <a href="#identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -624,8 +620,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -634,8 +629,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayslogerrors_csharp">
 <a href="#alwayslogerrors_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
@@ -644,8 +638,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendrequest_csharp">
 <a href="#backendrequest_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
@@ -654,8 +647,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendresponse_csharp">
 <a href="#backendresponse_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
@@ -664,8 +656,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendrequest_csharp">
 <a href="#frontendrequest_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
@@ -674,8 +665,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendresponse_csharp">
 <a href="#frontendresponse_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
@@ -684,8 +674,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcorrelationprotocol_csharp">
 <a href="#httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -694,8 +683,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logclientip_csharp">
 <a href="#logclientip_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -704,8 +692,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_csharp">
 <a href="#samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -714,8 +701,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_csharp">
 <a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -724,13 +710,11 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementloggerid_go">
 <a href="#apimanagementloggerid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Logger<wbr>Id</a>
@@ -739,8 +723,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apimanagementname_go">
 <a href="#apimanagementname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -749,8 +732,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apiname_go">
 <a href="#apiname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Name</a>
@@ -759,8 +741,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identifier_go">
 <a href="#identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -769,8 +750,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -779,8 +759,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayslogerrors_go">
 <a href="#alwayslogerrors_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
@@ -789,8 +768,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendrequest_go">
 <a href="#backendrequest_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
@@ -799,8 +777,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendresponse_go">
 <a href="#backendresponse_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
@@ -809,8 +786,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendrequest_go">
 <a href="#frontendrequest_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
@@ -819,8 +795,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendresponse_go">
 <a href="#frontendresponse_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
@@ -829,8 +804,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcorrelationprotocol_go">
 <a href="#httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -839,8 +813,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logclientip_go">
 <a href="#logclientip_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -849,8 +822,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_go">
 <a href="#samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -859,8 +831,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_go">
 <a href="#verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -869,13 +840,11 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementloggerid_nodejs">
 <a href="#apimanagementloggerid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Logger<wbr>Id</a>
@@ -884,8 +853,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apimanagementname_nodejs">
 <a href="#apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
@@ -894,8 +862,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="apiname_nodejs">
 <a href="#apiname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Name</a>
@@ -904,8 +871,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identifier_nodejs">
 <a href="#identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -914,8 +880,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -924,8 +889,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayslogerrors_nodejs">
 <a href="#alwayslogerrors_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log<wbr>Errors</a>
@@ -934,8 +898,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendrequest_nodejs">
 <a href="#backendrequest_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Request</a>
@@ -944,8 +907,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backendresponse_nodejs">
 <a href="#backendresponse_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Response</a>
@@ -954,8 +916,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendrequest_nodejs">
 <a href="#frontendrequest_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Request</a>
@@ -964,8 +925,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontendresponse_nodejs">
 <a href="#frontendresponse_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Response</a>
@@ -974,8 +934,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpcorrelationprotocol_nodejs">
 <a href="#httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
@@ -984,8 +943,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logclientip_nodejs">
 <a href="#logclientip_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Client<wbr>Ip</a>
@@ -994,8 +952,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_nodejs">
 <a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
@@ -1004,8 +961,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_nodejs">
 <a href="#verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -1014,13 +970,11 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_management_logger_id_python">
 <a href="#api_management_logger_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>logger_<wbr>id</a>
@@ -1029,8 +983,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="api_management_name_python">
 <a href="#api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
@@ -1039,8 +992,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="api_name_python">
 <a href="#api_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>name</a>
@@ -1049,8 +1001,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identifier_python">
 <a href="#identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -1059,8 +1010,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1069,8 +1019,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="always_log_errors_python">
 <a href="#always_log_errors_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log_<wbr>errors</a>
@@ -1079,8 +1028,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_request_python">
 <a href="#backend_request_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>request</a>
@@ -1089,8 +1037,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_response_python">
 <a href="#backend_response_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>response</a>
@@ -1099,8 +1046,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_request_python">
 <a href="#frontend_request_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>request</a>
@@ -1109,8 +1055,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frontend_response_python">
 <a href="#frontend_response_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>response</a>
@@ -1119,8 +1064,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_correlation_protocol_python">
 <a href="#http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
@@ -1129,8 +1073,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_client_ip_python">
 <a href="#log_client_ip_python" style="color: inherit; text-decoration: inherit;">log_<wbr>client_<wbr>ip</a>
@@ -1139,8 +1082,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_percentage_python">
 <a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
@@ -1149,8 +1091,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verbosity_python">
 <a href="#verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -1159,8 +1100,7 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1171,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1180,13 +1119,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1194,13 +1131,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1208,13 +1143,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1222,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1350,8 +1282,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alwayslogerrors_csharp">
 <a href="#state_alwayslogerrors_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
@@ -1360,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementloggerid_csharp">
 <a href="#state_apimanagementloggerid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Logger<wbr>Id</a>
@@ -1370,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementname_csharp">
 <a href="#state_apimanagementname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -1380,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiname_csharp">
 <a href="#state_apiname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Name</a>
@@ -1390,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendrequest_csharp">
 <a href="#state_backendrequest_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
@@ -1400,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendresponse_csharp">
 <a href="#state_backendresponse_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
@@ -1410,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendrequest_csharp">
 <a href="#state_frontendrequest_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
@@ -1420,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendresponse_csharp">
 <a href="#state_frontendresponse_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
@@ -1430,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcorrelationprotocol_csharp">
 <a href="#state_httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -1440,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_csharp">
 <a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -1450,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logclientip_csharp">
 <a href="#state_logclientip_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -1460,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1470,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingpercentage_csharp">
 <a href="#state_samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -1480,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verbosity_csharp">
 <a href="#state_verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -1490,13 +1408,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alwayslogerrors_go">
 <a href="#state_alwayslogerrors_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
@@ -1505,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementloggerid_go">
 <a href="#state_apimanagementloggerid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Logger<wbr>Id</a>
@@ -1515,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementname_go">
 <a href="#state_apimanagementname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -1525,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiname_go">
 <a href="#state_apiname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Name</a>
@@ -1535,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendrequest_go">
 <a href="#state_backendrequest_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
@@ -1545,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendresponse_go">
 <a href="#state_backendresponse_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
@@ -1555,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendrequest_go">
 <a href="#state_frontendrequest_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
@@ -1565,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendresponse_go">
 <a href="#state_frontendresponse_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
@@ -1575,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcorrelationprotocol_go">
 <a href="#state_httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
@@ -1585,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_go">
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
@@ -1595,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logclientip_go">
 <a href="#state_logclientip_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
@@ -1605,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1615,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingpercentage_go">
 <a href="#state_samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -1625,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verbosity_go">
 <a href="#state_verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
@@ -1635,13 +1538,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alwayslogerrors_nodejs">
 <a href="#state_alwayslogerrors_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log<wbr>Errors</a>
@@ -1650,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementloggerid_nodejs">
 <a href="#state_apimanagementloggerid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Logger<wbr>Id</a>
@@ -1660,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementname_nodejs">
 <a href="#state_apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
@@ -1670,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apiname_nodejs">
 <a href="#state_apiname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Name</a>
@@ -1680,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendrequest_nodejs">
 <a href="#state_backendrequest_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Request</a>
@@ -1690,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backendresponse_nodejs">
 <a href="#state_backendresponse_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Response</a>
@@ -1700,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendrequest_nodejs">
 <a href="#state_frontendrequest_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Request</a>
@@ -1710,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontendresponse_nodejs">
 <a href="#state_frontendresponse_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Response</a>
@@ -1720,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpcorrelationprotocol_nodejs">
 <a href="#state_httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
@@ -1730,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_nodejs">
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -1740,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logclientip_nodejs">
 <a href="#state_logclientip_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Client<wbr>Ip</a>
@@ -1750,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1760,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingpercentage_nodejs">
 <a href="#state_samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
@@ -1770,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verbosity_nodejs">
 <a href="#state_verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -1780,13 +1668,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_always_log_errors_python">
 <a href="#state_always_log_errors_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log_<wbr>errors</a>
@@ -1795,8 +1681,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_management_logger_id_python">
 <a href="#state_api_management_logger_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>logger_<wbr>id</a>
@@ -1805,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID (name) of the Diagnostics Logger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_management_name_python">
 <a href="#state_api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
@@ -1815,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service instance. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_name_python">
 <a href="#state_api_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>name</a>
@@ -1825,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API on which to configure the Diagnostics Logs. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_request_python">
 <a href="#state_backend_request_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>request</a>
@@ -1835,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_response_python">
 <a href="#state_backend_response_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>response</a>
@@ -1845,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `backend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontend_request_python">
 <a href="#state_frontend_request_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>request</a>
@@ -1855,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_request` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frontend_response_python">
 <a href="#state_frontend_response_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>response</a>
@@ -1865,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `frontend_response` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_correlation_protocol_python">
 <a href="#state_http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
@@ -1875,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identifier_python">
 <a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
@@ -1885,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_client_ip_python">
 <a href="#state_log_client_ip_python" style="color: inherit; text-decoration: inherit;">log_<wbr>client_<wbr>ip</a>
@@ -1895,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1905,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sampling_percentage_python">
 <a href="#state_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
@@ -1915,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verbosity_python">
 <a href="#state_verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
@@ -1925,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1941,8 +1813,7 @@ The following state arguments are supported:
 <h4 id="apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_csharp">
 <a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -1951,8 +1822,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -1961,13 +1831,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_go">
 <a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -1976,8 +1844,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -1986,13 +1853,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_nodejs">
 <a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
@@ -2001,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
@@ -2011,13 +1875,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_bytes_python">
 <a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
@@ -2026,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
@@ -2036,15 +1897,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_csharp">
 <a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -2053,8 +1912,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2063,13 +1921,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_go">
 <a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -2078,8 +1934,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2088,13 +1943,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_nodejs">
 <a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
@@ -2103,8 +1956,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
@@ -2113,13 +1965,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_bytes_python">
 <a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
@@ -2128,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
@@ -2138,15 +1987,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_csharp">
 <a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -2155,8 +2002,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2165,13 +2011,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_go">
 <a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -2180,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2190,13 +2033,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_nodejs">
 <a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
@@ -2205,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
@@ -2215,13 +2055,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_bytes_python">
 <a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
@@ -2230,8 +2068,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
@@ -2240,15 +2077,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_csharp">
 <a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -2257,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_csharp">
 <a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2267,13 +2101,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_go">
 <a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
@@ -2282,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_go">
 <a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
@@ -2292,13 +2123,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bodybytes_nodejs">
 <a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
@@ -2307,8 +2136,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerstologs_nodejs">
 <a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
@@ -2317,13 +2145,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="body_bytes_python">
 <a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
@@ -2332,8 +2158,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of payload bytes to log (up to 8192).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_to_logs_python">
 <a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
@@ -2342,8 +2167,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a list of headers to log.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

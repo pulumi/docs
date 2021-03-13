@@ -130,8 +130,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertconfigurationid_csharp">
 <a href="#alertconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Configuration<wbr>Id</a>
@@ -140,8 +139,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the alert configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -150,13 +148,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertconfigurationid_go">
 <a href="#alertconfigurationid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Configuration<wbr>Id</a>
@@ -165,8 +161,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the alert configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -175,13 +170,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertconfigurationid_nodejs">
 <a href="#alertconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Configuration<wbr>Id</a>
@@ -190,8 +183,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the alert configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -200,13 +192,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alert_configuration_id_python">
 <a href="#alert_configuration_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>configuration_<wbr>id</a>
@@ -215,8 +205,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the alert configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -225,8 +214,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project where the alert configuration will create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -239,8 +227,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alertconfigurationid_csharp">
 <a href="#alertconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Configuration<wbr>Id</a>
@@ -248,8 +235,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -258,8 +244,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -268,8 +253,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the alert configuration is enabled. If enabled is not exported it is set to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventtype_csharp">
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -278,8 +262,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -288,8 +271,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="matchers_csharp">
 <a href="#matchers_csharp" style="color: inherit; text-decoration: inherit;">Matchers</a>
@@ -297,8 +279,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmatcher">List&lt;Get<wbr>Alert<wbr>Configuration<wbr>Matcher&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metricthreshold_csharp">
 <a href="#metricthreshold_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Threshold</a>
@@ -306,8 +287,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_csharp">
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -315,8 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationnotification">List&lt;Get<wbr>Alert<wbr>Configuration<wbr>Notification&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -324,8 +303,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -334,8 +312,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getalertconfigurationthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -344,13 +321,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alertconfigurationid_go">
 <a href="#alertconfigurationid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Configuration<wbr>Id</a>
@@ -358,8 +333,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -368,8 +342,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -378,8 +351,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the alert configuration is enabled. If enabled is not exported it is set to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventtype_go">
 <a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -388,8 +360,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -398,8 +369,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="matchers_go">
 <a href="#matchers_go" style="color: inherit; text-decoration: inherit;">Matchers</a>
@@ -407,8 +377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmatcher">[]Get<wbr>Alert<wbr>Configuration<wbr>Matcher</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metricthreshold_go">
 <a href="#metricthreshold_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Threshold</a>
@@ -416,8 +385,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_go">
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -425,8 +393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationnotification">[]Get<wbr>Alert<wbr>Configuration<wbr>Notification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -434,8 +401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -444,8 +410,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getalertconfigurationthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -454,13 +419,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alertconfigurationid_nodejs">
 <a href="#alertconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Configuration<wbr>Id</a>
@@ -468,8 +431,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -478,8 +440,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -488,8 +449,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the alert configuration is enabled. If enabled is not exported it is set to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventtype_nodejs">
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
@@ -498,8 +458,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +467,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="matchers_nodejs">
 <a href="#matchers_nodejs" style="color: inherit; text-decoration: inherit;">matchers</a>
@@ -517,8 +475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmatcher">Get<wbr>Alert<wbr>Configuration<wbr>Matcher[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metricthreshold_nodejs">
 <a href="#metricthreshold_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Threshold</a>
@@ -526,8 +483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_nodejs">
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -535,8 +491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationnotification">Get<wbr>Alert<wbr>Configuration<wbr>Notification[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -544,8 +499,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -554,8 +508,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getalertconfigurationthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -564,13 +517,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alert_configuration_id_python">
 <a href="#alert_configuration_id_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>configuration_<wbr>id</a>
@@ -578,8 +529,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -588,8 +538,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -598,8 +547,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the alert configuration is enabled. If enabled is not exported it is set to false.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="event_type_python">
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
@@ -608,8 +556,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of event that will trigger an alert.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -618,8 +565,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="matchers_python">
 <a href="#matchers_python" style="color: inherit; text-decoration: inherit;">matchers</a>
@@ -627,8 +573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmatcher">Sequence[Get<wbr>Alert<wbr>Configuration<wbr>Matcher]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metric_threshold_python">
 <a href="#metric_threshold_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>threshold</a>
@@ -636,8 +581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notifications_python">
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -645,8 +589,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getalertconfigurationnotification">Sequence[Get<wbr>Alert<wbr>Configuration<wbr>Notification]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -654,8 +597,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -664,8 +606,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getalertconfigurationthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -674,8 +615,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp in ISO 8601 date and time format in UTC when this alert configuration was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -689,8 +629,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -699,8 +638,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -712,8 +650,7 @@ The following output properties are available:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -727,13 +664,11 @@ Accepted values are:
 - `STANDALONE`
 - `CONFIG`
 - `MONGOS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
@@ -742,8 +677,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -755,8 +689,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -770,13 +703,11 @@ Accepted values are:
 - `STANDALONE`
 - `CONFIG`
 - `MONGOS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
@@ -785,8 +716,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -798,8 +728,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -813,13 +742,11 @@ Accepted values are:
 - `STANDALONE`
 - `CONFIG`
 - `MONGOS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_name_python">
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
@@ -828,8 +755,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the field in the target object to match on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -841,8 +767,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -856,8 +781,7 @@ Accepted values are:
 - `STANDALONE`
 - `CONFIG`
 - `MONGOS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</h4>
@@ -865,8 +789,7 @@ Accepted values are:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -875,8 +798,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -885,8 +807,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be set to AVERAGE. Atlas computes the current metric value as an average.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -898,8 +819,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -908,8 +828,7 @@ Accepted values are:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -935,13 +854,11 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -950,8 +867,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -960,8 +876,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be set to AVERAGE. Atlas computes the current metric value as an average.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -973,8 +888,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -983,8 +897,7 @@ Accepted values are:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -1010,13 +923,11 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -1025,8 +936,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1035,8 +945,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This must be set to AVERAGE. Atlas computes the current metric value as an average.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1048,8 +957,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1058,8 +966,7 @@ Accepted values are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
@@ -1085,13 +992,11 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -1100,8 +1005,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metric to check. The full list of current options is available [here](https://docs.atlas.mongodb.com/reference/alert-host-metrics/#measurement-types)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1110,8 +1014,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This must be set to AVERAGE. Atlas computes the current metric value as an average.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1123,8 +1026,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1133,8 +1035,7 @@ Accepted values are:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
@@ -1160,8 +1061,7 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getalertconfigurationnotification">Get<wbr>Alert<wbr>Configuration<wbr>Notification</h4>
@@ -1169,8 +1069,7 @@ Accepted values are:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apitoken_csharp">
 <a href="#apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -1179,8 +1078,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="channelname_csharp">
 <a href="#channelname_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Name</a>
@@ -1189,8 +1087,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel name. Required for the SLACK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadogapikey_csharp">
 <a href="#datadogapikey_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Api<wbr>Key</a>
@@ -1199,8 +1096,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadogregion_csharp">
 <a href="#datadogregion_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Region</a>
@@ -1209,8 +1105,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delaymin_csharp">
 <a href="#delaymin_csharp" style="color: inherit; text-decoration: inherit;">Delay<wbr>Min</a>
@@ -1219,8 +1114,7 @@ Accepted values are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -1229,8 +1123,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address to which alert notifications are sent. Required for the EMAIL notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emailenabled_csharp">
 <a href="#emailenabled_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Enabled</a>
@@ -1239,8 +1132,7 @@ Accepted values are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowname_csharp">
 <a href="#flowname_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Name</a>
@@ -1249,8 +1141,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowdockapitoken_csharp">
 <a href="#flowdockapitoken_csharp" style="color: inherit; text-decoration: inherit;">Flowdock<wbr>Api<wbr>Token</a>
@@ -1259,8 +1150,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intervalmin_csharp">
 <a href="#intervalmin_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Min</a>
@@ -1269,8 +1159,7 @@ Accepted values are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mobilenumber_csharp">
 <a href="#mobilenumber_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Number</a>
@@ -1279,8 +1168,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mobile number to which alert notifications are sent. Required for the SMS notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opsgenieapikey_csharp">
 <a href="#opsgenieapikey_csharp" style="color: inherit; text-decoration: inherit;">Ops<wbr>Genie<wbr>Api<wbr>Key</a>
@@ -1289,8 +1177,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opsgenieregion_csharp">
 <a href="#opsgenieregion_csharp" style="color: inherit; text-decoration: inherit;">Ops<wbr>Genie<wbr>Region</a>
@@ -1299,8 +1186,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orgname_csharp">
 <a href="#orgname_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Name</a>
@@ -1309,8 +1195,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicekey_csharp">
 <a href="#servicekey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Key</a>
@@ -1319,8 +1204,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="smsenabled_csharp">
 <a href="#smsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Enabled</a>
@@ -1329,8 +1213,7 @@ Accepted values are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_csharp">
 <a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -1339,8 +1222,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of a team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typename_csharp">
 <a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1363,8 +1245,7 @@ Accepted values are:
 - `USER`
 - `VICTOR_OPS`
 - `WEBHOOK`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1373,8 +1254,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victoropsapikey_csharp">
 <a href="#victoropsapikey_csharp" style="color: inherit; text-decoration: inherit;">Victor<wbr>Ops<wbr>Api<wbr>Key</a>
@@ -1383,8 +1263,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victoropsroutingkey_csharp">
 <a href="#victoropsroutingkey_csharp" style="color: inherit; text-decoration: inherit;">Victor<wbr>Ops<wbr>Routing<wbr>Key</a>
@@ -1393,8 +1272,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1402,13 +1280,11 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apitoken_go">
 <a href="#apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -1417,8 +1293,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="channelname_go">
 <a href="#channelname_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Name</a>
@@ -1427,8 +1302,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel name. Required for the SLACK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadogapikey_go">
 <a href="#datadogapikey_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Api<wbr>Key</a>
@@ -1437,8 +1311,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadogregion_go">
 <a href="#datadogregion_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Region</a>
@@ -1447,8 +1320,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delaymin_go">
 <a href="#delaymin_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>Min</a>
@@ -1457,8 +1329,7 @@ Accepted values are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -1467,8 +1338,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address to which alert notifications are sent. Required for the EMAIL notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emailenabled_go">
 <a href="#emailenabled_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Enabled</a>
@@ -1477,8 +1347,7 @@ Accepted values are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowname_go">
 <a href="#flowname_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Name</a>
@@ -1487,8 +1356,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowdockapitoken_go">
 <a href="#flowdockapitoken_go" style="color: inherit; text-decoration: inherit;">Flowdock<wbr>Api<wbr>Token</a>
@@ -1497,8 +1365,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intervalmin_go">
 <a href="#intervalmin_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Min</a>
@@ -1507,8 +1374,7 @@ Accepted values are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mobilenumber_go">
 <a href="#mobilenumber_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Number</a>
@@ -1517,8 +1383,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mobile number to which alert notifications are sent. Required for the SMS notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opsgenieapikey_go">
 <a href="#opsgenieapikey_go" style="color: inherit; text-decoration: inherit;">Ops<wbr>Genie<wbr>Api<wbr>Key</a>
@@ -1527,8 +1392,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opsgenieregion_go">
 <a href="#opsgenieregion_go" style="color: inherit; text-decoration: inherit;">Ops<wbr>Genie<wbr>Region</a>
@@ -1537,8 +1401,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orgname_go">
 <a href="#orgname_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Name</a>
@@ -1547,8 +1410,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicekey_go">
 <a href="#servicekey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Key</a>
@@ -1557,8 +1419,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="smsenabled_go">
 <a href="#smsenabled_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Enabled</a>
@@ -1567,8 +1428,7 @@ Accepted values are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_go">
 <a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -1577,8 +1437,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of a team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typename_go">
 <a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
@@ -1601,8 +1460,7 @@ Accepted values are:
 - `USER`
 - `VICTOR_OPS`
 - `WEBHOOK`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1611,8 +1469,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victoropsapikey_go">
 <a href="#victoropsapikey_go" style="color: inherit; text-decoration: inherit;">Victor<wbr>Ops<wbr>Api<wbr>Key</a>
@@ -1621,8 +1478,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victoropsroutingkey_go">
 <a href="#victoropsroutingkey_go" style="color: inherit; text-decoration: inherit;">Victor<wbr>Ops<wbr>Routing<wbr>Key</a>
@@ -1631,8 +1487,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1640,13 +1495,11 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apitoken_nodejs">
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
@@ -1655,8 +1508,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="channelname_nodejs">
 <a href="#channelname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Name</a>
@@ -1665,8 +1517,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel name. Required for the SLACK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadogapikey_nodejs">
 <a href="#datadogapikey_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Api<wbr>Key</a>
@@ -1675,8 +1526,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadogregion_nodejs">
 <a href="#datadogregion_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Region</a>
@@ -1685,8 +1535,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delaymin_nodejs">
 <a href="#delaymin_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>Min</a>
@@ -1695,8 +1544,7 @@ Accepted values are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -1705,8 +1553,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address to which alert notifications are sent. Required for the EMAIL notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="emailenabled_nodejs">
 <a href="#emailenabled_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Enabled</a>
@@ -1715,8 +1562,7 @@ Accepted values are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowname_nodejs">
 <a href="#flowname_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Name</a>
@@ -1725,8 +1571,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowdockapitoken_nodejs">
 <a href="#flowdockapitoken_nodejs" style="color: inherit; text-decoration: inherit;">flowdock<wbr>Api<wbr>Token</a>
@@ -1735,8 +1580,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intervalmin_nodejs">
 <a href="#intervalmin_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Min</a>
@@ -1745,8 +1589,7 @@ Accepted values are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mobilenumber_nodejs">
 <a href="#mobilenumber_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Number</a>
@@ -1755,8 +1598,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mobile number to which alert notifications are sent. Required for the SMS notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opsgenieapikey_nodejs">
 <a href="#opsgenieapikey_nodejs" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Api<wbr>Key</a>
@@ -1765,8 +1607,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opsgenieregion_nodejs">
 <a href="#opsgenieregion_nodejs" style="color: inherit; text-decoration: inherit;">ops<wbr>Genie<wbr>Region</a>
@@ -1775,8 +1616,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="orgname_nodejs">
 <a href="#orgname_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Name</a>
@@ -1785,8 +1625,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicekey_nodejs">
 <a href="#servicekey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Key</a>
@@ -1795,8 +1634,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="smsenabled_nodejs">
 <a href="#smsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Enabled</a>
@@ -1805,8 +1643,7 @@ Accepted values are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_nodejs">
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -1815,8 +1652,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of a team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typename_nodejs">
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
@@ -1839,8 +1675,7 @@ Accepted values are:
 - `USER`
 - `VICTOR_OPS`
 - `WEBHOOK`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1849,8 +1684,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victoropsapikey_nodejs">
 <a href="#victoropsapikey_nodejs" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Api<wbr>Key</a>
@@ -1859,8 +1693,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victoropsroutingkey_nodejs">
 <a href="#victoropsroutingkey_nodejs" style="color: inherit; text-decoration: inherit;">victor<wbr>Ops<wbr>Routing<wbr>Key</a>
@@ -1869,8 +1702,7 @@ Accepted values are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1878,13 +1710,11 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_token_python">
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
@@ -1893,8 +1723,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slack API token. Required for the SLACK notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="channel_name_python">
 <a href="#channel_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>name</a>
@@ -1903,8 +1732,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slack channel name. Required for the SLACK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadog_api_key_python">
 <a href="#datadog_api_key_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>api_<wbr>key</a>
@@ -1913,8 +1741,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Datadog API Key. Found in the Datadog dashboard. Required for the DATADOG notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datadog_region_python">
 <a href="#datadog_region_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>region</a>
@@ -1923,8 +1750,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US`, `EU`. The default Datadog region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="delay_min_python">
 <a href="#delay_min_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>min</a>
@@ -1933,8 +1759,7 @@ Accepted values are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait after an alert condition is detected before sending out the first notification.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -1943,8 +1768,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address to which alert notifications are sent. Required for the EMAIL notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_enabled_python">
 <a href="#email_enabled_python" style="color: inherit; text-decoration: inherit;">email_<wbr>enabled</a>
@@ -1953,8 +1777,7 @@ Accepted values are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if email notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flow_name_python">
 <a href="#flow_name_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>name</a>
@@ -1963,8 +1786,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flowdock flow name in lower-case letters. Required for the `FLOWDOCK` notifications type
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flowdock_api_token_python">
 <a href="#flowdock_api_token_python" style="color: inherit; text-decoration: inherit;">flowdock_<wbr>api_<wbr>token</a>
@@ -1973,8 +1795,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Flowdock personal API token. Required for the `FLOWDOCK` notifications type. If the token later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_min_python">
 <a href="#interval_min_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>min</a>
@@ -1983,8 +1804,7 @@ Accepted values are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait between successive notifications for unacknowledged alerts that are not resolved. The minimum value is 5.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mobile_number_python">
 <a href="#mobile_number_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>number</a>
@@ -1993,8 +1813,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mobile number to which alert notifications are sent. Required for the SMS notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ops_genie_api_key_python">
 <a href="#ops_genie_api_key_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>api_<wbr>key</a>
@@ -2003,8 +1822,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Opsgenie API Key. Required for the `OPS_GENIE` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the token.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ops_genie_region_python">
 <a href="#ops_genie_region_python" style="color: inherit; text-decoration: inherit;">ops_<wbr>genie_<wbr>region</a>
@@ -2013,8 +1831,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region that indicates which API URL to use. Accepted regions are: `US` ,`EU`. The default Opsgenie region is US.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="org_name_python">
 <a href="#org_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>name</a>
@@ -2023,8 +1840,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flowdock organization name in lower-case letters. This is the name that appears after www.flowdock.com/app/ in the URL string. Required for the FLOWDOCK notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_key_python">
 <a href="#service_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>key</a>
@@ -2033,8 +1849,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PagerDuty service key. Required for the PAGER_DUTY notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sms_enabled_python">
 <a href="#sms_enabled_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>enabled</a>
@@ -2043,8 +1858,7 @@ Accepted values are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if text message notifications should be sent. Configurable for `ORG`, `GROUP`, and `USER` notifications types.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="team_id_python">
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -2053,8 +1867,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of a team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_name_python">
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
@@ -2077,8 +1890,7 @@ Accepted values are:
 - `USER`
 - `VICTOR_OPS`
 - `WEBHOOK`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2087,8 +1899,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Atlas user to which to send notifications. Only a user in the project that owns the alert configuration is allowed here. Required for the `USER` notifications type.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victor_ops_api_key_python">
 <a href="#victor_ops_api_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>api_<wbr>key</a>
@@ -2097,8 +1908,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VictorOps API key. Required for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="victor_ops_routing_key_python">
 <a href="#victor_ops_routing_key_python" style="color: inherit; text-decoration: inherit;">victor_<wbr>ops_<wbr>routing_<wbr>key</a>
@@ -2107,8 +1917,7 @@ Accepted values are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VictorOps routing key. Optional for the `VICTOR_OPS` notifications type. If the key later becomes invalid, Atlas sends an email to the project owner and eventually removes the key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -2116,8 +1925,7 @@ Accepted values are:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getalertconfigurationthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Threshold</h4>
@@ -2125,8 +1933,7 @@ Accepted values are:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2138,8 +1945,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2148,8 +1954,7 @@ Accepted values are:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -2175,13 +1980,11 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2193,8 +1996,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2203,8 +2005,7 @@ Accepted values are:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -2230,13 +2031,11 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2248,8 +2047,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2258,8 +2056,7 @@ Accepted values are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
@@ -2285,13 +2082,11 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2303,8 +2098,7 @@ Accepted values are:
 Accepted values are:
 - `GREATER_THAN`
 - `LESS_THAN`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2313,8 +2107,7 @@ Accepted values are:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Threshold value outside of which an alert will be triggered.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
@@ -2340,8 +2133,7 @@ Accepted values are:
 - `MINUTES`
 - `HOURS`
 - `DAYS`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

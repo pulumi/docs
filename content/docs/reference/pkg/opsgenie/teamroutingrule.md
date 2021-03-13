@@ -1,8 +1,8 @@
 
 ---
 title: "TeamRoutingRule"
-title_tag: "Resource TeamRoutingRule | Package opsgenie"
-meta_desc: "Explore the TeamRoutingRule resource of the opsgenie package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Team Routing Rule within Opsgenie."
+title_tag: "opsgenie.TeamRoutingRule"
+meta_desc: "Documentation for the opsgenie.TeamRoutingRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the TeamRoutingRule resource of the opsgenie package, includ
 Manages a Team Routing Rule within Opsgenie.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Opsgenie = Pulumi.Opsgenie;
@@ -91,9 +97,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -165,9 +174,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_opsgenie as opsgenie
@@ -207,9 +219,12 @@ test_team_routing_rule = opsgenie.TeamRoutingRule("testTeamRoutingRule",
     timezone="America/Los_Angeles")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -254,9 +269,16 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TeamRoutingRule Resource {#create}
@@ -281,9 +303,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -291,9 +311,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -301,9 +319,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -311,10 +327,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -340,9 +353,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -350,9 +361,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -360,9 +369,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -370,9 +377,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -380,18 +385,13 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -399,9 +399,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -409,9 +407,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -419,10 +415,7 @@ const testTeamRoutingRule = new opsgenie.TeamRoutingRule("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -437,9 +430,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notifies_csharp">
 <a href="#notifies_csharp" style="color: inherit; text-decoration: inherit;">Notifies</a>
@@ -448,8 +439,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulenotify">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Notify<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_csharp">
 <a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -458,8 +448,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_csharp">
 <a href="#criterias_csharp" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -468,8 +457,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulecriteria">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -478,8 +466,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -488,8 +475,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerestrictions_csharp">
 <a href="#timerestrictions_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -497,8 +483,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -507,14 +492,11 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notifies_go">
 <a href="#notifies_go" style="color: inherit; text-decoration: inherit;">Notifies</a>
@@ -523,8 +505,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulenotify">[]Team<wbr>Routing<wbr>Rule<wbr>Notify</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_go">
 <a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -533,8 +514,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_go">
 <a href="#criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -543,8 +523,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulecriteria">[]Team<wbr>Routing<wbr>Rule<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -553,8 +532,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -563,8 +541,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerestrictions_go">
 <a href="#timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -572,8 +549,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">[]Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -582,14 +558,11 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notifies_nodejs">
 <a href="#notifies_nodejs" style="color: inherit; text-decoration: inherit;">notifies</a>
@@ -598,8 +571,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulenotify">Team<wbr>Routing<wbr>Rule<wbr>Notify[]</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_nodejs">
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -608,8 +580,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_nodejs">
 <a href="#criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -618,8 +589,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulecriteria">Team<wbr>Routing<wbr>Rule<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -628,8 +598,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -638,8 +607,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerestrictions_nodejs">
 <a href="#timerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Restrictions</a>
@@ -647,8 +615,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -657,14 +624,11 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="notifies_python">
 <a href="#notifies_python" style="color: inherit; text-decoration: inherit;">notifies</a>
@@ -673,8 +637,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulenotify">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Notify<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="team_id_python">
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -683,8 +646,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_python">
 <a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -693,8 +655,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#teamroutingrulecriteria">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -703,8 +664,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -713,8 +673,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_restrictions_python">
 <a href="#time_restrictions_python" style="color: inherit; text-decoration: inherit;">time_<wbr>restrictions</a>
@@ -722,8 +681,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -732,8 +690,7 @@ The TeamRoutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -744,9 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -754,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -769,14 +721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -784,14 +733,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -799,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -927,9 +872,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_csharp">
 <a href="#state_criterias_csharp" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -938,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteria">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -948,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifies_csharp">
 <a href="#state_notifies_csharp" style="color: inherit; text-decoration: inherit;">Notifies</a>
@@ -958,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulenotify">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Notify<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_csharp">
 <a href="#state_order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -968,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_csharp">
 <a href="#state_teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -978,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerestrictions_csharp">
 <a href="#state_timerestrictions_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -987,8 +925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_csharp">
 <a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -997,14 +934,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_go">
 <a href="#state_criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -1013,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteria">[]Team<wbr>Routing<wbr>Rule<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1023,8 +956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifies_go">
 <a href="#state_notifies_go" style="color: inherit; text-decoration: inherit;">Notifies</a>
@@ -1033,8 +965,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulenotify">[]Team<wbr>Routing<wbr>Rule<wbr>Notify</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_go">
 <a href="#state_order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1043,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_go">
 <a href="#state_teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -1053,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerestrictions_go">
 <a href="#state_timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -1062,8 +991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">[]Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_go">
 <a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -1072,14 +1000,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_nodejs">
 <a href="#state_criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -1088,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteria">Team<wbr>Routing<wbr>Rule<wbr>Criteria[]</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1098,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifies_nodejs">
 <a href="#state_notifies_nodejs" style="color: inherit; text-decoration: inherit;">notifies</a>
@@ -1108,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulenotify">Team<wbr>Routing<wbr>Rule<wbr>Notify[]</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_nodejs">
 <a href="#state_order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1118,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_nodejs">
 <a href="#state_teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -1128,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerestrictions_nodejs">
 <a href="#state_timerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Restrictions</a>
@@ -1137,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_nodejs">
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1147,14 +1066,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_python">
 <a href="#state_criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -1163,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteria">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}You can refer Criteria for detailed information about criteria and its fields
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1173,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifies_python">
 <a href="#state_notifies_python" style="color: inherit; text-decoration: inherit;">notifies</a>
@@ -1183,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulenotify">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Notify<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Target entity of schedule, escalation, or the reserved word none which will be notified in routing rule. The possible values for notify type : schedule, escalation, none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_python">
 <a href="#state_order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1193,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order of the team routing rule within the rules. order value is actually the index of the team routing rule whose minimum value is 0 and whose maximum value is n-1 (number of team routing rules is n)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_team_id_python">
 <a href="#state_team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -1203,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the team owning the routing rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_restrictions_python">
 <a href="#state_time_restrictions_python" style="color: inherit; text-decoration: inherit;">time_<wbr>restrictions</a>
@@ -1212,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestriction">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_python">
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1222,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timezone of team routing rule. If timezone field is not given, account timezone is used as default.You can refer to Supported Locale IDs for available timezones
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1238,9 +1147,7 @@ The following state arguments are supported:
 <h4 id="teamroutingrulecriteria">Team<wbr>Routing<wbr>Rule<wbr>Criteria</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1249,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the operation will be applied on conditions. Should be one of match-all, match-any-condition or match-all-conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1259,14 +1165,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteriacondition">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of conditions will be checked before applying team routing rule. This field declaration should be omitted if the criteria type is set to match-all.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1275,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the operation will be applied on conditions. Should be one of match-all, match-any-condition or match-all-conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1285,14 +1187,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteriacondition">[]Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}List of conditions will be checked before applying team routing rule. This field declaration should be omitted if the criteria type is set to match-all.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1301,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the operation will be applied on conditions. Should be one of match-all, match-any-condition or match-all-conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1311,14 +1209,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteriacondition">Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}List of conditions will be checked before applying team routing rule. This field declaration should be omitted if the criteria type is set to match-all.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1327,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the operation will be applied on conditions. Should be one of match-all, match-any-condition or match-all-conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1337,16 +1231,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#teamroutingrulecriteriacondition">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of conditions will be checked before applying team routing rule. This field declaration should be omitted if the criteria type is set to match-all.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="teamroutingrulecriteriacondition">Team<wbr>Routing<wbr>Rule<wbr>Criteria<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1355,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are message, alias, description, source, entity, tags, actions, extra-properties, recipients, teams or priority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1365,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are matches, contains, starts-with, ends-with, equals, contains-key, contains-value, greater-than, less-than, is-empty and equals-ignore-whitespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_csharp">
 <a href="#expectedvalue_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -1374,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1384,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If field is set as extra-properties, key could be used for key-value pair.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_csharp">
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
@@ -1394,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1404,14 +1290,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1420,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are message, alias, description, source, entity, tags, actions, extra-properties, recipients, teams or priority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1430,8 +1312,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are matches, contains, starts-with, ends-with, equals, contains-key, contains-value, greater-than, less-than, is-empty and equals-ignore-whitespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_go">
 <a href="#expectedvalue_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -1439,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1449,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If field is set as extra-properties, key could be used for key-value pair.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_go">
 <a href="#not_go" style="color: inherit; text-decoration: inherit;">Not</a>
@@ -1459,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1469,14 +1347,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1485,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are message, alias, description, source, entity, tags, actions, extra-properties, recipients, teams or priority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1495,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are matches, contains, starts-with, ends-with, equals, contains-key, contains-value, greater-than, less-than, is-empty and equals-ignore-whitespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_nodejs">
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
@@ -1504,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1514,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If field is set as extra-properties, key could be used for key-value pair.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_nodejs">
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
@@ -1524,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1534,14 +1404,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1550,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which alert field will be used in condition. Possible values are message, alias, description, source, entity, tags, actions, extra-properties, recipients, teams or priority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1560,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}It is the operation that will be executed for the given field and key. Possible operations are matches, contains, starts-with, ends-with, equals, contains-key, contains-value, greater-than, less-than, is-empty and equals-ignore-whitespace.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_value_python">
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
@@ -1569,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1579,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If field is set as extra-properties, key could be used for key-value pair.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not__python">
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
@@ -1589,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1599,16 +1461,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="teamroutingrulenotify">Team<wbr>Routing<wbr>Rule<wbr>Notify</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1616,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1626,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Team Routing Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1636,14 +1493,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1651,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1661,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Team Routing Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1671,14 +1523,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1686,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1696,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Team Routing Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1706,14 +1553,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1721,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1731,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Opsgenie Team Routing Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1741,16 +1583,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the team routing rule
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="teamroutingruletimerestriction">Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1758,8 +1597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_csharp">
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -1767,14 +1605,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestrictionrestriction">List&lt;Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1782,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_go">
 <a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -1791,14 +1625,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestrictionrestriction">[]Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1806,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -1815,14 +1645,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestrictionrestriction">Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1830,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_python">
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -1839,16 +1665,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#teamroutingruletimerestrictionrestriction">Sequence[Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="teamroutingruletimerestrictionrestriction">Team<wbr>Routing<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endday_csharp">
 <a href="#endday_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Day</a>
@@ -1856,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_csharp">
 <a href="#endhour_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Hour</a>
@@ -1865,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endmin_csharp">
 <a href="#endmin_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Min</a>
@@ -1874,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startday_csharp">
 <a href="#startday_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Day</a>
@@ -1883,8 +1703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_csharp">
 <a href="#starthour_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
@@ -1892,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startmin_csharp">
 <a href="#startmin_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Min</a>
@@ -1901,14 +1719,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endday_go">
 <a href="#endday_go" style="color: inherit; text-decoration: inherit;">End<wbr>Day</a>
@@ -1916,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_go">
 <a href="#endhour_go" style="color: inherit; text-decoration: inherit;">End<wbr>Hour</a>
@@ -1925,8 +1739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endmin_go">
 <a href="#endmin_go" style="color: inherit; text-decoration: inherit;">End<wbr>Min</a>
@@ -1934,8 +1747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startday_go">
 <a href="#startday_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Day</a>
@@ -1943,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_go">
 <a href="#starthour_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
@@ -1952,8 +1763,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startmin_go">
 <a href="#startmin_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Min</a>
@@ -1961,14 +1771,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endday_nodejs">
 <a href="#endday_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Day</a>
@@ -1976,8 +1783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_nodejs">
 <a href="#endhour_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Hour</a>
@@ -1985,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endmin_nodejs">
 <a href="#endmin_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Min</a>
@@ -1994,8 +1799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startday_nodejs">
 <a href="#startday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Day</a>
@@ -2003,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_nodejs">
 <a href="#starthour_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour</a>
@@ -2012,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startmin_nodejs">
 <a href="#startmin_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Min</a>
@@ -2021,14 +1823,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_day_python">
 <a href="#end_day_python" style="color: inherit; text-decoration: inherit;">end_<wbr>day</a>
@@ -2036,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_hour_python">
 <a href="#end_hour_python" style="color: inherit; text-decoration: inherit;">end_<wbr>hour</a>
@@ -2045,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_min_python">
 <a href="#end_min_python" style="color: inherit; text-decoration: inherit;">end_<wbr>min</a>
@@ -2054,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_day_python">
 <a href="#start_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>day</a>
@@ -2063,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_hour_python">
 <a href="#start_hour_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour</a>
@@ -2072,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_min_python">
 <a href="#start_min_python" style="color: inherit; text-decoration: inherit;">start_<wbr>min</a>
@@ -2081,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

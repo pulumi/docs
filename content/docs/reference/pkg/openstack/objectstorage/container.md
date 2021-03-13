@@ -581,8 +581,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerread_csharp">
 <a href="#containerread_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
@@ -594,8 +593,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containersynckey_csharp">
 <a href="#containersynckey_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
@@ -605,8 +603,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containersyncto_csharp">
 <a href="#containersyncto_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
@@ -616,8 +613,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerwrite_csharp">
 <a href="#containerwrite_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
@@ -627,8 +623,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -638,8 +633,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -648,8 +642,7 @@ updates the MIME type.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -659,8 +652,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -670,8 +662,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -682,8 +673,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_csharp">
 <a href="#versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -692,13 +682,11 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Pulumi.<wbr>Open<wbr>Stack.<wbr>Object<wbr>Storage.<wbr>Inputs.<wbr>Container<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerread_go">
 <a href="#containerread_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
@@ -710,8 +698,7 @@ creates a new container.
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containersynckey_go">
 <a href="#containersynckey_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
@@ -721,8 +708,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containersyncto_go">
 <a href="#containersyncto_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
@@ -732,8 +718,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerwrite_go">
 <a href="#containerwrite_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
@@ -743,8 +728,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -754,8 +738,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -764,8 +747,7 @@ updates the MIME type.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -775,8 +757,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -786,8 +767,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -798,8 +778,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_go">
 <a href="#versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -808,13 +787,11 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerread_nodejs">
 <a href="#containerread_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Read</a>
@@ -826,8 +803,7 @@ creates a new container.
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containersynckey_nodejs">
 <a href="#containersynckey_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>Key</a>
@@ -837,8 +813,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containersyncto_nodejs">
 <a href="#containersyncto_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>To</a>
@@ -848,8 +823,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerwrite_nodejs">
 <a href="#containerwrite_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Write</a>
@@ -859,8 +833,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -870,8 +843,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -880,8 +852,7 @@ updates the MIME type.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -891,8 +862,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -902,8 +872,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -914,8 +883,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_nodejs">
 <a href="#versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -924,13 +892,11 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="container_read_python">
 <a href="#container_read_python" style="color: inherit; text-decoration: inherit;">container_<wbr>read</a>
@@ -942,8 +908,7 @@ creates a new container.
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_sync_key_python">
 <a href="#container_sync_key_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>key</a>
@@ -953,8 +918,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_sync_to_python">
 <a href="#container_sync_to_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>to</a>
@@ -964,8 +928,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_write_python">
 <a href="#container_write_python" style="color: inherit; text-decoration: inherit;">container_<wbr>write</a>
@@ -975,8 +938,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -986,8 +948,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -996,8 +957,7 @@ updates the MIME type.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1007,8 +967,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1018,8 +977,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1030,8 +988,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioning_python">
 <a href="#versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1040,8 +997,7 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1052,8 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1061,13 +1016,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1075,13 +1028,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1089,13 +1040,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1103,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1231,8 +1179,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerread_csharp">
 <a href="#state_containerread_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
@@ -1244,8 +1191,7 @@ The following state arguments are supported:
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containersynckey_csharp">
 <a href="#state_containersynckey_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
@@ -1255,8 +1201,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containersyncto_csharp">
 <a href="#state_containersyncto_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
@@ -1266,8 +1211,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerwrite_csharp">
 <a href="#state_containerwrite_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
@@ -1277,8 +1221,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
 <a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1288,8 +1231,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1298,8 +1240,7 @@ updates the MIME type.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1309,8 +1250,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1320,8 +1260,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1332,8 +1271,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_csharp">
 <a href="#state_versioning_csharp" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -1342,13 +1280,11 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Pulumi.<wbr>Open<wbr>Stack.<wbr>Object<wbr>Storage.<wbr>Inputs.<wbr>Container<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerread_go">
 <a href="#state_containerread_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Read</a>
@@ -1360,8 +1296,7 @@ creates a new container.
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containersynckey_go">
 <a href="#state_containersynckey_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>Key</a>
@@ -1371,8 +1306,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containersyncto_go">
 <a href="#state_containersyncto_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Sync<wbr>To</a>
@@ -1382,8 +1316,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerwrite_go">
 <a href="#state_containerwrite_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Write</a>
@@ -1393,8 +1326,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
 <a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1404,8 +1336,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1414,8 +1345,7 @@ updates the MIME type.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1425,8 +1355,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1436,8 +1365,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1448,8 +1376,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_go">
 <a href="#state_versioning_go" style="color: inherit; text-decoration: inherit;">Versioning</a>
@@ -1458,13 +1385,11 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerread_nodejs">
 <a href="#state_containerread_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Read</a>
@@ -1476,8 +1401,7 @@ creates a new container.
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containersynckey_nodejs">
 <a href="#state_containersynckey_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>Key</a>
@@ -1487,8 +1411,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containersyncto_nodejs">
 <a href="#state_containersyncto_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Sync<wbr>To</a>
@@ -1498,8 +1421,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerwrite_nodejs">
 <a href="#state_containerwrite_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Write</a>
@@ -1509,8 +1431,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -1520,8 +1441,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -1530,8 +1450,7 @@ updates the MIME type.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1541,8 +1460,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1552,8 +1470,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1564,8 +1481,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_nodejs">
 <a href="#state_versioning_nodejs" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1574,13 +1490,11 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_read_python">
 <a href="#state_container_read_python" style="color: inherit; text-decoration: inherit;">container_<wbr>read</a>
@@ -1592,8 +1506,7 @@ creates a new container.
 read access. This header can contain a comma-delimited list of users that
 can read the container (allows the GET method for all objects in the
 container). Changing this updates the access control list read access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_sync_key_python">
 <a href="#state_container_sync_key_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>key</a>
@@ -1603,8 +1516,7 @@ container). Changing this updates the access control list read access.
     </dt>
     <dd>{{% md %}}The secret key for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_sync_to_python">
 <a href="#state_container_sync_to_python" style="color: inherit; text-decoration: inherit;">container_<wbr>sync_<wbr>to</a>
@@ -1614,8 +1526,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}The destination for container synchronization.
 Changing this updates container synchronization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_write_python">
 <a href="#state_container_write_python" style="color: inherit; text-decoration: inherit;">container_<wbr>write</a>
@@ -1625,8 +1536,7 @@ Changing this updates container synchronization.
     </dt>
     <dd>{{% md %}}Sets an ACL that grants write access.
 Changing this updates the access control list write access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1636,8 +1546,7 @@ Changing this updates the access control list write access.
     </dt>
     <dd>{{% md %}}The MIME type for the container. Changing this
 updates the MIME type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -1646,8 +1555,7 @@ updates the MIME type.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all objects should be deleted from the container so that the container can be destroyed without error. These objects are not recoverable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1657,8 +1565,7 @@ updates the MIME type.
     </dt>
     <dd>{{% md %}}Custom key/value pairs to associate with the container.
 Changing this updates the existing container metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1668,8 +1575,7 @@ Changing this updates the existing container metadata.
     </dt>
     <dd>{{% md %}}A unique name for the container. Changing this creates a
 new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1680,8 +1586,7 @@ new container.
     <dd>{{% md %}}The region in which to create the container. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioning_python">
 <a href="#state_versioning_python" style="color: inherit; text-decoration: inherit;">versioning</a>
@@ -1690,8 +1595,7 @@ creates a new container.
         <span class="property-type"><a href="#containerversioning">Container<wbr>Versioning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enable object versioning. The structure is described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1706,8 +1610,7 @@ creates a new container.
 <h4 id="containerversioning">Container<wbr>Versioning</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1716,8 +1619,7 @@ creates a new container.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container in which versions will be stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1726,13 +1628,11 @@ creates a new container.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1741,8 +1641,7 @@ creates a new container.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container in which versions will be stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1751,13 +1650,11 @@ creates a new container.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1766,8 +1663,7 @@ creates a new container.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container in which versions will be stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1776,13 +1672,11 @@ creates a new container.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1791,8 +1685,7 @@ creates a new container.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container in which versions will be stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1801,8 +1694,7 @@ creates a new container.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Versioning type which can be `versions` or `history` according to [Openstack documentation](https://docs.openstack.org/swift/latest/api/object_versioning.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

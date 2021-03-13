@@ -352,8 +352,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiesconfig_csharp">
 <a href="#cookiesconfig_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
@@ -362,8 +361,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headersconfig_csharp">
 <a href="#headersconfig_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
@@ -372,8 +370,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringsconfig_csharp">
 <a href="#querystringsconfig_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
@@ -382,8 +379,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -392,8 +388,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -402,8 +397,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -412,13 +406,11 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiesconfig_go">
 <a href="#cookiesconfig_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
@@ -427,8 +419,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headersconfig_go">
 <a href="#headersconfig_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
@@ -437,8 +428,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringsconfig_go">
 <a href="#querystringsconfig_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
@@ -447,8 +437,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -457,8 +446,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -467,8 +455,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -477,13 +464,11 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiesconfig_nodejs">
 <a href="#cookiesconfig_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Config</a>
@@ -492,8 +477,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headersconfig_nodejs">
 <a href="#headersconfig_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>Config</a>
@@ -502,8 +486,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystringsconfig_nodejs">
 <a href="#querystringsconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings<wbr>Config</a>
@@ -512,8 +495,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -522,8 +504,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -532,8 +513,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -542,13 +522,11 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_config_python">
 <a href="#cookies_config_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>config</a>
@@ -557,8 +535,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="headers_config_python">
 <a href="#headers_config_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>config</a>
@@ -567,8 +544,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_strings_config_python">
 <a href="#query_strings_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings_<wbr>config</a>
@@ -577,8 +553,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -587,8 +562,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -597,8 +571,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +580,7 @@ The OriginRequestPolicy resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -619,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -628,13 +599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -642,13 +611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -656,13 +623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -798,8 +762,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
 <a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -808,8 +771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookiesconfig_csharp">
 <a href="#state_cookiesconfig_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
@@ -818,8 +780,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -828,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headersconfig_csharp">
 <a href="#state_headersconfig_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
@@ -838,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -848,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystringsconfig_csharp">
 <a href="#state_querystringsconfig_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
@@ -858,13 +816,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
 <a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -873,8 +829,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookiesconfig_go">
 <a href="#state_cookiesconfig_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Config</a>
@@ -883,8 +838,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -893,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headersconfig_go">
 <a href="#state_headersconfig_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>Config</a>
@@ -903,8 +856,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -913,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystringsconfig_go">
 <a href="#state_querystringsconfig_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings<wbr>Config</a>
@@ -923,13 +874,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -938,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookiesconfig_nodejs">
 <a href="#state_cookiesconfig_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Config</a>
@@ -948,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -958,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headersconfig_nodejs">
 <a href="#state_headersconfig_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>Config</a>
@@ -968,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -978,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystringsconfig_nodejs">
 <a href="#state_querystringsconfig_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings<wbr>Config</a>
@@ -988,13 +932,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1003,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comment to describe the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookies_config_python">
 <a href="#state_cookies_config_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>config</a>
@@ -1013,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1023,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headers_config_python">
 <a href="#state_headers_config_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>config</a>
@@ -1033,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1043,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name to identify the origin request policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_strings_config_python">
 <a href="#state_query_strings_config_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings_<wbr>config</a>
@@ -1053,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query Strings Config for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1069,8 +1005,7 @@ The following state arguments are supported:
 <h4 id="originrequestpolicycookiesconfig">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiebehavior_csharp">
 <a href="#cookiebehavior_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
@@ -1078,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_csharp">
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -1087,13 +1021,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiebehavior_go">
 <a href="#cookiebehavior_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Behavior</a>
@@ -1101,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_go">
 <a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -1110,13 +1041,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookiebehavior_nodejs">
 <a href="#cookiebehavior_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Behavior</a>
@@ -1124,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_nodejs">
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -1133,13 +1061,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookie_behavior_python">
 <a href="#cookie_behavior_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>behavior</a>
@@ -1147,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_python">
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -1156,15 +1081,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="originrequestpolicycookiesconfigcookies">Origin<wbr>Request<wbr>Policy<wbr>Cookies<wbr>Config<wbr>Cookies</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1172,13 +1095,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1186,13 +1107,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1200,13 +1119,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1214,15 +1131,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="originrequestpolicyheadersconfig">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headerbehavior_csharp">
 <a href="#headerbehavior_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
@@ -1230,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1239,13 +1153,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headerbehavior_go">
 <a href="#headerbehavior_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Behavior</a>
@@ -1253,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1262,13 +1173,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="headerbehavior_nodejs">
 <a href="#headerbehavior_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Behavior</a>
@@ -1276,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1285,13 +1193,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_behavior_python">
 <a href="#header_behavior_python" style="color: inherit; text-decoration: inherit;">header_<wbr>behavior</a>
@@ -1299,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1308,15 +1213,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="originrequestpolicyheadersconfigheaders">Origin<wbr>Request<wbr>Policy<wbr>Headers<wbr>Config<wbr>Headers</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1324,13 +1227,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1338,13 +1239,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1352,13 +1251,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1366,15 +1263,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="originrequestpolicyquerystringsconfig">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystringbehavior_csharp">
 <a href="#querystringbehavior_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
@@ -1382,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystrings_csharp">
 <a href="#querystrings_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -1391,13 +1285,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystringbehavior_go">
 <a href="#querystringbehavior_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Behavior</a>
@@ -1405,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystrings_go">
 <a href="#querystrings_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Strings</a>
@@ -1414,13 +1305,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querystringbehavior_nodejs">
 <a href="#querystringbehavior_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Behavior</a>
@@ -1428,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystrings_nodejs">
 <a href="#querystrings_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Strings</a>
@@ -1437,13 +1325,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_string_behavior_python">
 <a href="#query_string_behavior_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>behavior</a>
@@ -1451,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_strings_python">
 <a href="#query_strings_python" style="color: inherit; text-decoration: inherit;">query_<wbr>strings</a>
@@ -1460,15 +1345,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="originrequestpolicyquerystringsconfigquerystrings">Origin<wbr>Request<wbr>Policy<wbr>Query<wbr>Strings<wbr>Config<wbr>Query<wbr>Strings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1476,13 +1359,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1490,13 +1371,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1504,13 +1383,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1518,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

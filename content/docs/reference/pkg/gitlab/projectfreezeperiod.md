@@ -273,8 +273,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="freezeend_csharp">
 <a href="#freezeend_csharp" style="color: inherit; text-decoration: inherit;">Freeze<wbr>End</a>
@@ -283,8 +282,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="freezestart_csharp">
 <a href="#freezestart_csharp" style="color: inherit; text-decoration: inherit;">Freeze<wbr>Start</a>
@@ -293,8 +291,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -303,8 +300,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crontimezone_csharp">
 <a href="#crontimezone_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timezone</a>
@@ -313,13 +309,11 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="freezeend_go">
 <a href="#freezeend_go" style="color: inherit; text-decoration: inherit;">Freeze<wbr>End</a>
@@ -328,8 +322,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="freezestart_go">
 <a href="#freezestart_go" style="color: inherit; text-decoration: inherit;">Freeze<wbr>Start</a>
@@ -338,8 +331,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -348,8 +340,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crontimezone_go">
 <a href="#crontimezone_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timezone</a>
@@ -358,13 +349,11 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="freezeend_nodejs">
 <a href="#freezeend_nodejs" style="color: inherit; text-decoration: inherit;">freeze<wbr>End</a>
@@ -373,8 +362,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="freezestart_nodejs">
 <a href="#freezestart_nodejs" style="color: inherit; text-decoration: inherit;">freeze<wbr>Start</a>
@@ -383,8 +371,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -393,8 +380,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crontimezone_nodejs">
 <a href="#crontimezone_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Timezone</a>
@@ -403,13 +389,11 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="freeze_end_python">
 <a href="#freeze_end_python" style="color: inherit; text-decoration: inherit;">freeze_<wbr>end</a>
@@ -418,8 +402,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="freeze_start_python">
 <a href="#freeze_start_python" style="color: inherit; text-decoration: inherit;">freeze_<wbr>start</a>
@@ -428,8 +411,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -438,8 +420,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cron_timezone_python">
 <a href="#cron_timezone_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>timezone</a>
@@ -448,8 +429,7 @@ The ProjectFreezePeriod resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -460,8 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -469,13 +448,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -483,13 +460,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -497,13 +472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -511,8 +484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -639,8 +611,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_crontimezone_csharp">
 <a href="#state_crontimezone_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timezone</a>
@@ -649,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freezeend_csharp">
 <a href="#state_freezeend_csharp" style="color: inherit; text-decoration: inherit;">Freeze<wbr>End</a>
@@ -659,8 +629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freezestart_csharp">
 <a href="#state_freezestart_csharp" style="color: inherit; text-decoration: inherit;">Freeze<wbr>Start</a>
@@ -669,8 +638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -679,13 +647,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_crontimezone_go">
 <a href="#state_crontimezone_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timezone</a>
@@ -694,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freezeend_go">
 <a href="#state_freezeend_go" style="color: inherit; text-decoration: inherit;">Freeze<wbr>End</a>
@@ -704,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freezestart_go">
 <a href="#state_freezestart_go" style="color: inherit; text-decoration: inherit;">Freeze<wbr>Start</a>
@@ -714,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -724,13 +687,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_crontimezone_nodejs">
 <a href="#state_crontimezone_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Timezone</a>
@@ -739,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freezeend_nodejs">
 <a href="#state_freezeend_nodejs" style="color: inherit; text-decoration: inherit;">freeze<wbr>End</a>
@@ -749,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freezestart_nodejs">
 <a href="#state_freezestart_nodejs" style="color: inherit; text-decoration: inherit;">freeze<wbr>Start</a>
@@ -759,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -769,13 +727,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cron_timezone_python">
 <a href="#state_cron_timezone_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>timezone</a>
@@ -784,8 +740,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freeze_end_python">
 <a href="#state_freeze_end_python" style="color: inherit; text-decoration: inherit;">freeze_<wbr>end</a>
@@ -794,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}End of the Freeze Period in cron format (e.g. `0 2 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freeze_start_python">
 <a href="#state_freeze_start_python" style="color: inherit; text-decoration: inherit;">freeze_<wbr>start</a>
@@ -804,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Start of the Freeze Period in cron format (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -814,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the project to add the schedule to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

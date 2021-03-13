@@ -537,8 +537,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -548,8 +547,7 @@ The Registry resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventnotificationconfigs_csharp">
 <a href="#eventnotificationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
@@ -560,8 +558,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfig_csharp">
 <a href="#httpconfig_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
@@ -571,8 +568,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -587,8 +583,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqttconfig_csharp">
 <a href="#mqttconfig_csharp" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
@@ -598,8 +593,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -608,8 +602,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -619,8 +612,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -630,8 +622,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statenotificationconfig_csharp">
 <a href="#statenotificationconfig_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
@@ -641,13 +632,11 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -657,8 +646,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventnotificationconfigs_go">
 <a href="#eventnotificationconfigs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
@@ -669,8 +657,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfig_go">
 <a href="#httpconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
@@ -680,8 +667,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -696,8 +682,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqttconfig_go">
 <a href="#mqttconfig_go" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
@@ -707,8 +692,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -717,8 +701,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -728,8 +711,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -739,8 +721,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statenotificationconfig_go">
 <a href="#statenotificationconfig_go" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
@@ -750,13 +731,11 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -766,8 +745,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventnotificationconfigs_nodejs">
 <a href="#eventnotificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Notification<wbr>Configs</a>
@@ -778,8 +756,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfig_nodejs">
 <a href="#httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
@@ -789,8 +766,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -805,8 +781,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqttconfig_nodejs">
 <a href="#mqttconfig_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Config</a>
@@ -816,8 +791,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -826,8 +800,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -837,8 +810,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -848,8 +820,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statenotificationconfig_nodejs">
 <a href="#statenotificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Notification<wbr>Config</a>
@@ -859,13 +830,11 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -875,8 +844,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_notification_configs_python">
 <a href="#event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
@@ -887,8 +855,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_config_python">
 <a href="#http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
@@ -898,8 +865,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -914,8 +880,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mqtt_config_python">
 <a href="#mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
@@ -925,8 +890,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -935,8 +899,7 @@ The structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -946,8 +909,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -957,8 +919,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_config_python">
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
@@ -968,8 +929,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -980,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -989,13 +948,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1003,13 +960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1017,13 +972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1031,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1159,8 +1111,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_csharp">
 <a href="#state_credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1170,8 +1121,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventnotificationconfigs_csharp">
 <a href="#state_eventnotificationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
@@ -1182,8 +1132,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpconfig_csharp">
 <a href="#state_httpconfig_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
@@ -1193,8 +1142,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_csharp">
 <a href="#state_loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -1209,8 +1157,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqttconfig_csharp">
 <a href="#state_mqttconfig_csharp" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
@@ -1220,8 +1167,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1230,8 +1176,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1241,8 +1186,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1252,8 +1196,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statenotificationconfig_csharp">
 <a href="#state_statenotificationconfig_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
@@ -1263,13 +1206,11 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_go">
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1279,8 +1220,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventnotificationconfigs_go">
 <a href="#state_eventnotificationconfigs_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Notification<wbr>Configs</a>
@@ -1291,8 +1231,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpconfig_go">
 <a href="#state_httpconfig_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Config</a>
@@ -1302,8 +1241,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_go">
 <a href="#state_loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -1318,8 +1256,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqttconfig_go">
 <a href="#state_mqttconfig_go" style="color: inherit; text-decoration: inherit;">Mqtt<wbr>Config</a>
@@ -1329,8 +1266,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1339,8 +1275,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1350,8 +1285,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1361,8 +1295,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statenotificationconfig_go">
 <a href="#state_statenotificationconfig_go" style="color: inherit; text-decoration: inherit;">State<wbr>Notification<wbr>Config</a>
@@ -1372,13 +1305,11 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_nodejs">
 <a href="#state_credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1388,8 +1319,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventnotificationconfigs_nodejs">
 <a href="#state_eventnotificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Notification<wbr>Configs</a>
@@ -1400,8 +1330,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpconfig_nodejs">
 <a href="#state_httpconfig_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Config</a>
@@ -1411,8 +1340,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loglevel_nodejs">
 <a href="#state_loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -1427,8 +1355,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqttconfig_nodejs">
 <a href="#state_mqttconfig_nodejs" style="color: inherit; text-decoration: inherit;">mqtt<wbr>Config</a>
@@ -1438,8 +1365,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1448,8 +1374,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1459,8 +1384,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1470,8 +1394,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statenotificationconfig_nodejs">
 <a href="#state_statenotificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Notification<wbr>Config</a>
@@ -1481,13 +1404,11 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_python">
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1497,8 +1418,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}List of public key certificates to authenticate devices.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_notification_configs_python">
 <a href="#state_event_notification_configs_python" style="color: inherit; text-decoration: inherit;">event_<wbr>notification_<wbr>configs</a>
@@ -1509,8 +1429,7 @@ The structure is documented below.
     <dd>{{% md %}}List of configurations for event notifications, such as PubSub topics
 to publish device events to.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_config_python">
 <a href="#state_http_config_python" style="color: inherit; text-decoration: inherit;">http_<wbr>config</a>
@@ -1520,8 +1439,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Activate or deactivate HTTP.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_level_python">
 <a href="#state_log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -1536,8 +1454,7 @@ errors will be logged. LogLevel is inclusive; enabling INFO logging
 will also enable ERROR logging.
 Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mqtt_config_python">
 <a href="#state_mqtt_config_python" style="color: inherit; text-decoration: inherit;">mqtt_<wbr>config</a>
@@ -1547,8 +1464,7 @@ Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
     </dt>
     <dd>{{% md %}}Activate or deactivate MQTT.
 The structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1557,8 +1473,7 @@ The structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by device registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1568,8 +1483,7 @@ The structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1579,8 +1493,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The region in which the created registry should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_notification_config_python">
 <a href="#state_state_notification_config_python" style="color: inherit; text-decoration: inherit;">state_<wbr>notification_<wbr>config</a>
@@ -1590,8 +1503,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}A PubSub topic to publish device state updates.
 The structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1606,8 +1518,7 @@ The structure is documented below.
 <h4 id="registrycredential">Registry<wbr>Credential</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeycertificate_csharp">
 <a href="#publickeycertificate_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Certificate</a>
@@ -1616,13 +1527,11 @@ The structure is documented below.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeycertificate_go">
 <a href="#publickeycertificate_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Certificate</a>
@@ -1631,13 +1540,11 @@ The structure is documented below.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickeycertificate_nodejs">
 <a href="#publickeycertificate_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Certificate</a>
@@ -1646,13 +1553,11 @@ The structure is documented below.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_key_certificate_python">
 <a href="#public_key_certificate_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>certificate</a>
@@ -1661,15 +1566,13 @@ The structure is documented below.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A public key certificate format and data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="registryeventnotificationconfigitem">Registry<wbr>Event<wbr>Notification<wbr>Config<wbr>Item</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopicname_csharp">
 <a href="#pubsubtopicname_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic<wbr>Name</a>
@@ -1678,8 +1581,7 @@ The structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfoldermatches_csharp">
 <a href="#subfoldermatches_csharp" style="color: inherit; text-decoration: inherit;">Subfolder<wbr>Matches</a>
@@ -1692,13 +1594,11 @@ configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last `event_notification_configs`
 item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopicname_go">
 <a href="#pubsubtopicname_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic<wbr>Name</a>
@@ -1707,8 +1607,7 @@ item.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfoldermatches_go">
 <a href="#subfoldermatches_go" style="color: inherit; text-decoration: inherit;">Subfolder<wbr>Matches</a>
@@ -1721,13 +1620,11 @@ configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last `event_notification_configs`
 item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopicname_nodejs">
 <a href="#pubsubtopicname_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic<wbr>Name</a>
@@ -1736,8 +1633,7 @@ item.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfoldermatches_nodejs">
 <a href="#subfoldermatches_nodejs" style="color: inherit; text-decoration: inherit;">subfolder<wbr>Matches</a>
@@ -1750,13 +1646,11 @@ configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last `event_notification_configs`
 item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsub_topic_name_python">
 <a href="#pubsub_topic_name_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic_<wbr>name</a>
@@ -1765,8 +1659,7 @@ item.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PubSub topic name to publish device events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subfolder_matches_python">
 <a href="#subfolder_matches_python" style="color: inherit; text-decoration: inherit;">subfolder_<wbr>matches</a>
@@ -1779,8 +1672,7 @@ configuration will be used. The string must not include the
 leading '/' character. If empty, all strings are matched. Empty
 value can only be used for the last `event_notification_configs`
 item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

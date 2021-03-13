@@ -271,8 +271,7 @@ The Vip resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolid_csharp">
 <a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -282,8 +281,7 @@ The Vip resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -293,8 +291,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -304,8 +301,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -317,8 +313,7 @@ HTTPS'. Changing this creates a new vip.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -328,8 +323,7 @@ new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -340,8 +334,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connlimit_csharp">
 <a href="#connlimit_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -352,8 +345,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -363,8 +355,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_csharp">
 <a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -374,8 +365,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -385,8 +375,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_csharp">
 <a href="#persistence_csharp" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -397,8 +386,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -410,8 +398,7 @@ the persistence of the existing vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -421,13 +408,11 @@ VIP.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolid_go">
 <a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -437,8 +422,7 @@ create a vip member for another tenant. Changing this creates a new vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -448,8 +432,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -459,8 +442,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -472,8 +454,7 @@ HTTPS'. Changing this creates a new vip.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -483,8 +464,7 @@ new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -495,8 +475,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connlimit_go">
 <a href="#connlimit_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -507,8 +486,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -518,8 +496,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_go">
 <a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -529,8 +506,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -540,8 +516,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_go">
 <a href="#persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -552,8 +527,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -565,8 +539,7 @@ the persistence of the existing vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -576,13 +549,11 @@ VIP.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolid_nodejs">
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -592,8 +563,7 @@ create a vip member for another tenant. Changing this creates a new vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -603,8 +573,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -614,8 +583,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -627,8 +595,7 @@ HTTPS'. Changing this creates a new vip.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -638,8 +605,7 @@ new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -650,8 +616,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connlimit_nodejs">
 <a href="#connlimit_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Limit</a>
@@ -662,8 +627,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -673,8 +637,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floatingip_nodejs">
 <a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
@@ -684,8 +647,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -695,8 +657,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_nodejs">
 <a href="#persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -707,8 +668,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -720,8 +680,7 @@ the persistence of the existing vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -731,13 +690,11 @@ VIP.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pool_id_python">
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -747,8 +704,7 @@ create a vip member for another tenant. Changing this creates a new vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -758,8 +714,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -769,8 +724,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -782,8 +736,7 @@ HTTPS'. Changing this creates a new vip.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -793,8 +746,7 @@ new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -805,8 +757,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conn_limit_python">
 <a href="#conn_limit_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>limit</a>
@@ -817,8 +768,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -828,8 +778,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="floating_ip_python">
 <a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
@@ -839,8 +788,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -850,8 +798,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="persistence_python">
 <a href="#persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -862,8 +809,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -875,8 +821,7 @@ the persistence of the existing vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -886,8 +831,7 @@ VIP.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -898,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -907,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -917,13 +859,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -931,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -941,13 +880,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -955,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -965,13 +901,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -979,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -989,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1117,8 +1049,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1128,8 +1059,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1140,8 +1070,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connlimit_csharp">
 <a href="#state_connlimit_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -1152,8 +1081,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1163,8 +1091,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_csharp">
 <a href="#state_floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -1174,8 +1101,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1185,8 +1111,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_csharp">
 <a href="#state_persistence_csharp" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -1197,8 +1122,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_csharp">
 <a href="#state_poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -1208,8 +1132,7 @@ the persistence of the existing vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1219,8 +1142,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1229,8 +1151,7 @@ this creates a new vip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1240,8 +1161,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1253,8 +1173,7 @@ HTTPS'. Changing this creates a new vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1266,8 +1185,7 @@ VIP.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1277,13 +1195,11 @@ new vip.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1293,8 +1209,7 @@ create a vip member for another tenant. Changing this creates a new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1305,8 +1220,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connlimit_go">
 <a href="#state_connlimit_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Limit</a>
@@ -1317,8 +1231,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1328,8 +1241,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_go">
 <a href="#state_floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -1339,8 +1251,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1350,8 +1261,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_go">
 <a href="#state_persistence_go" style="color: inherit; text-decoration: inherit;">Persistence</a>
@@ -1362,8 +1272,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_go">
 <a href="#state_poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -1373,8 +1282,7 @@ the persistence of the existing vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1384,8 +1292,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1394,8 +1301,7 @@ this creates a new vip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1405,8 +1311,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1418,8 +1323,7 @@ HTTPS'. Changing this creates a new vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1431,8 +1335,7 @@ VIP.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1442,13 +1345,11 @@ new vip.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1458,8 +1359,7 @@ create a vip member for another tenant. Changing this creates a new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1470,8 +1370,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connlimit_nodejs">
 <a href="#state_connlimit_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Limit</a>
@@ -1482,8 +1381,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1493,8 +1391,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_nodejs">
 <a href="#state_floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
@@ -1504,8 +1401,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1515,8 +1411,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_nodejs">
 <a href="#state_persistence_nodejs" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -1527,8 +1422,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_nodejs">
 <a href="#state_poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -1538,8 +1432,7 @@ the persistence of the existing vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1549,8 +1442,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -1559,8 +1451,7 @@ this creates a new vip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1570,8 +1461,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1583,8 +1473,7 @@ HTTPS'. Changing this creates a new vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1596,8 +1485,7 @@ VIP.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1607,13 +1495,11 @@ new vip.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1623,8 +1509,7 @@ create a vip member for another tenant. Changing this creates a new vip.
     </dt>
     <dd>{{% md %}}The IP address of the vip. Changing this creates a new
 vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1635,8 +1520,7 @@ vip.
     <dd>{{% md %}}The administrative state of the vip.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_conn_limit_python">
 <a href="#state_conn_limit_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>limit</a>
@@ -1647,8 +1531,7 @@ state of the existing vip.
     <dd>{{% md %}}The maximum number of connections allowed for the
 vip. Default is -1, meaning no limit. Changing this updates the conn_limit
 of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1658,8 +1541,7 @@ of the existing vip.
     </dt>
     <dd>{{% md %}}Human-readable description for the vip. Changing
 this updates the description of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floating_ip_python">
 <a href="#state_floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
@@ -1669,8 +1551,7 @@ this updates the description of the existing vip.
     </dt>
     <dd>{{% md %}}A *Networking* Floating IP that will be associated
 with the vip. The Floating IP must be provisioned already.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1680,8 +1561,7 @@ with the vip. The Floating IP must be provisioned already.
     </dt>
     <dd>{{% md %}}The name of the vip. Changing this updates the name of
 the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_persistence_python">
 <a href="#state_persistence_python" style="color: inherit; text-decoration: inherit;">persistence</a>
@@ -1692,8 +1572,7 @@ the existing vip.
     <dd>{{% md %}}Omit this field to prevent session persistence.
 The persistence object structure is documented below. Changing this updates
 the persistence of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_id_python">
 <a href="#state_pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -1703,8 +1582,7 @@ the persistence of the existing vip.
     </dt>
     <dd>{{% md %}}The ID of the pool with which the vip is associated.
 Changing this updates the pool_id of the existing vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1714,8 +1592,7 @@ Changing this updates the pool_id of the existing vip.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic. Changing
 this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -1724,8 +1601,7 @@ this creates a new vip.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port UUID for this VIP at associated floating IP (if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1735,8 +1611,7 @@ this creates a new vip.
     </dt>
     <dd>{{% md %}}The protocol - can be either 'TCP, 'HTTP', or
 HTTPS'. Changing this creates a new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1748,8 +1623,7 @@ HTTPS'. Changing this creates a new vip.
 A Networking client is needed to create a VIP. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 VIP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1761,8 +1635,7 @@ VIP.
 tenant can only create vips on networks authorized by policy (e.g. networks
 that belong to them or networks that are shared). Changing this creates a
 new vip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1772,8 +1645,7 @@ new vip.
     </dt>
     <dd>{{% md %}}The owner of the vip. Required if admin wants to
 create a vip member for another tenant. Changing this creates a new vip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

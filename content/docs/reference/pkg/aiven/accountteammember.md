@@ -172,8 +172,7 @@ The AccountTeamMember resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -182,8 +181,7 @@ The AccountTeamMember resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_csharp">
 <a href="#teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -192,8 +190,7 @@ The AccountTeamMember resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="useremail_csharp">
 <a href="#useremail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
@@ -203,8 +200,7 @@ The AccountTeamMember resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepted_csharp">
 <a href="#accepted_csharp" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -215,8 +211,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -225,8 +220,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invitedbyuseremail_csharp">
 <a href="#invitedbyuseremail_csharp" style="color: inherit; text-decoration: inherit;">Invited<wbr>By<wbr>User<wbr>Email</a>
@@ -235,13 +229,11 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -250,8 +242,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_go">
 <a href="#teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -260,8 +251,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="useremail_go">
 <a href="#useremail_go" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
@@ -271,8 +261,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepted_go">
 <a href="#accepted_go" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -283,8 +272,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -293,8 +281,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invitedbyuseremail_go">
 <a href="#invitedbyuseremail_go" style="color: inherit; text-decoration: inherit;">Invited<wbr>By<wbr>User<wbr>Email</a>
@@ -303,13 +290,11 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -318,8 +303,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="teamid_nodejs">
 <a href="#teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -328,8 +312,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="useremail_nodejs">
 <a href="#useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
@@ -339,8 +322,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepted_nodejs">
 <a href="#accepted_nodejs" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -351,8 +333,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -361,8 +342,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invitedbyuseremail_nodejs">
 <a href="#invitedbyuseremail_nodejs" style="color: inherit; text-decoration: inherit;">invited<wbr>By<wbr>User<wbr>Email</a>
@@ -371,13 +351,11 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -386,8 +364,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="team_id_python">
 <a href="#team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -396,8 +373,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_email_python">
 <a href="#user_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email</a>
@@ -407,8 +383,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepted_python">
 <a href="#accepted_python" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -419,8 +394,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -429,8 +403,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invited_by_user_email_python">
 <a href="#invited_by_user_email_python" style="color: inherit; text-decoration: inherit;">invited_<wbr>by_<wbr>user_<wbr>email</a>
@@ -439,8 +412,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -451,8 +423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -460,13 +431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -474,13 +443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -488,13 +455,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -502,8 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -630,8 +594,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_csharp">
 <a href="#state_accepted_csharp" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -642,8 +605,7 @@ The following state arguments are supported:
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -652,8 +614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -662,8 +623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invitedbyuseremail_csharp">
 <a href="#state_invitedbyuseremail_csharp" style="color: inherit; text-decoration: inherit;">Invited<wbr>By<wbr>User<wbr>Email</a>
@@ -672,8 +632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_csharp">
 <a href="#state_teamid_csharp" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -682,8 +641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useremail_csharp">
 <a href="#state_useremail_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
@@ -693,13 +651,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_go">
 <a href="#state_accepted_go" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -710,8 +666,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -720,8 +675,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -730,8 +684,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invitedbyuseremail_go">
 <a href="#state_invitedbyuseremail_go" style="color: inherit; text-decoration: inherit;">Invited<wbr>By<wbr>User<wbr>Email</a>
@@ -740,8 +693,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_go">
 <a href="#state_teamid_go" style="color: inherit; text-decoration: inherit;">Team<wbr>Id</a>
@@ -750,8 +702,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useremail_go">
 <a href="#state_useremail_go" style="color: inherit; text-decoration: inherit;">User<wbr>Email</a>
@@ -761,13 +712,11 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_nodejs">
 <a href="#state_accepted_nodejs" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -778,8 +727,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -788,8 +736,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -798,8 +745,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invitedbyuseremail_nodejs">
 <a href="#state_invitedbyuseremail_nodejs" style="color: inherit; text-decoration: inherit;">invited<wbr>By<wbr>User<wbr>Email</a>
@@ -808,8 +754,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_teamid_nodejs">
 <a href="#state_teamid_nodejs" style="color: inherit; text-decoration: inherit;">team<wbr>Id</a>
@@ -818,8 +763,7 @@ he or she becomes a member of a team.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useremail_nodejs">
 <a href="#state_useremail_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Email</a>
@@ -829,13 +773,11 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_python">
 <a href="#state_accepted_python" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -846,8 +788,7 @@ he or she becomes a member of a team.
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
 `true` means that the user accepted the invitation and now a member of an account team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -856,8 +797,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is a unique account id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -866,8 +806,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}time of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invited_by_user_email_python">
 <a href="#state_invited_by_user_email_python" style="color: inherit; text-decoration: inherit;">invited_<wbr>by_<wbr>user_<wbr>email</a>
@@ -876,8 +815,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}team invited by user email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_team_id_python">
 <a href="#state_team_id_python" style="color: inherit; text-decoration: inherit;">team_<wbr>id</a>
@@ -886,8 +824,7 @@ he or she becomes a member of a team.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is an account team id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_email_python">
 <a href="#state_user_email_python" style="color: inherit; text-decoration: inherit;">user_<wbr>email</a>
@@ -897,8 +834,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a user email address that first will be invited, and after accepting an invitation,
 he or she becomes a member of a team.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

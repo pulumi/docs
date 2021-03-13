@@ -280,8 +280,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -291,8 +290,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -303,8 +301,7 @@ Listener. Changing this creates a new Listener.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolport_csharp">
 <a href="#protocolport_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
@@ -314,8 +311,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -325,8 +321,7 @@ Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedcidrs_csharp">
 <a href="#allowedcidrs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
@@ -336,8 +331,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_csharp">
 <a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -347,8 +341,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpoolid_csharp">
 <a href="#defaultpoolid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Id</a>
@@ -358,8 +351,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttlscontainerref_csharp">
 <a href="#defaulttlscontainerref_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Tls<wbr>Container<wbr>Ref</a>
@@ -372,8 +364,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -382,8 +373,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheaders_csharp">
 <a href="#insertheaders_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
@@ -394,8 +384,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -405,8 +394,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -418,8 +406,7 @@ to be unique.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snicontainerrefs_csharp">
 <a href="#snicontainerrefs_csharp" style="color: inherit; text-decoration: inherit;">Sni<wbr>Container<wbr>Refs</a>
@@ -431,8 +418,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -443,8 +429,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutclientdata_csharp">
 <a href="#timeoutclientdata_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Client<wbr>Data</a>
@@ -453,8 +438,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmemberconnect_csharp">
 <a href="#timeoutmemberconnect_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Connect</a>
@@ -463,8 +447,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmemberdata_csharp">
 <a href="#timeoutmemberdata_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Data</a>
@@ -473,8 +456,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeouttcpinspect_csharp">
 <a href="#timeouttcpinspect_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Tcp<wbr>Inspect</a>
@@ -484,13 +466,11 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -500,8 +480,7 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -512,8 +491,7 @@ Listener. Changing this creates a new Listener.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolport_go">
 <a href="#protocolport_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
@@ -523,8 +501,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -534,8 +511,7 @@ Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedcidrs_go">
 <a href="#allowedcidrs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
@@ -545,8 +521,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_go">
 <a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -556,8 +531,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpoolid_go">
 <a href="#defaultpoolid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Id</a>
@@ -567,8 +541,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttlscontainerref_go">
 <a href="#defaulttlscontainerref_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Tls<wbr>Container<wbr>Ref</a>
@@ -581,8 +554,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -591,8 +563,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheaders_go">
 <a href="#insertheaders_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
@@ -603,8 +574,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -614,8 +584,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -627,8 +596,7 @@ to be unique.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snicontainerrefs_go">
 <a href="#snicontainerrefs_go" style="color: inherit; text-decoration: inherit;">Sni<wbr>Container<wbr>Refs</a>
@@ -640,8 +608,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -652,8 +619,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutclientdata_go">
 <a href="#timeoutclientdata_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Client<wbr>Data</a>
@@ -662,8 +628,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmemberconnect_go">
 <a href="#timeoutmemberconnect_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Connect</a>
@@ -672,8 +637,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmemberdata_go">
 <a href="#timeoutmemberdata_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Data</a>
@@ -682,8 +646,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeouttcpinspect_go">
 <a href="#timeouttcpinspect_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Tcp<wbr>Inspect</a>
@@ -693,13 +656,11 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
@@ -709,8 +670,7 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -721,8 +681,7 @@ Listener. Changing this creates a new Listener.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolport_nodejs">
 <a href="#protocolport_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Port</a>
@@ -732,8 +691,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -743,8 +701,7 @@ Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedcidrs_nodejs">
 <a href="#allowedcidrs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Cidrs</a>
@@ -754,8 +711,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_nodejs">
 <a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -765,8 +721,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultpoolid_nodejs">
 <a href="#defaultpoolid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pool<wbr>Id</a>
@@ -776,8 +731,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttlscontainerref_nodejs">
 <a href="#defaulttlscontainerref_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Tls<wbr>Container<wbr>Ref</a>
@@ -790,8 +744,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -800,8 +753,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertheaders_nodejs">
 <a href="#insertheaders_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Headers</a>
@@ -812,8 +764,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -823,8 +774,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -836,8 +786,7 @@ to be unique.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snicontainerrefs_nodejs">
 <a href="#snicontainerrefs_nodejs" style="color: inherit; text-decoration: inherit;">sni<wbr>Container<wbr>Refs</a>
@@ -849,8 +798,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -861,8 +809,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutclientdata_nodejs">
 <a href="#timeoutclientdata_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Client<wbr>Data</a>
@@ -871,8 +818,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmemberconnect_nodejs">
 <a href="#timeoutmemberconnect_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Member<wbr>Connect</a>
@@ -881,8 +827,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutmemberdata_nodejs">
 <a href="#timeoutmemberdata_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Member<wbr>Data</a>
@@ -891,8 +836,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeouttcpinspect_nodejs">
 <a href="#timeouttcpinspect_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Tcp<wbr>Inspect</a>
@@ -902,13 +846,11 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancer_id_python">
 <a href="#loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
@@ -918,8 +860,7 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -930,8 +871,7 @@ Listener. Changing this creates a new Listener.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_port_python">
 <a href="#protocol_port_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>port</a>
@@ -941,8 +881,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -952,8 +891,7 @@ Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_cidrs_python">
 <a href="#allowed_cidrs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>cidrs</a>
@@ -963,8 +901,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_limit_python">
 <a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -974,8 +911,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_pool_id_python">
 <a href="#default_pool_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pool_<wbr>id</a>
@@ -985,8 +921,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_tls_container_ref_python">
 <a href="#default_tls_container_ref_python" style="color: inherit; text-decoration: inherit;">default_<wbr>tls_<wbr>container_<wbr>ref</a>
@@ -999,8 +934,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1009,8 +943,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insert_headers_python">
 <a href="#insert_headers_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>headers</a>
@@ -1021,8 +954,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1032,8 +964,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1045,8 +976,7 @@ to be unique.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sni_container_refs_python">
 <a href="#sni_container_refs_python" style="color: inherit; text-decoration: inherit;">sni_<wbr>container_<wbr>refs</a>
@@ -1058,8 +988,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1070,8 +999,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_client_data_python">
 <a href="#timeout_client_data_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>client_<wbr>data</a>
@@ -1080,8 +1008,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_member_connect_python">
 <a href="#timeout_member_connect_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>member_<wbr>connect</a>
@@ -1090,8 +1017,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_member_data_python">
 <a href="#timeout_member_data_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>member_<wbr>data</a>
@@ -1100,8 +1026,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_tcp_inspect_python">
 <a href="#timeout_tcp_inspect_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>tcp_<wbr>inspect</a>
@@ -1111,8 +1036,7 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1123,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1132,13 +1055,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1146,13 +1067,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1160,13 +1079,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1174,8 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1302,8 +1218,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1313,8 +1228,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedcidrs_csharp">
 <a href="#state_allowedcidrs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
@@ -1324,8 +1238,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_csharp">
 <a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -1335,8 +1248,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpoolid_csharp">
 <a href="#state_defaultpoolid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Id</a>
@@ -1346,8 +1258,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttlscontainerref_csharp">
 <a href="#state_defaulttlscontainerref_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Tls<wbr>Container<wbr>Ref</a>
@@ -1360,8 +1271,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1370,8 +1280,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheaders_csharp">
 <a href="#state_insertheaders_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
@@ -1382,8 +1291,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_csharp">
 <a href="#state_loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -1393,8 +1301,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1404,8 +1311,7 @@ Listener. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1416,8 +1322,7 @@ to be unique.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolport_csharp">
 <a href="#state_protocolport_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
@@ -1427,8 +1332,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1440,8 +1344,7 @@ Changing this creates a new Listener.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snicontainerrefs_csharp">
 <a href="#state_snicontainerrefs_csharp" style="color: inherit; text-decoration: inherit;">Sni<wbr>Container<wbr>Refs</a>
@@ -1453,8 +1356,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1465,8 +1367,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutclientdata_csharp">
 <a href="#state_timeoutclientdata_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Client<wbr>Data</a>
@@ -1475,8 +1376,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmemberconnect_csharp">
 <a href="#state_timeoutmemberconnect_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Connect</a>
@@ -1485,8 +1385,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmemberdata_csharp">
 <a href="#state_timeoutmemberdata_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Data</a>
@@ -1495,8 +1394,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeouttcpinspect_csharp">
 <a href="#state_timeouttcpinspect_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Tcp<wbr>Inspect</a>
@@ -1506,13 +1404,11 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1522,8 +1418,7 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedcidrs_go">
 <a href="#state_allowedcidrs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Cidrs</a>
@@ -1533,8 +1428,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_go">
 <a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -1544,8 +1438,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpoolid_go">
 <a href="#state_defaultpoolid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Id</a>
@@ -1555,8 +1448,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttlscontainerref_go">
 <a href="#state_defaulttlscontainerref_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Tls<wbr>Container<wbr>Ref</a>
@@ -1569,8 +1461,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1579,8 +1470,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheaders_go">
 <a href="#state_insertheaders_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Headers</a>
@@ -1591,8 +1481,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_go">
 <a href="#state_loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Loadbalancer<wbr>Id</a>
@@ -1602,8 +1491,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1613,8 +1501,7 @@ Listener. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1625,8 +1512,7 @@ to be unique.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolport_go">
 <a href="#state_protocolport_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
@@ -1636,8 +1522,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1649,8 +1534,7 @@ Changing this creates a new Listener.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snicontainerrefs_go">
 <a href="#state_snicontainerrefs_go" style="color: inherit; text-decoration: inherit;">Sni<wbr>Container<wbr>Refs</a>
@@ -1662,8 +1546,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1674,8 +1557,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutclientdata_go">
 <a href="#state_timeoutclientdata_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Client<wbr>Data</a>
@@ -1684,8 +1566,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmemberconnect_go">
 <a href="#state_timeoutmemberconnect_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Connect</a>
@@ -1694,8 +1575,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmemberdata_go">
 <a href="#state_timeoutmemberdata_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Member<wbr>Data</a>
@@ -1704,8 +1584,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeouttcpinspect_go">
 <a href="#state_timeouttcpinspect_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Tcp<wbr>Inspect</a>
@@ -1715,13 +1594,11 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1731,8 +1608,7 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedcidrs_nodejs">
 <a href="#state_allowedcidrs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Cidrs</a>
@@ -1742,8 +1618,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_nodejs">
 <a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -1753,8 +1628,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpoolid_nodejs">
 <a href="#state_defaultpoolid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pool<wbr>Id</a>
@@ -1764,8 +1638,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttlscontainerref_nodejs">
 <a href="#state_defaulttlscontainerref_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Tls<wbr>Container<wbr>Ref</a>
@@ -1778,8 +1651,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1788,8 +1660,7 @@ for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertheaders_nodejs">
 <a href="#state_insertheaders_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Headers</a>
@@ -1800,8 +1671,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancerid_nodejs">
 <a href="#state_loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">loadbalancer<wbr>Id</a>
@@ -1811,8 +1681,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1822,8 +1691,7 @@ Listener. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1834,8 +1702,7 @@ to be unique.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolport_nodejs">
 <a href="#state_protocolport_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Port</a>
@@ -1845,8 +1712,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1858,8 +1724,7 @@ Changing this creates a new Listener.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snicontainerrefs_nodejs">
 <a href="#state_snicontainerrefs_nodejs" style="color: inherit; text-decoration: inherit;">sni<wbr>Container<wbr>Refs</a>
@@ -1871,8 +1736,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1883,8 +1747,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutclientdata_nodejs">
 <a href="#state_timeoutclientdata_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Client<wbr>Data</a>
@@ -1893,8 +1756,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmemberconnect_nodejs">
 <a href="#state_timeoutmemberconnect_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Member<wbr>Connect</a>
@@ -1903,8 +1765,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutmemberdata_nodejs">
 <a href="#state_timeoutmemberdata_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Member<wbr>Data</a>
@@ -1913,8 +1774,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeouttcpinspect_nodejs">
 <a href="#state_timeouttcpinspect_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Tcp<wbr>Inspect</a>
@@ -1924,13 +1784,11 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1940,8 +1798,7 @@ TCP packets for content inspection.
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_cidrs_python">
 <a href="#state_allowed_cidrs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>cidrs</a>
@@ -1951,8 +1808,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}A list of CIDR blocks that are permitted to connect to this listener, denying
 all other source addresses. If not present, defaults to allow all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_limit_python">
 <a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -1962,8 +1818,7 @@ all other source addresses. If not present, defaults to allow all.
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_pool_id_python">
 <a href="#state_default_pool_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pool_<wbr>id</a>
@@ -1973,8 +1828,7 @@ for the Listener.
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_tls_container_ref_python">
 <a href="#state_default_tls_container_ref_python" style="color: inherit; text-decoration: inherit;">default_<wbr>tls_<wbr>container_<wbr>ref</a>
@@ -1987,8 +1841,7 @@ container which stores TLS information. This is required if the protocol
 is `TERMINATED_HTTPS`. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1997,8 +1850,7 @@ for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insert_headers_python">
 <a href="#state_insert_headers_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>headers</a>
@@ -2009,8 +1861,7 @@ for more information.
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
 existing listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_id_python">
 <a href="#state_loadbalancer_id_python" style="color: inherit; text-decoration: inherit;">loadbalancer_<wbr>id</a>
@@ -2020,8 +1871,7 @@ existing listener.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2031,8 +1881,7 @@ Listener. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2043,8 +1892,7 @@ to be unique.
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
 new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_port_python">
 <a href="#state_protocol_port_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>port</a>
@@ -2054,8 +1902,7 @@ new Listener.
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2067,8 +1914,7 @@ Changing this creates a new Listener.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sni_container_refs_python">
 <a href="#state_sni_container_refs_python" style="color: inherit; text-decoration: inherit;">sni_<wbr>container_<wbr>refs</a>
@@ -2080,8 +1926,7 @@ Listener.
 containers which store SNI information. See
 [here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
 for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2092,8 +1937,7 @@ for more information.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_client_data_python">
 <a href="#state_timeout_client_data_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>client_<wbr>data</a>
@@ -2102,8 +1946,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_member_connect_python">
 <a href="#state_timeout_member_connect_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>member_<wbr>connect</a>
@@ -2112,8 +1955,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_member_data_python">
 <a href="#state_timeout_member_data_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>member_<wbr>data</a>
@@ -2122,8 +1964,7 @@ other than their own. Changing this creates a new Listener.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_tcp_inspect_python">
 <a href="#state_timeout_tcp_inspect_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>tcp_<wbr>inspect</a>
@@ -2133,8 +1974,7 @@ other than their own. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -337,8 +337,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_csharp">
 <a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -347,8 +346,7 @@ The Index resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_csharp">
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -363,8 +361,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -373,8 +370,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -384,8 +380,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryscope_csharp">
 <a href="#queryscope_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Scope</a>
@@ -396,13 +391,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_go">
 <a href="#collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -411,8 +404,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_go">
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -427,8 +419,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -437,8 +428,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -448,8 +438,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryscope_go">
 <a href="#queryscope_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Scope</a>
@@ -460,13 +449,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_nodejs">
 <a href="#collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -475,8 +462,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_nodejs">
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -491,8 +477,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -501,8 +486,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -512,8 +496,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryscope_nodejs">
 <a href="#queryscope_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Scope</a>
@@ -524,13 +507,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_python">
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -539,8 +520,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_python">
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -555,8 +535,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -565,8 +544,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -576,8 +554,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_scope_python">
 <a href="#query_scope_python" style="color: inherit; text-decoration: inherit;">query_<wbr>scope</a>
@@ -588,8 +565,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -600,8 +576,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -609,8 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -620,13 +594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -645,13 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -659,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,13 +638,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -684,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -695,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -823,8 +787,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collection_csharp">
 <a href="#state_collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -833,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_csharp">
 <a href="#state_database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -843,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_csharp">
 <a href="#state_fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -859,8 +820,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -870,8 +830,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -881,8 +840,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryscope_csharp">
 <a href="#state_queryscope_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Scope</a>
@@ -893,13 +851,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collection_go">
 <a href="#state_collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -908,8 +864,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_go">
 <a href="#state_database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -918,8 +873,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_go">
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -934,8 +888,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -945,8 +898,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -956,8 +908,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryscope_go">
 <a href="#state_queryscope_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Scope</a>
@@ -968,13 +919,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collection_nodejs">
 <a href="#state_collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -983,8 +932,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_nodejs">
 <a href="#state_database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -993,8 +941,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_nodejs">
 <a href="#state_fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -1009,8 +956,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1020,8 +966,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1031,8 +976,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryscope_nodejs">
 <a href="#state_queryscope_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Scope</a>
@@ -1043,13 +987,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collection_python">
 <a href="#state_collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -1058,8 +1000,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_python">
 <a href="#state_database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -1068,8 +1009,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to `"(default)"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_python">
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -1084,8 +1024,7 @@ same direction as that of the last field defined. If the final field
 in a composite index is not directional, the `__name__` will be
 ordered `"ASCENDING"` (unless explicitly specified otherwise).
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1095,8 +1034,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1106,8 +1044,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_scope_python">
 <a href="#state_query_scope_python" style="color: inherit; text-decoration: inherit;">query_<wbr>scope</a>
@@ -1118,8 +1055,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The scope at which a query is run.
 Default value is `COLLECTION`.
 Possible values are `COLLECTION` and `COLLECTION_GROUP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1134,8 +1070,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
 <h4 id="indexfield">Index<wbr>Field</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arrayconfig_csharp">
 <a href="#arrayconfig_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Config</a>
@@ -1146,8 +1081,7 @@ Possible values are `COLLECTION` and `COLLECTION_GROUP`.
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
 Possible values are `CONTAINS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldpath_csharp">
 <a href="#fieldpath_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Path</a>
@@ -1156,8 +1090,7 @@ Possible values are `CONTAINS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1168,13 +1101,11 @@ Possible values are `CONTAINS`.
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arrayconfig_go">
 <a href="#arrayconfig_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Config</a>
@@ -1185,8 +1116,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
 Possible values are `CONTAINS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldpath_go">
 <a href="#fieldpath_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Path</a>
@@ -1195,8 +1125,7 @@ Possible values are `CONTAINS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1207,13 +1136,11 @@ Possible values are `CONTAINS`.
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arrayconfig_nodejs">
 <a href="#arrayconfig_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Config</a>
@@ -1224,8 +1151,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
 Possible values are `CONTAINS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldpath_nodejs">
 <a href="#fieldpath_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Path</a>
@@ -1234,8 +1160,7 @@ Possible values are `CONTAINS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1246,13 +1171,11 @@ Possible values are `CONTAINS`.
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="array_config_python">
 <a href="#array_config_python" style="color: inherit; text-decoration: inherit;">array_<wbr>config</a>
@@ -1263,8 +1186,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
     <dd>{{% md %}}Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
 be specified.
 Possible values are `CONTAINS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_path_python">
 <a href="#field_path_python" style="color: inherit; text-decoration: inherit;">field_<wbr>path</a>
@@ -1273,8 +1195,7 @@ Possible values are `CONTAINS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1285,8 +1206,7 @@ Possible values are `CONTAINS`.
     <dd>{{% md %}}Indicates that this field supports ordering by the specified order or comparing using =, <, <=, >, >=.
 Only one of `order` and `arrayConfig` can be specified.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

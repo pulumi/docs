@@ -291,8 +291,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -301,8 +300,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -311,8 +309,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="csr_csharp">
 <a href="#csr_csharp" style="color: inherit; text-decoration: inherit;">Csr</a>
@@ -321,8 +318,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="altnames_csharp">
 <a href="#altnames_csharp" style="color: inherit; text-decoration: inherit;">Alt<wbr>Names</a>
@@ -331,8 +327,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -341,8 +336,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludecnfromsans_csharp">
 <a href="#excludecnfromsans_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Cn<wbr>From<wbr>Sans</a>
@@ -351,8 +345,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -361,8 +354,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsans_csharp">
 <a href="#ipsans_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sans</a>
@@ -371,8 +363,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_csharp">
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -381,8 +372,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpathlength_csharp">
 <a href="#maxpathlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Path<wbr>Length</a>
@@ -391,8 +381,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -401,8 +390,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="othersans_csharp">
 <a href="#othersans_csharp" style="color: inherit; text-decoration: inherit;">Other<wbr>Sans</a>
@@ -411,8 +399,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_csharp">
 <a href="#ou_csharp" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -421,8 +408,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permitteddnsdomains_csharp">
 <a href="#permitteddnsdomains_csharp" style="color: inherit; text-decoration: inherit;">Permitted<wbr>Dns<wbr>Domains</a>
@@ -431,8 +417,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -441,8 +426,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_csharp">
 <a href="#province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -451,8 +435,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_csharp">
 <a href="#streetaddress_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -461,8 +444,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -471,8 +453,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urisans_csharp">
 <a href="#urisans_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Sans</a>
@@ -481,8 +462,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecsrvalues_csharp">
 <a href="#usecsrvalues_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Values</a>
@@ -491,13 +471,11 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -506,8 +484,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -516,8 +493,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="csr_go">
 <a href="#csr_go" style="color: inherit; text-decoration: inherit;">Csr</a>
@@ -526,8 +502,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="altnames_go">
 <a href="#altnames_go" style="color: inherit; text-decoration: inherit;">Alt<wbr>Names</a>
@@ -536,8 +511,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -546,8 +520,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludecnfromsans_go">
 <a href="#excludecnfromsans_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Cn<wbr>From<wbr>Sans</a>
@@ -556,8 +529,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -566,8 +538,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsans_go">
 <a href="#ipsans_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sans</a>
@@ -576,8 +547,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_go">
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -586,8 +556,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpathlength_go">
 <a href="#maxpathlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Path<wbr>Length</a>
@@ -596,8 +565,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -606,8 +574,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="othersans_go">
 <a href="#othersans_go" style="color: inherit; text-decoration: inherit;">Other<wbr>Sans</a>
@@ -616,8 +583,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_go">
 <a href="#ou_go" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -626,8 +592,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permitteddnsdomains_go">
 <a href="#permitteddnsdomains_go" style="color: inherit; text-decoration: inherit;">Permitted<wbr>Dns<wbr>Domains</a>
@@ -636,8 +601,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -646,8 +610,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_go">
 <a href="#province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -656,8 +619,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_go">
 <a href="#streetaddress_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -666,8 +628,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -676,8 +637,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urisans_go">
 <a href="#urisans_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Sans</a>
@@ -686,8 +646,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecsrvalues_go">
 <a href="#usecsrvalues_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Values</a>
@@ -696,13 +655,11 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -711,8 +668,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -721,8 +677,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="csr_nodejs">
 <a href="#csr_nodejs" style="color: inherit; text-decoration: inherit;">csr</a>
@@ -731,8 +686,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="altnames_nodejs">
 <a href="#altnames_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Names</a>
@@ -741,8 +695,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -751,8 +704,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludecnfromsans_nodejs">
 <a href="#excludecnfromsans_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Cn<wbr>From<wbr>Sans</a>
@@ -761,8 +713,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -771,8 +722,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsans_nodejs">
 <a href="#ipsans_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sans</a>
@@ -781,8 +731,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_nodejs">
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -791,8 +740,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpathlength_nodejs">
 <a href="#maxpathlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Path<wbr>Length</a>
@@ -801,8 +749,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -811,8 +758,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="othersans_nodejs">
 <a href="#othersans_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Sans</a>
@@ -821,8 +767,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_nodejs">
 <a href="#ou_nodejs" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -831,8 +776,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permitteddnsdomains_nodejs">
 <a href="#permitteddnsdomains_nodejs" style="color: inherit; text-decoration: inherit;">permitted<wbr>Dns<wbr>Domains</a>
@@ -841,8 +785,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -851,8 +794,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_nodejs">
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -861,8 +803,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_nodejs">
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
@@ -871,8 +812,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -881,8 +821,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urisans_nodejs">
 <a href="#urisans_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Sans</a>
@@ -891,8 +830,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecsrvalues_nodejs">
 <a href="#usecsrvalues_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Values</a>
@@ -901,13 +839,11 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -916,8 +852,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -926,8 +861,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="csr_python">
 <a href="#csr_python" style="color: inherit; text-decoration: inherit;">csr</a>
@@ -936,8 +870,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alt_names_python">
 <a href="#alt_names_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>names</a>
@@ -946,8 +879,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -956,8 +888,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_cn_from_sans_python">
 <a href="#exclude_cn_from_sans_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>cn_<wbr>from_<wbr>sans</a>
@@ -966,8 +897,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -976,8 +906,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_sans_python">
 <a href="#ip_sans_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sans</a>
@@ -986,8 +915,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_python">
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -996,8 +924,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_path_length_python">
 <a href="#max_path_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>path_<wbr>length</a>
@@ -1006,8 +933,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -1016,8 +942,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="other_sans_python">
 <a href="#other_sans_python" style="color: inherit; text-decoration: inherit;">other_<wbr>sans</a>
@@ -1026,8 +951,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_python">
 <a href="#ou_python" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -1036,8 +960,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permitted_dns_domains_python">
 <a href="#permitted_dns_domains_python" style="color: inherit; text-decoration: inherit;">permitted_<wbr>dns_<wbr>domains</a>
@@ -1046,8 +969,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -1056,8 +978,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_python">
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -1066,8 +987,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address_python">
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
@@ -1076,8 +996,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1086,8 +1005,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_sans_python">
 <a href="#uri_sans_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>sans</a>
@@ -1096,8 +1014,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_csr_values_python">
 <a href="#use_csr_values_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>values</a>
@@ -1106,8 +1023,7 @@ The SecretBackendRootSignIntermediate resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1118,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cachain_csharp">
 <a href="#cachain_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Chain</a>
@@ -1128,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1138,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1147,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuingca_csharp">
 <a href="#issuingca_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Ca</a>
@@ -1157,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_csharp">
 <a href="#serial_csharp" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -1167,13 +1078,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cachain_go">
 <a href="#cachain_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Chain</a>
@@ -1182,8 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1192,8 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1201,8 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuingca_go">
 <a href="#issuingca_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Ca</a>
@@ -1211,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_go">
 <a href="#serial_go" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -1221,13 +1126,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cachain_nodejs">
 <a href="#cachain_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Chain</a>
@@ -1236,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1246,8 +1148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1255,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuingca_nodejs">
 <a href="#issuingca_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Ca</a>
@@ -1265,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_nodejs">
 <a href="#serial_nodejs" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -1275,13 +1174,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ca_chain_python">
 <a href="#ca_chain_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>chain</a>
@@ -1290,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1300,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1309,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuing_ca_python">
 <a href="#issuing_ca_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>ca</a>
@@ -1319,8 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_python">
 <a href="#serial_python" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -1329,8 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1457,8 +1349,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_altnames_csharp">
 <a href="#state_altnames_csharp" style="color: inherit; text-decoration: inherit;">Alt<wbr>Names</a>
@@ -1467,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1477,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachain_csharp">
 <a href="#state_cachain_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Chain</a>
@@ -1487,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1497,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_csharp">
 <a href="#state_commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1507,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_country_csharp">
 <a href="#state_country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1517,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csr_csharp">
 <a href="#state_csr_csharp" style="color: inherit; text-decoration: inherit;">Csr</a>
@@ -1527,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludecnfromsans_csharp">
 <a href="#state_excludecnfromsans_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Cn<wbr>From<wbr>Sans</a>
@@ -1537,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_csharp">
 <a href="#state_format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1547,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsans_csharp">
 <a href="#state_ipsans_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sans</a>
@@ -1557,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingca_csharp">
 <a href="#state_issuingca_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Ca</a>
@@ -1567,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locality_csharp">
 <a href="#state_locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -1577,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpathlength_csharp">
 <a href="#state_maxpathlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Path<wbr>Length</a>
@@ -1587,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_csharp">
 <a href="#state_organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1597,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_othersans_csharp">
 <a href="#state_othersans_csharp" style="color: inherit; text-decoration: inherit;">Other<wbr>Sans</a>
@@ -1607,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_csharp">
 <a href="#state_ou_csharp" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -1617,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permitteddnsdomains_csharp">
 <a href="#state_permitteddnsdomains_csharp" style="color: inherit; text-decoration: inherit;">Permitted<wbr>Dns<wbr>Domains</a>
@@ -1627,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postalcode_csharp">
 <a href="#state_postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1637,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_province_csharp">
 <a href="#state_province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -1647,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serial_csharp">
 <a href="#state_serial_csharp" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -1657,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streetaddress_csharp">
 <a href="#state_streetaddress_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -1667,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1677,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urisans_csharp">
 <a href="#state_urisans_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Sans</a>
@@ -1687,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usecsrvalues_csharp">
 <a href="#state_usecsrvalues_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Values</a>
@@ -1697,13 +1565,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_altnames_go">
 <a href="#state_altnames_go" style="color: inherit; text-decoration: inherit;">Alt<wbr>Names</a>
@@ -1712,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1722,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachain_go">
 <a href="#state_cachain_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Chain</a>
@@ -1732,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1742,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_go">
 <a href="#state_commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1752,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_country_go">
 <a href="#state_country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1762,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csr_go">
 <a href="#state_csr_go" style="color: inherit; text-decoration: inherit;">Csr</a>
@@ -1772,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludecnfromsans_go">
 <a href="#state_excludecnfromsans_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Cn<wbr>From<wbr>Sans</a>
@@ -1782,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_go">
 <a href="#state_format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1792,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsans_go">
 <a href="#state_ipsans_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Sans</a>
@@ -1802,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingca_go">
 <a href="#state_issuingca_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Ca</a>
@@ -1812,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locality_go">
 <a href="#state_locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -1822,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpathlength_go">
 <a href="#state_maxpathlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Path<wbr>Length</a>
@@ -1832,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_go">
 <a href="#state_organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1842,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_othersans_go">
 <a href="#state_othersans_go" style="color: inherit; text-decoration: inherit;">Other<wbr>Sans</a>
@@ -1852,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_go">
 <a href="#state_ou_go" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -1862,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permitteddnsdomains_go">
 <a href="#state_permitteddnsdomains_go" style="color: inherit; text-decoration: inherit;">Permitted<wbr>Dns<wbr>Domains</a>
@@ -1872,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postalcode_go">
 <a href="#state_postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1882,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_province_go">
 <a href="#state_province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -1892,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serial_go">
 <a href="#state_serial_go" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -1902,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streetaddress_go">
 <a href="#state_streetaddress_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -1912,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1922,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urisans_go">
 <a href="#state_urisans_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Sans</a>
@@ -1932,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usecsrvalues_go">
 <a href="#state_usecsrvalues_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Values</a>
@@ -1942,13 +1785,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_altnames_nodejs">
 <a href="#state_altnames_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Names</a>
@@ -1957,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1967,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cachain_nodejs">
 <a href="#state_cachain_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Chain</a>
@@ -1977,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1987,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_nodejs">
 <a href="#state_commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -1997,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_country_nodejs">
 <a href="#state_country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -2007,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csr_nodejs">
 <a href="#state_csr_nodejs" style="color: inherit; text-decoration: inherit;">csr</a>
@@ -2017,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludecnfromsans_nodejs">
 <a href="#state_excludecnfromsans_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Cn<wbr>From<wbr>Sans</a>
@@ -2027,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_nodejs">
 <a href="#state_format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2037,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsans_nodejs">
 <a href="#state_ipsans_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Sans</a>
@@ -2047,8 +1879,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingca_nodejs">
 <a href="#state_issuingca_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Ca</a>
@@ -2057,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locality_nodejs">
 <a href="#state_locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -2067,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpathlength_nodejs">
 <a href="#state_maxpathlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Path<wbr>Length</a>
@@ -2077,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_nodejs">
 <a href="#state_organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -2087,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_othersans_nodejs">
 <a href="#state_othersans_nodejs" style="color: inherit; text-decoration: inherit;">other<wbr>Sans</a>
@@ -2097,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_nodejs">
 <a href="#state_ou_nodejs" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -2107,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permitteddnsdomains_nodejs">
 <a href="#state_permitteddnsdomains_nodejs" style="color: inherit; text-decoration: inherit;">permitted<wbr>Dns<wbr>Domains</a>
@@ -2117,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postalcode_nodejs">
 <a href="#state_postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -2127,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_province_nodejs">
 <a href="#state_province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -2137,8 +1960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serial_nodejs">
 <a href="#state_serial_nodejs" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -2147,8 +1969,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streetaddress_nodejs">
 <a href="#state_streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
@@ -2157,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -2167,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urisans_nodejs">
 <a href="#state_urisans_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Sans</a>
@@ -2177,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usecsrvalues_nodejs">
 <a href="#state_usecsrvalues_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Values</a>
@@ -2187,13 +2005,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alt_names_python">
 <a href="#state_alt_names_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>names</a>
@@ -2202,8 +2018,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of alternative names
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -2212,8 +2027,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_chain_python">
 <a href="#state_ca_chain_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>chain</a>
@@ -2222,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA chain
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2232,8 +2045,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_common_name_python">
 <a href="#state_common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -2242,8 +2054,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CN of intermediate to create
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_country_python">
 <a href="#state_country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -2252,8 +2063,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csr_python">
 <a href="#state_csr_python" style="color: inherit; text-decoration: inherit;">csr</a>
@@ -2262,8 +2072,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CSR
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclude_cn_from_sans_python">
 <a href="#state_exclude_cn_from_sans_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>cn_<wbr>from_<wbr>sans</a>
@@ -2272,8 +2081,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to exclude CN from SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_format_python">
 <a href="#state_format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -2282,8 +2090,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of data
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_sans_python">
 <a href="#state_ip_sans_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>sans</a>
@@ -2292,8 +2099,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of alternative IPs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuing_ca_python">
 <a href="#state_issuing_ca_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>ca</a>
@@ -2302,8 +2108,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuing CA
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locality_python">
 <a href="#state_locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -2312,8 +2117,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_path_length_python">
 <a href="#state_max_path_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>path_<wbr>length</a>
@@ -2322,8 +2126,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum path length to encode in the generated certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_organization_python">
 <a href="#state_organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -2332,8 +2135,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_other_sans_python">
 <a href="#state_other_sans_python" style="color: inherit; text-decoration: inherit;">other_<wbr>sans</a>
@@ -2342,8 +2144,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of other SANs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_python">
 <a href="#state_ou_python" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -2352,8 +2153,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization unit
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permitted_dns_domains_python">
 <a href="#state_permitted_dns_domains_python" style="color: inherit; text-decoration: inherit;">permitted_<wbr>dns_<wbr>domains</a>
@@ -2362,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of domains for which certificates are allowed to be issued
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postal_code_python">
 <a href="#state_postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -2372,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_province_python">
 <a href="#state_province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -2382,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serial_python">
 <a href="#state_serial_python" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -2392,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serial
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_street_address_python">
 <a href="#state_street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
@@ -2402,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -2412,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time to live
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_sans_python">
 <a href="#state_uri_sans_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>sans</a>
@@ -2422,8 +2216,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of alternative URIs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_csr_values_python">
 <a href="#state_use_csr_values_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>values</a>
@@ -2432,8 +2225,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Preserve CSR values
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

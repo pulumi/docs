@@ -320,8 +320,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothubdpsname_csharp">
 <a href="#iothubdpsname_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Dps<wbr>Name</a>
@@ -330,8 +329,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -340,8 +338,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentread_csharp">
 <a href="#enrollmentread_csharp" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Read</a>
@@ -350,8 +347,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentwrite_csharp">
 <a href="#enrollmentwrite_csharp" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Write</a>
@@ -360,8 +356,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -370,8 +365,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationread_csharp">
 <a href="#registrationread_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Read</a>
@@ -380,8 +374,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationwrite_csharp">
 <a href="#registrationwrite_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Write</a>
@@ -390,8 +383,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceconfig_csharp">
 <a href="#serviceconfig_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Config</a>
@@ -400,13 +392,11 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothubdpsname_go">
 <a href="#iothubdpsname_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Dps<wbr>Name</a>
@@ -415,8 +405,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -425,8 +414,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentread_go">
 <a href="#enrollmentread_go" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Read</a>
@@ -435,8 +423,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentwrite_go">
 <a href="#enrollmentwrite_go" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Write</a>
@@ -445,8 +432,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -455,8 +441,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationread_go">
 <a href="#registrationread_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Read</a>
@@ -465,8 +450,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationwrite_go">
 <a href="#registrationwrite_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Write</a>
@@ -475,8 +459,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceconfig_go">
 <a href="#serviceconfig_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Config</a>
@@ -485,13 +468,11 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothubdpsname_nodejs">
 <a href="#iothubdpsname_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Dps<wbr>Name</a>
@@ -500,8 +481,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -510,8 +490,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentread_nodejs">
 <a href="#enrollmentread_nodejs" style="color: inherit; text-decoration: inherit;">enrollment<wbr>Read</a>
@@ -520,8 +499,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollmentwrite_nodejs">
 <a href="#enrollmentwrite_nodejs" style="color: inherit; text-decoration: inherit;">enrollment<wbr>Write</a>
@@ -530,8 +508,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -540,8 +517,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationread_nodejs">
 <a href="#registrationread_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Read</a>
@@ -550,8 +526,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registrationwrite_nodejs">
 <a href="#registrationwrite_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Write</a>
@@ -560,8 +535,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceconfig_nodejs">
 <a href="#serviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Config</a>
@@ -570,13 +544,11 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iothub_dps_name_python">
 <a href="#iothub_dps_name_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>dps_<wbr>name</a>
@@ -585,8 +557,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -595,8 +566,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollment_read_python">
 <a href="#enrollment_read_python" style="color: inherit; text-decoration: inherit;">enrollment_<wbr>read</a>
@@ -605,8 +575,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enrollment_write_python">
 <a href="#enrollment_write_python" style="color: inherit; text-decoration: inherit;">enrollment_<wbr>write</a>
@@ -615,8 +584,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +593,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_read_python">
 <a href="#registration_read_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>read</a>
@@ -635,8 +602,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registration_write_python">
 <a href="#registration_write_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>write</a>
@@ -645,8 +611,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_config_python">
 <a href="#service_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>config</a>
@@ -655,8 +620,7 @@ The DpsSharedAccessPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -667,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -676,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_csharp">
 <a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -686,8 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -696,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -706,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -716,13 +675,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -730,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_go">
 <a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -740,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -750,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -760,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -770,13 +723,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -784,8 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_nodejs">
 <a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -794,8 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -804,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -814,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -824,13 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -838,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_connection_string_python">
 <a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -848,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -858,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_connection_string_python">
 <a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -868,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -878,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1006,8 +946,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrollmentread_csharp">
 <a href="#state_enrollmentread_csharp" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Read</a>
@@ -1016,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrollmentwrite_csharp">
 <a href="#state_enrollmentwrite_csharp" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Write</a>
@@ -1026,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubdpsname_csharp">
 <a href="#state_iothubdpsname_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Dps<wbr>Name</a>
@@ -1036,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1046,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_csharp">
 <a href="#state_primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1056,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarykey_csharp">
 <a href="#state_primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -1066,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationread_csharp">
 <a href="#state_registrationread_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Read</a>
@@ -1076,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationwrite_csharp">
 <a href="#state_registrationwrite_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Write</a>
@@ -1086,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1096,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_csharp">
 <a href="#state_secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1106,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarykey_csharp">
 <a href="#state_secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -1116,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceconfig_csharp">
 <a href="#state_serviceconfig_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Config</a>
@@ -1126,13 +1054,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrollmentread_go">
 <a href="#state_enrollmentread_go" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Read</a>
@@ -1141,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrollmentwrite_go">
 <a href="#state_enrollmentwrite_go" style="color: inherit; text-decoration: inherit;">Enrollment<wbr>Write</a>
@@ -1151,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubdpsname_go">
 <a href="#state_iothubdpsname_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Dps<wbr>Name</a>
@@ -1161,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1171,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_go">
 <a href="#state_primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1181,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarykey_go">
 <a href="#state_primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -1191,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationread_go">
 <a href="#state_registrationread_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Read</a>
@@ -1201,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationwrite_go">
 <a href="#state_registrationwrite_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Write</a>
@@ -1211,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1221,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_go">
 <a href="#state_secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1231,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarykey_go">
 <a href="#state_secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -1241,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceconfig_go">
 <a href="#state_serviceconfig_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Config</a>
@@ -1251,13 +1166,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrollmentread_nodejs">
 <a href="#state_enrollmentread_nodejs" style="color: inherit; text-decoration: inherit;">enrollment<wbr>Read</a>
@@ -1266,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrollmentwrite_nodejs">
 <a href="#state_enrollmentwrite_nodejs" style="color: inherit; text-decoration: inherit;">enrollment<wbr>Write</a>
@@ -1276,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubdpsname_nodejs">
 <a href="#state_iothubdpsname_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Dps<wbr>Name</a>
@@ -1286,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1296,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_nodejs">
 <a href="#state_primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -1306,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarykey_nodejs">
 <a href="#state_primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -1316,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationread_nodejs">
 <a href="#state_registrationread_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Read</a>
@@ -1326,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registrationwrite_nodejs">
 <a href="#state_registrationwrite_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Write</a>
@@ -1336,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1346,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_nodejs">
 <a href="#state_secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -1356,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarykey_nodejs">
 <a href="#state_secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -1366,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceconfig_nodejs">
 <a href="#state_serviceconfig_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Config</a>
@@ -1376,13 +1278,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_enrollment_read_python">
 <a href="#state_enrollment_read_python" style="color: inherit; text-decoration: inherit;">enrollment_<wbr>read</a>
@@ -1391,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentRead` permission to this Shared Access Account. It allows read access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enrollment_write_python">
 <a href="#state_enrollment_write_python" style="color: inherit; text-decoration: inherit;">enrollment_<wbr>write</a>
@@ -1401,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `EnrollmentWrite` permission to this Shared Access Account. It allows write access to enrollment data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothub_dps_name_python">
 <a href="#state_iothub_dps_name_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>dps_<wbr>name</a>
@@ -1411,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Hub Device Provisioning service to which this Shared Access Policy belongs. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1421,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the IotHub Shared Access Policy resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_connection_string_python">
 <a href="#state_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -1431,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_key_python">
 <a href="#state_primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -1441,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registration_read_python">
 <a href="#state_registration_read_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>read</a>
@@ -1451,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusRead` permission to this Shared Access Account. It allows read access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registration_write_python">
 <a href="#state_registration_write_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>write</a>
@@ -1461,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `RegistrationStatusWrite` permission to this Shared Access Account. It allows write access to device registrations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1471,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the IotHub Shared Access Policy resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_connection_string_python">
 <a href="#state_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -1481,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Shared Access Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_key_python">
 <a href="#state_secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -1491,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary key used to create the authentication token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_config_python">
 <a href="#state_service_config_python" style="color: inherit; text-decoration: inherit;">service_<wbr>config</a>
@@ -1501,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds `ServiceConfig` permission to this Shared Access Account. It allows configuration of the Device Provisioning Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

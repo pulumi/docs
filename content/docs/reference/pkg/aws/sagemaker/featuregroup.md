@@ -306,8 +306,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtimefeaturename_csharp">
 <a href="#eventtimefeaturename_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>Feature<wbr>Name</a>
@@ -316,8 +315,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="featuredefinitions_csharp">
 <a href="#featuredefinitions_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Definitions</a>
@@ -326,8 +324,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupfeaturedefinition">List&lt;Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="featuregroupname_csharp">
 <a href="#featuregroupname_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
@@ -336,8 +333,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordidentifierfeaturename_csharp">
 <a href="#recordidentifierfeaturename_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Identifier<wbr>Feature<wbr>Name</a>
@@ -346,8 +342,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -356,8 +351,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -366,8 +360,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinestoreconfig_csharp">
 <a href="#offlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
@@ -376,8 +369,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinestoreconfig_csharp">
 <a href="#onlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
@@ -386,8 +378,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -395,13 +386,11 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtimefeaturename_go">
 <a href="#eventtimefeaturename_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>Feature<wbr>Name</a>
@@ -410,8 +399,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="featuredefinitions_go">
 <a href="#featuredefinitions_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Definitions</a>
@@ -420,8 +408,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupfeaturedefinition">[]Feature<wbr>Group<wbr>Feature<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="featuregroupname_go">
 <a href="#featuregroupname_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
@@ -430,8 +417,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordidentifierfeaturename_go">
 <a href="#recordidentifierfeaturename_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Identifier<wbr>Feature<wbr>Name</a>
@@ -440,8 +426,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -450,8 +435,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -460,8 +444,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinestoreconfig_go">
 <a href="#offlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
@@ -470,8 +453,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinestoreconfig_go">
 <a href="#onlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
@@ -480,8 +462,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -489,13 +470,11 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtimefeaturename_nodejs">
 <a href="#eventtimefeaturename_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>Feature<wbr>Name</a>
@@ -504,8 +483,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="featuredefinitions_nodejs">
 <a href="#featuredefinitions_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Definitions</a>
@@ -514,8 +492,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupfeaturedefinition">Feature<wbr>Group<wbr>Feature<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="featuregroupname_nodejs">
 <a href="#featuregroupname_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Group<wbr>Name</a>
@@ -524,8 +501,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recordidentifierfeaturename_nodejs">
 <a href="#recordidentifierfeaturename_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Identifier<wbr>Feature<wbr>Name</a>
@@ -534,8 +510,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -544,8 +519,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -554,8 +528,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinestoreconfig_nodejs">
 <a href="#offlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Store<wbr>Config</a>
@@ -564,8 +537,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onlinestoreconfig_nodejs">
 <a href="#onlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Store<wbr>Config</a>
@@ -574,8 +546,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -583,13 +554,11 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_time_feature_name_python">
 <a href="#event_time_feature_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>feature_<wbr>name</a>
@@ -598,8 +567,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feature_definitions_python">
 <a href="#feature_definitions_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>definitions</a>
@@ -608,8 +576,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupfeaturedefinition">Sequence[Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feature_group_name_python">
 <a href="#feature_group_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>group_<wbr>name</a>
@@ -618,8 +585,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="record_identifier_feature_name_python">
 <a href="#record_identifier_feature_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>identifier_<wbr>feature_<wbr>name</a>
@@ -628,8 +594,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -638,8 +603,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -648,8 +612,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_store_config_python">
 <a href="#offline_store_config_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>store_<wbr>config</a>
@@ -658,8 +621,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="online_store_config_python">
 <a href="#online_store_config_python" style="color: inherit; text-decoration: inherit;">online_<wbr>store_<wbr>config</a>
@@ -668,8 +630,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -677,8 +638,7 @@ The FeatureGroup resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -689,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -699,8 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -708,13 +666,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -723,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -732,13 +687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -747,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,13 +708,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -771,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -780,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -908,8 +856,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -918,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -928,8 +874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtimefeaturename_csharp">
 <a href="#state_eventtimefeaturename_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>Feature<wbr>Name</a>
@@ -938,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuredefinitions_csharp">
 <a href="#state_featuredefinitions_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Definitions</a>
@@ -948,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupfeaturedefinition">List&lt;Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuregroupname_csharp">
 <a href="#state_featuregroupname_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
@@ -958,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinestoreconfig_csharp">
 <a href="#state_offlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
@@ -968,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlinestoreconfig_csharp">
 <a href="#state_onlinestoreconfig_csharp" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
@@ -978,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recordidentifierfeaturename_csharp">
 <a href="#state_recordidentifierfeaturename_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Identifier<wbr>Feature<wbr>Name</a>
@@ -988,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -998,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1007,13 +945,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1022,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1032,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtimefeaturename_go">
 <a href="#state_eventtimefeaturename_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time<wbr>Feature<wbr>Name</a>
@@ -1042,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuredefinitions_go">
 <a href="#state_featuredefinitions_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Definitions</a>
@@ -1052,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupfeaturedefinition">[]Feature<wbr>Group<wbr>Feature<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuregroupname_go">
 <a href="#state_featuregroupname_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Group<wbr>Name</a>
@@ -1062,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinestoreconfig_go">
 <a href="#state_offlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Store<wbr>Config</a>
@@ -1072,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlinestoreconfig_go">
 <a href="#state_onlinestoreconfig_go" style="color: inherit; text-decoration: inherit;">Online<wbr>Store<wbr>Config</a>
@@ -1082,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recordidentifierfeaturename_go">
 <a href="#state_recordidentifierfeaturename_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Identifier<wbr>Feature<wbr>Name</a>
@@ -1092,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1102,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1111,13 +1038,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1126,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1136,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtimefeaturename_nodejs">
 <a href="#state_eventtimefeaturename_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time<wbr>Feature<wbr>Name</a>
@@ -1146,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuredefinitions_nodejs">
 <a href="#state_featuredefinitions_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Definitions</a>
@@ -1156,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupfeaturedefinition">Feature<wbr>Group<wbr>Feature<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuregroupname_nodejs">
 <a href="#state_featuregroupname_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Group<wbr>Name</a>
@@ -1166,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offlinestoreconfig_nodejs">
 <a href="#state_offlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Store<wbr>Config</a>
@@ -1176,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onlinestoreconfig_nodejs">
 <a href="#state_onlinestoreconfig_nodejs" style="color: inherit; text-decoration: inherit;">online<wbr>Store<wbr>Config</a>
@@ -1186,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recordidentifierfeaturename_nodejs">
 <a href="#state_recordidentifierfeaturename_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Identifier<wbr>Feature<wbr>Name</a>
@@ -1196,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -1206,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1215,13 +1131,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1230,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1240,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A free-form description of a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_time_feature_name_python">
 <a href="#state_event_time_feature_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time_<wbr>feature_<wbr>name</a>
@@ -1250,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the feature that stores the EventTime of a Record in a Feature Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_definitions_python">
 <a href="#state_feature_definitions_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>definitions</a>
@@ -1260,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupfeaturedefinition">Sequence[Feature<wbr>Group<wbr>Feature<wbr>Definition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Feature names and types. See Feature Definition Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_group_name_python">
 <a href="#state_feature_group_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>group_<wbr>name</a>
@@ -1270,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_offline_store_config_python">
 <a href="#state_offline_store_config_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>store_<wbr>config</a>
@@ -1280,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Offline Feature Store Configuration. See Offline Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_online_store_config_python">
 <a href="#state_online_store_config_python" style="color: inherit; text-decoration: inherit;">online_<wbr>store_<wbr>config</a>
@@ -1290,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Online Feature Store Configuration. See Online Store Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_record_identifier_feature_name_python">
 <a href="#state_record_identifier_feature_name_python" style="color: inherit; text-decoration: inherit;">record_<wbr>identifier_<wbr>feature_<wbr>name</a>
@@ -1300,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -1310,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1319,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1335,8 +1239,7 @@ The following state arguments are supported:
 <h4 id="featuregroupfeaturedefinition">Feature<wbr>Group<wbr>Feature<wbr>Definition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="featurename_csharp">
 <a href="#featurename_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Name</a>
@@ -1345,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuretype_csharp">
 <a href="#featuretype_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Type</a>
@@ -1355,13 +1257,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="featurename_go">
 <a href="#featurename_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Name</a>
@@ -1370,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuretype_go">
 <a href="#featuretype_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Type</a>
@@ -1380,13 +1279,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="featurename_nodejs">
 <a href="#featurename_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Name</a>
@@ -1395,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuretype_nodejs">
 <a href="#featuretype_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Type</a>
@@ -1405,13 +1301,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="feature_name_python">
 <a href="#feature_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>name</a>
@@ -1420,8 +1314,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feature_type_python">
 <a href="#feature_type_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>type</a>
@@ -1430,15 +1323,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="featuregroupofflinestoreconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3storageconfig_csharp">
 <a href="#s3storageconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Storage<wbr>Config</a>
@@ -1447,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacatalogconfig_csharp">
 <a href="#datacatalogconfig_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Config</a>
@@ -1457,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegluetablecreation_csharp">
 <a href="#disablegluetablecreation_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Glue<wbr>Table<wbr>Creation</a>
@@ -1467,13 +1356,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to turn Online Store On.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3storageconfig_go">
 <a href="#s3storageconfig_go" style="color: inherit; text-decoration: inherit;">S3Storage<wbr>Config</a>
@@ -1482,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacatalogconfig_go">
 <a href="#datacatalogconfig_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Catalog<wbr>Config</a>
@@ -1492,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegluetablecreation_go">
 <a href="#disablegluetablecreation_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Glue<wbr>Table<wbr>Creation</a>
@@ -1502,13 +1387,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to turn Online Store On.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3storageconfig_nodejs">
 <a href="#s3storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Storage<wbr>Config</a>
@@ -1517,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacatalogconfig_nodejs">
 <a href="#datacatalogconfig_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Catalog<wbr>Config</a>
@@ -1527,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablegluetablecreation_nodejs">
 <a href="#disablegluetablecreation_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Glue<wbr>Table<wbr>Creation</a>
@@ -1537,13 +1418,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to turn Online Store On.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_storage_config_python">
 <a href="#s3_storage_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>storage_<wbr>config</a>
@@ -1552,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Storage (Amazon S3) location of OfflineStore. See S3 Storage Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_catalog_config_python">
 <a href="#data_catalog_config_python" style="color: inherit; text-decoration: inherit;">data_<wbr>catalog_<wbr>config</a>
@@ -1562,8 +1440,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The meta data of the Glue table that is autogenerated when an OfflineStore is created. See Data Catalog Config Below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_glue_table_creation_python">
 <a href="#disable_glue_table_creation_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>glue_<wbr>table_<wbr>creation</a>
@@ -1572,15 +1449,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to turn Online Store On.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="featuregroupofflinestoreconfigdatacatalogconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>Data<wbr>Catalog<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalog_csharp">
 <a href="#catalog_csharp" style="color: inherit; text-decoration: inherit;">Catalog</a>
@@ -1589,8 +1464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -1599,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -1609,13 +1482,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalog_go">
 <a href="#catalog_go" style="color: inherit; text-decoration: inherit;">Catalog</a>
@@ -1624,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -1634,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -1644,13 +1513,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalog_nodejs">
 <a href="#catalog_nodejs" style="color: inherit; text-decoration: inherit;">catalog</a>
@@ -1659,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -1669,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -1679,13 +1544,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="catalog_python">
 <a href="#catalog_python" style="color: inherit; text-decoration: inherit;">catalog</a>
@@ -1694,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -1704,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -1714,15 +1575,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Glue table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="featuregroupofflinestoreconfigs3storageconfig">Feature<wbr>Group<wbr>Offline<wbr>Store<wbr>Config<wbr>S3Storage<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3uri_csharp">
 <a href="#s3uri_csharp" style="color: inherit; text-decoration: inherit;">S3Uri</a>
@@ -1731,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 URI, or location in Amazon S3, of OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1741,13 +1599,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3uri_go">
 <a href="#s3uri_go" style="color: inherit; text-decoration: inherit;">S3Uri</a>
@@ -1756,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 URI, or location in Amazon S3, of OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1766,13 +1621,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3uri_nodejs">
 <a href="#s3uri_nodejs" style="color: inherit; text-decoration: inherit;">s3Uri</a>
@@ -1781,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 URI, or location in Amazon S3, of OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1791,13 +1643,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_uri_python">
 <a href="#s3_uri_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>uri</a>
@@ -1806,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 URI, or location in Amazon S3, of OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1816,15 +1665,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="featuregrouponlinestoreconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableonlinestore_csharp">
 <a href="#enableonlinestore_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Store</a>
@@ -1833,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityconfig_csharp">
 <a href="#securityconfig_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
@@ -1843,13 +1689,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableonlinestore_go">
 <a href="#enableonlinestore_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Store</a>
@@ -1858,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityconfig_go">
 <a href="#securityconfig_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Config</a>
@@ -1868,13 +1711,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableonlinestore_nodejs">
 <a href="#enableonlinestore_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Online<wbr>Store</a>
@@ -1883,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityconfig_nodejs">
 <a href="#securityconfig_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Config</a>
@@ -1893,13 +1733,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_online_store_python">
 <a href="#enable_online_store_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>online_<wbr>store</a>
@@ -1908,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_config_python">
 <a href="#security_config_python" style="color: inherit; text-decoration: inherit;">security_<wbr>config</a>
@@ -1918,15 +1755,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Security config for at-rest encryption of your OnlineStore. See Security Config Below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="featuregrouponlinestoreconfigsecurityconfig">Feature<wbr>Group<wbr>Online<wbr>Store<wbr>Config<wbr>Security<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1935,13 +1770,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1950,13 +1783,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1965,13 +1796,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1980,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

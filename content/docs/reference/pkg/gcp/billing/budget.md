@@ -960,8 +960,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_csharp">
 <a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -971,8 +970,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingaccount_csharp">
 <a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -981,8 +979,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdrules_csharp">
 <a href="#thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
@@ -994,8 +991,7 @@ Structure is documented below.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allupdatesrule_csharp">
 <a href="#allupdatesrule_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
@@ -1007,8 +1003,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="budgetfilter_csharp">
 <a href="#budgetfilter_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
@@ -1019,8 +1014,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1029,13 +1023,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_go">
 <a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -1045,8 +1037,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingaccount_go">
 <a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -1055,8 +1046,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdrules_go">
 <a href="#thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
@@ -1068,8 +1058,7 @@ Structure is documented below.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allupdatesrule_go">
 <a href="#allupdatesrule_go" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
@@ -1081,8 +1070,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="budgetfilter_go">
 <a href="#budgetfilter_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
@@ -1093,8 +1081,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1103,13 +1090,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_nodejs">
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -1119,8 +1104,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingaccount_nodejs">
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
@@ -1129,8 +1113,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdrules_nodejs">
 <a href="#thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
@@ -1142,8 +1125,7 @@ Structure is documented below.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allupdatesrule_nodejs">
 <a href="#allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
@@ -1155,8 +1137,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="budgetfilter_nodejs">
 <a href="#budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
@@ -1167,8 +1148,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1177,13 +1157,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="amount_python">
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -1193,8 +1171,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_account_python">
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
@@ -1203,8 +1180,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_rules_python">
 <a href="#threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
@@ -1216,8 +1192,7 @@ Structure is documented below.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_updates_rule_python">
 <a href="#all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
@@ -1229,8 +1204,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="budget_filter_python">
 <a href="#budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
@@ -1241,8 +1215,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1251,8 +1224,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1263,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1272,8 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1283,13 +1253,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1297,8 +1265,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1308,13 +1275,11 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1322,8 +1287,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1333,13 +1297,11 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1347,8 +1309,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1358,8 +1319,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1486,8 +1446,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allupdatesrule_csharp">
 <a href="#state_allupdatesrule_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
@@ -1499,8 +1458,7 @@ The following state arguments are supported:
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_amount_csharp">
 <a href="#state_amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -1510,8 +1468,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_csharp">
 <a href="#state_billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -1520,8 +1477,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_budgetfilter_csharp">
 <a href="#state_budgetfilter_csharp" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
@@ -1532,8 +1488,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1542,8 +1497,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1553,8 +1507,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdrules_csharp">
 <a href="#state_thresholdrules_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
@@ -1566,13 +1519,11 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allupdatesrule_go">
 <a href="#state_allupdatesrule_go" style="color: inherit; text-decoration: inherit;">All<wbr>Updates<wbr>Rule</a>
@@ -1584,8 +1535,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_amount_go">
 <a href="#state_amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -1595,8 +1545,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_go">
 <a href="#state_billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
@@ -1605,8 +1554,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_budgetfilter_go">
 <a href="#state_budgetfilter_go" style="color: inherit; text-decoration: inherit;">Budget<wbr>Filter</a>
@@ -1617,8 +1565,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1627,8 +1574,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1638,8 +1584,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdrules_go">
 <a href="#state_thresholdrules_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Rules</a>
@@ -1651,13 +1596,11 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allupdatesrule_nodejs">
 <a href="#state_allupdatesrule_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Updates<wbr>Rule</a>
@@ -1669,8 +1612,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_amount_nodejs">
 <a href="#state_amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -1680,8 +1622,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_nodejs">
 <a href="#state_billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
@@ -1690,8 +1631,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_budgetfilter_nodejs">
 <a href="#state_budgetfilter_nodejs" style="color: inherit; text-decoration: inherit;">budget<wbr>Filter</a>
@@ -1702,8 +1642,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1712,8 +1651,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1723,8 +1661,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdrules_nodejs">
 <a href="#state_thresholdrules_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Rules</a>
@@ -1736,13 +1673,11 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_updates_rule_python">
 <a href="#state_all_updates_rule_python" style="color: inherit; text-decoration: inherit;">all_<wbr>updates_<wbr>rule</a>
@@ -1754,8 +1689,7 @@ Structure is documented below.
 billing account's spend, regardless of the thresholds defined
 using threshold rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_amount_python">
 <a href="#state_amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -1765,8 +1699,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The budgeted amount for each usage period.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_account_python">
 <a href="#state_billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
@@ -1775,8 +1708,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the billing account to set a budget on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_budget_filter_python">
 <a href="#state_budget_filter_python" style="color: inherit; text-decoration: inherit;">budget_<wbr>filter</a>
@@ -1787,8 +1719,7 @@ Structure is documented below.
     <dd>{{% md %}}Filters that define which resources are used to compute the actual
 spend against the budget.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1797,8 +1728,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User data for display name in UI. Must be <= 60 chars.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1808,8 +1738,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource name of the budget. The resource name implies the scope of a budget. Values are of the form
 billingAccounts/{billingAccountId}/budgets/{budgetId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_rules_python">
 <a href="#state_threshold_rules_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>rules</a>
@@ -1821,8 +1750,7 @@ billingAccounts/{billingAccountId}/budgets/{budgetId}.
 crossed) when spend exceeds the specified percentages of the
 budget.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1837,8 +1765,7 @@ Structure is documented below.
 <h4 id="budgetallupdatesrule">Budget<wbr>All<wbr>Updates<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabledefaultiamrecipients_csharp">
 <a href="#disabledefaultiamrecipients_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
@@ -1850,8 +1777,7 @@ Structure is documented below.
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringnotificationchannels_csharp">
 <a href="#monitoringnotificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Notification<wbr>Channels</a>
@@ -1863,8 +1789,7 @@ Account Users IAM roles for the target account.
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -1876,8 +1801,7 @@ A maximum of 5 channels are allowed.
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaversion_csharp">
 <a href="#schemaversion_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version</a>
@@ -1888,13 +1812,11 @@ at regular intervals to the topic.
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabledefaultiamrecipients_go">
 <a href="#disabledefaultiamrecipients_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
@@ -1906,8 +1828,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringnotificationchannels_go">
 <a href="#monitoringnotificationchannels_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Notification<wbr>Channels</a>
@@ -1919,8 +1840,7 @@ Account Users IAM roles for the target account.
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -1932,8 +1852,7 @@ A maximum of 5 channels are allowed.
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaversion_go">
 <a href="#schemaversion_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Version</a>
@@ -1944,13 +1863,11 @@ at regular intervals to the topic.
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disabledefaultiamrecipients_nodejs">
 <a href="#disabledefaultiamrecipients_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Default<wbr>Iam<wbr>Recipients</a>
@@ -1962,8 +1879,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringnotificationchannels_nodejs">
 <a href="#monitoringnotificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Notification<wbr>Channels</a>
@@ -1975,8 +1891,7 @@ Account Users IAM roles for the target account.
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
@@ -1988,8 +1903,7 @@ A maximum of 5 channels are allowed.
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemaversion_nodejs">
 <a href="#schemaversion_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Version</a>
@@ -2000,13 +1914,11 @@ at regular intervals to the topic.
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disable_default_iam_recipients_python">
 <a href="#disable_default_iam_recipients_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>default_<wbr>iam_<wbr>recipients</a>
@@ -2018,8 +1930,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 when a threshold is exceeded. Default recipients are
 those with Billing Account Administrators and Billing
 Account Users IAM roles for the target account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_notification_channels_python">
 <a href="#monitoring_notification_channels_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>notification_<wbr>channels</a>
@@ -2031,8 +1942,7 @@ Account Users IAM roles for the target account.
 channel in the form
 projects/{project_id}/notificationChannels/{channel_id}.
 A maximum of 5 channels are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pubsub_topic_python">
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
@@ -2044,8 +1954,7 @@ A maximum of 5 channels are allowed.
 messages will be published, in the form
 projects/{project_id}/topics/{topic_id}. Updates are sent
 at regular intervals to the topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_version_python">
 <a href="#schema_version_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>version</a>
@@ -2056,15 +1965,13 @@ at regular intervals to the topic.
     <dd>{{% md %}}The schema version of the notification. Only "1.0" is
 accepted. It represents the JSON schema as defined in
 https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="budgetamount">Budget<wbr>Amount</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lastperiodamount_csharp">
 <a href="#lastperiodamount_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Period<wbr>Amount</a>
@@ -2076,8 +1983,7 @@ https://cloud.google.com/billing/docs/how-to/budgets#notification_format.
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_csharp">
 <a href="#specifiedamount_csharp" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
@@ -2089,13 +1995,11 @@ use the `specified_amount` block.
 optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lastperiodamount_go">
 <a href="#lastperiodamount_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Period<wbr>Amount</a>
@@ -2107,8 +2011,7 @@ Structure is documented below.
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_go">
 <a href="#specifiedamount_go" style="color: inherit; text-decoration: inherit;">Specified<wbr>Amount</a>
@@ -2120,13 +2023,11 @@ use the `specified_amount` block.
 optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lastperiodamount_nodejs">
 <a href="#lastperiodamount_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Period<wbr>Amount</a>
@@ -2138,8 +2039,7 @@ Structure is documented below.
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specifiedamount_nodejs">
 <a href="#specifiedamount_nodejs" style="color: inherit; text-decoration: inherit;">specified<wbr>Amount</a>
@@ -2151,13 +2051,11 @@ use the `specified_amount` block.
 optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="last_period_amount_python">
 <a href="#last_period_amount_python" style="color: inherit; text-decoration: inherit;">last_<wbr>period_<wbr>amount</a>
@@ -2169,8 +2067,7 @@ Structure is documented below.
 last period's spend.
 Boolean. Set value to true to use. Do not set to false, instead
 use the `specified_amount` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specified_amount_python">
 <a href="#specified_amount_python" style="color: inherit; text-decoration: inherit;">specified_<wbr>amount</a>
@@ -2182,15 +2079,13 @@ use the `specified_amount` block.
 optional. If specified, it must match the currency of the
 billing account. The currencyCode is provided on output.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="budgetamountspecifiedamount">Budget<wbr>Amount<wbr>Specified<wbr>Amount</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="currencycode_csharp">
 <a href="#currencycode_csharp" style="color: inherit; text-decoration: inherit;">Currency<wbr>Code</a>
@@ -2199,8 +2094,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -2215,8 +2109,7 @@ zero. If units is zero, nanos can be positive, zero, or
 negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -2226,13 +2119,11 @@ nanos=-750,000,000.
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="currencycode_go">
 <a href="#currencycode_go" style="color: inherit; text-decoration: inherit;">Currency<wbr>Code</a>
@@ -2241,8 +2132,7 @@ is "USD", then 1 unit is one US dollar.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -2257,8 +2147,7 @@ zero. If units is zero, nanos can be positive, zero, or
 negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -2268,13 +2157,11 @@ nanos=-750,000,000.
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="currencycode_nodejs">
 <a href="#currencycode_nodejs" style="color: inherit; text-decoration: inherit;">currency<wbr>Code</a>
@@ -2283,8 +2170,7 @@ is "USD", then 1 unit is one US dollar.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -2299,8 +2185,7 @@ zero. If units is zero, nanos can be positive, zero, or
 negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
@@ -2310,13 +2195,11 @@ nanos=-750,000,000.
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="currency_code_python">
 <a href="#currency_code_python" style="color: inherit; text-decoration: inherit;">currency_<wbr>code</a>
@@ -2325,8 +2208,7 @@ is "USD", then 1 unit is one US dollar.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The 3-letter currency code defined in ISO 4217.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -2341,8 +2223,7 @@ zero. If units is zero, nanos can be positive, zero, or
 negative. If units is negative, nanos must be negative or
 zero. For example $-1.75 is represented as units=-1 and
 nanos=-750,000,000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
@@ -2352,15 +2233,13 @@ nanos=-750,000,000.
     </dt>
     <dd>{{% md %}}The whole units of the amount. For example if currencyCode
 is "USD", then 1 unit is one US dollar.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="budgetbudgetfilter">Budget<wbr>Budget<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credittypes_csharp">
 <a href="#credittypes_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types</a>
@@ -2374,8 +2253,7 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypestreatment_csharp">
 <a href="#credittypestreatment_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
@@ -2387,8 +2265,7 @@ account and all subaccounts, if they exist.
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2398,8 +2275,7 @@ Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_S
     </dt>
     <dd>{{% md %}}A single label and value pair specifying that usage from only
 this set of labeled resources should be included in the budget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -2412,8 +2288,7 @@ specifying that usage from only this set of projects should be
 included in the budget. If omitted, the report will include
 all usage for the billing account, regardless of which project
 the usage occurred on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -2427,8 +2302,7 @@ included in the budget. If omitted, the report will include
 usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subaccounts_csharp">
 <a href="#subaccounts_csharp" style="color: inherit; text-decoration: inherit;">Subaccounts</a>
@@ -2442,13 +2316,11 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credittypes_go">
 <a href="#credittypes_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types</a>
@@ -2462,8 +2334,7 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypestreatment_go">
 <a href="#credittypestreatment_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Types<wbr>Treatment</a>
@@ -2475,8 +2346,7 @@ account and all subaccounts, if they exist.
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2486,8 +2356,7 @@ Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_S
     </dt>
     <dd>{{% md %}}A single label and value pair specifying that usage from only
 this set of labeled resources should be included in the budget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -2500,8 +2369,7 @@ specifying that usage from only this set of projects should be
 included in the budget. If omitted, the report will include
 all usage for the billing account, regardless of which project
 the usage occurred on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -2515,8 +2383,7 @@ included in the budget. If omitted, the report will include
 usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subaccounts_go">
 <a href="#subaccounts_go" style="color: inherit; text-decoration: inherit;">Subaccounts</a>
@@ -2530,13 +2397,11 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credittypes_nodejs">
 <a href="#credittypes_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types</a>
@@ -2550,8 +2415,7 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credittypestreatment_nodejs">
 <a href="#credittypestreatment_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Types<wbr>Treatment</a>
@@ -2563,8 +2427,7 @@ account and all subaccounts, if they exist.
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2574,8 +2437,7 @@ Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_S
     </dt>
     <dd>{{% md %}}A single label and value pair specifying that usage from only
 this set of labeled resources should be included in the budget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -2588,8 +2450,7 @@ specifying that usage from only this set of projects should be
 included in the budget. If omitted, the report will include
 all usage for the billing account, regardless of which project
 the usage occurred on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -2603,8 +2464,7 @@ included in the budget. If omitted, the report will include
 usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subaccounts_nodejs">
 <a href="#subaccounts_nodejs" style="color: inherit; text-decoration: inherit;">subaccounts</a>
@@ -2618,13 +2478,11 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="credit_types_python">
 <a href="#credit_types_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types</a>
@@ -2638,8 +2496,7 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credit_types_treatment_python">
 <a href="#credit_types_treatment_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>types_<wbr>treatment</a>
@@ -2651,8 +2508,7 @@ account and all subaccounts, if they exist.
 for threshold calculations.
 Default value is `INCLUDE_ALL_CREDITS`.
 Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_SPECIFIED_CREDITS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2662,8 +2518,7 @@ Possible values are `INCLUDE_ALL_CREDITS`, `EXCLUDE_ALL_CREDITS`, and `INCLUDE_S
     </dt>
     <dd>{{% md %}}A single label and value pair specifying that usage from only
 this set of labeled resources should be included in the budget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -2676,8 +2531,7 @@ specifying that usage from only this set of projects should be
 included in the budget. If omitted, the report will include
 all usage for the billing account, regardless of which project
 the usage occurred on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -2691,8 +2545,7 @@ included in the budget. If omitted, the report will include
 usage for all the services. The service names are available
 through the Catalog API:
 https://cloud.google.com/billing/v1/how-tos/catalog-api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subaccounts_python">
 <a href="#subaccounts_python" style="color: inherit; text-decoration: inherit;">subaccounts</a>
@@ -2706,15 +2559,13 @@ be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
 account and all subaccounts, if they exist.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="budgetthresholdrule">Budget<wbr>Threshold<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="thresholdpercent_csharp">
 <a href="#thresholdpercent_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
@@ -2724,8 +2575,7 @@ account and all subaccounts, if they exist.
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spendbasis_csharp">
 <a href="#spendbasis_csharp" style="color: inherit; text-decoration: inherit;">Spend<wbr>Basis</a>
@@ -2737,13 +2587,11 @@ account and all subaccounts, if they exist.
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="thresholdpercent_go">
 <a href="#thresholdpercent_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Percent</a>
@@ -2753,8 +2601,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spendbasis_go">
 <a href="#spendbasis_go" style="color: inherit; text-decoration: inherit;">Spend<wbr>Basis</a>
@@ -2766,13 +2613,11 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="thresholdpercent_nodejs">
 <a href="#thresholdpercent_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Percent</a>
@@ -2782,8 +2627,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spendbasis_nodejs">
 <a href="#spendbasis_nodejs" style="color: inherit; text-decoration: inherit;">spend<wbr>Basis</a>
@@ -2795,13 +2639,11 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_percent_python">
 <a href="#threshold_percent_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>percent</a>
@@ -2811,8 +2653,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
     </dt>
     <dd>{{% md %}}Send an alert when this threshold is exceeded. This is a
 1.0-based percentage, so 0.5 = 50%. Must be >= 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spend_basis_python">
 <a href="#spend_basis_python" style="color: inherit; text-decoration: inherit;">spend_<wbr>basis</a>
@@ -2824,8 +2665,7 @@ Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
 the threshold.
 Default value is `CURRENT_SPEND`.
 Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -172,8 +172,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -183,8 +182,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -194,13 +192,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -210,8 +206,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -221,13 +216,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -237,8 +230,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -248,13 +240,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -264,8 +254,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -275,8 +264,7 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -289,8 +277,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -299,8 +286,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -309,8 +295,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getregionsregion">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Region&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -318,8 +303,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -327,13 +311,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Regions<wbr>Sort&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -342,8 +324,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -352,8 +333,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getregionsregion">[]Get<wbr>Regions<wbr>Region</a></span>
     </dt>
     <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -361,8 +341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">[]Get<wbr>Regions<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -370,13 +349,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">[]Get<wbr>Regions<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -385,8 +362,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -395,8 +371,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getregionsregion">Get<wbr>Regions<wbr>Region[]</a></span>
     </dt>
     <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -404,8 +379,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">Get<wbr>Regions<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -413,13 +387,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">Get<wbr>Regions<wbr>Sort[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -428,8 +400,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -438,8 +409,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getregionsregion">Sequence[Get<wbr>Regions<wbr>Region]</a></span>
     </dt>
     <dd>{{% md %}}A set of regions satisfying any `filter` and `sort` criteria. Each region has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -447,8 +417,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionsfilter">Sequence[Get<wbr>Regions<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -456,8 +425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getregionssort">Sequence[Get<wbr>Regions<wbr>Sort]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -471,8 +439,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -482,8 +449,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Filter the regions by this key. This may be one of `slug`,
 `name`, `available`, `features`, or `sizes`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -493,8 +459,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves regions
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
@@ -505,8 +470,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_csharp">
 <a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
@@ -517,13 +481,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -533,8 +495,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Filter the regions by this key. This may be one of `slug`,
 `name`, `available`, `features`, or `sizes`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -544,8 +505,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves regions
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
@@ -556,8 +516,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_go">
 <a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
@@ -568,13 +527,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -584,8 +541,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Filter the regions by this key. This may be one of `slug`,
 `name`, `available`, `features`, or `sizes`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -595,8 +551,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves regions
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
@@ -607,8 +562,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_nodejs">
 <a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
@@ -619,13 +573,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -635,8 +587,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Filter the regions by this key. This may be one of `slug`,
 `name`, `available`, `features`, or `sizes`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -646,8 +597,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves regions
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
@@ -658,8 +608,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_by_python">
 <a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
@@ -670,8 +619,7 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getregionsregion">Get<wbr>Regions<wbr>Region</h4>
@@ -679,8 +627,7 @@ substrings to find within the string field.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="available_csharp">
 <a href="#available_csharp" style="color: inherit; text-decoration: inherit;">Available</a>
@@ -689,8 +636,7 @@ substrings to find within the string field.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -699,8 +645,7 @@ substrings to find within the string field.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of features available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -709,8 +654,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizes_csharp">
 <a href="#sizes_csharp" style="color: inherit; text-decoration: inherit;">Sizes</a>
@@ -719,8 +663,7 @@ substrings to find within the string field.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slug_csharp">
 <a href="#slug_csharp" style="color: inherit; text-decoration: inherit;">Slug</a>
@@ -729,13 +672,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="available_go">
 <a href="#available_go" style="color: inherit; text-decoration: inherit;">Available</a>
@@ -744,8 +685,7 @@ substrings to find within the string field.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -754,8 +694,7 @@ substrings to find within the string field.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of features available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -764,8 +703,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizes_go">
 <a href="#sizes_go" style="color: inherit; text-decoration: inherit;">Sizes</a>
@@ -774,8 +712,7 @@ substrings to find within the string field.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slug_go">
 <a href="#slug_go" style="color: inherit; text-decoration: inherit;">Slug</a>
@@ -784,13 +721,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="available_nodejs">
 <a href="#available_nodejs" style="color: inherit; text-decoration: inherit;">available</a>
@@ -799,8 +734,7 @@ substrings to find within the string field.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -809,8 +743,7 @@ substrings to find within the string field.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of features available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -819,8 +752,7 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizes_nodejs">
 <a href="#sizes_nodejs" style="color: inherit; text-decoration: inherit;">sizes</a>
@@ -829,8 +761,7 @@ substrings to find within the string field.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slug_nodejs">
 <a href="#slug_nodejs" style="color: inherit; text-decoration: inherit;">slug</a>
@@ -839,13 +770,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="available_python">
 <a href="#available_python" style="color: inherit; text-decoration: inherit;">available</a>
@@ -854,8 +783,7 @@ substrings to find within the string field.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that represents whether new Droplets can be created in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -864,8 +792,7 @@ substrings to find within the string field.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of features available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -874,8 +801,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sizes_python">
 <a href="#sizes_python" style="color: inherit; text-decoration: inherit;">sizes</a>
@@ -884,8 +810,7 @@ substrings to find within the string field.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of identifying slugs for the Droplet sizes available in this region.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slug_python">
 <a href="#slug_python" style="color: inherit; text-decoration: inherit;">slug</a>
@@ -894,8 +819,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used as a unique identifier for each region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getregionssort">Get<wbr>Regions<wbr>Sort</h4>
@@ -903,8 +827,7 @@ substrings to find within the string field.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -914,8 +837,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the regions by this key. This may be one of `slug`,
 `name`, or `available`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -924,13 +846,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -940,8 +860,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the regions by this key. This may be one of `slug`,
 `name`, or `available`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -950,13 +869,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -966,8 +883,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the regions by this key. This may be one of `slug`,
 `name`, or `available`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -976,13 +892,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -992,8 +906,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}Sort the regions by this key. This may be one of `slug`,
 `name`, or `available`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1002,8 +915,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

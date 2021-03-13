@@ -1000,8 +1000,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancefilter_csharp">
 <a href="#instancefilter_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
@@ -1011,8 +1010,7 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="patchdeploymentid_csharp">
 <a href="#patchdeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
@@ -1026,8 +1024,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1036,8 +1033,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1047,8 +1043,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onetimeschedule_csharp">
 <a href="#onetimeschedule_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
@@ -1058,8 +1053,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchconfig_csharp">
 <a href="#patchconfig_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
@@ -1069,8 +1063,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1080,8 +1073,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurringschedule_csharp">
 <a href="#recurringschedule_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
@@ -1091,8 +1083,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollout_csharp">
 <a href="#rollout_csharp" style="color: inherit; text-decoration: inherit;">Rollout</a>
@@ -1102,13 +1093,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancefilter_go">
 <a href="#instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
@@ -1118,8 +1107,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="patchdeploymentid_go">
 <a href="#patchdeploymentid_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
@@ -1133,8 +1121,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1143,8 +1130,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1154,8 +1140,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onetimeschedule_go">
 <a href="#onetimeschedule_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
@@ -1165,8 +1150,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchconfig_go">
 <a href="#patchconfig_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
@@ -1176,8 +1160,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1187,8 +1170,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurringschedule_go">
 <a href="#recurringschedule_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
@@ -1198,8 +1180,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollout_go">
 <a href="#rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
@@ -1209,13 +1190,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancefilter_nodejs">
 <a href="#instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
@@ -1225,8 +1204,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="patchdeploymentid_nodejs">
 <a href="#patchdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployment<wbr>Id</a>
@@ -1240,8 +1218,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1250,8 +1227,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1261,8 +1237,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onetimeschedule_nodejs">
 <a href="#onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
@@ -1272,8 +1247,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patchconfig_nodejs">
 <a href="#patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
@@ -1283,8 +1257,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1294,8 +1267,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurringschedule_nodejs">
 <a href="#recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
@@ -1305,8 +1277,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollout_nodejs">
 <a href="#rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
@@ -1316,13 +1287,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_filter_python">
 <a href="#instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
@@ -1332,8 +1301,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="patch_deployment_id_python">
 <a href="#patch_deployment_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployment_<wbr>id</a>
@@ -1347,8 +1315,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1357,8 +1324,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1368,8 +1334,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="one_time_schedule_python">
 <a href="#one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
@@ -1379,8 +1344,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patch_config_python">
 <a href="#patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
@@ -1390,8 +1354,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1401,8 +1364,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recurring_schedule_python">
 <a href="#recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
@@ -1412,8 +1374,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollout_python">
 <a href="#rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
@@ -1423,8 +1384,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1435,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1446,8 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1455,8 +1413,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastexecutetime_csharp">
 <a href="#lastexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
@@ -1467,8 +1424,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1478,8 +1434,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1489,13 +1444,11 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1505,8 +1458,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1514,8 +1466,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastexecutetime_go">
 <a href="#lastexecutetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
@@ -1526,8 +1477,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1537,8 +1487,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1548,13 +1497,11 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1564,8 +1511,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1573,8 +1519,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastexecutetime_nodejs">
 <a href="#lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
@@ -1585,8 +1530,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1596,8 +1540,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1607,13 +1550,11 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1623,8 +1564,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1632,8 +1572,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_execute_time_python">
 <a href="#last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
@@ -1644,8 +1583,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1655,8 +1593,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1666,8 +1603,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1794,8 +1730,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1805,8 +1740,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1815,8 +1749,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_csharp">
 <a href="#state_duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1826,8 +1759,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancefilter_csharp">
 <a href="#state_instancefilter_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
@@ -1837,8 +1769,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastexecutetime_csharp">
 <a href="#state_lastexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
@@ -1849,8 +1780,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1860,8 +1790,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onetimeschedule_csharp">
 <a href="#state_onetimeschedule_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
@@ -1871,8 +1800,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchconfig_csharp">
 <a href="#state_patchconfig_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
@@ -1882,8 +1810,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchdeploymentid_csharp">
 <a href="#state_patchdeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
@@ -1897,8 +1824,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1908,8 +1834,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recurringschedule_csharp">
 <a href="#state_recurringschedule_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
@@ -1919,8 +1844,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollout_csharp">
 <a href="#state_rollout_csharp" style="color: inherit; text-decoration: inherit;">Rollout</a>
@@ -1930,8 +1854,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1941,13 +1864,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1957,8 +1878,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1967,8 +1887,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_go">
 <a href="#state_duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1978,8 +1897,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancefilter_go">
 <a href="#state_instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
@@ -1989,8 +1907,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastexecutetime_go">
 <a href="#state_lastexecutetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
@@ -2001,8 +1918,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2012,8 +1928,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onetimeschedule_go">
 <a href="#state_onetimeschedule_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
@@ -2023,8 +1938,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchconfig_go">
 <a href="#state_patchconfig_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
@@ -2034,8 +1948,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchdeploymentid_go">
 <a href="#state_patchdeploymentid_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
@@ -2049,8 +1962,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2060,8 +1972,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recurringschedule_go">
 <a href="#state_recurringschedule_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
@@ -2071,8 +1982,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollout_go">
 <a href="#state_rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
@@ -2082,8 +1992,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -2093,13 +2002,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -2109,8 +2016,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2119,8 +2025,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_nodejs">
 <a href="#state_duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2130,8 +2035,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancefilter_nodejs">
 <a href="#state_instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
@@ -2141,8 +2045,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastexecutetime_nodejs">
 <a href="#state_lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
@@ -2153,8 +2056,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2164,8 +2066,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onetimeschedule_nodejs">
 <a href="#state_onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
@@ -2175,8 +2076,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchconfig_nodejs">
 <a href="#state_patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
@@ -2186,8 +2086,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patchdeploymentid_nodejs">
 <a href="#state_patchdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployment<wbr>Id</a>
@@ -2201,8 +2100,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2212,8 +2110,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recurringschedule_nodejs">
 <a href="#state_recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
@@ -2223,8 +2120,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollout_nodejs">
 <a href="#state_rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
@@ -2234,8 +2130,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -2245,13 +2140,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -2261,8 +2154,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2271,8 +2163,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_python">
 <a href="#state_duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2282,8 +2173,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_filter_python">
 <a href="#state_instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
@@ -2293,8 +2183,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_execute_time_python">
 <a href="#state_last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
@@ -2305,8 +2194,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2316,8 +2204,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_one_time_schedule_python">
 <a href="#state_one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
@@ -2327,8 +2214,7 @@ projects/{project_id}/patchDeployments/{patchDeploymentId}.
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patch_config_python">
 <a href="#state_patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
@@ -2338,8 +2224,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_patch_deployment_id_python">
 <a href="#state_patch_deployment_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployment_<wbr>id</a>
@@ -2353,8 +2238,7 @@ Structure is documented below.
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2364,8 +2248,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recurring_schedule_python">
 <a href="#state_recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
@@ -2375,8 +2258,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollout_python">
 <a href="#state_rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
@@ -2386,8 +2268,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -2397,8 +2278,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2413,8 +2293,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 <h4 id="patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
@@ -2423,8 +2302,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouplabels_csharp">
 <a href="#grouplabels_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
@@ -2434,8 +2312,7 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_csharp">
 <a href="#instancenameprefixes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name<wbr>Prefixes</a>
@@ -2445,8 +2322,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -2457,8 +2333,7 @@ VMs when targeting configs, for example prefix="prod-".
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -2467,13 +2342,11 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
@@ -2482,8 +2355,7 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouplabels_go">
 <a href="#grouplabels_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
@@ -2493,8 +2365,7 @@ VMs when targeting configs, for example prefix="prod-".
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_go">
 <a href="#instancenameprefixes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name<wbr>Prefixes</a>
@@ -2504,8 +2375,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -2516,8 +2386,7 @@ VMs when targeting configs, for example prefix="prod-".
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -2526,13 +2395,11 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
@@ -2541,8 +2408,7 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouplabels_nodejs">
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
@@ -2552,8 +2418,7 @@ VMs when targeting configs, for example prefix="prod-".
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_nodejs">
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
@@ -2563,8 +2428,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -2575,8 +2439,7 @@ VMs when targeting configs, for example prefix="prod-".
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -2585,13 +2448,11 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
@@ -2600,8 +2461,7 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_labels_python">
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
@@ -2611,8 +2471,7 @@ VMs when targeting configs, for example prefix="prod-".
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_name_prefixes_python">
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
@@ -2622,8 +2481,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -2634,8 +2492,7 @@ VMs when targeting configs, for example prefix="prod-".
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -2644,15 +2501,13 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2661,13 +2516,11 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2676,13 +2529,11 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2691,13 +2542,11 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2706,15 +2555,13 @@ VMs when targeting configs, for example prefix="prod-".
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="executetime_csharp">
 <a href="#executetime_csharp" style="color: inherit; text-decoration: inherit;">Execute<wbr>Time</a>
@@ -2724,13 +2571,11 @@ VMs when targeting configs, for example prefix="prod-".
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="executetime_go">
 <a href="#executetime_go" style="color: inherit; text-decoration: inherit;">Execute<wbr>Time</a>
@@ -2740,13 +2585,11 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="executetime_nodejs">
 <a href="#executetime_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Time</a>
@@ -2756,13 +2599,11 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="execute_time_python">
 <a href="#execute_time_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>time</a>
@@ -2772,15 +2613,13 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apt_csharp">
 <a href="#apt_csharp" style="color: inherit; text-decoration: inherit;">Apt</a>
@@ -2790,8 +2629,7 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goo_csharp">
 <a href="#goo_csharp" style="color: inherit; text-decoration: inherit;">Goo</a>
@@ -2801,8 +2639,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststep_csharp">
 <a href="#poststep_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Step</a>
@@ -2812,8 +2649,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prestep_csharp">
 <a href="#prestep_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Step</a>
@@ -2823,8 +2659,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootconfig_csharp">
 <a href="#rebootconfig_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Config</a>
@@ -2834,8 +2669,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsupdate_csharp">
 <a href="#windowsupdate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Update</a>
@@ -2845,8 +2679,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yum_csharp">
 <a href="#yum_csharp" style="color: inherit; text-decoration: inherit;">Yum</a>
@@ -2856,8 +2689,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zypper_csharp">
 <a href="#zypper_csharp" style="color: inherit; text-decoration: inherit;">Zypper</a>
@@ -2867,13 +2699,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apt_go">
 <a href="#apt_go" style="color: inherit; text-decoration: inherit;">Apt</a>
@@ -2883,8 +2713,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goo_go">
 <a href="#goo_go" style="color: inherit; text-decoration: inherit;">Goo</a>
@@ -2894,8 +2723,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststep_go">
 <a href="#poststep_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Step</a>
@@ -2905,8 +2733,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prestep_go">
 <a href="#prestep_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Step</a>
@@ -2916,8 +2743,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootconfig_go">
 <a href="#rebootconfig_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Config</a>
@@ -2927,8 +2753,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsupdate_go">
 <a href="#windowsupdate_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Update</a>
@@ -2938,8 +2763,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yum_go">
 <a href="#yum_go" style="color: inherit; text-decoration: inherit;">Yum</a>
@@ -2949,8 +2773,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zypper_go">
 <a href="#zypper_go" style="color: inherit; text-decoration: inherit;">Zypper</a>
@@ -2960,13 +2783,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apt_nodejs">
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
@@ -2976,8 +2797,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goo_nodejs">
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
@@ -2987,8 +2807,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststep_nodejs">
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
@@ -2998,8 +2817,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prestep_nodejs">
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
@@ -3009,8 +2827,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rebootconfig_nodejs">
 <a href="#rebootconfig_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Config</a>
@@ -3020,8 +2837,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsupdate_nodejs">
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
@@ -3031,8 +2847,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yum_nodejs">
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
@@ -3042,8 +2857,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zypper_nodejs">
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
@@ -3053,13 +2867,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apt_python">
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
@@ -3069,8 +2881,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goo_python">
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
@@ -3080,8 +2891,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_step_python">
 <a href="#post_step_python" style="color: inherit; text-decoration: inherit;">post_<wbr>step</a>
@@ -3091,8 +2901,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_step_python">
 <a href="#pre_step_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>step</a>
@@ -3102,8 +2911,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reboot_config_python">
 <a href="#reboot_config_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>config</a>
@@ -3113,8 +2921,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_update_python">
 <a href="#windows_update_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>update</a>
@@ -3124,8 +2931,7 @@ Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yum_python">
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
@@ -3135,8 +2941,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zypper_python">
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
@@ -3146,15 +2951,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -3163,8 +2966,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_csharp">
 <a href="#exclusivepackages_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
@@ -3175,8 +2977,7 @@ Structure is documented below.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3186,13 +2987,11 @@ any other patch configuration fields.
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -3201,8 +3000,7 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_go">
 <a href="#exclusivepackages_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
@@ -3213,8 +3011,7 @@ Possible values are `DIST` and `UPGRADE`.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3224,13 +3021,11 @@ any other patch configuration fields.
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -3239,8 +3034,7 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_nodejs">
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
@@ -3251,8 +3045,7 @@ Possible values are `DIST` and `UPGRADE`.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3262,13 +3055,11 @@ any other patch configuration fields.
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -3277,8 +3068,7 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusive_packages_python">
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
@@ -3289,8 +3079,7 @@ Possible values are `DIST` and `UPGRADE`.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3300,15 +3089,13 @@ any other patch configuration fields.
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3317,13 +3104,11 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3332,13 +3117,11 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3347,13 +3130,11 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3362,15 +3143,13 @@ Possible values are `DIST` and `UPGRADE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxexecstepconfig_csharp">
 <a href="#linuxexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -3380,8 +3159,7 @@ Possible values are `DIST` and `UPGRADE`.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_csharp">
 <a href="#windowsexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -3391,13 +3169,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxexecstepconfig_go">
 <a href="#linuxexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -3407,8 +3183,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_go">
 <a href="#windowsexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -3418,13 +3193,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxexecstepconfig_nodejs">
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -3434,8 +3207,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_nodejs">
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -3445,13 +3217,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_exec_step_config_python">
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
@@ -3461,8 +3231,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_exec_step_config_python">
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
@@ -3472,15 +3241,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -3489,8 +3256,7 @@ Structure is documented below.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -3500,8 +3266,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -3512,8 +3277,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -3522,13 +3286,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -3537,8 +3299,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -3548,8 +3309,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -3560,8 +3320,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -3570,13 +3329,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
@@ -3585,8 +3342,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
@@ -3596,8 +3352,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -3608,8 +3363,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
@@ -3618,13 +3372,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
@@ -3633,8 +3385,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
@@ -3644,8 +3395,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -3656,8 +3406,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
@@ -3666,15 +3415,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -3683,8 +3430,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -3693,8 +3439,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -3703,13 +3448,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -3718,8 +3461,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -3728,8 +3470,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -3738,13 +3479,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -3753,8 +3492,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
@@ -3763,8 +3501,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -3773,13 +3510,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -3788,8 +3523,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
@@ -3798,8 +3532,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -3808,15 +3541,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -3825,8 +3556,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -3836,8 +3566,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -3848,8 +3577,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -3858,13 +3586,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -3873,8 +3599,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -3884,8 +3609,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -3896,8 +3620,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -3906,13 +3629,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
@@ -3921,8 +3642,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
@@ -3932,8 +3652,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -3944,8 +3663,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
@@ -3954,13 +3672,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
@@ -3969,8 +3685,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
@@ -3980,8 +3695,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -3992,8 +3706,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
@@ -4002,15 +3715,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -4019,8 +3730,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -4029,8 +3739,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -4039,13 +3748,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -4054,8 +3761,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -4064,8 +3770,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -4074,13 +3779,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -4089,8 +3792,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
@@ -4099,8 +3801,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -4109,13 +3810,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -4124,8 +3823,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
@@ -4134,8 +3832,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -4144,15 +3841,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxexecstepconfig_csharp">
 <a href="#linuxexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -4162,8 +3857,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_csharp">
 <a href="#windowsexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -4173,13 +3867,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxexecstepconfig_go">
 <a href="#linuxexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -4189,8 +3881,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_go">
 <a href="#windowsexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -4200,13 +3891,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linuxexecstepconfig_nodejs">
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -4216,8 +3905,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_nodejs">
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
@@ -4227,13 +3915,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="linux_exec_step_config_python">
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
@@ -4243,8 +3929,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_exec_step_config_python">
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
@@ -4254,15 +3939,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -4271,8 +3954,7 @@ Structure is documented below.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -4282,8 +3964,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -4294,8 +3975,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -4304,13 +3984,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -4319,8 +3997,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -4330,8 +4007,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -4342,8 +4018,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -4352,13 +4027,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
@@ -4367,8 +4040,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
@@ -4378,8 +4050,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -4390,8 +4061,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
@@ -4400,13 +4070,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
@@ -4415,8 +4083,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
@@ -4426,8 +4093,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -4438,8 +4104,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
@@ -4448,15 +4113,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -4465,8 +4128,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -4475,8 +4137,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -4485,13 +4146,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -4500,8 +4159,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -4510,8 +4168,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -4520,13 +4177,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -4535,8 +4190,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
@@ -4545,8 +4199,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -4555,13 +4208,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -4570,8 +4221,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
@@ -4580,8 +4230,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -4590,15 +4239,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -4607,8 +4254,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -4618,8 +4264,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -4630,8 +4275,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -4640,13 +4284,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
@@ -4655,8 +4297,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
@@ -4666,8 +4307,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
@@ -4678,8 +4318,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
@@ -4688,13 +4327,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
@@ -4703,8 +4340,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
@@ -4714,8 +4350,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -4726,8 +4361,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
@@ -4736,13 +4370,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
@@ -4751,8 +4383,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
@@ -4762,8 +4393,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
@@ -4774,8 +4404,7 @@ Structure is documented below.
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
@@ -4784,15 +4413,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -4801,8 +4428,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -4811,8 +4437,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -4821,13 +4446,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -4836,8 +4459,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
@@ -4846,8 +4468,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -4856,13 +4477,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -4871,8 +4490,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
@@ -4881,8 +4499,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -4891,13 +4508,11 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -4906,8 +4521,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
@@ -4916,8 +4530,7 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -4926,15 +4539,13 @@ Possible values are `SHELL` and `POWERSHELL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="classifications_csharp">
 <a href="#classifications_csharp" style="color: inherit; text-decoration: inherit;">Classifications</a>
@@ -4944,8 +4555,7 @@ Possible values are `SHELL` and `POWERSHELL`.
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -4954,8 +4564,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_csharp">
 <a href="#exclusivepatches_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
@@ -4965,13 +4574,11 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="classifications_go">
 <a href="#classifications_go" style="color: inherit; text-decoration: inherit;">Classifications</a>
@@ -4981,8 +4588,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -4991,8 +4597,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_go">
 <a href="#exclusivepatches_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
@@ -5002,13 +4607,11 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="classifications_nodejs">
 <a href="#classifications_nodejs" style="color: inherit; text-decoration: inherit;">classifications</a>
@@ -5018,8 +4621,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -5028,8 +4630,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_nodejs">
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
@@ -5039,13 +4640,11 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="classifications_python">
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
@@ -5055,8 +4654,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -5065,8 +4663,7 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusive_patches_python">
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
@@ -5076,15 +4673,13 @@ Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATUR
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -5093,8 +4688,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_csharp">
 <a href="#exclusivepackages_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
@@ -5105,8 +4699,7 @@ This field must not be used with other patch configurations.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimal_csharp">
 <a href="#minimal_csharp" style="color: inherit; text-decoration: inherit;">Minimal</a>
@@ -5115,8 +4708,7 @@ any other patch configuration fields.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_csharp">
 <a href="#security_csharp" style="color: inherit; text-decoration: inherit;">Security</a>
@@ -5125,13 +4717,11 @@ any other patch configuration fields.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -5140,8 +4730,7 @@ any other patch configuration fields.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_go">
 <a href="#exclusivepackages_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
@@ -5152,8 +4741,7 @@ any other patch configuration fields.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimal_go">
 <a href="#minimal_go" style="color: inherit; text-decoration: inherit;">Minimal</a>
@@ -5162,8 +4750,7 @@ any other patch configuration fields.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_go">
 <a href="#security_go" style="color: inherit; text-decoration: inherit;">Security</a>
@@ -5172,13 +4759,11 @@ any other patch configuration fields.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -5187,8 +4772,7 @@ any other patch configuration fields.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_nodejs">
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
@@ -5199,8 +4783,7 @@ any other patch configuration fields.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimal_nodejs">
 <a href="#minimal_nodejs" style="color: inherit; text-decoration: inherit;">minimal</a>
@@ -5209,8 +4792,7 @@ any other patch configuration fields.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_nodejs">
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
@@ -5219,13 +4801,11 @@ any other patch configuration fields.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -5234,8 +4814,7 @@ any other patch configuration fields.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusive_packages_python">
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
@@ -5246,8 +4825,7 @@ any other patch configuration fields.
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimal_python">
 <a href="#minimal_python" style="color: inherit; text-decoration: inherit;">minimal</a>
@@ -5256,8 +4834,7 @@ any other patch configuration fields.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_python">
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
@@ -5266,15 +4843,13 @@ any other patch configuration fields.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="categories_csharp">
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
@@ -5283,8 +4858,7 @@ any other patch configuration fields.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -5293,8 +4867,7 @@ any other patch configuration fields.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_csharp">
 <a href="#exclusivepatches_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
@@ -5304,8 +4877,7 @@ any other patch configuration fields.
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severities_csharp">
 <a href="#severities_csharp" style="color: inherit; text-decoration: inherit;">Severities</a>
@@ -5314,8 +4886,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withoptional_csharp">
 <a href="#withoptional_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Optional</a>
@@ -5324,8 +4895,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withupdate_csharp">
 <a href="#withupdate_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Update</a>
@@ -5334,13 +4904,11 @@ This field must not be used with other patch configurations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="categories_go">
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
@@ -5349,8 +4917,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -5359,8 +4926,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_go">
 <a href="#exclusivepatches_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
@@ -5370,8 +4936,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severities_go">
 <a href="#severities_go" style="color: inherit; text-decoration: inherit;">Severities</a>
@@ -5380,8 +4945,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withoptional_go">
 <a href="#withoptional_go" style="color: inherit; text-decoration: inherit;">With<wbr>Optional</a>
@@ -5390,8 +4954,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withupdate_go">
 <a href="#withupdate_go" style="color: inherit; text-decoration: inherit;">With<wbr>Update</a>
@@ -5400,13 +4963,11 @@ This field must not be used with other patch configurations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="categories_nodejs">
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
@@ -5415,8 +4976,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -5425,8 +4985,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_nodejs">
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
@@ -5436,8 +4995,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severities_nodejs">
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
@@ -5446,8 +5004,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withoptional_nodejs">
 <a href="#withoptional_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Optional</a>
@@ -5456,8 +5013,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withupdate_nodejs">
 <a href="#withupdate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Update</a>
@@ -5466,13 +5022,11 @@ This field must not be used with other patch configurations.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="categories_python">
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
@@ -5481,8 +5035,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -5491,8 +5044,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusive_patches_python">
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
@@ -5502,8 +5054,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severities_python">
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
@@ -5512,8 +5063,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_optional_python">
 <a href="#with_optional_python" style="color: inherit; text-decoration: inherit;">with_<wbr>optional</a>
@@ -5522,8 +5072,7 @@ This field must not be used with other patch configurations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_update_python">
 <a href="#with_update_python" style="color: inherit; text-decoration: inherit;">with_<wbr>update</a>
@@ -5532,15 +5081,13 @@ This field must not be used with other patch configurations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeofday_csharp">
 <a href="#timeofday_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
@@ -5550,8 +5097,7 @@ This field must not be used with other patch configurations.
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -5562,8 +5108,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -5573,8 +5118,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastexecutetime_csharp">
 <a href="#lastexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
@@ -5585,8 +5129,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_csharp">
 <a href="#monthly_csharp" style="color: inherit; text-decoration: inherit;">Monthly</a>
@@ -5596,8 +5139,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextexecutetime_csharp">
 <a href="#nextexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Execute<wbr>Time</a>
@@ -5608,8 +5150,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -5619,8 +5160,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_csharp">
 <a href="#weekly_csharp" style="color: inherit; text-decoration: inherit;">Weekly</a>
@@ -5630,13 +5170,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeofday_go">
 <a href="#timeofday_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
@@ -5646,8 +5184,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -5658,8 +5195,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -5669,8 +5205,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastexecutetime_go">
 <a href="#lastexecutetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
@@ -5681,8 +5216,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_go">
 <a href="#monthly_go" style="color: inherit; text-decoration: inherit;">Monthly</a>
@@ -5692,8 +5226,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextexecutetime_go">
 <a href="#nextexecutetime_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Execute<wbr>Time</a>
@@ -5704,8 +5237,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -5715,8 +5247,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_go">
 <a href="#weekly_go" style="color: inherit; text-decoration: inherit;">Weekly</a>
@@ -5726,13 +5257,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="timeofday_nodejs">
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
@@ -5742,8 +5271,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -5754,8 +5282,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -5765,8 +5292,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastexecutetime_nodejs">
 <a href="#lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
@@ -5777,8 +5303,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_nodejs">
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
@@ -5788,8 +5313,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextexecutetime_nodejs">
 <a href="#nextexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Execute<wbr>Time</a>
@@ -5800,8 +5324,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -5811,8 +5334,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_nodejs">
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
@@ -5822,13 +5344,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="time_of_day_python">
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
@@ -5838,8 +5358,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -5850,8 +5369,7 @@ Structure is documented below.
     <dd>{{% md %}}Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
 determined by the chosen time zone.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -5861,8 +5379,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_execute_time_python">
 <a href="#last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
@@ -5873,8 +5390,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthly_python">
 <a href="#monthly_python" style="color: inherit; text-decoration: inherit;">monthly</a>
@@ -5884,8 +5400,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_execute_time_python">
 <a href="#next_execute_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>execute_<wbr>time</a>
@@ -5896,8 +5411,7 @@ Structure is documented below.
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -5907,8 +5421,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_python">
 <a href="#weekly_python" style="color: inherit; text-decoration: inherit;">weekly</a>
@@ -5918,15 +5431,13 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthday_csharp">
 <a href="#monthday_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Day</a>
@@ -5937,8 +5448,7 @@ Structure is documented below.
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdayofmonth_csharp">
 <a href="#weekdayofmonth_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Day<wbr>Of<wbr>Month</a>
@@ -5948,13 +5458,11 @@ will not run in February, April, June, etc.
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthday_go">
 <a href="#monthday_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Day</a>
@@ -5965,8 +5473,7 @@ Structure is documented below.
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdayofmonth_go">
 <a href="#weekdayofmonth_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Day<wbr>Of<wbr>Month</a>
@@ -5976,13 +5483,11 @@ will not run in February, April, June, etc.
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="monthday_nodejs">
 <a href="#monthday_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Day</a>
@@ -5993,8 +5498,7 @@ Structure is documented below.
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdayofmonth_nodejs">
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
@@ -6004,13 +5508,11 @@ will not run in February, April, June, etc.
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="month_day_python">
 <a href="#month_day_python" style="color: inherit; text-decoration: inherit;">month_<wbr>day</a>
@@ -6021,8 +5523,7 @@ Structure is documented below.
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="week_day_of_month_python">
 <a href="#week_day_of_month_python" style="color: inherit; text-decoration: inherit;">week_<wbr>day_<wbr>of_<wbr>month</a>
@@ -6032,15 +5533,13 @@ will not run in February, April, June, etc.
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -6050,8 +5549,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekordinal_csharp">
 <a href="#weekordinal_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Ordinal</a>
@@ -6060,13 +5558,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -6076,8 +5572,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekordinal_go">
 <a href="#weekordinal_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Ordinal</a>
@@ -6086,13 +5581,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -6102,8 +5595,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekordinal_nodejs">
 <a href="#weekordinal_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Ordinal</a>
@@ -6112,13 +5604,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -6128,8 +5618,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="week_ordinal_python">
 <a href="#week_ordinal_python" style="color: inherit; text-decoration: inherit;">week_<wbr>ordinal</a>
@@ -6138,15 +5627,13 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_csharp">
 <a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -6156,8 +5643,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -6166,8 +5652,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -6176,8 +5661,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -6186,13 +5670,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_go">
 <a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -6202,8 +5684,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -6212,8 +5693,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -6222,8 +5702,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -6232,13 +5711,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_nodejs">
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -6248,8 +5725,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -6258,8 +5734,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -6268,8 +5743,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -6278,13 +5752,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hours_python">
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -6294,8 +5766,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -6304,8 +5775,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -6314,8 +5784,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -6324,15 +5793,13 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -6341,8 +5808,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6351,13 +5817,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -6366,8 +5830,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6376,13 +5839,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -6391,8 +5852,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6401,13 +5861,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -6416,8 +5874,7 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6426,15 +5883,13 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -6444,13 +5899,11 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -6460,13 +5913,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -6476,13 +5927,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -6492,15 +5941,13 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disruptionbudget_csharp">
 <a href="#disruptionbudget_csharp" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
@@ -6514,8 +5961,7 @@ A VM contributes to the disruption budget if its patching operation fails either
 For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -6525,13 +5971,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disruptionbudget_go">
 <a href="#disruptionbudget_go" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
@@ -6545,8 +5989,7 @@ A VM contributes to the disruption budget if its patching operation fails either
 For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -6556,13 +5999,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disruptionbudget_nodejs">
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
@@ -6576,8 +6017,7 @@ A VM contributes to the disruption budget if its patching operation fails either
 For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -6587,13 +6027,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disruption_budget_python">
 <a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
@@ -6607,8 +6045,7 @@ A VM contributes to the disruption budget if its patching operation fails either
 For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -6618,15 +6055,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
 <a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -6635,8 +6070,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -6645,13 +6079,11 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
 <a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -6660,8 +6092,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -6670,13 +6101,11 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -6685,8 +6114,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -6695,13 +6123,11 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_python">
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -6710,8 +6136,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -6720,8 +6145,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

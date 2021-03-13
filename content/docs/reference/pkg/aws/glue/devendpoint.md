@@ -348,8 +348,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -358,8 +357,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_csharp">
 <a href="#arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -368,8 +366,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extrajarss3path_csharp">
 <a href="#extrajarss3path_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Jars<wbr>S3Path</a>
@@ -378,8 +375,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extrapythonlibss3path_csharp">
 <a href="#extrapythonlibss3path_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Python<wbr>Libs<wbr>S3Path</a>
@@ -388,8 +384,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glueversion_csharp">
 <a href="#glueversion_csharp" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -398,8 +393,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -408,8 +402,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_csharp">
 <a href="#numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -418,8 +411,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofworkers_csharp">
 <a href="#numberofworkers_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -428,8 +420,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -438,8 +429,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -448,8 +438,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityconfiguration_csharp">
 <a href="#securityconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
@@ -458,8 +447,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -468,8 +456,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -478,8 +465,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -488,8 +474,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workertype_csharp">
 <a href="#workertype_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -498,13 +483,11 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -513,8 +496,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_go">
 <a href="#arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -523,8 +505,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extrajarss3path_go">
 <a href="#extrajarss3path_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Jars<wbr>S3Path</a>
@@ -533,8 +514,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extrapythonlibss3path_go">
 <a href="#extrapythonlibss3path_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Python<wbr>Libs<wbr>S3Path</a>
@@ -543,8 +523,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glueversion_go">
 <a href="#glueversion_go" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -553,8 +532,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -563,8 +541,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_go">
 <a href="#numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -573,8 +550,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofworkers_go">
 <a href="#numberofworkers_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -583,8 +559,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -593,8 +568,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -603,8 +577,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityconfiguration_go">
 <a href="#securityconfiguration_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
@@ -613,8 +586,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -623,8 +595,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -633,8 +604,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -643,8 +613,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workertype_go">
 <a href="#workertype_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -653,13 +622,11 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -668,8 +635,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_nodejs">
 <a href="#arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -678,8 +644,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extrajarss3path_nodejs">
 <a href="#extrajarss3path_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Jars<wbr>S3Path</a>
@@ -688,8 +653,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extrapythonlibss3path_nodejs">
 <a href="#extrapythonlibss3path_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Python<wbr>Libs<wbr>S3Path</a>
@@ -698,8 +662,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glueversion_nodejs">
 <a href="#glueversion_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Version</a>
@@ -708,8 +671,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -718,8 +680,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_nodejs">
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
@@ -728,8 +689,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofworkers_nodejs">
 <a href="#numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
@@ -738,8 +698,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -748,8 +707,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -758,8 +716,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityconfiguration_nodejs">
 <a href="#securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
@@ -768,8 +725,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -778,8 +734,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -788,8 +743,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -798,8 +752,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workertype_nodejs">
 <a href="#workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
@@ -808,13 +761,11 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -823,8 +774,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arguments_python">
 <a href="#arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -833,8 +783,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_jars_s3_path_python">
 <a href="#extra_jars_s3_path_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>jars_<wbr>s3_<wbr>path</a>
@@ -843,8 +792,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_python_libs_s3_path_python">
 <a href="#extra_python_libs_s3_path_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>python_<wbr>libs_<wbr>s3_<wbr>path</a>
@@ -853,8 +801,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="glue_version_python">
 <a href="#glue_version_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>version</a>
@@ -863,8 +810,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -873,8 +819,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_nodes_python">
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
@@ -883,8 +828,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_workers_python">
 <a href="#number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
@@ -893,8 +837,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -903,8 +846,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -913,8 +855,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_configuration_python">
 <a href="#security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
@@ -923,8 +864,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -933,8 +873,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -943,8 +882,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -953,8 +891,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_type_python">
 <a href="#worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
@@ -963,8 +900,7 @@ The DevEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -975,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -985,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -995,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failurereason_csharp">
 <a href="#failurereason_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
@@ -1005,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1014,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateaddress_csharp">
 <a href="#privateaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Address</a>
@@ -1024,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicaddress_csharp">
 <a href="#publicaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Address</a>
@@ -1034,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1044,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1054,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yarnendpointaddress_csharp">
 <a href="#yarnendpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Endpoint<wbr>Address</a>
@@ -1064,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zeppelinremotesparkinterpreterport_csharp">
 <a href="#zeppelinremotesparkinterpreterport_csharp" style="color: inherit; text-decoration: inherit;">Zeppelin<wbr>Remote<wbr>Spark<wbr>Interpreter<wbr>Port</a>
@@ -1074,13 +1000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1089,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1099,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failurereason_go">
 <a href="#failurereason_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
@@ -1109,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1118,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateaddress_go">
 <a href="#privateaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Address</a>
@@ -1128,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicaddress_go">
 <a href="#publicaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Address</a>
@@ -1138,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1148,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1158,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yarnendpointaddress_go">
 <a href="#yarnendpointaddress_go" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Endpoint<wbr>Address</a>
@@ -1168,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zeppelinremotesparkinterpreterport_go">
 <a href="#zeppelinremotesparkinterpreterport_go" style="color: inherit; text-decoration: inherit;">Zeppelin<wbr>Remote<wbr>Spark<wbr>Interpreter<wbr>Port</a>
@@ -1178,13 +1093,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1193,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1203,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failurereason_nodejs">
 <a href="#failurereason_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reason</a>
@@ -1213,8 +1124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1222,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateaddress_nodejs">
 <a href="#privateaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Address</a>
@@ -1232,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicaddress_nodejs">
 <a href="#publicaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Address</a>
@@ -1242,8 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1252,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1262,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yarnendpointaddress_nodejs">
 <a href="#yarnendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Endpoint<wbr>Address</a>
@@ -1272,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zeppelinremotesparkinterpreterport_nodejs">
 <a href="#zeppelinremotesparkinterpreterport_nodejs" style="color: inherit; text-decoration: inherit;">zeppelin<wbr>Remote<wbr>Spark<wbr>Interpreter<wbr>Port</a>
@@ -1282,13 +1186,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1297,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1307,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="failure_reason_python">
 <a href="#failure_reason_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reason</a>
@@ -1317,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1326,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_address_python">
 <a href="#private_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>address</a>
@@ -1336,8 +1234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_address_python">
 <a href="#public_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>address</a>
@@ -1346,8 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1356,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1366,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yarn_endpoint_address_python">
 <a href="#yarn_endpoint_address_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>endpoint_<wbr>address</a>
@@ -1376,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zeppelin_remote_spark_interpreter_port_python">
 <a href="#zeppelin_remote_spark_interpreter_port_python" style="color: inherit; text-decoration: inherit;">zeppelin_<wbr>remote_<wbr>spark_<wbr>interpreter_<wbr>port</a>
@@ -1386,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1514,8 +1406,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_csharp">
 <a href="#state_arguments_csharp" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -1524,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1534,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1544,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extrajarss3path_csharp">
 <a href="#state_extrajarss3path_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Jars<wbr>S3Path</a>
@@ -1554,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extrapythonlibss3path_csharp">
 <a href="#state_extrapythonlibss3path_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Python<wbr>Libs<wbr>S3Path</a>
@@ -1564,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurereason_csharp">
 <a href="#state_failurereason_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
@@ -1574,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glueversion_csharp">
 <a href="#state_glueversion_csharp" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -1584,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1594,8 +1478,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofnodes_csharp">
 <a href="#state_numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -1604,8 +1487,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofworkers_csharp">
 <a href="#state_numberofworkers_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -1614,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateaddress_csharp">
 <a href="#state_privateaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Address</a>
@@ -1624,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicaddress_csharp">
 <a href="#state_publicaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Address</a>
@@ -1634,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_csharp">
 <a href="#state_publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1644,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeys_csharp">
 <a href="#state_publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -1654,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1664,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityconfiguration_csharp">
 <a href="#state_securityconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
@@ -1674,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -1684,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1694,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1704,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1714,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1724,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workertype_csharp">
 <a href="#state_workertype_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -1734,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yarnendpointaddress_csharp">
 <a href="#state_yarnendpointaddress_csharp" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Endpoint<wbr>Address</a>
@@ -1744,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zeppelinremotesparkinterpreterport_csharp">
 <a href="#state_zeppelinremotesparkinterpreterport_csharp" style="color: inherit; text-decoration: inherit;">Zeppelin<wbr>Remote<wbr>Spark<wbr>Interpreter<wbr>Port</a>
@@ -1754,13 +1622,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_go">
 <a href="#state_arguments_go" style="color: inherit; text-decoration: inherit;">Arguments</a>
@@ -1769,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1779,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1789,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extrajarss3path_go">
 <a href="#state_extrajarss3path_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Jars<wbr>S3Path</a>
@@ -1799,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extrapythonlibss3path_go">
 <a href="#state_extrapythonlibss3path_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Python<wbr>Libs<wbr>S3Path</a>
@@ -1809,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurereason_go">
 <a href="#state_failurereason_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
@@ -1819,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glueversion_go">
 <a href="#state_glueversion_go" style="color: inherit; text-decoration: inherit;">Glue<wbr>Version</a>
@@ -1829,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1839,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofnodes_go">
 <a href="#state_numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -1849,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofworkers_go">
 <a href="#state_numberofworkers_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Workers</a>
@@ -1859,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateaddress_go">
 <a href="#state_privateaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Address</a>
@@ -1869,8 +1725,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicaddress_go">
 <a href="#state_publicaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Address</a>
@@ -1879,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_go">
 <a href="#state_publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1889,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeys_go">
 <a href="#state_publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
@@ -1899,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1909,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityconfiguration_go">
 <a href="#state_securityconfiguration_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Configuration</a>
@@ -1919,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -1929,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1939,8 +1788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1949,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1959,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1969,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workertype_go">
 <a href="#state_workertype_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Type</a>
@@ -1979,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yarnendpointaddress_go">
 <a href="#state_yarnendpointaddress_go" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Endpoint<wbr>Address</a>
@@ -1989,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zeppelinremotesparkinterpreterport_go">
 <a href="#state_zeppelinremotesparkinterpreterport_go" style="color: inherit; text-decoration: inherit;">Zeppelin<wbr>Remote<wbr>Spark<wbr>Interpreter<wbr>Port</a>
@@ -1999,13 +1842,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_nodejs">
 <a href="#state_arguments_nodejs" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -2014,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2024,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -2034,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extrajarss3path_nodejs">
 <a href="#state_extrajarss3path_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Jars<wbr>S3Path</a>
@@ -2044,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extrapythonlibss3path_nodejs">
 <a href="#state_extrapythonlibss3path_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Python<wbr>Libs<wbr>S3Path</a>
@@ -2054,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurereason_nodejs">
 <a href="#state_failurereason_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reason</a>
@@ -2064,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glueversion_nodejs">
 <a href="#state_glueversion_nodejs" style="color: inherit; text-decoration: inherit;">glue<wbr>Version</a>
@@ -2074,8 +1909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2084,8 +1918,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofnodes_nodejs">
 <a href="#state_numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
@@ -2094,8 +1927,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofworkers_nodejs">
 <a href="#state_numberofworkers_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Workers</a>
@@ -2104,8 +1936,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateaddress_nodejs">
 <a href="#state_privateaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Address</a>
@@ -2114,8 +1945,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicaddress_nodejs">
 <a href="#state_publicaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Address</a>
@@ -2124,8 +1954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_nodejs">
 <a href="#state_publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -2134,8 +1963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickeys_nodejs">
 <a href="#state_publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
@@ -2144,8 +1972,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -2154,8 +1981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityconfiguration_nodejs">
 <a href="#state_securityconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Configuration</a>
@@ -2164,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -2174,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2184,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -2194,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2204,8 +2026,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -2214,8 +2035,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workertype_nodejs">
 <a href="#state_workertype_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Type</a>
@@ -2224,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yarnendpointaddress_nodejs">
 <a href="#state_yarnendpointaddress_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Endpoint<wbr>Address</a>
@@ -2234,8 +2053,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zeppelinremotesparkinterpreterport_nodejs">
 <a href="#state_zeppelinremotesparkinterpreterport_nodejs" style="color: inherit; text-decoration: inherit;">zeppelin<wbr>Remote<wbr>Spark<wbr>Interpreter<wbr>Port</a>
@@ -2244,13 +2062,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arguments_python">
 <a href="#state_arguments_python" style="color: inherit; text-decoration: inherit;">arguments</a>
@@ -2259,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of arguments used to configure the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2269,8 +2084,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -2279,8 +2093,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS availability zone where this endpoint is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_jars_s3_path_python">
 <a href="#state_extra_jars_s3_path_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>jars_<wbr>s3_<wbr>path</a>
@@ -2289,8 +2102,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_python_libs_s3_path_python">
 <a href="#state_extra_python_libs_s3_path_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>python_<wbr>libs_<wbr>s3_<wbr>path</a>
@@ -2299,8 +2111,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failure_reason_python">
 <a href="#state_failure_reason_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reason</a>
@@ -2309,8 +2120,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason for a current failure in this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_glue_version_python">
 <a href="#state_glue_version_python" style="color: inherit; text-decoration: inherit;">glue_<wbr>version</a>
@@ -2319,8 +2129,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2329,8 +2138,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this endpoint. It must be unique in your account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_of_nodes_python">
 <a href="#state_number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
@@ -2339,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_of_workers_python">
 <a href="#state_number_of_workers_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>workers</a>
@@ -2349,8 +2156,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_address_python">
 <a href="#state_private_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>address</a>
@@ -2359,8 +2165,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_address_python">
 <a href="#state_public_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>address</a>
@@ -2369,8 +2174,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_python">
 <a href="#state_public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -2379,8 +2183,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public key to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_keys_python">
 <a href="#state_public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
@@ -2389,8 +2192,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of public keys to be used by this endpoint for authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -2399,8 +2201,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role for this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_configuration_python">
 <a href="#state_security_configuration_python" style="color: inherit; text-decoration: inherit;">security_<wbr>configuration</a>
@@ -2409,8 +2210,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration structure to be used with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -2419,8 +2219,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Security group IDs for the security groups to be used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2429,8 +2228,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -2439,8 +2237,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet ID for the new endpoint to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2449,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -2459,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}he ID of the VPC used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_type_python">
 <a href="#state_worker_type_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>type</a>
@@ -2469,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yarn_endpoint_address_python">
 <a href="#state_yarn_endpoint_address_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>endpoint_<wbr>address</a>
@@ -2479,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The YARN endpoint address used by this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zeppelin_remote_spark_interpreter_port_python">
 <a href="#state_zeppelin_remote_spark_interpreter_port_python" style="color: inherit; text-decoration: inherit;">zeppelin_<wbr>remote_<wbr>spark_<wbr>interpreter_<wbr>port</a>
@@ -2489,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Apache Zeppelin port for the remote Apache Spark interpreter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

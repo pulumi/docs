@@ -265,8 +265,7 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -275,8 +274,7 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optinstatus_csharp">
 <a href="#optinstatus_csharp" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
@@ -285,13 +283,11 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -300,8 +296,7 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optinstatus_go">
 <a href="#optinstatus_go" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
@@ -310,13 +305,11 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -325,8 +318,7 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="optinstatus_nodejs">
 <a href="#optinstatus_nodejs" style="color: inherit; text-decoration: inherit;">opt<wbr>In<wbr>Status</a>
@@ -335,13 +327,11 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -350,8 +340,7 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opt_in_status_python">
 <a href="#opt_in_status_python" style="color: inherit; text-decoration: inherit;">opt_<wbr>in_<wbr>status</a>
@@ -360,8 +349,7 @@ The AvailabilityZoneGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -372,8 +360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -381,13 +368,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -395,13 +380,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -409,13 +392,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -423,8 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -551,8 +531,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_groupname_csharp">
 <a href="#state_groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -561,8 +540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optinstatus_csharp">
 <a href="#state_optinstatus_csharp" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
@@ -571,13 +549,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_groupname_go">
 <a href="#state_groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -586,8 +562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optinstatus_go">
 <a href="#state_optinstatus_go" style="color: inherit; text-decoration: inherit;">Opt<wbr>In<wbr>Status</a>
@@ -596,13 +571,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_groupname_nodejs">
 <a href="#state_groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -611,8 +584,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optinstatus_nodejs">
 <a href="#state_optinstatus_nodejs" style="color: inherit; text-decoration: inherit;">opt<wbr>In<wbr>Status</a>
@@ -621,13 +593,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_group_name_python">
 <a href="#state_group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -636,8 +606,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Availability Zone Group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opt_in_status_python">
 <a href="#state_opt_in_status_python" style="color: inherit; text-decoration: inherit;">opt_<wbr>in_<wbr>status</a>
@@ -646,8 +615,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

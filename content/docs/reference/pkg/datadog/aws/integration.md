@@ -326,8 +326,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -336,8 +335,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -346,8 +344,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountspecificnamespacerules_csharp">
 <a href="#accountspecificnamespacerules_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Specific<wbr>Namespace<wbr>Rules</a>
@@ -358,8 +355,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedregions_csharp">
 <a href="#excludedregions_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
@@ -368,8 +364,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtertags_csharp">
 <a href="#filtertags_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Tags</a>
@@ -381,8 +376,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosttags_csharp">
 <a href="#hosttags_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Tags</a>
@@ -391,13 +385,11 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -406,8 +398,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -416,8 +407,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountspecificnamespacerules_go">
 <a href="#accountspecificnamespacerules_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Specific<wbr>Namespace<wbr>Rules</a>
@@ -428,8 +418,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedregions_go">
 <a href="#excludedregions_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
@@ -438,8 +427,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtertags_go">
 <a href="#filtertags_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Tags</a>
@@ -451,8 +439,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosttags_go">
 <a href="#hosttags_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Tags</a>
@@ -461,13 +448,11 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -476,8 +461,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -486,8 +470,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountspecificnamespacerules_nodejs">
 <a href="#accountspecificnamespacerules_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Specific<wbr>Namespace<wbr>Rules</a>
@@ -498,8 +481,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedregions_nodejs">
 <a href="#excludedregions_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Regions</a>
@@ -508,8 +490,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtertags_nodejs">
 <a href="#filtertags_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Tags</a>
@@ -521,8 +502,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosttags_nodejs">
 <a href="#hosttags_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Tags</a>
@@ -531,13 +511,11 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -546,8 +524,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -556,8 +533,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_specific_namespace_rules_python">
 <a href="#account_specific_namespace_rules_python" style="color: inherit; text-decoration: inherit;">account_<wbr>specific_<wbr>namespace_<wbr>rules</a>
@@ -568,8 +544,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_regions_python">
 <a href="#excluded_regions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>regions</a>
@@ -578,8 +553,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_tags_python">
 <a href="#filter_tags_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>tags</a>
@@ -591,8 +565,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_tags_python">
 <a href="#host_tags_python" style="color: inherit; text-decoration: inherit;">host_<wbr>tags</a>
@@ -601,8 +574,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -613,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -624,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,13 +603,11 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -649,8 +617,7 @@ Terraform.
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -658,13 +625,11 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -674,8 +639,7 @@ Terraform.
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -683,13 +647,11 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -699,8 +661,7 @@ Terraform.
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -708,8 +669,7 @@ Terraform.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -836,8 +796,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -846,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountspecificnamespacerules_csharp">
 <a href="#state_accountspecificnamespacerules_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Specific<wbr>Namespace<wbr>Rules</a>
@@ -858,8 +816,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludedregions_csharp">
 <a href="#state_excludedregions_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
@@ -868,8 +825,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalid_csharp">
 <a href="#state_externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -879,8 +835,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtertags_csharp">
 <a href="#state_filtertags_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Tags</a>
@@ -892,8 +847,7 @@ Terraform.
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosttags_csharp">
 <a href="#state_hosttags_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Tags</a>
@@ -902,8 +856,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
 <a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -912,13 +865,11 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -927,8 +878,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountspecificnamespacerules_go">
 <a href="#state_accountspecificnamespacerules_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Specific<wbr>Namespace<wbr>Rules</a>
@@ -939,8 +889,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludedregions_go">
 <a href="#state_excludedregions_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Regions</a>
@@ -949,8 +898,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalid_go">
 <a href="#state_externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -960,8 +908,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtertags_go">
 <a href="#state_filtertags_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Tags</a>
@@ -973,8 +920,7 @@ Terraform.
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosttags_go">
 <a href="#state_hosttags_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Tags</a>
@@ -983,8 +929,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -993,13 +938,11 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1008,8 +951,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountspecificnamespacerules_nodejs">
 <a href="#state_accountspecificnamespacerules_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Specific<wbr>Namespace<wbr>Rules</a>
@@ -1020,8 +962,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludedregions_nodejs">
 <a href="#state_excludedregions_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Regions</a>
@@ -1030,8 +971,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalid_nodejs">
 <a href="#state_externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -1041,8 +981,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtertags_nodejs">
 <a href="#state_filtertags_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Tags</a>
@@ -1054,8 +993,7 @@ Terraform.
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosttags_nodejs">
 <a href="#state_hosttags_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Tags</a>
@@ -1064,8 +1002,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -1074,13 +1011,11 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1089,8 +1024,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your AWS Account ID without dashes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_specific_namespace_rules_python">
 <a href="#state_account_specific_namespace_rules_python" style="color: inherit; text-decoration: inherit;">account_<wbr>specific_<wbr>namespace_<wbr>rules</a>
@@ -1101,8 +1035,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
     <dd>{{% md %}}Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be
 found at the [available namespace rules API
 endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rules).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excluded_regions_python">
 <a href="#state_excluded_regions_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>regions</a>
@@ -1111,8 +1044,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of AWS regions to exclude from metrics collection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_id_python">
 <a href="#state_external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -1122,8 +1054,7 @@ endpoint](https://docs.datadoghq.com/api/v1/aws-integration/#list-namespace-rule
     </dt>
     <dd>{{% md %}}AWS External ID. **NOTE** This provider will not be able to detect changes made to the `external_id` field from outside
 Terraform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_tags_python">
 <a href="#state_filter_tags_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>tags</a>
@@ -1135,8 +1066,7 @@ Terraform.
 such as `?` (for single characters) and `*` (for multiple characters) can also be used. Only hosts that match one of the
 defined tags will be imported into Datadog. The rest will be ignored. Host matching a given tag can also be excluded by
 adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-east-1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_tags_python">
 <a href="#state_host_tags_python" style="color: inherit; text-decoration: inherit;">host_<wbr>tags</a>
@@ -1145,8 +1075,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -1155,8 +1084,7 @@ adding `!` before the tag. e.x. `env:production,instance-type:c1.*,!region:us-ea
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Datadog role delegation name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

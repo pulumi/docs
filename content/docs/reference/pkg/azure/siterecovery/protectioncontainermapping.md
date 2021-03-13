@@ -447,8 +447,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoveryfabricname_csharp">
 <a href="#recoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Name</a>
@@ -457,8 +456,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryreplicationpolicyid_csharp">
 <a href="#recoveryreplicationpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -467,8 +465,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverysourceprotectioncontainername_csharp">
 <a href="#recoverysourceprotectioncontainername_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Source<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -477,8 +474,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverytargetprotectioncontainerid_csharp">
 <a href="#recoverytargetprotectioncontainerid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -487,8 +483,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_csharp">
 <a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -497,8 +492,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -507,8 +501,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -517,13 +510,11 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoveryfabricname_go">
 <a href="#recoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Name</a>
@@ -532,8 +523,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryreplicationpolicyid_go">
 <a href="#recoveryreplicationpolicyid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -542,8 +532,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverysourceprotectioncontainername_go">
 <a href="#recoverysourceprotectioncontainername_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Source<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -552,8 +541,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverytargetprotectioncontainerid_go">
 <a href="#recoverytargetprotectioncontainerid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -562,8 +550,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_go">
 <a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -572,8 +559,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -582,8 +568,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -592,13 +577,11 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoveryfabricname_nodejs">
 <a href="#recoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Name</a>
@@ -607,8 +590,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryreplicationpolicyid_nodejs">
 <a href="#recoveryreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -617,8 +599,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverysourceprotectioncontainername_nodejs">
 <a href="#recoverysourceprotectioncontainername_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Source<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -627,8 +608,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoverytargetprotectioncontainerid_nodejs">
 <a href="#recoverytargetprotectioncontainerid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -637,8 +617,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_nodejs">
 <a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
@@ -647,8 +626,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -657,8 +635,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -667,13 +644,11 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recovery_fabric_name_python">
 <a href="#recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>name</a>
@@ -682,8 +657,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_replication_policy_id_python">
 <a href="#recovery_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>replication_<wbr>policy_<wbr>id</a>
@@ -692,8 +666,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_source_protection_container_name_python">
 <a href="#recovery_source_protection_container_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>source_<wbr>protection_<wbr>container_<wbr>name</a>
@@ -702,8 +675,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_target_protection_container_id_python">
 <a href="#recovery_target_protection_container_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>protection_<wbr>container_<wbr>id</a>
@@ -712,8 +684,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_vault_name_python">
 <a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
@@ -722,8 +693,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -732,8 +702,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -742,8 +711,7 @@ The ProtectionContainerMapping resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -754,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -763,13 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -777,13 +742,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -791,13 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -805,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -933,8 +893,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -943,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryfabricname_csharp">
 <a href="#state_recoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Name</a>
@@ -953,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryreplicationpolicyid_csharp">
 <a href="#state_recoveryreplicationpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -963,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverysourceprotectioncontainername_csharp">
 <a href="#state_recoverysourceprotectioncontainername_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Source<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -973,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverytargetprotectioncontainerid_csharp">
 <a href="#state_recoverytargetprotectioncontainerid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -983,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_csharp">
 <a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -993,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1003,13 +956,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1018,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryfabricname_go">
 <a href="#state_recoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Fabric<wbr>Name</a>
@@ -1028,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryreplicationpolicyid_go">
 <a href="#state_recoveryreplicationpolicyid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -1038,8 +987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverysourceprotectioncontainername_go">
 <a href="#state_recoverysourceprotectioncontainername_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Source<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -1048,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverytargetprotectioncontainerid_go">
 <a href="#state_recoverytargetprotectioncontainerid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -1058,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_go">
 <a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -1068,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1078,13 +1023,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1093,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryfabricname_nodejs">
 <a href="#state_recoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Fabric<wbr>Name</a>
@@ -1103,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryreplicationpolicyid_nodejs">
 <a href="#state_recoveryreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -1113,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverysourceprotectioncontainername_nodejs">
 <a href="#state_recoverysourceprotectioncontainername_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Source<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -1123,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoverytargetprotectioncontainerid_nodejs">
 <a href="#state_recoverytargetprotectioncontainerid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -1133,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_nodejs">
 <a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
@@ -1143,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1153,13 +1090,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1168,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_fabric_name_python">
 <a href="#state_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>fabric_<wbr>name</a>
@@ -1178,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains the protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_replication_policy_id_python">
 <a href="#state_recovery_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>replication_<wbr>policy_<wbr>id</a>
@@ -1188,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the policy to use for this mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_source_protection_container_name_python">
 <a href="#state_recovery_source_protection_container_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>source_<wbr>protection_<wbr>container_<wbr>name</a>
@@ -1198,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source protection container to map.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_target_protection_container_id_python">
 <a href="#state_recovery_target_protection_container_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>protection_<wbr>container_<wbr>id</a>
@@ -1208,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of target protection container to map to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_vault_name_python">
 <a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
@@ -1218,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1228,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

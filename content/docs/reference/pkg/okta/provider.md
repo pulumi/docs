@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apitoken_csharp">
 <a href="#apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -177,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backoff_csharp">
 <a href="#backoff_csharp" style="color: inherit; text-decoration: inherit;">Backoff</a>
@@ -187,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use exponential back off strategy for rate limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseurl_csharp">
 <a href="#baseurl_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
@@ -197,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -207,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -217,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}providers log level. Minimum is 1 (TRACE), and maximum is 5 (ERROR)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
 <a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -227,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum number of retries to attempt before erroring out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwaitseconds_csharp">
 <a href="#maxwaitseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Wait<wbr>Seconds</a>
@@ -237,8 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minwaitseconds_csharp">
 <a href="#minwaitseconds_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Wait<wbr>Seconds</a>
@@ -247,8 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orgname_csharp">
 <a href="#orgname_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Name</a>
@@ -257,8 +248,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_csharp">
 <a href="#parallelism_csharp" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -268,8 +258,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -278,8 +267,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_csharp">
 <a href="#requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -289,8 +277,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -299,13 +286,11 @@ value can be `100`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apitoken_go">
 <a href="#apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -314,8 +299,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backoff_go">
 <a href="#backoff_go" style="color: inherit; text-decoration: inherit;">Backoff</a>
@@ -324,8 +308,7 @@ value can be `100`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use exponential back off strategy for rate limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseurl_go">
 <a href="#baseurl_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Url</a>
@@ -334,8 +317,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -344,8 +326,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -354,8 +335,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}providers log level. Minimum is 1 (TRACE), and maximum is 5 (ERROR)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
 <a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
@@ -364,8 +344,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum number of retries to attempt before erroring out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwaitseconds_go">
 <a href="#maxwaitseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Wait<wbr>Seconds</a>
@@ -374,8 +353,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minwaitseconds_go">
 <a href="#minwaitseconds_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Wait<wbr>Seconds</a>
@@ -384,8 +362,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orgname_go">
 <a href="#orgname_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Name</a>
@@ -394,8 +371,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_go">
 <a href="#parallelism_go" style="color: inherit; text-decoration: inherit;">Parallelism</a>
@@ -405,8 +381,7 @@ value can be `100`.
     </dt>
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -415,8 +390,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_go">
 <a href="#requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
@@ -426,8 +400,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -436,13 +409,11 @@ value can be `100`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apitoken_nodejs">
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
@@ -451,8 +422,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backoff_nodejs">
 <a href="#backoff_nodejs" style="color: inherit; text-decoration: inherit;">backoff</a>
@@ -461,8 +431,7 @@ value can be `100`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use exponential back off strategy for rate limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseurl_nodejs">
 <a href="#baseurl_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Url</a>
@@ -471,8 +440,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -481,8 +449,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -491,8 +458,7 @@ value can be `100`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}providers log level. Minimum is 1 (TRACE), and maximum is 5 (ERROR)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
@@ -501,8 +467,7 @@ value can be `100`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}maximum number of retries to attempt before erroring out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwaitseconds_nodejs">
 <a href="#maxwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wait<wbr>Seconds</a>
@@ -511,8 +476,7 @@ value can be `100`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minwaitseconds_nodejs">
 <a href="#minwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Wait<wbr>Seconds</a>
@@ -521,8 +485,7 @@ value can be `100`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orgname_nodejs">
 <a href="#orgname_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Name</a>
@@ -531,8 +494,7 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_nodejs">
 <a href="#parallelism_nodejs" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -542,8 +504,7 @@ value can be `100`.
     </dt>
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -552,8 +513,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttimeout_nodejs">
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
@@ -563,8 +523,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -573,13 +532,11 @@ value can be `100`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_token_python">
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
@@ -588,8 +545,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backoff_python">
 <a href="#backoff_python" style="color: inherit; text-decoration: inherit;">backoff</a>
@@ -598,8 +554,7 @@ value can be `100`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use exponential back off strategy for rate limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_url_python">
 <a href="#base_url_python" style="color: inherit; text-decoration: inherit;">base_<wbr>url</a>
@@ -608,8 +563,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -618,8 +572,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -628,8 +581,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}providers log level. Minimum is 1 (TRACE), and maximum is 5 (ERROR)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
@@ -638,8 +590,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum number of retries to attempt before erroring out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_wait_seconds_python">
 <a href="#max_wait_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wait_<wbr>seconds</a>
@@ -648,8 +599,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_wait_seconds_python">
 <a href="#min_wait_seconds_python" style="color: inherit; text-decoration: inherit;">min_<wbr>wait_<wbr>seconds</a>
@@ -658,8 +608,7 @@ value can be `100`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="org_name_python">
 <a href="#org_name_python" style="color: inherit; text-decoration: inherit;">org_<wbr>name</a>
@@ -668,8 +617,7 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization to manage in Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parallelism_python">
 <a href="#parallelism_python" style="color: inherit; text-decoration: inherit;">parallelism</a>
@@ -679,8 +627,7 @@ value can be `100`.
     </dt>
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -689,8 +636,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_timeout_python">
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
@@ -700,8 +646,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -710,8 +655,7 @@ value can be `100`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}API Token granting privileges to Okta API.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -722,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -731,13 +674,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -745,13 +686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -759,13 +698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

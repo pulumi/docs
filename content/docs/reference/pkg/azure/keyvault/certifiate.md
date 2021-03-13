@@ -693,8 +693,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatepolicy_csharp">
 <a href="#certificatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
@@ -703,8 +702,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -713,8 +711,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultcertificate_csharp">
 <a href="#keyvaultcertificate_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Certificate</a>
@@ -723,8 +720,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -733,8 +729,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -743,13 +738,11 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatepolicy_go">
 <a href="#certificatepolicy_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
@@ -758,8 +751,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -768,8 +760,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -778,8 +769,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -788,8 +778,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -798,13 +787,11 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatepolicy_nodejs">
 <a href="#certificatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policy</a>
@@ -813,8 +800,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -823,8 +809,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -833,8 +818,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -843,8 +827,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -853,13 +836,11 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_policy_python">
 <a href="#certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
@@ -868,8 +849,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -878,8 +858,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -888,8 +867,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -898,8 +876,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -908,8 +885,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -920,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificateattributes_csharp">
 <a href="#certificateattributes_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
@@ -930,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#certifiatecertificateattribute">List&lt;Certifiate<wbr>Certificate<wbr>Attribute&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatedata_csharp">
 <a href="#certificatedata_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
@@ -940,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatedatabase64_csharp">
 <a href="#certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
@@ -950,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -959,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretid_csharp">
 <a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -969,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -979,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -989,13 +958,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificateattributes_go">
 <a href="#certificateattributes_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
@@ -1004,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#certifiatecertificateattribute">[]Certifiate<wbr>Certificate<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatedata_go">
 <a href="#certificatedata_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
@@ -1014,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatedatabase64_go">
 <a href="#certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
@@ -1024,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1033,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretid_go">
 <a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -1043,8 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1053,8 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1063,13 +1024,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificateattributes_nodejs">
 <a href="#certificateattributes_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Attributes</a>
@@ -1078,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#certifiatecertificateattribute">Certifiate<wbr>Certificate<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatedata_nodejs">
 <a href="#certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
@@ -1088,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificatedatabase64_nodejs">
 <a href="#certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
@@ -1098,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1107,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secretid_nodejs">
 <a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
@@ -1117,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1127,8 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1137,13 +1090,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_attributes_python">
 <a href="#certificate_attributes_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>attributes</a>
@@ -1152,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#certifiatecertificateattribute">Sequence[Certifiate<wbr>Certificate<wbr>Attribute]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_data_python">
 <a href="#certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
@@ -1162,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_data_base64_python">
 <a href="#certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
@@ -1172,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1181,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_id_python">
 <a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
@@ -1191,8 +1138,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1201,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1211,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1339,8 +1283,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateattributes_csharp">
 <a href="#state_certificateattributes_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
@@ -1349,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificateattribute">List&lt;Certifiate<wbr>Certificate<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedata_csharp">
 <a href="#state_certificatedata_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
@@ -1359,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedatabase64_csharp">
 <a href="#state_certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
@@ -1369,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatepolicy_csharp">
 <a href="#state_certificatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
@@ -1379,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultcertificate_csharp">
 <a href="#state_keyvaultcertificate_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Certificate</a>
@@ -1389,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultid_csharp">
 <a href="#state_keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1399,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1409,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretid_csharp">
 <a href="#state_secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -1419,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1429,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_csharp">
 <a href="#state_thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1439,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1449,13 +1382,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1464,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateattributes_go">
 <a href="#state_certificateattributes_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Attributes</a>
@@ -1474,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificateattribute">[]Certifiate<wbr>Certificate<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedata_go">
 <a href="#state_certificatedata_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data</a>
@@ -1484,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedatabase64_go">
 <a href="#state_certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
@@ -1494,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatepolicy_go">
 <a href="#state_certificatepolicy_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
@@ -1504,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultid_go">
 <a href="#state_keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1514,8 +1440,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1524,8 +1449,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretid_go">
 <a href="#state_secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
@@ -1534,8 +1458,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1544,8 +1467,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_go">
 <a href="#state_thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -1554,8 +1476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1564,13 +1485,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1579,8 +1498,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateattributes_nodejs">
 <a href="#state_certificateattributes_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Attributes</a>
@@ -1589,8 +1507,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificateattribute">Certifiate<wbr>Certificate<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedata_nodejs">
 <a href="#state_certificatedata_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data</a>
@@ -1599,8 +1516,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedatabase64_nodejs">
 <a href="#state_certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
@@ -1609,8 +1525,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatepolicy_nodejs">
 <a href="#state_certificatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Policy</a>
@@ -1619,8 +1534,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultid_nodejs">
 <a href="#state_keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -1629,8 +1543,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1639,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretid_nodejs">
 <a href="#state_secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
@@ -1649,8 +1561,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1659,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_nodejs">
 <a href="#state_thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1669,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1679,13 +1588,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1694,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_attributes_python">
 <a href="#state_certificate_attributes_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>attributes</a>
@@ -1704,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificateattribute">Sequence[Certifiate<wbr>Certificate<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_attribute` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_data_python">
 <a href="#state_certificate_data_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data</a>
@@ -1714,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_data_base64_python">
 <a href="#state_certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
@@ -1724,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_policy_python">
 <a href="#state_certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
@@ -1734,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_vault_id_python">
 <a href="#state_key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -1744,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault where the Certificate should be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1754,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Key Vault Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_id_python">
 <a href="#state_secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
@@ -1764,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Key Vault Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1774,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thumbprint_python">
 <a href="#state_thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -1784,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The X509 Thumbprint of the Key Vault Certificate represented as a hexadecimal string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1794,8 +1691,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1810,8 +1706,7 @@ The following state arguments are supported:
 <h4 id="certifiatecertificate">Certifiate<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_csharp">
 <a href="#contents_csharp" style="color: inherit; text-decoration: inherit;">Contents</a>
@@ -1820,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded certificate contents. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1830,13 +1724,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_go">
 <a href="#contents_go" style="color: inherit; text-decoration: inherit;">Contents</a>
@@ -1845,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded certificate contents. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1855,13 +1746,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_nodejs">
 <a href="#contents_nodejs" style="color: inherit; text-decoration: inherit;">contents</a>
@@ -1870,8 +1759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base64-encoded certificate contents. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1880,13 +1768,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contents_python">
 <a href="#contents_python" style="color: inherit; text-decoration: inherit;">contents</a>
@@ -1895,8 +1781,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base64-encoded certificate contents. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1905,15 +1790,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificateattribute">Certifiate<wbr>Certificate<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1922,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1932,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the Key Vault Certificate is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_csharp">
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
@@ -1942,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expires time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notbefore_csharp">
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
@@ -1952,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverylevel_csharp">
 <a href="#recoverylevel_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Level</a>
@@ -1962,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1972,13 +1850,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recent update time of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1987,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1997,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the Key Vault Certificate is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_go">
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
@@ -2007,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expires time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notbefore_go">
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
@@ -2017,8 +1890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverylevel_go">
 <a href="#recoverylevel_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Level</a>
@@ -2027,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -2037,13 +1908,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recent update time of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -2052,8 +1921,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The create time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2062,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether the Key Vault Certificate is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_nodejs">
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
@@ -2072,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expires time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notbefore_nodejs">
 <a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
@@ -2082,8 +1948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverylevel_nodejs">
 <a href="#recoverylevel_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Level</a>
@@ -2092,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -2102,13 +1966,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The recent update time of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -2117,8 +1979,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The create time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2127,8 +1988,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the Key Vault Certificate is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expires_python">
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
@@ -2137,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expires time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_before_python">
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
@@ -2147,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The not before valid time of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_level_python">
 <a href="#recovery_level_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>level</a>
@@ -2157,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level of the Key Vault Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -2167,15 +2024,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The recent update time of the Key Vault Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuerparameters_csharp">
 <a href="#issuerparameters_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Parameters</a>
@@ -2184,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyproperties_csharp">
 <a href="#keyproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
@@ -2194,8 +2048,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretproperties_csharp">
 <a href="#secretproperties_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
@@ -2204,8 +2057,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeactions_csharp">
 <a href="#lifetimeactions_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
@@ -2214,8 +2066,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeaction">List&lt;Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509certificateproperties_csharp">
 <a href="#x509certificateproperties_csharp" style="color: inherit; text-decoration: inherit;">X509Certificate<wbr>Properties</a>
@@ -2224,13 +2075,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuerparameters_go">
 <a href="#issuerparameters_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Parameters</a>
@@ -2239,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyproperties_go">
 <a href="#keyproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Properties</a>
@@ -2249,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretproperties_go">
 <a href="#secretproperties_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Properties</a>
@@ -2259,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeactions_go">
 <a href="#lifetimeactions_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Actions</a>
@@ -2269,8 +2115,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeaction">[]Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509certificateproperties_go">
 <a href="#x509certificateproperties_go" style="color: inherit; text-decoration: inherit;">X509Certificate<wbr>Properties</a>
@@ -2279,13 +2124,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuerparameters_nodejs">
 <a href="#issuerparameters_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Parameters</a>
@@ -2294,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyproperties_nodejs">
 <a href="#keyproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Properties</a>
@@ -2304,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretproperties_nodejs">
 <a href="#secretproperties_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Properties</a>
@@ -2314,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimeactions_nodejs">
 <a href="#lifetimeactions_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Actions</a>
@@ -2324,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509certificateproperties_nodejs">
 <a href="#x509certificateproperties_nodejs" style="color: inherit; text-decoration: inherit;">x509Certificate<wbr>Properties</a>
@@ -2334,13 +2173,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="issuer_parameters_python">
 <a href="#issuer_parameters_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>parameters</a>
@@ -2349,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `issuer_parameters` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_properties_python">
 <a href="#key_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>properties</a>
@@ -2359,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `key_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_properties_python">
 <a href="#secret_properties_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>properties</a>
@@ -2369,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `secret_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_actions_python">
 <a href="#lifetime_actions_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>actions</a>
@@ -2379,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeaction">Sequence[Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `lifetime_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509_certificate_properties_python">
 <a href="#x509_certificate_properties_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate_<wbr>properties</a>
@@ -2389,15 +2222,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `x509_certificate_properties` block as defined below. Required when `certificate` block is not specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2406,13 +2237,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer. Possible values include `Self` (for self-signed certificate), or `Unknown` (for a certificate issuing authority like `Let's Encrypt` and Azure direct supported ones). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2421,13 +2250,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer. Possible values include `Self` (for self-signed certificate), or `Unknown` (for a certificate issuing authority like `Let's Encrypt` and Azure direct supported ones). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2436,13 +2263,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer. Possible values include `Self` (for self-signed certificate), or `Unknown` (for a certificate issuing authority like `Let's Encrypt` and Azure direct supported ones). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2451,15 +2276,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Issuer. Possible values include `Self` (for self-signed certificate), or `Unknown` (for a certificate issuing authority like `Let's Encrypt` and Azure direct supported ones). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportable_csharp">
 <a href="#exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -2468,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keysize_csharp">
 <a href="#keysize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
@@ -2478,8 +2300,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate. Possible values include `2048`, `3072`, and `4096`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -2488,8 +2309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, such as `RSA`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusekey_csharp">
 <a href="#reusekey_csharp" style="color: inherit; text-decoration: inherit;">Reuse<wbr>Key</a>
@@ -2498,13 +2318,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportable_go">
 <a href="#exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -2513,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keysize_go">
 <a href="#keysize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
@@ -2523,8 +2340,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate. Possible values include `2048`, `3072`, and `4096`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -2533,8 +2349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, such as `RSA`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusekey_go">
 <a href="#reusekey_go" style="color: inherit; text-decoration: inherit;">Reuse<wbr>Key</a>
@@ -2543,13 +2358,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportable_nodejs">
 <a href="#exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
@@ -2558,8 +2371,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keysize_nodejs">
 <a href="#keysize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Size</a>
@@ -2568,8 +2380,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate. Possible values include `2048`, `3072`, and `4096`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
@@ -2578,8 +2389,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, such as `RSA`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusekey_nodejs">
 <a href="#reusekey_nodejs" style="color: inherit; text-decoration: inherit;">reuse<wbr>Key</a>
@@ -2588,13 +2398,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the key reusable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportable_python">
 <a href="#exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
@@ -2603,8 +2411,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this Certificate Exportable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_size_python">
 <a href="#key_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>size</a>
@@ -2613,8 +2420,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Key used in the Certificate. Possible values include `2048`, `3072`, and `4096`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
@@ -2623,8 +2429,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of Key, such as `RSA`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reuse_key_python">
 <a href="#reuse_key_python" style="color: inherit; text-decoration: inherit;">reuse_<wbr>key</a>
@@ -2633,15 +2438,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the key reusable? Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicylifetimeaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2650,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -2660,13 +2462,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -2675,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -2685,13 +2484,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2700,8 +2497,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -2710,13 +2506,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -2725,8 +2519,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -2735,15 +2528,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trigger` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -2752,13 +2543,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec. Possible values include `AutoRenew` and `EmailContacts`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -2767,13 +2556,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec. Possible values include `AutoRenew` and `EmailContacts`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -2782,13 +2569,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec. Possible values include `AutoRenew` and `EmailContacts`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_type_python">
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -2797,15 +2582,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Type of action to be performed when the lifetime trigger is triggerec. Possible values include `AutoRenew` and `EmailContacts`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysbeforeexpiry_csharp">
 <a href="#daysbeforeexpiry_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Before<wbr>Expiry</a>
@@ -2814,8 +2597,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `lifetime_percentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimepercentage_csharp">
 <a href="#lifetimepercentage_csharp" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Percentage</a>
@@ -2824,13 +2606,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `days_before_expiry`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysbeforeexpiry_go">
 <a href="#daysbeforeexpiry_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Before<wbr>Expiry</a>
@@ -2839,8 +2619,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `lifetime_percentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimepercentage_go">
 <a href="#lifetimepercentage_go" style="color: inherit; text-decoration: inherit;">Lifetime<wbr>Percentage</a>
@@ -2849,13 +2628,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `days_before_expiry`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysbeforeexpiry_nodejs">
 <a href="#daysbeforeexpiry_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Before<wbr>Expiry</a>
@@ -2864,8 +2641,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `lifetime_percentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetimepercentage_nodejs">
 <a href="#lifetimepercentage_nodejs" style="color: inherit; text-decoration: inherit;">lifetime<wbr>Percentage</a>
@@ -2874,13 +2650,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `days_before_expiry`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_before_expiry_python">
 <a href="#days_before_expiry_python" style="color: inherit; text-decoration: inherit;">days_<wbr>before_<wbr>expiry</a>
@@ -2889,8 +2663,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `lifetime_percentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_percentage_python">
 <a href="#lifetime_percentage_python" style="color: inherit; text-decoration: inherit;">lifetime_<wbr>percentage</a>
@@ -2899,15 +2672,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with `days_before_expiry`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -2916,13 +2687,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, such as `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -2931,13 +2700,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, such as `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -2946,13 +2713,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, such as `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -2961,15 +2726,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content-Type of the Certificate, such as `application/x-pkcs12` for a PFX or `application/x-pem-file` for a PEM. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyusages_csharp">
 <a href="#keyusages_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
@@ -2978,8 +2741,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key. Possible values include `cRLSign`, `dataEncipherment`, `decipherOnly`, `digitalSignature`, `encipherOnly`, `keyAgreement`, `keyCertSign`, `keyEncipherment` and `nonRepudiation` and are case-sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -2988,8 +2750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validityinmonths_csharp">
 <a href="#validityinmonths_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>In<wbr>Months</a>
@@ -2998,8 +2759,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedkeyusages_csharp">
 <a href="#extendedkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usages</a>
@@ -3008,8 +2768,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectalternativenames_csharp">
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
@@ -3018,13 +2777,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyusages_go">
 <a href="#keyusages_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
@@ -3033,8 +2790,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key. Possible values include `cRLSign`, `dataEncipherment`, `decipherOnly`, `digitalSignature`, `encipherOnly`, `keyAgreement`, `keyCertSign`, `keyEncipherment` and `nonRepudiation` and are case-sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -3043,8 +2799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validityinmonths_go">
 <a href="#validityinmonths_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>In<wbr>Months</a>
@@ -3053,8 +2808,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedkeyusages_go">
 <a href="#extendedkeyusages_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usages</a>
@@ -3063,8 +2817,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectalternativenames_go">
 <a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
@@ -3073,13 +2826,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyusages_nodejs">
 <a href="#keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
@@ -3088,8 +2839,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key. Possible values include `cRLSign`, `dataEncipherment`, `decipherOnly`, `digitalSignature`, `encipherOnly`, `keyAgreement`, `keyCertSign`, `keyEncipherment` and `nonRepudiation` and are case-sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -3098,8 +2848,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validityinmonths_nodejs">
 <a href="#validityinmonths_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>In<wbr>Months</a>
@@ -3108,8 +2857,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedkeyusages_nodejs">
 <a href="#extendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usages</a>
@@ -3118,8 +2866,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectalternativenames_nodejs">
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
@@ -3128,13 +2875,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_usages_python">
 <a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
@@ -3143,8 +2888,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of uses associated with this Key. Possible values include `cRLSign`, `dataEncipherment`, `decipherOnly`, `digitalSignature`, `encipherOnly`, `keyAgreement`, `keyCertSign`, `keyEncipherment` and `nonRepudiation` and are case-sensitive. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -3153,8 +2897,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Certificate's Subject. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validity_in_months_python">
 <a href="#validity_in_months_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>in_<wbr>months</a>
@@ -3163,8 +2906,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Certificates Validity Period in Months. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_key_usages_python">
 <a href="#extended_key_usages_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usages</a>
@@ -3173,8 +2915,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_alternative_names_python">
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
@@ -3183,15 +2924,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subject_alternative_names` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -3200,8 +2939,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -3210,8 +2948,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upns_csharp">
 <a href="#upns_csharp" style="color: inherit; text-decoration: inherit;">Upns</a>
@@ -3220,13 +2957,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -3235,8 +2970,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -3245,8 +2979,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upns_go">
 <a href="#upns_go" style="color: inherit; text-decoration: inherit;">Upns</a>
@@ -3255,13 +2988,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -3270,8 +3001,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -3280,8 +3010,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upns_nodejs">
 <a href="#upns_nodejs" style="color: inherit; text-decoration: inherit;">upns</a>
@@ -3290,13 +3019,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -3305,8 +3032,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -3315,8 +3041,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upns_python">
 <a href="#upns_python" style="color: inherit; text-decoration: inherit;">upns</a>
@@ -3325,8 +3050,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

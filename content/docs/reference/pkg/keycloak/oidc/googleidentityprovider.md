@@ -310,8 +310,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -320,8 +319,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -330,8 +328,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_csharp">
 <a href="#realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -340,8 +337,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptspromptnoneforwardfromclient_csharp">
 <a href="#acceptspromptnoneforwardfromclient_csharp" style="color: inherit; text-decoration: inherit;">Accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
@@ -350,8 +346,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addreadtokenroleoncreate_csharp">
 <a href="#addreadtokenroleoncreate_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -360,8 +355,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatebydefault_csharp">
 <a href="#authenticatebydefault_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -370,8 +364,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultscopes_csharp">
 <a href="#defaultscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Scopes</a>
@@ -380,8 +373,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableuserinfo_csharp">
 <a href="#disableuserinfo_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>User<wbr>Info</a>
@@ -390,8 +382,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -400,8 +391,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraconfig_csharp">
 <a href="#extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -409,8 +399,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbrokerloginflowalias_csharp">
 <a href="#firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -419,8 +408,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_csharp">
 <a href="#hideonloginpage_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -429,8 +417,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosteddomain_csharp">
 <a href="#hosteddomain_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Domain</a>
@@ -439,8 +426,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkonly_csharp">
 <a href="#linkonly_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -449,8 +435,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbrokerloginflowalias_csharp">
 <a href="#postbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -459,8 +444,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerid_csharp">
 <a href="#providerid_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
@@ -469,8 +453,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestrefreshtoken_csharp">
 <a href="#requestrefreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Refresh<wbr>Token</a>
@@ -479,8 +462,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storetoken_csharp">
 <a href="#storetoken_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -489,8 +471,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_csharp">
 <a href="#trustemail_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -499,8 +480,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useuseripparam_csharp">
 <a href="#useuseripparam_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>User<wbr>Ip<wbr>Param</a>
@@ -509,13 +489,11 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -524,8 +502,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -534,8 +511,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_go">
 <a href="#realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -544,8 +520,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptspromptnoneforwardfromclient_go">
 <a href="#acceptspromptnoneforwardfromclient_go" style="color: inherit; text-decoration: inherit;">Accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
@@ -554,8 +529,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addreadtokenroleoncreate_go">
 <a href="#addreadtokenroleoncreate_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -564,8 +538,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatebydefault_go">
 <a href="#authenticatebydefault_go" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -574,8 +547,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultscopes_go">
 <a href="#defaultscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Scopes</a>
@@ -584,8 +556,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableuserinfo_go">
 <a href="#disableuserinfo_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>User<wbr>Info</a>
@@ -594,8 +565,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -604,8 +574,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraconfig_go">
 <a href="#extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -613,8 +582,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbrokerloginflowalias_go">
 <a href="#firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -623,8 +591,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_go">
 <a href="#hideonloginpage_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -633,8 +600,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosteddomain_go">
 <a href="#hosteddomain_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Domain</a>
@@ -643,8 +609,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkonly_go">
 <a href="#linkonly_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -653,8 +618,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbrokerloginflowalias_go">
 <a href="#postbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -663,8 +627,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerid_go">
 <a href="#providerid_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
@@ -673,8 +636,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestrefreshtoken_go">
 <a href="#requestrefreshtoken_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Refresh<wbr>Token</a>
@@ -683,8 +645,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storetoken_go">
 <a href="#storetoken_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -693,8 +654,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_go">
 <a href="#trustemail_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -703,8 +663,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useuseripparam_go">
 <a href="#useuseripparam_go" style="color: inherit; text-decoration: inherit;">Use<wbr>User<wbr>Ip<wbr>Param</a>
@@ -713,13 +672,11 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -728,8 +685,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -738,8 +694,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_nodejs">
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -748,8 +703,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptspromptnoneforwardfromclient_nodejs">
 <a href="#acceptspromptnoneforwardfromclient_nodejs" style="color: inherit; text-decoration: inherit;">accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
@@ -758,8 +712,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addreadtokenroleoncreate_nodejs">
 <a href="#addreadtokenroleoncreate_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -768,8 +721,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatebydefault_nodejs">
 <a href="#authenticatebydefault_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>By<wbr>Default</a>
@@ -778,8 +730,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultscopes_nodejs">
 <a href="#defaultscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scopes</a>
@@ -788,8 +739,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableuserinfo_nodejs">
 <a href="#disableuserinfo_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>User<wbr>Info</a>
@@ -798,8 +748,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -808,8 +757,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraconfig_nodejs">
 <a href="#extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
@@ -817,8 +765,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbrokerloginflowalias_nodejs">
 <a href="#firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -827,8 +774,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_nodejs">
 <a href="#hideonloginpage_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -837,8 +783,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosteddomain_nodejs">
 <a href="#hosteddomain_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Domain</a>
@@ -847,8 +792,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkonly_nodejs">
 <a href="#linkonly_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Only</a>
@@ -857,8 +801,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbrokerloginflowalias_nodejs">
 <a href="#postbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -867,8 +810,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerid_nodejs">
 <a href="#providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
@@ -877,8 +819,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestrefreshtoken_nodejs">
 <a href="#requestrefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Refresh<wbr>Token</a>
@@ -887,8 +828,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storetoken_nodejs">
 <a href="#storetoken_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Token</a>
@@ -897,8 +837,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_nodejs">
 <a href="#trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
@@ -907,8 +846,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useuseripparam_nodejs">
 <a href="#useuseripparam_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>User<wbr>Ip<wbr>Param</a>
@@ -917,13 +855,11 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -932,8 +868,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -942,8 +877,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_python">
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -952,8 +886,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepts_prompt_none_forward_from_client_python">
 <a href="#accepts_prompt_none_forward_from_client_python" style="color: inherit; text-decoration: inherit;">accepts_<wbr>prompt_<wbr>none_<wbr>forward_<wbr>from_<wbr>client</a>
@@ -962,8 +895,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_read_token_role_on_create_python">
 <a href="#add_read_token_role_on_create_python" style="color: inherit; text-decoration: inherit;">add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</a>
@@ -972,8 +904,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticate_by_default_python">
 <a href="#authenticate_by_default_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>by_<wbr>default</a>
@@ -982,8 +913,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_scopes_python">
 <a href="#default_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scopes</a>
@@ -992,8 +922,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_user_info_python">
 <a href="#disable_user_info_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>user_<wbr>info</a>
@@ -1002,8 +931,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1012,8 +940,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_config_python">
 <a href="#extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
@@ -1021,8 +948,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="first_broker_login_flow_alias_python">
 <a href="#first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -1031,8 +957,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_on_login_page_python">
 <a href="#hide_on_login_page_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>on_<wbr>login_<wbr>page</a>
@@ -1041,8 +966,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosted_domain_python">
 <a href="#hosted_domain_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>domain</a>
@@ -1051,8 +975,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_only_python">
 <a href="#link_only_python" style="color: inherit; text-decoration: inherit;">link_<wbr>only</a>
@@ -1061,8 +984,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_broker_login_flow_alias_python">
 <a href="#post_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -1071,8 +993,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_id_python">
 <a href="#provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
@@ -1081,8 +1002,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_refresh_token_python">
 <a href="#request_refresh_token_python" style="color: inherit; text-decoration: inherit;">request_<wbr>refresh_<wbr>token</a>
@@ -1091,8 +1011,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="store_token_python">
 <a href="#store_token_python" style="color: inherit; text-decoration: inherit;">store_<wbr>token</a>
@@ -1101,8 +1020,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trust_email_python">
 <a href="#trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
@@ -1111,8 +1029,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_user_ip_param_python">
 <a href="#use_user_ip_param_python" style="color: inherit; text-decoration: inherit;">use_<wbr>user_<wbr>ip_<wbr>param</a>
@@ -1121,8 +1038,7 @@ The GoogleIdentityProvider resource accepts the following [input]({{< relref "/d
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1133,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1143,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1153,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1162,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_csharp">
 <a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1172,13 +1084,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1187,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1197,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1206,8 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_go">
 <a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1216,13 +1123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1231,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1241,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1250,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_nodejs">
 <a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -1260,13 +1162,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1275,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1285,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1294,8 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internal_id_python">
 <a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -1304,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1432,8 +1328,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptspromptnoneforwardfromclient_csharp">
 <a href="#state_acceptspromptnoneforwardfromclient_csharp" style="color: inherit; text-decoration: inherit;">Accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
@@ -1442,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addreadtokenroleoncreate_csharp">
 <a href="#state_addreadtokenroleoncreate_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -1452,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_csharp">
 <a href="#state_alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1462,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatebydefault_csharp">
 <a href="#state_authenticatebydefault_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -1472,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1482,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_csharp">
 <a href="#state_clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1492,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultscopes_csharp">
 <a href="#state_defaultscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Scopes</a>
@@ -1502,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableuserinfo_csharp">
 <a href="#state_disableuserinfo_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>User<wbr>Info</a>
@@ -1512,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1522,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1532,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_csharp">
 <a href="#state_extraconfig_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -1541,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstbrokerloginflowalias_csharp">
 <a href="#state_firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1551,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_csharp">
 <a href="#state_hideonloginpage_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -1561,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosteddomain_csharp">
 <a href="#state_hosteddomain_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Domain</a>
@@ -1571,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_csharp">
 <a href="#state_internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1581,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkonly_csharp">
 <a href="#state_linkonly_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -1591,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbrokerloginflowalias_csharp">
 <a href="#state_postbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1601,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerid_csharp">
 <a href="#state_providerid_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
@@ -1611,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_csharp">
 <a href="#state_realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -1621,8 +1498,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestrefreshtoken_csharp">
 <a href="#state_requestrefreshtoken_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Refresh<wbr>Token</a>
@@ -1631,8 +1507,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storetoken_csharp">
 <a href="#state_storetoken_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -1641,8 +1516,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_csharp">
 <a href="#state_trustemail_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -1651,8 +1525,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useuseripparam_csharp">
 <a href="#state_useuseripparam_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>User<wbr>Ip<wbr>Param</a>
@@ -1661,13 +1534,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptspromptnoneforwardfromclient_go">
 <a href="#state_acceptspromptnoneforwardfromclient_go" style="color: inherit; text-decoration: inherit;">Accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
@@ -1676,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addreadtokenroleoncreate_go">
 <a href="#state_addreadtokenroleoncreate_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -1686,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_go">
 <a href="#state_alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1696,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatebydefault_go">
 <a href="#state_authenticatebydefault_go" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -1706,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1716,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_go">
 <a href="#state_clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1726,8 +1592,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultscopes_go">
 <a href="#state_defaultscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Scopes</a>
@@ -1736,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableuserinfo_go">
 <a href="#state_disableuserinfo_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>User<wbr>Info</a>
@@ -1746,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1756,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1766,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_go">
 <a href="#state_extraconfig_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Config</a>
@@ -1775,8 +1636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstbrokerloginflowalias_go">
 <a href="#state_firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1785,8 +1645,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_go">
 <a href="#state_hideonloginpage_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -1795,8 +1654,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosteddomain_go">
 <a href="#state_hosteddomain_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Domain</a>
@@ -1805,8 +1663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_go">
 <a href="#state_internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1815,8 +1672,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkonly_go">
 <a href="#state_linkonly_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -1825,8 +1681,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbrokerloginflowalias_go">
 <a href="#state_postbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1835,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerid_go">
 <a href="#state_providerid_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
@@ -1845,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_go">
 <a href="#state_realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -1855,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestrefreshtoken_go">
 <a href="#state_requestrefreshtoken_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Refresh<wbr>Token</a>
@@ -1865,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storetoken_go">
 <a href="#state_storetoken_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -1875,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_go">
 <a href="#state_trustemail_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -1885,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useuseripparam_go">
 <a href="#state_useuseripparam_go" style="color: inherit; text-decoration: inherit;">Use<wbr>User<wbr>Ip<wbr>Param</a>
@@ -1895,13 +1744,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptspromptnoneforwardfromclient_nodejs">
 <a href="#state_acceptspromptnoneforwardfromclient_nodejs" style="color: inherit; text-decoration: inherit;">accepts<wbr>Prompt<wbr>None<wbr>Forward<wbr>From<wbr>Client</a>
@@ -1910,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addreadtokenroleoncreate_nodejs">
 <a href="#state_addreadtokenroleoncreate_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -1920,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_nodejs">
 <a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1930,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatebydefault_nodejs">
 <a href="#state_authenticatebydefault_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>By<wbr>Default</a>
@@ -1940,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1950,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_nodejs">
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -1960,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultscopes_nodejs">
 <a href="#state_defaultscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scopes</a>
@@ -1970,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableuserinfo_nodejs">
 <a href="#state_disableuserinfo_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>User<wbr>Info</a>
@@ -1980,8 +1820,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1990,8 +1829,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2000,8 +1838,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extraconfig_nodejs">
 <a href="#state_extraconfig_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Config</a>
@@ -2009,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstbrokerloginflowalias_nodejs">
 <a href="#state_firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -2019,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_nodejs">
 <a href="#state_hideonloginpage_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -2029,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosteddomain_nodejs">
 <a href="#state_hosteddomain_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Domain</a>
@@ -2039,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_nodejs">
 <a href="#state_internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -2049,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkonly_nodejs">
 <a href="#state_linkonly_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Only</a>
@@ -2059,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbrokerloginflowalias_nodejs">
 <a href="#state_postbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -2069,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerid_nodejs">
 <a href="#state_providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
@@ -2079,8 +1909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_nodejs">
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -2089,8 +1918,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestrefreshtoken_nodejs">
 <a href="#state_requestrefreshtoken_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Refresh<wbr>Token</a>
@@ -2099,8 +1927,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storetoken_nodejs">
 <a href="#state_storetoken_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Token</a>
@@ -2109,8 +1936,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_nodejs">
 <a href="#state_trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
@@ -2119,8 +1945,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useuseripparam_nodejs">
 <a href="#state_useuseripparam_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>User<wbr>Ip<wbr>Param</a>
@@ -2129,13 +1954,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepts_prompt_none_forward_from_client_python">
 <a href="#state_accepts_prompt_none_forward_from_client_python" style="color: inherit; text-decoration: inherit;">accepts_<wbr>prompt_<wbr>none_<wbr>forward_<wbr>from_<wbr>client</a>
@@ -2144,8 +1967,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, unauthenticated requests with `prompt=none` will be forwarded to Google instead of returning an error. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_add_read_token_role_on_create_python">
 <a href="#state_add_read_token_role_on_create_python" style="color: inherit; text-decoration: inherit;">add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</a>
@@ -2154,8 +1976,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_python">
 <a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -2164,8 +1985,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The alias for the Google identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticate_by_default_python">
 <a href="#state_authenticate_by_default_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>by_<wbr>default</a>
@@ -2174,8 +1994,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -2184,8 +2003,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client or client identifier registered within the identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_python">
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -2194,8 +2012,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client or client secret registered within the identity provider. This field is able to obtain its value from vault, use $${vault.ID} format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_scopes_python">
 <a href="#state_default_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scopes</a>
@@ -2204,8 +2021,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scopes to be sent when asking for authorization. It can be a space-separated list of scopes. Defaults to `openid profile email`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_user_info_python">
 <a href="#state_disable_user_info_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>user_<wbr>info</a>
@@ -2214,8 +2030,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, disables the usage of the user info service to obtain additional user information. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2224,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Display name for the Google identity provider in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2234,8 +2048,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users will be able to log in to this realm using this identity provider. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_config_python">
 <a href="#state_extra_config_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>config</a>
@@ -2243,8 +2056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_first_broker_login_flow_alias_python">
 <a href="#state_first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -2253,8 +2065,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use when users log in for the first time through this identity provider. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_on_login_page_python">
 <a href="#state_hide_on_login_page_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>on_<wbr>login_<wbr>page</a>
@@ -2263,8 +2074,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, this identity provider will be hidden on the login page. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosted_domain_python">
 <a href="#state_hosted_domain_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>domain</a>
@@ -2273,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the "hd" query parameter when logging in with Google. Google will only list accounts for this domain. Keycloak will validate that the returned identity token has a claim for this domain. When `*` is entered, an account from any domain can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_id_python">
 <a href="#state_internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -2283,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The unique ID that Keycloak assigns to the identity provider upon creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_only_python">
 <a href="#state_link_only_python" style="color: inherit; text-decoration: inherit;">link_<wbr>only</a>
@@ -2293,8 +2101,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_broker_login_flow_alias_python">
 <a href="#state_post_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -2303,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication flow to use after users have successfully logged in, which can be used to perform additional user verification (such as OTP checking). Defaults to an empty string, which means no post login flow will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_id_python">
 <a href="#state_provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
@@ -2313,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the identity provider to use. Defaults to `google`, which should be used unless you have extended Keycloak and provided your own implementation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_python">
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -2323,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_refresh_token_python">
 <a href="#state_request_refresh_token_python" style="color: inherit; text-decoration: inherit;">request_<wbr>refresh_<wbr>token</a>
@@ -2333,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "access_type" query parameter to "offline" when redirecting to google authorization endpoint,to get a refresh token back. This is useful for using Token Exchange to retrieve a Google token to access Google APIs when the user is offline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_store_token_python">
 <a href="#state_store_token_python" style="color: inherit; text-decoration: inherit;">store_<wbr>token</a>
@@ -2343,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_email_python">
 <a href="#state_trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
@@ -2353,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_user_ip_param_python">
 <a href="#state_use_user_ip_param_python" style="color: inherit; text-decoration: inherit;">use_<wbr>user_<wbr>ip_<wbr>param</a>
@@ -2363,8 +2164,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the "userIp" query parameter when querying Google's User Info service. This will use the user's IP address. This is useful if Google is throttling Keycloak's access to the User Info service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

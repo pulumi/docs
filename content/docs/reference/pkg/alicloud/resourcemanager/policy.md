@@ -294,8 +294,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydocument_csharp">
 <a href="#policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -304,8 +303,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -314,8 +312,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="defaultversion_csharp">
 <a href="#defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
@@ -324,8 +321,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -334,13 +330,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydocument_go">
 <a href="#policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -349,8 +343,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -359,8 +352,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="defaultversion_go">
 <a href="#defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
@@ -369,8 +361,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -379,13 +370,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydocument_nodejs">
 <a href="#policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
@@ -394,8 +383,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -404,8 +392,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="defaultversion_nodejs">
 <a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
@@ -414,8 +401,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -424,13 +410,11 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_document_python">
 <a href="#policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
@@ -439,8 +423,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -449,8 +432,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="default_version_python">
 <a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
@@ -459,8 +441,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -469,8 +450,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -481,8 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -490,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -500,13 +478,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -514,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -524,13 +499,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -538,8 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -548,13 +520,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -562,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -572,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -700,8 +668,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_defaultversion_csharp">
 <a href="#state_defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
@@ -710,8 +677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -720,8 +686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydocument_csharp">
 <a href="#state_policydocument_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -730,8 +695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyname_csharp">
 <a href="#state_policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -740,8 +704,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_csharp">
 <a href="#state_policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -750,13 +713,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_defaultversion_go">
 <a href="#state_defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
@@ -765,8 +726,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -775,8 +735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydocument_go">
 <a href="#state_policydocument_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Document</a>
@@ -785,8 +744,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyname_go">
 <a href="#state_policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -795,8 +753,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_go">
 <a href="#state_policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -805,13 +762,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_defaultversion_nodejs">
 <a href="#state_defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
@@ -820,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -830,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydocument_nodejs">
 <a href="#state_policydocument_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Document</a>
@@ -840,8 +793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyname_nodejs">
 <a href="#state_policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -850,8 +802,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_nodejs">
 <a href="#state_policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -860,13 +811,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_default_version_python">
 <a href="#state_default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
@@ -875,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the policy. Default to v1.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;default_version&#39; has been deprecated from provider version 1.90.0{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -885,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the policy. The description must be 1 to 1,024 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_document_python">
 <a href="#state_policy_document_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>document</a>
@@ -895,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of the policy. The content must be 1 to 2,048 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_name_python">
 <a href="#state_policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -905,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy. name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_python">
 <a href="#state_policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -915,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the policy. Valid values: `Custom`, `System`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

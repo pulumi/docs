@@ -276,8 +276,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygroupnames_csharp">
 <a href="#securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -287,8 +286,7 @@ The SecurityGroup resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -297,8 +295,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,13 +304,11 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygroupnames_go">
 <a href="#securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -323,8 +318,7 @@ authorized for ingress to the cache security group
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -333,8 +327,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,13 +336,11 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygroupnames_nodejs">
 <a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
@@ -359,8 +350,7 @@ authorized for ingress to the cache security group
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -369,8 +359,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -379,13 +368,11 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="security_group_names_python">
 <a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
@@ -395,8 +382,7 @@ authorized for ingress to the cache security group
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -405,8 +391,7 @@ authorized for ingress to the cache security group
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -415,8 +400,7 @@ authorized for ingress to the cache security group
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -427,8 +411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -436,13 +419,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -450,13 +431,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -464,13 +443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -478,8 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -606,8 +582,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -616,8 +591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -626,8 +600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupnames_csharp">
 <a href="#state_securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -637,13 +610,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -652,8 +623,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -662,8 +632,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupnames_go">
 <a href="#state_securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -673,13 +642,11 @@ authorized for ingress to the cache security group
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -688,8 +655,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -698,8 +664,7 @@ authorized for ingress to the cache security group
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupnames_nodejs">
 <a href="#state_securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
@@ -709,13 +674,11 @@ authorized for ingress to the cache security group
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -724,8 +687,7 @@ authorized for ingress to the cache security group
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}description for the cache security group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -734,8 +696,7 @@ authorized for ingress to the cache security group
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for the cache security group. This value is stored as a lowercase string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_names_python">
 <a href="#state_security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
@@ -745,8 +706,7 @@ authorized for ingress to the cache security group
     </dt>
     <dd>{{% md %}}List of EC2 security group names to be
 authorized for ingress to the cache security group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

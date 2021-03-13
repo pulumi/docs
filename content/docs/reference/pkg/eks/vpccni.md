@@ -164,8 +164,7 @@ The VpcCni resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -173,8 +172,7 @@ The VpcCni resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_csharp">
 <a href="#customnetworkconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Network<wbr>Config</a>
@@ -184,8 +182,7 @@ The VpcCni resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_csharp">
 <a href="#eniconfiglabeldef_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -196,8 +193,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enimtu_csharp">
 <a href="#enimtu_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Mtu</a>
@@ -207,8 +203,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsnat_csharp">
 <a href="#externalsnat_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Snat</a>
@@ -218,8 +213,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -229,8 +223,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfile_csharp">
 <a href="#logfile_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>File</a>
@@ -240,8 +233,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -252,8 +244,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeportsupport_csharp">
 <a href="#nodeportsupport_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Port<wbr>Support</a>
@@ -263,8 +254,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vethprefix_csharp">
 <a href="#vethprefix_csharp" style="color: inherit; text-decoration: inherit;">Veth<wbr>Prefix</a>
@@ -276,8 +266,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenitarget_csharp">
 <a href="#warmenitarget_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Eni<wbr>Target</a>
@@ -287,8 +276,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmiptarget_csharp">
 <a href="#warmiptarget_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Ip<wbr>Target</a>
@@ -296,13 +284,11 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kubeconfig</a>
@@ -310,8 +296,7 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_go">
 <a href="#customnetworkconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Network<wbr>Config</a>
@@ -321,8 +306,7 @@ Defaults to 1.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_go">
 <a href="#eniconfiglabeldef_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -333,8 +317,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enimtu_go">
 <a href="#enimtu_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Mtu</a>
@@ -344,8 +327,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsnat_go">
 <a href="#externalsnat_go" style="color: inherit; text-decoration: inherit;">External<wbr>Snat</a>
@@ -355,8 +337,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -366,8 +347,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfile_go">
 <a href="#logfile_go" style="color: inherit; text-decoration: inherit;">Log<wbr>File</a>
@@ -377,8 +357,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -389,8 +368,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeportsupport_go">
 <a href="#nodeportsupport_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Port<wbr>Support</a>
@@ -400,8 +378,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vethprefix_go">
 <a href="#vethprefix_go" style="color: inherit; text-decoration: inherit;">Veth<wbr>Prefix</a>
@@ -413,8 +390,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenitarget_go">
 <a href="#warmenitarget_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Eni<wbr>Target</a>
@@ -424,8 +400,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmiptarget_go">
 <a href="#warmiptarget_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Ip<wbr>Target</a>
@@ -433,13 +408,11 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -447,8 +420,7 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_nodejs">
 <a href="#customnetworkconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Network<wbr>Config</a>
@@ -458,8 +430,7 @@ Defaults to 1.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniconfiglabeldef_nodejs">
 <a href="#eniconfiglabeldef_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Config<wbr>Label<wbr>Def</a>
@@ -470,8 +441,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enimtu_nodejs">
 <a href="#enimtu_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Mtu</a>
@@ -481,8 +451,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalsnat_nodejs">
 <a href="#externalsnat_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Snat</a>
@@ -492,8 +461,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -503,8 +471,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logfile_nodejs">
 <a href="#logfile_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>File</a>
@@ -514,8 +481,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -526,8 +492,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeportsupport_nodejs">
 <a href="#nodeportsupport_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Port<wbr>Support</a>
@@ -537,8 +502,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vethprefix_nodejs">
 <a href="#vethprefix_nodejs" style="color: inherit; text-decoration: inherit;">veth<wbr>Prefix</a>
@@ -550,8 +514,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmenitarget_nodejs">
 <a href="#warmenitarget_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Eni<wbr>Target</a>
@@ -561,8 +524,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmiptarget_nodejs">
 <a href="#warmiptarget_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Ip<wbr>Target</a>
@@ -570,13 +532,11 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_python">
 <a href="#kubeconfig_python" style="color: inherit; text-decoration: inherit;">kubeconfig</a>
@@ -584,8 +544,7 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The kubeconfig to use when setting the VPC CNI options.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_network_config_python">
 <a href="#custom_network_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>network_<wbr>config</a>
@@ -595,8 +554,7 @@ Defaults to 1.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies that your pods may use subnets and security groups (within the same VPC as your control plane resources) that are independent of your cluster's `resourcesVpcConfig`.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_config_label_def_python">
 <a href="#eni_config_label_def_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>config_<wbr>label_<wbr>def</a>
@@ -607,8 +565,7 @@ Defaults to false.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the ENI_CONFIG_LABEL_DEF environment variable value for worker nodes. This is used to tell Kubernetes to automatically apply the ENIConfig for each Availability Zone
 Ref: https://docs.aws.amazon.com/eks/latest/userguide/cni-custom-network.html (step 5(c))
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_mtu_python">
 <a href="#eni_mtu_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>mtu</a>
@@ -618,8 +575,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Used to configure the MTU size for attached ENIs. The valid range is from 576 to 9001.
 
-Defaults to 9001.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 9001.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_snat_python">
 <a href="#external_snat_python" style="color: inherit; text-decoration: inherit;">external_<wbr>snat</a>
@@ -629,8 +585,7 @@ Defaults to 9001.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether an external NAT gateway should be used to provide SNAT of secondary ENI IP addresses. If set to true, the SNAT iptables rule and off-VPC IP rule are not applied, and these rules are removed if they have already been applied.
 
-Defaults to false.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to false.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -640,8 +595,7 @@ Defaults to false.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the container image to use in the AWS CNI cluster DaemonSet.
 
-Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_file_python">
 <a href="#log_file_python" style="color: inherit; text-decoration: inherit;">log_<wbr>file</a>
@@ -651,8 +605,7 @@ Defaults to the official AWS CNI image in ECR.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the file path used for logs.
 
-Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -663,8 +616,7 @@ Defaults to "stdout" to emit Pod logs for `kubectl logs`.{{% /md %}}</dd>
     <dd>{{% md %}}Specifies the log level used for logs.
 
 Defaults to "DEBUG"
-Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
-    <dt class="property-optional"
+Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_port_support_python">
 <a href="#node_port_support_python" style="color: inherit; text-decoration: inherit;">node_<wbr>port_<wbr>support</a>
@@ -674,8 +626,7 @@ Valid values: "DEBUG", "INFO", "WARN", "ERROR", or "FATAL".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies whether NodePort services are enabled on a worker node's primary network interface. This requires additional iptables rules and that the kernel's reverse path filter on the primary interface is set to loose.
 
-Defaults to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="veth_prefix_python">
 <a href="#veth_prefix_python" style="color: inherit; text-decoration: inherit;">veth_<wbr>prefix</a>
@@ -687,8 +638,7 @@ Defaults to true.{{% /md %}}</dd>
 
 The prefix can be at most 4 characters long.
 
-Defaults to "eni".{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to "eni".{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_eni_target_python">
 <a href="#warm_eni_target_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>eni_<wbr>target</a>
@@ -698,8 +648,7 @@ Defaults to "eni".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Specifies the number of free elastic network interfaces (and all of their available IP addresses) that the ipamD daemon should attempt to keep available for pod assignment on the node.
 
-Defaults to 1.{{% /md %}}</dd>
-    <dt class="property-optional"
+Defaults to 1.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_ip_target_python">
 <a href="#warm_ip_target_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>ip_<wbr>target</a>
@@ -707,8 +656,7 @@ Defaults to 1.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the number of free IP addresses that the ipamD daemon should attempt to keep available for pod assignment on the node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -719,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -728,13 +675,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -742,13 +687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,13 +699,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -770,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

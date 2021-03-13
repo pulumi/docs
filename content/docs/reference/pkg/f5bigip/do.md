@@ -247,8 +247,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dojson_csharp">
 <a href="#dojson_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
@@ -257,8 +256,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenantname_csharp">
 <a href="#tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -267,8 +265,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -277,13 +274,11 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dojson_go">
 <a href="#dojson_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
@@ -292,8 +287,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenantname_go">
 <a href="#tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -302,8 +296,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -312,13 +305,11 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dojson_nodejs">
 <a href="#dojson_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Json</a>
@@ -327,8 +318,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenantname_nodejs">
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -337,8 +327,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -347,13 +336,11 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="do_json_python">
 <a href="#do_json_python" style="color: inherit; text-decoration: inherit;">do_<wbr>json</a>
@@ -362,8 +349,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenant_name_python">
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -372,8 +358,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -382,8 +367,7 @@ The Do resource accepts the following [input]({{< relref "/docs/intro/concepts/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -394,8 +378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -403,13 +386,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -417,13 +398,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -431,13 +410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -445,8 +422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -573,8 +549,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dojson_csharp">
 <a href="#state_dojson_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
@@ -583,8 +558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenantname_csharp">
 <a href="#state_tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -593,8 +567,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -603,13 +576,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dojson_go">
 <a href="#state_dojson_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Json</a>
@@ -618,8 +589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenantname_go">
 <a href="#state_tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -628,8 +598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -638,13 +607,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dojson_nodejs">
 <a href="#state_dojson_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Json</a>
@@ -653,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenantname_nodejs">
 <a href="#state_tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -663,8 +629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -673,13 +638,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_do_json_python">
 <a href="#state_do_json_python" style="color: inherit; text-decoration: inherit;">do_<wbr>json</a>
@@ -688,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the of the Declarative DO JSON file
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenant_name_python">
 <a href="#state_tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -698,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}unique identifier for DO resource
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -708,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DO json
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

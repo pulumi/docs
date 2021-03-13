@@ -284,8 +284,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -294,8 +293,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -304,8 +302,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -314,8 +311,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsetestid_csharp">
 <a href="#parsetestid_csharp" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Id</a>
@@ -324,8 +320,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsetestoptions_csharp">
 <a href="#parsetestoptions_csharp" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Options</a>
@@ -334,8 +329,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_csharp">
 <a href="#secure_csharp" style="color: inherit; text-decoration: inherit;">Secure</a>
@@ -344,8 +338,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -354,13 +347,11 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -369,8 +360,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -379,8 +369,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -389,8 +378,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsetestid_go">
 <a href="#parsetestid_go" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Id</a>
@@ -399,8 +387,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsetestoptions_go">
 <a href="#parsetestoptions_go" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Options</a>
@@ -409,8 +396,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_go">
 <a href="#secure_go" style="color: inherit; text-decoration: inherit;">Secure</a>
@@ -419,8 +405,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -429,13 +414,11 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -444,8 +427,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -454,8 +436,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -464,8 +445,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsetestid_nodejs">
 <a href="#parsetestid_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Test<wbr>Id</a>
@@ -474,8 +454,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parsetestoptions_nodejs">
 <a href="#parsetestoptions_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Test<wbr>Options</a>
@@ -484,8 +463,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_nodejs">
 <a href="#secure_nodejs" style="color: inherit; text-decoration: inherit;">secure</a>
@@ -494,8 +472,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -504,13 +481,11 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -519,8 +494,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -529,8 +503,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -539,8 +512,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parse_test_id_python">
 <a href="#parse_test_id_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>test_<wbr>id</a>
@@ -549,8 +521,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parse_test_options_python">
 <a href="#parse_test_options_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>test_<wbr>options</a>
@@ -559,8 +530,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secure_python">
 <a href="#secure_python" style="color: inherit; text-decoration: inherit;">secure</a>
@@ -569,8 +539,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -579,8 +548,7 @@ The SyntheticsGlobalVariable resource accepts the following [input]({{< relref "
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -591,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -600,13 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -614,13 +579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -628,13 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -642,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -770,8 +730,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -780,8 +739,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -790,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parsetestid_csharp">
 <a href="#state_parsetestid_csharp" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Id</a>
@@ -800,8 +757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parsetestoptions_csharp">
 <a href="#state_parsetestoptions_csharp" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Options</a>
@@ -810,8 +766,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secure_csharp">
 <a href="#state_secure_csharp" style="color: inherit; text-decoration: inherit;">Secure</a>
@@ -820,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -830,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_csharp">
 <a href="#state_value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -840,13 +793,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -855,8 +806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -865,8 +815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parsetestid_go">
 <a href="#state_parsetestid_go" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Id</a>
@@ -875,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parsetestoptions_go">
 <a href="#state_parsetestoptions_go" style="color: inherit; text-decoration: inherit;">Parse<wbr>Test<wbr>Options</a>
@@ -885,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secure_go">
 <a href="#state_secure_go" style="color: inherit; text-decoration: inherit;">Secure</a>
@@ -895,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -905,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_go">
 <a href="#state_value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -915,13 +860,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -930,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -940,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parsetestid_nodejs">
 <a href="#state_parsetestid_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Test<wbr>Id</a>
@@ -950,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parsetestoptions_nodejs">
 <a href="#state_parsetestoptions_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Test<wbr>Options</a>
@@ -960,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secure_nodejs">
 <a href="#state_secure_nodejs" style="color: inherit; text-decoration: inherit;">secure</a>
@@ -970,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -980,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_nodejs">
 <a href="#state_value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -990,13 +927,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1005,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1015,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Synthetics global variable name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parse_test_id_python">
 <a href="#state_parse_test_id_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>test_<wbr>id</a>
@@ -1025,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the Synthetics test to use for a variable from test.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parse_test_options_python">
 <a href="#state_parse_test_options_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>test_<wbr>options</a>
@@ -1035,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ID of the Synthetics test to use a source of the global variable value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secure_python">
 <a href="#state_secure_python" style="color: inherit; text-decoration: inherit;">secure</a>
@@ -1045,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sets the variable as secure. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1055,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your synthetics global variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_python">
 <a href="#state_value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1065,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the global variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1081,8 +1009,7 @@ The following state arguments are supported:
 <h4 id="syntheticsglobalvariableparsetestoptions">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parser_csharp">
 <a href="#parser_csharp" style="color: inherit; text-decoration: inherit;">Parser</a>
@@ -1090,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptionsparser">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Parser<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1099,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1108,13 +1033,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parser_go">
 <a href="#parser_go" style="color: inherit; text-decoration: inherit;">Parser</a>
@@ -1122,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptionsparser">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Parser</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1131,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1140,13 +1061,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parser_nodejs">
 <a href="#parser_nodejs" style="color: inherit; text-decoration: inherit;">parser</a>
@@ -1154,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptionsparser">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Parser</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1163,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1172,13 +1089,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parser_python">
 <a href="#parser_python" style="color: inherit; text-decoration: inherit;">parser</a>
@@ -1186,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syntheticsglobalvariableparsetestoptionsparser">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Parser<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1195,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1204,15 +1117,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syntheticsglobalvariableparsetestoptionsparser">Synthetics<wbr>Global<wbr>Variable<wbr>Parse<wbr>Test<wbr>Options<wbr>Parser</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1220,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1229,13 +1139,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1243,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1252,13 +1159,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1266,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1275,13 +1179,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1289,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1298,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

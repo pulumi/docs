@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxiliarytenantids_csharp">
 <a href="#auxiliarytenantids_csharp" style="color: inherit; text-decoration: inherit;">Auxiliary<wbr>Tenant<wbr>Ids</a>
@@ -176,8 +175,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_csharp">
 <a href="#clientcertificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -187,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_csharp">
 <a href="#clientcertificatepath_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Path</a>
@@ -198,8 +195,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -208,8 +204,7 @@ Principal using a Client Certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -218,8 +213,7 @@ Principal using a Client Certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablecorrelationrequestid_csharp">
 <a href="#disablecorrelationrequestid_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Correlation<wbr>Request<wbr>Id</a>
@@ -228,8 +222,7 @@ Principal using a Client Certificate.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will disable the x-ms-correlation-request-id header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableterraformpartnerid_csharp">
 <a href="#disableterraformpartnerid_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
@@ -238,8 +231,7 @@ Principal using a Client Certificate.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_csharp">
 <a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -249,8 +241,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
- It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -258,8 +249,7 @@ public.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatahost_csharp">
 <a href="#metadatahost_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
@@ -268,8 +258,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
- It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadataurl_csharp">
 <a href="#metadataurl_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Url</a>
@@ -278,8 +267,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
- It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
 <a href="#msiendpoint_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Endpoint</a>
@@ -289,8 +277,7 @@ public.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_csharp">
 <a href="#partnerid_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Id</a>
@@ -299,8 +286,7 @@ automatically.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="skipcredentialsvalidation_csharp">
 <a href="#skipcredentialsvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Credentials<wbr>Validation</a>
@@ -309,8 +295,7 @@ automatically.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="skipproviderregistration_csharp">
 <a href="#skipproviderregistration_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Provider<wbr>Registration</a>
@@ -320,8 +305,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
- It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageuseazuread_csharp">
 <a href="#storageuseazuread_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Use<wbr>Azuread</a>
@@ -330,8 +314,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
- It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -340,8 +323,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
- It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -350,8 +332,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usemsi_csharp">
 <a href="#usemsi_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Msi</a>
@@ -360,13 +341,11 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxiliarytenantids_go">
 <a href="#auxiliarytenantids_go" style="color: inherit; text-decoration: inherit;">Auxiliary<wbr>Tenant<wbr>Ids</a>
@@ -374,8 +353,7 @@ registered?
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_go">
 <a href="#clientcertificatepassword_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Password</a>
@@ -385,8 +363,7 @@ registered?
     </dt>
     <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_go">
 <a href="#clientcertificatepath_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificate<wbr>Path</a>
@@ -396,8 +373,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -406,8 +382,7 @@ Principal using a Client Certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -416,8 +391,7 @@ Principal using a Client Certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablecorrelationrequestid_go">
 <a href="#disablecorrelationrequestid_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Correlation<wbr>Request<wbr>Id</a>
@@ -426,8 +400,7 @@ Principal using a Client Certificate.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will disable the x-ms-correlation-request-id header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableterraformpartnerid_go">
 <a href="#disableterraformpartnerid_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
@@ -436,8 +409,7 @@ Principal using a Client Certificate.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_go">
 <a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
@@ -447,8 +419,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
- It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -456,8 +427,7 @@ public.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatahost_go">
 <a href="#metadatahost_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Host</a>
@@ -466,8 +436,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
- It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadataurl_go">
 <a href="#metadataurl_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Url</a>
@@ -476,8 +445,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
- It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
 <a href="#msiendpoint_go" style="color: inherit; text-decoration: inherit;">Msi<wbr>Endpoint</a>
@@ -487,8 +455,7 @@ public.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_go">
 <a href="#partnerid_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Id</a>
@@ -497,8 +464,7 @@ automatically.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="skipcredentialsvalidation_go">
 <a href="#skipcredentialsvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Credentials<wbr>Validation</a>
@@ -507,8 +473,7 @@ automatically.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="skipproviderregistration_go">
 <a href="#skipproviderregistration_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Provider<wbr>Registration</a>
@@ -518,8 +483,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
- It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageuseazuread_go">
 <a href="#storageuseazuread_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Use<wbr>Azuread</a>
@@ -528,8 +492,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
- It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -538,8 +501,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
- It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -548,8 +510,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usemsi_go">
 <a href="#usemsi_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Msi</a>
@@ -558,13 +519,11 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxiliarytenantids_nodejs">
 <a href="#auxiliarytenantids_nodejs" style="color: inherit; text-decoration: inherit;">auxiliary<wbr>Tenant<wbr>Ids</a>
@@ -572,8 +531,7 @@ registered?
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepassword_nodejs">
 <a href="#clientcertificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Password</a>
@@ -583,8 +541,7 @@ registered?
     </dt>
     <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientcertificatepath_nodejs">
 <a href="#clientcertificatepath_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificate<wbr>Path</a>
@@ -594,8 +551,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -604,8 +560,7 @@ Principal using a Client Certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -614,8 +569,7 @@ Principal using a Client Certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablecorrelationrequestid_nodejs">
 <a href="#disablecorrelationrequestid_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Correlation<wbr>Request<wbr>Id</a>
@@ -624,8 +578,7 @@ Principal using a Client Certificate.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This will disable the x-ms-correlation-request-id header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableterraformpartnerid_nodejs">
 <a href="#disableterraformpartnerid_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Terraform<wbr>Partner<wbr>Id</a>
@@ -634,8 +587,7 @@ Principal using a Client Certificate.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_nodejs">
 <a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -645,8 +597,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
- It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -654,8 +605,7 @@ public.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadatahost_nodejs">
 <a href="#metadatahost_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Host</a>
@@ -664,8 +614,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
- It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadataurl_nodejs">
 <a href="#metadataurl_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Url</a>
@@ -674,8 +623,7 @@ public.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
- It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
 <a href="#msiendpoint_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Endpoint</a>
@@ -685,8 +633,7 @@ public.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnerid_nodejs">
 <a href="#partnerid_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Id</a>
@@ -695,8 +642,7 @@ automatically.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="skipcredentialsvalidation_nodejs">
 <a href="#skipcredentialsvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Credentials<wbr>Validation</a>
@@ -705,8 +651,7 @@ automatically.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="skipproviderregistration_nodejs">
 <a href="#skipproviderregistration_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Provider<wbr>Registration</a>
@@ -716,8 +661,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
- It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageuseazuread_nodejs">
 <a href="#storageuseazuread_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Use<wbr>Azuread</a>
@@ -726,8 +670,7 @@ registered?
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
- It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -736,8 +679,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
- It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -746,8 +688,7 @@ registered?
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usemsi_nodejs">
 <a href="#usemsi_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Msi</a>
@@ -756,13 +697,11 @@ registered?
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auxiliary_tenant_ids_python">
 <a href="#auxiliary_tenant_ids_python" style="color: inherit; text-decoration: inherit;">auxiliary_<wbr>tenant_<wbr>ids</a>
@@ -770,8 +709,7 @@ registered?
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_password_python">
 <a href="#client_certificate_password_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>password</a>
@@ -781,8 +719,7 @@ registered?
     </dt>
     <dd>{{% md %}}The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client
 Certificate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_certificate_path_python">
 <a href="#client_certificate_path_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificate_<wbr>path</a>
@@ -792,8 +729,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service
 Principal using a Client Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -802,8 +738,7 @@ Principal using a Client Certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -812,8 +747,7 @@ Principal using a Client Certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_correlation_request_id_python">
 <a href="#disable_correlation_request_id_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>correlation_<wbr>request_<wbr>id</a>
@@ -822,8 +756,7 @@ Principal using a Client Certificate.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will disable the x-ms-correlation-request-id header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_terraform_partner_id_python">
 <a href="#disable_terraform_partner_id_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>terraform_<wbr>partner_<wbr>id</a>
@@ -832,8 +765,7 @@ Principal using a Client Certificate.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_python">
 <a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
@@ -843,8 +775,7 @@ Principal using a Client Certificate.
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to
 public.
- It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variables: `AZURE_ENVIRONMENT`, `ARM_ENVIRONMENT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -852,8 +783,7 @@ public.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatures">Provider<wbr>Features<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_host_python">
 <a href="#metadata_host_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>host</a>
@@ -862,8 +792,7 @@ public.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname which should be used for the Azure Metadata Service.
- It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+ It can also be sourced from the following environment variable: `ARM_METADATA_HOSTNAME`{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="metadata_url_python">
 <a href="#metadata_url_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>url</a>
@@ -872,8 +801,7 @@ public.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deprecated - replaced by `metadata_host`.
- It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_METADATA_URL`{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `metadata_host` instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">
 <a href="#msi_endpoint_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>endpoint</a>
@@ -883,8 +811,7 @@ public.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partner_id_python">
 <a href="#partner_id_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>id</a>
@@ -893,8 +820,7 @@ automatically.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="skip_credentials_validation_python">
 <a href="#skip_credentials_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>credentials_<wbr>validation</a>
@@ -903,8 +829,7 @@ automatically.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}[DEPRECATED] This will cause the AzureRM Provider to skip verifying the credentials being used are valid.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated and will be removed in version 3.0 of the Azure Provider{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="skip_provider_registration_python">
 <a href="#skip_provider_registration_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>provider_<wbr>registration</a>
@@ -914,8 +839,7 @@ automatically.
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already
 registered?
- It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SKIP_PROVIDER_REGISTRATION`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_use_azuread_python">
 <a href="#storage_use_azuread_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>use_<wbr>azuread</a>
@@ -924,8 +848,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
- It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_STORAGE_USE_AZUREAD`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -934,8 +857,7 @@ registered?
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Subscription ID which should be used.
- It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `ARM_SUBSCRIPTION_ID`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -944,8 +866,7 @@ registered?
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID which should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_msi_python">
 <a href="#use_msi_python" style="color: inherit; text-decoration: inherit;">use_<wbr>msi</a>
@@ -954,8 +875,7 @@ registered?
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allowed Managed Service Identity be used for Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -966,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -975,13 +894,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -989,13 +906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1003,13 +918,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1017,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1034,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="providerfeatures">Provider<wbr>Features</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvault_csharp">
 <a href="#keyvault_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
@@ -1043,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loganalyticsworkspace_csharp">
 <a href="#loganalyticsworkspace_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace</a>
@@ -1052,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1061,8 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatedeployment_csharp">
 <a href="#templatedeployment_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment</a>
@@ -1070,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_csharp">
 <a href="#virtualmachine_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
@@ -1079,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinescaleset_csharp">
 <a href="#virtualmachinescaleset_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
@@ -1088,13 +994,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvault_go">
 <a href="#keyvault_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault</a>
@@ -1102,8 +1006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loganalyticsworkspace_go">
 <a href="#loganalyticsworkspace_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace</a>
@@ -1111,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1120,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatedeployment_go">
 <a href="#templatedeployment_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Deployment</a>
@@ -1129,8 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_go">
 <a href="#virtualmachine_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine</a>
@@ -1138,8 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinescaleset_go">
 <a href="#virtualmachinescaleset_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
@@ -1147,13 +1046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyvault_nodejs">
 <a href="#keyvault_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault</a>
@@ -1161,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loganalyticsworkspace_nodejs">
 <a href="#loganalyticsworkspace_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace</a>
@@ -1170,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1179,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatedeployment_nodejs">
 <a href="#templatedeployment_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Deployment</a>
@@ -1188,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachine_nodejs">
 <a href="#virtualmachine_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine</a>
@@ -1197,8 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinescaleset_nodejs">
 <a href="#virtualmachinescaleset_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set</a>
@@ -1206,13 +1098,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_vault_python">
 <a href="#key_vault_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault</a>
@@ -1220,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_analytics_workspace_python">
 <a href="#log_analytics_workspace_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace</a>
@@ -1229,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1238,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesnetwork">Provider<wbr>Features<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_deployment_python">
 <a href="#template_deployment_python" style="color: inherit; text-decoration: inherit;">template_<wbr>deployment</a>
@@ -1247,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_python">
 <a href="#virtual_machine_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine</a>
@@ -1256,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_scale_set_python">
 <a href="#virtual_machine_scale_set_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set</a>
@@ -1265,15 +1150,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="purgesoftdeleteondestroy_csharp">
 <a href="#purgesoftdeleteondestroy_csharp" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
@@ -1281,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoversoftdeletedkeyvaults_csharp">
 <a href="#recoversoftdeletedkeyvaults_csharp" style="color: inherit; text-decoration: inherit;">Recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
@@ -1290,13 +1172,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="purgesoftdeleteondestroy_go">
 <a href="#purgesoftdeleteondestroy_go" style="color: inherit; text-decoration: inherit;">Purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
@@ -1304,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoversoftdeletedkeyvaults_go">
 <a href="#recoversoftdeletedkeyvaults_go" style="color: inherit; text-decoration: inherit;">Recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
@@ -1313,13 +1192,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="purgesoftdeleteondestroy_nodejs">
 <a href="#purgesoftdeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">purge<wbr>Soft<wbr>Delete<wbr>On<wbr>Destroy</a>
@@ -1327,8 +1204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoversoftdeletedkeyvaults_nodejs">
 <a href="#recoversoftdeletedkeyvaults_nodejs" style="color: inherit; text-decoration: inherit;">recover<wbr>Soft<wbr>Deleted<wbr>Key<wbr>Vaults</a>
@@ -1336,13 +1212,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="purge_soft_delete_on_destroy_python">
 <a href="#purge_soft_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">purge_<wbr>soft_<wbr>delete_<wbr>on_<wbr>destroy</a>
@@ -1350,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recover_soft_deleted_key_vaults_python">
 <a href="#recover_soft_deleted_key_vaults_python" style="color: inherit; text-decoration: inherit;">recover_<wbr>soft_<wbr>deleted_<wbr>key_<wbr>vaults</a>
@@ -1359,15 +1232,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permanentlydeleteondestroy_csharp">
 <a href="#permanentlydeleteondestroy_csharp" style="color: inherit; text-decoration: inherit;">Permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
@@ -1375,13 +1246,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permanentlydeleteondestroy_go">
 <a href="#permanentlydeleteondestroy_go" style="color: inherit; text-decoration: inherit;">Permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
@@ -1389,13 +1258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permanentlydeleteondestroy_nodejs">
 <a href="#permanentlydeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
@@ -1403,13 +1270,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permanently_delete_on_destroy_python">
 <a href="#permanently_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">permanently_<wbr>delete_<wbr>on_<wbr>destroy</a>
@@ -1417,15 +1282,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerfeaturesnetwork">Provider<wbr>Features<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="relaxedlocking_csharp">
 <a href="#relaxedlocking_csharp" style="color: inherit; text-decoration: inherit;">Relaxed<wbr>Locking</a>
@@ -1433,13 +1296,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="relaxedlocking_go">
 <a href="#relaxedlocking_go" style="color: inherit; text-decoration: inherit;">Relaxed<wbr>Locking</a>
@@ -1447,13 +1308,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="relaxedlocking_nodejs">
 <a href="#relaxedlocking_nodejs" style="color: inherit; text-decoration: inherit;">relaxed<wbr>Locking</a>
@@ -1461,13 +1320,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="relaxed_locking_python">
 <a href="#relaxed_locking_python" style="color: inherit; text-decoration: inherit;">relaxed_<wbr>locking</a>
@@ -1475,15 +1332,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerfeaturestemplatedeployment">Provider<wbr>Features<wbr>Template<wbr>Deployment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deletenesteditemsduringdeletion_csharp">
 <a href="#deletenesteditemsduringdeletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
@@ -1491,13 +1346,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deletenesteditemsduringdeletion_go">
 <a href="#deletenesteditemsduringdeletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
@@ -1505,13 +1358,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deletenesteditemsduringdeletion_nodejs">
 <a href="#deletenesteditemsduringdeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Nested<wbr>Items<wbr>During<wbr>Deletion</a>
@@ -1519,13 +1370,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_nested_items_during_deletion_python">
 <a href="#delete_nested_items_during_deletion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>nested_<wbr>items_<wbr>during_<wbr>deletion</a>
@@ -1533,15 +1382,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerfeaturesvirtualmachine">Provider<wbr>Features<wbr>Virtual<wbr>Machine</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteosdiskondeletion_csharp">
 <a href="#deleteosdiskondeletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
@@ -1549,8 +1396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gracefulshutdown_csharp">
 <a href="#gracefulshutdown_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
@@ -1558,13 +1404,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteosdiskondeletion_go">
 <a href="#deleteosdiskondeletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
@@ -1572,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gracefulshutdown_go">
 <a href="#gracefulshutdown_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
@@ -1581,13 +1424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteosdiskondeletion_nodejs">
 <a href="#deleteosdiskondeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
@@ -1595,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gracefulshutdown_nodejs">
 <a href="#gracefulshutdown_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Shutdown</a>
@@ -1604,13 +1444,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delete_os_disk_on_deletion_python">
 <a href="#delete_os_disk_on_deletion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>deletion</a>
@@ -1618,8 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceful_shutdown_python">
 <a href="#graceful_shutdown_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>shutdown</a>
@@ -1627,15 +1464,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="providerfeaturesvirtualmachinescaleset">Provider<wbr>Features<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rollinstanceswhenrequired_csharp">
 <a href="#rollinstanceswhenrequired_csharp" style="color: inherit; text-decoration: inherit;">Roll<wbr>Instances<wbr>When<wbr>Required</a>
@@ -1643,13 +1478,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rollinstanceswhenrequired_go">
 <a href="#rollinstanceswhenrequired_go" style="color: inherit; text-decoration: inherit;">Roll<wbr>Instances<wbr>When<wbr>Required</a>
@@ -1657,13 +1490,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rollinstanceswhenrequired_nodejs">
 <a href="#rollinstanceswhenrequired_nodejs" style="color: inherit; text-decoration: inherit;">roll<wbr>Instances<wbr>When<wbr>Required</a>
@@ -1671,13 +1502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="roll_instances_when_required_python">
 <a href="#roll_instances_when_required_python" style="color: inherit; text-decoration: inherit;">roll_<wbr>instances_<wbr>when_<wbr>required</a>
@@ -1685,8 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "InputsScript"
-title_tag: "Resource InputsScript | Package Splunk"
-meta_desc: "Explore the InputsScript resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.InputsScript"
+title_tag: "splunk.InputsScript"
+meta_desc: "Documentation for the splunk.InputsScript resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -39,9 +39,7 @@ Create or update scripted inputs.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -49,9 +47,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,9 +55,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -69,10 +63,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -98,9 +89,7 @@ Create or update scripted inputs.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -108,9 +97,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -118,9 +105,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -128,9 +113,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -138,18 +121,13 @@ Create or update scripted inputs.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +135,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +143,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +151,7 @@ Create or update scripted inputs.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -195,9 +166,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -206,8 +175,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -216,8 +184,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -226,8 +193,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -236,8 +202,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -246,8 +211,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +220,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passauth_csharp">
 <a href="#passauth_csharp" style="color: inherit; text-decoration: inherit;">Passauth</a>
@@ -266,8 +229,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renamesource_csharp">
 <a href="#renamesource_csharp" style="color: inherit; text-decoration: inherit;">Rename<wbr>Source</a>
@@ -276,8 +238,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -287,8 +248,7 @@ The InputsScript resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -298,14 +258,11 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -314,8 +271,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -324,8 +280,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -334,8 +289,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -344,8 +298,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_go">
 <a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -354,8 +307,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -364,8 +316,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passauth_go">
 <a href="#passauth_go" style="color: inherit; text-decoration: inherit;">Passauth</a>
@@ -374,8 +325,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renamesource_go">
 <a href="#renamesource_go" style="color: inherit; text-decoration: inherit;">Rename<wbr>Source</a>
@@ -384,8 +334,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -395,8 +344,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -406,14 +354,11 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -422,8 +367,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -432,8 +376,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -442,8 +385,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -452,8 +394,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_nodejs">
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -462,8 +403,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -472,8 +412,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passauth_nodejs">
 <a href="#passauth_nodejs" style="color: inherit; text-decoration: inherit;">passauth</a>
@@ -482,8 +421,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renamesource_nodejs">
 <a href="#renamesource_nodejs" style="color: inherit; text-decoration: inherit;">rename<wbr>Source</a>
@@ -492,8 +430,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -503,8 +440,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -514,14 +450,11 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -530,8 +463,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -540,8 +472,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -550,8 +481,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -560,8 +490,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_python">
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -570,8 +499,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -580,8 +508,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passauth_python">
 <a href="#passauth_python" style="color: inherit; text-decoration: inherit;">passauth</a>
@@ -590,8 +517,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rename_source_python">
 <a href="#rename_source_python" style="color: inherit; text-decoration: inherit;">rename_<wbr>source</a>
@@ -600,8 +526,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -611,8 +536,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_python">
 <a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -622,8 +546,7 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -634,9 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -644,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -659,14 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -674,14 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -689,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -817,9 +728,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -828,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -838,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -848,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_csharp">
 <a href="#state_index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -858,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_csharp">
 <a href="#state_interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -868,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -878,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passauth_csharp">
 <a href="#state_passauth_csharp" style="color: inherit; text-decoration: inherit;">Passauth</a>
@@ -888,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renamesource_csharp">
 <a href="#state_renamesource_csharp" style="color: inherit; text-decoration: inherit;">Rename<wbr>Source</a>
@@ -898,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -909,8 +810,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_csharp">
 <a href="#state_sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -920,14 +820,11 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -936,8 +833,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -946,8 +842,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -956,8 +851,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_go">
 <a href="#state_index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -966,8 +860,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_go">
 <a href="#state_interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -976,8 +869,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -986,8 +878,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passauth_go">
 <a href="#state_passauth_go" style="color: inherit; text-decoration: inherit;">Passauth</a>
@@ -996,8 +887,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renamesource_go">
 <a href="#state_renamesource_go" style="color: inherit; text-decoration: inherit;">Rename<wbr>Source</a>
@@ -1006,8 +896,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1017,8 +906,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_go">
 <a href="#state_sourcetype_go" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -1028,14 +916,11 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1044,8 +929,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1054,8 +938,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1064,8 +947,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_nodejs">
 <a href="#state_index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1074,8 +956,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_nodejs">
 <a href="#state_interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1084,8 +965,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1094,8 +974,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passauth_nodejs">
 <a href="#state_passauth_nodejs" style="color: inherit; text-decoration: inherit;">passauth</a>
@@ -1104,8 +983,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renamesource_nodejs">
 <a href="#state_renamesource_nodejs" style="color: inherit; text-decoration: inherit;">rename<wbr>Source</a>
@@ -1114,8 +992,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1125,8 +1002,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_nodejs">
 <a href="#state_sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -1136,14 +1012,11 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1152,8 +1025,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type"><a href="#inputsscriptacl">Inputs<wbr>Script<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1162,8 +1034,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the input script is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1172,8 +1043,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the host for events from this input. Defaults to whatever host sent the event.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_python">
 <a href="#state_index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1182,8 +1052,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the index for events from this input. Defaults to the main index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interval_python">
 <a href="#state_interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1192,8 +1061,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify an integer or cron schedule. This parameter specifies how often to execute the specified script, in seconds or a valid cron schedule. If you specify a cron schedule, the script is not executed on start-up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1202,8 +1070,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the name of the scripted input.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passauth_python">
 <a href="#state_passauth_python" style="color: inherit; text-decoration: inherit;">passauth</a>
@@ -1212,8 +1079,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User to run the script as. If you provide a username, Splunk software generates an auth token for that user and passes it to the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rename_source_python">
 <a href="#state_rename_source_python" style="color: inherit; text-decoration: inherit;">rename_<wbr>source</a>
@@ -1222,8 +1088,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a new name for the source field for the script.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1233,8 +1098,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
     </dt>
     <dd>{{% md %}}Sets the source key/field for events from this input. Defaults to the input file path.
 Sets the source key initial value. The key is used during parsing/indexing, in particular to set the source field during indexing. It is also the source field used at search time. As a convenience, the chosen string is prepended with 'source::'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_python">
 <a href="#state_sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -1244,8 +1108,7 @@ Sets the source key initial value. The key is used during parsing/indexing, in p
     </dt>
     <dd>{{% md %}}Sets the sourcetype key/field for events from this input. If unset, Splunk software picks a source type based on various aspects of the data. As a convenience, the chosen string is prepended with 'sourcetype::'. There is no hard-coded default.
 Sets the sourcetype key initial value. The key is used during parsing/indexing, in particular to set the source type field during indexing. It is also the source type field used at search time.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1260,9 +1123,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
 <h4 id="inputsscriptacl">Inputs<wbr>Script<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1270,8 +1131,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1279,8 +1139,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1288,8 +1147,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1297,8 +1155,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1306,8 +1163,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1315,8 +1171,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1324,8 +1179,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1333,8 +1187,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1342,8 +1195,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1351,8 +1203,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1360,14 +1211,11 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1375,8 +1223,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1384,8 +1231,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1393,8 +1239,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1402,8 +1247,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1411,8 +1255,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1420,8 +1263,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1429,8 +1271,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1438,8 +1279,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1447,8 +1287,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1456,8 +1295,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1465,14 +1303,11 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1480,8 +1315,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -1489,8 +1323,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -1498,8 +1331,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -1507,8 +1339,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -1516,8 +1347,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -1525,8 +1355,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1534,8 +1363,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1543,8 +1371,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1552,8 +1379,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1561,8 +1387,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1570,14 +1395,11 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1585,8 +1407,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -1594,8 +1415,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -1603,8 +1423,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -1612,8 +1431,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -1621,8 +1439,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -1630,8 +1447,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1639,8 +1455,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1648,8 +1463,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1657,8 +1471,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1666,8 +1479,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1675,8 +1487,7 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

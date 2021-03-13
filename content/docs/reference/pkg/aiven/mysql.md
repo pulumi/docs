@@ -325,8 +325,7 @@ The MySql resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -337,8 +336,7 @@ The MySql resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -349,8 +347,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -365,8 +362,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -376,8 +372,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -387,8 +382,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -398,8 +392,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqluserconfig_csharp">
 <a href="#mysqluserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
@@ -409,8 +402,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -426,8 +418,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -441,8 +432,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -454,8 +444,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -468,13 +457,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -485,8 +472,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -497,8 +483,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -513,8 +498,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -524,8 +508,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -535,8 +518,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -546,8 +528,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqluserconfig_go">
 <a href="#mysqluserconfig_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
@@ -557,8 +538,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -574,8 +554,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -589,8 +568,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -602,8 +580,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -616,13 +593,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -633,8 +608,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -645,8 +619,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -661,8 +634,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -672,8 +644,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -683,8 +654,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -694,8 +664,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqluserconfig_nodejs">
 <a href="#mysqluserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>User<wbr>Config</a>
@@ -705,8 +674,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -722,8 +690,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -737,8 +704,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -750,8 +716,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -764,13 +729,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -781,8 +744,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -793,8 +755,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -809,8 +770,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -820,8 +780,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -831,8 +790,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -842,8 +800,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_user_config_python">
 <a href="#mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
@@ -853,8 +810,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -870,8 +826,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -885,8 +840,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -898,8 +852,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -912,8 +865,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -924,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -934,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mysqlcomponent">List&lt;My<wbr>Sql<wbr>Component&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -943,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -953,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -963,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -973,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -983,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -993,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1003,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1013,13 +956,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1028,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mysqlcomponent">[]My<wbr>Sql<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1037,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1047,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1057,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1067,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1077,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1087,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1097,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1107,13 +1040,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1122,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mysqlcomponent">My<wbr>Sql<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1131,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1141,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1151,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1161,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1171,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1181,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1191,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1201,13 +1124,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1216,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#mysqlcomponent">Sequence[My<wbr>Sql<wbr>Component]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1225,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1235,8 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1245,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1255,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1265,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1275,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1285,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1295,8 +1208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1423,8 +1335,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
 <a href="#state_cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1439,8 +1350,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_csharp">
 <a href="#state_components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1449,8 +1359,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#mysqlcomponent">List&lt;My<wbr>Sql<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_csharp">
 <a href="#state_maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1460,8 +1369,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_csharp">
 <a href="#state_maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1471,8 +1379,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_csharp">
 <a href="#state_mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -1482,8 +1389,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqluserconfig_csharp">
 <a href="#state_mysqluserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
@@ -1493,8 +1399,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1510,8 +1415,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1522,8 +1426,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_csharp">
 <a href="#state_projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1537,8 +1440,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_csharp">
 <a href="#state_servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1547,8 +1449,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_csharp">
 <a href="#state_serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1560,8 +1461,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1572,8 +1472,7 @@ replica the following configuration needs to be added:
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_csharp">
 <a href="#state_servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1582,8 +1481,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_csharp">
 <a href="#state_serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1592,8 +1490,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1602,8 +1499,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_csharp">
 <a href="#state_serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1612,8 +1508,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_csharp">
 <a href="#state_serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1622,8 +1517,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1632,8 +1526,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1646,13 +1539,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
 <a href="#state_cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1667,8 +1558,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_go">
 <a href="#state_components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1677,8 +1567,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#mysqlcomponent">[]My<wbr>Sql<wbr>Component</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_go">
 <a href="#state_maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1688,8 +1577,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_go">
 <a href="#state_maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1699,8 +1587,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_go">
 <a href="#state_mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -1710,8 +1597,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqluserconfig_go">
 <a href="#state_mysqluserconfig_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>User<wbr>Config</a>
@@ -1721,8 +1607,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1738,8 +1623,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1750,8 +1634,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_go">
 <a href="#state_projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1765,8 +1648,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_go">
 <a href="#state_servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1775,8 +1657,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_go">
 <a href="#state_serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1788,8 +1669,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1800,8 +1680,7 @@ replica the following configuration needs to be added:
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_go">
 <a href="#state_servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1810,8 +1689,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_go">
 <a href="#state_serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1820,8 +1698,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1830,8 +1707,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_go">
 <a href="#state_serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1840,8 +1716,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_go">
 <a href="#state_serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1850,8 +1725,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1860,8 +1734,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1874,13 +1747,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
 <a href="#state_cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1895,8 +1766,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_nodejs">
 <a href="#state_components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1905,8 +1775,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#mysqlcomponent">My<wbr>Sql<wbr>Component[]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowdow_nodejs">
 <a href="#state_maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -1916,8 +1785,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowtime_nodejs">
 <a href="#state_maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -1927,8 +1795,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_nodejs">
 <a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -1938,8 +1805,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqluserconfig_nodejs">
 <a href="#state_mysqluserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>User<wbr>Config</a>
@@ -1949,8 +1815,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1966,8 +1831,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1978,8 +1842,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectvpcid_nodejs">
 <a href="#state_projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -1993,8 +1856,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicehost_nodejs">
 <a href="#state_servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -2003,8 +1865,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceintegrations_nodejs">
 <a href="#state_serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -2016,8 +1877,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -2028,8 +1888,7 @@ replica the following configuration needs to be added:
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicepassword_nodejs">
 <a href="#state_servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -2038,8 +1897,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceport_nodejs">
 <a href="#state_serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -2048,8 +1906,7 @@ intended service usage rather than current attributes.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -2058,8 +1915,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceuri_nodejs">
 <a href="#state_serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -2068,8 +1924,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceusername_nodejs">
 <a href="#state_serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -2078,8 +1933,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2088,8 +1942,7 @@ intended service usage rather than current attributes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -2102,13 +1955,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
 <a href="#state_cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -2123,8 +1974,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_components_python">
 <a href="#state_components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -2133,8 +1983,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#mysqlcomponent">Sequence[My<wbr>Sql<wbr>Component<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Service component information objects
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_dow_python">
 <a href="#state_maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -2144,8 +1993,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_time_python">
 <a href="#state_maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -2155,8 +2003,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_python">
 <a href="#state_mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -2166,8 +2013,7 @@ UTC time in HH:mm:ss format.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_user_config_python">
 <a href="#state_mysql_user_config_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>user_<wbr>config</a>
@@ -2177,8 +2023,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}defines MySQL specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2194,8 +2039,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2206,8 +2050,7 @@ seen from the Aiven web console's Create Service dialog.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_vpc_id_python">
 <a href="#state_project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -2221,8 +2064,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_host_python">
 <a href="#state_service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -2231,8 +2073,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MySQL hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_integrations_python">
 <a href="#state_service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -2244,8 +2085,7 @@ significant amount of time to complete if the service has a lot of data.
 immediately upon service creation. By the time of writing the only such integration is
 defining that MySQL service is a read-replica of another service. To define a read-
 replica the following configuration needs to be added:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -2256,8 +2096,7 @@ replica the following configuration needs to be added:
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_password_python">
 <a href="#state_service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -2266,8 +2105,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_port_python">
 <a href="#state_service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -2276,8 +2114,7 @@ intended service usage rather than current attributes.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}MySQL port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -2286,8 +2123,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Aiven internal service type code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_uri_python">
 <a href="#state_service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -2296,8 +2132,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the MySQL service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_username_python">
 <a href="#state_service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -2306,8 +2141,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the MySQL service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2316,8 +2150,7 @@ intended service usage rather than current attributes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -2330,8 +2163,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2346,8 +2178,7 @@ deletion is done.
 <h4 id="mysqlcomponent">My<wbr>Sql<wbr>Component</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2355,8 +2186,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2365,8 +2195,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2374,8 +2203,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2384,8 +2212,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2393,8 +2220,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2403,8 +2229,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2412,13 +2237,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2426,8 +2249,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2436,8 +2258,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2445,8 +2266,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2455,8 +2275,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2464,8 +2283,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2474,8 +2292,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2483,13 +2300,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2497,8 +2312,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2507,8 +2321,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2516,8 +2329,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2526,8 +2338,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2535,8 +2346,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2545,8 +2355,7 @@ deletion is done.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2554,13 +2363,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2568,8 +2375,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2578,8 +2384,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2587,8 +2392,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2597,8 +2401,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2606,8 +2409,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2616,8 +2418,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2625,15 +2426,13 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlmysqluserconfig">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -2643,8 +2442,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}Custom password for admin user. Defaults to random string. 
 This must be set only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -2654,8 +2452,7 @@ This must be set only when a new service is being created.
     </dt>
     <dd>{{% md %}}Custom username for admin user. This must be set only when a 
 new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuphour_csharp">
 <a href="#backuphour_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Hour</a>
@@ -2665,8 +2462,7 @@ new service is being created.
     </dt>
     <dd>{{% md %}}The hour of day (in UTC) when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupminute_csharp">
 <a href="#backupminute_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
@@ -2676,8 +2472,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2686,8 +2481,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_csharp">
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
@@ -2696,8 +2490,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -2707,8 +2500,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlversion_csharp">
 <a href="#mysqlversion_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Version</a>
@@ -2717,8 +2509,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2727,8 +2518,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_csharp">
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2737,8 +2527,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2748,8 +2537,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2758,8 +2546,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverytargettime_csharp">
 <a href="#recoverytargettime_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Time</a>
@@ -2769,8 +2556,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2780,13 +2566,11 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
@@ -2796,8 +2580,7 @@ a new service is being created.
     </dt>
     <dd>{{% md %}}Custom password for admin user. Defaults to random string. 
 This must be set only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
@@ -2807,8 +2590,7 @@ This must be set only when a new service is being created.
     </dt>
     <dd>{{% md %}}Custom username for admin user. This must be set only when a 
 new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuphour_go">
 <a href="#backuphour_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Hour</a>
@@ -2818,8 +2600,7 @@ new service is being created.
     </dt>
     <dd>{{% md %}}The hour of day (in UTC) when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupminute_go">
 <a href="#backupminute_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Minute</a>
@@ -2829,8 +2610,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2839,8 +2619,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_go">
 <a href="#migration_go" style="color: inherit; text-decoration: inherit;">Migration</a>
@@ -2849,8 +2628,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -2860,8 +2638,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlversion_go">
 <a href="#mysqlversion_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Version</a>
@@ -2870,8 +2647,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2880,8 +2656,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_go">
 <a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2890,8 +2665,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2901,8 +2675,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2911,8 +2684,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverytargettime_go">
 <a href="#recoverytargettime_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Target<wbr>Time</a>
@@ -2922,8 +2694,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2933,13 +2704,11 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
@@ -2949,8 +2718,7 @@ a new service is being created.
     </dt>
     <dd>{{% md %}}Custom password for admin user. Defaults to random string. 
 This must be set only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
@@ -2960,8 +2728,7 @@ This must be set only when a new service is being created.
     </dt>
     <dd>{{% md %}}Custom username for admin user. This must be set only when a 
 new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuphour_nodejs">
 <a href="#backuphour_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Hour</a>
@@ -2971,8 +2738,7 @@ new service is being created.
     </dt>
     <dd>{{% md %}}The hour of day (in UTC) when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupminute_nodejs">
 <a href="#backupminute_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Minute</a>
@@ -2982,8 +2748,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -2992,8 +2757,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_nodejs">
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
@@ -3002,8 +2766,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -3013,8 +2776,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlversion_nodejs">
 <a href="#mysqlversion_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Version</a>
@@ -3023,8 +2785,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MySQL major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -3033,8 +2794,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_nodejs">
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
@@ -3043,8 +2803,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
@@ -3054,8 +2813,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -3064,8 +2822,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverytargettime_nodejs">
 <a href="#recoverytargettime_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Target<wbr>Time</a>
@@ -3075,8 +2832,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
@@ -3086,13 +2842,11 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
@@ -3102,8 +2856,7 @@ a new service is being created.
     </dt>
     <dd>{{% md %}}Custom password for admin user. Defaults to random string. 
 This must be set only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
@@ -3113,8 +2866,7 @@ This must be set only when a new service is being created.
     </dt>
     <dd>{{% md %}}Custom username for admin user. This must be set only when a 
 new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_hour_python">
 <a href="#backup_hour_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>hour</a>
@@ -3124,8 +2876,7 @@ new service is being created.
     </dt>
     <dd>{{% md %}}The hour of day (in UTC) when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_minute_python">
 <a href="#backup_minute_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>minute</a>
@@ -3135,8 +2886,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}The minute of an hour when backup for the service is started. 
 New backup is only started if previous backup has already completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -3145,8 +2895,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. '10.20.0.0/16'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_python">
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
@@ -3155,8 +2904,7 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -3166,8 +2914,7 @@ New backup is only started if previous backup has already completed.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_version_python">
 <a href="#mysql_version_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>version</a>
@@ -3176,8 +2923,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MySQL major version
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -3186,8 +2932,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelink_access_python">
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
@@ -3196,8 +2941,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3207,8 +2951,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -3217,8 +2960,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_target_time_python">
 <a href="#recovery_target_time_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>target_<wbr>time</a>
@@ -3228,8 +2970,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Recovery target time when forking a service. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -3239,15 +2980,13 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlmysqluserconfigmigration">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_csharp">
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -3256,8 +2995,7 @@ a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3266,8 +3004,7 @@ a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_csharp">
 <a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
@@ -3277,8 +3014,7 @@ a new service is being created.
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored 
 during migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3287,8 +3023,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3297,8 +3032,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -3307,8 +3041,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3317,13 +3050,11 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_go">
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -3332,8 +3063,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -3342,8 +3072,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_go">
 <a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
@@ -3353,8 +3082,7 @@ during migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored 
 during migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3363,8 +3091,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3373,8 +3100,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -3383,8 +3109,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3393,13 +3118,11 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_nodejs">
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -3408,8 +3131,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3418,8 +3140,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_nodejs">
 <a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
@@ -3429,8 +3150,7 @@ during migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored 
 during migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3439,8 +3159,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3449,8 +3168,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -3459,8 +3177,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3469,13 +3186,11 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_python">
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -3484,8 +3199,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3494,8 +3208,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_dbs_python">
 <a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
@@ -3505,8 +3218,7 @@ during migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored 
 during migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3515,8 +3227,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3525,8 +3236,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -3535,8 +3245,7 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3545,15 +3254,13 @@ during migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlmysqluserconfigmysql">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Mysql</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_csharp">
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -3563,8 +3270,7 @@ during migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}The number of seconds that the mysqld server waits for a 
 connect packet before responding with Bad handshake
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttimezone_csharp">
 <a href="#defaulttimezone_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Time<wbr>Zone</a>
@@ -3574,8 +3280,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}Default server time zone as an offset from UTC 
 (from -12:00 to +12:00), a time zone name, or 'SYSTEM' to use the MySQL server default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupconcatmaxlen_csharp">
 <a href="#groupconcatmaxlen_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Concat<wbr>Max<wbr>Len</a>
@@ -3585,8 +3290,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}The maximum permitted result length in bytes for 
 the GROUP_CONCAT() function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationschemastatsexpiry_csharp">
 <a href="#informationschemastatsexpiry_csharp" style="color: inherit; text-decoration: inherit;">Information<wbr>Schema<wbr>Stats<wbr>Expiry</a>
@@ -3596,8 +3300,7 @@ the GROUP_CONCAT() function.
     </dt>
     <dd>{{% md %}}The time, in seconds, before cached 
 statistics expire
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbftmintokensize_csharp">
 <a href="#innodbftmintokensize_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Ft<wbr>Min<wbr>Token<wbr>Size</a>
@@ -3607,8 +3310,7 @@ statistics expire
     </dt>
     <dd>{{% md %}}Minimum length of words that are stored in 
 an InnoDB FULLTEXT index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbftserverstopwordtable_csharp">
 <a href="#innodbftserverstopwordtable_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Ft<wbr>Server<wbr>Stopword<wbr>Table</a>
@@ -3618,8 +3320,7 @@ an InnoDB FULLTEXT index.
     </dt>
     <dd>{{% md %}}This option is used to specify your 
 own InnoDB FULLTEXT index stopword list for all InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodblockwaittimeout_csharp">
 <a href="#innodblockwaittimeout_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Lock<wbr>Wait<wbr>Timeout</a>
@@ -3629,8 +3330,7 @@ own InnoDB FULLTEXT index stopword list for all InnoDB tables.
     </dt>
     <dd>{{% md %}}The length of time in seconds an InnoDB 
 transaction waits for a row lock before giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodblogbuffersize_csharp">
 <a href="#innodblogbuffersize_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Log<wbr>Buffer<wbr>Size</a>
@@ -3640,8 +3340,7 @@ transaction waits for a row lock before giving up.
     </dt>
     <dd>{{% md %}}The size in bytes of the buffer that InnoDB 
 uses to write to the log files on disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbonlinealterlogmaxsize_csharp">
 <a href="#innodbonlinealterlogmaxsize_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
@@ -3651,8 +3350,7 @@ uses to write to the log files on disk.
     </dt>
     <dd>{{% md %}}The upper limit in bytes on the 
 size of the temporary log files used during online DDL operations for InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbprintalldeadlocks_csharp">
 <a href="#innodbprintalldeadlocks_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
@@ -3662,8 +3360,7 @@ size of the temporary log files used during online DDL operations for InnoDB tab
     </dt>
     <dd>{{% md %}}When enabled, information about all 
 deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbrollbackontimeout_csharp">
 <a href="#innodbrollbackontimeout_csharp" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
@@ -3673,8 +3370,7 @@ deadlocks in InnoDB user transactions is recorded in the error log. Disabled by 
     </dt>
     <dd>{{% md %}}When enabled a transaction timeout 
 causes InnoDB to abort and roll back the entire transaction.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interactivetimeout_csharp">
 <a href="#interactivetimeout_csharp" style="color: inherit; text-decoration: inherit;">Interactive<wbr>Timeout</a>
@@ -3684,8 +3380,7 @@ causes InnoDB to abort and roll back the entire transaction.
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longquerytime_csharp">
 <a href="#longquerytime_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
@@ -3695,8 +3390,7 @@ activity on an interactive connection before closing it.
     </dt>
     <dd>{{% md %}}The slow_query_logs work as SQL statements that take 
 more than long_query_time seconds to execute. Default is 10s
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxallowedpacket_csharp">
 <a href="#maxallowedpacket_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Packet</a>
@@ -3706,8 +3400,7 @@ more than long_query_time seconds to execute. Default is 10s
     </dt>
     <dd>{{% md %}}Size of the largest message in bytes that can 
 be received by the server. Default is 67108864 (64M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheaptablesize_csharp">
 <a href="#maxheaptablesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Heap<wbr>Table<wbr>Size</a>
@@ -3717,8 +3410,7 @@ be received by the server. Default is 67108864 (64M)
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. 
 Also set tmp_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netreadtimeout_csharp">
 <a href="#netreadtimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Read<wbr>Timeout</a>
@@ -3728,8 +3420,7 @@ Also set tmp_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds to wait for more data from 
 a connection before aborting the read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netwritetimeout_csharp">
 <a href="#netwritetimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Write<wbr>Timeout</a>
@@ -3739,8 +3430,7 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowquerylog_csharp">
 <a href="#slowquerylog_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Query<wbr>Log</a>
@@ -3750,8 +3440,7 @@ written to a connection before aborting the write.
     </dt>
     <dd>{{% md %}}Slow query log enables capturing of slow queries. 
 Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortbuffersize_csharp">
 <a href="#sortbuffersize_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Buffer<wbr>Size</a>
@@ -3761,8 +3450,7 @@ Setting slow_query_log to false also truncates the mysql.slow_log table. Default
     </dt>
     <dd>{{% md %}}Sort buffer size in bytes for ORDER BY optimization. 
 Default is 262144 (256K)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlmode_csharp">
 <a href="#sqlmode_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Mode</a>
@@ -3773,8 +3461,7 @@ Default is 262144 (256K)
     <dd>{{% md %}}Global SQL mode. Set to empty to use MySQL server defaults. 
 When creating a new service and not setting this field Aiven default SQL mode (strict,
 SQL standard compliant) will be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlrequireprimarykey_csharp">
 <a href="#sqlrequireprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Require<wbr>Primary<wbr>Key</a>
@@ -3786,8 +3473,7 @@ SQL standard compliant) will be assigned.
 tables or old tables modified with ALTER TABLE and fail if missing. It is recommended
 to always have primary keys because various functionality may break if any large table
 is missing them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmptablesize_csharp">
 <a href="#tmptablesize_csharp" style="color: inherit; text-decoration: inherit;">Tmp<wbr>Table<wbr>Size</a>
@@ -3797,8 +3483,7 @@ is missing them.
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. Also set 
 max_heap_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittimeout_csharp">
 <a href="#waittimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Timeout</a>
@@ -3808,13 +3493,11 @@ max_heap_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for activity on 
 a noninteractive connection before closing it.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_go">
 <a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -3824,8 +3507,7 @@ a noninteractive connection before closing it.
     </dt>
     <dd>{{% md %}}The number of seconds that the mysqld server waits for a 
 connect packet before responding with Bad handshake
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttimezone_go">
 <a href="#defaulttimezone_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Time<wbr>Zone</a>
@@ -3835,8 +3517,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}Default server time zone as an offset from UTC 
 (from -12:00 to +12:00), a time zone name, or 'SYSTEM' to use the MySQL server default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupconcatmaxlen_go">
 <a href="#groupconcatmaxlen_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Concat<wbr>Max<wbr>Len</a>
@@ -3846,8 +3527,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}The maximum permitted result length in bytes for 
 the GROUP_CONCAT() function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationschemastatsexpiry_go">
 <a href="#informationschemastatsexpiry_go" style="color: inherit; text-decoration: inherit;">Information<wbr>Schema<wbr>Stats<wbr>Expiry</a>
@@ -3857,8 +3537,7 @@ the GROUP_CONCAT() function.
     </dt>
     <dd>{{% md %}}The time, in seconds, before cached 
 statistics expire
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbftmintokensize_go">
 <a href="#innodbftmintokensize_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Ft<wbr>Min<wbr>Token<wbr>Size</a>
@@ -3868,8 +3547,7 @@ statistics expire
     </dt>
     <dd>{{% md %}}Minimum length of words that are stored in 
 an InnoDB FULLTEXT index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbftserverstopwordtable_go">
 <a href="#innodbftserverstopwordtable_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Ft<wbr>Server<wbr>Stopword<wbr>Table</a>
@@ -3879,8 +3557,7 @@ an InnoDB FULLTEXT index.
     </dt>
     <dd>{{% md %}}This option is used to specify your 
 own InnoDB FULLTEXT index stopword list for all InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodblockwaittimeout_go">
 <a href="#innodblockwaittimeout_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Lock<wbr>Wait<wbr>Timeout</a>
@@ -3890,8 +3567,7 @@ own InnoDB FULLTEXT index stopword list for all InnoDB tables.
     </dt>
     <dd>{{% md %}}The length of time in seconds an InnoDB 
 transaction waits for a row lock before giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodblogbuffersize_go">
 <a href="#innodblogbuffersize_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Log<wbr>Buffer<wbr>Size</a>
@@ -3901,8 +3577,7 @@ transaction waits for a row lock before giving up.
     </dt>
     <dd>{{% md %}}The size in bytes of the buffer that InnoDB 
 uses to write to the log files on disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbonlinealterlogmaxsize_go">
 <a href="#innodbonlinealterlogmaxsize_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
@@ -3912,8 +3587,7 @@ uses to write to the log files on disk.
     </dt>
     <dd>{{% md %}}The upper limit in bytes on the 
 size of the temporary log files used during online DDL operations for InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbprintalldeadlocks_go">
 <a href="#innodbprintalldeadlocks_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
@@ -3923,8 +3597,7 @@ size of the temporary log files used during online DDL operations for InnoDB tab
     </dt>
     <dd>{{% md %}}When enabled, information about all 
 deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbrollbackontimeout_go">
 <a href="#innodbrollbackontimeout_go" style="color: inherit; text-decoration: inherit;">Innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
@@ -3934,8 +3607,7 @@ deadlocks in InnoDB user transactions is recorded in the error log. Disabled by 
     </dt>
     <dd>{{% md %}}When enabled a transaction timeout 
 causes InnoDB to abort and roll back the entire transaction.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interactivetimeout_go">
 <a href="#interactivetimeout_go" style="color: inherit; text-decoration: inherit;">Interactive<wbr>Timeout</a>
@@ -3945,8 +3617,7 @@ causes InnoDB to abort and roll back the entire transaction.
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longquerytime_go">
 <a href="#longquerytime_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
@@ -3956,8 +3627,7 @@ activity on an interactive connection before closing it.
     </dt>
     <dd>{{% md %}}The slow_query_logs work as SQL statements that take 
 more than long_query_time seconds to execute. Default is 10s
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxallowedpacket_go">
 <a href="#maxallowedpacket_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Packet</a>
@@ -3967,8 +3637,7 @@ more than long_query_time seconds to execute. Default is 10s
     </dt>
     <dd>{{% md %}}Size of the largest message in bytes that can 
 be received by the server. Default is 67108864 (64M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheaptablesize_go">
 <a href="#maxheaptablesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Heap<wbr>Table<wbr>Size</a>
@@ -3978,8 +3647,7 @@ be received by the server. Default is 67108864 (64M)
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. 
 Also set tmp_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netreadtimeout_go">
 <a href="#netreadtimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Read<wbr>Timeout</a>
@@ -3989,8 +3657,7 @@ Also set tmp_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds to wait for more data from 
 a connection before aborting the read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netwritetimeout_go">
 <a href="#netwritetimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Write<wbr>Timeout</a>
@@ -4000,8 +3667,7 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowquerylog_go">
 <a href="#slowquerylog_go" style="color: inherit; text-decoration: inherit;">Slow<wbr>Query<wbr>Log</a>
@@ -4011,8 +3677,7 @@ written to a connection before aborting the write.
     </dt>
     <dd>{{% md %}}Slow query log enables capturing of slow queries. 
 Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortbuffersize_go">
 <a href="#sortbuffersize_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Buffer<wbr>Size</a>
@@ -4022,8 +3687,7 @@ Setting slow_query_log to false also truncates the mysql.slow_log table. Default
     </dt>
     <dd>{{% md %}}Sort buffer size in bytes for ORDER BY optimization. 
 Default is 262144 (256K)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlmode_go">
 <a href="#sqlmode_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Mode</a>
@@ -4034,8 +3698,7 @@ Default is 262144 (256K)
     <dd>{{% md %}}Global SQL mode. Set to empty to use MySQL server defaults. 
 When creating a new service and not setting this field Aiven default SQL mode (strict,
 SQL standard compliant) will be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlrequireprimarykey_go">
 <a href="#sqlrequireprimarykey_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Require<wbr>Primary<wbr>Key</a>
@@ -4047,8 +3710,7 @@ SQL standard compliant) will be assigned.
 tables or old tables modified with ALTER TABLE and fail if missing. It is recommended
 to always have primary keys because various functionality may break if any large table
 is missing them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmptablesize_go">
 <a href="#tmptablesize_go" style="color: inherit; text-decoration: inherit;">Tmp<wbr>Table<wbr>Size</a>
@@ -4058,8 +3720,7 @@ is missing them.
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. Also set 
 max_heap_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittimeout_go">
 <a href="#waittimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Timeout</a>
@@ -4069,13 +3730,11 @@ max_heap_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for activity on 
 a noninteractive connection before closing it.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_nodejs">
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
@@ -4085,8 +3744,7 @@ a noninteractive connection before closing it.
     </dt>
     <dd>{{% md %}}The number of seconds that the mysqld server waits for a 
 connect packet before responding with Bad handshake
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttimezone_nodejs">
 <a href="#defaulttimezone_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Time<wbr>Zone</a>
@@ -4096,8 +3754,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}Default server time zone as an offset from UTC 
 (from -12:00 to +12:00), a time zone name, or 'SYSTEM' to use the MySQL server default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupconcatmaxlen_nodejs">
 <a href="#groupconcatmaxlen_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Concat<wbr>Max<wbr>Len</a>
@@ -4107,8 +3764,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}The maximum permitted result length in bytes for 
 the GROUP_CONCAT() function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationschemastatsexpiry_nodejs">
 <a href="#informationschemastatsexpiry_nodejs" style="color: inherit; text-decoration: inherit;">information<wbr>Schema<wbr>Stats<wbr>Expiry</a>
@@ -4118,8 +3774,7 @@ the GROUP_CONCAT() function.
     </dt>
     <dd>{{% md %}}The time, in seconds, before cached 
 statistics expire
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbftmintokensize_nodejs">
 <a href="#innodbftmintokensize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Ft<wbr>Min<wbr>Token<wbr>Size</a>
@@ -4129,8 +3784,7 @@ statistics expire
     </dt>
     <dd>{{% md %}}Minimum length of words that are stored in 
 an InnoDB FULLTEXT index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbftserverstopwordtable_nodejs">
 <a href="#innodbftserverstopwordtable_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Ft<wbr>Server<wbr>Stopword<wbr>Table</a>
@@ -4140,8 +3794,7 @@ an InnoDB FULLTEXT index.
     </dt>
     <dd>{{% md %}}This option is used to specify your 
 own InnoDB FULLTEXT index stopword list for all InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodblockwaittimeout_nodejs">
 <a href="#innodblockwaittimeout_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Lock<wbr>Wait<wbr>Timeout</a>
@@ -4151,8 +3804,7 @@ own InnoDB FULLTEXT index stopword list for all InnoDB tables.
     </dt>
     <dd>{{% md %}}The length of time in seconds an InnoDB 
 transaction waits for a row lock before giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodblogbuffersize_nodejs">
 <a href="#innodblogbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Log<wbr>Buffer<wbr>Size</a>
@@ -4162,8 +3814,7 @@ transaction waits for a row lock before giving up.
     </dt>
     <dd>{{% md %}}The size in bytes of the buffer that InnoDB 
 uses to write to the log files on disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbonlinealterlogmaxsize_nodejs">
 <a href="#innodbonlinealterlogmaxsize_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Online<wbr>Alter<wbr>Log<wbr>Max<wbr>Size</a>
@@ -4173,8 +3824,7 @@ uses to write to the log files on disk.
     </dt>
     <dd>{{% md %}}The upper limit in bytes on the 
 size of the temporary log files used during online DDL operations for InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbprintalldeadlocks_nodejs">
 <a href="#innodbprintalldeadlocks_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Print<wbr>All<wbr>Deadlocks</a>
@@ -4184,8 +3834,7 @@ size of the temporary log files used during online DDL operations for InnoDB tab
     </dt>
     <dd>{{% md %}}When enabled, information about all 
 deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodbrollbackontimeout_nodejs">
 <a href="#innodbrollbackontimeout_nodejs" style="color: inherit; text-decoration: inherit;">innodb<wbr>Rollback<wbr>On<wbr>Timeout</a>
@@ -4195,8 +3844,7 @@ deadlocks in InnoDB user transactions is recorded in the error log. Disabled by 
     </dt>
     <dd>{{% md %}}When enabled a transaction timeout 
 causes InnoDB to abort and roll back the entire transaction.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interactivetimeout_nodejs">
 <a href="#interactivetimeout_nodejs" style="color: inherit; text-decoration: inherit;">interactive<wbr>Timeout</a>
@@ -4206,8 +3854,7 @@ causes InnoDB to abort and roll back the entire transaction.
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longquerytime_nodejs">
 <a href="#longquerytime_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Query<wbr>Time</a>
@@ -4217,8 +3864,7 @@ activity on an interactive connection before closing it.
     </dt>
     <dd>{{% md %}}The slow_query_logs work as SQL statements that take 
 more than long_query_time seconds to execute. Default is 10s
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxallowedpacket_nodejs">
 <a href="#maxallowedpacket_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Packet</a>
@@ -4228,8 +3874,7 @@ more than long_query_time seconds to execute. Default is 10s
     </dt>
     <dd>{{% md %}}Size of the largest message in bytes that can 
 be received by the server. Default is 67108864 (64M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxheaptablesize_nodejs">
 <a href="#maxheaptablesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Heap<wbr>Table<wbr>Size</a>
@@ -4239,8 +3884,7 @@ be received by the server. Default is 67108864 (64M)
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. 
 Also set tmp_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netreadtimeout_nodejs">
 <a href="#netreadtimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Read<wbr>Timeout</a>
@@ -4250,8 +3894,7 @@ Also set tmp_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds to wait for more data from 
 a connection before aborting the read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="netwritetimeout_nodejs">
 <a href="#netwritetimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Write<wbr>Timeout</a>
@@ -4261,8 +3904,7 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slowquerylog_nodejs">
 <a href="#slowquerylog_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Query<wbr>Log</a>
@@ -4272,8 +3914,7 @@ written to a connection before aborting the write.
     </dt>
     <dd>{{% md %}}Slow query log enables capturing of slow queries. 
 Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortbuffersize_nodejs">
 <a href="#sortbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Buffer<wbr>Size</a>
@@ -4283,8 +3924,7 @@ Setting slow_query_log to false also truncates the mysql.slow_log table. Default
     </dt>
     <dd>{{% md %}}Sort buffer size in bytes for ORDER BY optimization. 
 Default is 262144 (256K)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlmode_nodejs">
 <a href="#sqlmode_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Mode</a>
@@ -4295,8 +3935,7 @@ Default is 262144 (256K)
     <dd>{{% md %}}Global SQL mode. Set to empty to use MySQL server defaults. 
 When creating a new service and not setting this field Aiven default SQL mode (strict,
 SQL standard compliant) will be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlrequireprimarykey_nodejs">
 <a href="#sqlrequireprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Require<wbr>Primary<wbr>Key</a>
@@ -4308,8 +3947,7 @@ SQL standard compliant) will be assigned.
 tables or old tables modified with ALTER TABLE and fail if missing. It is recommended
 to always have primary keys because various functionality may break if any large table
 is missing them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmptablesize_nodejs">
 <a href="#tmptablesize_nodejs" style="color: inherit; text-decoration: inherit;">tmp<wbr>Table<wbr>Size</a>
@@ -4319,8 +3957,7 @@ is missing them.
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. Also set 
 max_heap_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waittimeout_nodejs">
 <a href="#waittimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Timeout</a>
@@ -4330,13 +3967,11 @@ max_heap_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for activity on 
 a noninteractive connection before closing it.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connect_timeout_python">
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
@@ -4346,8 +3981,7 @@ a noninteractive connection before closing it.
     </dt>
     <dd>{{% md %}}The number of seconds that the mysqld server waits for a 
 connect packet before responding with Bad handshake
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_time_zone_python">
 <a href="#default_time_zone_python" style="color: inherit; text-decoration: inherit;">default_<wbr>time_<wbr>zone</a>
@@ -4357,8 +3991,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}Default server time zone as an offset from UTC 
 (from -12:00 to +12:00), a time zone name, or 'SYSTEM' to use the MySQL server default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_concat_max_len_python">
 <a href="#group_concat_max_len_python" style="color: inherit; text-decoration: inherit;">group_<wbr>concat_<wbr>max_<wbr>len</a>
@@ -4368,8 +4001,7 @@ connect packet before responding with Bad handshake
     </dt>
     <dd>{{% md %}}The maximum permitted result length in bytes for 
 the GROUP_CONCAT() function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="information_schema_stats_expiry_python">
 <a href="#information_schema_stats_expiry_python" style="color: inherit; text-decoration: inherit;">information_<wbr>schema_<wbr>stats_<wbr>expiry</a>
@@ -4379,8 +4011,7 @@ the GROUP_CONCAT() function.
     </dt>
     <dd>{{% md %}}The time, in seconds, before cached 
 statistics expire
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_ft_min_token_size_python">
 <a href="#innodb_ft_min_token_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>ft_<wbr>min_<wbr>token_<wbr>size</a>
@@ -4390,8 +4021,7 @@ statistics expire
     </dt>
     <dd>{{% md %}}Minimum length of words that are stored in 
 an InnoDB FULLTEXT index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_ft_server_stopword_table_python">
 <a href="#innodb_ft_server_stopword_table_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>ft_<wbr>server_<wbr>stopword_<wbr>table</a>
@@ -4401,8 +4031,7 @@ an InnoDB FULLTEXT index.
     </dt>
     <dd>{{% md %}}This option is used to specify your 
 own InnoDB FULLTEXT index stopword list for all InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_lock_wait_timeout_python">
 <a href="#innodb_lock_wait_timeout_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>lock_<wbr>wait_<wbr>timeout</a>
@@ -4412,8 +4041,7 @@ own InnoDB FULLTEXT index stopword list for all InnoDB tables.
     </dt>
     <dd>{{% md %}}The length of time in seconds an InnoDB 
 transaction waits for a row lock before giving up.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_log_buffer_size_python">
 <a href="#innodb_log_buffer_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>log_<wbr>buffer_<wbr>size</a>
@@ -4423,8 +4051,7 @@ transaction waits for a row lock before giving up.
     </dt>
     <dd>{{% md %}}The size in bytes of the buffer that InnoDB 
 uses to write to the log files on disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_online_alter_log_max_size_python">
 <a href="#innodb_online_alter_log_max_size_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>online_<wbr>alter_<wbr>log_<wbr>max_<wbr>size</a>
@@ -4434,8 +4061,7 @@ uses to write to the log files on disk.
     </dt>
     <dd>{{% md %}}The upper limit in bytes on the 
 size of the temporary log files used during online DDL operations for InnoDB tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_print_all_deadlocks_python">
 <a href="#innodb_print_all_deadlocks_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>print_<wbr>all_<wbr>deadlocks</a>
@@ -4445,8 +4071,7 @@ size of the temporary log files used during online DDL operations for InnoDB tab
     </dt>
     <dd>{{% md %}}When enabled, information about all 
 deadlocks in InnoDB user transactions is recorded in the error log. Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="innodb_rollback_on_timeout_python">
 <a href="#innodb_rollback_on_timeout_python" style="color: inherit; text-decoration: inherit;">innodb_<wbr>rollback_<wbr>on_<wbr>timeout</a>
@@ -4456,8 +4081,7 @@ deadlocks in InnoDB user transactions is recorded in the error log. Disabled by 
     </dt>
     <dd>{{% md %}}When enabled a transaction timeout 
 causes InnoDB to abort and roll back the entire transaction.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interactive_timeout_python">
 <a href="#interactive_timeout_python" style="color: inherit; text-decoration: inherit;">interactive_<wbr>timeout</a>
@@ -4467,8 +4091,7 @@ causes InnoDB to abort and roll back the entire transaction.
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for 
 activity on an interactive connection before closing it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="long_query_time_python">
 <a href="#long_query_time_python" style="color: inherit; text-decoration: inherit;">long_<wbr>query_<wbr>time</a>
@@ -4478,8 +4101,7 @@ activity on an interactive connection before closing it.
     </dt>
     <dd>{{% md %}}The slow_query_logs work as SQL statements that take 
 more than long_query_time seconds to execute. Default is 10s
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_allowed_packet_python">
 <a href="#max_allowed_packet_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>packet</a>
@@ -4489,8 +4111,7 @@ more than long_query_time seconds to execute. Default is 10s
     </dt>
     <dd>{{% md %}}Size of the largest message in bytes that can 
 be received by the server. Default is 67108864 (64M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_heap_table_size_python">
 <a href="#max_heap_table_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>heap_<wbr>table_<wbr>size</a>
@@ -4500,8 +4121,7 @@ be received by the server. Default is 67108864 (64M)
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. 
 Also set tmp_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_read_timeout_python">
 <a href="#net_read_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>read_<wbr>timeout</a>
@@ -4511,8 +4131,7 @@ Also set tmp_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds to wait for more data from 
 a connection before aborting the read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_write_timeout_python">
 <a href="#net_write_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>write_<wbr>timeout</a>
@@ -4522,8 +4141,7 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slow_query_log_python">
 <a href="#slow_query_log_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>query_<wbr>log</a>
@@ -4533,8 +4151,7 @@ written to a connection before aborting the write.
     </dt>
     <dd>{{% md %}}Slow query log enables capturing of slow queries. 
 Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_buffer_size_python">
 <a href="#sort_buffer_size_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>buffer_<wbr>size</a>
@@ -4544,8 +4161,7 @@ Setting slow_query_log to false also truncates the mysql.slow_log table. Default
     </dt>
     <dd>{{% md %}}Sort buffer size in bytes for ORDER BY optimization. 
 Default is 262144 (256K)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_mode_python">
 <a href="#sql_mode_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>mode</a>
@@ -4556,8 +4172,7 @@ Default is 262144 (256K)
     <dd>{{% md %}}Global SQL mode. Set to empty to use MySQL server defaults. 
 When creating a new service and not setting this field Aiven default SQL mode (strict,
 SQL standard compliant) will be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_require_primary_key_python">
 <a href="#sql_require_primary_key_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>require_<wbr>primary_<wbr>key</a>
@@ -4569,8 +4184,7 @@ SQL standard compliant) will be assigned.
 tables or old tables modified with ALTER TABLE and fail if missing. It is recommended
 to always have primary keys because various functionality may break if any large table
 is missing them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmp_table_size_python">
 <a href="#tmp_table_size_python" style="color: inherit; text-decoration: inherit;">tmp_<wbr>table_<wbr>size</a>
@@ -4580,8 +4194,7 @@ is missing them.
     </dt>
     <dd>{{% md %}}Limits the size of internal in-memory tables. Also set 
 max_heap_table_size. Default is 16777216 (16M)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_timeout_python">
 <a href="#wait_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>timeout</a>
@@ -4591,15 +4204,13 @@ max_heap_table_size. Default is 16777216 (16M)
     </dt>
     <dd>{{% md %}}The number of seconds the server waits for activity on 
 a noninteractive connection before closing it.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlmysqluserconfigprivateaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -4609,8 +4220,7 @@ a noninteractive connection before closing it.
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4620,13 +4230,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -4636,8 +4244,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4647,13 +4254,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -4663,8 +4268,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4674,13 +4278,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -4690,8 +4292,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4701,15 +4302,13 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlmysqluserconfigprivatelinkaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -4719,13 +4318,11 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -4735,13 +4332,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -4751,13 +4346,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -4767,15 +4360,13 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlmysqluserconfigpublicaccess">My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -4785,8 +4376,7 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4796,13 +4386,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -4812,8 +4400,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4823,13 +4410,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -4839,8 +4424,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4850,13 +4434,11 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -4866,8 +4448,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to mysql from the public internet for service 
 nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4877,15 +4458,13 @@ nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mysqlserviceintegration">My<wbr>Sql<wbr>Service<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -4893,8 +4472,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -4902,13 +4480,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -4916,8 +4492,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -4925,13 +4500,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -4939,8 +4512,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -4948,13 +4520,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -4962,8 +4532,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -4971,8 +4540,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

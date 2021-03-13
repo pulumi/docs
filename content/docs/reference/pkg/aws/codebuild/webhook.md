@@ -455,8 +455,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -465,8 +464,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branchfilter_csharp">
 <a href="#branchfilter_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Filter</a>
@@ -475,8 +473,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtergroups_csharp">
 <a href="#filtergroups_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
@@ -485,13 +482,11 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -500,8 +495,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branchfilter_go">
 <a href="#branchfilter_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Filter</a>
@@ -510,8 +504,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtergroups_go">
 <a href="#filtergroups_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
@@ -520,13 +513,11 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -535,8 +526,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branchfilter_nodejs">
 <a href="#branchfilter_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Filter</a>
@@ -545,8 +535,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtergroups_nodejs">
 <a href="#filtergroups_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Groups</a>
@@ -555,13 +544,11 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -570,8 +557,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_filter_python">
 <a href="#branch_filter_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>filter</a>
@@ -580,8 +566,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_groups_python">
 <a href="#filter_groups_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>groups</a>
@@ -590,8 +575,7 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#webhookfiltergroup">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -602,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -611,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="payloadurl_csharp">
 <a href="#payloadurl_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Url</a>
@@ -621,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -631,8 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -641,13 +621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -655,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="payloadurl_go">
 <a href="#payloadurl_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Url</a>
@@ -665,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -675,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -685,13 +660,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -699,8 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="payloadurl_nodejs">
 <a href="#payloadurl_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Url</a>
@@ -709,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -719,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -729,13 +699,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -743,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="payload_url_python">
 <a href="#payload_url_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>url</a>
@@ -753,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -763,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -773,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -901,8 +865,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branchfilter_csharp">
 <a href="#state_branchfilter_csharp" style="color: inherit; text-decoration: inherit;">Branch<wbr>Filter</a>
@@ -911,8 +874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtergroups_csharp">
 <a href="#state_filtergroups_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
@@ -921,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroup">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadurl_csharp">
 <a href="#state_payloadurl_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Url</a>
@@ -931,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_csharp">
 <a href="#state_projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -941,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_csharp">
 <a href="#state_secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -951,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -961,13 +919,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branchfilter_go">
 <a href="#state_branchfilter_go" style="color: inherit; text-decoration: inherit;">Branch<wbr>Filter</a>
@@ -976,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtergroups_go">
 <a href="#state_filtergroups_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Groups</a>
@@ -986,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroup">[]Webhook<wbr>Filter<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadurl_go">
 <a href="#state_payloadurl_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Url</a>
@@ -996,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_go">
 <a href="#state_projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1006,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_go">
 <a href="#state_secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1016,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1026,13 +977,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branchfilter_nodejs">
 <a href="#state_branchfilter_nodejs" style="color: inherit; text-decoration: inherit;">branch<wbr>Filter</a>
@@ -1041,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filtergroups_nodejs">
 <a href="#state_filtergroups_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Groups</a>
@@ -1051,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroup">Webhook<wbr>Filter<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadurl_nodejs">
 <a href="#state_payloadurl_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Url</a>
@@ -1061,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_nodejs">
 <a href="#state_projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -1071,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_nodejs">
 <a href="#state_secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1081,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1091,13 +1035,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branch_filter_python">
 <a href="#state_branch_filter_python" style="color: inherit; text-decoration: inherit;">branch_<wbr>filter</a>
@@ -1106,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_groups_python">
 <a href="#state_filter_groups_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>groups</a>
@@ -1116,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroup">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the webhook's trigger. Filter group blocks are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_url_python">
 <a href="#state_payload_url_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>url</a>
@@ -1126,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CodeBuild endpoint where webhook events are sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_name_python">
 <a href="#state_project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -1136,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the build project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_python">
 <a href="#state_secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1146,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1156,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to the webhook.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1172,8 +1108,7 @@ The following state arguments are supported:
 <h4 id="webhookfiltergroup">Webhook<wbr>Filter<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1182,13 +1117,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroupfilter">List&lt;Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1197,13 +1130,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroupfilter">[]Webhook<wbr>Filter<wbr>Group<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1212,13 +1143,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroupfilter">Webhook<wbr>Filter<wbr>Group<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1227,15 +1156,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webhookfiltergroupfilter">Sequence[Webhook<wbr>Filter<wbr>Group<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A webhook filter for the group. Filter blocks are documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webhookfiltergroupfilter">Webhook<wbr>Filter<wbr>Group<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -1244,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub & GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1254,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludematchedpattern_csharp">
 <a href="#excludematchedpattern_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Matched<wbr>Pattern</a>
@@ -1264,13 +1189,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -1279,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub & GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1289,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludematchedpattern_go">
 <a href="#excludematchedpattern_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Matched<wbr>Pattern</a>
@@ -1299,13 +1220,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -1314,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub & GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1324,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludematchedpattern_nodejs">
 <a href="#excludematchedpattern_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Matched<wbr>Pattern</a>
@@ -1334,13 +1251,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -1349,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub & GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1359,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_matched_pattern_python">
 <a href="#exclude_matched_pattern_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>matched_<wbr>pattern</a>
@@ -1369,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

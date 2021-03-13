@@ -865,8 +865,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -875,8 +874,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editable_csharp">
 <a href="#editable_csharp" style="color: inherit; text-decoration: inherit;">Editable</a>
@@ -885,8 +883,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -895,8 +892,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gridcolumncount_csharp">
 <a href="#gridcolumncount_csharp" style="color: inherit; text-decoration: inherit;">Grid<wbr>Column<wbr>Count</a>
@@ -905,8 +901,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_csharp">
 <a href="#icon_csharp" style="color: inherit; text-decoration: inherit;">Icon</a>
@@ -915,8 +910,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -925,8 +919,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgets_csharp">
 <a href="#widgets_csharp" style="color: inherit; text-decoration: inherit;">Widgets</a>
@@ -935,13 +928,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardwidget">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -950,8 +941,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editable_go">
 <a href="#editable_go" style="color: inherit; text-decoration: inherit;">Editable</a>
@@ -960,8 +950,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -970,8 +959,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gridcolumncount_go">
 <a href="#gridcolumncount_go" style="color: inherit; text-decoration: inherit;">Grid<wbr>Column<wbr>Count</a>
@@ -980,8 +968,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_go">
 <a href="#icon_go" style="color: inherit; text-decoration: inherit;">Icon</a>
@@ -990,8 +977,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -1000,8 +986,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgets_go">
 <a href="#widgets_go" style="color: inherit; text-decoration: inherit;">Widgets</a>
@@ -1010,13 +995,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardwidget">[]Dashboard<wbr>Widget</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1025,8 +1008,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editable_nodejs">
 <a href="#editable_nodejs" style="color: inherit; text-decoration: inherit;">editable</a>
@@ -1035,8 +1017,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1045,8 +1026,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gridcolumncount_nodejs">
 <a href="#gridcolumncount_nodejs" style="color: inherit; text-decoration: inherit;">grid<wbr>Column<wbr>Count</a>
@@ -1055,8 +1035,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_nodejs">
 <a href="#icon_nodejs" style="color: inherit; text-decoration: inherit;">icon</a>
@@ -1065,8 +1044,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1075,8 +1053,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgets_nodejs">
 <a href="#widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
@@ -1085,13 +1062,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardwidget">Dashboard<wbr>Widget[]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1100,8 +1075,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="editable_python">
 <a href="#editable_python" style="color: inherit; text-decoration: inherit;">editable</a>
@@ -1110,8 +1084,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1120,8 +1093,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grid_column_count_python">
 <a href="#grid_column_count_python" style="color: inherit; text-decoration: inherit;">grid_<wbr>column_<wbr>count</a>
@@ -1130,8 +1102,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_python">
 <a href="#icon_python" style="color: inherit; text-decoration: inherit;">icon</a>
@@ -1140,8 +1111,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1150,8 +1120,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgets_python">
 <a href="#widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
@@ -1160,8 +1129,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardwidget">Sequence[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1172,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dashboardurl_csharp">
 <a href="#dashboardurl_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Url</a>
@@ -1182,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1191,13 +1157,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dashboardurl_go">
 <a href="#dashboardurl_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Url</a>
@@ -1206,8 +1170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1215,13 +1178,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dashboardurl_nodejs">
 <a href="#dashboardurl_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Url</a>
@@ -1230,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1239,13 +1199,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="dashboard_url_python">
 <a href="#dashboard_url_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>url</a>
@@ -1254,8 +1212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1263,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1391,8 +1347,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dashboardurl_csharp">
 <a href="#state_dashboardurl_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Url</a>
@@ -1401,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editable_csharp">
 <a href="#state_editable_csharp" style="color: inherit; text-decoration: inherit;">Editable</a>
@@ -1411,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1421,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gridcolumncount_csharp">
 <a href="#state_gridcolumncount_csharp" style="color: inherit; text-decoration: inherit;">Grid<wbr>Column<wbr>Count</a>
@@ -1431,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icon_csharp">
 <a href="#state_icon_csharp" style="color: inherit; text-decoration: inherit;">Icon</a>
@@ -1441,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_csharp">
 <a href="#state_title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1451,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_csharp">
 <a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -1461,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_widgets_csharp">
 <a href="#state_widgets_csharp" style="color: inherit; text-decoration: inherit;">Widgets</a>
@@ -1471,13 +1419,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidget">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dashboardurl_go">
 <a href="#state_dashboardurl_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Url</a>
@@ -1486,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editable_go">
 <a href="#state_editable_go" style="color: inherit; text-decoration: inherit;">Editable</a>
@@ -1496,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1506,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gridcolumncount_go">
 <a href="#state_gridcolumncount_go" style="color: inherit; text-decoration: inherit;">Grid<wbr>Column<wbr>Count</a>
@@ -1516,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icon_go">
 <a href="#state_icon_go" style="color: inherit; text-decoration: inherit;">Icon</a>
@@ -1526,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_go">
 <a href="#state_title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1536,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_go">
 <a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -1546,8 +1486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_widgets_go">
 <a href="#state_widgets_go" style="color: inherit; text-decoration: inherit;">Widgets</a>
@@ -1556,13 +1495,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidget">[]Dashboard<wbr>Widget</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dashboardurl_nodejs">
 <a href="#state_dashboardurl_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Url</a>
@@ -1571,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editable_nodejs">
 <a href="#state_editable_nodejs" style="color: inherit; text-decoration: inherit;">editable</a>
@@ -1581,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1591,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gridcolumncount_nodejs">
 <a href="#state_gridcolumncount_nodejs" style="color: inherit; text-decoration: inherit;">grid<wbr>Column<wbr>Count</a>
@@ -1601,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icon_nodejs">
 <a href="#state_icon_nodejs" style="color: inherit; text-decoration: inherit;">icon</a>
@@ -1611,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_nodejs">
 <a href="#state_title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1621,8 +1553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_nodejs">
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1631,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_widgets_nodejs">
 <a href="#state_widgets_nodejs" style="color: inherit; text-decoration: inherit;">widgets</a>
@@ -1641,13 +1571,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidget">Dashboard<wbr>Widget[]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_url_python">
 <a href="#state_dashboard_url_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>url</a>
@@ -1656,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for viewing the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_editable_python">
 <a href="#state_editable_python" style="color: inherit; text-decoration: inherit;">editable</a>
@@ -1666,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines who can edit the dashboard in an account. Valid values are `all`,  `editable_by_all`, `editable_by_owner`, or `read_only`.  Defaults to `editable_by_all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1676,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a dashboard filter.  Exactly one nested `filter` block is allowed. See Nested filter block below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grid_column_count_python">
 <a href="#state_grid_column_count_python" style="color: inherit; text-decoration: inherit;">grid_<wbr>column_<wbr>count</a>
@@ -1686,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of columns to use when organizing and displaying widgets. New Relic One supports a 3 column grid and a 12 column grid. New Relic Insights supports a 3 column grid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_icon_python">
 <a href="#state_icon_python" style="color: inherit; text-decoration: inherit;">icon</a>
@@ -1696,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The icon for the dashboard.  Valid values are `adjust`, `archive`, `bar-chart`, `bell`, `bolt`, `bug`, `bullhorn`, `bullseye`, `clock-o`, `cloud`, `cog`, `comments-o`, `crosshairs`, `dashboard`, `envelope`, `fire`, `flag`, `flask`, `globe`, `heart`, `leaf`, `legal`, `life-ring`, `line-chart`, `magic`, `mobile`, `money`, `none`, `paper-plane`, `pie-chart`, `puzzle-piece`, `road`, `rocket`, `shopping-cart`, `sitemap`, `sliders`, `tablet`, `thumbs-down`, `thumbs-up`, `trophy`, `usd`, `user`, and `users`.  Defaults to `bar-chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_python">
 <a href="#state_title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1706,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_python">
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1716,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines who can see the dashboard in an account. Valid values are `all` or `owner`.  Defaults to `all`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_widgets_python">
 <a href="#state_widgets_python" style="color: inherit; text-decoration: inherit;">widgets</a>
@@ -1726,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidget">Sequence[Dashboard<wbr>Widget<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A nested block that describes a visualization.  Up to 300 `widget` blocks are allowed in a dashboard definition. See Nested widget blocks below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1742,8 +1662,7 @@ The following state arguments are supported:
 <h4 id="dashboardfilter">Dashboard<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtypes_csharp">
 <a href="#eventtypes_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
@@ -1752,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1762,13 +1680,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtypes_go">
 <a href="#eventtypes_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
@@ -1777,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1787,13 +1702,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtypes_nodejs">
 <a href="#eventtypes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
@@ -1802,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1812,13 +1724,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_types_python">
 <a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
@@ -1827,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of event types to enable filtering for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1837,15 +1746,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) A list of attributes belonging to the specified event types to enable filtering for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardwidget">Dashboard<wbr>Widget</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_csharp">
 <a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1854,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_csharp">
 <a href="#row_csharp" style="color: inherit; text-decoration: inherit;">Row</a>
@@ -1864,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1874,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visualization_csharp">
 <a href="#visualization_csharp" style="color: inherit; text-decoration: inherit;">Visualization</a>
@@ -1884,8 +1788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1894,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparewiths_csharp">
 <a href="#comparewiths_csharp" style="color: inherit; text-decoration: inherit;">Compare<wbr>Withs</a>
@@ -1903,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewith">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drilldowndashboardid_csharp">
 <a href="#drilldowndashboardid_csharp" style="color: inherit; text-decoration: inherit;">Drilldown<wbr>Dashboard<wbr>Id</a>
@@ -1914,8 +1815,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
 * `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1924,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1934,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityids_csharp">
 <a href="#entityids_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Ids</a>
@@ -1944,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facet_csharp">
 <a href="#facet_csharp" style="color: inherit; text-decoration: inherit;">Facet</a>
@@ -1954,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_csharp">
 <a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -1964,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -1974,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_csharp">
 <a href="#metrics_csharp" style="color: inherit; text-decoration: inherit;">Metrics</a>
@@ -1984,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidgetmetric">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Metric<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1994,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Description of the widget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nrql_csharp">
 <a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
@@ -2005,8 +1897,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
 * `markdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderby_csharp">
 <a href="#orderby_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>By</a>
@@ -2016,8 +1907,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
 * `application_breakdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawmetricname_csharp">
 <a href="#rawmetricname_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Metric<wbr>Name</a>
@@ -2025,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2036,8 +1925,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
 * `metric_line_chart`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdred_csharp">
 <a href="#thresholdred_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Red</a>
@@ -2046,8 +1934,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdyellow_csharp">
 <a href="#thresholdyellow_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Yellow</a>
@@ -2057,8 +1944,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
 * `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgetid_csharp">
 <a href="#widgetid_csharp" style="color: inherit; text-decoration: inherit;">Widget<wbr>Id</a>
@@ -2066,8 +1952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_csharp">
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2076,13 +1961,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_go">
 <a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -2091,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_go">
 <a href="#row_go" style="color: inherit; text-decoration: inherit;">Row</a>
@@ -2101,8 +1983,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -2111,8 +1992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visualization_go">
 <a href="#visualization_go" style="color: inherit; text-decoration: inherit;">Visualization</a>
@@ -2121,8 +2001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2131,8 +2010,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparewiths_go">
 <a href="#comparewiths_go" style="color: inherit; text-decoration: inherit;">Compare<wbr>Withs</a>
@@ -2140,8 +2018,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewith">[]Dashboard<wbr>Widget<wbr>Compare<wbr>With</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drilldowndashboardid_go">
 <a href="#drilldowndashboardid_go" style="color: inherit; text-decoration: inherit;">Drilldown<wbr>Dashboard<wbr>Id</a>
@@ -2151,8 +2028,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
 * `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2161,8 +2037,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2171,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityids_go">
 <a href="#entityids_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Ids</a>
@@ -2181,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facet_go">
 <a href="#facet_go" style="color: inherit; text-decoration: inherit;">Facet</a>
@@ -2191,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_go">
 <a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -2201,8 +2073,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -2211,8 +2082,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_go">
 <a href="#metrics_go" style="color: inherit; text-decoration: inherit;">Metrics</a>
@@ -2221,8 +2091,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidgetmetric">[]Dashboard<wbr>Widget<wbr>Metric</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -2231,8 +2100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Description of the widget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nrql_go">
 <a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
@@ -2242,8 +2110,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
 * `markdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderby_go">
 <a href="#orderby_go" style="color: inherit; text-decoration: inherit;">Order<wbr>By</a>
@@ -2253,8 +2120,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
 * `application_breakdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawmetricname_go">
 <a href="#rawmetricname_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Metric<wbr>Name</a>
@@ -2262,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2273,8 +2138,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
 * `metric_line_chart`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdred_go">
 <a href="#thresholdred_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Red</a>
@@ -2283,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdyellow_go">
 <a href="#thresholdyellow_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Yellow</a>
@@ -2294,8 +2157,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
 * `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgetid_go">
 <a href="#widgetid_go" style="color: inherit; text-decoration: inherit;">Widget<wbr>Id</a>
@@ -2303,8 +2165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_go">
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2313,13 +2174,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_nodejs">
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2328,8 +2187,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_nodejs">
 <a href="#row_nodejs" style="color: inherit; text-decoration: inherit;">row</a>
@@ -2338,8 +2196,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2348,8 +2205,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visualization_nodejs">
 <a href="#visualization_nodejs" style="color: inherit; text-decoration: inherit;">visualization</a>
@@ -2358,8 +2214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -2368,8 +2223,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparewiths_nodejs">
 <a href="#comparewiths_nodejs" style="color: inherit; text-decoration: inherit;">compare<wbr>Withs</a>
@@ -2377,8 +2231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewith">Dashboard<wbr>Widget<wbr>Compare<wbr>With[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drilldowndashboardid_nodejs">
 <a href="#drilldowndashboardid_nodejs" style="color: inherit; text-decoration: inherit;">drilldown<wbr>Dashboard<wbr>Id</a>
@@ -2388,8 +2241,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
 * `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2398,8 +2250,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2408,8 +2259,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entityids_nodejs">
 <a href="#entityids_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Ids</a>
@@ -2418,8 +2268,7 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facet_nodejs">
 <a href="#facet_nodejs" style="color: inherit; text-decoration: inherit;">facet</a>
@@ -2428,8 +2277,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_nodejs">
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2438,8 +2286,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -2448,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_nodejs">
 <a href="#metrics_nodejs" style="color: inherit; text-decoration: inherit;">metrics</a>
@@ -2458,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidgetmetric">Dashboard<wbr>Widget<wbr>Metric[]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -2468,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Optional) Description of the widget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nrql_nodejs">
 <a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
@@ -2479,8 +2323,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
 * `markdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderby_nodejs">
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
@@ -2490,8 +2333,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
 * `application_breakdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawmetricname_nodejs">
 <a href="#rawmetricname_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Metric<wbr>Name</a>
@@ -2499,8 +2341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2510,8 +2351,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
 * `metric_line_chart`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdred_nodejs">
 <a href="#thresholdred_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Red</a>
@@ -2520,8 +2360,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdyellow_nodejs">
 <a href="#thresholdyellow_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Yellow</a>
@@ -2531,8 +2370,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
 * `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widgetid_nodejs">
 <a href="#widgetid_nodejs" style="color: inherit; text-decoration: inherit;">widget<wbr>Id</a>
@@ -2540,8 +2378,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_nodejs">
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2550,13 +2387,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_python">
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2565,8 +2400,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Column position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_python">
 <a href="#row_python" style="color: inherit; text-decoration: inherit;">row</a>
@@ -2575,8 +2409,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Row position of widget from top left, starting at `1`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2585,8 +2418,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visualization_python">
 <a href="#visualization_python" style="color: inherit; text-decoration: inherit;">visualization</a>
@@ -2595,8 +2427,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) How the widget visualizes data.  Valid values are `billboard`, `gauge`, `billboard_comparison`, `facet_bar_chart`, `faceted_line_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `heatmap`, `attribute_sheet`, `single_event`, `histogram`, `funnel`, `raw_json`, `event_feed`, `event_table`, `uniques_list`, `line_chart`, `comparison_line_chart`, `markdown`, and `metric_line_chart`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -2605,8 +2436,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The account ID to use when querying data. If `account_id` is omitted, the widget will use the account ID associated with the API key used in your provider configuration. You can also use `account_id` to configure cross-account widgets or simply to be explicit about which account the widget will be pulling data from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compare_withs_python">
 <a href="#compare_withs_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>withs</a>
@@ -2614,8 +2444,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewith">Sequence[Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drilldown_dashboard_id_python">
 <a href="#drilldown_dashboard_id_python" style="color: inherit; text-decoration: inherit;">drilldown_<wbr>dashboard_<wbr>id</a>
@@ -2625,8 +2454,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) The ID of a dashboard to link to from the widget's facets.
 * `attribute_sheet`, `comparison_line_chart`, `event_feed`, `event_table`, `funnel`, `histogram`, `line_chart`, `raw_json`, `single_event`, or `uniques_list`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2635,8 +2463,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) The duration, in ms, of the time window represented in the chart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2645,8 +2472,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_ids_python">
 <a href="#entity_ids_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>ids</a>
@@ -2655,8 +2481,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}(Required) A collection of entity IDs to display data. These are typically application IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facet_python">
 <a href="#facet_python" style="color: inherit; text-decoration: inherit;">facet</a>
@@ -2665,8 +2490,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Can be set to "host" to facet the metric data by host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_python">
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2675,8 +2499,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Height of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -2685,8 +2508,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The limit of distinct data series to display.  Requires `order_by` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metrics_python">
 <a href="#metrics_python" style="color: inherit; text-decoration: inherit;">metrics</a>
@@ -2695,8 +2517,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardwidgetmetric">Sequence[Dashboard<wbr>Widget<wbr>Metric<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Required) A nested block that describes a metric.  Nested `metric` blocks support the following arguments:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -2705,8 +2526,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Optional) Description of the widget.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nrql_python">
 <a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
@@ -2716,8 +2536,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) Valid NRQL query string. See [Writing NRQL Queries](https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql) for help.
 * `markdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_by_python">
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
@@ -2727,8 +2546,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Set the order of the results.  Required when using `limit`.
 * `application_breakdown`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_metric_name_python">
 <a href="#raw_metric_name_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>metric_<wbr>name</a>
@@ -2736,8 +2554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2747,8 +2564,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Required) The markdown source to be rendered in the widget.
 * `metric_line_chart`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_red_python">
 <a href="#threshold_red_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>red</a>
@@ -2757,8 +2573,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}(Required) Threshold above which the displayed value will be styled with a red color.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_yellow_python">
 <a href="#threshold_yellow_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>yellow</a>
@@ -2768,8 +2583,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Threshold above which the displayed value will be styled with a yellow color.
 * `facet_bar_chart`, `facet_pie_chart`, `facet_table`, `faceted_area_chart`, `faceted_line_chart`, or `heatmap`:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widget_id_python">
 <a href="#widget_id_python" style="color: inherit; text-decoration: inherit;">widget_<wbr>id</a>
@@ -2777,8 +2591,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_python">
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2787,15 +2600,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) Width of the widget.  Valid values are `1` to `3` inclusive.  Defaults to `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardwidgetcomparewith">Dashboard<wbr>Widget<wbr>Compare<wbr>With</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offsetduration_csharp">
 <a href="#offsetduration_csharp" style="color: inherit; text-decoration: inherit;">Offset<wbr>Duration</a>
@@ -2803,8 +2614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="presentation_csharp">
 <a href="#presentation_csharp" style="color: inherit; text-decoration: inherit;">Presentation</a>
@@ -2812,13 +2622,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewithpresentation">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offsetduration_go">
 <a href="#offsetduration_go" style="color: inherit; text-decoration: inherit;">Offset<wbr>Duration</a>
@@ -2826,8 +2634,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="presentation_go">
 <a href="#presentation_go" style="color: inherit; text-decoration: inherit;">Presentation</a>
@@ -2835,13 +2642,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewithpresentation">Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offsetduration_nodejs">
 <a href="#offsetduration_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Duration</a>
@@ -2849,8 +2654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="presentation_nodejs">
 <a href="#presentation_nodejs" style="color: inherit; text-decoration: inherit;">presentation</a>
@@ -2858,13 +2662,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewithpresentation">Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="offset_duration_python">
 <a href="#offset_duration_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>duration</a>
@@ -2872,8 +2674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="presentation_python">
 <a href="#presentation_python" style="color: inherit; text-decoration: inherit;">presentation</a>
@@ -2881,15 +2682,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardwidgetcomparewithpresentation">Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardwidgetcomparewithpresentation">Dashboard<wbr>Widget<wbr>Compare<wbr>With<wbr>Presentation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -2897,8 +2696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2907,13 +2705,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -2921,8 +2717,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2931,13 +2726,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2945,8 +2738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2955,13 +2747,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2969,8 +2759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2979,15 +2768,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardwidgetmetric">Dashboard<wbr>Widget<wbr>Metric</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2996,8 +2783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -3005,8 +2791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -3014,8 +2799,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3024,13 +2808,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Required) The metric values to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3039,8 +2821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -3048,8 +2829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -3057,8 +2837,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3067,13 +2846,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric values to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3082,8 +2859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -3091,8 +2867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
@@ -3100,8 +2875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3110,13 +2884,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Required) The metric values to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3125,8 +2897,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) The metric name to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -3134,8 +2905,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
@@ -3143,8 +2913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3153,8 +2922,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(Required) The metric values to display.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

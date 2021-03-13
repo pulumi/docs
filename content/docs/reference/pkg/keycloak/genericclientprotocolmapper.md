@@ -342,8 +342,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -352,8 +351,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -362,8 +360,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolmapper_csharp">
 <a href="#protocolmapper_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Mapper</a>
@@ -372,8 +369,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -382,8 +378,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -392,8 +387,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientscopeid_csharp">
 <a href="#clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -402,8 +396,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -412,13 +405,11 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -427,8 +418,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -437,8 +427,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolmapper_go">
 <a href="#protocolmapper_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Mapper</a>
@@ -447,8 +436,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -457,8 +445,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -467,8 +454,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientscopeid_go">
 <a href="#clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -477,8 +463,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -487,13 +472,11 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -502,8 +485,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -512,8 +494,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolmapper_nodejs">
 <a href="#protocolmapper_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Mapper</a>
@@ -522,8 +503,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -532,8 +512,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -542,8 +521,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientscopeid_nodejs">
 <a href="#clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
@@ -552,8 +530,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -562,13 +539,11 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -577,8 +552,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -587,8 +561,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_mapper_python">
 <a href="#protocol_mapper_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>mapper</a>
@@ -597,8 +570,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -607,8 +579,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -617,8 +588,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_scope_id_python">
 <a href="#client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
@@ -627,8 +597,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -637,8 +606,7 @@ The GenericClientProtocolMapper resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -649,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -658,13 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,13 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -686,13 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -700,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -828,8 +788,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -838,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientscopeid_csharp">
 <a href="#state_clientscopeid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -848,8 +806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -858,8 +815,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -868,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -878,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolmapper_csharp">
 <a href="#state_protocolmapper_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Mapper</a>
@@ -888,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -898,13 +851,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -913,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientscopeid_go">
 <a href="#state_clientscopeid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Scope<wbr>Id</a>
@@ -923,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -933,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -943,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -953,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolmapper_go">
 <a href="#state_protocolmapper_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Mapper</a>
@@ -963,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -973,13 +918,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -988,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientscopeid_nodejs">
 <a href="#state_clientscopeid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Scope<wbr>Id</a>
@@ -998,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1008,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1018,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1028,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocolmapper_nodejs">
 <a href="#state_protocolmapper_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Mapper</a>
@@ -1038,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -1048,13 +985,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1063,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client this protocol mapper is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_scope_id_python">
 <a href="#state_client_scope_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>scope_<wbr>id</a>
@@ -1073,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mapper's associated client scope. Cannot be used at the same time as client_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1083,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1093,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this protocol mapper in the GUI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1103,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of client (either `openid-connect` or `saml`). The type must match the type of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_mapper_python">
 <a href="#state_protocol_mapper_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>mapper</a>
@@ -1113,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the protocol mapper. The protocol mapper must be compatible with the specified client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -1123,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this protocol mapper exists within.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

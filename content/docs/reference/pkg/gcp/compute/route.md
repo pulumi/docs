@@ -530,8 +530,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destrange_csharp">
 <a href="#destrange_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
@@ -541,8 +540,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -551,8 +549,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -562,8 +559,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -578,8 +574,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopgateway_csharp">
 <a href="#nexthopgateway_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
@@ -594,8 +589,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopilb_csharp">
 <a href="#nexthopilb_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
@@ -608,8 +602,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopinstance_csharp">
 <a href="#nexthopinstance_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
@@ -623,8 +616,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopinstancezone_csharp">
 <a href="#nexthopinstancezone_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
@@ -636,8 +628,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopip_csharp">
 <a href="#nexthopip_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
@@ -646,8 +637,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopvpntunnel_csharp">
 <a href="#nexthopvpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
@@ -656,8 +646,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -670,8 +659,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -681,8 +669,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -691,13 +678,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destrange_go">
 <a href="#destrange_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
@@ -707,8 +692,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -717,8 +701,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -728,8 +711,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -744,8 +726,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopgateway_go">
 <a href="#nexthopgateway_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
@@ -760,8 +741,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopilb_go">
 <a href="#nexthopilb_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
@@ -774,8 +754,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopinstance_go">
 <a href="#nexthopinstance_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
@@ -789,8 +768,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopinstancezone_go">
 <a href="#nexthopinstancezone_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
@@ -802,8 +780,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopip_go">
 <a href="#nexthopip_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
@@ -812,8 +789,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopvpntunnel_go">
 <a href="#nexthopvpntunnel_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
@@ -822,8 +798,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -836,8 +811,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -847,8 +821,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -857,13 +830,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destrange_nodejs">
 <a href="#destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
@@ -873,8 +844,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -883,8 +853,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -894,8 +863,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -910,8 +878,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopgateway_nodejs">
 <a href="#nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
@@ -926,8 +893,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopilb_nodejs">
 <a href="#nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
@@ -940,8 +906,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopinstance_nodejs">
 <a href="#nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
@@ -955,8 +920,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopinstancezone_nodejs">
 <a href="#nexthopinstancezone_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance<wbr>Zone</a>
@@ -968,8 +932,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopip_nodejs">
 <a href="#nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
@@ -978,8 +941,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthopvpntunnel_nodejs">
 <a href="#nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
@@ -988,8 +950,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1002,8 +963,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1013,8 +973,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1023,13 +982,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dest_range_python">
 <a href="#dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
@@ -1039,8 +996,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1049,8 +1005,7 @@ Only IPv4 is supported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1060,8 +1015,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1076,8 +1030,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_gateway_python">
 <a href="#next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
@@ -1092,8 +1045,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_ilb_python">
 <a href="#next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
@@ -1106,8 +1058,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_instance_python">
 <a href="#next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
@@ -1121,8 +1072,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_instance_zone_python">
 <a href="#next_hop_instance_zone_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance_<wbr>zone</a>
@@ -1134,8 +1084,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_ip_python">
 <a href="#next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
@@ -1144,8 +1093,7 @@ a URL.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_vpn_tunnel_python">
 <a href="#next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
@@ -1154,8 +1102,7 @@ a URL.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1168,8 +1115,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1179,8 +1125,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1189,8 +1134,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1201,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1210,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nexthopnetwork_csharp">
 <a href="#nexthopnetwork_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
@@ -1220,8 +1162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1230,13 +1171,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1244,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nexthopnetwork_go">
 <a href="#nexthopnetwork_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
@@ -1254,8 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1264,13 +1201,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1278,8 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nexthopnetwork_nodejs">
 <a href="#nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
@@ -1288,8 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1298,13 +1231,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1312,8 +1243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_hop_network_python">
 <a href="#next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
@@ -1322,8 +1252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1332,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1460,8 +1388,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1471,8 +1398,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destrange_csharp">
 <a href="#state_destrange_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
@@ -1482,8 +1408,7 @@ when you create the resource.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1498,8 +1423,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1508,8 +1432,7 @@ last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopgateway_csharp">
 <a href="#state_nexthopgateway_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
@@ -1524,8 +1447,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopilb_csharp">
 <a href="#state_nexthopilb_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
@@ -1538,8 +1460,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstance_csharp">
 <a href="#state_nexthopinstance_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
@@ -1553,8 +1474,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstancezone_csharp">
 <a href="#state_nexthopinstancezone_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
@@ -1566,8 +1486,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopip_csharp">
 <a href="#state_nexthopip_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
@@ -1576,8 +1495,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopnetwork_csharp">
 <a href="#state_nexthopnetwork_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
@@ -1586,8 +1504,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopvpntunnel_csharp">
 <a href="#state_nexthopvpntunnel_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
@@ -1596,8 +1513,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1610,8 +1526,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1621,8 +1536,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1631,8 +1545,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1641,13 +1554,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1657,8 +1568,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destrange_go">
 <a href="#state_destrange_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Range</a>
@@ -1668,8 +1578,7 @@ when you create the resource.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1684,8 +1593,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1694,8 +1602,7 @@ last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopgateway_go">
 <a href="#state_nexthopgateway_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Gateway</a>
@@ -1710,8 +1617,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopilb_go">
 <a href="#state_nexthopilb_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ilb</a>
@@ -1724,8 +1630,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstance_go">
 <a href="#state_nexthopinstance_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance</a>
@@ -1739,8 +1644,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstancezone_go">
 <a href="#state_nexthopinstancezone_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Instance<wbr>Zone</a>
@@ -1752,8 +1656,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopip_go">
 <a href="#state_nexthopip_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Ip</a>
@@ -1762,8 +1665,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopnetwork_go">
 <a href="#state_nexthopnetwork_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Network</a>
@@ -1772,8 +1674,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopvpntunnel_go">
 <a href="#state_nexthopvpntunnel_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
@@ -1782,8 +1683,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1796,8 +1696,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1807,8 +1706,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1817,8 +1715,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1827,13 +1724,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1843,8 +1738,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destrange_nodejs">
 <a href="#state_destrange_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Range</a>
@@ -1854,8 +1748,7 @@ when you create the resource.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1870,8 +1763,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1880,8 +1772,7 @@ last character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopgateway_nodejs">
 <a href="#state_nexthopgateway_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Gateway</a>
@@ -1896,8 +1787,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopilb_nodejs">
 <a href="#state_nexthopilb_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ilb</a>
@@ -1910,8 +1800,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstance_nodejs">
 <a href="#state_nexthopinstance_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance</a>
@@ -1925,8 +1814,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopinstancezone_nodejs">
 <a href="#state_nexthopinstancezone_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Instance<wbr>Zone</a>
@@ -1938,8 +1826,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopip_nodejs">
 <a href="#state_nexthopip_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Ip</a>
@@ -1948,8 +1835,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopnetwork_nodejs">
 <a href="#state_nexthopnetwork_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Network</a>
@@ -1958,8 +1844,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthopvpntunnel_nodejs">
 <a href="#state_nexthopvpntunnel_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Vpn<wbr>Tunnel</a>
@@ -1968,8 +1853,7 @@ a URL.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1982,8 +1866,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1993,8 +1876,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2003,8 +1885,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2013,13 +1894,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2029,8 +1908,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property
 when you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dest_range_python">
 <a href="#state_dest_range_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>range</a>
@@ -2040,8 +1918,7 @@ when you create the resource.
     </dt>
     <dd>{{% md %}}The destination range of outgoing packets that this route applies to.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2056,8 +1933,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2066,8 +1942,7 @@ last character, which cannot be a dash.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network that this route applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_gateway_python">
 <a href="#state_next_hop_gateway_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>gateway</a>
@@ -2082,8 +1957,7 @@ partial valid URL:
 * `projects/project/global/gateways/default-internet-gateway`
 * `global/gateways/default-internet-gateway`
 * The string `default-internet-gateway`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_ilb_python">
 <a href="#state_next_hop_ilb_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ilb</a>
@@ -2096,8 +1970,7 @@ You can only specify the forwarding rule as a partial or full URL. For example, 
 https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
 regions/region/forwardingRules/forwardingRule
 Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_instance_python">
 <a href="#state_next_hop_instance_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance</a>
@@ -2111,8 +1984,7 @@ You can specify this as a full or partial URL. For example:
 * `projects/project/zones/zone/instances/instance`
 * `zones/zone/instances/instance`
 * Just the instance name, with the zone in `next_hop_instance_zone`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_instance_zone_python">
 <a href="#state_next_hop_instance_zone_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>instance_<wbr>zone</a>
@@ -2124,8 +1996,7 @@ You can specify this as a full or partial URL. For example:
 specified)  The zone of the instance specified in
 `next_hop_instance`.  Omit if `next_hop_instance` is specified as
 a URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_ip_python">
 <a href="#state_next_hop_ip_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>ip</a>
@@ -2134,8 +2005,7 @@ a URL.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network IP address of an instance that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_network_python">
 <a href="#state_next_hop_network_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>network</a>
@@ -2144,8 +2014,7 @@ a URL.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a Network that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_vpn_tunnel_python">
 <a href="#state_next_hop_vpn_tunnel_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>vpn_<wbr>tunnel</a>
@@ -2154,8 +2023,7 @@ a URL.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to a VpnTunnel that should handle matching packets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2168,8 +2036,7 @@ where there is more than one matching route of equal prefix length.
 In the case of two routes with equal prefix length, the one with the
 lowest-numbered priority value wins.
 Default value is 1000. Valid range is 0 through 65535.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2179,8 +2046,7 @@ Default value is 1000. Valid range is 0 through 65535.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2189,8 +2055,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2199,8 +2064,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of instance tags to which this route applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

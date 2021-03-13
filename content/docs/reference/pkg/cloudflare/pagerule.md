@@ -315,8 +315,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -325,8 +324,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -335,8 +333,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -345,8 +342,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -355,8 +351,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -365,13 +360,11 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -380,8 +373,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -390,8 +382,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -400,8 +391,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -410,8 +400,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -420,13 +409,11 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -435,8 +422,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -445,8 +431,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -455,8 +440,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -465,8 +449,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -475,13 +458,11 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -490,8 +471,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -500,8 +480,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -510,8 +489,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -520,8 +498,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -530,8 +507,7 @@ The PageRule resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -542,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -551,13 +526,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,13 +538,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -579,13 +550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -721,8 +689,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actions_csharp">
 <a href="#state_actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -731,8 +698,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -741,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -751,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -761,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -771,13 +734,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actions_go">
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -786,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -796,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -806,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -816,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -826,13 +783,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actions_nodejs">
 <a href="#state_actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -841,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -851,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -861,8 +814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -871,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -881,13 +832,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actions_python">
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -896,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactions">Page<wbr>Rule<wbr>Actions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The actions taken by the page rule, options given below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -906,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the page rule among others for this target, the higher the number the higher the priority as per [API documentation](https://api.cloudflare.com/#page-rules-for-a-zone-create-page-rule).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -916,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the page rule is active or disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -926,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pattern to target with the page rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -936,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to which the page rule should be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -952,8 +896,7 @@ The following state arguments are supported:
 <h4 id="pageruleactions">Page<wbr>Rule<wbr>Actions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alwaysonline_csharp">
 <a href="#alwaysonline_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Online</a>
@@ -962,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwaysusehttps_csharp">
 <a href="#alwaysusehttps_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Use<wbr>Https</a>
@@ -972,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatichttpsrewrites_csharp">
 <a href="#automatichttpsrewrites_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Https<wbr>Rewrites</a>
@@ -982,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browsercachettl_csharp">
 <a href="#browsercachettl_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Cache<wbr>Ttl</a>
@@ -992,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the browser cache. `0` means 'Respect Existing Headers'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browsercheck_csharp">
 <a href="#browsercheck_csharp" style="color: inherit; text-decoration: inherit;">Browser<wbr>Check</a>
@@ -1002,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasscacheoncookie_csharp">
 <a href="#bypasscacheoncookie_csharp" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Cache<wbr>On<wbr>Cookie</a>
@@ -1012,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally bypass cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachebydevicetype_csharp">
 <a href="#cachebydevicetype_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>By<wbr>Device<wbr>Type</a>
@@ -1022,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachedeceptionarmor_csharp">
 <a href="#cachedeceptionarmor_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Deception<wbr>Armor</a>
@@ -1032,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyfields_csharp">
 <a href="#cachekeyfields_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Fields</a>
@@ -1042,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachelevel_csharp">
 <a href="#cachelevel_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Level</a>
@@ -1052,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the cache level to `"bypass"`, `"basic"`, `"simplified"`, `"aggressive"`, or `"cache_everything"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheoncookie_csharp">
 <a href="#cacheoncookie_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>On<wbr>Cookie</a>
@@ -1062,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachettlbystatuses_csharp">
 <a href="#cachettlbystatuses_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
@@ -1072,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachettlbystatus">List&lt;Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableapps_csharp">
 <a href="#disableapps_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Apps</a>
@@ -1082,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperformance_csharp">
 <a href="#disableperformance_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Performance</a>
@@ -1092,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablerailgun_csharp">
 <a href="#disablerailgun_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Railgun</a>
@@ -1102,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesecurity_csharp">
 <a href="#disablesecurity_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Security</a>
@@ -1112,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgecachettl_csharp">
 <a href="#edgecachettl_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Cache<wbr>Ttl</a>
@@ -1122,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailobfuscation_csharp">
 <a href="#emailobfuscation_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Obfuscation</a>
@@ -1132,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitcachecontrol_csharp">
 <a href="#explicitcachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Cache<wbr>Control</a>
@@ -1142,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether origin Cache-Control action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingurl_csharp">
 <a href="#forwardingurl_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Url</a>
@@ -1152,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostheaderoverride_csharp">
 <a href="#hostheaderoverride_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Header<wbr>Override</a>
@@ -1162,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the Host header to send.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipgeolocation_csharp">
 <a href="#ipgeolocation_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Geolocation</a>
@@ -1172,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minifies_csharp">
 <a href="#minifies_csharp" style="color: inherit; text-decoration: inherit;">Minifies</a>
@@ -1182,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsminify">List&lt;Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirage_csharp">
 <a href="#mirage_csharp" style="color: inherit; text-decoration: inherit;">Mirage</a>
@@ -1192,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opportunisticencryption_csharp">
 <a href="#opportunisticencryption_csharp" style="color: inherit; text-decoration: inherit;">Opportunistic<wbr>Encryption</a>
@@ -1202,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originerrorpagepassthru_csharp">
 <a href="#originerrorpagepassthru_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
@@ -1212,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="polish_csharp">
 <a href="#polish_csharp" style="color: inherit; text-decoration: inherit;">Polish</a>
@@ -1222,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"off"`, `"lossless"` or `"lossy"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolveoverride_csharp">
 <a href="#resolveoverride_csharp" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Override</a>
@@ -1232,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overridden origin server name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="respectstrongetag_csharp">
 <a href="#respectstrongetag_csharp" style="color: inherit; text-decoration: inherit;">Respect<wbr>Strong<wbr>Etag</a>
@@ -1242,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsebuffering_csharp">
 <a href="#responsebuffering_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Buffering</a>
@@ -1252,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rocketloader_csharp">
 <a href="#rocketloader_csharp" style="color: inherit; text-decoration: inherit;">Rocket<wbr>Loader</a>
@@ -1262,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the rocket loader to `"on"`, `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitylevel_csharp">
 <a href="#securitylevel_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
@@ -1272,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the security level to `"off"`, `"essentially_off"`, `"low"`, `"medium"`, `"high"`, or `"under_attack"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideexclude_csharp">
 <a href="#serversideexclude_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Exclude</a>
@@ -1282,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortquerystringforcache_csharp">
 <a href="#sortquerystringforcache_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
@@ -1292,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -1302,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the SSL mode to `"off"`, `"flexible"`, `"full"`, `"strict"`, or `"origin_pull"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trueclientipheader_csharp">
 <a href="#trueclientipheader_csharp" style="color: inherit; text-decoration: inherit;">True<wbr>Client<wbr>Ip<wbr>Header</a>
@@ -1312,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waf_csharp">
 <a href="#waf_csharp" style="color: inherit; text-decoration: inherit;">Waf</a>
@@ -1322,13 +1229,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alwaysonline_go">
 <a href="#alwaysonline_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Online</a>
@@ -1337,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwaysusehttps_go">
 <a href="#alwaysusehttps_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Use<wbr>Https</a>
@@ -1347,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatichttpsrewrites_go">
 <a href="#automatichttpsrewrites_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Https<wbr>Rewrites</a>
@@ -1357,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browsercachettl_go">
 <a href="#browsercachettl_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Cache<wbr>Ttl</a>
@@ -1367,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the browser cache. `0` means 'Respect Existing Headers'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browsercheck_go">
 <a href="#browsercheck_go" style="color: inherit; text-decoration: inherit;">Browser<wbr>Check</a>
@@ -1377,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasscacheoncookie_go">
 <a href="#bypasscacheoncookie_go" style="color: inherit; text-decoration: inherit;">Bypass<wbr>Cache<wbr>On<wbr>Cookie</a>
@@ -1387,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally bypass cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachebydevicetype_go">
 <a href="#cachebydevicetype_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>By<wbr>Device<wbr>Type</a>
@@ -1397,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachedeceptionarmor_go">
 <a href="#cachedeceptionarmor_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Deception<wbr>Armor</a>
@@ -1407,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyfields_go">
 <a href="#cachekeyfields_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Fields</a>
@@ -1417,8 +1314,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachelevel_go">
 <a href="#cachelevel_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Level</a>
@@ -1427,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the cache level to `"bypass"`, `"basic"`, `"simplified"`, `"aggressive"`, or `"cache_everything"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheoncookie_go">
 <a href="#cacheoncookie_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>On<wbr>Cookie</a>
@@ -1437,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachettlbystatuses_go">
 <a href="#cachettlbystatuses_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
@@ -1447,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachettlbystatus">[]Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableapps_go">
 <a href="#disableapps_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Apps</a>
@@ -1457,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperformance_go">
 <a href="#disableperformance_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Performance</a>
@@ -1467,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablerailgun_go">
 <a href="#disablerailgun_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Railgun</a>
@@ -1477,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesecurity_go">
 <a href="#disablesecurity_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Security</a>
@@ -1487,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgecachettl_go">
 <a href="#edgecachettl_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Cache<wbr>Ttl</a>
@@ -1497,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailobfuscation_go">
 <a href="#emailobfuscation_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Obfuscation</a>
@@ -1507,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitcachecontrol_go">
 <a href="#explicitcachecontrol_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Cache<wbr>Control</a>
@@ -1517,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether origin Cache-Control action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingurl_go">
 <a href="#forwardingurl_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Url</a>
@@ -1527,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostheaderoverride_go">
 <a href="#hostheaderoverride_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Header<wbr>Override</a>
@@ -1537,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the Host header to send.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipgeolocation_go">
 <a href="#ipgeolocation_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Geolocation</a>
@@ -1547,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minifies_go">
 <a href="#minifies_go" style="color: inherit; text-decoration: inherit;">Minifies</a>
@@ -1557,8 +1440,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsminify">[]Page<wbr>Rule<wbr>Actions<wbr>Minify</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirage_go">
 <a href="#mirage_go" style="color: inherit; text-decoration: inherit;">Mirage</a>
@@ -1567,8 +1449,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opportunisticencryption_go">
 <a href="#opportunisticencryption_go" style="color: inherit; text-decoration: inherit;">Opportunistic<wbr>Encryption</a>
@@ -1577,8 +1458,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originerrorpagepassthru_go">
 <a href="#originerrorpagepassthru_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
@@ -1587,8 +1467,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="polish_go">
 <a href="#polish_go" style="color: inherit; text-decoration: inherit;">Polish</a>
@@ -1597,8 +1476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"off"`, `"lossless"` or `"lossy"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolveoverride_go">
 <a href="#resolveoverride_go" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Override</a>
@@ -1607,8 +1485,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overridden origin server name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="respectstrongetag_go">
 <a href="#respectstrongetag_go" style="color: inherit; text-decoration: inherit;">Respect<wbr>Strong<wbr>Etag</a>
@@ -1617,8 +1494,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsebuffering_go">
 <a href="#responsebuffering_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Buffering</a>
@@ -1627,8 +1503,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rocketloader_go">
 <a href="#rocketloader_go" style="color: inherit; text-decoration: inherit;">Rocket<wbr>Loader</a>
@@ -1637,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the rocket loader to `"on"`, `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitylevel_go">
 <a href="#securitylevel_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Level</a>
@@ -1647,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the security level to `"off"`, `"essentially_off"`, `"low"`, `"medium"`, `"high"`, or `"under_attack"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideexclude_go">
 <a href="#serversideexclude_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Exclude</a>
@@ -1657,8 +1530,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortquerystringforcache_go">
 <a href="#sortquerystringforcache_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
@@ -1667,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -1677,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the SSL mode to `"off"`, `"flexible"`, `"full"`, `"strict"`, or `"origin_pull"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trueclientipheader_go">
 <a href="#trueclientipheader_go" style="color: inherit; text-decoration: inherit;">True<wbr>Client<wbr>Ip<wbr>Header</a>
@@ -1687,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waf_go">
 <a href="#waf_go" style="color: inherit; text-decoration: inherit;">Waf</a>
@@ -1697,13 +1566,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alwaysonline_nodejs">
 <a href="#alwaysonline_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Online</a>
@@ -1712,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwaysusehttps_nodejs">
 <a href="#alwaysusehttps_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Use<wbr>Https</a>
@@ -1722,8 +1588,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatichttpsrewrites_nodejs">
 <a href="#automatichttpsrewrites_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Https<wbr>Rewrites</a>
@@ -1732,8 +1597,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browsercachettl_nodejs">
 <a href="#browsercachettl_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Cache<wbr>Ttl</a>
@@ -1742,8 +1606,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the browser cache. `0` means 'Respect Existing Headers'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browsercheck_nodejs">
 <a href="#browsercheck_nodejs" style="color: inherit; text-decoration: inherit;">browser<wbr>Check</a>
@@ -1752,8 +1615,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasscacheoncookie_nodejs">
 <a href="#bypasscacheoncookie_nodejs" style="color: inherit; text-decoration: inherit;">bypass<wbr>Cache<wbr>On<wbr>Cookie</a>
@@ -1762,8 +1624,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally bypass cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachebydevicetype_nodejs">
 <a href="#cachebydevicetype_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>By<wbr>Device<wbr>Type</a>
@@ -1772,8 +1633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachedeceptionarmor_nodejs">
 <a href="#cachedeceptionarmor_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Deception<wbr>Armor</a>
@@ -1782,8 +1642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyfields_nodejs">
 <a href="#cachekeyfields_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Fields</a>
@@ -1792,8 +1651,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields</a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachelevel_nodejs">
 <a href="#cachelevel_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Level</a>
@@ -1802,8 +1660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the cache level to `"bypass"`, `"basic"`, `"simplified"`, `"aggressive"`, or `"cache_everything"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheoncookie_nodejs">
 <a href="#cacheoncookie_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>On<wbr>Cookie</a>
@@ -1812,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachettlbystatuses_nodejs">
 <a href="#cachettlbystatuses_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Ttl<wbr>By<wbr>Statuses</a>
@@ -1822,8 +1678,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachettlbystatus">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableapps_nodejs">
 <a href="#disableapps_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Apps</a>
@@ -1832,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperformance_nodejs">
 <a href="#disableperformance_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Performance</a>
@@ -1842,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablerailgun_nodejs">
 <a href="#disablerailgun_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Railgun</a>
@@ -1852,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablesecurity_nodejs">
 <a href="#disablesecurity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Security</a>
@@ -1862,8 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgecachettl_nodejs">
 <a href="#edgecachettl_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Cache<wbr>Ttl</a>
@@ -1872,8 +1723,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailobfuscation_nodejs">
 <a href="#emailobfuscation_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Obfuscation</a>
@@ -1882,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicitcachecontrol_nodejs">
 <a href="#explicitcachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Cache<wbr>Control</a>
@@ -1892,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether origin Cache-Control action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingurl_nodejs">
 <a href="#forwardingurl_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Url</a>
@@ -1902,8 +1750,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostheaderoverride_nodejs">
 <a href="#hostheaderoverride_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header<wbr>Override</a>
@@ -1912,8 +1759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the Host header to send.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipgeolocation_nodejs">
 <a href="#ipgeolocation_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Geolocation</a>
@@ -1922,8 +1768,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minifies_nodejs">
 <a href="#minifies_nodejs" style="color: inherit; text-decoration: inherit;">minifies</a>
@@ -1932,8 +1777,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsminify">Page<wbr>Rule<wbr>Actions<wbr>Minify[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirage_nodejs">
 <a href="#mirage_nodejs" style="color: inherit; text-decoration: inherit;">mirage</a>
@@ -1942,8 +1786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opportunisticencryption_nodejs">
 <a href="#opportunisticencryption_nodejs" style="color: inherit; text-decoration: inherit;">opportunistic<wbr>Encryption</a>
@@ -1952,8 +1795,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originerrorpagepassthru_nodejs">
 <a href="#originerrorpagepassthru_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Error<wbr>Page<wbr>Pass<wbr>Thru</a>
@@ -1962,8 +1804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="polish_nodejs">
 <a href="#polish_nodejs" style="color: inherit; text-decoration: inherit;">polish</a>
@@ -1972,8 +1813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"off"`, `"lossless"` or `"lossy"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolveoverride_nodejs">
 <a href="#resolveoverride_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Override</a>
@@ -1982,8 +1822,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overridden origin server name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="respectstrongetag_nodejs">
 <a href="#respectstrongetag_nodejs" style="color: inherit; text-decoration: inherit;">respect<wbr>Strong<wbr>Etag</a>
@@ -1992,8 +1831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsebuffering_nodejs">
 <a href="#responsebuffering_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Buffering</a>
@@ -2002,8 +1840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rocketloader_nodejs">
 <a href="#rocketloader_nodejs" style="color: inherit; text-decoration: inherit;">rocket<wbr>Loader</a>
@@ -2012,8 +1849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the rocket loader to `"on"`, `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitylevel_nodejs">
 <a href="#securitylevel_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Level</a>
@@ -2022,8 +1858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the security level to `"off"`, `"essentially_off"`, `"low"`, `"medium"`, `"high"`, or `"under_attack"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideexclude_nodejs">
 <a href="#serversideexclude_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Exclude</a>
@@ -2032,8 +1867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortquerystringforcache_nodejs">
 <a href="#sortquerystringforcache_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Query<wbr>String<wbr>For<wbr>Cache</a>
@@ -2042,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2052,8 +1885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to set the SSL mode to `"off"`, `"flexible"`, `"full"`, `"strict"`, or `"origin_pull"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trueclientipheader_nodejs">
 <a href="#trueclientipheader_nodejs" style="color: inherit; text-decoration: inherit;">true<wbr>Client<wbr>Ip<wbr>Header</a>
@@ -2062,8 +1894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waf_nodejs">
 <a href="#waf_nodejs" style="color: inherit; text-decoration: inherit;">waf</a>
@@ -2072,13 +1903,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="always_online_python">
 <a href="#always_online_python" style="color: inherit; text-decoration: inherit;">always_<wbr>online</a>
@@ -2087,8 +1916,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="always_use_https_python">
 <a href="#always_use_https_python" style="color: inherit; text-decoration: inherit;">always_<wbr>use_<wbr>https</a>
@@ -2097,8 +1925,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automatic_https_rewrites_python">
 <a href="#automatic_https_rewrites_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>https_<wbr>rewrites</a>
@@ -2107,8 +1934,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browser_cache_ttl_python">
 <a href="#browser_cache_ttl_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>cache_<wbr>ttl</a>
@@ -2117,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the browser cache. `0` means 'Respect Existing Headers'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="browser_check_python">
 <a href="#browser_check_python" style="color: inherit; text-decoration: inherit;">browser_<wbr>check</a>
@@ -2127,8 +1952,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypass_cache_on_cookie_python">
 <a href="#bypass_cache_on_cookie_python" style="color: inherit; text-decoration: inherit;">bypass_<wbr>cache_<wbr>on_<wbr>cookie</a>
@@ -2137,8 +1961,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally bypass cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_by_device_type_python">
 <a href="#cache_by_device_type_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>by_<wbr>device_<wbr>type</a>
@@ -2147,8 +1970,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_deception_armor_python">
 <a href="#cache_deception_armor_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>deception_<wbr>armor</a>
@@ -2157,8 +1979,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_key_fields_python">
 <a href="#cache_key_fields_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>fields</a>
@@ -2167,8 +1988,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls how Cloudflare creates Cache Keys used to identify files in cache. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_level_python">
 <a href="#cache_level_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>level</a>
@@ -2177,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to set the cache level to `"bypass"`, `"basic"`, `"simplified"`, `"aggressive"`, or `"cache_everything"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_on_cookie_python">
 <a href="#cache_on_cookie_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>on_<wbr>cookie</a>
@@ -2187,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value of cookie name to conditionally cache the page.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_ttl_by_statuses_python">
 <a href="#cache_ttl_by_statuses_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>ttl_<wbr>by_<wbr>statuses</a>
@@ -2197,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachettlbystatus">Sequence[Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set cache TTL based on the response status from the origin web server. Can be specified multiple times. See below for full description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_apps_python">
 <a href="#disable_apps_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>apps</a>
@@ -2207,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_performance_python">
 <a href="#disable_performance_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>performance</a>
@@ -2217,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_railgun_python">
 <a href="#disable_railgun_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>railgun</a>
@@ -2227,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_security_python">
 <a href="#disable_security_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>security</a>
@@ -2237,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean of whether this action is enabled. Default: false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edge_cache_ttl_python">
 <a href="#edge_cache_ttl_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>cache_<wbr>ttl</a>
@@ -2247,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Time To Live for the edge cache.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_obfuscation_python">
 <a href="#email_obfuscation_python" style="color: inherit; text-decoration: inherit;">email_<wbr>obfuscation</a>
@@ -2257,8 +2069,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="explicit_cache_control_python">
 <a href="#explicit_cache_control_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>cache_<wbr>control</a>
@@ -2267,8 +2078,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether origin Cache-Control action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarding_url_python">
 <a href="#forwarding_url_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>url</a>
@@ -2277,8 +2087,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The URL to forward to, and with what status. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_header_override_python">
 <a href="#host_header_override_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header_<wbr>override</a>
@@ -2287,8 +2096,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the Host header to send.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_geolocation_python">
 <a href="#ip_geolocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>geolocation</a>
@@ -2297,8 +2105,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minifies_python">
 <a href="#minifies_python" style="color: inherit; text-decoration: inherit;">minifies</a>
@@ -2307,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionsminify">Sequence[Page<wbr>Rule<wbr>Actions<wbr>Minify<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for HTML, CSS and JS minification. See below for full list of options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirage_python">
 <a href="#mirage_python" style="color: inherit; text-decoration: inherit;">mirage</a>
@@ -2317,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opportunistic_encryption_python">
 <a href="#opportunistic_encryption_python" style="color: inherit; text-decoration: inherit;">opportunistic_<wbr>encryption</a>
@@ -2327,8 +2132,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_error_page_pass_thru_python">
 <a href="#origin_error_page_pass_thru_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>error_<wbr>page_<wbr>pass_<wbr>thru</a>
@@ -2337,8 +2141,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="polish_python">
 <a href="#polish_python" style="color: inherit; text-decoration: inherit;">polish</a>
@@ -2347,8 +2150,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"off"`, `"lossless"` or `"lossy"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolve_override_python">
 <a href="#resolve_override_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>override</a>
@@ -2357,8 +2159,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overridden origin server name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="respect_strong_etag_python">
 <a href="#respect_strong_etag_python" style="color: inherit; text-decoration: inherit;">respect_<wbr>strong_<wbr>etag</a>
@@ -2367,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_buffering_python">
 <a href="#response_buffering_python" style="color: inherit; text-decoration: inherit;">response_<wbr>buffering</a>
@@ -2377,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rocket_loader_python">
 <a href="#rocket_loader_python" style="color: inherit; text-decoration: inherit;">rocket_<wbr>loader</a>
@@ -2387,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to set the rocket loader to `"on"`, `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_level_python">
 <a href="#security_level_python" style="color: inherit; text-decoration: inherit;">security_<wbr>level</a>
@@ -2397,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to set the security level to `"off"`, `"essentially_off"`, `"low"`, `"medium"`, `"high"`, or `"under_attack"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_exclude_python">
 <a href="#server_side_exclude_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>exclude</a>
@@ -2407,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_query_string_for_cache_python">
 <a href="#sort_query_string_for_cache_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>query_<wbr>string_<wbr>for_<wbr>cache</a>
@@ -2417,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2427,8 +2222,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to set the SSL mode to `"off"`, `"flexible"`, `"full"`, `"strict"`, or `"origin_pull"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="true_client_ip_header_python">
 <a href="#true_client_ip_header_python" style="color: inherit; text-decoration: inherit;">true_<wbr>client_<wbr>ip_<wbr>header</a>
@@ -2437,8 +2231,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waf_python">
 <a href="#waf_python" style="color: inherit; text-decoration: inherit;">waf</a>
@@ -2447,15 +2240,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether this action is `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachekeyfields">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookie_csharp">
 <a href="#cookie_csharp" style="color: inherit; text-decoration: inherit;">Cookie</a>
@@ -2464,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -2474,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2484,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -2494,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -2504,13 +2291,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookie_go">
 <a href="#cookie_go" style="color: inherit; text-decoration: inherit;">Cookie</a>
@@ -2519,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -2529,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2539,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -2549,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -2559,13 +2340,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookie_nodejs">
 <a href="#cookie_nodejs" style="color: inherit; text-decoration: inherit;">cookie</a>
@@ -2574,8 +2353,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie</a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
@@ -2584,8 +2362,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2594,8 +2371,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -2604,8 +2380,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -2614,13 +2389,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookie_python">
 <a href="#cookie_python" style="color: inherit; text-decoration: inherit;">cookie</a>
@@ -2629,8 +2402,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what cookies go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
@@ -2639,8 +2411,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what HTTP headers go into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2649,8 +2420,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which Host header goes into Cache Key:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -2659,8 +2429,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which URL query string parameters go into the Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -2669,15 +2438,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls which end user-related features go into the Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachekeyfieldscookie">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Cookie</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkpresences_csharp">
 <a href="#checkpresences_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Presences</a>
@@ -2686,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_csharp">
 <a href="#includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -2696,13 +2462,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkpresences_go">
 <a href="#checkpresences_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Presences</a>
@@ -2711,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_go">
 <a href="#includes_go" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -2721,13 +2484,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkpresences_nodejs">
 <a href="#checkpresences_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Presences</a>
@@ -2736,8 +2497,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_nodejs">
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -2746,13 +2506,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="check_presences_python">
 <a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
@@ -2761,8 +2519,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_python">
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -2771,15 +2528,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachekeyfieldsheader">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkpresences_csharp">
 <a href="#checkpresences_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Presences</a>
@@ -2788,8 +2543,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -2798,8 +2552,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_csharp">
 <a href="#includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -2808,13 +2561,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkpresences_go">
 <a href="#checkpresences_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Presences</a>
@@ -2823,8 +2574,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -2833,8 +2583,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_go">
 <a href="#includes_go" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -2843,13 +2592,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checkpresences_nodejs">
 <a href="#checkpresences_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Presences</a>
@@ -2858,8 +2605,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -2868,8 +2614,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_nodejs">
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -2878,13 +2623,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="check_presences_python">
 <a href="#check_presences_python" style="color: inherit; text-decoration: inherit;">check_<wbr>presences</a>
@@ -2893,8 +2636,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Check for presence of specified HTTP headers, without including their actual values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -2903,8 +2645,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_python">
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -2913,15 +2654,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachekeyfieldshost">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Host</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resolved_csharp">
 <a href="#resolved_csharp" style="color: inherit; text-decoration: inherit;">Resolved</a>
@@ -2930,13 +2669,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` (default) - includes the Host header in the HTTP request sent to the origin; `true` - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resolved_go">
 <a href="#resolved_go" style="color: inherit; text-decoration: inherit;">Resolved</a>
@@ -2945,13 +2682,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` (default) - includes the Host header in the HTTP request sent to the origin; `true` - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resolved_nodejs">
 <a href="#resolved_nodejs" style="color: inherit; text-decoration: inherit;">resolved</a>
@@ -2960,13 +2695,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`false` (default) - includes the Host header in the HTTP request sent to the origin; `true` - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resolved_python">
 <a href="#resolved_python" style="color: inherit; text-decoration: inherit;">resolved</a>
@@ -2975,15 +2708,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` (default) - includes the Host header in the HTTP request sent to the origin; `true` - includes the Host header that was resolved to get the origin IP for the request (e.g. changed with Resolve Override Page Rule).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachekeyfieldsquerystring">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>Query<wbr>String</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -2992,8 +2723,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_csharp">
 <a href="#ignore_csharp" style="color: inherit; text-decoration: inherit;">Ignore</a>
@@ -3002,8 +2732,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` (default) - all query string parameters are used for Cache Key, unless explicitly excluded; `true` - all query string parameters are ignored; value is ignored if any of `exclude` or `include` is non-empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_csharp">
 <a href="#includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -3012,13 +2741,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -3027,8 +2754,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_go">
 <a href="#ignore_go" style="color: inherit; text-decoration: inherit;">Ignore</a>
@@ -3037,8 +2763,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` (default) - all query string parameters are used for Cache Key, unless explicitly excluded; `true` - all query string parameters are ignored; value is ignored if any of `exclude` or `include` is non-empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_go">
 <a href="#includes_go" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -3047,13 +2772,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -3062,8 +2785,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_nodejs">
 <a href="#ignore_nodejs" style="color: inherit; text-decoration: inherit;">ignore</a>
@@ -3072,8 +2794,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`false` (default) - all query string parameters are used for Cache Key, unless explicitly excluded; `true` - all query string parameters are ignored; value is ignored if any of `exclude` or `include` is non-empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_nodejs">
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -3082,13 +2803,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -3097,8 +2816,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Exclude these query string parameters from Cache Key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_python">
 <a href="#ignore_python" style="color: inherit; text-decoration: inherit;">ignore</a>
@@ -3107,8 +2825,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`false` (default) - all query string parameters are used for Cache Key, unless explicitly excluded; `true` - all query string parameters are ignored; value is ignored if any of `exclude` or `include` is non-empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includes_python">
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -3117,15 +2834,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only use values of specified query string parameters in Cache Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachekeyfieldsuser">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Key<wbr>Fields<wbr>User</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="devicetype_csharp">
 <a href="#devicetype_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
@@ -3134,8 +2849,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_csharp">
 <a href="#geo_csharp" style="color: inherit; text-decoration: inherit;">Geo</a>
@@ -3144,8 +2858,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - includes the client’s country, derived from the IP address; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_csharp">
 <a href="#lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -3154,13 +2867,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="devicetype_go">
 <a href="#devicetype_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type</a>
@@ -3169,8 +2880,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_go">
 <a href="#geo_go" style="color: inherit; text-decoration: inherit;">Geo</a>
@@ -3179,8 +2889,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - includes the client’s country, derived from the IP address; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_go">
 <a href="#lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -3189,13 +2898,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="devicetype_nodejs">
 <a href="#devicetype_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type</a>
@@ -3204,8 +2911,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_nodejs">
 <a href="#geo_nodejs" style="color: inherit; text-decoration: inherit;">geo</a>
@@ -3214,8 +2920,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` - includes the client’s country, derived from the IP address; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_nodejs">
 <a href="#lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -3224,13 +2929,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_type_python">
 <a href="#device_type_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type</a>
@@ -3239,8 +2942,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - classifies a request as “mobile”, “desktop”, or “tablet” based on the User Agent; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_python">
 <a href="#geo_python" style="color: inherit; text-decoration: inherit;">geo</a>
@@ -3249,8 +2951,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - includes the client’s country, derived from the IP address; defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_python">
 <a href="#lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -3259,15 +2960,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`true` - includes the first language code contained in the `Accept-Language` header sent by the client; defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionscachettlbystatus">Page<wbr>Rule<wbr>Actions<wbr>Cache<wbr>Ttl<wbr>By<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="codes_csharp">
 <a href="#codes_csharp" style="color: inherit; text-decoration: inherit;">Codes</a>
@@ -3276,8 +2975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -3287,13 +2985,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="codes_go">
 <a href="#codes_go" style="color: inherit; text-decoration: inherit;">Codes</a>
@@ -3302,8 +2998,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -3313,13 +3008,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="codes_nodejs">
 <a href="#codes_nodejs" style="color: inherit; text-decoration: inherit;">codes</a>
@@ -3328,8 +3021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -3339,13 +3031,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="codes_python">
 <a href="#codes_python" style="color: inherit; text-decoration: inherit;">codes</a>
@@ -3354,8 +3044,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A HTTP code (e.g. `404`) or range of codes (e.g. `400-499`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -3365,15 +3054,13 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Duration a resource lives in the Cloudflare cache.
 * positive number - cache for specified duration in seconds
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionsforwardingurl">Page<wbr>Rule<wbr>Actions<wbr>Forwarding<wbr>Url</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -3382,8 +3069,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -3392,13 +3078,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to which the page rule should forward.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -3407,8 +3091,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -3417,13 +3100,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to which the page rule should forward.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -3432,8 +3113,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3442,13 +3122,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to which the page rule should forward.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -3457,8 +3135,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code to use for the redirection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -3467,15 +3144,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to which the page rule should forward.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pageruleactionsminify">Page<wbr>Rule<wbr>Actions<wbr>Minify</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="css_csharp">
 <a href="#css_csharp" style="color: inherit; text-decoration: inherit;">Css</a>
@@ -3484,8 +3159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether CSS should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_csharp">
 <a href="#html_csharp" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -3494,8 +3168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether HTML should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="js_csharp">
 <a href="#js_csharp" style="color: inherit; text-decoration: inherit;">Js</a>
@@ -3504,13 +3177,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether Javascript should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="css_go">
 <a href="#css_go" style="color: inherit; text-decoration: inherit;">Css</a>
@@ -3519,8 +3190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether CSS should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_go">
 <a href="#html_go" style="color: inherit; text-decoration: inherit;">Html</a>
@@ -3529,8 +3199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether HTML should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="js_go">
 <a href="#js_go" style="color: inherit; text-decoration: inherit;">Js</a>
@@ -3539,13 +3208,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether Javascript should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="css_nodejs">
 <a href="#css_nodejs" style="color: inherit; text-decoration: inherit;">css</a>
@@ -3554,8 +3221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether CSS should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_nodejs">
 <a href="#html_nodejs" style="color: inherit; text-decoration: inherit;">html</a>
@@ -3564,8 +3230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether HTML should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="js_nodejs">
 <a href="#js_nodejs" style="color: inherit; text-decoration: inherit;">js</a>
@@ -3574,13 +3239,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether Javascript should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="css_python">
 <a href="#css_python" style="color: inherit; text-decoration: inherit;">css</a>
@@ -3589,8 +3252,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether CSS should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="html_python">
 <a href="#html_python" style="color: inherit; text-decoration: inherit;">html</a>
@@ -3599,8 +3261,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether HTML should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="js_python">
 <a href="#js_python" style="color: inherit; text-decoration: inherit;">js</a>
@@ -3609,8 +3270,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether Javascript should be minified. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

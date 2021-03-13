@@ -53,8 +53,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetaudience_csharp">
 <a href="#targetaudience_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Audience</a>
@@ -63,8 +62,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience claim for the `id_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegates_csharp">
 <a href="#delegates_csharp" style="color: inherit; text-decoration: inherit;">Delegates</a>
@@ -73,8 +71,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeemail_csharp">
 <a href="#includeemail_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Email</a>
@@ -83,8 +80,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include the verified email in the claim. Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccount_csharp">
 <a href="#targetserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Account</a>
@@ -93,13 +89,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account being impersonated.  Used only when using impersonation mode.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetaudience_go">
 <a href="#targetaudience_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Audience</a>
@@ -108,8 +102,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience claim for the `id_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegates_go">
 <a href="#delegates_go" style="color: inherit; text-decoration: inherit;">Delegates</a>
@@ -118,8 +111,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeemail_go">
 <a href="#includeemail_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Email</a>
@@ -128,8 +120,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include the verified email in the claim. Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccount_go">
 <a href="#targetserviceaccount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Account</a>
@@ -138,13 +129,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account being impersonated.  Used only when using impersonation mode.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetaudience_nodejs">
 <a href="#targetaudience_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Audience</a>
@@ -153,8 +142,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience claim for the `id_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegates_nodejs">
 <a href="#delegates_nodejs" style="color: inherit; text-decoration: inherit;">delegates</a>
@@ -163,8 +151,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeemail_nodejs">
 <a href="#includeemail_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Email</a>
@@ -173,8 +160,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include the verified email in the claim. Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccount_nodejs">
 <a href="#targetserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Account</a>
@@ -183,13 +169,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of the service account being impersonated.  Used only when using impersonation mode.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_audience_python">
 <a href="#target_audience_python" style="color: inherit; text-decoration: inherit;">target_<wbr>audience</a>
@@ -198,8 +182,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audience claim for the `id_token`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegates_python">
 <a href="#delegates_python" style="color: inherit; text-decoration: inherit;">delegates</a>
@@ -208,8 +191,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_email_python">
 <a href="#include_email_python" style="color: inherit; text-decoration: inherit;">include_<wbr>email</a>
@@ -218,8 +200,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include the verified email in the claim. Used only when using impersonation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_service_account_python">
 <a href="#target_service_account_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>account</a>
@@ -228,8 +209,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of the service account being impersonated.  Used only when using impersonation mode.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -242,8 +222,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -252,8 +231,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idtoken_csharp">
 <a href="#idtoken_csharp" style="color: inherit; text-decoration: inherit;">Id<wbr>Token</a>
@@ -262,8 +240,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `id_token` representing the new generated identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetaudience_csharp">
 <a href="#targetaudience_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Audience</a>
@@ -271,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegates_csharp">
 <a href="#delegates_csharp" style="color: inherit; text-decoration: inherit;">Delegates</a>
@@ -280,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includeemail_csharp">
 <a href="#includeemail_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Email</a>
@@ -289,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetserviceaccount_csharp">
 <a href="#targetserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Account</a>
@@ -298,13 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -313,8 +285,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idtoken_go">
 <a href="#idtoken_go" style="color: inherit; text-decoration: inherit;">Id<wbr>Token</a>
@@ -323,8 +294,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `id_token` representing the new generated identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetaudience_go">
 <a href="#targetaudience_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Audience</a>
@@ -332,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegates_go">
 <a href="#delegates_go" style="color: inherit; text-decoration: inherit;">Delegates</a>
@@ -341,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includeemail_go">
 <a href="#includeemail_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Email</a>
@@ -350,8 +318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetserviceaccount_go">
 <a href="#targetserviceaccount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Account</a>
@@ -359,13 +326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -374,8 +339,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="idtoken_nodejs">
 <a href="#idtoken_nodejs" style="color: inherit; text-decoration: inherit;">id<wbr>Token</a>
@@ -384,8 +348,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `id_token` representing the new generated identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetaudience_nodejs">
 <a href="#targetaudience_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Audience</a>
@@ -393,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegates_nodejs">
 <a href="#delegates_nodejs" style="color: inherit; text-decoration: inherit;">delegates</a>
@@ -402,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includeemail_nodejs">
 <a href="#includeemail_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Email</a>
@@ -411,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetserviceaccount_nodejs">
 <a href="#targetserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Account</a>
@@ -420,13 +380,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -435,8 +393,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_token_python">
 <a href="#id_token_python" style="color: inherit; text-decoration: inherit;">id_<wbr>token</a>
@@ -445,8 +402,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `id_token` representing the new generated identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_audience_python">
 <a href="#target_audience_python" style="color: inherit; text-decoration: inherit;">target_<wbr>audience</a>
@@ -454,8 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delegates_python">
 <a href="#delegates_python" style="color: inherit; text-decoration: inherit;">delegates</a>
@@ -463,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="include_email_python">
 <a href="#include_email_python" style="color: inherit; text-decoration: inherit;">include_<wbr>email</a>
@@ -472,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_service_account_python">
 <a href="#target_service_account_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>account</a>
@@ -481,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

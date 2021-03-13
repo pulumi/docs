@@ -274,8 +274,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -284,8 +283,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploygroup_csharp">
 <a href="#deploygroup_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>Group</a>
@@ -294,8 +292,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecuinfos_csharp">
 <a href="#ecuinfos_csharp" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Infos</a>
@@ -304,8 +301,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcestatus_csharp">
 <a href="#forcestatus_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Status</a>
@@ -314,13 +310,11 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -329,8 +323,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploygroup_go">
 <a href="#deploygroup_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>Group</a>
@@ -339,8 +332,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecuinfos_go">
 <a href="#ecuinfos_go" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Infos</a>
@@ -349,8 +341,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcestatus_go">
 <a href="#forcestatus_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Status</a>
@@ -359,13 +350,11 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -374,8 +363,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploygroup_nodejs">
 <a href="#deploygroup_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>Group</a>
@@ -384,8 +372,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecuinfos_nodejs">
 <a href="#ecuinfos_nodejs" style="color: inherit; text-decoration: inherit;">ecu<wbr>Infos</a>
@@ -394,8 +381,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcestatus_nodejs">
 <a href="#forcestatus_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Status</a>
@@ -404,13 +390,11 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -419,8 +403,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploy_group_python">
 <a href="#deploy_group_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>group</a>
@@ -429,8 +412,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecu_infos_python">
 <a href="#ecu_infos_python" style="color: inherit; text-decoration: inherit;">ecu_<wbr>infos</a>
@@ -439,8 +421,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_status_python">
 <a href="#force_status_python" style="color: inherit; text-decoration: inherit;">force_<wbr>status</a>
@@ -449,8 +430,7 @@ The ApplicationScale resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -461,8 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="eccinfo_csharp">
 <a href="#eccinfo_csharp" style="color: inherit; text-decoration: inherit;">Ecc<wbr>Info</a>
@@ -471,8 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -480,13 +458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="eccinfo_go">
 <a href="#eccinfo_go" style="color: inherit; text-decoration: inherit;">Ecc<wbr>Info</a>
@@ -495,8 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -504,13 +479,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="eccinfo_nodejs">
 <a href="#eccinfo_nodejs" style="color: inherit; text-decoration: inherit;">ecc<wbr>Info</a>
@@ -519,8 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -528,13 +500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ecc_info_python">
 <a href="#ecc_info_python" style="color: inherit; text-decoration: inherit;">ecc_<wbr>info</a>
@@ -543,8 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -552,8 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -680,8 +648,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_csharp">
 <a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -690,8 +657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploygroup_csharp">
 <a href="#state_deploygroup_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>Group</a>
@@ -700,8 +666,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eccinfo_csharp">
 <a href="#state_eccinfo_csharp" style="color: inherit; text-decoration: inherit;">Ecc<wbr>Info</a>
@@ -710,8 +675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecuinfos_csharp">
 <a href="#state_ecuinfos_csharp" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Infos</a>
@@ -720,8 +684,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcestatus_csharp">
 <a href="#state_forcestatus_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Status</a>
@@ -730,13 +693,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_go">
 <a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -745,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploygroup_go">
 <a href="#state_deploygroup_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>Group</a>
@@ -755,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eccinfo_go">
 <a href="#state_eccinfo_go" style="color: inherit; text-decoration: inherit;">Ecc<wbr>Info</a>
@@ -765,8 +724,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecuinfos_go">
 <a href="#state_ecuinfos_go" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Infos</a>
@@ -775,8 +733,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcestatus_go">
 <a href="#state_forcestatus_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Status</a>
@@ -785,13 +742,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_nodejs">
 <a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -800,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploygroup_nodejs">
 <a href="#state_deploygroup_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>Group</a>
@@ -810,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eccinfo_nodejs">
 <a href="#state_eccinfo_nodejs" style="color: inherit; text-decoration: inherit;">ecc<wbr>Info</a>
@@ -820,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecuinfos_nodejs">
 <a href="#state_ecuinfos_nodejs" style="color: inherit; text-decoration: inherit;">ecu<wbr>Infos</a>
@@ -830,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcestatus_nodejs">
 <a href="#state_forcestatus_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Status</a>
@@ -840,13 +791,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_id_python">
 <a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -855,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application that you want to deploy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploy_group_python">
 <a href="#state_deploy_group_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>group</a>
@@ -865,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance group to which you want to add ECS instances to scale out the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecc_info_python">
 <a href="#state_ecc_info_python" style="color: inherit; text-decoration: inherit;">ecc_<wbr>info</a>
@@ -875,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecu_infos_python">
 <a href="#state_ecu_infos_python" style="color: inherit; text-decoration: inherit;">ecu_<wbr>infos</a>
@@ -885,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_status_python">
 <a href="#state_force_status_python" style="color: inherit; text-decoration: inherit;">force_<wbr>status</a>
@@ -895,8 +840,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

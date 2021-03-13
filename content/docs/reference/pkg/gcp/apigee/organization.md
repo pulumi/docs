@@ -639,8 +639,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -649,8 +648,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsregion_csharp">
 <a href="#analyticsregion_csharp" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Region</a>
@@ -659,8 +657,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_csharp">
 <a href="#authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -671,8 +668,7 @@ The Organization resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -681,8 +677,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -691,8 +686,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimedatabaseencryptionkeyname_csharp">
 <a href="#runtimedatabaseencryptionkeyname_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
@@ -704,8 +698,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimetype_csharp">
 <a href="#runtimetype_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Type</a>
@@ -716,13 +709,11 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -731,8 +722,7 @@ Possible values are `CLOUD` and `HYBRID`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsregion_go">
 <a href="#analyticsregion_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Region</a>
@@ -741,8 +731,7 @@ Possible values are `CLOUD` and `HYBRID`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_go">
 <a href="#authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -753,8 +742,7 @@ Possible values are `CLOUD` and `HYBRID`.
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -763,8 +751,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -773,8 +760,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimedatabaseencryptionkeyname_go">
 <a href="#runtimedatabaseencryptionkeyname_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
@@ -786,8 +772,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimetype_go">
 <a href="#runtimetype_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Type</a>
@@ -798,13 +783,11 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -813,8 +796,7 @@ Possible values are `CLOUD` and `HYBRID`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analyticsregion_nodejs">
 <a href="#analyticsregion_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Region</a>
@@ -823,8 +805,7 @@ Possible values are `CLOUD` and `HYBRID`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_nodejs">
 <a href="#authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
@@ -835,8 +816,7 @@ Possible values are `CLOUD` and `HYBRID`.
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -845,8 +825,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -855,8 +834,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimedatabaseencryptionkeyname_nodejs">
 <a href="#runtimedatabaseencryptionkeyname_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
@@ -868,8 +846,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtimetype_nodejs">
 <a href="#runtimetype_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Type</a>
@@ -880,13 +857,11 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -895,8 +870,7 @@ Possible values are `CLOUD` and `HYBRID`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analytics_region_python">
 <a href="#analytics_region_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>region</a>
@@ -905,8 +879,7 @@ Possible values are `CLOUD` and `HYBRID`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_network_python">
 <a href="#authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
@@ -917,8 +890,7 @@ Possible values are `CLOUD` and `HYBRID`.
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -927,8 +899,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -937,8 +908,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_database_encryption_key_name_python">
 <a href="#runtime_database_encryption_key_name_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>database_<wbr>encryption_<wbr>key_<wbr>name</a>
@@ -950,8 +920,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runtime_type_python">
 <a href="#runtime_type_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>type</a>
@@ -962,8 +931,7 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -974,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cacertificate_csharp">
 <a href="#cacertificate_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -985,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -994,8 +960,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1004,8 +969,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptiontype_csharp">
 <a href="#subscriptiontype_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -1015,13 +979,11 @@ is CLOUD. A base64-encoded string.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cacertificate_go">
 <a href="#cacertificate_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -1031,8 +993,7 @@ purposes only) or paid (full subscription has been purchased).
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1040,8 +1001,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1050,8 +1010,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptiontype_go">
 <a href="#subscriptiontype_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -1061,13 +1020,11 @@ is CLOUD. A base64-encoded string.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cacertificate_nodejs">
 <a href="#cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
@@ -1077,8 +1034,7 @@ purposes only) or paid (full subscription has been purchased).
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1086,8 +1042,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1096,8 +1051,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscriptiontype_nodejs">
 <a href="#subscriptiontype_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Type</a>
@@ -1107,13 +1061,11 @@ is CLOUD. A base64-encoded string.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="ca_certificate_python">
 <a href="#ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
@@ -1123,8 +1075,7 @@ purposes only) or paid (full subscription has been purchased).
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1132,8 +1083,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1142,8 +1092,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subscription_type_python">
 <a href="#subscription_type_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>type</a>
@@ -1153,8 +1102,7 @@ is CLOUD. A base64-encoded string.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1281,8 +1229,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_analyticsregion_csharp">
 <a href="#state_analyticsregion_csharp" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Region</a>
@@ -1291,8 +1238,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_csharp">
 <a href="#state_authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -1303,8 +1249,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertificate_csharp">
 <a href="#state_cacertificate_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -1314,8 +1259,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1324,8 +1268,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1334,8 +1277,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1344,8 +1286,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1354,8 +1295,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimedatabaseencryptionkeyname_csharp">
 <a href="#state_runtimedatabaseencryptionkeyname_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
@@ -1367,8 +1307,7 @@ is CLOUD. A base64-encoded string.
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimetype_csharp">
 <a href="#state_runtimetype_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Type</a>
@@ -1379,8 +1318,7 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptiontype_csharp">
 <a href="#state_subscriptiontype_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -1390,13 +1328,11 @@ Possible values are `CLOUD` and `HYBRID`.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_analyticsregion_go">
 <a href="#state_analyticsregion_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Region</a>
@@ -1405,8 +1341,7 @@ purposes only) or paid (full subscription has been purchased).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_go">
 <a href="#state_authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
@@ -1417,8 +1352,7 @@ purposes only) or paid (full subscription has been purchased).
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertificate_go">
 <a href="#state_cacertificate_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate</a>
@@ -1428,8 +1362,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1438,8 +1371,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1448,8 +1380,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1458,8 +1389,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1468,8 +1398,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimedatabaseencryptionkeyname_go">
 <a href="#state_runtimedatabaseencryptionkeyname_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
@@ -1481,8 +1410,7 @@ is CLOUD. A base64-encoded string.
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimetype_go">
 <a href="#state_runtimetype_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Type</a>
@@ -1493,8 +1421,7 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptiontype_go">
 <a href="#state_subscriptiontype_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -1504,13 +1431,11 @@ Possible values are `CLOUD` and `HYBRID`.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_analyticsregion_nodejs">
 <a href="#state_analyticsregion_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Region</a>
@@ -1519,8 +1444,7 @@ purposes only) or paid (full subscription has been purchased).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_nodejs">
 <a href="#state_authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
@@ -1531,8 +1455,7 @@ purposes only) or paid (full subscription has been purchased).
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacertificate_nodejs">
 <a href="#state_cacertificate_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate</a>
@@ -1542,8 +1465,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1552,8 +1474,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1562,8 +1483,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1572,8 +1492,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1582,8 +1501,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimedatabaseencryptionkeyname_nodejs">
 <a href="#state_runtimedatabaseencryptionkeyname_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Database<wbr>Encryption<wbr>Key<wbr>Name</a>
@@ -1595,8 +1513,7 @@ is CLOUD. A base64-encoded string.
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtimetype_nodejs">
 <a href="#state_runtimetype_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Type</a>
@@ -1607,8 +1524,7 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptiontype_nodejs">
 <a href="#state_subscriptiontype_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Type</a>
@@ -1618,13 +1534,11 @@ Possible values are `CLOUD` and `HYBRID`.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_analytics_region_python">
 <a href="#state_analytics_region_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>region</a>
@@ -1633,8 +1547,7 @@ purposes only) or paid (full subscription has been purchased).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_network_python">
 <a href="#state_authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
@@ -1645,8 +1558,7 @@ purposes only) or paid (full subscription has been purchased).
     <dd>{{% md %}}Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
 See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
 Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_certificate_python">
 <a href="#state_ca_certificate_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate</a>
@@ -1656,8 +1568,7 @@ Valid only when `RuntimeType` is set to CLOUD. The value can be updated only whe
     </dt>
     <dd>{{% md %}}Output only. Base64-encoded public certificate for the root CA of the Apigee organization. Valid only when 'RuntimeType'
 is CLOUD. A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1666,8 +1577,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1676,8 +1586,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1686,8 +1595,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Name of the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1696,8 +1604,7 @@ is CLOUD. A base64-encoded string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID associated with the Apigee organization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_database_encryption_key_name_python">
 <a href="#state_runtime_database_encryption_key_name_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>database_<wbr>encryption_<wbr>key_<wbr>name</a>
@@ -1709,8 +1616,7 @@ is CLOUD. A base64-encoded string.
 Update is not allowed after the organization is created.
 If not specified, a Google-Managed encryption key will be used.
 Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_type_python">
 <a href="#state_runtime_type_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>type</a>
@@ -1721,8 +1627,7 @@ Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/
     <dd>{{% md %}}Runtime type of the Apigee organization based on the Apigee subscription purchased.
 Default value is `CLOUD`.
 Possible values are `CLOUD` and `HYBRID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_type_python">
 <a href="#state_subscription_type_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>type</a>
@@ -1732,8 +1637,7 @@ Possible values are `CLOUD` and `HYBRID`.
     </dt>
     <dd>{{% md %}}Output only. Subscription type of the Apigee organization. Valid values include trial (free, limited, and for evaluation
 purposes only) or paid (full subscription has been purchased).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

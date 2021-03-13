@@ -320,8 +320,7 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -330,8 +329,7 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -340,8 +338,7 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -351,8 +348,7 @@ The TempUrl resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -362,8 +358,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regenerate_csharp">
 <a href="#regenerate_csharp" style="color: inherit; text-decoration: inherit;">Regenerate</a>
@@ -374,8 +369,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -384,8 +378,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_csharp">
 <a href="#split_csharp" style="color: inherit; text-decoration: inherit;">Split</a>
@@ -393,13 +386,11 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -408,8 +399,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -418,8 +408,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -429,8 +418,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -440,8 +428,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regenerate_go">
 <a href="#regenerate_go" style="color: inherit; text-decoration: inherit;">Regenerate</a>
@@ -452,8 +439,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -462,8 +448,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_go">
 <a href="#split_go" style="color: inherit; text-decoration: inherit;">Split</a>
@@ -471,13 +456,11 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -486,8 +469,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -496,8 +478,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -507,8 +488,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -518,8 +498,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regenerate_nodejs">
 <a href="#regenerate_nodejs" style="color: inherit; text-decoration: inherit;">regenerate</a>
@@ -530,8 +509,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -540,8 +518,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_nodejs">
 <a href="#split_nodejs" style="color: inherit; text-decoration: inherit;">split</a>
@@ -549,13 +526,11 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -564,8 +539,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -574,8 +548,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -585,8 +558,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -596,8 +568,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regenerate_python">
 <a href="#regenerate_python" style="color: inherit; text-decoration: inherit;">regenerate</a>
@@ -608,8 +579,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -618,8 +588,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_python">
 <a href="#split_python" style="color: inherit; text-decoration: inherit;">split</a>
@@ -627,8 +596,7 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -639,8 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -648,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -658,13 +624,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,8 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -682,13 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -696,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -706,13 +666,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -720,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -730,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -858,8 +814,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_csharp">
 <a href="#state_container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -868,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_csharp">
 <a href="#state_method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -879,8 +833,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_csharp">
 <a href="#state_object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -889,8 +842,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regenerate_csharp">
 <a href="#state_regenerate_csharp" style="color: inherit; text-decoration: inherit;">Regenerate</a>
@@ -901,8 +853,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -911,8 +862,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_split_csharp">
 <a href="#state_split_csharp" style="color: inherit; text-decoration: inherit;">Split</a>
@@ -920,8 +870,7 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -931,8 +880,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -941,13 +889,11 @@ be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_go">
 <a href="#state_container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -956,8 +902,7 @@ be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_go">
 <a href="#state_method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -967,8 +912,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_go">
 <a href="#state_object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -977,8 +921,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regenerate_go">
 <a href="#state_regenerate_go" style="color: inherit; text-decoration: inherit;">Regenerate</a>
@@ -989,8 +932,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -999,8 +941,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_split_go">
 <a href="#state_split_go" style="color: inherit; text-decoration: inherit;">Split</a>
@@ -1008,8 +949,7 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1019,8 +959,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1029,13 +968,11 @@ be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_nodejs">
 <a href="#state_container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1044,8 +981,7 @@ be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_nodejs">
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1055,8 +991,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_nodejs">
 <a href="#state_object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -1065,8 +1000,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regenerate_nodejs">
 <a href="#state_regenerate_nodejs" style="color: inherit; text-decoration: inherit;">regenerate</a>
@@ -1077,8 +1011,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1087,8 +1020,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_split_nodejs">
 <a href="#state_split_nodejs" style="color: inherit; text-decoration: inherit;">split</a>
@@ -1096,8 +1028,7 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1107,8 +1038,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1117,13 +1047,11 @@ be valid.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_python">
 <a href="#state_container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1132,8 +1060,7 @@ be valid.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The container name the object belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_python">
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1143,8 +1070,7 @@ be valid.
     </dt>
     <dd>{{% md %}}The method allowed when accessing this URL.
 Valid values are `GET`, and `POST`. Default is `GET`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_python">
 <a href="#state_object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -1153,8 +1079,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object name the tempurl is for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regenerate_python">
 <a href="#state_regenerate_python" style="color: inherit; text-decoration: inherit;">regenerate</a>
@@ -1165,8 +1090,7 @@ Valid values are `GET`, and `POST`. Default is `GET`.
     <dd>{{% md %}}Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new
 ID and new URL. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1175,8 +1099,7 @@ ID and new URL. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the tempurl is located in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_split_python">
 <a href="#state_split_python" style="color: inherit; text-decoration: inherit;">split</a>
@@ -1184,8 +1107,7 @@ ID and new URL. Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1195,8 +1117,7 @@ ID and new URL. Defaults to false.
     </dt>
     <dd>{{% md %}}The TTL, in seconds, for the URL. For how long it should
 be valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1205,8 +1126,7 @@ be valid.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

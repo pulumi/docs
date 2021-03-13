@@ -400,8 +400,7 @@ The L7RuleV2 resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparetype_csharp">
 <a href="#comparetype_csharp" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
@@ -411,8 +410,7 @@ The L7RuleV2 resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="l7policyid_csharp">
 <a href="#l7policyid_csharp" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
@@ -422,8 +420,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -433,8 +430,7 @@ L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -444,8 +440,7 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -455,8 +450,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invert_csharp">
 <a href="#invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
@@ -466,8 +460,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -477,8 +470,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -490,8 +482,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -502,13 +493,11 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparetype_go">
 <a href="#comparetype_go" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
@@ -518,8 +507,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="l7policyid_go">
 <a href="#l7policyid_go" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
@@ -529,8 +517,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -540,8 +527,7 @@ L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -551,8 +537,7 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -562,8 +547,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invert_go">
 <a href="#invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
@@ -573,8 +557,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -584,8 +567,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -597,8 +579,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -609,13 +590,11 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="comparetype_nodejs">
 <a href="#comparetype_nodejs" style="color: inherit; text-decoration: inherit;">compare<wbr>Type</a>
@@ -625,8 +604,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="l7policyid_nodejs">
 <a href="#l7policyid_nodejs" style="color: inherit; text-decoration: inherit;">l7policy<wbr>Id</a>
@@ -636,8 +614,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -647,8 +624,7 @@ L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -658,8 +634,7 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -669,8 +644,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invert_nodejs">
 <a href="#invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
@@ -680,8 +654,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -691,8 +664,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -704,8 +676,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -716,13 +687,11 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compare_type_python">
 <a href="#compare_type_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>type</a>
@@ -732,8 +701,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="l7policy_id_python">
 <a href="#l7policy_id_python" style="color: inherit; text-decoration: inherit;">l7policy_<wbr>id</a>
@@ -743,8 +711,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -754,8 +721,7 @@ L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -765,8 +731,7 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -776,8 +741,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invert_python">
 <a href="#invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
@@ -787,8 +751,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -798,8 +761,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -811,8 +773,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -823,8 +784,7 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -835,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -844,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="listenerid_csharp">
 <a href="#listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -854,13 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -868,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="listenerid_go">
 <a href="#listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -878,13 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -892,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="listenerid_nodejs">
 <a href="#listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
@@ -902,13 +854,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -916,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="listener_id_python">
 <a href="#listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
@@ -926,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1054,8 +1002,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1065,8 +1012,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparetype_csharp">
 <a href="#state_comparetype_csharp" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
@@ -1076,8 +1022,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invert_csharp">
 <a href="#state_invert_csharp" style="color: inherit; text-decoration: inherit;">Invert</a>
@@ -1087,8 +1032,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1098,8 +1042,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policyid_csharp">
 <a href="#state_l7policyid_csharp" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
@@ -1109,8 +1052,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_csharp">
 <a href="#state_listenerid_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -1119,8 +1061,7 @@ L7 Rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1132,8 +1073,7 @@ L7 Rule.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1144,8 +1084,7 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1155,8 +1094,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_csharp">
 <a href="#state_value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1166,13 +1104,11 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1182,8 +1118,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparetype_go">
 <a href="#state_comparetype_go" style="color: inherit; text-decoration: inherit;">Compare<wbr>Type</a>
@@ -1193,8 +1128,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invert_go">
 <a href="#state_invert_go" style="color: inherit; text-decoration: inherit;">Invert</a>
@@ -1204,8 +1138,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
 <a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1215,8 +1148,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policyid_go">
 <a href="#state_l7policyid_go" style="color: inherit; text-decoration: inherit;">L7policy<wbr>Id</a>
@@ -1226,8 +1158,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_go">
 <a href="#state_listenerid_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Id</a>
@@ -1236,8 +1167,7 @@ L7 Rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1249,8 +1179,7 @@ L7 Rule.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1261,8 +1190,7 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1272,8 +1200,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_go">
 <a href="#state_value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1283,13 +1210,11 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1299,8 +1224,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comparetype_nodejs">
 <a href="#state_comparetype_nodejs" style="color: inherit; text-decoration: inherit;">compare<wbr>Type</a>
@@ -1310,8 +1234,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invert_nodejs">
 <a href="#state_invert_nodejs" style="color: inherit; text-decoration: inherit;">invert</a>
@@ -1321,8 +1244,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1332,8 +1254,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policyid_nodejs">
 <a href="#state_l7policyid_nodejs" style="color: inherit; text-decoration: inherit;">l7policy<wbr>Id</a>
@@ -1343,8 +1264,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerid_nodejs">
 <a href="#state_listenerid_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Id</a>
@@ -1353,8 +1273,7 @@ L7 Rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1366,8 +1285,7 @@ L7 Rule.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1378,8 +1296,7 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1389,8 +1306,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_nodejs">
 <a href="#state_value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1400,13 +1316,11 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1416,8 +1330,7 @@ compare.
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compare_type_python">
 <a href="#state_compare_type_python" style="color: inherit; text-decoration: inherit;">compare_<wbr>type</a>
@@ -1427,8 +1340,7 @@ A valid value is true (UP) or false (DOWN).
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invert_python">
 <a href="#state_invert_python" style="color: inherit; text-decoration: inherit;">invert</a>
@@ -1438,8 +1350,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1449,8 +1360,7 @@ true, equal to would become not equal to. Default is false.
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_l7policy_id_python">
 <a href="#state_l7policy_id_python" style="color: inherit; text-decoration: inherit;">l7policy_<wbr>id</a>
@@ -1460,8 +1370,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_id_python">
 <a href="#state_listener_id_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>id</a>
@@ -1470,8 +1379,7 @@ L7 Rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1483,8 +1391,7 @@ L7 Rule.
 A Networking client is needed to create an . If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1495,8 +1402,7 @@ L7 Rule.
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1506,8 +1412,7 @@ other than their own. Changing this creates a new L7 Rule.
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_python">
 <a href="#state_value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1517,8 +1422,7 @@ HOST\_NAME or PATH.
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

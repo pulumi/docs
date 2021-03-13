@@ -439,8 +439,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -449,8 +448,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolid_csharp">
 <a href="#userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -459,8 +457,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_csharp">
 <a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -469,13 +466,11 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -484,8 +479,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolid_go">
 <a href="#userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -494,8 +488,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_go">
 <a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -504,13 +497,11 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -519,8 +510,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userpoolid_nodejs">
 <a href="#userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
@@ -529,8 +519,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_nodejs">
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
@@ -539,13 +528,11 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -554,8 +541,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_pool_id_python">
 <a href="#user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
@@ -564,8 +550,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_arn_python">
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
@@ -574,8 +559,7 @@ The UserPoolDomain resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsaccountid_csharp">
 <a href="#awsaccountid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Id</a>
@@ -596,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontdistributionarn_csharp">
 <a href="#cloudfrontdistributionarn_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Distribution<wbr>Arn</a>
@@ -606,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -615,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3bucket_csharp">
 <a href="#s3bucket_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -625,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -635,13 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsaccountid_go">
 <a href="#awsaccountid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Id</a>
@@ -650,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontdistributionarn_go">
 <a href="#cloudfrontdistributionarn_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Distribution<wbr>Arn</a>
@@ -660,8 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -669,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3bucket_go">
 <a href="#s3bucket_go" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -679,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -689,13 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsaccountid_nodejs">
 <a href="#awsaccountid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Account<wbr>Id</a>
@@ -704,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontdistributionarn_nodejs">
 <a href="#cloudfrontdistributionarn_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Distribution<wbr>Arn</a>
@@ -714,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -723,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3bucket_nodejs">
 <a href="#s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
@@ -733,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -743,13 +710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aws_account_id_python">
 <a href="#aws_account_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>account_<wbr>id</a>
@@ -758,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfront_distribution_arn_python">
 <a href="#cloudfront_distribution_arn_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>distribution_<wbr>arn</a>
@@ -768,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -777,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="s3_bucket_python">
 <a href="#s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
@@ -787,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -797,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -925,8 +885,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsaccountid_csharp">
 <a href="#state_awsaccountid_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Id</a>
@@ -935,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_csharp">
 <a href="#state_certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -945,8 +903,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontdistributionarn_csharp">
 <a href="#state_cloudfrontdistributionarn_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Distribution<wbr>Arn</a>
@@ -955,8 +912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -965,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_csharp">
 <a href="#state_s3bucket_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -975,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpoolid_csharp">
 <a href="#state_userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -985,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -995,13 +948,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsaccountid_go">
 <a href="#state_awsaccountid_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Id</a>
@@ -1010,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_go">
 <a href="#state_certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -1020,8 +970,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontdistributionarn_go">
 <a href="#state_cloudfrontdistributionarn_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Distribution<wbr>Arn</a>
@@ -1030,8 +979,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1040,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_go">
 <a href="#state_s3bucket_go" style="color: inherit; text-decoration: inherit;">S3Bucket</a>
@@ -1050,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpoolid_go">
 <a href="#state_userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -1060,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1070,13 +1015,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsaccountid_nodejs">
 <a href="#state_awsaccountid_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Account<wbr>Id</a>
@@ -1085,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_nodejs">
 <a href="#state_certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
@@ -1095,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontdistributionarn_nodejs">
 <a href="#state_cloudfrontdistributionarn_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Distribution<wbr>Arn</a>
@@ -1105,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1115,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3bucket_nodejs">
 <a href="#state_s3bucket_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket</a>
@@ -1125,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpoolid_nodejs">
 <a href="#state_userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
@@ -1135,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1145,13 +1082,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aws_account_id_python">
 <a href="#state_aws_account_id_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>account_<wbr>id</a>
@@ -1160,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the user pool owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_arn_python">
 <a href="#state_certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
@@ -1170,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfront_distribution_arn_python">
 <a href="#state_cloudfront_distribution_arn_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>distribution_<wbr>arn</a>
@@ -1180,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1190,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3_bucket_python">
 <a href="#state_s3_bucket_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket</a>
@@ -1200,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 bucket where the static files for this domain are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_pool_id_python">
 <a href="#state_user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
@@ -1210,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user pool ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1220,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

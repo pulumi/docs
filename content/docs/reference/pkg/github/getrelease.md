@@ -153,8 +153,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -163,8 +162,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -173,8 +171,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository to retrieve the release from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrieveby_csharp">
 <a href="#retrieveby_csharp" style="color: inherit; text-decoration: inherit;">Retrieve<wbr>By</a>
@@ -183,8 +180,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes how to fetch the release. Valid values are `id`, `tag`, `latest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releaseid_csharp">
 <a href="#releaseid_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Id</a>
@@ -193,8 +189,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the release to retrieve. Must be specified when `retrieve_by` = `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releasetag_csharp">
 <a href="#releasetag_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Tag</a>
@@ -203,13 +198,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag of the release to retrieve. Must be specified when `retrieve_by` = `tag`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -218,8 +211,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -228,8 +220,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository to retrieve the release from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrieveby_go">
 <a href="#retrieveby_go" style="color: inherit; text-decoration: inherit;">Retrieve<wbr>By</a>
@@ -238,8 +229,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes how to fetch the release. Valid values are `id`, `tag`, `latest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releaseid_go">
 <a href="#releaseid_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Id</a>
@@ -248,8 +238,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the release to retrieve. Must be specified when `retrieve_by` = `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releasetag_go">
 <a href="#releasetag_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Tag</a>
@@ -258,13 +247,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag of the release to retrieve. Must be specified when `retrieve_by` = `tag`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -273,8 +260,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -283,8 +269,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository to retrieve the release from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrieveby_nodejs">
 <a href="#retrieveby_nodejs" style="color: inherit; text-decoration: inherit;">retrieve<wbr>By</a>
@@ -293,8 +278,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes how to fetch the release. Valid values are `id`, `tag`, `latest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releaseid_nodejs">
 <a href="#releaseid_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Id</a>
@@ -303,8 +287,7 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the release to retrieve. Must be specified when `retrieve_by` = `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="releasetag_nodejs">
 <a href="#releasetag_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Tag</a>
@@ -313,13 +296,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag of the release to retrieve. Must be specified when `retrieve_by` = `tag`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -328,8 +309,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Owner of the repository.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -338,8 +318,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the repository to retrieve the release from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrieve_by_python">
 <a href="#retrieve_by_python" style="color: inherit; text-decoration: inherit;">retrieve_<wbr>by</a>
@@ -348,8 +327,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes how to fetch the release. Valid values are `id`, `tag`, `latest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="release_id_python">
 <a href="#release_id_python" style="color: inherit; text-decoration: inherit;">release_<wbr>id</a>
@@ -358,8 +336,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the release to retrieve. Must be specified when `retrieve_by` = `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="release_tag_python">
 <a href="#release_tag_python" style="color: inherit; text-decoration: inherit;">release_<wbr>tag</a>
@@ -368,8 +345,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag of the release to retrieve. Must be specified when `retrieve_by` = `tag`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -382,8 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertsurl_csharp">
 <a href="#assertsurl_csharp" style="color: inherit; text-decoration: inherit;">Asserts<wbr>Url</a>
@@ -392,8 +367,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of any associated assets with the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -402,8 +376,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contents of the description (body) of a release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -412,8 +385,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of release creation
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="draft_csharp">
 <a href="#draft_csharp" style="color: inherit; text-decoration: inherit;">Draft</a>
@@ -422,8 +394,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a draft
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_csharp">
 <a href="#htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -432,8 +403,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL directing to detailed information on the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,8 +412,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -452,8 +421,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -461,8 +429,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prerelease_csharp">
 <a href="#prerelease_csharp" style="color: inherit; text-decoration: inherit;">Prerelease</a>
@@ -471,8 +438,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a prerelease
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishedat_csharp">
 <a href="#publishedat_csharp" style="color: inherit; text-decoration: inherit;">Published<wbr>At</a>
@@ -481,8 +447,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of release publishing
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -490,8 +455,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrieveby_csharp">
 <a href="#retrieveby_csharp" style="color: inherit; text-decoration: inherit;">Retrieve<wbr>By</a>
@@ -499,8 +463,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tarballurl_csharp">
 <a href="#tarballurl_csharp" style="color: inherit; text-decoration: inherit;">Tarball<wbr>Url</a>
@@ -509,8 +472,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `tar.gz` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcommitish_csharp">
 <a href="#targetcommitish_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Commitish</a>
@@ -519,8 +481,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commitish value that determines where the Git release is created from
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uploadurl_csharp">
 <a href="#uploadurl_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Url</a>
@@ -529,8 +490,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to upload Assets to the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -539,8 +499,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base URL of the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zipballurl_csharp">
 <a href="#zipballurl_csharp" style="color: inherit; text-decoration: inherit;">Zipball<wbr>Url</a>
@@ -549,8 +508,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `zip` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releaseid_csharp">
 <a href="#releaseid_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Id</a>
@@ -559,8 +517,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releasetag_csharp">
 <a href="#releasetag_csharp" style="color: inherit; text-decoration: inherit;">Release<wbr>Tag</a>
@@ -569,13 +526,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag of release
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertsurl_go">
 <a href="#assertsurl_go" style="color: inherit; text-decoration: inherit;">Asserts<wbr>Url</a>
@@ -584,8 +539,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of any associated assets with the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -594,8 +548,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contents of the description (body) of a release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -604,8 +557,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of release creation
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="draft_go">
 <a href="#draft_go" style="color: inherit; text-decoration: inherit;">Draft</a>
@@ -614,8 +566,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a draft
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_go">
 <a href="#htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -624,8 +575,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL directing to detailed information on the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +584,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -644,8 +593,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -653,8 +601,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prerelease_go">
 <a href="#prerelease_go" style="color: inherit; text-decoration: inherit;">Prerelease</a>
@@ -663,8 +610,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a prerelease
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishedat_go">
 <a href="#publishedat_go" style="color: inherit; text-decoration: inherit;">Published<wbr>At</a>
@@ -673,8 +619,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of release publishing
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -682,8 +627,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrieveby_go">
 <a href="#retrieveby_go" style="color: inherit; text-decoration: inherit;">Retrieve<wbr>By</a>
@@ -691,8 +635,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tarballurl_go">
 <a href="#tarballurl_go" style="color: inherit; text-decoration: inherit;">Tarball<wbr>Url</a>
@@ -701,8 +644,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `tar.gz` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcommitish_go">
 <a href="#targetcommitish_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Commitish</a>
@@ -711,8 +653,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commitish value that determines where the Git release is created from
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uploadurl_go">
 <a href="#uploadurl_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Url</a>
@@ -721,8 +662,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to upload Assets to the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -731,8 +671,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base URL of the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zipballurl_go">
 <a href="#zipballurl_go" style="color: inherit; text-decoration: inherit;">Zipball<wbr>Url</a>
@@ -741,8 +680,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `zip` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releaseid_go">
 <a href="#releaseid_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Id</a>
@@ -751,8 +689,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releasetag_go">
 <a href="#releasetag_go" style="color: inherit; text-decoration: inherit;">Release<wbr>Tag</a>
@@ -761,13 +698,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag of release
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assertsurl_nodejs">
 <a href="#assertsurl_nodejs" style="color: inherit; text-decoration: inherit;">asserts<wbr>Url</a>
@@ -776,8 +711,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of any associated assets with the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
@@ -786,8 +720,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contents of the description (body) of a release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -796,8 +729,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of release creation
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="draft_nodejs">
 <a href="#draft_nodejs" style="color: inherit; text-decoration: inherit;">draft</a>
@@ -806,8 +738,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a draft
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="htmlurl_nodejs">
 <a href="#htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
@@ -816,8 +747,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL directing to detailed information on the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,8 +756,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -836,8 +765,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -845,8 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prerelease_nodejs">
 <a href="#prerelease_nodejs" style="color: inherit; text-decoration: inherit;">prerelease</a>
@@ -855,8 +782,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a prerelease
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishedat_nodejs">
 <a href="#publishedat_nodejs" style="color: inherit; text-decoration: inherit;">published<wbr>At</a>
@@ -865,8 +791,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date of release publishing
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -874,8 +799,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrieveby_nodejs">
 <a href="#retrieveby_nodejs" style="color: inherit; text-decoration: inherit;">retrieve<wbr>By</a>
@@ -883,8 +807,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tarballurl_nodejs">
 <a href="#tarballurl_nodejs" style="color: inherit; text-decoration: inherit;">tarball<wbr>Url</a>
@@ -893,8 +816,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `tar.gz` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetcommitish_nodejs">
 <a href="#targetcommitish_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Commitish</a>
@@ -903,8 +825,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commitish value that determines where the Git release is created from
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uploadurl_nodejs">
 <a href="#uploadurl_nodejs" style="color: inherit; text-decoration: inherit;">upload<wbr>Url</a>
@@ -913,8 +834,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to upload Assets to the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -923,8 +843,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base URL of the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zipballurl_nodejs">
 <a href="#zipballurl_nodejs" style="color: inherit; text-decoration: inherit;">zipball<wbr>Url</a>
@@ -933,8 +852,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `zip` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releaseid_nodejs">
 <a href="#releaseid_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Id</a>
@@ -943,8 +861,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="releasetag_nodejs">
 <a href="#releasetag_nodejs" style="color: inherit; text-decoration: inherit;">release<wbr>Tag</a>
@@ -953,13 +870,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag of release
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="asserts_url_python">
 <a href="#asserts_url_python" style="color: inherit; text-decoration: inherit;">asserts_<wbr>url</a>
@@ -968,8 +883,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of any associated assets with the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
@@ -978,8 +892,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contents of the description (body) of a release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -988,8 +901,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date of release creation
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="draft_python">
 <a href="#draft_python" style="color: inherit; text-decoration: inherit;">draft</a>
@@ -998,8 +910,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a draft
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="html_url_python">
 <a href="#html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
@@ -1008,8 +919,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL directing to detailed information on the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1018,8 +928,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1028,8 +937,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1037,8 +945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="prerelease_python">
 <a href="#prerelease_python" style="color: inherit; text-decoration: inherit;">prerelease</a>
@@ -1047,8 +954,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(`Boolean`) indicates whether the release is a prerelease
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="published_at_python">
 <a href="#published_at_python" style="color: inherit; text-decoration: inherit;">published_<wbr>at</a>
@@ -1057,8 +963,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date of release publishing
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -1066,8 +971,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrieve_by_python">
 <a href="#retrieve_by_python" style="color: inherit; text-decoration: inherit;">retrieve_<wbr>by</a>
@@ -1075,8 +979,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tarball_url_python">
 <a href="#tarball_url_python" style="color: inherit; text-decoration: inherit;">tarball_<wbr>url</a>
@@ -1085,8 +988,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `tar.gz` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_commitish_python">
 <a href="#target_commitish_python" style="color: inherit; text-decoration: inherit;">target_<wbr>commitish</a>
@@ -1095,8 +997,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commitish value that determines where the Git release is created from
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="upload_url_python">
 <a href="#upload_url_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>url</a>
@@ -1105,8 +1006,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL that can be used to upload Assets to the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1115,8 +1015,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base URL of the release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zipball_url_python">
 <a href="#zipball_url_python" style="color: inherit; text-decoration: inherit;">zipball_<wbr>url</a>
@@ -1125,8 +1024,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Download URL of a specific release in `zip` format
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="release_id_python">
 <a href="#release_id_python" style="color: inherit; text-decoration: inherit;">release_<wbr>id</a>
@@ -1135,8 +1033,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of release
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="release_tag_python">
 <a href="#release_tag_python" style="color: inherit; text-decoration: inherit;">release_<wbr>tag</a>
@@ -1145,8 +1042,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag of release
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -17,11 +17,17 @@ Provides a NS1 Data Source resource. This can be used to create, modify, and del
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Ns1 = Pulumi.Ns1;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -63,9 +72,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_ns1 as ns1
@@ -73,9 +85,12 @@ import pulumi_ns1 as ns1
 example = ns1.DataSource("example", sourcetype="nsone_v1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -86,9 +101,16 @@ const example = new ns1.DataSource("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DataSource Resource {#create}
@@ -113,9 +135,7 @@ const example = new ns1.DataSource("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -123,9 +143,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -133,9 +151,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -143,10 +159,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -172,9 +185,7 @@ const example = new ns1.DataSource("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -182,9 +193,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -192,9 +201,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -202,9 +209,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -212,18 +217,13 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -231,9 +231,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -241,9 +239,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -251,10 +247,7 @@ const example = new ns1.DataSource("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -269,9 +262,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -280,8 +271,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -291,8 +281,7 @@ The DataSource resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -301,14 +290,11 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -317,8 +303,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -328,8 +313,7 @@ matching the specification in `config` from /data/sourcetypes.
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -338,14 +322,11 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -354,8 +335,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -365,8 +345,7 @@ matching the specification in `config` from /data/sourcetypes.
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -375,14 +354,11 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourcetype_python">
 <a href="#sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -391,8 +367,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -402,8 +377,7 @@ matching the specification in `config` from /data/sourcetypes.
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -412,8 +386,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -424,9 +397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -434,14 +405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -449,14 +417,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -464,14 +429,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -479,8 +441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -607,9 +568,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -619,8 +578,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -629,8 +587,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_csharp">
 <a href="#state_sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -639,14 +596,11 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -656,8 +610,7 @@ matching the specification in `config` from /data/sourcetypes.
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -666,8 +619,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_go">
 <a href="#state_sourcetype_go" style="color: inherit; text-decoration: inherit;">Sourcetype</a>
@@ -676,14 +628,11 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -693,8 +642,7 @@ matching the specification in `config` from /data/sourcetypes.
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -703,8 +651,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_nodejs">
 <a href="#state_sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -713,14 +660,11 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -730,8 +674,7 @@ matching the specification in `config` from /data/sourcetypes.
     </dt>
     <dd>{{% md %}}The data source configuration, determined by its type,
 matching the specification in `config` from /data/sourcetypes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -740,8 +683,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free form name of the data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetype_python">
 <a href="#state_sourcetype_python" style="color: inherit; text-decoration: inherit;">sourcetype</a>
@@ -750,8 +692,7 @@ matching the specification in `config` from /data/sourcetypes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data sources type, listed in API endpoint https://api.nsone.net/v1/data/sourcetypes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

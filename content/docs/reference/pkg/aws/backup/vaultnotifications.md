@@ -367,8 +367,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupvaultevents_csharp">
 <a href="#backupvaultevents_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
@@ -377,8 +376,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupvaultname_csharp">
 <a href="#backupvaultname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
@@ -387,8 +385,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snstopicarn_csharp">
 <a href="#snstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
@@ -397,13 +394,11 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupvaultevents_go">
 <a href="#backupvaultevents_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
@@ -412,8 +407,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupvaultname_go">
 <a href="#backupvaultname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
@@ -422,8 +416,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snstopicarn_go">
 <a href="#snstopicarn_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
@@ -432,13 +425,11 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupvaultevents_nodejs">
 <a href="#backupvaultevents_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Events</a>
@@ -447,8 +438,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backupvaultname_nodejs">
 <a href="#backupvaultname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Name</a>
@@ -457,8 +447,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snstopicarn_nodejs">
 <a href="#snstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Arn</a>
@@ -467,13 +456,11 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_vault_events_python">
 <a href="#backup_vault_events_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>events</a>
@@ -482,8 +469,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backup_vault_name_python">
 <a href="#backup_vault_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>name</a>
@@ -492,8 +478,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sns_topic_arn_python">
 <a href="#sns_topic_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>arn</a>
@@ -502,8 +487,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupvaultarn_csharp">
 <a href="#backupvaultarn_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
@@ -524,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -533,13 +515,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupvaultarn_go">
 <a href="#backupvaultarn_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
@@ -548,8 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -557,13 +536,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupvaultarn_nodejs">
 <a href="#backupvaultarn_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Arn</a>
@@ -572,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -581,13 +557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backup_vault_arn_python">
 <a href="#backup_vault_arn_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>arn</a>
@@ -596,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -605,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -733,8 +705,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultarn_csharp">
 <a href="#state_backupvaultarn_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
@@ -743,8 +714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultevents_csharp">
 <a href="#state_backupvaultevents_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
@@ -753,8 +723,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultname_csharp">
 <a href="#state_backupvaultname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
@@ -763,8 +732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snstopicarn_csharp">
 <a href="#state_snstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
@@ -773,13 +741,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultarn_go">
 <a href="#state_backupvaultarn_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
@@ -788,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultevents_go">
 <a href="#state_backupvaultevents_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
@@ -798,8 +763,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultname_go">
 <a href="#state_backupvaultname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
@@ -808,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snstopicarn_go">
 <a href="#state_snstopicarn_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
@@ -818,13 +781,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultarn_nodejs">
 <a href="#state_backupvaultarn_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Arn</a>
@@ -833,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultevents_nodejs">
 <a href="#state_backupvaultevents_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Events</a>
@@ -843,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupvaultname_nodejs">
 <a href="#state_backupvaultname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Name</a>
@@ -853,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snstopicarn_nodejs">
 <a href="#state_snstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Arn</a>
@@ -863,13 +821,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_vault_arn_python">
 <a href="#state_backup_vault_arn_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>arn</a>
@@ -878,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backup_vault_events_python">
 <a href="#state_backup_vault_events_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>events</a>
@@ -888,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backup_vault_name_python">
 <a href="#state_backup_vault_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>name</a>
@@ -898,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sns_topic_arn_python">
 <a href="#state_sns_topic_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>arn</a>
@@ -908,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

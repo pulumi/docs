@@ -170,8 +170,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managementcluster_csharp">
 <a href="#managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
@@ -181,8 +180,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networksubnetcidr_csharp">
 <a href="#networksubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Subnet<wbr>Cidr</a>
@@ -191,8 +189,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -201,8 +198,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -211,8 +207,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetconnectionenabled_csharp">
 <a href="#internetconnectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Connection<wbr>Enabled</a>
@@ -222,8 +217,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -232,8 +226,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -242,8 +235,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsxtpassword_csharp">
 <a href="#nsxtpassword_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -252,8 +244,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -262,8 +253,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenterpassword_csharp">
 <a href="#vcenterpassword_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -272,13 +262,11 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managementcluster_go">
 <a href="#managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
@@ -288,8 +276,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networksubnetcidr_go">
 <a href="#networksubnetcidr_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Subnet<wbr>Cidr</a>
@@ -298,8 +285,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -308,8 +294,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_go">
 <a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -318,8 +303,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetconnectionenabled_go">
 <a href="#internetconnectionenabled_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Connection<wbr>Enabled</a>
@@ -329,8 +313,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -339,8 +322,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -349,8 +331,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsxtpassword_go">
 <a href="#nsxtpassword_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -359,8 +340,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -369,8 +349,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenterpassword_go">
 <a href="#vcenterpassword_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -379,13 +358,11 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managementcluster_nodejs">
 <a href="#managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
@@ -395,8 +372,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networksubnetcidr_nodejs">
 <a href="#networksubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Subnet<wbr>Cidr</a>
@@ -405,8 +381,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -415,8 +390,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -425,8 +399,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetconnectionenabled_nodejs">
 <a href="#internetconnectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Connection<wbr>Enabled</a>
@@ -436,8 +409,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -446,8 +418,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -456,8 +427,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsxtpassword_nodejs">
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
@@ -466,8 +436,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -476,8 +445,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenterpassword_nodejs">
 <a href="#vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
@@ -486,13 +454,11 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="management_cluster_python">
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
@@ -502,8 +468,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_subnet_cidr_python">
 <a href="#network_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>subnet_<wbr>cidr</a>
@@ -512,8 +477,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -522,8 +486,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_name_python">
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -532,8 +495,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internet_connection_enabled_python">
 <a href="#internet_connection_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>connection_<wbr>enabled</a>
@@ -543,8 +505,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -553,8 +514,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -563,8 +523,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nsxt_password_python">
 <a href="#nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
@@ -573,8 +532,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -583,8 +541,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vcenter_password_python">
 <a href="#vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
@@ -593,8 +550,7 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -605,8 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="circuits_csharp">
 <a href="#circuits_csharp" style="color: inherit; text-decoration: inherit;">Circuits</a>
@@ -615,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatecloudcircuit">List&lt;Private<wbr>Cloud<wbr>Circuit&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hcxcloudmanagerendpoint_csharp">
 <a href="#hcxcloudmanagerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
@@ -625,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementsubnetcidr_csharp">
 <a href="#managementsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Subnet<wbr>Cidr</a>
@@ -644,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_csharp">
 <a href="#nsxtcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -654,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtmanagerendpoint_csharp">
 <a href="#nsxtmanagerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager<wbr>Endpoint</a>
@@ -664,8 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningsubnetcidr_csharp">
 <a href="#provisioningsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Subnet<wbr>Cidr</a>
@@ -674,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_csharp">
 <a href="#vcentercertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -684,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcsaendpoint_csharp">
 <a href="#vcsaendpoint_csharp" style="color: inherit; text-decoration: inherit;">Vcsa<wbr>Endpoint</a>
@@ -694,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotionsubnetcidr_csharp">
 <a href="#vmotionsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Subnet<wbr>Cidr</a>
@@ -704,13 +650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="circuits_go">
 <a href="#circuits_go" style="color: inherit; text-decoration: inherit;">Circuits</a>
@@ -719,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatecloudcircuit">[]Private<wbr>Cloud<wbr>Circuit</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hcxcloudmanagerendpoint_go">
 <a href="#hcxcloudmanagerendpoint_go" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
@@ -729,8 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -738,8 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementsubnetcidr_go">
 <a href="#managementsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Subnet<wbr>Cidr</a>
@@ -748,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_go">
 <a href="#nsxtcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -758,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtmanagerendpoint_go">
 <a href="#nsxtmanagerendpoint_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager<wbr>Endpoint</a>
@@ -768,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningsubnetcidr_go">
 <a href="#provisioningsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Subnet<wbr>Cidr</a>
@@ -778,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_go">
 <a href="#vcentercertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -788,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcsaendpoint_go">
 <a href="#vcsaendpoint_go" style="color: inherit; text-decoration: inherit;">Vcsa<wbr>Endpoint</a>
@@ -798,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotionsubnetcidr_go">
 <a href="#vmotionsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Subnet<wbr>Cidr</a>
@@ -808,13 +743,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="circuits_nodejs">
 <a href="#circuits_nodejs" style="color: inherit; text-decoration: inherit;">circuits</a>
@@ -823,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatecloudcircuit">Private<wbr>Cloud<wbr>Circuit[]</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hcxcloudmanagerendpoint_nodejs">
 <a href="#hcxcloudmanagerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
@@ -833,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -842,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementsubnetcidr_nodejs">
 <a href="#managementsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Subnet<wbr>Cidr</a>
@@ -852,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_nodejs">
 <a href="#nsxtcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -862,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtmanagerendpoint_nodejs">
 <a href="#nsxtmanagerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Manager<wbr>Endpoint</a>
@@ -872,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningsubnetcidr_nodejs">
 <a href="#provisioningsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Subnet<wbr>Cidr</a>
@@ -882,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_nodejs">
 <a href="#vcentercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -892,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcsaendpoint_nodejs">
 <a href="#vcsaendpoint_nodejs" style="color: inherit; text-decoration: inherit;">vcsa<wbr>Endpoint</a>
@@ -902,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotionsubnetcidr_nodejs">
 <a href="#vmotionsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Subnet<wbr>Cidr</a>
@@ -912,13 +836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="circuits_python">
 <a href="#circuits_python" style="color: inherit; text-decoration: inherit;">circuits</a>
@@ -927,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#privatecloudcircuit">Sequence[Private<wbr>Cloud<wbr>Circuit]</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hcx_cloud_manager_endpoint_python">
 <a href="#hcx_cloud_manager_endpoint_python" style="color: inherit; text-decoration: inherit;">hcx_<wbr>cloud_<wbr>manager_<wbr>endpoint</a>
@@ -937,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -946,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_subnet_cidr_python">
 <a href="#management_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">management_<wbr>subnet_<wbr>cidr</a>
@@ -956,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxt_certificate_thumbprint_python">
 <a href="#nsxt_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>certificate_<wbr>thumbprint</a>
@@ -966,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxt_manager_endpoint_python">
 <a href="#nsxt_manager_endpoint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>manager_<wbr>endpoint</a>
@@ -976,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_subnet_cidr_python">
 <a href="#provisioning_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>subnet_<wbr>cidr</a>
@@ -986,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenter_certificate_thumbprint_python">
 <a href="#vcenter_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>certificate_<wbr>thumbprint</a>
@@ -996,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcsa_endpoint_python">
 <a href="#vcsa_endpoint_python" style="color: inherit; text-decoration: inherit;">vcsa_<wbr>endpoint</a>
@@ -1006,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmotion_subnet_cidr_python">
 <a href="#vmotion_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>subnet_<wbr>cidr</a>
@@ -1016,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1144,8 +1056,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_circuits_csharp">
 <a href="#state_circuits_csharp" style="color: inherit; text-decoration: inherit;">Circuits</a>
@@ -1154,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#privatecloudcircuit">List&lt;Private<wbr>Cloud<wbr>Circuit<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hcxcloudmanagerendpoint_csharp">
 <a href="#state_hcxcloudmanagerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
@@ -1164,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetconnectionenabled_csharp">
 <a href="#state_internetconnectionenabled_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Connection<wbr>Enabled</a>
@@ -1175,8 +1084,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1185,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementcluster_csharp">
 <a href="#state_managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
@@ -1196,8 +1103,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsubnetcidr_csharp">
 <a href="#state_managementsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Subnet<wbr>Cidr</a>
@@ -1206,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1216,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksubnetcidr_csharp">
 <a href="#state_networksubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Subnet<wbr>Cidr</a>
@@ -1226,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtcertificatethumbprint_csharp">
 <a href="#state_nsxtcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -1236,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtmanagerendpoint_csharp">
 <a href="#state_nsxtmanagerendpoint_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager<wbr>Endpoint</a>
@@ -1246,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtpassword_csharp">
 <a href="#state_nsxtpassword_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -1256,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioningsubnetcidr_csharp">
 <a href="#state_provisioningsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Subnet<wbr>Cidr</a>
@@ -1266,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1276,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1286,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1296,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcentercertificatethumbprint_csharp">
 <a href="#state_vcentercertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -1306,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcenterpassword_csharp">
 <a href="#state_vcenterpassword_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -1316,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcsaendpoint_csharp">
 <a href="#state_vcsaendpoint_csharp" style="color: inherit; text-decoration: inherit;">Vcsa<wbr>Endpoint</a>
@@ -1326,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsubnetcidr_csharp">
 <a href="#state_vmotionsubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Subnet<wbr>Cidr</a>
@@ -1336,13 +1229,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_circuits_go">
 <a href="#state_circuits_go" style="color: inherit; text-decoration: inherit;">Circuits</a>
@@ -1351,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#privatecloudcircuit">[]Private<wbr>Cloud<wbr>Circuit</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hcxcloudmanagerendpoint_go">
 <a href="#state_hcxcloudmanagerendpoint_go" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
@@ -1361,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetconnectionenabled_go">
 <a href="#state_internetconnectionenabled_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Connection<wbr>Enabled</a>
@@ -1372,8 +1261,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1382,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementcluster_go">
 <a href="#state_managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
@@ -1393,8 +1280,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsubnetcidr_go">
 <a href="#state_managementsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Subnet<wbr>Cidr</a>
@@ -1403,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1413,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksubnetcidr_go">
 <a href="#state_networksubnetcidr_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Subnet<wbr>Cidr</a>
@@ -1423,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtcertificatethumbprint_go">
 <a href="#state_nsxtcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -1433,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtmanagerendpoint_go">
 <a href="#state_nsxtmanagerendpoint_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager<wbr>Endpoint</a>
@@ -1443,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtpassword_go">
 <a href="#state_nsxtpassword_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -1453,8 +1334,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioningsubnetcidr_go">
 <a href="#state_provisioningsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Subnet<wbr>Cidr</a>
@@ -1463,8 +1343,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1473,8 +1352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1483,8 +1361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1493,8 +1370,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcentercertificatethumbprint_go">
 <a href="#state_vcentercertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -1503,8 +1379,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcenterpassword_go">
 <a href="#state_vcenterpassword_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -1513,8 +1388,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcsaendpoint_go">
 <a href="#state_vcsaendpoint_go" style="color: inherit; text-decoration: inherit;">Vcsa<wbr>Endpoint</a>
@@ -1523,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsubnetcidr_go">
 <a href="#state_vmotionsubnetcidr_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Subnet<wbr>Cidr</a>
@@ -1533,13 +1406,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_circuits_nodejs">
 <a href="#state_circuits_nodejs" style="color: inherit; text-decoration: inherit;">circuits</a>
@@ -1548,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#privatecloudcircuit">Private<wbr>Cloud<wbr>Circuit[]</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hcxcloudmanagerendpoint_nodejs">
 <a href="#state_hcxcloudmanagerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">hcx<wbr>Cloud<wbr>Manager<wbr>Endpoint</a>
@@ -1558,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internetconnectionenabled_nodejs">
 <a href="#state_internetconnectionenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Connection<wbr>Enabled</a>
@@ -1569,8 +1438,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1579,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementcluster_nodejs">
 <a href="#state_managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
@@ -1590,8 +1457,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementsubnetcidr_nodejs">
 <a href="#state_managementsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Subnet<wbr>Cidr</a>
@@ -1600,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1610,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networksubnetcidr_nodejs">
 <a href="#state_networksubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Subnet<wbr>Cidr</a>
@@ -1620,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtcertificatethumbprint_nodejs">
 <a href="#state_nsxtcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Certificate<wbr>Thumbprint</a>
@@ -1630,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtmanagerendpoint_nodejs">
 <a href="#state_nsxtmanagerendpoint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Manager<wbr>Endpoint</a>
@@ -1640,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxtpassword_nodejs">
 <a href="#state_nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
@@ -1650,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioningsubnetcidr_nodejs">
 <a href="#state_provisioningsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Subnet<wbr>Cidr</a>
@@ -1660,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1670,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -1680,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1690,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcentercertificatethumbprint_nodejs">
 <a href="#state_vcentercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Certificate<wbr>Thumbprint</a>
@@ -1700,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcenterpassword_nodejs">
 <a href="#state_vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
@@ -1710,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcsaendpoint_nodejs">
 <a href="#state_vcsaendpoint_nodejs" style="color: inherit; text-decoration: inherit;">vcsa<wbr>Endpoint</a>
@@ -1720,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotionsubnetcidr_nodejs">
 <a href="#state_vmotionsubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Subnet<wbr>Cidr</a>
@@ -1730,13 +1583,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_circuits_python">
 <a href="#state_circuits_python" style="color: inherit; text-decoration: inherit;">circuits</a>
@@ -1745,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#privatecloudcircuit">Sequence[Private<wbr>Cloud<wbr>Circuit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `circuit` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hcx_cloud_manager_endpoint_python">
 <a href="#state_hcx_cloud_manager_endpoint_python" style="color: inherit; text-decoration: inherit;">hcx_<wbr>cloud_<wbr>manager_<wbr>endpoint</a>
@@ -1755,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint for the HCX Cloud Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internet_connection_enabled_python">
 <a href="#state_internet_connection_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>connection_<wbr>enabled</a>
@@ -1766,8 +1615,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Is the Private Cluster connected to the internet? This field can not updated with `management_cluster.0.size` together.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1776,8 +1624,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_cluster_python">
 <a href="#state_management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
@@ -1787,8 +1634,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A `management_cluster` block as defined below.
 > **NOTE :** `internet_connection_enabled` and `management_cluster.0.size` cannot be updated at the same time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_subnet_cidr_python">
 <a href="#state_management_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">management_<wbr>subnet_<wbr>cidr</a>
@@ -1797,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network used to access vCenter Server and NSX-T Manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1807,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Vmware Private Cloud. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_subnet_cidr_python">
 <a href="#state_network_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">network_<wbr>subnet_<wbr>cidr</a>
@@ -1817,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet which should be unique across virtual network in your subscription as well as on-premise. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxt_certificate_thumbprint_python">
 <a href="#state_nsxt_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>certificate_<wbr>thumbprint</a>
@@ -1827,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the NSX-T Manager SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxt_manager_endpoint_python">
 <a href="#state_nsxt_manager_endpoint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>manager_<wbr>endpoint</a>
@@ -1837,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint for the NSX-T Data Center manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nsxt_password_python">
 <a href="#state_nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
@@ -1847,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the NSX-T Manager. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioning_subnet_cidr_python">
 <a href="#state_provisioning_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>subnet_<wbr>cidr</a>
@@ -1857,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network which is used for virtual machine cold migration, cloning, and snapshot migration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1867,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Vmware Private Cloud should exist. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -1877,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the SKU used for this Private Cloud. Possible values are `av20`, `av36` and `av36t`. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1887,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Vmware Private Cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcenter_certificate_thumbprint_python">
 <a href="#state_vcenter_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>certificate_<wbr>thumbprint</a>
@@ -1897,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The thumbprint of the vCenter Server SSL certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcenter_password_python">
 <a href="#state_vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
@@ -1907,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the vCenter admin. Changing this forces a new Vmware Private Cloud to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vcsa_endpoint_python">
 <a href="#state_vcsa_endpoint_python" style="color: inherit; text-decoration: inherit;">vcsa_<wbr>endpoint</a>
@@ -1917,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint for Virtual Center Server Appliance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmotion_subnet_cidr_python">
 <a href="#state_vmotion_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>subnet_<wbr>cidr</a>
@@ -1927,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network which is used for live migration of virtual machines.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1943,8 +1775,7 @@ The following state arguments are supported:
 <h4 id="privatecloudcircuit">Private<wbr>Cloud<wbr>Circuit</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expressrouteid_csharp">
 <a href="#expressrouteid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Id</a>
@@ -1953,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressrouteprivatepeeringid_csharp">
 <a href="#expressrouteprivatepeeringid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Private<wbr>Peering<wbr>Id</a>
@@ -1963,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit private peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarysubnetcidr_csharp">
 <a href="#primarysubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Subnet<wbr>Cidr</a>
@@ -1973,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the primary subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarysubnetcidr_csharp">
 <a href="#secondarysubnetcidr_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Subnet<wbr>Cidr</a>
@@ -1983,13 +1811,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the secondary subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expressrouteid_go">
 <a href="#expressrouteid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Id</a>
@@ -1998,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressrouteprivatepeeringid_go">
 <a href="#expressrouteprivatepeeringid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Private<wbr>Peering<wbr>Id</a>
@@ -2008,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit private peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarysubnetcidr_go">
 <a href="#primarysubnetcidr_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Subnet<wbr>Cidr</a>
@@ -2018,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the primary subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarysubnetcidr_go">
 <a href="#secondarysubnetcidr_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Subnet<wbr>Cidr</a>
@@ -2028,13 +1851,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the secondary subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="expressrouteid_nodejs">
 <a href="#expressrouteid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Id</a>
@@ -2043,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressrouteprivatepeeringid_nodejs">
 <a href="#expressrouteprivatepeeringid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Private<wbr>Peering<wbr>Id</a>
@@ -2053,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit private peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarysubnetcidr_nodejs">
 <a href="#primarysubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Subnet<wbr>Cidr</a>
@@ -2063,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the primary subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarysubnetcidr_nodejs">
 <a href="#secondarysubnetcidr_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Subnet<wbr>Cidr</a>
@@ -2073,13 +1891,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the secondary subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="express_route_id_python">
 <a href="#express_route_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>id</a>
@@ -2088,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="express_route_private_peering_id_python">
 <a href="#express_route_private_peering_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>private_<wbr>peering_<wbr>id</a>
@@ -2098,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the ExpressRoute Circuit private peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_subnet_cidr_python">
 <a href="#primary_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>subnet_<wbr>cidr</a>
@@ -2108,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR of the primary subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_subnet_cidr_python">
 <a href="#secondary_subnet_cidr_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>subnet_<wbr>cidr</a>
@@ -2118,15 +1931,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR of the secondary subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatecloudmanagementcluster">Private<wbr>Cloud<wbr>Management<wbr>Cluster</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2135,8 +1946,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the management cluster. This field can not updated with `internet_connection_enabled` together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -2145,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of hosts in the management cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2155,13 +1964,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the  management cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2170,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the management cluster. This field can not updated with `internet_connection_enabled` together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -2180,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of hosts in the management cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2190,13 +1995,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the  management cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2205,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the management cluster. This field can not updated with `internet_connection_enabled` together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -2215,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of hosts in the management cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2225,13 +2026,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the  management cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2240,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the management cluster. This field can not updated with `internet_connection_enabled` together.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -2250,8 +2048,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of hosts in the management cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2260,8 +2057,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the  management cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

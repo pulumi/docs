@@ -253,8 +253,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -263,8 +262,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getlaunchtemplatefilter">List&lt;Get<wbr>Launch<wbr>Template<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -273,8 +271,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific launch template to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +280,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -293,13 +289,11 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -308,8 +302,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getlaunchtemplatefilter">[]Get<wbr>Launch<wbr>Template<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -318,8 +311,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific launch template to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -328,8 +320,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -338,13 +329,11 @@ The following arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -353,8 +342,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getlaunchtemplatefilter">Get<wbr>Launch<wbr>Template<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -363,8 +351,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific launch template to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -373,8 +360,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -383,13 +369,11 @@ The following arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -398,8 +382,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getlaunchtemplatefilter">Sequence[Get<wbr>Launch<wbr>Template<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -408,8 +391,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the specific launch template to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +400,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -428,8 +409,7 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,8 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -452,8 +431,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blockdevicemappings_csharp">
 <a href="#blockdevicemappings_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
@@ -462,8 +440,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemapping">List&lt;Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creditspecifications_csharp">
 <a href="#creditspecifications_csharp" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specifications</a>
@@ -473,8 +450,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultversion_csharp">
 <a href="#defaultversion_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
@@ -483,8 +459,7 @@ Specification below for more details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -493,8 +468,7 @@ Specification below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableapitermination_csharp">
 <a href="#disableapitermination_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -504,8 +478,7 @@ Specification below for more details.
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -514,8 +487,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticgpuspecifications_csharp">
 <a href="#elasticgpuspecifications_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Gpu<wbr>Specifications</a>
@@ -525,8 +497,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclaveoptions_csharp">
 <a href="#enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
@@ -535,8 +506,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplateenclaveoption">List&lt;Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hibernationoptions_csharp">
 <a href="#hibernationoptions_csharp" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
@@ -545,8 +515,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplatehibernationoption">List&lt;Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iaminstanceprofiles_csharp">
 <a href="#iaminstanceprofiles_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profiles</a>
@@ -556,8 +525,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -566,8 +534,7 @@ below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -576,8 +543,7 @@ below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceinitiatedshutdownbehavior_csharp">
 <a href="#instanceinitiatedshutdownbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
@@ -587,8 +553,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancemarketoptions_csharp">
 <a href="#instancemarketoptions_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Market<wbr>Options</a>
@@ -598,8 +563,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance.
 below for details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -608,8 +572,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kernelid_csharp">
 <a href="#kernelid_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
@@ -618,8 +581,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -628,8 +590,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestversion_csharp">
 <a href="#latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -638,8 +599,7 @@ below for details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataoptions_csharp">
 <a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -648,8 +608,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemetadataoption">List&lt;Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorings_csharp">
 <a href="#monitorings_csharp" style="color: inherit; text-decoration: inherit;">Monitorings</a>
@@ -658,8 +617,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemonitoring">List&lt;Get<wbr>Launch<wbr>Template<wbr>Monitoring&gt;</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -669,8 +627,7 @@ below for details.
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placements_csharp">
 <a href="#placements_csharp" style="color: inherit; text-decoration: inherit;">Placements</a>
@@ -679,8 +636,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateplacement">List&lt;Get<wbr>Launch<wbr>Template<wbr>Placement&gt;</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ramdiskid_csharp">
 <a href="#ramdiskid_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Disk<wbr>Id</a>
@@ -689,8 +645,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroupnames_csharp">
 <a href="#securitygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -700,8 +655,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagspecifications_csharp">
 <a href="#tagspecifications_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
@@ -710,8 +664,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplatetagspecification">List&lt;Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -720,8 +673,7 @@ Interfaces below for more details.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -730,8 +682,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_csharp">
 <a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -740,8 +691,7 @@ Interfaces below for more details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -749,8 +699,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplatefilter">List&lt;Get<wbr>Launch<wbr>Template<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -758,13 +707,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -773,8 +720,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blockdevicemappings_go">
 <a href="#blockdevicemappings_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Device<wbr>Mappings</a>
@@ -783,8 +729,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemapping">[]Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creditspecifications_go">
 <a href="#creditspecifications_go" style="color: inherit; text-decoration: inherit;">Credit<wbr>Specifications</a>
@@ -794,8 +739,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultversion_go">
 <a href="#defaultversion_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Version</a>
@@ -804,8 +748,7 @@ Specification below for more details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -814,8 +757,7 @@ Specification below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableapitermination_go">
 <a href="#disableapitermination_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Api<wbr>Termination</a>
@@ -825,8 +767,7 @@ Specification below for more details.
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -835,8 +776,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticgpuspecifications_go">
 <a href="#elasticgpuspecifications_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Gpu<wbr>Specifications</a>
@@ -846,8 +786,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclaveoptions_go">
 <a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
@@ -856,8 +795,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplateenclaveoption">[]Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hibernationoptions_go">
 <a href="#hibernationoptions_go" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
@@ -866,8 +804,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplatehibernationoption">[]Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iaminstanceprofiles_go">
 <a href="#iaminstanceprofiles_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profiles</a>
@@ -877,8 +814,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -887,8 +823,7 @@ below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -897,8 +832,7 @@ below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceinitiatedshutdownbehavior_go">
 <a href="#instanceinitiatedshutdownbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
@@ -908,8 +842,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancemarketoptions_go">
 <a href="#instancemarketoptions_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Market<wbr>Options</a>
@@ -919,8 +852,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance.
 below for details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -929,8 +861,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kernelid_go">
 <a href="#kernelid_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Id</a>
@@ -939,8 +870,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -949,8 +879,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestversion_go">
 <a href="#latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -959,8 +888,7 @@ below for details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataoptions_go">
 <a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
@@ -969,8 +897,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemetadataoption">[]Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorings_go">
 <a href="#monitorings_go" style="color: inherit; text-decoration: inherit;">Monitorings</a>
@@ -979,8 +906,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemonitoring">[]Get<wbr>Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -990,8 +916,7 @@ below for details.
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placements_go">
 <a href="#placements_go" style="color: inherit; text-decoration: inherit;">Placements</a>
@@ -1000,8 +925,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateplacement">[]Get<wbr>Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ramdiskid_go">
 <a href="#ramdiskid_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Disk<wbr>Id</a>
@@ -1010,8 +934,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroupnames_go">
 <a href="#securitygroupnames_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Names</a>
@@ -1021,8 +944,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagspecifications_go">
 <a href="#tagspecifications_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Specifications</a>
@@ -1031,8 +953,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplatetagspecification">[]Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1041,8 +962,7 @@ Interfaces below for more details.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -1051,8 +971,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_go">
 <a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1061,8 +980,7 @@ Interfaces below for more details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1070,8 +988,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplatefilter">[]Get<wbr>Launch<wbr>Template<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1079,13 +996,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1094,8 +1009,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="blockdevicemappings_nodejs">
 <a href="#blockdevicemappings_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Device<wbr>Mappings</a>
@@ -1104,8 +1018,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemapping">Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creditspecifications_nodejs">
 <a href="#creditspecifications_nodejs" style="color: inherit; text-decoration: inherit;">credit<wbr>Specifications</a>
@@ -1115,8 +1028,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultversion_nodejs">
 <a href="#defaultversion_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Version</a>
@@ -1125,8 +1037,7 @@ Specification below for more details.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1135,8 +1046,7 @@ Specification below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableapitermination_nodejs">
 <a href="#disableapitermination_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Api<wbr>Termination</a>
@@ -1146,8 +1056,7 @@ Specification below for more details.
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -1156,8 +1065,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticgpuspecifications_nodejs">
 <a href="#elasticgpuspecifications_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Gpu<wbr>Specifications</a>
@@ -1167,8 +1075,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclaveoptions_nodejs">
 <a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
@@ -1177,8 +1084,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplateenclaveoption">Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hibernationoptions_nodejs">
 <a href="#hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
@@ -1187,8 +1093,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplatehibernationoption">Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iaminstanceprofiles_nodejs">
 <a href="#iaminstanceprofiles_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profiles</a>
@@ -1198,8 +1103,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1208,8 +1112,7 @@ below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -1218,8 +1121,7 @@ below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceinitiatedshutdownbehavior_nodejs">
 <a href="#instanceinitiatedshutdownbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</a>
@@ -1229,8 +1131,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancemarketoptions_nodejs">
 <a href="#instancemarketoptions_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Market<wbr>Options</a>
@@ -1240,8 +1141,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance.
 below for details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1250,8 +1150,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kernelid_nodejs">
 <a href="#kernelid_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Id</a>
@@ -1260,8 +1159,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -1270,8 +1168,7 @@ below for details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestversion_nodejs">
 <a href="#latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
@@ -1280,8 +1177,7 @@ below for details.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataoptions_nodejs">
 <a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
@@ -1290,8 +1186,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemetadataoption">Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorings_nodejs">
 <a href="#monitorings_nodejs" style="color: inherit; text-decoration: inherit;">monitorings</a>
@@ -1300,8 +1195,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemonitoring">Get<wbr>Launch<wbr>Template<wbr>Monitoring[]</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -1311,8 +1205,7 @@ below for details.
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placements_nodejs">
 <a href="#placements_nodejs" style="color: inherit; text-decoration: inherit;">placements</a>
@@ -1321,8 +1214,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateplacement">Get<wbr>Launch<wbr>Template<wbr>Placement[]</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ramdiskid_nodejs">
 <a href="#ramdiskid_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Disk<wbr>Id</a>
@@ -1331,8 +1223,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroupnames_nodejs">
 <a href="#securitygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Names</a>
@@ -1342,8 +1233,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagspecifications_nodejs">
 <a href="#tagspecifications_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Specifications</a>
@@ -1352,8 +1242,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplatetagspecification">Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1362,8 +1251,7 @@ Interfaces below for more details.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -1372,8 +1260,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcsecuritygroupids_nodejs">
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1382,8 +1269,7 @@ Interfaces below for more details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1391,8 +1277,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplatefilter">Get<wbr>Launch<wbr>Template<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1400,13 +1285,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1415,8 +1298,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="block_device_mappings_python">
 <a href="#block_device_mappings_python" style="color: inherit; text-decoration: inherit;">block_<wbr>device_<wbr>mappings</a>
@@ -1425,8 +1307,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemapping">Sequence[Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credit_specifications_python">
 <a href="#credit_specifications_python" style="color: inherit; text-decoration: inherit;">credit_<wbr>specifications</a>
@@ -1436,8 +1317,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_version_python">
 <a href="#default_version_python" style="color: inherit; text-decoration: inherit;">default_<wbr>version</a>
@@ -1446,8 +1326,7 @@ Specification below for more details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1456,8 +1335,7 @@ Specification below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disable_api_termination_python">
 <a href="#disable_api_termination_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>api_<wbr>termination</a>
@@ -1467,8 +1345,7 @@ Specification below for more details.
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -1477,8 +1354,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elastic_gpu_specifications_python">
 <a href="#elastic_gpu_specifications_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>gpu_<wbr>specifications</a>
@@ -1488,8 +1364,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enclave_options_python">
 <a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
@@ -1498,8 +1373,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplateenclaveoption">Sequence[Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}The enclave options of the Instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hibernation_options_python">
 <a href="#hibernation_options_python" style="color: inherit; text-decoration: inherit;">hibernation_<wbr>options</a>
@@ -1508,8 +1382,7 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplatehibernationoption">Sequence[Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iam_instance_profiles_python">
 <a href="#iam_instance_profiles_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profiles</a>
@@ -1519,8 +1392,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1529,8 +1401,7 @@ below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -1539,8 +1410,7 @@ below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_initiated_shutdown_behavior_python">
 <a href="#instance_initiated_shutdown_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</a>
@@ -1550,8 +1420,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_market_options_python">
 <a href="#instance_market_options_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>market_<wbr>options</a>
@@ -1561,8 +1430,7 @@ below for more details.
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance.
 below for details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1571,8 +1439,7 @@ below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kernel_id_python">
 <a href="#kernel_id_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>id</a>
@@ -1581,8 +1448,7 @@ below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -1591,8 +1457,7 @@ below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_version_python">
 <a href="#latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
@@ -1601,8 +1466,7 @@ below for details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_options_python">
 <a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
@@ -1611,8 +1475,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemetadataoption">Sequence[Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}The metadata options for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitorings_python">
 <a href="#monitorings_python" style="color: inherit; text-decoration: inherit;">monitorings</a>
@@ -1621,8 +1484,7 @@ below for details.
         <span class="property-type"><a href="#getlaunchtemplatemonitoring">Sequence[Get<wbr>Launch<wbr>Template<wbr>Monitoring]</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -1632,8 +1494,7 @@ below for details.
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="placements_python">
 <a href="#placements_python" style="color: inherit; text-decoration: inherit;">placements</a>
@@ -1642,8 +1503,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplateplacement">Sequence[Get<wbr>Launch<wbr>Template<wbr>Placement]</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ram_disk_id_python">
 <a href="#ram_disk_id_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>disk_<wbr>id</a>
@@ -1652,8 +1512,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_group_names_python">
 <a href="#security_group_names_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>names</a>
@@ -1663,8 +1522,7 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tag_specifications_python">
 <a href="#tag_specifications_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>specifications</a>
@@ -1673,8 +1531,7 @@ Interfaces below for more details.
         <span class="property-type"><a href="#getlaunchtemplatetagspecification">Sequence[Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1683,8 +1540,7 @@ Interfaces below for more details.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}(Optional) A map of tags to assign to the launch template.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -1693,8 +1549,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_security_group_ids_python">
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1703,8 +1558,7 @@ Interfaces below for more details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1712,8 +1566,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplatefilter">Sequence[Get<wbr>Launch<wbr>Template<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1721,8 +1574,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1736,8 +1588,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1745,8 +1596,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ebs_csharp">
 <a href="#ebs_csharp" style="color: inherit; text-decoration: inherit;">Ebs</a>
@@ -1754,8 +1604,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemappingeb">List&lt;Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodevice_csharp">
 <a href="#nodevice_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
@@ -1763,8 +1612,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -1772,13 +1620,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1786,8 +1632,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ebs_go">
 <a href="#ebs_go" style="color: inherit; text-decoration: inherit;">Ebs</a>
@@ -1795,8 +1640,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemappingeb">[]Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodevice_go">
 <a href="#nodevice_go" style="color: inherit; text-decoration: inherit;">No<wbr>Device</a>
@@ -1804,8 +1648,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -1813,13 +1656,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -1827,8 +1668,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ebs_nodejs">
 <a href="#ebs_nodejs" style="color: inherit; text-decoration: inherit;">ebs</a>
@@ -1836,8 +1676,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemappingeb">Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodevice_nodejs">
 <a href="#nodevice_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Device</a>
@@ -1845,8 +1684,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
@@ -1854,13 +1692,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -1868,8 +1704,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ebs_python">
 <a href="#ebs_python" style="color: inherit; text-decoration: inherit;">ebs</a>
@@ -1877,8 +1712,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateblockdevicemappingeb">Sequence[Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="no_device_python">
 <a href="#no_device_python" style="color: inherit; text-decoration: inherit;">no_<wbr>device</a>
@@ -1886,8 +1720,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_name_python">
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
@@ -1895,8 +1728,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateblockdevicemappingeb">Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb</h4>
@@ -1904,8 +1736,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -1913,8 +1744,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -1922,8 +1752,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -1931,8 +1760,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1940,8 +1768,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -1949,8 +1776,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -1958,8 +1784,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -1967,8 +1792,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -1976,13 +1800,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -1990,8 +1812,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -1999,8 +1820,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -2008,8 +1828,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2017,8 +1836,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -2026,8 +1844,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -2035,8 +1852,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -2044,8 +1860,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -2053,13 +1868,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -2067,8 +1880,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2076,8 +1888,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2085,8 +1896,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -2094,8 +1904,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -2103,8 +1912,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -2112,8 +1920,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -2121,8 +1928,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -2130,13 +1936,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -2144,8 +1948,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -2153,8 +1956,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -2162,8 +1964,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -2171,8 +1972,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -2180,8 +1980,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -2189,8 +1988,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -2198,8 +1996,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -2207,8 +2004,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatecreditspecification">Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification</h4>
@@ -2216,8 +2012,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucredits_csharp">
 <a href="#cpucredits_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -2225,13 +2020,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucredits_go">
 <a href="#cpucredits_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Credits</a>
@@ -2239,13 +2032,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpucredits_nodejs">
 <a href="#cpucredits_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Credits</a>
@@ -2253,13 +2044,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cpu_credits_python">
 <a href="#cpu_credits_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>credits</a>
@@ -2267,8 +2056,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateelasticgpuspecification">Get<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</h4>
@@ -2276,8 +2064,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2285,13 +2072,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2299,13 +2084,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2313,13 +2096,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2327,8 +2108,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateenclaveoption">Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option</h4>
@@ -2336,8 +2116,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2346,13 +2125,11 @@ Interfaces below for more details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2361,13 +2138,11 @@ Interfaces below for more details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2376,13 +2151,11 @@ Interfaces below for more details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2391,8 +2164,7 @@ Interfaces below for more details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatefilter">Get<wbr>Launch<wbr>Template<wbr>Filter</h4>
@@ -2400,8 +2172,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2410,8 +2181,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2420,13 +2190,11 @@ Interfaces below for more details.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2435,8 +2203,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2445,13 +2212,11 @@ Interfaces below for more details.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2460,8 +2225,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2470,13 +2234,11 @@ Interfaces below for more details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2485,8 +2247,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2495,8 +2256,7 @@ Interfaces below for more details.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatehibernationoption">Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option</h4>
@@ -2504,8 +2264,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configured_csharp">
 <a href="#configured_csharp" style="color: inherit; text-decoration: inherit;">Configured</a>
@@ -2513,13 +2272,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configured_go">
 <a href="#configured_go" style="color: inherit; text-decoration: inherit;">Configured</a>
@@ -2527,13 +2284,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configured_nodejs">
 <a href="#configured_nodejs" style="color: inherit; text-decoration: inherit;">configured</a>
@@ -2541,13 +2296,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configured_python">
 <a href="#configured_python" style="color: inherit; text-decoration: inherit;">configured</a>
@@ -2555,8 +2308,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateiaminstanceprofile">Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</h4>
@@ -2564,8 +2316,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2574,8 +2325,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2584,13 +2334,11 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2599,8 +2347,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2609,13 +2356,11 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2624,8 +2369,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2634,13 +2378,11 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2649,8 +2391,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2659,8 +2400,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateinstancemarketoption">Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option</h4>
@@ -2668,8 +2408,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="markettype_csharp">
 <a href="#markettype_csharp" style="color: inherit; text-decoration: inherit;">Market<wbr>Type</a>
@@ -2677,8 +2416,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotoptions_csharp">
 <a href="#spotoptions_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Options</a>
@@ -2686,13 +2424,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateinstancemarketoptionspotoption">List&lt;Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="markettype_go">
 <a href="#markettype_go" style="color: inherit; text-decoration: inherit;">Market<wbr>Type</a>
@@ -2700,8 +2436,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotoptions_go">
 <a href="#spotoptions_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Options</a>
@@ -2709,13 +2444,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateinstancemarketoptionspotoption">[]Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="markettype_nodejs">
 <a href="#markettype_nodejs" style="color: inherit; text-decoration: inherit;">market<wbr>Type</a>
@@ -2723,8 +2456,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotoptions_nodejs">
 <a href="#spotoptions_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Options</a>
@@ -2732,13 +2464,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateinstancemarketoptionspotoption">Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="market_type_python">
 <a href="#market_type_python" style="color: inherit; text-decoration: inherit;">market_<wbr>type</a>
@@ -2746,8 +2476,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spot_options_python">
 <a href="#spot_options_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>options</a>
@@ -2755,8 +2484,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateinstancemarketoptionspotoption">Sequence[Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateinstancemarketoptionspotoption">Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option</h4>
@@ -2764,8 +2492,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockdurationminutes_csharp">
 <a href="#blockdurationminutes_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
@@ -2773,8 +2500,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceinterruptionbehavior_csharp">
 <a href="#instanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
@@ -2782,8 +2508,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxprice_csharp">
 <a href="#maxprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
@@ -2791,8 +2516,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotinstancetype_csharp">
 <a href="#spotinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Type</a>
@@ -2800,8 +2524,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validuntil_csharp">
 <a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -2809,13 +2532,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockdurationminutes_go">
 <a href="#blockdurationminutes_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Duration<wbr>Minutes</a>
@@ -2823,8 +2544,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceinterruptionbehavior_go">
 <a href="#instanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behavior</a>
@@ -2832,8 +2552,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxprice_go">
 <a href="#maxprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
@@ -2841,8 +2560,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotinstancetype_go">
 <a href="#spotinstancetype_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Type</a>
@@ -2850,8 +2568,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validuntil_go">
 <a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -2859,13 +2576,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blockdurationminutes_nodejs">
 <a href="#blockdurationminutes_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Duration<wbr>Minutes</a>
@@ -2873,8 +2588,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceinterruptionbehavior_nodejs">
 <a href="#instanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behavior</a>
@@ -2882,8 +2596,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxprice_nodejs">
 <a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
@@ -2891,8 +2604,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spotinstancetype_nodejs">
 <a href="#spotinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Type</a>
@@ -2900,8 +2612,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validuntil_nodejs">
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -2909,13 +2620,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="block_duration_minutes_python">
 <a href="#block_duration_minutes_python" style="color: inherit; text-decoration: inherit;">block_<wbr>duration_<wbr>minutes</a>
@@ -2923,8 +2632,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_interruption_behavior_python">
 <a href="#instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behavior</a>
@@ -2932,8 +2640,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_price_python">
 <a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
@@ -2941,8 +2648,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spot_instance_type_python">
 <a href="#spot_instance_type_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>type</a>
@@ -2950,8 +2656,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valid_until_python">
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -2959,8 +2664,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatemetadataoption">Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option</h4>
@@ -2968,8 +2672,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpendpoint_csharp">
 <a href="#httpendpoint_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
@@ -2978,8 +2681,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_csharp">
 <a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -2988,8 +2690,7 @@ Interfaces below for more details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptokens_csharp">
 <a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -2998,13 +2699,11 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpendpoint_go">
 <a href="#httpendpoint_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
@@ -3013,8 +2712,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_go">
 <a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -3023,8 +2721,7 @@ Interfaces below for more details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptokens_go">
 <a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
@@ -3033,13 +2730,11 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpendpoint_nodejs">
 <a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
@@ -3048,8 +2743,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpputresponsehoplimit_nodejs">
 <a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
@@ -3058,8 +2752,7 @@ Interfaces below for more details.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptokens_nodejs">
 <a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
@@ -3068,13 +2761,11 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_endpoint_python">
 <a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
@@ -3083,8 +2774,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_put_response_hop_limit_python">
 <a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
@@ -3093,8 +2783,7 @@ Interfaces below for more details.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_tokens_python">
 <a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
@@ -3103,8 +2792,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If session tokens are required: `optional`, `required`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatemonitoring">Get<wbr>Launch<wbr>Template<wbr>Monitoring</h4>
@@ -3112,8 +2800,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3122,13 +2809,11 @@ Interfaces below for more details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3137,13 +2822,11 @@ Interfaces below for more details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3152,13 +2835,11 @@ Interfaces below for more details.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3167,8 +2848,7 @@ Interfaces below for more details.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Nitro Enclaves are enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatenetworkinterface">Get<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface</h4>
@@ -3176,8 +2856,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associatecarrieripaddress_csharp">
 <a href="#associatecarrieripaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Carrier<wbr>Ip<wbr>Address</a>
@@ -3185,8 +2864,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3195,8 +2873,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deviceindex_csharp">
 <a href="#deviceindex_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Index</a>
@@ -3204,8 +2881,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addresscount_csharp">
 <a href="#ipv4addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Count</a>
@@ -3213,8 +2889,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addresses_csharp">
 <a href="#ipv4addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Addresses</a>
@@ -3222,8 +2897,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addresscount_csharp">
 <a href="#ipv6addresscount_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
@@ -3231,8 +2905,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addresses_csharp">
 <a href="#ipv6addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
@@ -3240,8 +2913,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_csharp">
 <a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -3249,8 +2921,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -3258,8 +2929,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -3267,8 +2937,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3276,8 +2945,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
 <a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3285,8 +2953,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -3294,13 +2961,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associatecarrieripaddress_go">
 <a href="#associatecarrieripaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Carrier<wbr>Ip<wbr>Address</a>
@@ -3308,8 +2973,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3318,8 +2982,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deviceindex_go">
 <a href="#deviceindex_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Index</a>
@@ -3327,8 +2990,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addresscount_go">
 <a href="#ipv4addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Count</a>
@@ -3336,8 +2998,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addresses_go">
 <a href="#ipv4addresses_go" style="color: inherit; text-decoration: inherit;">Ipv4Addresses</a>
@@ -3345,8 +3006,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addresscount_go">
 <a href="#ipv6addresscount_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Count</a>
@@ -3354,8 +3014,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addresses_go">
 <a href="#ipv6addresses_go" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
@@ -3363,8 +3022,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_go">
 <a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -3372,8 +3030,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -3381,8 +3038,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -3390,8 +3046,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3399,8 +3054,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
 <a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3408,8 +3062,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -3417,13 +3070,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associatecarrieripaddress_nodejs">
 <a href="#associatecarrieripaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Carrier<wbr>Ip<wbr>Address</a>
@@ -3431,8 +3082,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3441,8 +3091,7 @@ Interfaces below for more details.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deviceindex_nodejs">
 <a href="#deviceindex_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Index</a>
@@ -3450,8 +3099,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addresscount_nodejs">
 <a href="#ipv4addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Count</a>
@@ -3459,8 +3107,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addresses_nodejs">
 <a href="#ipv4addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Addresses</a>
@@ -3468,8 +3115,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addresscount_nodejs">
 <a href="#ipv6addresscount_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Count</a>
@@ -3477,8 +3123,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addresses_nodejs">
 <a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
@@ -3486,8 +3131,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_nodejs">
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
@@ -3495,8 +3139,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -3504,8 +3147,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -3513,8 +3155,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -3522,8 +3163,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3531,8 +3171,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -3540,13 +3179,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associate_carrier_ip_address_python">
 <a href="#associate_carrier_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>carrier_<wbr>ip_<wbr>address</a>
@@ -3554,8 +3191,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3564,8 +3200,7 @@ Interfaces below for more details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_index_python">
 <a href="#device_index_python" style="color: inherit; text-decoration: inherit;">device_<wbr>index</a>
@@ -3573,8 +3208,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4_address_count_python">
 <a href="#ipv4_address_count_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>count</a>
@@ -3582,8 +3216,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4_addresses_python">
 <a href="#ipv4_addresses_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>addresses</a>
@@ -3591,8 +3224,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_address_count_python">
 <a href="#ipv6_address_count_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>count</a>
@@ -3600,8 +3232,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_addresses_python">
 <a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
@@ -3609,8 +3240,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_interface_id_python">
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
@@ -3618,8 +3248,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -3627,8 +3256,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -3636,8 +3264,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -3645,8 +3272,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -3654,8 +3280,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -3663,8 +3288,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateplacement">Get<wbr>Launch<wbr>Template<wbr>Placement</h4>
@@ -3672,8 +3296,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="affinity_csharp">
 <a href="#affinity_csharp" style="color: inherit; text-decoration: inherit;">Affinity</a>
@@ -3681,8 +3304,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -3690,8 +3312,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -3699,8 +3320,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -3708,8 +3328,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionnumber_csharp">
 <a href="#partitionnumber_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Number</a>
@@ -3717,8 +3336,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spreaddomain_csharp">
 <a href="#spreaddomain_csharp" style="color: inherit; text-decoration: inherit;">Spread<wbr>Domain</a>
@@ -3726,8 +3344,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenancy_csharp">
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -3735,13 +3352,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="affinity_go">
 <a href="#affinity_go" style="color: inherit; text-decoration: inherit;">Affinity</a>
@@ -3749,8 +3364,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -3758,8 +3372,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -3767,8 +3380,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -3776,8 +3388,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionnumber_go">
 <a href="#partitionnumber_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Number</a>
@@ -3785,8 +3396,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spreaddomain_go">
 <a href="#spreaddomain_go" style="color: inherit; text-decoration: inherit;">Spread<wbr>Domain</a>
@@ -3794,8 +3404,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenancy_go">
 <a href="#tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
@@ -3803,13 +3412,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="affinity_nodejs">
 <a href="#affinity_nodejs" style="color: inherit; text-decoration: inherit;">affinity</a>
@@ -3817,8 +3424,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -3826,8 +3432,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -3835,8 +3440,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
@@ -3844,8 +3448,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionnumber_nodejs">
 <a href="#partitionnumber_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Number</a>
@@ -3853,8 +3456,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spreaddomain_nodejs">
 <a href="#spreaddomain_nodejs" style="color: inherit; text-decoration: inherit;">spread<wbr>Domain</a>
@@ -3862,8 +3464,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenancy_nodejs">
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -3871,13 +3472,11 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="affinity_python">
 <a href="#affinity_python" style="color: inherit; text-decoration: inherit;">affinity</a>
@@ -3885,8 +3484,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -3894,8 +3492,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -3903,8 +3500,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
@@ -3912,8 +3508,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_number_python">
 <a href="#partition_number_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>number</a>
@@ -3921,8 +3516,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spread_domain_python">
 <a href="#spread_domain_python" style="color: inherit; text-decoration: inherit;">spread_<wbr>domain</a>
@@ -3930,8 +3524,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenancy_python">
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
@@ -3939,8 +3532,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatetagspecification">Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification</h4>
@@ -3948,8 +3540,7 @@ Interfaces below for more details.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -3957,8 +3548,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3967,13 +3557,11 @@ Interfaces below for more details.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -3981,8 +3569,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3991,13 +3578,11 @@ Interfaces below for more details.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -4005,8 +3590,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4015,13 +3599,11 @@ Interfaces below for more details.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -4029,8 +3611,7 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4039,8 +3620,7 @@ Interfaces below for more details.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

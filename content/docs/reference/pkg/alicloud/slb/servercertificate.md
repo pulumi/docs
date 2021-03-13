@@ -288,8 +288,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloudcertifacteid_csharp">
 <a href="#alicloudcertifacteid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
@@ -297,8 +296,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloudcertifactename_csharp">
 <a href="#alicloudcertifactename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
@@ -306,8 +304,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificateid_csharp">
 <a href="#alicloudcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
@@ -316,8 +313,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificatename_csharp">
 <a href="#alicloudcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
@@ -326,8 +322,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificateregionid_csharp">
 <a href="#alicloudcertificateregionid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
@@ -336,8 +331,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -346,8 +340,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -356,8 +349,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -366,8 +358,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -376,8 +367,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -386,13 +376,11 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloudcertifacteid_go">
 <a href="#alicloudcertifacteid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
@@ -400,8 +388,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloudcertifactename_go">
 <a href="#alicloudcertifactename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
@@ -409,8 +396,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificateid_go">
 <a href="#alicloudcertificateid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
@@ -419,8 +405,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificatename_go">
 <a href="#alicloudcertificatename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
@@ -429,8 +414,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificateregionid_go">
 <a href="#alicloudcertificateregionid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
@@ -439,8 +423,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -449,8 +432,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -459,8 +441,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -469,8 +450,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificate_go">
 <a href="#servercertificate_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate</a>
@@ -479,8 +459,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -489,13 +468,11 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloudcertifacteid_nodejs">
 <a href="#alicloudcertifacteid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Id</a>
@@ -503,8 +480,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloudcertifactename_nodejs">
 <a href="#alicloudcertifactename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Name</a>
@@ -512,8 +488,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificateid_nodejs">
 <a href="#alicloudcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Id</a>
@@ -522,8 +497,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificatename_nodejs">
 <a href="#alicloudcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Name</a>
@@ -532,8 +506,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloudcertificateregionid_nodejs">
 <a href="#alicloudcertificateregionid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
@@ -542,8 +515,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -552,8 +524,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -562,8 +533,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -572,8 +542,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificate_nodejs">
 <a href="#servercertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate</a>
@@ -582,8 +551,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -592,13 +560,11 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloud_certifacte_id_python">
 <a href="#alicloud_certifacte_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>id</a>
@@ -606,8 +572,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="alicloud_certifacte_name_python">
 <a href="#alicloud_certifacte_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>name</a>
@@ -615,8 +580,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="alicloud_certificate_id_python">
 <a href="#alicloud_certificate_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>id</a>
@@ -625,8 +589,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloud_certificate_name_python">
 <a href="#alicloud_certificate_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>name</a>
@@ -635,8 +598,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alicloud_certificate_region_id_python">
 <a href="#alicloud_certificate_region_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>region_<wbr>id</a>
@@ -645,8 +607,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -655,8 +616,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -665,8 +625,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -675,8 +634,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_certificate_python">
 <a href="#server_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate</a>
@@ -685,8 +643,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -695,8 +652,7 @@ The ServerCertificate resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -707,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -716,13 +671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -730,13 +683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -744,13 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -758,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -886,8 +834,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloudcertifacteid_csharp">
 <a href="#state_alicloudcertifacteid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
@@ -895,8 +842,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloudcertifactename_csharp">
 <a href="#state_alicloudcertifactename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
@@ -904,8 +850,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificateid_csharp">
 <a href="#state_alicloudcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
@@ -914,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificatename_csharp">
 <a href="#state_alicloudcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
@@ -924,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificateregionid_csharp">
 <a href="#state_alicloudcertificateregionid_csharp" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
@@ -934,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -944,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -954,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -964,8 +904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -974,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -984,13 +922,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloudcertifacteid_go">
 <a href="#state_alicloudcertifacteid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Id</a>
@@ -998,8 +934,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloudcertifactename_go">
 <a href="#state_alicloudcertifactename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certifacte<wbr>Name</a>
@@ -1007,8 +942,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificateid_go">
 <a href="#state_alicloudcertificateid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Id</a>
@@ -1017,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificatename_go">
 <a href="#state_alicloudcertificatename_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Name</a>
@@ -1027,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificateregionid_go">
 <a href="#state_alicloudcertificateregionid_go" style="color: inherit; text-decoration: inherit;">Alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
@@ -1037,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1047,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1057,8 +987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1067,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificate_go">
 <a href="#state_servercertificate_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate</a>
@@ -1077,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1087,13 +1014,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloudcertifacteid_nodejs">
 <a href="#state_alicloudcertifacteid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Id</a>
@@ -1101,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloudcertifactename_nodejs">
 <a href="#state_alicloudcertifactename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certifacte<wbr>Name</a>
@@ -1110,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificateid_nodejs">
 <a href="#state_alicloudcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Id</a>
@@ -1120,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificatename_nodejs">
 <a href="#state_alicloudcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Name</a>
@@ -1130,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloudcertificateregionid_nodejs">
 <a href="#state_alicloudcertificateregionid_nodejs" style="color: inherit; text-decoration: inherit;">alicloud<wbr>Certificate<wbr>Region<wbr>Id</a>
@@ -1140,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1150,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1160,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1170,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificate_nodejs">
 <a href="#state_servercertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate</a>
@@ -1180,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1190,13 +1106,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloud_certifacte_id_python">
 <a href="#state_alicloud_certifacte_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>id</a>
@@ -1204,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_id&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_id&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_alicloud_certifacte_name_python">
 <a href="#state_alicloud_certifacte_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certifacte_<wbr>name</a>
@@ -1213,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;alicloud_certifacte_name&#39; has been deprecated from provider version 1.68.0. Use &#39;alicloud_certificate_name&#39; replaces it.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloud_certificate_id_python">
 <a href="#state_alicloud_certificate_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>id</a>
@@ -1223,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an id of server certificate ssued/proxied by alibaba cloud. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloud_certificate_name_python">
 <a href="#state_alicloud_certificate_name_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>name</a>
@@ -1233,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the name of the certificate specified by `alicloud_certificate_id`.but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alicloud_certificate_region_id_python">
 <a href="#state_alicloud_certificate_region_id_python" style="color: inherit; text-decoration: inherit;">alicloud_<wbr>certificate_<wbr>region_<wbr>id</a>
@@ -1243,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the region of the certificate specified by `alicloud_certificate_id`. but it is not supported on the international site of alibaba cloud now.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1253,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Server Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1263,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the content of privat key of the ssl certificate specified by `server_certificate`. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1273,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the slb server certificate belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_certificate_python">
 <a href="#state_server_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate</a>
@@ -1283,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the content of the ssl certificate. where `alicloud_certificate_id` is null, it is required, otherwise it is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1293,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -138,8 +138,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -149,8 +148,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The region in which to obtain the Block Storage client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -160,13 +158,11 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The `state` of the availability zones to match. Can
 either be `available` or `unavailable`. Default is `available`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -176,8 +172,7 @@ either be `available` or `unavailable`. Default is `available`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the Block Storage client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -187,13 +182,11 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The `state` of the availability zones to match. Can
 either be `available` or `unavailable`. Default is `available`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -203,8 +196,7 @@ either be `available` or `unavailable`. Default is `available`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the Block Storage client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -214,13 +206,11 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The `state` of the availability zones to match. Can
 either be `available` or `unavailable`. Default is `available`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -230,8 +220,7 @@ either be `available` or `unavailable`. Default is `available`.
     </dt>
     <dd>{{% md %}}The region in which to obtain the Block Storage client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -241,8 +230,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The `state` of the availability zones to match. Can
 either be `available` or `unavailable`. Default is `available`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -255,8 +243,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -265,8 +252,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -276,8 +262,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The names of the availability zones, ordered alphanumerically, that
 match the queried `state`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -286,8 +271,7 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -296,13 +280,11 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -311,8 +293,7 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -322,8 +303,7 @@ match the queried `state`.
     </dt>
     <dd>{{% md %}}The names of the availability zones, ordered alphanumerically, that
 match the queried `state`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -332,8 +312,7 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -342,13 +321,11 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -357,8 +334,7 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -368,8 +344,7 @@ match the queried `state`.
     </dt>
     <dd>{{% md %}}The names of the availability zones, ordered alphanumerically, that
 match the queried `state`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -378,8 +353,7 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -388,13 +362,11 @@ match the queried `state`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +375,7 @@ match the queried `state`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -414,8 +385,7 @@ match the queried `state`.
     </dt>
     <dd>{{% md %}}The names of the availability zones, ordered alphanumerically, that
 match the queried `state`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -424,8 +394,7 @@ match the queried `state`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -434,8 +403,7 @@ match the queried `state`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

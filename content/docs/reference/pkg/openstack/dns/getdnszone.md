@@ -146,8 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allprojects_csharp">
 <a href="#allprojects_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
@@ -157,8 +156,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Try to obtain zone ID by listing all projects
 (requires admin role by default, depends on your policy configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -167,8 +165,7 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -177,8 +174,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -187,8 +183,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -197,8 +192,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_csharp">
 <a href="#masters_csharp" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -207,8 +201,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -217,8 +210,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolid_csharp">
 <a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -227,8 +219,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -238,8 +229,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
 sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -250,8 +240,7 @@ sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target pr
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 A DNS client is needed to retrieve zone ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_csharp">
 <a href="#serial_csharp" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -260,8 +249,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -270,8 +258,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone's status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferredat_csharp">
 <a href="#transferredat_csharp" style="color: inherit; text-decoration: inherit;">Transferred<wbr>At</a>
@@ -280,8 +267,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -290,8 +276,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -300,8 +285,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -310,8 +294,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -320,13 +303,11 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allprojects_go">
 <a href="#allprojects_go" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
@@ -336,8 +317,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
     </dt>
     <dd>{{% md %}}Try to obtain zone ID by listing all projects
 (requires admin role by default, depends on your policy configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -346,8 +326,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -356,8 +335,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -366,8 +344,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -376,8 +353,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_go">
 <a href="#masters_go" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -386,8 +362,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -396,8 +371,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolid_go">
 <a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -406,8 +380,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -417,8 +390,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
     </dt>
     <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
 sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -429,8 +401,7 @@ sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target pr
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 A DNS client is needed to retrieve zone ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_go">
 <a href="#serial_go" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -439,8 +410,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -449,8 +419,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone's status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferredat_go">
 <a href="#transferredat_go" style="color: inherit; text-decoration: inherit;">Transferred<wbr>At</a>
@@ -459,8 +428,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -469,8 +437,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -479,8 +446,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -489,8 +455,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -499,13 +464,11 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allprojects_nodejs">
 <a href="#allprojects_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Projects</a>
@@ -515,8 +478,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
     </dt>
     <dd>{{% md %}}Try to obtain zone ID by listing all projects
 (requires admin role by default, depends on your policy configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -525,8 +487,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -535,8 +496,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -545,8 +505,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -555,8 +514,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_nodejs">
 <a href="#masters_nodejs" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -565,8 +523,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -575,8 +532,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolid_nodejs">
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -585,8 +541,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -596,8 +551,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
     </dt>
     <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
 sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -608,8 +562,7 @@ sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target pr
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 A DNS client is needed to retrieve zone ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_nodejs">
 <a href="#serial_nodejs" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -618,8 +571,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -628,8 +580,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone's status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferredat_nodejs">
 <a href="#transferredat_nodejs" style="color: inherit; text-decoration: inherit;">transferred<wbr>At</a>
@@ -638,8 +589,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -648,8 +598,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -658,8 +607,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -668,8 +616,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -678,13 +625,11 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_projects_python">
 <a href="#all_projects_python" style="color: inherit; text-decoration: inherit;">all_<wbr>projects</a>
@@ -694,8 +639,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
     </dt>
     <dd>{{% md %}}Try to obtain zone ID by listing all projects
 (requires admin role by default, depends on your policy configuration)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -704,8 +648,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -714,8 +657,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -724,8 +666,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -734,8 +675,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_python">
 <a href="#masters_python" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -744,8 +684,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -754,8 +693,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_id_python">
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -764,8 +702,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -775,8 +712,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
     </dt>
     <dd>{{% md %}}The ID of the project the DNS zone is obtained from,
 sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -787,8 +723,7 @@ sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned user role in target pr
     <dd>{{% md %}}The region in which to obtain the V2 DNS client.
 A DNS client is needed to retrieve zone ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_python">
 <a href="#serial_python" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -797,8 +732,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -807,8 +741,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone's status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferred_at_python">
 <a href="#transferred_at_python" style="color: inherit; text-decoration: inherit;">transferred_<wbr>at</a>
@@ -817,8 +750,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -827,8 +759,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -837,8 +768,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the zone. Can either be `PRIMARY` or `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -847,8 +777,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -857,8 +786,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -871,8 +799,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -881,8 +808,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -891,8 +817,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -901,8 +826,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masters_csharp">
 <a href="#masters_csharp" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -911,8 +835,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolid_csharp">
 <a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -921,8 +844,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -931,8 +853,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that owns the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -941,8 +862,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_csharp">
 <a href="#serial_csharp" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -951,8 +871,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transferredat_csharp">
 <a href="#transferredat_csharp" style="color: inherit; text-decoration: inherit;">Transferred<wbr>At</a>
@@ -961,8 +880,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -971,8 +889,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -981,8 +898,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allprojects_csharp">
 <a href="#allprojects_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
@@ -990,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1000,8 +915,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1010,8 +924,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1020,8 +933,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1030,8 +942,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1040,8 +951,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1050,13 +960,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1065,8 +973,7 @@ The following output properties are available:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1075,8 +982,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1085,8 +991,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masters_go">
 <a href="#masters_go" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -1095,8 +1000,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolid_go">
 <a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -1105,8 +1009,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1115,8 +1018,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that owns the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1125,8 +1027,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_go">
 <a href="#serial_go" style="color: inherit; text-decoration: inherit;">Serial</a>
@@ -1135,8 +1036,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transferredat_go">
 <a href="#transferredat_go" style="color: inherit; text-decoration: inherit;">Transferred<wbr>At</a>
@@ -1145,8 +1045,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1155,8 +1054,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1165,8 +1063,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allprojects_go">
 <a href="#allprojects_go" style="color: inherit; text-decoration: inherit;">All<wbr>Projects</a>
@@ -1174,8 +1071,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1184,8 +1080,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1194,8 +1089,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1204,8 +1098,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1214,8 +1107,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1224,8 +1116,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1234,13 +1125,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1249,8 +1138,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1259,8 +1147,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1269,8 +1156,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masters_nodejs">
 <a href="#masters_nodejs" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -1279,8 +1165,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolid_nodejs">
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -1289,8 +1174,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1299,8 +1183,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that owns the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1309,8 +1192,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_nodejs">
 <a href="#serial_nodejs" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -1319,8 +1201,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transferredat_nodejs">
 <a href="#transferredat_nodejs" style="color: inherit; text-decoration: inherit;">transferred<wbr>At</a>
@@ -1329,8 +1210,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1339,8 +1219,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1349,8 +1228,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allprojects_nodejs">
 <a href="#allprojects_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Projects</a>
@@ -1358,8 +1236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1368,8 +1245,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1378,8 +1254,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1388,8 +1263,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1398,8 +1272,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1408,8 +1281,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1418,13 +1290,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1433,8 +1303,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Attributes of the DNS Service scheduler.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1443,8 +1312,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the zone was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1453,8 +1321,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masters_python">
 <a href="#masters_python" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -1463,8 +1330,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of master DNS servers. When `type` is  `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pool_id_python">
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -1473,8 +1339,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the pool hosting the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1483,8 +1348,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID that owns the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1493,8 +1357,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serial_python">
 <a href="#serial_python" style="color: inherit; text-decoration: inherit;">serial</a>
@@ -1503,8 +1366,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The serial number of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transferred_at_python">
 <a href="#transferred_at_python" style="color: inherit; text-decoration: inherit;">transferred_<wbr>at</a>
@@ -1513,8 +1375,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the zone was transferred.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1523,8 +1384,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the zone was last updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1533,8 +1393,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version of the zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="all_projects_python">
 <a href="#all_projects_python" style="color: inherit; text-decoration: inherit;">all_<wbr>projects</a>
@@ -1542,8 +1401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1552,8 +1410,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1562,8 +1419,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1572,8 +1428,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1582,8 +1437,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1592,8 +1446,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1602,8 +1455,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -815,8 +815,7 @@ The Hl7Store resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -826,8 +825,7 @@ The Hl7Store resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -843,8 +841,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -854,8 +851,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notificationconfig_csharp">
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -867,8 +863,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfigs_csharp">
 <a href="#notificationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configs</a>
@@ -880,8 +875,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parserconfig_csharp">
 <a href="#parserconfig_csharp" style="color: inherit; text-decoration: inherit;">Parser<wbr>Config</a>
@@ -891,13 +885,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -907,8 +899,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -924,8 +915,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -935,8 +925,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notificationconfig_go">
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -948,8 +937,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfigs_go">
 <a href="#notificationconfigs_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configs</a>
@@ -961,8 +949,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parserconfig_go">
 <a href="#parserconfig_go" style="color: inherit; text-decoration: inherit;">Parser<wbr>Config</a>
@@ -972,13 +959,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -988,8 +973,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1005,8 +989,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1016,8 +999,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notificationconfig_nodejs">
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
@@ -1029,8 +1011,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfigs_nodejs">
 <a href="#notificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Configs</a>
@@ -1042,8 +1023,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parserconfig_nodejs">
 <a href="#parserconfig_nodejs" style="color: inherit; text-decoration: inherit;">parser<wbr>Config</a>
@@ -1053,13 +1033,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -1069,8 +1047,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1086,8 +1063,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1097,8 +1073,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="notification_config_python">
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
@@ -1110,8 +1085,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notification_configs_python">
 <a href="#notification_configs_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>configs</a>
@@ -1123,8 +1097,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parser_config_python">
 <a href="#parser_config_python" style="color: inherit; text-decoration: inherit;">parser_<wbr>config</a>
@@ -1134,8 +1107,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1146,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1155,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1165,13 +1135,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1179,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1189,13 +1156,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1203,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1213,13 +1177,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1227,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1237,8 +1198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1365,8 +1325,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_csharp">
 <a href="#state_dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -1376,8 +1335,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1393,8 +1351,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1404,8 +1361,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notificationconfig_csharp">
 <a href="#state_notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -1417,8 +1373,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfigs_csharp">
 <a href="#state_notificationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configs</a>
@@ -1430,8 +1385,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parserconfig_csharp">
 <a href="#state_parserconfig_csharp" style="color: inherit; text-decoration: inherit;">Parser<wbr>Config</a>
@@ -1441,8 +1395,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1451,13 +1404,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_go">
 <a href="#state_dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -1467,8 +1418,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1484,8 +1434,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1495,8 +1444,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notificationconfig_go">
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -1508,8 +1456,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfigs_go">
 <a href="#state_notificationconfigs_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Configs</a>
@@ -1521,8 +1468,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parserconfig_go">
 <a href="#state_parserconfig_go" style="color: inherit; text-decoration: inherit;">Parser<wbr>Config</a>
@@ -1532,8 +1478,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1542,13 +1487,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_nodejs">
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -1558,8 +1501,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1575,8 +1517,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1586,8 +1527,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notificationconfig_nodejs">
 <a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
@@ -1599,8 +1539,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfigs_nodejs">
 <a href="#state_notificationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Configs</a>
@@ -1612,8 +1551,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parserconfig_nodejs">
 <a href="#state_parserconfig_nodejs" style="color: inherit; text-decoration: inherit;">parser<wbr>Config</a>
@@ -1623,8 +1561,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1633,13 +1570,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_python">
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -1649,8 +1584,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1666,8 +1600,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1677,8 +1610,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the Hl7V2Store.
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_notification_config_python">
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
@@ -1690,8 +1622,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 (Optional, Deprecated)
 A nested object resource
 Structure is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been replaced by notificationConfigs{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_configs_python">
 <a href="#state_notification_configs_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>configs</a>
@@ -1703,8 +1634,7 @@ Structure is documented below.
 message (both Ingest & Create) on the corresponding notification destination. Only the message name
 is sent as part of the notification. Supplied by the client.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parser_config_python">
 <a href="#state_parser_config_python" style="color: inherit; text-decoration: inherit;">parser_<wbr>config</a>
@@ -1714,8 +1644,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1724,8 +1653,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1740,8 +1668,7 @@ Structure is documented below.
 <h4 id="hl7storenotificationconfig">Hl7Store<wbr>Notification<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -1755,13 +1682,11 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -1775,13 +1700,11 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
@@ -1795,13 +1718,11 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsub_topic_python">
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
@@ -1815,15 +1736,13 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hl7storenotificationconfigs">Hl7Store<wbr>Notification<wbr>Configs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -1837,8 +1756,7 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1855,13 +1773,11 @@ Fields/functions available for filtering are:
 * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
 * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
 * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -1875,8 +1791,7 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1893,13 +1808,11 @@ Fields/functions available for filtering are:
 * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
 * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
 * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
@@ -1913,8 +1826,7 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1931,13 +1843,11 @@ Fields/functions available for filtering are:
 * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
 * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
 * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsub_topic_python">
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
@@ -1951,8 +1861,7 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1969,15 +1878,13 @@ Fields/functions available for filtering are:
 * sendFacility, the care center that the message came from, from the MSH-4 segment. For example, sendFacility = "ABC".
 * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId("123456", "MRN").
 * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hl7storeparserconfig">Hl7Store<wbr>Parser<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allownullheader_csharp">
 <a href="#allownullheader_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Null<wbr>Header</a>
@@ -1986,8 +1893,7 @@ Fields/functions available for filtering are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -1997,8 +1903,7 @@ Fields/functions available for filtering are:
     </dt>
     <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentterminator_csharp">
 <a href="#segmentterminator_csharp" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -2008,8 +1913,7 @@ store if schematized parsing is desired.
     </dt>
     <dd>{{% md %}}Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
 A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2017,13 +1921,11 @@ A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allownullheader_go">
 <a href="#allownullheader_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Null<wbr>Header</a>
@@ -2032,8 +1934,7 @@ A base64-encoded string.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -2043,8 +1944,7 @@ A base64-encoded string.
     </dt>
     <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentterminator_go">
 <a href="#segmentterminator_go" style="color: inherit; text-decoration: inherit;">Segment<wbr>Terminator</a>
@@ -2054,8 +1954,7 @@ store if schematized parsing is desired.
     </dt>
     <dd>{{% md %}}Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
 A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2063,13 +1962,11 @@ A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allownullheader_nodejs">
 <a href="#allownullheader_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Null<wbr>Header</a>
@@ -2078,8 +1975,7 @@ A base64-encoded string.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -2089,8 +1985,7 @@ A base64-encoded string.
     </dt>
     <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentterminator_nodejs">
 <a href="#segmentterminator_nodejs" style="color: inherit; text-decoration: inherit;">segment<wbr>Terminator</a>
@@ -2100,8 +1995,7 @@ store if schematized parsing is desired.
     </dt>
     <dd>{{% md %}}Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
 A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2109,13 +2003,11 @@ A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_null_header_python">
 <a href="#allow_null_header_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>null_<wbr>header</a>
@@ -2124,8 +2016,7 @@ A base64-encoded string.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether messages with no header are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -2135,8 +2026,7 @@ A base64-encoded string.
     </dt>
     <dd>{{% md %}}JSON encoded string for schemas used to parse messages in this
 store if schematized parsing is desired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segment_terminator_python">
 <a href="#segment_terminator_python" style="color: inherit; text-decoration: inherit;">segment_<wbr>terminator</a>
@@ -2146,8 +2036,7 @@ store if schematized parsing is desired.
     </dt>
     <dd>{{% md %}}Byte(s) to be used as the segment terminator. If this is unset, '\r' will be used as segment terminator.
 A base64-encoded string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2155,8 +2044,7 @@ A base64-encoded string.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiurl_csharp">
 <a href="#apiurl_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -177,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the rancher API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -187,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Key used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrap_csharp">
 <a href="#bootstrap_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap</a>
@@ -197,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bootstrap rancher server
- It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacerts_csharp">
 <a href="#cacerts_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certs</a>
@@ -207,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
 <a href="#insecure_csharp" style="color: inherit; text-decoration: inherit;">Insecure</a>
@@ -217,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -227,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -237,8 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenkey_csharp">
 <a href="#tokenkey_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Key</a>
@@ -247,13 +239,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API token used to authenticate with the rancher server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiurl_go">
 <a href="#apiurl_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Url</a>
@@ -262,8 +252,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the rancher API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -272,8 +261,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Key used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrap_go">
 <a href="#bootstrap_go" style="color: inherit; text-decoration: inherit;">Bootstrap</a>
@@ -282,8 +270,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bootstrap rancher server
- It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacerts_go">
 <a href="#cacerts_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certs</a>
@@ -292,8 +279,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
 <a href="#insecure_go" style="color: inherit; text-decoration: inherit;">Insecure</a>
@@ -302,8 +288,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -312,8 +297,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -322,8 +306,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenkey_go">
 <a href="#tokenkey_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Key</a>
@@ -332,13 +315,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API token used to authenticate with the rancher server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiurl_nodejs">
 <a href="#apiurl_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Url</a>
@@ -347,8 +328,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the rancher API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -357,8 +337,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API Key used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrap_nodejs">
 <a href="#bootstrap_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap</a>
@@ -367,8 +346,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Bootstrap rancher server
- It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacerts_nodejs">
 <a href="#cacerts_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certs</a>
@@ -377,8 +355,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
 <a href="#insecure_nodejs" style="color: inherit; text-decoration: inherit;">insecure</a>
@@ -387,8 +364,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -397,8 +373,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -407,8 +382,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenkey_nodejs">
 <a href="#tokenkey_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Key</a>
@@ -417,13 +391,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API token used to authenticate with the rancher server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_url_python">
 <a href="#api_url_python" style="color: inherit; text-decoration: inherit;">api_<wbr>url</a>
@@ -432,8 +404,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to the rancher API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -442,8 +413,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API Key used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootstrap_python">
 <a href="#bootstrap_python" style="color: inherit; text-decoration: inherit;">bootstrap</a>
@@ -452,8 +422,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Bootstrap rancher server
- It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_BOOTSTRAP`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_certs_python">
 <a href="#ca_certs_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certs</a>
@@ -462,8 +431,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CA certificates used to sign rancher server tls certificates. Mandatory if self signed tls and insecure option false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
 <a href="#insecure_python" style="color: inherit; text-decoration: inherit;">insecure</a>
@@ -472,8 +440,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow insecure connections to Rancher. Mandatory if self signed tls and not ca_certs provided
- It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `RANCHER_INSECURE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -482,8 +449,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Rancher connection retries
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -492,8 +458,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API secret used to authenticate with the rancher server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_key_python">
 <a href="#token_key_python" style="color: inherit; text-decoration: inherit;">token_<wbr>key</a>
@@ -502,8 +467,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API token used to authenticate with the rancher server
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,8 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -523,13 +486,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -537,13 +498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -551,13 +510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -565,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

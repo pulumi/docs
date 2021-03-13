@@ -437,8 +437,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="coderepositoryname_csharp">
 <a href="#coderepositoryname_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Repository<wbr>Name</a>
@@ -447,8 +446,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gitconfig_csharp">
 <a href="#gitconfig_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Config</a>
@@ -457,13 +455,11 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="coderepositoryname_go">
 <a href="#coderepositoryname_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Repository<wbr>Name</a>
@@ -472,8 +468,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gitconfig_go">
 <a href="#gitconfig_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Config</a>
@@ -482,13 +477,11 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="coderepositoryname_nodejs">
 <a href="#coderepositoryname_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Repository<wbr>Name</a>
@@ -497,8 +490,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gitconfig_nodejs">
 <a href="#gitconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Config</a>
@@ -507,13 +499,11 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_repository_name_python">
 <a href="#code_repository_name_python" style="color: inherit; text-decoration: inherit;">code_<wbr>repository_<wbr>name</a>
@@ -522,8 +512,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="git_config_python">
 <a href="#git_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>config</a>
@@ -532,8 +521,7 @@ The CodeRepository resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -544,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -554,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -563,13 +549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -578,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -587,13 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -602,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -611,13 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -626,8 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -635,8 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -763,8 +739,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -773,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coderepositoryname_csharp">
 <a href="#state_coderepositoryname_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Repository<wbr>Name</a>
@@ -783,8 +757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitconfig_csharp">
 <a href="#state_gitconfig_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Config</a>
@@ -793,13 +766,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -808,8 +779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coderepositoryname_go">
 <a href="#state_coderepositoryname_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Repository<wbr>Name</a>
@@ -818,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitconfig_go">
 <a href="#state_gitconfig_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Config</a>
@@ -828,13 +797,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -843,8 +810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coderepositoryname_nodejs">
 <a href="#state_coderepositoryname_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Repository<wbr>Name</a>
@@ -853,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gitconfig_nodejs">
 <a href="#state_gitconfig_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Config</a>
@@ -863,13 +828,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -878,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) assigned by AWS to this Code Repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_repository_name_python">
 <a href="#state_code_repository_name_python" style="color: inherit; text-decoration: inherit;">code_<wbr>repository_<wbr>name</a>
@@ -888,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Code Repository (must be unique).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_git_config_python">
 <a href="#state_git_config_python" style="color: inherit; text-decoration: inherit;">git_<wbr>config</a>
@@ -898,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies details about the repository. see Git Config details below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -914,8 +874,7 @@ The following state arguments are supported:
 <h4 id="coderepositorygitconfig">Code<wbr>Repository<wbr>Git<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_csharp">
 <a href="#repositoryurl_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -924,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -934,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretarn_csharp">
 <a href="#secretarn_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn</a>
@@ -944,13 +901,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_go">
 <a href="#repositoryurl_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Url</a>
@@ -959,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -969,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretarn_go">
 <a href="#secretarn_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Arn</a>
@@ -979,13 +932,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repositoryurl_nodejs">
 <a href="#repositoryurl_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Url</a>
@@ -994,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -1004,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretarn_nodejs">
 <a href="#secretarn_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Arn</a>
@@ -1014,13 +963,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_url_python">
 <a href="#repository_url_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>url</a>
@@ -1029,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL where the Git repository is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -1039,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default branch for the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_arn_python">
 <a href="#secret_arn_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>arn</a>
@@ -1049,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

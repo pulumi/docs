@@ -165,8 +165,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -175,8 +174,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Synthetics.<wbr>Inputs.<wbr>Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entities_csharp">
 <a href="#entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -185,8 +183,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -195,8 +192,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="violationtimelimitseconds_csharp">
 <a href="#violationtimelimitseconds_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -206,8 +202,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -216,8 +211,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -226,8 +220,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_csharp">
 <a href="#runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -236,8 +229,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -246,13 +238,11 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Synthetics.<wbr>Inputs.<wbr>Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -261,8 +251,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entities_go">
 <a href="#entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -271,8 +260,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -281,8 +269,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="violationtimelimitseconds_go">
 <a href="#violationtimelimitseconds_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -292,8 +279,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -302,8 +288,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -312,8 +297,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_go">
 <a href="#runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -322,8 +306,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -332,13 +315,11 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -347,8 +328,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entities_nodejs">
 <a href="#entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -357,8 +337,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -367,8 +346,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="violationtimelimitseconds_nodejs">
 <a href="#violationtimelimitseconds_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -378,8 +356,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -388,8 +365,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -398,8 +374,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_nodejs">
 <a href="#runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
@@ -408,8 +383,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -418,13 +392,11 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -433,8 +405,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entities_python">
 <a href="#entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -443,8 +414,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -453,8 +423,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="violation_time_limit_seconds_python">
 <a href="#violation_time_limit_seconds_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>time_<wbr>limit_<wbr>seconds</a>
@@ -464,8 +433,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -474,8 +442,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -484,8 +451,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbook_url_python">
 <a href="#runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
@@ -494,8 +460,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -504,8 +469,7 @@ The MultiLocationAlertCondition resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -516,8 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -525,13 +488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -539,13 +500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -553,13 +512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -567,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -695,8 +651,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_critical_csharp">
 <a href="#state_critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -705,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Synthetics.<wbr>Inputs.<wbr>Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -715,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_csharp">
 <a href="#state_entities_csharp" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -725,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -735,8 +687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -745,8 +696,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_csharp">
 <a href="#state_runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -755,8 +705,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationtimelimitseconds_csharp">
 <a href="#state_violationtimelimitseconds_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -766,8 +715,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_csharp">
 <a href="#state_warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -776,13 +724,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Synthetics.<wbr>Inputs.<wbr>Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_critical_go">
 <a href="#state_critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -791,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -801,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_go">
 <a href="#state_entities_go" style="color: inherit; text-decoration: inherit;">Entities</a>
@@ -811,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -821,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -831,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_go">
 <a href="#state_runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -841,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationtimelimitseconds_go">
 <a href="#state_violationtimelimitseconds_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -852,8 +792,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_go">
 <a href="#state_warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -862,13 +801,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_critical_nodejs">
 <a href="#state_critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -877,8 +814,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -887,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_nodejs">
 <a href="#state_entities_nodejs" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -897,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -907,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -917,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_nodejs">
 <a href="#state_runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
@@ -927,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationtimelimitseconds_nodejs">
 <a href="#state_violationtimelimitseconds_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -938,8 +869,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_nodejs">
 <a href="#state_warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -948,13 +878,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_critical_python">
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -963,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to critical.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -973,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set whether to enable the alert condition.  Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entities_python">
 <a href="#state_entities_python" style="color: inherit; text-decoration: inherit;">entities</a>
@@ -983,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The GUIDs of the Synthetics monitors to alert on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -993,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1003,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbook_url_python">
 <a href="#state_runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
@@ -1013,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_violation_time_limit_seconds_python">
 <a href="#state_violation_time_limit_seconds_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>time_<wbr>limit_<wbr>seconds</a>
@@ -1024,8 +946,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The maximum number of seconds a violation can remain open before being closed by the system. Must be one of: 0, 3600,
 7200, 14400, 28800, 43200, 86400
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_python">
 <a href="#state_warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1034,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A condition term with the priority set to warning.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1050,8 +970,7 @@ The following state arguments are supported:
 <h4 id="multilocationalertconditioncritical">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Critical</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1059,13 +978,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1073,13 +990,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1087,13 +1002,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1101,15 +1014,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="multilocationalertconditionwarning">Multi<wbr>Location<wbr>Alert<wbr>Condition<wbr>Warning</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1117,13 +1028,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1131,13 +1040,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1145,13 +1052,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1159,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

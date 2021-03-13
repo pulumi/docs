@@ -310,8 +310,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -320,8 +319,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -330,8 +328,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmlimits_csharp">
 <a href="#dpmlimits_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
@@ -340,8 +337,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#orgtokendpmlimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostorusagelimits_csharp">
 <a href="#hostorusagelimits_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
@@ -350,8 +346,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -360,8 +355,7 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_csharp">
 <a href="#notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -371,13 +365,11 @@ The OrgToken resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -386,8 +378,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -396,8 +387,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmlimits_go">
 <a href="#dpmlimits_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
@@ -406,8 +396,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostorusagelimits_go">
 <a href="#hostorusagelimits_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
@@ -416,8 +405,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -426,8 +414,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_go">
 <a href="#notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -437,13 +424,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -452,8 +437,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -462,8 +446,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmlimits_nodejs">
 <a href="#dpmlimits_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limits</a>
@@ -472,8 +455,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostorusagelimits_nodejs">
 <a href="#hostorusagelimits_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Or<wbr>Usage<wbr>Limits</a>
@@ -482,8 +464,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -492,8 +473,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_nodejs">
 <a href="#notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -503,13 +483,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -518,8 +496,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -528,8 +505,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_limits_python">
 <a href="#dpm_limits_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limits</a>
@@ -538,8 +514,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_or_usage_limits_python">
 <a href="#host_or_usage_limits_python" style="color: inherit; text-decoration: inherit;">host_<wbr>or_<wbr>usage_<wbr>limits</a>
@@ -548,8 +523,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -558,8 +532,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifications_python">
 <a href="#notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -569,8 +542,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -590,8 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -600,13 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -614,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -624,13 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -638,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -648,13 +612,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -662,8 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -672,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,8 +760,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -810,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -820,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmlimits_csharp">
 <a href="#state_dpmlimits_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
@@ -830,8 +787,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orgtokendpmlimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostorusagelimits_csharp">
 <a href="#state_hostorusagelimits_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
@@ -840,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -850,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifications_csharp">
 <a href="#state_notifications_csharp" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -861,8 +815,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_csharp">
 <a href="#state_secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -871,13 +824,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -886,8 +837,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -896,8 +846,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmlimits_go">
 <a href="#state_dpmlimits_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limits</a>
@@ -906,8 +855,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostorusagelimits_go">
 <a href="#state_hostorusagelimits_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Or<wbr>Usage<wbr>Limits</a>
@@ -916,8 +864,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -926,8 +873,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifications_go">
 <a href="#state_notifications_go" style="color: inherit; text-decoration: inherit;">Notifications</a>
@@ -937,8 +883,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_go">
 <a href="#state_secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -947,13 +892,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -962,8 +905,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -972,8 +914,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmlimits_nodejs">
 <a href="#state_dpmlimits_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limits</a>
@@ -982,8 +923,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostorusagelimits_nodejs">
 <a href="#state_hostorusagelimits_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Or<wbr>Usage<wbr>Limits</a>
@@ -992,8 +932,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1002,8 +941,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifications_nodejs">
 <a href="#state_notifications_nodejs" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -1013,8 +951,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_nodejs">
 <a href="#state_secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1023,13 +960,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1038,8 +973,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1048,8 +982,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls enabling the token. If set to `true`, the token is disabled, and you can't use it for authentication. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpm_limits_python">
 <a href="#state_dpm_limits_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limits</a>
@@ -1058,8 +991,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify DPM-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_or_usage_limits_python">
 <a href="#state_host_or_usage_limits_python" style="color: inherit; text-decoration: inherit;">host_<wbr>or_<wbr>usage_<wbr>limits</a>
@@ -1068,8 +1000,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type"><a href="#orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify Usage-based limits for this token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1078,8 +1009,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifications_python">
 <a href="#state_notifications_python" style="color: inherit; text-decoration: inherit;">notifications</a>
@@ -1089,8 +1019,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
     </dt>
     <dd>{{% md %}}List of strings specifying where notifications will be sent when an incident occurs. See
 https://developers.signalfx.com/v2/docs/detector-model#notifications-models for more info
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_python">
 <a href="#state_secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1099,8 +1028,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret token created by the API. You cannot set this value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1115,8 +1043,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
 <h4 id="orgtokendpmlimits">Org<wbr>Token<wbr>Dpm<wbr>Limits</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dpmlimit_csharp">
 <a href="#dpmlimit_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limit</a>
@@ -1125,8 +1052,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The datapoints per minute (dpm) limit for this token. If you exceed this limit, SignalFx sends out an alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmnotificationthreshold_csharp">
 <a href="#dpmnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Notification<wbr>Threshold</a>
@@ -1135,13 +1061,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DPM level at which SignalFx sends the notification for this token. If you don't specify a notification, SignalFx sends the generic notification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dpmlimit_go">
 <a href="#dpmlimit_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Limit</a>
@@ -1150,8 +1074,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The datapoints per minute (dpm) limit for this token. If you exceed this limit, SignalFx sends out an alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmnotificationthreshold_go">
 <a href="#dpmnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Notification<wbr>Threshold</a>
@@ -1160,13 +1083,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DPM level at which SignalFx sends the notification for this token. If you don't specify a notification, SignalFx sends the generic notification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dpmlimit_nodejs">
 <a href="#dpmlimit_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Limit</a>
@@ -1175,8 +1096,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The datapoints per minute (dpm) limit for this token. If you exceed this limit, SignalFx sends out an alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmnotificationthreshold_nodejs">
 <a href="#dpmnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Notification<wbr>Threshold</a>
@@ -1185,13 +1105,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}DPM level at which SignalFx sends the notification for this token. If you don't specify a notification, SignalFx sends the generic notification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dpm_limit_python">
 <a href="#dpm_limit_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>limit</a>
@@ -1200,8 +1118,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The datapoints per minute (dpm) limit for this token. If you exceed this limit, SignalFx sends out an alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_notification_threshold_python">
 <a href="#dpm_notification_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>notification_<wbr>threshold</a>
@@ -1210,15 +1127,13 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}DPM level at which SignalFx sends the notification for this token. If you don't specify a notification, SignalFx sends the generic notification.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="orgtokenhostorusagelimits">Org<wbr>Token<wbr>Host<wbr>Or<wbr>Usage<wbr>Limits</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerlimit_csharp">
 <a href="#containerlimit_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Limit</a>
@@ -1227,8 +1142,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of Docker containers that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containernotificationthreshold_csharp">
 <a href="#containernotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Notification<wbr>Threshold</a>
@@ -1237,8 +1151,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for Docker containers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommetricslimit_csharp">
 <a href="#custommetricslimit_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Limit</a>
@@ -1247,8 +1160,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of custom metrics that can be sent with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommetricsnotificationthreshold_csharp">
 <a href="#custommetricsnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
@@ -1257,8 +1169,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for custom metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highresmetricslimit_csharp">
 <a href="#highresmetricslimit_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Limit</a>
@@ -1267,8 +1178,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of hi-res metrics that can be sent with this toke
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highresmetricsnotificationthreshold_csharp">
 <a href="#highresmetricsnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
@@ -1277,8 +1187,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hi-res metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostlimit_csharp">
 <a href="#hostlimit_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Limit</a>
@@ -1287,8 +1196,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of hosts that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnotificationthreshold_csharp">
 <a href="#hostnotificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Notification<wbr>Threshold</a>
@@ -1297,13 +1205,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hosts
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerlimit_go">
 <a href="#containerlimit_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Limit</a>
@@ -1312,8 +1218,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of Docker containers that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containernotificationthreshold_go">
 <a href="#containernotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Notification<wbr>Threshold</a>
@@ -1322,8 +1227,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for Docker containers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommetricslimit_go">
 <a href="#custommetricslimit_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Limit</a>
@@ -1332,8 +1236,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of custom metrics that can be sent with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommetricsnotificationthreshold_go">
 <a href="#custommetricsnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
@@ -1342,8 +1245,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for custom metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highresmetricslimit_go">
 <a href="#highresmetricslimit_go" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Limit</a>
@@ -1352,8 +1254,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of hi-res metrics that can be sent with this toke
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highresmetricsnotificationthreshold_go">
 <a href="#highresmetricsnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">High<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
@@ -1362,8 +1263,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hi-res metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostlimit_go">
 <a href="#hostlimit_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Limit</a>
@@ -1372,8 +1272,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of hosts that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnotificationthreshold_go">
 <a href="#hostnotificationthreshold_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Notification<wbr>Threshold</a>
@@ -1382,13 +1281,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hosts
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containerlimit_nodejs">
 <a href="#containerlimit_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Limit</a>
@@ -1397,8 +1294,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of Docker containers that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containernotificationthreshold_nodejs">
 <a href="#containernotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Notification<wbr>Threshold</a>
@@ -1407,8 +1303,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold for Docker containers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommetricslimit_nodejs">
 <a href="#custommetricslimit_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Limit</a>
@@ -1417,8 +1312,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of custom metrics that can be sent with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommetricsnotificationthreshold_nodejs">
 <a href="#custommetricsnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
@@ -1427,8 +1321,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold for custom metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highresmetricslimit_nodejs">
 <a href="#highresmetricslimit_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Limit</a>
@@ -1437,8 +1330,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of hi-res metrics that can be sent with this toke
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highresmetricsnotificationthreshold_nodejs">
 <a href="#highresmetricsnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Res<wbr>Metrics<wbr>Notification<wbr>Threshold</a>
@@ -1447,8 +1339,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hi-res metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostlimit_nodejs">
 <a href="#hostlimit_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Limit</a>
@@ -1457,8 +1348,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of hosts that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnotificationthreshold_nodejs">
 <a href="#hostnotificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Notification<wbr>Threshold</a>
@@ -1467,13 +1357,11 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hosts
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="container_limit_python">
 <a href="#container_limit_python" style="color: inherit; text-decoration: inherit;">container_<wbr>limit</a>
@@ -1482,8 +1370,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of Docker containers that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_notification_threshold_python">
 <a href="#container_notification_threshold_python" style="color: inherit; text-decoration: inherit;">container_<wbr>notification_<wbr>threshold</a>
@@ -1492,8 +1379,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for Docker containers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_metrics_limit_python">
 <a href="#custom_metrics_limit_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>metrics_<wbr>limit</a>
@@ -1502,8 +1388,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of custom metrics that can be sent with this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_metrics_notification_threshold_python">
 <a href="#custom_metrics_notification_threshold_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>metrics_<wbr>notification_<wbr>threshold</a>
@@ -1512,8 +1397,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for custom metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="high_res_metrics_limit_python">
 <a href="#high_res_metrics_limit_python" style="color: inherit; text-decoration: inherit;">high_<wbr>res_<wbr>metrics_<wbr>limit</a>
@@ -1522,8 +1406,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of hi-res metrics that can be sent with this toke
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="high_res_metrics_notification_threshold_python">
 <a href="#high_res_metrics_notification_threshold_python" style="color: inherit; text-decoration: inherit;">high_<wbr>res_<wbr>metrics_<wbr>notification_<wbr>threshold</a>
@@ -1532,8 +1415,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hi-res metrics
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_limit_python">
 <a href="#host_limit_python" style="color: inherit; text-decoration: inherit;">host_<wbr>limit</a>
@@ -1542,8 +1424,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of hosts that can use this token
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_notification_threshold_python">
 <a href="#host_notification_threshold_python" style="color: inherit; text-decoration: inherit;">host_<wbr>notification_<wbr>threshold</a>
@@ -1552,8 +1433,7 @@ https://developers.signalfx.com/v2/docs/detector-model#notifications-models for 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold for hosts
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

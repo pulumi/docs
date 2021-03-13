@@ -248,8 +248,7 @@ The LogsArchiveOrder resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveids_csharp">
 <a href="#archiveids_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -260,13 +259,11 @@ The LogsArchiveOrder resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveids_go">
 <a href="#archiveids_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -277,13 +274,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveids_nodejs">
 <a href="#archiveids_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Ids</a>
@@ -294,13 +289,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archive_ids_python">
 <a href="#archive_ids_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>ids</a>
@@ -311,8 +304,7 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -323,8 +315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -332,13 +323,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -346,13 +335,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -360,13 +347,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -374,8 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -502,8 +486,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archiveids_csharp">
 <a href="#state_archiveids_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -514,13 +497,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archiveids_go">
 <a href="#state_archiveids_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Ids</a>
@@ -531,13 +512,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archiveids_nodejs">
 <a href="#state_archiveids_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Ids</a>
@@ -548,13 +527,11 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archive_ids_python">
 <a href="#state_archive_ids_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>ids</a>
@@ -565,8 +542,7 @@ will try to update the order.
     <dd>{{% md %}}The archive IDs list. The order of archive IDs in this attribute defines the overall archive order for logs. If
 `archive_ids` is empty or not specified, it will import the actual archive order, and create the resource. Otherwise, it
 will try to update the order.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

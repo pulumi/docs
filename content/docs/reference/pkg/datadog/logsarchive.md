@@ -340,8 +340,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -350,8 +349,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -360,8 +358,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="azure_csharp">
 <a href="#azure_csharp" style="color: inherit; text-decoration: inherit;">Azure</a>
@@ -370,8 +367,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azurearchive_csharp">
 <a href="#azurearchive_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Archive</a>
@@ -380,8 +376,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="gcs_csharp">
 <a href="#gcs_csharp" style="color: inherit; text-decoration: inherit;">Gcs</a>
@@ -390,8 +385,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcsarchive_csharp">
 <a href="#gcsarchive_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Archive</a>
@@ -400,8 +394,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includetags_csharp">
 <a href="#includetags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -411,8 +404,7 @@ The LogsArchive resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydrationtags_csharp">
 <a href="#rehydrationtags_csharp" style="color: inherit; text-decoration: inherit;">Rehydration<wbr>Tags</a>
@@ -421,8 +413,7 @@ are sent to the archive.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="s3_csharp">
 <a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -431,8 +422,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3archive_csharp">
 <a href="#s3archive_csharp" style="color: inherit; text-decoration: inherit;">S3Archive</a>
@@ -441,13 +431,11 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -456,8 +444,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -466,8 +453,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="azure_go">
 <a href="#azure_go" style="color: inherit; text-decoration: inherit;">Azure</a>
@@ -476,8 +462,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azurearchive_go">
 <a href="#azurearchive_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Archive</a>
@@ -486,8 +471,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="gcs_go">
 <a href="#gcs_go" style="color: inherit; text-decoration: inherit;">Gcs</a>
@@ -496,8 +480,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcsarchive_go">
 <a href="#gcsarchive_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Archive</a>
@@ -506,8 +489,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includetags_go">
 <a href="#includetags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -517,8 +499,7 @@ are sent to the archive.
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydrationtags_go">
 <a href="#rehydrationtags_go" style="color: inherit; text-decoration: inherit;">Rehydration<wbr>Tags</a>
@@ -527,8 +508,7 @@ are sent to the archive.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="s3_go">
 <a href="#s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -537,8 +517,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3archive_go">
 <a href="#s3archive_go" style="color: inherit; text-decoration: inherit;">S3Archive</a>
@@ -547,13 +526,11 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -562,8 +539,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -572,8 +548,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="azure_nodejs">
 <a href="#azure_nodejs" style="color: inherit; text-decoration: inherit;">azure</a>
@@ -582,8 +557,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azurearchive_nodejs">
 <a href="#azurearchive_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Archive</a>
@@ -592,8 +566,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="gcs_nodejs">
 <a href="#gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
@@ -602,8 +575,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcsarchive_nodejs">
 <a href="#gcsarchive_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Archive</a>
@@ -612,8 +584,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includetags_nodejs">
 <a href="#includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
@@ -623,8 +594,7 @@ are sent to the archive.
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydrationtags_nodejs">
 <a href="#rehydrationtags_nodejs" style="color: inherit; text-decoration: inherit;">rehydration<wbr>Tags</a>
@@ -633,8 +603,7 @@ are sent to the archive.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="s3_nodejs">
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -643,8 +612,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3archive_nodejs">
 <a href="#s3archive_nodejs" style="color: inherit; text-decoration: inherit;">s3Archive</a>
@@ -653,13 +621,11 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -668,8 +634,7 @@ are sent to the archive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -678,8 +643,7 @@ are sent to the archive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="azure_python">
 <a href="#azure_python" style="color: inherit; text-decoration: inherit;">azure</a>
@@ -688,8 +652,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="azure_archive_python">
 <a href="#azure_archive_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>archive</a>
@@ -698,8 +661,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="gcs_python">
 <a href="#gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
@@ -708,8 +670,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_archive_python">
 <a href="#gcs_archive_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>archive</a>
@@ -718,8 +679,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_tags_python">
 <a href="#include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
@@ -729,8 +689,7 @@ are sent to the archive.
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rehydration_tags_python">
 <a href="#rehydration_tags_python" style="color: inherit; text-decoration: inherit;">rehydration_<wbr>tags</a>
@@ -739,8 +698,7 @@ are sent to the archive.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="s3_python">
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -749,8 +707,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="s3_archive_python">
 <a href="#s3_archive_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>archive</a>
@@ -759,8 +716,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -771,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -780,13 +735,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -794,13 +747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -808,13 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -822,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -950,8 +898,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_azure_csharp">
 <a href="#state_azure_csharp" style="color: inherit; text-decoration: inherit;">Azure</a>
@@ -960,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurearchive_csharp">
 <a href="#state_azurearchive_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Archive</a>
@@ -970,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gcs_csharp">
 <a href="#state_gcs_csharp" style="color: inherit; text-decoration: inherit;">Gcs</a>
@@ -980,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsarchive_csharp">
 <a href="#state_gcsarchive_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Archive</a>
@@ -990,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includetags_csharp">
 <a href="#state_includetags_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -1001,8 +944,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1011,8 +953,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_csharp">
 <a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1021,8 +962,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rehydrationtags_csharp">
 <a href="#state_rehydrationtags_csharp" style="color: inherit; text-decoration: inherit;">Rehydration<wbr>Tags</a>
@@ -1031,8 +971,7 @@ are sent to the archive.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_s3_csharp">
 <a href="#state_s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -1041,8 +980,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3archive_csharp">
 <a href="#state_s3archive_csharp" style="color: inherit; text-decoration: inherit;">S3Archive</a>
@@ -1051,13 +989,11 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_azure_go">
 <a href="#state_azure_go" style="color: inherit; text-decoration: inherit;">Azure</a>
@@ -1066,8 +1002,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurearchive_go">
 <a href="#state_azurearchive_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Archive</a>
@@ -1076,8 +1011,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gcs_go">
 <a href="#state_gcs_go" style="color: inherit; text-decoration: inherit;">Gcs</a>
@@ -1086,8 +1020,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsarchive_go">
 <a href="#state_gcsarchive_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Archive</a>
@@ -1096,8 +1029,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includetags_go">
 <a href="#state_includetags_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Tags</a>
@@ -1107,8 +1039,7 @@ are sent to the archive.
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1117,8 +1048,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_go">
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1127,8 +1057,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rehydrationtags_go">
 <a href="#state_rehydrationtags_go" style="color: inherit; text-decoration: inherit;">Rehydration<wbr>Tags</a>
@@ -1137,8 +1066,7 @@ are sent to the archive.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_s3_go">
 <a href="#state_s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -1147,8 +1075,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3archive_go">
 <a href="#state_s3archive_go" style="color: inherit; text-decoration: inherit;">S3Archive</a>
@@ -1157,13 +1084,11 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_azure_nodejs">
 <a href="#state_azure_nodejs" style="color: inherit; text-decoration: inherit;">azure</a>
@@ -1172,8 +1097,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurearchive_nodejs">
 <a href="#state_azurearchive_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Archive</a>
@@ -1182,8 +1106,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gcs_nodejs">
 <a href="#state_gcs_nodejs" style="color: inherit; text-decoration: inherit;">gcs</a>
@@ -1192,8 +1115,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsarchive_nodejs">
 <a href="#state_gcsarchive_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Archive</a>
@@ -1202,8 +1124,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includetags_nodejs">
 <a href="#state_includetags_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Tags</a>
@@ -1213,8 +1134,7 @@ are sent to the archive.
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1223,8 +1143,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_nodejs">
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1233,8 +1152,7 @@ are sent to the archive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rehydrationtags_nodejs">
 <a href="#state_rehydrationtags_nodejs" style="color: inherit; text-decoration: inherit;">rehydration<wbr>Tags</a>
@@ -1243,8 +1161,7 @@ are sent to the archive.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_s3_nodejs">
 <a href="#state_s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -1253,8 +1170,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3archive_nodejs">
 <a href="#state_s3archive_nodejs" style="color: inherit; text-decoration: inherit;">s3Archive</a>
@@ -1263,13 +1179,11 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_azure_python">
 <a href="#state_azure_python" style="color: inherit; text-decoration: inherit;">azure</a>
@@ -1278,8 +1192,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazure">Logs<wbr>Archive<wbr>Azure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `azure_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_archive_python">
 <a href="#state_azure_archive_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>archive</a>
@@ -1288,8 +1201,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an azure archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_gcs_python">
 <a href="#state_gcs_python" style="color: inherit; text-decoration: inherit;">gcs</a>
@@ -1298,8 +1210,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcs">Logs<wbr>Archive<wbr>Gcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `gcs_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcs_archive_python">
 <a href="#state_gcs_archive_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>archive</a>
@@ -1308,8 +1219,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of a GCS archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_tags_python">
 <a href="#state_include_tags_python" style="color: inherit; text-decoration: inherit;">include_<wbr>tags</a>
@@ -1319,8 +1229,7 @@ are sent to the archive.
     </dt>
     <dd>{{% md %}}To store the tags in the archive, set the value `true`. If it is set to `false`, the tags will be dropped when the logs
 are sent to the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1329,8 +1238,7 @@ are sent to the archive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your archive name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_python">
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1339,8 +1247,7 @@ are sent to the archive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The archive query/filter. Logs matching this query are included in the archive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rehydration_tags_python">
 <a href="#state_rehydration_tags_python" style="color: inherit; text-decoration: inherit;">rehydration_<wbr>tags</a>
@@ -1349,8 +1256,7 @@ are sent to the archive.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of tags to add to rehydrated logs from an archive.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_s3_python">
 <a href="#state_s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -1359,8 +1265,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3">Logs<wbr>Archive<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `s3_archive` list with one element instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3_archive_python">
 <a href="#state_s3_archive_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>archive</a>
@@ -1369,8 +1274,7 @@ are sent to the archive.
         <span class="property-type"><a href="#logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Definition of an s3 archive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1385,8 +1289,7 @@ are sent to the archive.
 <h4 id="logsarchiveazure">Logs<wbr>Archive<wbr>Azure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1394,8 +1297,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1403,8 +1305,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_csharp">
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1412,8 +1313,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1421,8 +1321,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1430,13 +1329,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1444,8 +1341,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1453,8 +1349,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_go">
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1462,8 +1357,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1471,8 +1365,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1480,13 +1373,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1494,8 +1385,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1503,8 +1393,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_nodejs">
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
@@ -1512,8 +1401,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1521,8 +1409,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1530,13 +1417,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1544,8 +1429,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1553,8 +1437,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_python">
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
@@ -1562,8 +1445,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1571,8 +1453,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1580,15 +1461,13 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchiveazurearchive">Logs<wbr>Archive<wbr>Azure<wbr>Archive</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1596,8 +1475,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1605,8 +1483,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_csharp">
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1614,8 +1491,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1623,8 +1499,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1632,13 +1507,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1646,8 +1519,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -1655,8 +1527,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_go">
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -1664,8 +1535,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1673,8 +1543,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1682,13 +1551,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1696,8 +1563,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1705,8 +1571,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_nodejs">
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
@@ -1714,8 +1579,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1723,8 +1587,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1732,13 +1595,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1746,8 +1607,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -1755,8 +1615,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_python">
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
@@ -1764,8 +1623,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1773,8 +1631,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1782,15 +1639,13 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchivegcs">Logs<wbr>Archive<wbr>Gcs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1798,8 +1653,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_csharp">
 <a href="#clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1807,8 +1661,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1816,8 +1669,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1825,13 +1677,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1839,8 +1689,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_go">
 <a href="#clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1848,8 +1697,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1857,8 +1705,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1866,13 +1713,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1880,8 +1725,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_nodejs">
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -1889,8 +1733,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1898,8 +1741,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1907,13 +1749,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1921,8 +1761,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_email_python">
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -1930,8 +1769,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1939,8 +1777,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1948,15 +1785,13 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchivegcsarchive">Logs<wbr>Archive<wbr>Gcs<wbr>Archive</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1964,8 +1799,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_csharp">
 <a href="#clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -1973,8 +1807,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1982,8 +1815,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1991,13 +1823,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2005,8 +1835,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_go">
 <a href="#clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -2014,8 +1843,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2023,8 +1851,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2032,13 +1859,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2046,8 +1871,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientemail_nodejs">
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -2055,8 +1879,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2064,8 +1887,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -2073,13 +1895,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2087,8 +1907,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_email_python">
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -2096,8 +1915,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2105,8 +1923,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2114,15 +1931,13 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchives3">Logs<wbr>Archive<wbr>S3</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2130,8 +1945,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2139,8 +1953,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2148,8 +1961,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2157,13 +1969,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2171,8 +1981,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2180,8 +1989,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2189,8 +1997,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2198,13 +2005,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -2212,8 +2017,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2221,8 +2025,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2230,8 +2033,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -2239,13 +2041,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -2253,8 +2053,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2262,8 +2061,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2271,8 +2069,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -2280,15 +2077,13 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="logsarchives3archive">Logs<wbr>Archive<wbr>S3Archive</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2296,8 +2091,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2305,8 +2099,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2314,8 +2107,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2323,13 +2115,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -2337,8 +2127,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2346,8 +2135,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2355,8 +2143,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2364,13 +2151,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -2378,8 +2163,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2387,8 +2171,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2396,8 +2179,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -2405,13 +2187,11 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -2419,8 +2199,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2428,8 +2207,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2437,8 +2215,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -2446,8 +2223,7 @@ are sent to the archive.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

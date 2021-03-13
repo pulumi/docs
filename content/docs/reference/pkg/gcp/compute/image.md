@@ -417,8 +417,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -428,8 +427,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -438,8 +436,7 @@ you create the resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -452,8 +449,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestosfeatures_csharp">
 <a href="#guestosfeatures_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
@@ -464,8 +460,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -474,8 +469,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licenses_csharp">
 <a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
@@ -484,8 +478,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -500,8 +493,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -511,8 +503,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawdisk_csharp">
 <a href="#rawdisk_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
@@ -522,8 +513,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedisk_csharp">
 <a href="#sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
@@ -534,8 +524,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceimage_csharp">
 <a href="#sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
@@ -549,8 +538,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshot_csharp">
 <a href="#sourcesnapshot_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
@@ -565,13 +553,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -581,8 +567,7 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -591,8 +576,7 @@ you create the resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -605,8 +589,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestosfeatures_go">
 <a href="#guestosfeatures_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
@@ -617,8 +600,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -627,8 +609,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licenses_go">
 <a href="#licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
@@ -637,8 +618,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -653,8 +633,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -664,8 +643,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawdisk_go">
 <a href="#rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
@@ -675,8 +653,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedisk_go">
 <a href="#sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
@@ -687,8 +664,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceimage_go">
 <a href="#sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
@@ -702,8 +678,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshot_go">
 <a href="#sourcesnapshot_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
@@ -718,13 +693,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -734,8 +707,7 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -744,8 +716,7 @@ you create the resource.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -758,8 +729,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestosfeatures_nodejs">
 <a href="#guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
@@ -770,8 +740,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -780,8 +749,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licenses_nodejs">
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
@@ -790,8 +758,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -806,8 +773,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -817,8 +783,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawdisk_nodejs">
 <a href="#rawdisk_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Disk</a>
@@ -828,8 +793,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedisk_nodejs">
 <a href="#sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
@@ -840,8 +804,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceimage_nodejs">
 <a href="#sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
@@ -855,8 +818,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshot_nodejs">
 <a href="#sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
@@ -871,13 +833,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -887,8 +847,7 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -897,8 +856,7 @@ you create the resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -911,8 +869,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_os_features_python">
 <a href="#guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
@@ -923,8 +880,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -933,8 +889,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licenses_python">
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
@@ -943,8 +898,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -959,8 +913,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -970,8 +923,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_disk_python">
 <a href="#raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
@@ -981,8 +933,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_disk_python">
 <a href="#source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
@@ -993,8 +944,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_image_python">
 <a href="#source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
@@ -1008,8 +958,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_snapshot_python">
 <a href="#source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
@@ -1024,8 +973,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1036,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archivesizebytes_csharp">
 <a href="#archivesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -1046,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1056,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1065,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1075,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1085,13 +1028,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archivesizebytes_go">
 <a href="#archivesizebytes_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -1100,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1110,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1119,8 +1058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1129,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1139,13 +1076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archivesizebytes_nodejs">
 <a href="#archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
@@ -1154,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1164,8 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1173,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1183,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1193,13 +1124,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archive_size_bytes_python">
 <a href="#archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
@@ -1208,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1218,8 +1146,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1227,8 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1237,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1247,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1375,8 +1299,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archivesizebytes_csharp">
 <a href="#state_archivesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -1385,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1395,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1406,8 +1327,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disksizegb_csharp">
 <a href="#state_disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1416,8 +1336,7 @@ you create the resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_csharp">
 <a href="#state_family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1430,8 +1349,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestosfeatures_csharp">
 <a href="#state_guestosfeatures_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
@@ -1442,8 +1360,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1452,8 +1369,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1462,8 +1378,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenses_csharp">
 <a href="#state_licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
@@ -1472,8 +1387,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1488,8 +1402,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1499,8 +1412,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rawdisk_csharp">
 <a href="#state_rawdisk_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
@@ -1510,8 +1422,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1520,8 +1431,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedisk_csharp">
 <a href="#state_sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
@@ -1532,8 +1442,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimage_csharp">
 <a href="#state_sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
@@ -1547,8 +1456,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshot_csharp">
 <a href="#state_sourcesnapshot_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
@@ -1563,13 +1471,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archivesizebytes_go">
 <a href="#state_archivesizebytes_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -1578,8 +1484,7 @@ In order to create an image, you must provide the full or partial URL of one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1588,8 +1493,7 @@ In order to create an image, you must provide the full or partial URL of one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1599,8 +1503,7 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disksizegb_go">
 <a href="#state_disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1609,8 +1512,7 @@ you create the resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_go">
 <a href="#state_family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1623,8 +1525,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestosfeatures_go">
 <a href="#state_guestosfeatures_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Os<wbr>Features</a>
@@ -1635,8 +1536,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1645,8 +1545,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1655,8 +1554,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenses_go">
 <a href="#state_licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
@@ -1665,8 +1563,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1681,8 +1578,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1692,8 +1588,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rawdisk_go">
 <a href="#state_rawdisk_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Disk</a>
@@ -1703,8 +1598,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1713,8 +1607,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedisk_go">
 <a href="#state_sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
@@ -1725,8 +1618,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimage_go">
 <a href="#state_sourceimage_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
@@ -1740,8 +1632,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshot_go">
 <a href="#state_sourcesnapshot_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot</a>
@@ -1756,13 +1647,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archivesizebytes_nodejs">
 <a href="#state_archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
@@ -1771,8 +1660,7 @@ In order to create an image, you must provide the full or partial URL of one of 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1781,8 +1669,7 @@ In order to create an image, you must provide the full or partial URL of one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1792,8 +1679,7 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disksizegb_nodejs">
 <a href="#state_disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -1802,8 +1688,7 @@ you create the resource.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_nodejs">
 <a href="#state_family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1816,8 +1701,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestosfeatures_nodejs">
 <a href="#state_guestosfeatures_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Os<wbr>Features</a>
@@ -1828,8 +1712,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1838,8 +1721,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1848,8 +1730,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenses_nodejs">
 <a href="#state_licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
@@ -1858,8 +1739,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1874,8 +1754,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1885,8 +1764,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rawdisk_nodejs">
 <a href="#state_rawdisk_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Disk</a>
@@ -1896,8 +1774,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1906,8 +1783,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcedisk_nodejs">
 <a href="#state_sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
@@ -1918,8 +1794,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceimage_nodejs">
 <a href="#state_sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
@@ -1933,8 +1808,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshot_nodejs">
 <a href="#state_sourcesnapshot_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot</a>
@@ -1949,13 +1823,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_archive_size_bytes_python">
 <a href="#state_archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
@@ -1964,8 +1836,7 @@ In order to create an image, you must provide the full or partial URL of one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1974,8 +1845,7 @@ In order to create an image, you must provide the full or partial URL of one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1985,8 +1855,7 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_size_gb_python">
 <a href="#state_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -1995,8 +1864,7 @@ you create the resource.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the image when restored onto a persistent disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_family_python">
 <a href="#state_family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -2009,8 +1877,7 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guest_os_features_python">
 <a href="#state_guest_os_features_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>os_<wbr>features</a>
@@ -2021,8 +1888,7 @@ RFC1035.
     <dd>{{% md %}}A list of features to enable on the guest operating system.
 Applicable only for bootable images.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -2031,8 +1897,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2041,8 +1906,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenses_python">
 <a href="#state_licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
@@ -2051,8 +1915,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Any applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2067,8 +1930,7 @@ match the regular expression `a-z?` which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2078,8 +1940,7 @@ last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_raw_disk_python">
 <a href="#state_raw_disk_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>disk</a>
@@ -2089,8 +1950,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The parameters of the raw disk image.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2099,8 +1959,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_disk_python">
 <a href="#state_source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
@@ -2111,8 +1970,7 @@ Structure is documented below.
     <dd>{{% md %}}The source disk to create this image based on.
 You must provide either this property or the
 rawDisk.source property but not both to create an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_image_python">
 <a href="#state_source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
@@ -2126,8 +1984,7 @@ URL of one of the following:
 * This property
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_snapshot_python">
 <a href="#state_source_snapshot_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot</a>
@@ -2142,8 +1999,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2158,8 +2014,7 @@ In order to create an image, you must provide the full or partial URL of one of 
 <h4 id="imageguestosfeature">Image<wbr>Guest<wbr>Os<wbr>Feature</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2169,13 +2024,11 @@ In order to create an image, you must provide the full or partial URL of one of 
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
 Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, `WINDOWS`, and `GVNIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2185,13 +2038,11 @@ Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPA
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
 Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, `WINDOWS`, and `GVNIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2201,13 +2052,11 @@ Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPA
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
 Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, `WINDOWS`, and `GVNIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2217,15 +2066,13 @@ Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPA
     </dt>
     <dd>{{% md %}}The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
 Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPATIBLE`, `VIRTIO_SCSI_MULTIQUEUE`, `WINDOWS`, and `GVNIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagerawdisk">Image<wbr>Raw<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2236,8 +2083,7 @@ Possible values are `MULTI_IP_SUBNET`, `SECURE_BOOT`, `SEV_CAPABLE`, `UEFI_COMPA
     <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
 You must provide either this property or the sourceDisk property
 but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containertype_csharp">
 <a href="#containertype_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
@@ -2251,8 +2097,7 @@ and not a runtime format. Provided by the client when the disk
 image is created.
 Default value is `TAR`.
 Possible values are `TAR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1_csharp">
 <a href="#sha1_csharp" style="color: inherit; text-decoration: inherit;">Sha1</a>
@@ -2262,13 +2107,11 @@ Possible values are `TAR`.
     </dt>
     <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
 This is provided by the client when the disk image is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2279,8 +2122,7 @@ This is provided by the client when the disk image is created.
     <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
 You must provide either this property or the sourceDisk property
 but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containertype_go">
 <a href="#containertype_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Type</a>
@@ -2294,8 +2136,7 @@ and not a runtime format. Provided by the client when the disk
 image is created.
 Default value is `TAR`.
 Possible values are `TAR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1_go">
 <a href="#sha1_go" style="color: inherit; text-decoration: inherit;">Sha1</a>
@@ -2305,13 +2146,11 @@ Possible values are `TAR`.
     </dt>
     <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
 This is provided by the client when the disk image is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2322,8 +2161,7 @@ This is provided by the client when the disk image is created.
     <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
 You must provide either this property or the sourceDisk property
 but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containertype_nodejs">
 <a href="#containertype_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Type</a>
@@ -2337,8 +2175,7 @@ and not a runtime format. Provided by the client when the disk
 image is created.
 Default value is `TAR`.
 Possible values are `TAR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1_nodejs">
 <a href="#sha1_nodejs" style="color: inherit; text-decoration: inherit;">sha1</a>
@@ -2348,13 +2185,11 @@ Possible values are `TAR`.
     </dt>
     <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
 This is provided by the client when the disk image is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2365,8 +2200,7 @@ This is provided by the client when the disk image is created.
     <dd>{{% md %}}The full Google Cloud Storage URL where disk storage is stored
 You must provide either this property or the sourceDisk property
 but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_type_python">
 <a href="#container_type_python" style="color: inherit; text-decoration: inherit;">container_<wbr>type</a>
@@ -2380,8 +2214,7 @@ and not a runtime format. Provided by the client when the disk
 image is created.
 Default value is `TAR`.
 Possible values are `TAR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha1_python">
 <a href="#sha1_python" style="color: inherit; text-decoration: inherit;">sha1</a>
@@ -2391,8 +2224,7 @@ Possible values are `TAR`.
     </dt>
     <dd>{{% md %}}An optional SHA1 checksum of the disk image before unpackaging.
 This is provided by the client when the disk image is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

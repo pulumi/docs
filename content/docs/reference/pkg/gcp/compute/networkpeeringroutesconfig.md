@@ -350,8 +350,7 @@ The NetworkPeeringRoutesConfig resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportcustomroutes_csharp">
 <a href="#exportcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -360,8 +359,7 @@ The NetworkPeeringRoutesConfig resource accepts the following [input]({{< relref
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importcustomroutes_csharp">
 <a href="#importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -370,8 +368,7 @@ The NetworkPeeringRoutesConfig resource accepts the following [input]({{< relref
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -380,8 +377,7 @@ The NetworkPeeringRoutesConfig resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peering_csharp">
 <a href="#peering_csharp" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -390,8 +386,7 @@ The NetworkPeeringRoutesConfig resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -401,13 +396,11 @@ The NetworkPeeringRoutesConfig resource accepts the following [input]({{< relref
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportcustomroutes_go">
 <a href="#exportcustomroutes_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -416,8 +409,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importcustomroutes_go">
 <a href="#importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -426,8 +418,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -436,8 +427,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peering_go">
 <a href="#peering_go" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -446,8 +436,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -457,13 +446,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exportcustomroutes_nodejs">
 <a href="#exportcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Custom<wbr>Routes</a>
@@ -472,8 +459,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importcustomroutes_nodejs">
 <a href="#importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
@@ -482,8 +468,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -492,8 +477,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peering_nodejs">
 <a href="#peering_nodejs" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -502,8 +486,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -513,13 +496,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="export_custom_routes_python">
 <a href="#export_custom_routes_python" style="color: inherit; text-decoration: inherit;">export_<wbr>custom_<wbr>routes</a>
@@ -528,8 +509,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_custom_routes_python">
 <a href="#import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
@@ -538,8 +518,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -548,8 +527,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peering_python">
 <a href="#peering_python" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -558,8 +536,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -569,8 +546,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -590,13 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -604,13 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -618,13 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -632,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -760,8 +728,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_exportcustomroutes_csharp">
 <a href="#state_exportcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -770,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importcustomroutes_csharp">
 <a href="#state_importcustomroutes_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -780,8 +746,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -790,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_csharp">
 <a href="#state_peering_csharp" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -800,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -811,13 +774,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_exportcustomroutes_go">
 <a href="#state_exportcustomroutes_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Custom<wbr>Routes</a>
@@ -826,8 +787,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importcustomroutes_go">
 <a href="#state_importcustomroutes_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Custom<wbr>Routes</a>
@@ -836,8 +796,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -846,8 +805,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_go">
 <a href="#state_peering_go" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -856,8 +814,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -867,13 +824,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_exportcustomroutes_nodejs">
 <a href="#state_exportcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Custom<wbr>Routes</a>
@@ -882,8 +837,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importcustomroutes_nodejs">
 <a href="#state_importcustomroutes_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Custom<wbr>Routes</a>
@@ -892,8 +846,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -902,8 +855,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_nodejs">
 <a href="#state_peering_nodejs" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -912,8 +864,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -923,13 +874,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_export_custom_routes_python">
 <a href="#state_export_custom_routes_python" style="color: inherit; text-decoration: inherit;">export_<wbr>custom_<wbr>routes</a>
@@ -938,8 +887,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to export the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_custom_routes_python">
 <a href="#state_import_custom_routes_python" style="color: inherit; text-decoration: inherit;">import_<wbr>custom_<wbr>routes</a>
@@ -948,8 +896,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to import the custom routes to the peer network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -958,8 +905,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the primary network for the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_python">
 <a href="#state_peering_python" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -968,8 +914,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -979,8 +924,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

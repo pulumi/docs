@@ -300,8 +300,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsrolearn_csharp">
 <a href="#awsrolearn_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Role<wbr>Arn</a>
@@ -310,8 +309,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -320,8 +318,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -330,13 +327,11 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsrolearn_go">
 <a href="#awsrolearn_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Role<wbr>Arn</a>
@@ -345,8 +340,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -355,8 +349,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -365,13 +358,11 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsrolearn_nodejs">
 <a href="#awsrolearn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Role<wbr>Arn</a>
@@ -380,8 +371,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -390,8 +380,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -400,13 +389,11 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aws_role_arn_python">
 <a href="#aws_role_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>role_<wbr>arn</a>
@@ -415,8 +402,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -425,8 +411,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -435,8 +420,7 @@ The DataConnectorAwsCloudTrail resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -447,8 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -456,13 +439,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -470,13 +451,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -484,13 +463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -498,8 +475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -626,8 +602,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsrolearn_csharp">
 <a href="#state_awsrolearn_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Role<wbr>Arn</a>
@@ -636,8 +611,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_csharp">
 <a href="#state_loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -646,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -656,13 +629,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsrolearn_go">
 <a href="#state_awsrolearn_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Role<wbr>Arn</a>
@@ -671,8 +642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_go">
 <a href="#state_loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -681,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -691,13 +660,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsrolearn_nodejs">
 <a href="#state_awsrolearn_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Role<wbr>Arn</a>
@@ -706,8 +673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_nodejs">
 <a href="#state_loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -716,8 +682,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -726,13 +691,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aws_role_arn_python">
 <a href="#state_aws_role_arn_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>role_<wbr>arn</a>
@@ -741,8 +704,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS CloudTrail role, which is connected to this AWS CloudTrail Data Connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_analytics_workspace_id_python">
 <a href="#state_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -751,8 +713,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace that this AWS CloudTrail Data Connector resides in. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -761,8 +722,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this AWS CloudTrail Data Connector. Changing this forces a new AWS CloudTrail Data Connector to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

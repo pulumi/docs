@@ -525,8 +525,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountreplicationtype_csharp">
 <a href="#accountreplicationtype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
@@ -535,8 +534,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accounttier_csharp">
 <a href="#accounttier_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
@@ -545,8 +543,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -555,8 +552,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstier_csharp">
 <a href="#accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -565,8 +561,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountkind_csharp">
 <a href="#accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
@@ -575,8 +570,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowblobpublicaccess_csharp">
 <a href="#allowblobpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -585,8 +579,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobproperties_csharp">
 <a href="#blobproperties_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
@@ -595,8 +588,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
 <a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -605,8 +597,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehttpstrafficonly_csharp">
 <a href="#enablehttpstrafficonly_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -616,8 +607,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -626,8 +616,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishnsenabled_csharp">
 <a href="#ishnsenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
@@ -636,8 +625,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="largefileshareenabled_csharp">
 <a href="#largefileshareenabled_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Share<wbr>Enabled</a>
@@ -646,8 +634,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -656,8 +643,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -666,8 +652,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -676,8 +661,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrules_csharp">
 <a href="#networkrules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
@@ -686,8 +670,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueproperties_csharp">
 <a href="#queueproperties_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
@@ -696,8 +679,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticwebsite_csharp">
 <a href="#staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
@@ -706,8 +688,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -716,13 +697,11 @@ for more information. Defaults to `true`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountreplicationtype_go">
 <a href="#accountreplicationtype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
@@ -731,8 +710,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accounttier_go">
 <a href="#accounttier_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
@@ -741,8 +719,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -751,8 +728,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstier_go">
 <a href="#accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -761,8 +737,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountkind_go">
 <a href="#accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
@@ -771,8 +746,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowblobpublicaccess_go">
 <a href="#allowblobpublicaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -781,8 +755,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobproperties_go">
 <a href="#blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
@@ -791,8 +764,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
 <a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -801,8 +773,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehttpstrafficonly_go">
 <a href="#enablehttpstrafficonly_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -812,8 +783,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -822,8 +792,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishnsenabled_go">
 <a href="#ishnsenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
@@ -832,8 +801,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="largefileshareenabled_go">
 <a href="#largefileshareenabled_go" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Share<wbr>Enabled</a>
@@ -842,8 +810,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -852,8 +819,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -862,8 +828,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -872,8 +837,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrules_go">
 <a href="#networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
@@ -882,8 +846,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueproperties_go">
 <a href="#queueproperties_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
@@ -892,8 +855,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticwebsite_go">
 <a href="#staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
@@ -902,8 +864,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -912,13 +873,11 @@ for more information. Defaults to `true`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountreplicationtype_nodejs">
 <a href="#accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
@@ -927,8 +886,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="accounttier_nodejs">
 <a href="#accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
@@ -937,8 +895,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -947,8 +904,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstier_nodejs">
 <a href="#accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
@@ -957,8 +913,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountkind_nodejs">
 <a href="#accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
@@ -967,8 +922,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowblobpublicaccess_nodejs">
 <a href="#allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -977,8 +931,7 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobproperties_nodejs">
 <a href="#blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
@@ -987,8 +940,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
@@ -997,8 +949,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehttpstrafficonly_nodejs">
 <a href="#enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -1008,8 +959,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1018,8 +968,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishnsenabled_nodejs">
 <a href="#ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
@@ -1028,8 +977,7 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="largefileshareenabled_nodejs">
 <a href="#largefileshareenabled_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>File<wbr>Share<wbr>Enabled</a>
@@ -1038,8 +986,7 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1048,8 +995,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -1058,8 +1004,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1068,8 +1013,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkrules_nodejs">
 <a href="#networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
@@ -1078,8 +1022,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueproperties_nodejs">
 <a href="#queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
@@ -1088,8 +1031,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="staticwebsite_nodejs">
 <a href="#staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
@@ -1098,8 +1040,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1108,13 +1049,11 @@ for more information. Defaults to `true`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_replication_type_python">
 <a href="#account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
@@ -1123,8 +1062,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="account_tier_python">
 <a href="#account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
@@ -1133,8 +1071,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1143,8 +1080,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_tier_python">
 <a href="#access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
@@ -1153,8 +1089,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_kind_python">
 <a href="#account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
@@ -1163,8 +1098,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_blob_public_access_python">
 <a href="#allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
@@ -1173,8 +1107,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_properties_python">
 <a href="#blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
@@ -1183,8 +1116,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
@@ -1193,8 +1125,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_https_traffic_only_python">
 <a href="#enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
@@ -1204,8 +1135,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1214,8 +1144,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_hns_enabled_python">
 <a href="#is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
@@ -1224,8 +1153,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="large_file_share_enabled_python">
 <a href="#large_file_share_enabled_python" style="color: inherit; text-decoration: inherit;">large_<wbr>file_<wbr>share_<wbr>enabled</a>
@@ -1234,8 +1162,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1244,8 +1171,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -1254,8 +1180,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1264,8 +1189,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_rules_python">
 <a href="#network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
@@ -1274,8 +1198,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queue_properties_python">
 <a href="#queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
@@ -1284,8 +1207,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="static_website_python">
 <a href="#static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
@@ -1294,8 +1216,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1304,8 +1225,7 @@ for more information. Defaults to `true`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1316,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1325,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_csharp">
 <a href="#primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -1335,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobconnectionstring_csharp">
 <a href="#primaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1345,8 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobendpoint_csharp">
 <a href="#primaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
@@ -1355,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobhost_csharp">
 <a href="#primaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
@@ -1365,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_csharp">
 <a href="#primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1375,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfsendpoint_csharp">
 <a href="#primarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
@@ -1385,8 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfshost_csharp">
 <a href="#primarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
@@ -1395,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfileendpoint_csharp">
 <a href="#primaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
@@ -1405,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfilehost_csharp">
 <a href="#primaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
@@ -1415,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarylocation_csharp">
 <a href="#primarylocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
@@ -1425,8 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueueendpoint_csharp">
 <a href="#primaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
@@ -1435,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueuehost_csharp">
 <a href="#primaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
@@ -1445,8 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytableendpoint_csharp">
 <a href="#primarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
@@ -1455,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytablehost_csharp">
 <a href="#primarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
@@ -1465,8 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebendpoint_csharp">
 <a href="#primarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
@@ -1475,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebhost_csharp">
 <a href="#primarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
@@ -1485,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_csharp">
 <a href="#secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1495,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobconnectionstring_csharp">
 <a href="#secondaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1505,8 +1406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobendpoint_csharp">
 <a href="#secondaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
@@ -1515,8 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobhost_csharp">
 <a href="#secondaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
@@ -1525,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_csharp">
 <a href="#secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1535,8 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfsendpoint_csharp">
 <a href="#secondarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -1545,8 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfshost_csharp">
 <a href="#secondarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
@@ -1555,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfileendpoint_csharp">
 <a href="#secondaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
@@ -1565,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfilehost_csharp">
 <a href="#secondaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
@@ -1575,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarylocation_csharp">
 <a href="#secondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
@@ -1585,8 +1478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueueendpoint_csharp">
 <a href="#secondaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
@@ -1595,8 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueuehost_csharp">
 <a href="#secondaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
@@ -1605,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytableendpoint_csharp">
 <a href="#secondarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
@@ -1615,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytablehost_csharp">
 <a href="#secondarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
@@ -1625,8 +1514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebendpoint_csharp">
 <a href="#secondarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
@@ -1635,8 +1523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebhost_csharp">
 <a href="#secondarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
@@ -1645,13 +1532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1659,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_go">
 <a href="#primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -1669,8 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobconnectionstring_go">
 <a href="#primaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1679,8 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobendpoint_go">
 <a href="#primaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
@@ -1689,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobhost_go">
 <a href="#primaryblobhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
@@ -1699,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_go">
 <a href="#primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -1709,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfsendpoint_go">
 <a href="#primarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
@@ -1719,8 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfshost_go">
 <a href="#primarydfshost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
@@ -1729,8 +1607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfileendpoint_go">
 <a href="#primaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
@@ -1739,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfilehost_go">
 <a href="#primaryfilehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
@@ -1749,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarylocation_go">
 <a href="#primarylocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
@@ -1759,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueueendpoint_go">
 <a href="#primaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
@@ -1769,8 +1643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueuehost_go">
 <a href="#primaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
@@ -1779,8 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytableendpoint_go">
 <a href="#primarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
@@ -1789,8 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytablehost_go">
 <a href="#primarytablehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
@@ -1799,8 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebendpoint_go">
 <a href="#primarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
@@ -1809,8 +1679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebhost_go">
 <a href="#primarywebhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
@@ -1819,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_go">
 <a href="#secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -1829,8 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobconnectionstring_go">
 <a href="#secondaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -1839,8 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobendpoint_go">
 <a href="#secondaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
@@ -1849,8 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobhost_go">
 <a href="#secondaryblobhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
@@ -1859,8 +1724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_go">
 <a href="#secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -1869,8 +1733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfsendpoint_go">
 <a href="#secondarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -1879,8 +1742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfshost_go">
 <a href="#secondarydfshost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
@@ -1889,8 +1751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfileendpoint_go">
 <a href="#secondaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
@@ -1899,8 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfilehost_go">
 <a href="#secondaryfilehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
@@ -1909,8 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarylocation_go">
 <a href="#secondarylocation_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
@@ -1919,8 +1778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueueendpoint_go">
 <a href="#secondaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
@@ -1929,8 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueuehost_go">
 <a href="#secondaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
@@ -1939,8 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytableendpoint_go">
 <a href="#secondarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
@@ -1949,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytablehost_go">
 <a href="#secondarytablehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
@@ -1959,8 +1814,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebendpoint_go">
 <a href="#secondarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
@@ -1969,8 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebhost_go">
 <a href="#secondarywebhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
@@ -1979,13 +1832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1993,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryaccesskey_nodejs">
 <a href="#primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
@@ -2003,8 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobconnectionstring_nodejs">
 <a href="#primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -2013,8 +1862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobendpoint_nodejs">
 <a href="#primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
@@ -2023,8 +1871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryblobhost_nodejs">
 <a href="#primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
@@ -2033,8 +1880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryconnectionstring_nodejs">
 <a href="#primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -2043,8 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfsendpoint_nodejs">
 <a href="#primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
@@ -2053,8 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarydfshost_nodejs">
 <a href="#primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
@@ -2063,8 +1907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfileendpoint_nodejs">
 <a href="#primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
@@ -2073,8 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryfilehost_nodejs">
 <a href="#primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
@@ -2083,8 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarylocation_nodejs">
 <a href="#primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
@@ -2093,8 +1934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueueendpoint_nodejs">
 <a href="#primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
@@ -2103,8 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryqueuehost_nodejs">
 <a href="#primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
@@ -2113,8 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytableendpoint_nodejs">
 <a href="#primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
@@ -2123,8 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarytablehost_nodejs">
 <a href="#primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
@@ -2133,8 +1970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebendpoint_nodejs">
 <a href="#primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
@@ -2143,8 +1979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primarywebhost_nodejs">
 <a href="#primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
@@ -2153,8 +1988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryaccesskey_nodejs">
 <a href="#secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
@@ -2163,8 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobconnectionstring_nodejs">
 <a href="#secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -2173,8 +2006,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobendpoint_nodejs">
 <a href="#secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
@@ -2183,8 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryblobhost_nodejs">
 <a href="#secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
@@ -2193,8 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryconnectionstring_nodejs">
 <a href="#secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -2203,8 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfsendpoint_nodejs">
 <a href="#secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -2213,8 +2042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarydfshost_nodejs">
 <a href="#secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
@@ -2223,8 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfileendpoint_nodejs">
 <a href="#secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
@@ -2233,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryfilehost_nodejs">
 <a href="#secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
@@ -2243,8 +2069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarylocation_nodejs">
 <a href="#secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
@@ -2253,8 +2078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueueendpoint_nodejs">
 <a href="#secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
@@ -2263,8 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryqueuehost_nodejs">
 <a href="#secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
@@ -2273,8 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytableendpoint_nodejs">
 <a href="#secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
@@ -2283,8 +2105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytablehost_nodejs">
 <a href="#secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
@@ -2293,8 +2114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebendpoint_nodejs">
 <a href="#secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
@@ -2303,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarywebhost_nodejs">
 <a href="#secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
@@ -2313,13 +2132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2327,8 +2144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_access_key_python">
 <a href="#primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
@@ -2337,8 +2153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_blob_connection_string_python">
 <a href="#primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
@@ -2347,8 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_blob_endpoint_python">
 <a href="#primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
@@ -2357,8 +2171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_blob_host_python">
 <a href="#primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
@@ -2367,8 +2180,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_connection_string_python">
 <a href="#primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -2377,8 +2189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_dfs_endpoint_python">
 <a href="#primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
@@ -2387,8 +2198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_dfs_host_python">
 <a href="#primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
@@ -2397,8 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_file_endpoint_python">
 <a href="#primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
@@ -2407,8 +2216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_file_host_python">
 <a href="#primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
@@ -2417,8 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_location_python">
 <a href="#primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
@@ -2427,8 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_queue_endpoint_python">
 <a href="#primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
@@ -2437,8 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_queue_host_python">
 <a href="#primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
@@ -2447,8 +2252,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_table_endpoint_python">
 <a href="#primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
@@ -2457,8 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_table_host_python">
 <a href="#primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
@@ -2467,8 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_web_endpoint_python">
 <a href="#primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
@@ -2477,8 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_web_host_python">
 <a href="#primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
@@ -2487,8 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_access_key_python">
 <a href="#secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
@@ -2497,8 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_blob_connection_string_python">
 <a href="#secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
@@ -2507,8 +2306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_blob_endpoint_python">
 <a href="#secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
@@ -2517,8 +2315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_blob_host_python">
 <a href="#secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
@@ -2527,8 +2324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_connection_string_python">
 <a href="#secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -2537,8 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_dfs_endpoint_python">
 <a href="#secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
@@ -2547,8 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_dfs_host_python">
 <a href="#secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
@@ -2557,8 +2351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_file_endpoint_python">
 <a href="#secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
@@ -2567,8 +2360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_file_host_python">
 <a href="#secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
@@ -2577,8 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_location_python">
 <a href="#secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
@@ -2587,8 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_queue_endpoint_python">
 <a href="#secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
@@ -2597,8 +2387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_queue_host_python">
 <a href="#secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
@@ -2607,8 +2396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_table_endpoint_python">
 <a href="#secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
@@ -2617,8 +2405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_table_host_python">
 <a href="#secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
@@ -2627,8 +2414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_web_endpoint_python">
 <a href="#secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
@@ -2637,8 +2423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_web_host_python">
 <a href="#secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
@@ -2647,8 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2775,8 +2559,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesstier_csharp">
 <a href="#state_accesstier_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -2785,8 +2568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountkind_csharp">
 <a href="#state_accountkind_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
@@ -2795,8 +2577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountreplicationtype_csharp">
 <a href="#state_accountreplicationtype_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
@@ -2805,8 +2586,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accounttier_csharp">
 <a href="#state_accounttier_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
@@ -2815,8 +2595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowblobpublicaccess_csharp">
 <a href="#state_allowblobpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -2825,8 +2604,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobproperties_csharp">
 <a href="#state_blobproperties_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
@@ -2835,8 +2613,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdomain_csharp">
 <a href="#state_customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -2845,8 +2622,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehttpstrafficonly_csharp">
 <a href="#state_enablehttpstrafficonly_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -2856,8 +2632,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -2866,8 +2641,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishnsenabled_csharp">
 <a href="#state_ishnsenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
@@ -2876,8 +2650,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_largefileshareenabled_csharp">
 <a href="#state_largefileshareenabled_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Share<wbr>Enabled</a>
@@ -2886,8 +2659,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2896,8 +2668,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mintlsversion_csharp">
 <a href="#state_mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -2906,8 +2677,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2916,8 +2686,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkrules_csharp">
 <a href="#state_networkrules_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
@@ -2926,8 +2695,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_csharp">
 <a href="#state_primaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -2936,8 +2704,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobconnectionstring_csharp">
 <a href="#state_primaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -2946,8 +2713,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobendpoint_csharp">
 <a href="#state_primaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
@@ -2956,8 +2722,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobhost_csharp">
 <a href="#state_primaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
@@ -2966,8 +2731,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_csharp">
 <a href="#state_primaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -2976,8 +2740,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarydfsendpoint_csharp">
 <a href="#state_primarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
@@ -2986,8 +2749,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarydfshost_csharp">
 <a href="#state_primarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
@@ -2996,8 +2758,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryfileendpoint_csharp">
 <a href="#state_primaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
@@ -3006,8 +2767,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryfilehost_csharp">
 <a href="#state_primaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
@@ -3016,8 +2776,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarylocation_csharp">
 <a href="#state_primarylocation_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
@@ -3026,8 +2785,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryqueueendpoint_csharp">
 <a href="#state_primaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
@@ -3036,8 +2794,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryqueuehost_csharp">
 <a href="#state_primaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
@@ -3046,8 +2803,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarytableendpoint_csharp">
 <a href="#state_primarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
@@ -3056,8 +2812,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarytablehost_csharp">
 <a href="#state_primarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
@@ -3066,8 +2821,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarywebendpoint_csharp">
 <a href="#state_primarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
@@ -3076,8 +2830,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarywebhost_csharp">
 <a href="#state_primarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
@@ -3086,8 +2839,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queueproperties_csharp">
 <a href="#state_queueproperties_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
@@ -3096,8 +2848,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -3106,8 +2857,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryaccesskey_csharp">
 <a href="#state_secondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -3116,8 +2866,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobconnectionstring_csharp">
 <a href="#state_secondaryblobconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -3126,8 +2875,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobendpoint_csharp">
 <a href="#state_secondaryblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
@@ -3136,8 +2884,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobhost_csharp">
 <a href="#state_secondaryblobhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
@@ -3146,8 +2893,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_csharp">
 <a href="#state_secondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -3156,8 +2902,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarydfsendpoint_csharp">
 <a href="#state_secondarydfsendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -3166,8 +2911,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarydfshost_csharp">
 <a href="#state_secondarydfshost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
@@ -3176,8 +2920,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryfileendpoint_csharp">
 <a href="#state_secondaryfileendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
@@ -3186,8 +2929,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryfilehost_csharp">
 <a href="#state_secondaryfilehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
@@ -3196,8 +2938,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarylocation_csharp">
 <a href="#state_secondarylocation_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
@@ -3206,8 +2947,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryqueueendpoint_csharp">
 <a href="#state_secondaryqueueendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
@@ -3216,8 +2956,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryqueuehost_csharp">
 <a href="#state_secondaryqueuehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
@@ -3226,8 +2965,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarytableendpoint_csharp">
 <a href="#state_secondarytableendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
@@ -3236,8 +2974,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarytablehost_csharp">
 <a href="#state_secondarytablehost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
@@ -3246,8 +2983,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarywebendpoint_csharp">
 <a href="#state_secondarywebendpoint_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
@@ -3256,8 +2992,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarywebhost_csharp">
 <a href="#state_secondarywebhost_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
@@ -3266,8 +3001,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_staticwebsite_csharp">
 <a href="#state_staticwebsite_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
@@ -3276,8 +3010,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3286,13 +3019,11 @@ for more information. Defaults to `true`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesstier_go">
 <a href="#state_accesstier_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Tier</a>
@@ -3301,8 +3032,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountkind_go">
 <a href="#state_accountkind_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Kind</a>
@@ -3311,8 +3041,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountreplicationtype_go">
 <a href="#state_accountreplicationtype_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Replication<wbr>Type</a>
@@ -3321,8 +3050,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accounttier_go">
 <a href="#state_accounttier_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Tier</a>
@@ -3331,8 +3059,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowblobpublicaccess_go">
 <a href="#state_allowblobpublicaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -3341,8 +3068,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobproperties_go">
 <a href="#state_blobproperties_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Properties</a>
@@ -3351,8 +3077,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdomain_go">
 <a href="#state_customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -3361,8 +3086,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehttpstrafficonly_go">
 <a href="#state_enablehttpstrafficonly_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -3372,8 +3096,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -3382,8 +3105,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishnsenabled_go">
 <a href="#state_ishnsenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Hns<wbr>Enabled</a>
@@ -3392,8 +3114,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_largefileshareenabled_go">
 <a href="#state_largefileshareenabled_go" style="color: inherit; text-decoration: inherit;">Large<wbr>File<wbr>Share<wbr>Enabled</a>
@@ -3402,8 +3123,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -3412,8 +3132,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mintlsversion_go">
 <a href="#state_mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -3422,8 +3141,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3432,8 +3150,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkrules_go">
 <a href="#state_networkrules_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rules</a>
@@ -3442,8 +3159,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_go">
 <a href="#state_primaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Access<wbr>Key</a>
@@ -3452,8 +3168,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobconnectionstring_go">
 <a href="#state_primaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -3462,8 +3177,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobendpoint_go">
 <a href="#state_primaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Endpoint</a>
@@ -3472,8 +3186,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobhost_go">
 <a href="#state_primaryblobhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Blob<wbr>Host</a>
@@ -3482,8 +3195,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_go">
 <a href="#state_primaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Connection<wbr>String</a>
@@ -3492,8 +3204,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarydfsendpoint_go">
 <a href="#state_primarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Endpoint</a>
@@ -3502,8 +3213,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarydfshost_go">
 <a href="#state_primarydfshost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dfs<wbr>Host</a>
@@ -3512,8 +3222,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryfileendpoint_go">
 <a href="#state_primaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Endpoint</a>
@@ -3522,8 +3231,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryfilehost_go">
 <a href="#state_primaryfilehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>File<wbr>Host</a>
@@ -3532,8 +3240,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarylocation_go">
 <a href="#state_primarylocation_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Location</a>
@@ -3542,8 +3249,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryqueueendpoint_go">
 <a href="#state_primaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Endpoint</a>
@@ -3552,8 +3258,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryqueuehost_go">
 <a href="#state_primaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Queue<wbr>Host</a>
@@ -3562,8 +3267,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarytableendpoint_go">
 <a href="#state_primarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Endpoint</a>
@@ -3572,8 +3276,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarytablehost_go">
 <a href="#state_primarytablehost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Table<wbr>Host</a>
@@ -3582,8 +3285,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarywebendpoint_go">
 <a href="#state_primarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Endpoint</a>
@@ -3592,8 +3294,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarywebhost_go">
 <a href="#state_primarywebhost_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Web<wbr>Host</a>
@@ -3602,8 +3303,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queueproperties_go">
 <a href="#state_queueproperties_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Properties</a>
@@ -3612,8 +3312,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -3622,8 +3321,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryaccesskey_go">
 <a href="#state_secondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Access<wbr>Key</a>
@@ -3632,8 +3330,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobconnectionstring_go">
 <a href="#state_secondaryblobconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -3642,8 +3339,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobendpoint_go">
 <a href="#state_secondaryblobendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Endpoint</a>
@@ -3652,8 +3348,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobhost_go">
 <a href="#state_secondaryblobhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Blob<wbr>Host</a>
@@ -3662,8 +3357,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_go">
 <a href="#state_secondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Connection<wbr>String</a>
@@ -3672,8 +3366,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarydfsendpoint_go">
 <a href="#state_secondarydfsendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -3682,8 +3375,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarydfshost_go">
 <a href="#state_secondarydfshost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dfs<wbr>Host</a>
@@ -3692,8 +3384,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryfileendpoint_go">
 <a href="#state_secondaryfileendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Endpoint</a>
@@ -3702,8 +3393,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryfilehost_go">
 <a href="#state_secondaryfilehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>File<wbr>Host</a>
@@ -3712,8 +3402,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarylocation_go">
 <a href="#state_secondarylocation_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Location</a>
@@ -3722,8 +3411,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryqueueendpoint_go">
 <a href="#state_secondaryqueueendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Endpoint</a>
@@ -3732,8 +3420,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryqueuehost_go">
 <a href="#state_secondaryqueuehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Queue<wbr>Host</a>
@@ -3742,8 +3429,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarytableendpoint_go">
 <a href="#state_secondarytableendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Endpoint</a>
@@ -3752,8 +3438,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarytablehost_go">
 <a href="#state_secondarytablehost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Table<wbr>Host</a>
@@ -3762,8 +3447,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarywebendpoint_go">
 <a href="#state_secondarywebendpoint_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Endpoint</a>
@@ -3772,8 +3456,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarywebhost_go">
 <a href="#state_secondarywebhost_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Web<wbr>Host</a>
@@ -3782,8 +3465,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_staticwebsite_go">
 <a href="#state_staticwebsite_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Website</a>
@@ -3792,8 +3474,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3802,13 +3483,11 @@ for more information. Defaults to `true`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesstier_nodejs">
 <a href="#state_accesstier_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Tier</a>
@@ -3817,8 +3496,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountkind_nodejs">
 <a href="#state_accountkind_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Kind</a>
@@ -3827,8 +3505,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountreplicationtype_nodejs">
 <a href="#state_accountreplicationtype_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Replication<wbr>Type</a>
@@ -3837,8 +3514,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accounttier_nodejs">
 <a href="#state_accounttier_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Tier</a>
@@ -3847,8 +3523,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowblobpublicaccess_nodejs">
 <a href="#state_allowblobpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Blob<wbr>Public<wbr>Access</a>
@@ -3857,8 +3532,7 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobproperties_nodejs">
 <a href="#state_blobproperties_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Properties</a>
@@ -3867,8 +3541,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdomain_nodejs">
 <a href="#state_customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
@@ -3877,8 +3550,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehttpstrafficonly_nodejs">
 <a href="#state_enablehttpstrafficonly_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Https<wbr>Traffic<wbr>Only</a>
@@ -3888,8 +3560,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -3898,8 +3569,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishnsenabled_nodejs">
 <a href="#state_ishnsenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Hns<wbr>Enabled</a>
@@ -3908,8 +3578,7 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_largefileshareenabled_nodejs">
 <a href="#state_largefileshareenabled_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>File<wbr>Share<wbr>Enabled</a>
@@ -3918,8 +3587,7 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3928,8 +3596,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mintlsversion_nodejs">
 <a href="#state_mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -3938,8 +3605,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3948,8 +3614,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkrules_nodejs">
 <a href="#state_networkrules_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rules</a>
@@ -3958,8 +3623,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryaccesskey_nodejs">
 <a href="#state_primaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Access<wbr>Key</a>
@@ -3968,8 +3632,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobconnectionstring_nodejs">
 <a href="#state_primaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -3978,8 +3641,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobendpoint_nodejs">
 <a href="#state_primaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Endpoint</a>
@@ -3988,8 +3650,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryblobhost_nodejs">
 <a href="#state_primaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Blob<wbr>Host</a>
@@ -3998,8 +3659,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryconnectionstring_nodejs">
 <a href="#state_primaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Connection<wbr>String</a>
@@ -4008,8 +3668,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarydfsendpoint_nodejs">
 <a href="#state_primarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Endpoint</a>
@@ -4018,8 +3677,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarydfshost_nodejs">
 <a href="#state_primarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dfs<wbr>Host</a>
@@ -4028,8 +3686,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryfileendpoint_nodejs">
 <a href="#state_primaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Endpoint</a>
@@ -4038,8 +3695,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryfilehost_nodejs">
 <a href="#state_primaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>File<wbr>Host</a>
@@ -4048,8 +3704,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarylocation_nodejs">
 <a href="#state_primarylocation_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Location</a>
@@ -4058,8 +3713,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryqueueendpoint_nodejs">
 <a href="#state_primaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Endpoint</a>
@@ -4068,8 +3722,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryqueuehost_nodejs">
 <a href="#state_primaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Queue<wbr>Host</a>
@@ -4078,8 +3731,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarytableendpoint_nodejs">
 <a href="#state_primarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Endpoint</a>
@@ -4088,8 +3740,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarytablehost_nodejs">
 <a href="#state_primarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Table<wbr>Host</a>
@@ -4098,8 +3749,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarywebendpoint_nodejs">
 <a href="#state_primarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Endpoint</a>
@@ -4108,8 +3758,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarywebhost_nodejs">
 <a href="#state_primarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Web<wbr>Host</a>
@@ -4118,8 +3767,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queueproperties_nodejs">
 <a href="#state_queueproperties_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Properties</a>
@@ -4128,8 +3776,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -4138,8 +3785,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryaccesskey_nodejs">
 <a href="#state_secondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Access<wbr>Key</a>
@@ -4148,8 +3794,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobconnectionstring_nodejs">
 <a href="#state_secondaryblobconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Connection<wbr>String</a>
@@ -4158,8 +3803,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobendpoint_nodejs">
 <a href="#state_secondaryblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Endpoint</a>
@@ -4168,8 +3812,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryblobhost_nodejs">
 <a href="#state_secondaryblobhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Blob<wbr>Host</a>
@@ -4178,8 +3821,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryconnectionstring_nodejs">
 <a href="#state_secondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Connection<wbr>String</a>
@@ -4188,8 +3830,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarydfsendpoint_nodejs">
 <a href="#state_secondarydfsendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Endpoint</a>
@@ -4198,8 +3839,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarydfshost_nodejs">
 <a href="#state_secondarydfshost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dfs<wbr>Host</a>
@@ -4208,8 +3848,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryfileendpoint_nodejs">
 <a href="#state_secondaryfileendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Endpoint</a>
@@ -4218,8 +3857,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryfilehost_nodejs">
 <a href="#state_secondaryfilehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>File<wbr>Host</a>
@@ -4228,8 +3866,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarylocation_nodejs">
 <a href="#state_secondarylocation_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Location</a>
@@ -4238,8 +3875,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryqueueendpoint_nodejs">
 <a href="#state_secondaryqueueendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Endpoint</a>
@@ -4248,8 +3884,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryqueuehost_nodejs">
 <a href="#state_secondaryqueuehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Queue<wbr>Host</a>
@@ -4258,8 +3893,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarytableendpoint_nodejs">
 <a href="#state_secondarytableendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Endpoint</a>
@@ -4268,8 +3902,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarytablehost_nodejs">
 <a href="#state_secondarytablehost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Table<wbr>Host</a>
@@ -4278,8 +3911,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarywebendpoint_nodejs">
 <a href="#state_secondarywebendpoint_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Endpoint</a>
@@ -4288,8 +3920,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarywebhost_nodejs">
 <a href="#state_secondarywebhost_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Web<wbr>Host</a>
@@ -4298,8 +3929,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_staticwebsite_nodejs">
 <a href="#state_staticwebsite_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Website</a>
@@ -4308,8 +3938,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4318,13 +3947,11 @@ for more information. Defaults to `true`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_tier_python">
 <a href="#state_access_tier_python" style="color: inherit; text-decoration: inherit;">access_<wbr>tier</a>
@@ -4333,8 +3960,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the access tier for `BlobStorage`, `FileStorage` and `StorageV2` accounts. Valid options are `Hot` and `Cool`, defaults to `Hot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_kind_python">
 <a href="#state_account_kind_python" style="color: inherit; text-decoration: inherit;">account_<wbr>kind</a>
@@ -4343,8 +3969,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the Kind of account. Valid options are `BlobStorage`, `BlockBlobStorage`, `FileStorage`, `Storage` and `StorageV2`. Changing this forces a new resource to be created. Defaults to `StorageV2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_replication_type_python">
 <a href="#state_account_replication_type_python" style="color: inherit; text-decoration: inherit;">account_<wbr>replication_<wbr>type</a>
@@ -4353,8 +3978,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the type of replication to use for this storage account. Valid options are `LRS`, `GRS`, `RAGRS`, `ZRS`, `GZRS` and `RAGZRS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_tier_python">
 <a href="#state_account_tier_python" style="color: inherit; text-decoration: inherit;">account_<wbr>tier</a>
@@ -4363,8 +3987,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the Tier to use for this storage account. Valid options are `Standard` and `Premium`. For `BlockBlobStorage` and `FileStorage` accounts only `Premium` is valid. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_blob_public_access_python">
 <a href="#state_allow_blob_public_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>blob_<wbr>public_<wbr>access</a>
@@ -4373,8 +3996,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blob_properties_python">
 <a href="#state_blob_properties_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>properties</a>
@@ -4383,8 +4005,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobproperties">Account<wbr>Blob<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `blob_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_domain_python">
 <a href="#state_custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
@@ -4393,8 +4014,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountcustomdomain">Account<wbr>Custom<wbr>Domain<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_domain` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_https_traffic_only_python">
 <a href="#state_enable_https_traffic_only_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>https_<wbr>traffic_<wbr>only</a>
@@ -4404,8 +4024,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Boolean flag which forces HTTPS if enabled, see [here](https://docs.microsoft.com/en-us/azure/storage/storage-require-secure-transfer/)
 for more information. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -4414,8 +4033,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountidentity">Account<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `identity` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_hns_enabled_python">
 <a href="#state_is_hns_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>hns_<wbr>enabled</a>
@@ -4424,8 +4042,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 ([see here for more information](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-quickstart-create-account/)). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_large_file_share_enabled_python">
 <a href="#state_large_file_share_enabled_python" style="color: inherit; text-decoration: inherit;">large_<wbr>file_<wbr>share_<wbr>enabled</a>
@@ -4434,8 +4051,7 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Large File Share Enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -4444,8 +4060,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_tls_version_python">
 <a href="#state_min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -4454,8 +4069,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum supported TLS version for the storage account. Possible values are `TLS1_0`, `TLS1_1`, and `TLS1_2`. Defaults to `TLS1_0` for new storage accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4464,8 +4078,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_rules_python">
 <a href="#state_network_rules_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rules</a>
@@ -4474,8 +4087,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountnetworkrules">Account<wbr>Network<wbr>Rules<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network_rules` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_access_key_python">
 <a href="#state_primary_access_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>access_<wbr>key</a>
@@ -4484,8 +4096,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_blob_connection_string_python">
 <a href="#state_primary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>connection_<wbr>string</a>
@@ -4494,8 +4105,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_blob_endpoint_python">
 <a href="#state_primary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>endpoint</a>
@@ -4504,8 +4114,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_blob_host_python">
 <a href="#state_primary_blob_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>blob_<wbr>host</a>
@@ -4514,8 +4123,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_connection_string_python">
 <a href="#state_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>connection_<wbr>string</a>
@@ -4524,8 +4132,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_dfs_endpoint_python">
 <a href="#state_primary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>endpoint</a>
@@ -4534,8 +4141,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_dfs_host_python">
 <a href="#state_primary_dfs_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dfs_<wbr>host</a>
@@ -4544,8 +4150,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_file_endpoint_python">
 <a href="#state_primary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>endpoint</a>
@@ -4554,8 +4159,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_file_host_python">
 <a href="#state_primary_file_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>file_<wbr>host</a>
@@ -4564,8 +4168,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_location_python">
 <a href="#state_primary_location_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>location</a>
@@ -4574,8 +4177,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_queue_endpoint_python">
 <a href="#state_primary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>endpoint</a>
@@ -4584,8 +4186,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_queue_host_python">
 <a href="#state_primary_queue_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>queue_<wbr>host</a>
@@ -4594,8 +4195,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_table_endpoint_python">
 <a href="#state_primary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>endpoint</a>
@@ -4604,8 +4204,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_table_host_python">
 <a href="#state_primary_table_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>table_<wbr>host</a>
@@ -4614,8 +4213,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_web_endpoint_python">
 <a href="#state_primary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>endpoint</a>
@@ -4624,8 +4222,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_web_host_python">
 <a href="#state_primary_web_host_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>web_<wbr>host</a>
@@ -4634,8 +4231,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the primary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queue_properties_python">
 <a href="#state_queue_properties_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>properties</a>
@@ -4644,8 +4240,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountqueueproperties">Account<wbr>Queue<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `queue_properties` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -4654,8 +4249,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_access_key_python">
 <a href="#state_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>access_<wbr>key</a>
@@ -4664,8 +4258,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key for the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_blob_connection_string_python">
 <a href="#state_secondary_blob_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>connection_<wbr>string</a>
@@ -4674,8 +4267,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary blob location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_blob_endpoint_python">
 <a href="#state_secondary_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>endpoint</a>
@@ -4684,8 +4276,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_blob_host_python">
 <a href="#state_secondary_blob_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>blob_<wbr>host</a>
@@ -4694,8 +4285,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for blob storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_connection_string_python">
 <a href="#state_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>connection_<wbr>string</a>
@@ -4704,8 +4294,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection string associated with the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_dfs_endpoint_python">
 <a href="#state_secondary_dfs_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>endpoint</a>
@@ -4714,8 +4303,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_dfs_host_python">
 <a href="#state_secondary_dfs_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dfs_<wbr>host</a>
@@ -4724,8 +4312,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for DFS storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_file_endpoint_python">
 <a href="#state_secondary_file_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>endpoint</a>
@@ -4734,8 +4321,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_file_host_python">
 <a href="#state_secondary_file_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>file_<wbr>host</a>
@@ -4744,8 +4330,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for file storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_location_python">
 <a href="#state_secondary_location_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>location</a>
@@ -4754,8 +4339,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary location of the storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_queue_endpoint_python">
 <a href="#state_secondary_queue_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>endpoint</a>
@@ -4764,8 +4348,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_queue_host_python">
 <a href="#state_secondary_queue_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>queue_<wbr>host</a>
@@ -4774,8 +4357,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for queue storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_table_endpoint_python">
 <a href="#state_secondary_table_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>endpoint</a>
@@ -4784,8 +4366,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_table_host_python">
 <a href="#state_secondary_table_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>table_<wbr>host</a>
@@ -4794,8 +4375,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for table storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_web_endpoint_python">
 <a href="#state_secondary_web_endpoint_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>endpoint</a>
@@ -4804,8 +4384,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint URL for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_web_host_python">
 <a href="#state_secondary_web_host_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>web_<wbr>host</a>
@@ -4814,8 +4393,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname with port if applicable for web storage in the secondary location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_static_website_python">
 <a href="#state_static_website_python" style="color: inherit; text-decoration: inherit;">static_<wbr>website</a>
@@ -4824,8 +4402,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountstaticwebsite">Account<wbr>Static<wbr>Website<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `static_website` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -4834,8 +4411,7 @@ for more information. Defaults to `true`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4850,8 +4426,7 @@ for more information. Defaults to `true`.
 <h4 id="accountblobproperties">Account<wbr>Blob<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_csharp">
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -4860,8 +4435,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiescorsrule">List&lt;Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteretentionpolicy_csharp">
 <a href="#deleteretentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
@@ -4870,13 +4444,11 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
 <a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -4885,8 +4457,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiescorsrule">[]Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteretentionpolicy_go">
 <a href="#deleteretentionpolicy_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Retention<wbr>Policy</a>
@@ -4895,13 +4466,11 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_nodejs">
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
@@ -4910,8 +4479,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteretentionpolicy_nodejs">
 <a href="#deleteretentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Retention<wbr>Policy</a>
@@ -4920,13 +4488,11 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_rules_python">
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
@@ -4935,8 +4501,7 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiescorsrule">Sequence[Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_retention_policy_python">
 <a href="#delete_retention_policy_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>retention_<wbr>policy</a>
@@ -4945,15 +4510,13 @@ for more information. Defaults to `true`.
         <span class="property-type"><a href="#accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `delete_retention_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -4962,8 +4525,7 @@ for more information. Defaults to `true`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -4973,8 +4535,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -4983,8 +4544,7 @@ for more information. Defaults to `true`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_csharp">
 <a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -4993,8 +4553,7 @@ for more information. Defaults to `true`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_csharp">
 <a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -5003,13 +4562,11 @@ for more information. Defaults to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -5018,8 +4575,7 @@ for more information. Defaults to `true`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -5029,8 +4585,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -5039,8 +4594,7 @@ for more information. Defaults to `true`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_go">
 <a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -5049,8 +4603,7 @@ for more information. Defaults to `true`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_go">
 <a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -5059,13 +4612,11 @@ for more information. Defaults to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
@@ -5074,8 +4625,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -5085,8 +4635,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -5095,8 +4644,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_nodejs">
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
@@ -5105,8 +4653,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_nodejs">
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -5115,13 +4662,11 @@ for more information. Defaults to `true`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_headers_python">
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
@@ -5130,8 +4675,7 @@ for more information. Defaults to `true`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -5141,8 +4685,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -5151,8 +4694,7 @@ for more information. Defaults to `true`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposed_headers_python">
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
@@ -5161,8 +4703,7 @@ for more information. Defaults to `true`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_age_in_seconds_python">
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
@@ -5171,15 +4712,13 @@ for more information. Defaults to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -5188,13 +4727,11 @@ for more information. Defaults to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -5203,13 +4740,11 @@ for more information. Defaults to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -5218,13 +4753,11 @@ for more information. Defaults to `true`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -5233,15 +4766,13 @@ for more information. Defaults to `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that the blob should be retained, between `1` and `365` days. Defaults to `7`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountcustomdomain">Account<wbr>Custom<wbr>Domain</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5250,8 +4781,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usesubdomain_csharp">
 <a href="#usesubdomain_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Subdomain</a>
@@ -5260,13 +4790,11 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Custom Domain Name be validated by using indirect CNAME validation?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5275,8 +4803,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usesubdomain_go">
 <a href="#usesubdomain_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Subdomain</a>
@@ -5285,13 +4812,11 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Custom Domain Name be validated by using indirect CNAME validation?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5300,8 +4825,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usesubdomain_nodejs">
 <a href="#usesubdomain_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Subdomain</a>
@@ -5310,13 +4834,11 @@ for more information. Defaults to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Custom Domain Name be validated by using indirect CNAME validation?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5325,8 +4847,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Custom Domain Name to use for the Storage Account, which will be validated by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_subdomain_python">
 <a href="#use_subdomain_python" style="color: inherit; text-decoration: inherit;">use_<wbr>subdomain</a>
@@ -5335,15 +4856,13 @@ for more information. Defaults to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Custom Domain Name be validated by using indirect CNAME validation?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountidentity">Account<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5352,8 +4871,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Storage Account. At this time the only allowed value is `SystemAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -5362,8 +4880,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -5372,13 +4889,11 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5387,8 +4902,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Storage Account. At this time the only allowed value is `SystemAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -5397,8 +4911,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -5407,13 +4920,11 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5422,8 +4933,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Storage Account. At this time the only allowed value is `SystemAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -5432,8 +4942,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -5442,13 +4951,11 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5457,8 +4964,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identity type of the Storage Account. At this time the only allowed value is `SystemAssigned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -5467,8 +4973,7 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Principal ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -5477,15 +4982,13 @@ for more information. Defaults to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID for the Service Principal associated with the Identity of this Storage Account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountnetworkrules">Account<wbr>Network<wbr>Rules</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -5494,8 +4997,7 @@ for more information. Defaults to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_csharp">
 <a href="#bypasses_csharp" style="color: inherit; text-decoration: inherit;">Bypasses</a>
@@ -5505,8 +5007,7 @@ for more information. Defaults to `true`.
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
 any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_csharp">
 <a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -5515,8 +5016,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_csharp">
 <a href="#virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -5525,13 +5025,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
@@ -5540,8 +5038,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_go">
 <a href="#bypasses_go" style="color: inherit; text-decoration: inherit;">Bypasses</a>
@@ -5551,8 +5048,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
 any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_go">
 <a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
@@ -5561,8 +5057,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_go">
 <a href="#virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -5571,13 +5066,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
@@ -5586,8 +5079,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_nodejs">
 <a href="#bypasses_nodejs" style="color: inherit; text-decoration: inherit;">bypasses</a>
@@ -5597,8 +5089,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
 any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iprules_nodejs">
 <a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
@@ -5607,8 +5098,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworksubnetids_nodejs">
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -5617,13 +5107,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
@@ -5632,8 +5120,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default action of allow or deny when no other rules match. Valid options are `Deny` or `Allow`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bypasses_python">
 <a href="#bypasses_python" style="color: inherit; text-decoration: inherit;">bypasses</a>
@@ -5643,8 +5130,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
 any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_rules_python">
 <a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
@@ -5653,8 +5139,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in [RFC 1918](https://tools.ietf.org/html/rfc1918#section-3)) are not allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_subnet_ids_python">
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
@@ -5663,15 +5148,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resource ids for subnets.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountqueueproperties">Account<wbr>Queue<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_csharp">
 <a href="#corsrules_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -5680,8 +5163,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">List&lt;Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourmetrics_csharp">
 <a href="#hourmetrics_csharp" style="color: inherit; text-decoration: inherit;">Hour<wbr>Metrics</a>
@@ -5690,8 +5172,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_csharp">
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
@@ -5700,8 +5181,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutemetrics_csharp">
 <a href="#minutemetrics_csharp" style="color: inherit; text-decoration: inherit;">Minute<wbr>Metrics</a>
@@ -5710,13 +5190,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_go">
 <a href="#corsrules_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Rules</a>
@@ -5725,8 +5203,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">[]Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourmetrics_go">
 <a href="#hourmetrics_go" style="color: inherit; text-decoration: inherit;">Hour<wbr>Metrics</a>
@@ -5735,8 +5212,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_go">
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
@@ -5745,8 +5221,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutemetrics_go">
 <a href="#minutemetrics_go" style="color: inherit; text-decoration: inherit;">Minute<wbr>Metrics</a>
@@ -5755,13 +5230,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="corsrules_nodejs">
 <a href="#corsrules_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Rules</a>
@@ -5770,8 +5243,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourmetrics_nodejs">
 <a href="#hourmetrics_nodejs" style="color: inherit; text-decoration: inherit;">hour<wbr>Metrics</a>
@@ -5780,8 +5252,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_nodejs">
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
@@ -5790,8 +5261,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minutemetrics_nodejs">
 <a href="#minutemetrics_nodejs" style="color: inherit; text-decoration: inherit;">minute<wbr>Metrics</a>
@@ -5800,13 +5270,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cors_rules_python">
 <a href="#cors_rules_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>rules</a>
@@ -5815,8 +5283,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiescorsrule">Sequence[Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cors_rule` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hour_metrics_python">
 <a href="#hour_metrics_python" style="color: inherit; text-decoration: inherit;">hour_<wbr>metrics</a>
@@ -5825,8 +5292,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hour_metrics` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_python">
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
@@ -5835,8 +5301,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `logging` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minute_metrics_python">
 <a href="#minute_metrics_python" style="color: inherit; text-decoration: inherit;">minute_<wbr>metrics</a>
@@ -5845,15 +5310,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type"><a href="#accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `minute_metrics` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -5862,8 +5325,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -5873,8 +5335,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -5883,8 +5344,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_csharp">
 <a href="#exposedheaders_csharp" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -5893,8 +5353,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_csharp">
 <a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -5903,13 +5362,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -5918,8 +5375,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -5929,8 +5385,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -5939,8 +5394,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_go">
 <a href="#exposedheaders_go" style="color: inherit; text-decoration: inherit;">Exposed<wbr>Headers</a>
@@ -5949,8 +5403,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_go">
 <a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -5959,13 +5412,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
@@ -5974,8 +5425,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -5985,8 +5435,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -5995,8 +5444,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposedheaders_nodejs">
 <a href="#exposedheaders_nodejs" style="color: inherit; text-decoration: inherit;">exposed<wbr>Headers</a>
@@ -6005,8 +5453,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxageinseconds_nodejs">
 <a href="#maxageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -6015,13 +5462,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_headers_python">
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
@@ -6030,8 +5475,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of headers that are allowed to be a part of the cross-origin request.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -6041,8 +5485,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
     </dt>
     <dd>{{% md %}}A list of http headers that are allowed to be executed by the origin. Valid options are
 `DELETE`, `GET`, `HEAD`, `MERGE`, `POST`, `OPTIONS`, `PUT` or `PATCH`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -6051,8 +5494,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of origin domains that will be allowed by CORS.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exposed_headers_python">
 <a href="#exposed_headers_python" style="color: inherit; text-decoration: inherit;">exposed_<wbr>headers</a>
@@ -6061,8 +5503,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of response headers that are exposed to CORS clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_age_in_seconds_python">
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
@@ -6071,15 +5512,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds the client should cache a preflight response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6088,8 +5527,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6098,8 +5536,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeapis_csharp">
 <a href="#includeapis_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
@@ -6108,8 +5545,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_csharp">
 <a href="#retentionpolicydays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
@@ -6118,13 +5554,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6133,8 +5567,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6143,8 +5576,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeapis_go">
 <a href="#includeapis_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
@@ -6153,8 +5585,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_go">
 <a href="#retentionpolicydays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
@@ -6163,13 +5594,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6178,8 +5607,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6188,8 +5616,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeapis_nodejs">
 <a href="#includeapis_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
@@ -6198,8 +5625,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_nodejs">
 <a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
@@ -6208,13 +5634,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6223,8 +5647,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6233,8 +5656,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_apis_python">
 <a href="#include_apis_python" style="color: inherit; text-decoration: inherit;">include_<wbr>apis</a>
@@ -6243,8 +5665,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_days_python">
 <a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
@@ -6253,15 +5674,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_csharp">
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
@@ -6270,8 +5689,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all delete requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_csharp">
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -6280,8 +5698,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all read requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6290,8 +5707,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_csharp">
 <a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -6300,8 +5716,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all write requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_csharp">
 <a href="#retentionpolicydays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
@@ -6310,13 +5725,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_go">
 <a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
@@ -6325,8 +5738,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all delete requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_go">
 <a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -6335,8 +5747,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all read requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6345,8 +5756,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_go">
 <a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -6355,8 +5765,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all write requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_go">
 <a href="#retentionpolicydays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
@@ -6365,13 +5774,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_nodejs">
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
@@ -6380,8 +5787,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether all delete requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_nodejs">
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
@@ -6390,8 +5796,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether all read requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6400,8 +5805,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_nodejs">
 <a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
@@ -6410,8 +5814,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether all write requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_nodejs">
 <a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
@@ -6420,13 +5823,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delete_python">
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
@@ -6435,8 +5836,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all delete requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_python">
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
@@ -6445,8 +5845,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all read requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6455,8 +5854,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_python">
 <a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
@@ -6465,8 +5863,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether all write requests should be logged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_days_python">
 <a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
@@ -6475,15 +5872,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6492,8 +5887,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6502,8 +5896,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeapis_csharp">
 <a href="#includeapis_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
@@ -6512,8 +5905,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_csharp">
 <a href="#retentionpolicydays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
@@ -6522,13 +5914,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6537,8 +5927,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6547,8 +5936,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeapis_go">
 <a href="#includeapis_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Apis</a>
@@ -6557,8 +5945,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_go">
 <a href="#retentionpolicydays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy<wbr>Days</a>
@@ -6567,13 +5954,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6582,8 +5967,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6592,8 +5976,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeapis_nodejs">
 <a href="#includeapis_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Apis</a>
@@ -6602,8 +5985,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicydays_nodejs">
 <a href="#retentionpolicydays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy<wbr>Days</a>
@@ -6612,13 +5994,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6627,8 +6007,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6637,8 +6016,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of storage analytics to configure. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_apis_python">
 <a href="#include_apis_python" style="color: inherit; text-decoration: inherit;">include_<wbr>apis</a>
@@ -6647,8 +6025,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether metrics should generate summary statistics for called API operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_days_python">
 <a href="#retention_policy_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy_<wbr>days</a>
@@ -6657,15 +6034,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days that logs will be retained. Changing this forces a new resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accountstaticwebsite">Account<wbr>Static<wbr>Website</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error404document_csharp">
 <a href="#error404document_csharp" style="color: inherit; text-decoration: inherit;">Error404Document</a>
@@ -6674,8 +6049,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdocument_csharp">
 <a href="#indexdocument_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
@@ -6684,13 +6058,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error404document_go">
 <a href="#error404document_go" style="color: inherit; text-decoration: inherit;">Error404Document</a>
@@ -6699,8 +6071,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdocument_go">
 <a href="#indexdocument_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Document</a>
@@ -6709,13 +6080,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error404document_nodejs">
 <a href="#error404document_nodejs" style="color: inherit; text-decoration: inherit;">error404Document</a>
@@ -6724,8 +6093,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexdocument_nodejs">
 <a href="#indexdocument_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Document</a>
@@ -6734,13 +6102,11 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error404_document_python">
 <a href="#error404_document_python" style="color: inherit; text-decoration: inherit;">error404_<wbr>document</a>
@@ -6749,8 +6115,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_document_python">
 <a href="#index_document_python" style="color: inherit; text-decoration: inherit;">index_<wbr>document</a>
@@ -6759,8 +6124,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

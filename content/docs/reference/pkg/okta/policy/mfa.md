@@ -260,8 +260,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -270,8 +269,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duo_csharp">
 <a href="#duo_csharp" style="color: inherit; text-decoration: inherit;">Duo</a>
@@ -280,8 +278,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fidou2f_csharp">
 <a href="#fidou2f_csharp" style="color: inherit; text-decoration: inherit;">Fido<wbr>U2f</a>
@@ -290,8 +287,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fidowebauthn_csharp">
 <a href="#fidowebauthn_csharp" style="color: inherit; text-decoration: inherit;">Fido<wbr>Webauthn</a>
@@ -300,8 +296,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleotp_csharp">
 <a href="#googleotp_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Otp</a>
@@ -310,8 +305,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsincludeds_csharp">
 <a href="#groupsincludeds_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Includeds</a>
@@ -320,8 +314,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -330,8 +323,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktacall_csharp">
 <a href="#oktacall_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Call</a>
@@ -340,8 +332,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaemail_csharp">
 <a href="#oktaemail_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Email</a>
@@ -350,8 +341,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaotp_csharp">
 <a href="#oktaotp_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Otp</a>
@@ -360,8 +350,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktapassword_csharp">
 <a href="#oktapassword_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Password</a>
@@ -370,8 +359,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktapush_csharp">
 <a href="#oktapush_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Push</a>
@@ -380,8 +368,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaquestion_csharp">
 <a href="#oktaquestion_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Question</a>
@@ -390,8 +377,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktasms_csharp">
 <a href="#oktasms_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Sms</a>
@@ -400,8 +386,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -410,8 +395,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsatoken_csharp">
 <a href="#rsatoken_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Token</a>
@@ -420,8 +404,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -430,8 +413,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="symantecvip_csharp">
 <a href="#symantecvip_csharp" style="color: inherit; text-decoration: inherit;">Symantec<wbr>Vip</a>
@@ -440,8 +422,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yubikeytoken_csharp">
 <a href="#yubikeytoken_csharp" style="color: inherit; text-decoration: inherit;">Yubikey<wbr>Token</a>
@@ -450,13 +431,11 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -465,8 +444,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duo_go">
 <a href="#duo_go" style="color: inherit; text-decoration: inherit;">Duo</a>
@@ -475,8 +453,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fidou2f_go">
 <a href="#fidou2f_go" style="color: inherit; text-decoration: inherit;">Fido<wbr>U2f</a>
@@ -485,8 +462,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fidowebauthn_go">
 <a href="#fidowebauthn_go" style="color: inherit; text-decoration: inherit;">Fido<wbr>Webauthn</a>
@@ -495,8 +471,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleotp_go">
 <a href="#googleotp_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Otp</a>
@@ -505,8 +480,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsincludeds_go">
 <a href="#groupsincludeds_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Includeds</a>
@@ -515,8 +489,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -525,8 +498,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktacall_go">
 <a href="#oktacall_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Call</a>
@@ -535,8 +507,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaemail_go">
 <a href="#oktaemail_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Email</a>
@@ -545,8 +516,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaotp_go">
 <a href="#oktaotp_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Otp</a>
@@ -555,8 +525,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktapassword_go">
 <a href="#oktapassword_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Password</a>
@@ -565,8 +534,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktapush_go">
 <a href="#oktapush_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Push</a>
@@ -575,8 +543,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaquestion_go">
 <a href="#oktaquestion_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Question</a>
@@ -585,8 +552,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktasms_go">
 <a href="#oktasms_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Sms</a>
@@ -595,8 +561,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -605,8 +570,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsatoken_go">
 <a href="#rsatoken_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Token</a>
@@ -615,8 +579,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -625,8 +588,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="symantecvip_go">
 <a href="#symantecvip_go" style="color: inherit; text-decoration: inherit;">Symantec<wbr>Vip</a>
@@ -635,8 +597,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yubikeytoken_go">
 <a href="#yubikeytoken_go" style="color: inherit; text-decoration: inherit;">Yubikey<wbr>Token</a>
@@ -645,13 +606,11 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -660,8 +619,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duo_nodejs">
 <a href="#duo_nodejs" style="color: inherit; text-decoration: inherit;">duo</a>
@@ -670,8 +628,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fidou2f_nodejs">
 <a href="#fidou2f_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>U2f</a>
@@ -680,8 +637,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fidowebauthn_nodejs">
 <a href="#fidowebauthn_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>Webauthn</a>
@@ -690,8 +646,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googleotp_nodejs">
 <a href="#googleotp_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Otp</a>
@@ -700,8 +655,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsincludeds_nodejs">
 <a href="#groupsincludeds_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Includeds</a>
@@ -710,8 +664,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -720,8 +673,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktacall_nodejs">
 <a href="#oktacall_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Call</a>
@@ -730,8 +682,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaemail_nodejs">
 <a href="#oktaemail_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Email</a>
@@ -740,8 +691,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaotp_nodejs">
 <a href="#oktaotp_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Otp</a>
@@ -750,8 +700,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktapassword_nodejs">
 <a href="#oktapassword_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Password</a>
@@ -760,8 +709,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktapush_nodejs">
 <a href="#oktapush_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Push</a>
@@ -770,8 +718,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktaquestion_nodejs">
 <a href="#oktaquestion_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Question</a>
@@ -780,8 +727,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktasms_nodejs">
 <a href="#oktasms_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Sms</a>
@@ -790,8 +736,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -800,8 +745,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsatoken_nodejs">
 <a href="#rsatoken_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Token</a>
@@ -810,8 +754,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -820,8 +763,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="symantecvip_nodejs">
 <a href="#symantecvip_nodejs" style="color: inherit; text-decoration: inherit;">symantec<wbr>Vip</a>
@@ -830,8 +772,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yubikeytoken_nodejs">
 <a href="#yubikeytoken_nodejs" style="color: inherit; text-decoration: inherit;">yubikey<wbr>Token</a>
@@ -840,13 +781,11 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -855,8 +794,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duo_python">
 <a href="#duo_python" style="color: inherit; text-decoration: inherit;">duo</a>
@@ -865,8 +803,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fido_u2f_python">
 <a href="#fido_u2f_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>u2f</a>
@@ -875,8 +812,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fido_webauthn_python">
 <a href="#fido_webauthn_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>webauthn</a>
@@ -885,8 +821,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="google_otp_python">
 <a href="#google_otp_python" style="color: inherit; text-decoration: inherit;">google_<wbr>otp</a>
@@ -895,8 +830,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_includeds_python">
 <a href="#groups_includeds_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>includeds</a>
@@ -905,8 +839,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -915,8 +848,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_call_python">
 <a href="#okta_call_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>call</a>
@@ -925,8 +857,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_email_python">
 <a href="#okta_email_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>email</a>
@@ -935,8 +866,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_otp_python">
 <a href="#okta_otp_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>otp</a>
@@ -945,8 +875,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_password_python">
 <a href="#okta_password_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>password</a>
@@ -955,8 +884,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_push_python">
 <a href="#okta_push_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>push</a>
@@ -965,8 +893,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_question_python">
 <a href="#okta_question_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>question</a>
@@ -975,8 +902,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="okta_sms_python">
 <a href="#okta_sms_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>sms</a>
@@ -985,8 +911,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -995,8 +920,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rsa_token_python">
 <a href="#rsa_token_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>token</a>
@@ -1005,8 +929,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1015,8 +938,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="symantec_vip_python">
 <a href="#symantec_vip_python" style="color: inherit; text-decoration: inherit;">symantec_<wbr>vip</a>
@@ -1025,8 +947,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="yubikey_token_python">
 <a href="#yubikey_token_python" style="color: inherit; text-decoration: inherit;">yubikey_<wbr>token</a>
@@ -1035,8 +956,7 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1047,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1056,13 +975,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1070,13 +987,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1084,13 +999,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1098,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1226,8 +1138,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1236,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duo_csharp">
 <a href="#state_duo_csharp" style="color: inherit; text-decoration: inherit;">Duo</a>
@@ -1246,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fidou2f_csharp">
 <a href="#state_fidou2f_csharp" style="color: inherit; text-decoration: inherit;">Fido<wbr>U2f</a>
@@ -1256,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fidowebauthn_csharp">
 <a href="#state_fidowebauthn_csharp" style="color: inherit; text-decoration: inherit;">Fido<wbr>Webauthn</a>
@@ -1266,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googleotp_csharp">
 <a href="#state_googleotp_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Otp</a>
@@ -1276,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsincludeds_csharp">
 <a href="#state_groupsincludeds_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Includeds</a>
@@ -1286,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1296,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktacall_csharp">
 <a href="#state_oktacall_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Call</a>
@@ -1306,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaemail_csharp">
 <a href="#state_oktaemail_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Email</a>
@@ -1316,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaotp_csharp">
 <a href="#state_oktaotp_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Otp</a>
@@ -1326,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktapassword_csharp">
 <a href="#state_oktapassword_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Password</a>
@@ -1336,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktapush_csharp">
 <a href="#state_oktapush_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Push</a>
@@ -1346,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaquestion_csharp">
 <a href="#state_oktaquestion_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Question</a>
@@ -1356,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktasms_csharp">
 <a href="#state_oktasms_csharp" style="color: inherit; text-decoration: inherit;">Okta<wbr>Sms</a>
@@ -1366,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1376,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsatoken_csharp">
 <a href="#state_rsatoken_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Token</a>
@@ -1386,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1396,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_symantecvip_csharp">
 <a href="#state_symantecvip_csharp" style="color: inherit; text-decoration: inherit;">Symantec<wbr>Vip</a>
@@ -1406,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yubikeytoken_csharp">
 <a href="#state_yubikeytoken_csharp" style="color: inherit; text-decoration: inherit;">Yubikey<wbr>Token</a>
@@ -1416,13 +1309,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1431,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duo_go">
 <a href="#state_duo_go" style="color: inherit; text-decoration: inherit;">Duo</a>
@@ -1441,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fidou2f_go">
 <a href="#state_fidou2f_go" style="color: inherit; text-decoration: inherit;">Fido<wbr>U2f</a>
@@ -1451,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fidowebauthn_go">
 <a href="#state_fidowebauthn_go" style="color: inherit; text-decoration: inherit;">Fido<wbr>Webauthn</a>
@@ -1461,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googleotp_go">
 <a href="#state_googleotp_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Otp</a>
@@ -1471,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsincludeds_go">
 <a href="#state_groupsincludeds_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Includeds</a>
@@ -1481,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1491,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktacall_go">
 <a href="#state_oktacall_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Call</a>
@@ -1501,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaemail_go">
 <a href="#state_oktaemail_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Email</a>
@@ -1511,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaotp_go">
 <a href="#state_oktaotp_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Otp</a>
@@ -1521,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktapassword_go">
 <a href="#state_oktapassword_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Password</a>
@@ -1531,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktapush_go">
 <a href="#state_oktapush_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Push</a>
@@ -1541,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaquestion_go">
 <a href="#state_oktaquestion_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Question</a>
@@ -1551,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktasms_go">
 <a href="#state_oktasms_go" style="color: inherit; text-decoration: inherit;">Okta<wbr>Sms</a>
@@ -1561,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1571,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsatoken_go">
 <a href="#state_rsatoken_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Token</a>
@@ -1581,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1591,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_symantecvip_go">
 <a href="#state_symantecvip_go" style="color: inherit; text-decoration: inherit;">Symantec<wbr>Vip</a>
@@ -1601,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yubikeytoken_go">
 <a href="#state_yubikeytoken_go" style="color: inherit; text-decoration: inherit;">Yubikey<wbr>Token</a>
@@ -1611,13 +1484,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1626,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duo_nodejs">
 <a href="#state_duo_nodejs" style="color: inherit; text-decoration: inherit;">duo</a>
@@ -1636,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fidou2f_nodejs">
 <a href="#state_fidou2f_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>U2f</a>
@@ -1646,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fidowebauthn_nodejs">
 <a href="#state_fidowebauthn_nodejs" style="color: inherit; text-decoration: inherit;">fido<wbr>Webauthn</a>
@@ -1656,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googleotp_nodejs">
 <a href="#state_googleotp_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Otp</a>
@@ -1666,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsincludeds_nodejs">
 <a href="#state_groupsincludeds_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Includeds</a>
@@ -1676,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1686,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktacall_nodejs">
 <a href="#state_oktacall_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Call</a>
@@ -1696,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaemail_nodejs">
 <a href="#state_oktaemail_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Email</a>
@@ -1706,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaotp_nodejs">
 <a href="#state_oktaotp_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Otp</a>
@@ -1716,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktapassword_nodejs">
 <a href="#state_oktapassword_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Password</a>
@@ -1726,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktapush_nodejs">
 <a href="#state_oktapush_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Push</a>
@@ -1736,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktaquestion_nodejs">
 <a href="#state_oktaquestion_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Question</a>
@@ -1746,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oktasms_nodejs">
 <a href="#state_oktasms_nodejs" style="color: inherit; text-decoration: inherit;">okta<wbr>Sms</a>
@@ -1756,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1766,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsatoken_nodejs">
 <a href="#state_rsatoken_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Token</a>
@@ -1776,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1786,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_symantecvip_nodejs">
 <a href="#state_symantecvip_nodejs" style="color: inherit; text-decoration: inherit;">symantec<wbr>Vip</a>
@@ -1796,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yubikeytoken_nodejs">
 <a href="#state_yubikeytoken_nodejs" style="color: inherit; text-decoration: inherit;">yubikey<wbr>Token</a>
@@ -1806,13 +1659,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1821,8 +1672,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duo_python">
 <a href="#state_duo_python" style="color: inherit; text-decoration: inherit;">duo</a>
@@ -1831,8 +1681,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fido_u2f_python">
 <a href="#state_fido_u2f_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>u2f</a>
@@ -1841,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fido_webauthn_python">
 <a href="#state_fido_webauthn_python" style="color: inherit; text-decoration: inherit;">fido_<wbr>webauthn</a>
@@ -1851,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_google_otp_python">
 <a href="#state_google_otp_python" style="color: inherit; text-decoration: inherit;">google_<wbr>otp</a>
@@ -1861,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_includeds_python">
 <a href="#state_groups_includeds_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>includeds</a>
@@ -1871,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1881,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_call_python">
 <a href="#state_okta_call_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>call</a>
@@ -1891,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_email_python">
 <a href="#state_okta_email_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>email</a>
@@ -1901,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Email MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_otp_python">
 <a href="#state_okta_otp_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>otp</a>
@@ -1911,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_password_python">
 <a href="#state_okta_password_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>password</a>
@@ -1921,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_push_python">
 <a href="#state_okta_push_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>push</a>
@@ -1931,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_question_python">
 <a href="#state_okta_question_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>question</a>
@@ -1941,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_okta_sms_python">
 <a href="#state_okta_sms_python" style="color: inherit; text-decoration: inherit;">okta_<wbr>sms</a>
@@ -1951,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1961,8 +1798,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rsa_token_python">
 <a href="#state_rsa_token_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>token</a>
@@ -1971,8 +1807,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1981,8 +1816,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_symantec_vip_python">
 <a href="#state_symantec_vip_python" style="color: inherit; text-decoration: inherit;">symantec_<wbr>vip</a>
@@ -1991,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_yubikey_token_python">
 <a href="#state_yubikey_token_python" style="color: inherit; text-decoration: inherit;">yubikey_<wbr>token</a>
@@ -2001,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

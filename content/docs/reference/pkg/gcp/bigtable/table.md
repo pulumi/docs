@@ -320,8 +320,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancename_csharp">
 <a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -330,8 +329,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columnfamilies_csharp">
 <a href="#columnfamilies_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Families</a>
@@ -340,8 +338,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tablecolumnfamily">List&lt;Table<wbr>Column<wbr>Family<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -350,8 +347,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -361,8 +357,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splitkeys_csharp">
 <a href="#splitkeys_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Keys</a>
@@ -373,13 +368,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancename_go">
 <a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -388,8 +381,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columnfamilies_go">
 <a href="#columnfamilies_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Families</a>
@@ -398,8 +390,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type"><a href="#tablecolumnfamily">[]Table<wbr>Column<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -408,8 +399,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -419,8 +409,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splitkeys_go">
 <a href="#splitkeys_go" style="color: inherit; text-decoration: inherit;">Split<wbr>Keys</a>
@@ -431,13 +420,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancename_nodejs">
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
@@ -446,8 +433,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columnfamilies_nodejs">
 <a href="#columnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Families</a>
@@ -456,8 +442,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type"><a href="#tablecolumnfamily">Table<wbr>Column<wbr>Family[]</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -466,8 +451,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -477,8 +461,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splitkeys_nodejs">
 <a href="#splitkeys_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Keys</a>
@@ -489,13 +472,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_name_python">
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
@@ -504,8 +485,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_families_python">
 <a href="#column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
@@ -514,8 +494,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type"><a href="#tablecolumnfamily">Sequence[Table<wbr>Column<wbr>Family<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -524,8 +503,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -535,8 +513,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_keys_python">
 <a href="#split_keys_python" style="color: inherit; text-decoration: inherit;">split_<wbr>keys</a>
@@ -547,8 +524,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -559,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -568,13 +543,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -582,13 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -596,13 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -738,8 +706,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_columnfamilies_csharp">
 <a href="#state_columnfamilies_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Families</a>
@@ -748,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tablecolumnfamily">List&lt;Table<wbr>Column<wbr>Family<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_csharp">
 <a href="#state_instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -758,8 +724,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -768,8 +733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -779,8 +743,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splitkeys_csharp">
 <a href="#state_splitkeys_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Keys</a>
@@ -791,13 +754,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_columnfamilies_go">
 <a href="#state_columnfamilies_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Families</a>
@@ -806,8 +767,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type"><a href="#tablecolumnfamily">[]Table<wbr>Column<wbr>Family</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_go">
 <a href="#state_instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -816,8 +776,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -826,8 +785,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -837,8 +795,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splitkeys_go">
 <a href="#state_splitkeys_go" style="color: inherit; text-decoration: inherit;">Split<wbr>Keys</a>
@@ -849,13 +806,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_columnfamilies_nodejs">
 <a href="#state_columnfamilies_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Families</a>
@@ -864,8 +819,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type"><a href="#tablecolumnfamily">Table<wbr>Column<wbr>Family[]</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_nodejs">
 <a href="#state_instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
@@ -874,8 +828,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -884,8 +837,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -895,8 +847,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splitkeys_nodejs">
 <a href="#state_splitkeys_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Keys</a>
@@ -907,13 +858,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_column_families_python">
 <a href="#state_column_families_python" style="color: inherit; text-decoration: inherit;">column_<wbr>families</a>
@@ -922,8 +871,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type"><a href="#tablecolumnfamily">Sequence[Table<wbr>Column<wbr>Family<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_name_python">
 <a href="#state_instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
@@ -932,8 +880,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -942,8 +889,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -953,8 +899,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_split_keys_python">
 <a href="#state_split_keys_python" style="color: inherit; text-decoration: inherit;">split_<wbr>keys</a>
@@ -965,8 +910,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}A list of predefined keys to split the table on.
 !> **Warning:** Modifying the `split_keys` of an existing table will cause the provider
 to delete/recreate the entire `gcp.bigtable.Table` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -981,8 +925,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
 <h4 id="tablecolumnfamily">Table<wbr>Column<wbr>Family</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -991,13 +934,11 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1006,13 +947,11 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1021,13 +960,11 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1036,8 +973,7 @@ to delete/recreate the entire `gcp.bigtable.Table` resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column family.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

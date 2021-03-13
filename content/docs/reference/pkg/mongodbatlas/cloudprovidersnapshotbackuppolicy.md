@@ -172,8 +172,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -182,8 +181,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -193,8 +191,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -203,8 +200,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencehourofday_csharp">
 <a href="#referencehourofday_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -213,8 +209,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceminuteofhour_csharp">
 <a href="#referenceminuteofhour_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -223,8 +218,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorewindowdays_csharp">
 <a href="#restorewindowdays_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
@@ -233,8 +227,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesnapshots_csharp">
 <a href="#updatesnapshots_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
@@ -243,13 +236,11 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -258,8 +249,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -269,8 +259,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -279,8 +268,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencehourofday_go">
 <a href="#referencehourofday_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -289,8 +277,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceminuteofhour_go">
 <a href="#referenceminuteofhour_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -299,8 +286,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorewindowdays_go">
 <a href="#restorewindowdays_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
@@ -309,8 +295,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesnapshots_go">
 <a href="#updatesnapshots_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
@@ -319,13 +304,11 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -334,8 +317,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -345,8 +327,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -355,8 +336,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencehourofday_nodejs">
 <a href="#referencehourofday_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -365,8 +345,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceminuteofhour_nodejs">
 <a href="#referenceminuteofhour_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -375,8 +354,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorewindowdays_nodejs">
 <a href="#restorewindowdays_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Window<wbr>Days</a>
@@ -385,8 +363,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesnapshots_nodejs">
 <a href="#updatesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Snapshots</a>
@@ -395,13 +372,11 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -410,8 +385,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -421,8 +395,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -431,8 +404,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_hour_of_day_python">
 <a href="#reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
@@ -441,8 +413,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_minute_of_hour_python">
 <a href="#reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
@@ -451,8 +422,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_window_days_python">
 <a href="#restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
@@ -461,8 +431,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_snapshots_python">
 <a href="#update_snapshots_python" style="color: inherit; text-decoration: inherit;">update_<wbr>snapshots</a>
@@ -471,8 +440,7 @@ The CloudProviderSnapshotBackupPolicy resource accepts the following [input]({{<
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -483,8 +451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -493,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -502,8 +468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextsnapshot_csharp">
 <a href="#nextsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
@@ -512,13 +477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -527,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -536,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextsnapshot_go">
 <a href="#nextsnapshot_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
@@ -546,13 +507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -561,8 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -570,8 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextsnapshot_nodejs">
 <a href="#nextsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Snapshot</a>
@@ -580,13 +537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -595,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -604,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_snapshot_python">
 <a href="#next_snapshot_python" style="color: inherit; text-decoration: inherit;">next_<wbr>snapshot</a>
@@ -614,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -742,8 +694,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -752,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_csharp">
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -762,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nextsnapshot_csharp">
 <a href="#state_nextsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
@@ -772,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -783,8 +731,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -793,8 +740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencehourofday_csharp">
 <a href="#state_referencehourofday_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -803,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referenceminuteofhour_csharp">
 <a href="#state_referenceminuteofhour_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -813,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorewindowdays_csharp">
 <a href="#state_restorewindowdays_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
@@ -823,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatesnapshots_csharp">
 <a href="#state_updatesnapshots_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
@@ -833,13 +776,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -848,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_go">
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -858,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nextsnapshot_go">
 <a href="#state_nextsnapshot_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
@@ -868,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -879,8 +817,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -889,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencehourofday_go">
 <a href="#state_referencehourofday_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -899,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referenceminuteofhour_go">
 <a href="#state_referenceminuteofhour_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -909,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorewindowdays_go">
 <a href="#state_restorewindowdays_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
@@ -919,8 +853,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatesnapshots_go">
 <a href="#state_updatesnapshots_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
@@ -929,13 +862,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -944,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_nodejs">
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -954,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nextsnapshot_nodejs">
 <a href="#state_nextsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Snapshot</a>
@@ -964,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -975,8 +903,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -985,8 +912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencehourofday_nodejs">
 <a href="#state_referencehourofday_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -995,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referenceminuteofhour_nodejs">
 <a href="#state_referenceminuteofhour_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -1005,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restorewindowdays_nodejs">
 <a href="#state_restorewindowdays_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Window<wbr>Days</a>
@@ -1015,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatesnapshots_nodejs">
 <a href="#state_updatesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Snapshots</a>
@@ -1025,13 +948,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1040,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_name_python">
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -1050,8 +970,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Atlas cluster that contains the snapshot backup policy you want to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_snapshot_python">
 <a href="#state_next_snapshot_python" style="color: inherit; text-decoration: inherit;">next_<wbr>snapshot</a>
@@ -1060,8 +979,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp in the number of seconds that have elapsed since the UNIX epoch when Atlas takes the next snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1071,8 +989,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Contains a document for each backup policy item in the desired updated backup policy.
 * `policies.#.id` - (Required) Unique identifier of the backup policy that you want to update. policies.#.id is a value obtained via the mongodbatlas.Cluster resource. provider_backup_enabled of the mongodbatlas.Cluster resource must be set to true. See the example above for how to refer to the mongodbatlas.Cluster resource for policies.#.id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1081,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the project for the Atlas cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_hour_of_day_python">
 <a href="#state_reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
@@ -1091,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Hour of day between 0 and 23, inclusive, representing which hour of the day that Atlas takes snapshots for backup policy items.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_minute_of_hour_python">
 <a href="#state_reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
@@ -1101,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}UTC Minutes after referenceHourOfDay that Atlas takes snapshots for backup policy items. Must be between 0 and 59, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restore_window_days_python">
 <a href="#state_restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
@@ -1111,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of days back in time you can restore to with point-in-time accuracy. Must be a positive, non-zero integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_snapshots_python">
 <a href="#state_update_snapshots_python" style="color: inherit; text-decoration: inherit;">update_<wbr>snapshots</a>
@@ -1121,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify true to apply the retention changes in the updated backup policy to snapshots that Atlas took previously.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1137,8 +1049,7 @@ The following state arguments are supported:
 <h4 id="cloudprovidersnapshotbackuppolicypolicy">Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1146,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyitems_csharp">
 <a href="#policyitems_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
@@ -1155,13 +1065,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">List&lt;Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1169,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyitems_go">
 <a href="#policyitems_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
@@ -1178,13 +1085,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">[]Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1192,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyitems_nodejs">
 <a href="#policyitems_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
@@ -1201,13 +1105,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1215,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_items_python">
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
@@ -1224,15 +1125,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudprovidersnapshotbackuppolicypolicypolicyitem">Sequence[Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="cloudprovidersnapshotbackuppolicypolicypolicyitem">Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinterval_csharp">
 <a href="#frequencyinterval_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
@@ -1240,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequencytype_csharp">
 <a href="#frequencytype_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Type</a>
@@ -1249,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1258,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionunit_csharp">
 <a href="#retentionunit_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
@@ -1267,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionvalue_csharp">
 <a href="#retentionvalue_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Value</a>
@@ -1276,13 +1171,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinterval_go">
 <a href="#frequencyinterval_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
@@ -1290,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequencytype_go">
 <a href="#frequencytype_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Type</a>
@@ -1299,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1308,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionunit_go">
 <a href="#retentionunit_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
@@ -1317,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionvalue_go">
 <a href="#retentionvalue_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Value</a>
@@ -1326,13 +1215,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequencyinterval_nodejs">
 <a href="#frequencyinterval_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
@@ -1340,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequencytype_nodejs">
 <a href="#frequencytype_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
@@ -1349,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1358,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionunit_nodejs">
 <a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
@@ -1367,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retentionvalue_nodejs">
 <a href="#retentionvalue_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
@@ -1376,13 +1259,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_interval_python">
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
@@ -1390,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="frequency_type_python">
 <a href="#frequency_type_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>type</a>
@@ -1399,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1408,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_unit_python">
 <a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
@@ -1417,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retention_value_python">
 <a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
@@ -1426,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

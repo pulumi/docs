@@ -364,8 +364,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -374,8 +373,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configservergitsetting_csharp">
 <a href="#configservergitsetting_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Server<wbr>Git<wbr>Setting</a>
@@ -384,8 +382,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -394,8 +391,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -404,8 +400,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -414,8 +409,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -424,8 +418,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -434,8 +427,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trace_csharp">
 <a href="#trace_csharp" style="color: inherit; text-decoration: inherit;">Trace</a>
@@ -444,13 +436,11 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -459,8 +449,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configservergitsetting_go">
 <a href="#configservergitsetting_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Server<wbr>Git<wbr>Setting</a>
@@ -469,8 +458,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -479,8 +467,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -489,8 +476,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -499,8 +485,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_go">
 <a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -509,8 +494,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -519,8 +503,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trace_go">
 <a href="#trace_go" style="color: inherit; text-decoration: inherit;">Trace</a>
@@ -529,13 +512,11 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -544,8 +525,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configservergitsetting_nodejs">
 <a href="#configservergitsetting_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Server<wbr>Git<wbr>Setting</a>
@@ -554,8 +534,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -564,8 +543,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +552,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -584,8 +561,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -594,8 +570,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -604,8 +579,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trace_nodejs">
 <a href="#trace_nodejs" style="color: inherit; text-decoration: inherit;">trace</a>
@@ -614,13 +588,11 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -629,8 +601,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_server_git_setting_python">
 <a href="#config_server_git_setting_python" style="color: inherit; text-decoration: inherit;">config_<wbr>server_<wbr>git_<wbr>setting</a>
@@ -639,8 +610,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -649,8 +619,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -659,8 +628,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -669,8 +637,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_name_python">
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -679,8 +646,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -689,8 +655,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trace_python">
 <a href="#trace_python" style="color: inherit; text-decoration: inherit;">trace</a>
@@ -699,8 +664,7 @@ The SpringCloudService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -711,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -720,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundpublicipaddresses_csharp">
 <a href="#outboundpublicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
@@ -730,13 +692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -744,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundpublicipaddresses_go">
 <a href="#outboundpublicipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
@@ -754,13 +713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -768,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outboundpublicipaddresses_nodejs">
 <a href="#outboundpublicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
@@ -778,13 +734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -792,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outbound_public_ip_addresses_python">
 <a href="#outbound_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>public_<wbr>ip_<wbr>addresses</a>
@@ -802,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -930,8 +882,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configservergitsetting_csharp">
 <a href="#state_configservergitsetting_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Server<wbr>Git<wbr>Setting</a>
@@ -940,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -950,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -960,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -970,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outboundpublicipaddresses_csharp">
 <a href="#state_outboundpublicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
@@ -980,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -990,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1000,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1010,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trace_csharp">
 <a href="#state_trace_csharp" style="color: inherit; text-decoration: inherit;">Trace</a>
@@ -1020,13 +963,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configservergitsetting_go">
 <a href="#state_configservergitsetting_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Server<wbr>Git<wbr>Setting</a>
@@ -1035,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1045,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1055,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1065,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outboundpublicipaddresses_go">
 <a href="#state_outboundpublicipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
@@ -1075,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1085,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1095,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1105,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trace_go">
 <a href="#state_trace_go" style="color: inherit; text-decoration: inherit;">Trace</a>
@@ -1115,13 +1048,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configservergitsetting_nodejs">
 <a href="#state_configservergitsetting_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Server<wbr>Git<wbr>Setting</a>
@@ -1130,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1140,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1150,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1160,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outboundpublicipaddresses_nodejs">
 <a href="#state_outboundpublicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Public<wbr>Ip<wbr>Addresses</a>
@@ -1170,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1180,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -1190,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1200,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trace_nodejs">
 <a href="#state_trace_nodejs" style="color: inherit; text-decoration: inherit;">trace</a>
@@ -1210,13 +1133,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_server_git_setting_python">
 <a href="#state_config_server_git_setting_python" style="color: inherit; text-decoration: inherit;">config_<wbr>server_<wbr>git_<wbr>setting</a>
@@ -1225,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `config_server_git_setting` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1235,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1245,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Spring Cloud Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1255,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `network` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outbound_public_ip_addresses_python">
 <a href="#state_outbound_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>public_<wbr>ip_<wbr>addresses</a>
@@ -1265,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the outbound Public IP Addresses used by this Spring Cloud Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1275,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies The name of the resource group in which to create the Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -1285,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SKU Name for this Spring Cloud Service. Possible values are `B0` and `S0`. Defaults to `S0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1295,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trace_python">
 <a href="#state_trace_python" style="color: inherit; text-decoration: inherit;">trace</a>
@@ -1305,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `trace` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1321,8 +1233,7 @@ The following state arguments are supported:
 <h4 id="springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1331,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the default Git repository used as the Config Server back end, should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpbasicauth_csharp">
 <a href="#httpbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auth</a>
@@ -1341,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1351,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositories_csharp">
 <a href="#repositories_csharp" style="color: inherit; text-decoration: inherit;">Repositories</a>
@@ -1361,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">List&lt;Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_csharp">
 <a href="#searchpaths_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -1371,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshauth_csharp">
 <a href="#sshauth_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auth</a>
@@ -1381,13 +1287,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1396,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the default Git repository used as the Config Server back end, should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpbasicauth_go">
 <a href="#httpbasicauth_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auth</a>
@@ -1406,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1416,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositories_go">
 <a href="#repositories_go" style="color: inherit; text-decoration: inherit;">Repositories</a>
@@ -1426,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">[]Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_go">
 <a href="#searchpaths_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -1436,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshauth_go">
 <a href="#sshauth_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auth</a>
@@ -1446,13 +1345,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1461,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the default Git repository used as the Config Server back end, should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpbasicauth_nodejs">
 <a href="#httpbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
@@ -1471,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1481,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositories_nodejs">
 <a href="#repositories_nodejs" style="color: inherit; text-decoration: inherit;">repositories</a>
@@ -1491,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_nodejs">
 <a href="#searchpaths_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
@@ -1501,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshauth_nodejs">
 <a href="#sshauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
@@ -1511,13 +1403,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1526,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the default Git repository used as the Config Server back end, should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_basic_auth_python">
 <a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
@@ -1536,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1546,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositories_python">
 <a href="#repositories_python" style="color: inherit; text-decoration: inherit;">repositories</a>
@@ -1556,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepository">Sequence[Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `repository` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_paths_python">
 <a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
@@ -1566,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_auth_python">
 <a href="#ssh_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auth</a>
@@ -1576,15 +1461,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1593,8 +1476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1603,13 +1485,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1618,8 +1498,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1628,13 +1507,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1643,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1653,13 +1529,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1668,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1678,15 +1551,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1695,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify on the Git repository, required only if repos exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1705,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the Git repository that's used as the Config Server back end should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpbasicauth_csharp">
 <a href="#httpbasicauth_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auth</a>
@@ -1715,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1725,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterns_csharp">
 <a href="#patterns_csharp" style="color: inherit; text-decoration: inherit;">Patterns</a>
@@ -1735,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings used to match an application name. For each pattern, use the `{application}/{profile}` format with wildcards.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_csharp">
 <a href="#searchpaths_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -1745,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshauth_csharp">
 <a href="#sshauth_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auth</a>
@@ -1755,13 +1620,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1770,8 +1633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify on the Git repository, required only if repos exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -1780,8 +1642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the Git repository that's used as the Config Server back end should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpbasicauth_go">
 <a href="#httpbasicauth_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Basic<wbr>Auth</a>
@@ -1790,8 +1651,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1800,8 +1660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterns_go">
 <a href="#patterns_go" style="color: inherit; text-decoration: inherit;">Patterns</a>
@@ -1810,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings used to match an application name. For each pattern, use the `{application}/{profile}` format with wildcards.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_go">
 <a href="#searchpaths_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Paths</a>
@@ -1820,8 +1678,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshauth_go">
 <a href="#sshauth_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Auth</a>
@@ -1830,13 +1687,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1845,8 +1700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify on the Git repository, required only if repos exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1855,8 +1709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the Git repository that's used as the Config Server back end should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpbasicauth_nodejs">
 <a href="#httpbasicauth_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Basic<wbr>Auth</a>
@@ -1865,8 +1718,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1875,8 +1727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterns_nodejs">
 <a href="#patterns_nodejs" style="color: inherit; text-decoration: inherit;">patterns</a>
@@ -1885,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings used to match an application name. For each pattern, use the `{application}/{profile}` format with wildcards.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchpaths_nodejs">
 <a href="#searchpaths_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Paths</a>
@@ -1895,8 +1745,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshauth_nodejs">
 <a href="#sshauth_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Auth</a>
@@ -1905,13 +1754,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1920,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name to identify on the Git repository, required only if repos exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -1930,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the Git repository that's used as the Config Server back end should be started with `http://`, `https://`, `git@`, or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_basic_auth_python">
 <a href="#http_basic_auth_python" style="color: inherit; text-decoration: inherit;">http_<wbr>basic_<wbr>auth</a>
@@ -1940,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_basic_auth` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1950,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default label of the Git repository, should be the branch name, tag name, or commit-id of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="patterns_python">
 <a href="#patterns_python" style="color: inherit; text-decoration: inherit;">patterns</a>
@@ -1960,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings used to match an application name. For each pattern, use the `{application}/{profile}` format with wildcards.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_paths_python">
 <a href="#search_paths_python" style="color: inherit; text-decoration: inherit;">search_<wbr>paths</a>
@@ -1970,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings used to search subdirectories of the Git repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_auth_python">
 <a href="#ssh_auth_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>auth</a>
@@ -1980,15 +1821,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ssh_auth` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1997,8 +1836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2007,13 +1845,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2022,8 +1858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2032,13 +1867,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2047,8 +1880,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2057,13 +1889,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2072,8 +1902,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2082,15 +1911,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username that's used to access the Git repository server, required when the Git repository server supports Http Basic Authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2099,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkey_csharp">
 <a href="#hostkey_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Key</a>
@@ -2109,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkeyalgorithm_csharp">
 <a href="#hostkeyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Algorithm</a>
@@ -2119,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricthostkeycheckingenabled_csharp">
 <a href="#stricthostkeycheckingenabled_csharp" style="color: inherit; text-decoration: inherit;">Strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
@@ -2129,13 +1953,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2144,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkey_go">
 <a href="#hostkey_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Key</a>
@@ -2154,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkeyalgorithm_go">
 <a href="#hostkeyalgorithm_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Algorithm</a>
@@ -2164,8 +1984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricthostkeycheckingenabled_go">
 <a href="#stricthostkeycheckingenabled_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
@@ -2174,13 +1993,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -2189,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkey_nodejs">
 <a href="#hostkey_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Key</a>
@@ -2199,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkeyalgorithm_nodejs">
 <a href="#hostkeyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Algorithm</a>
@@ -2209,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricthostkeycheckingenabled_nodejs">
 <a href="#stricthostkeycheckingenabled_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
@@ -2219,13 +2033,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -2234,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_key_python">
 <a href="#host_key_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key</a>
@@ -2244,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_key_algorithm_python">
 <a href="#host_key_algorithm_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>algorithm</a>
@@ -2254,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strict_host_key_checking_enabled_python">
 <a href="#strict_host_key_checking_enabled_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>host_<wbr>key_<wbr>checking_<wbr>enabled</a>
@@ -2264,15 +2073,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2281,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkey_csharp">
 <a href="#hostkey_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Key</a>
@@ -2291,8 +2097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkeyalgorithm_csharp">
 <a href="#hostkeyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Algorithm</a>
@@ -2301,8 +2106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricthostkeycheckingenabled_csharp">
 <a href="#stricthostkeycheckingenabled_csharp" style="color: inherit; text-decoration: inherit;">Strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
@@ -2311,13 +2115,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2326,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkey_go">
 <a href="#hostkey_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Key</a>
@@ -2336,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkeyalgorithm_go">
 <a href="#hostkeyalgorithm_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Key<wbr>Algorithm</a>
@@ -2346,8 +2146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricthostkeycheckingenabled_go">
 <a href="#stricthostkeycheckingenabled_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
@@ -2356,13 +2155,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -2371,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkey_nodejs">
 <a href="#hostkey_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Key</a>
@@ -2381,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostkeyalgorithm_nodejs">
 <a href="#hostkeyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Key<wbr>Algorithm</a>
@@ -2391,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stricthostkeycheckingenabled_nodejs">
 <a href="#stricthostkeycheckingenabled_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Host<wbr>Key<wbr>Checking<wbr>Enabled</a>
@@ -2401,13 +2195,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -2416,8 +2208,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH private key to access the Git repository, required when the URI starts with `git@` or `ssh://`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_key_python">
 <a href="#host_key_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key</a>
@@ -2426,8 +2217,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host key of the Git repository server, should not include the algorithm prefix as covered by `host-key-algorithm`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_key_algorithm_python">
 <a href="#host_key_algorithm_python" style="color: inherit; text-decoration: inherit;">host_<wbr>key_<wbr>algorithm</a>
@@ -2436,8 +2226,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host key algorithm, should be `ssh-dss`, `ssh-rsa`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, or `ecdsa-sha2-nistp521`. Required only if `host-key` exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strict_host_key_checking_enabled_python">
 <a href="#strict_host_key_checking_enabled_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>host_<wbr>key_<wbr>checking_<wbr>enabled</a>
@@ -2446,15 +2235,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Config Server instance will fail to start if the host_key does not match.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appsubnetid_csharp">
 <a href="#appsubnetid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
@@ -2463,8 +2250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrranges_csharp">
 <a href="#cidrranges_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
@@ -2473,8 +2259,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceruntimesubnetid_csharp">
 <a href="#serviceruntimesubnetid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -2483,8 +2268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_csharp">
 <a href="#appnetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -2493,8 +2277,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_csharp">
 <a href="#serviceruntimenetworkresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -2503,13 +2286,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appsubnetid_go">
 <a href="#appsubnetid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Subnet<wbr>Id</a>
@@ -2518,8 +2299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrranges_go">
 <a href="#cidrranges_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
@@ -2528,8 +2308,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceruntimesubnetid_go">
 <a href="#serviceruntimesubnetid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -2538,8 +2317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_go">
 <a href="#appnetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">App<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -2548,8 +2326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_go">
 <a href="#serviceruntimenetworkresourcegroup_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -2558,13 +2335,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appsubnetid_nodejs">
 <a href="#appsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Subnet<wbr>Id</a>
@@ -2573,8 +2348,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidrranges_nodejs">
 <a href="#cidrranges_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
@@ -2583,8 +2357,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceruntimesubnetid_nodejs">
 <a href="#serviceruntimesubnetid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Subnet<wbr>Id</a>
@@ -2593,8 +2366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appnetworkresourcegroup_nodejs">
 <a href="#appnetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -2603,8 +2375,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceruntimenetworkresourcegroup_nodejs">
 <a href="#serviceruntimenetworkresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Runtime<wbr>Network<wbr>Resource<wbr>Group</a>
@@ -2613,13 +2384,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_subnet_id_python">
 <a href="#app_subnet_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>subnet_<wbr>id</a>
@@ -2628,8 +2397,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet which should host the Spring Boot Applications deployed in this Spring Cloud Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_ranges_python">
 <a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
@@ -2638,8 +2406,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of (at least 3) CIDR ranges (at least /16) which are used to host the Spring Cloud infrastructure, which must not overlap with any existing CIDR ranges in the Subnet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_runtime_subnet_id_python">
 <a href="#service_runtime_subnet_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>subnet_<wbr>id</a>
@@ -2648,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Subnet where the Service Runtime components of the Spring Cloud Service will exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_network_resource_group_python">
 <a href="#app_network_resource_group_python" style="color: inherit; text-decoration: inherit;">app_<wbr>network_<wbr>resource_<wbr>group</a>
@@ -2658,8 +2424,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Apps. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_runtime_network_resource_group_python">
 <a href="#service_runtime_network_resource_group_python" style="color: inherit; text-decoration: inherit;">service_<wbr>runtime_<wbr>network_<wbr>resource_<wbr>group</a>
@@ -2668,15 +2433,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Name of the resource group containing network resources of Azure Spring Cloud Service Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instrumentationkey_csharp">
 <a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -2685,13 +2448,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instrumentationkey_go">
 <a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -2700,13 +2461,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instrumentationkey_nodejs">
 <a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
@@ -2715,13 +2474,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instrumentation_key_python">
 <a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
@@ -2730,8 +2487,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key used for Application Insights.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

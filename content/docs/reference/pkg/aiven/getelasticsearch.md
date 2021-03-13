@@ -151,8 +151,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -163,8 +162,7 @@ The following arguments are supported:
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -175,8 +173,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -191,8 +188,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -200,8 +196,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -210,8 +205,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchuserconfig_csharp">
 <a href="#elasticsearchuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
@@ -221,8 +215,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -232,8 +225,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -243,8 +235,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -260,8 +251,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -275,8 +265,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -285,8 +274,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -294,8 +282,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -304,8 +291,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -314,8 +300,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -323,8 +308,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -333,8 +317,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -343,8 +326,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -353,8 +335,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -367,13 +348,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -384,8 +363,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -396,8 +374,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -412,8 +389,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -421,8 +397,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">[]Get<wbr>Elastic<wbr>Search<wbr>Component</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -431,8 +406,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchuserconfig_go">
 <a href="#elasticsearchuserconfig_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
@@ -442,8 +416,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -453,8 +426,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -464,8 +436,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -481,8 +452,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -496,8 +466,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -506,8 +475,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -515,8 +483,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">[]Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -525,8 +492,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -535,8 +501,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -544,8 +509,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -554,8 +518,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -564,8 +527,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -574,8 +536,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -588,13 +549,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -605,8 +564,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -617,8 +575,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -633,8 +590,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -642,8 +598,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">Get<wbr>Elastic<wbr>Search<wbr>Component[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -652,8 +607,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchuserconfig_nodejs">
 <a href="#elasticsearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>User<wbr>Config</a>
@@ -663,8 +617,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -674,8 +627,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -685,8 +637,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -702,8 +653,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -717,8 +667,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -727,8 +676,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -736,8 +684,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -746,8 +693,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -756,8 +702,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -765,8 +710,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -775,8 +719,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -785,8 +728,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -795,8 +737,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -809,13 +750,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -826,8 +765,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -838,8 +776,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -854,8 +791,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -863,8 +799,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Component<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -873,8 +808,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_user_config_python">
 <a href="#elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
@@ -884,8 +818,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -895,8 +828,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -906,8 +838,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -923,8 +854,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -938,8 +868,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -948,8 +877,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -957,8 +885,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -967,8 +894,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -977,8 +903,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -986,8 +911,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -996,8 +920,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1006,8 +929,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1016,8 +938,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -1030,8 +951,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1044,8 +964,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1053,8 +972,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Component&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -1063,8 +981,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1073,8 +990,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1082,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1092,8 +1007,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1101,8 +1015,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1111,8 +1024,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1121,8 +1033,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1130,8 +1041,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1140,8 +1050,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1150,8 +1059,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1160,8 +1068,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1176,8 +1083,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearchuserconfig_csharp">
 <a href="#elasticsearchuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
@@ -1187,8 +1093,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1198,8 +1103,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1209,8 +1113,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1226,8 +1129,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1241,8 +1143,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1250,8 +1151,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">List&lt;Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1264,13 +1164,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1278,8 +1176,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">[]Get<wbr>Elastic<wbr>Search<wbr>Component</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -1288,8 +1185,7 @@ deletion is done.
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1298,8 +1194,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1307,8 +1202,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1317,8 +1211,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1326,8 +1219,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1336,8 +1228,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1346,8 +1237,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1355,8 +1245,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1365,8 +1254,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1375,8 +1263,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1385,8 +1272,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1401,8 +1287,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearchuserconfig_go">
 <a href="#elasticsearchuserconfig_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>User<wbr>Config</a>
@@ -1412,8 +1297,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1423,8 +1307,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1434,8 +1317,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1451,8 +1333,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1466,8 +1347,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1475,8 +1355,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">[]Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1489,13 +1368,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1503,8 +1380,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">Get<wbr>Elastic<wbr>Search<wbr>Component[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -1513,8 +1389,7 @@ deletion is done.
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1523,8 +1398,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1532,8 +1406,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1542,8 +1415,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1551,8 +1423,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1561,8 +1432,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1571,8 +1441,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1580,8 +1449,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1590,8 +1458,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1600,8 +1467,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1610,8 +1476,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1626,8 +1491,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearchuserconfig_nodejs">
 <a href="#elasticsearchuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>User<wbr>Config</a>
@@ -1637,8 +1501,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -1648,8 +1511,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -1659,8 +1521,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1676,8 +1537,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -1691,8 +1551,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -1700,8 +1559,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -1714,13 +1572,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1728,8 +1584,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchcomponent">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Component]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -1738,8 +1593,7 @@ deletion is done.
         <span class="property-type"><a href="#getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1748,8 +1602,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1757,8 +1610,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1767,8 +1619,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elasticsearch hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1776,8 +1627,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1786,8 +1636,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1796,8 +1645,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elasticsearch port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1805,8 +1653,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1815,8 +1662,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Elasticsearch service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1825,8 +1671,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Elasticsearch service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1835,8 +1680,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -1851,8 +1695,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="elasticsearch_user_config_python">
 <a href="#elasticsearch_user_config_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>user_<wbr>config</a>
@@ -1862,8 +1705,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}defines Elasticsearch specific additional configuration options. 
 The following configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -1873,8 +1715,7 @@ The following configuration options available:
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -1884,8 +1725,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1901,8 +1741,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -1916,8 +1755,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -1925,8 +1763,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getelasticsearchserviceintegration">Sequence[Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -1939,8 +1776,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1954,8 +1790,7 @@ deletion is done.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -1963,8 +1798,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1972,8 +1806,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -1981,8 +1814,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1990,8 +1822,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -1999,8 +1830,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2008,8 +1838,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2017,13 +1846,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2031,8 +1858,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2040,8 +1866,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2049,8 +1874,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2058,8 +1882,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2067,8 +1890,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2076,8 +1898,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2085,13 +1906,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2099,8 +1918,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2108,8 +1926,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2117,8 +1934,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2126,8 +1942,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2135,8 +1950,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2144,8 +1958,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2153,13 +1966,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2167,8 +1978,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2176,8 +1986,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2185,8 +1994,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2194,8 +2002,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2203,8 +2010,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2212,8 +2018,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2221,8 +2026,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch</h4>
@@ -2230,8 +2034,7 @@ deletion is done.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kibanauri_csharp">
 <a href="#kibanauri_csharp" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Uri</a>
@@ -2240,13 +2043,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for Kibana frontend.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kibanauri_go">
 <a href="#kibanauri_go" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Uri</a>
@@ -2255,13 +2056,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for Kibana frontend.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kibanauri_nodejs">
 <a href="#kibanauri_nodejs" style="color: inherit; text-decoration: inherit;">kibana<wbr>Uri</a>
@@ -2270,13 +2069,11 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for Kibana frontend.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kibana_uri_python">
 <a href="#kibana_uri_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>uri</a>
@@ -2285,8 +2082,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for Kibana frontend.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfig">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config</h4>
@@ -2294,8 +2090,7 @@ deletion is done.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
 <a href="#customdomain_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -2305,8 +2100,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the 
 Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablereplicationfactoradjustment_csharp">
 <a href="#disablereplicationfactoradjustment_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
@@ -2318,8 +2112,7 @@ Aiven DNS name.
 adjustment for multi-node services. By default, Aiven ensures all indexes are replicated at
 least to two nodes. Note: setting this to true increases a risk of data loss in case of
 virtual machine failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -2328,8 +2121,7 @@ virtual machine failure.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchversion_csharp">
 <a href="#elasticsearchversion_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Version</a>
@@ -2338,8 +2130,7 @@ virtual machine failure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexpatterns_csharp">
 <a href="#indexpatterns_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Patterns</a>
@@ -2349,8 +2140,7 @@ virtual machine failure.
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indextemplate_csharp">
 <a href="#indextemplate_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
@@ -2359,8 +2149,7 @@ be kept.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template settings for all new indexe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2369,8 +2158,7 @@ be kept.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_csharp">
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -2380,8 +2168,7 @@ be kept.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_csharp">
 <a href="#maxindexcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
@@ -2390,8 +2177,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2400,8 +2186,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_csharp">
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2410,8 +2195,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2421,8 +2205,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2431,8 +2214,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigpublicaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_csharp">
 <a href="#recoverybasebackupname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
@@ -2441,8 +2223,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2452,13 +2233,11 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
 <a href="#customdomain_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Domain</a>
@@ -2468,8 +2247,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the 
 Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablereplicationfactoradjustment_go">
 <a href="#disablereplicationfactoradjustment_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
@@ -2481,8 +2259,7 @@ Aiven DNS name.
 adjustment for multi-node services. By default, Aiven ensures all indexes are replicated at
 least to two nodes. Note: setting this to true increases a risk of data loss in case of
 virtual machine failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -2491,8 +2268,7 @@ virtual machine failure.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchversion_go">
 <a href="#elasticsearchversion_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Version</a>
@@ -2501,8 +2277,7 @@ virtual machine failure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexpatterns_go">
 <a href="#indexpatterns_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Patterns</a>
@@ -2512,8 +2287,7 @@ virtual machine failure.
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indextemplate_go">
 <a href="#indextemplate_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
@@ -2522,8 +2296,7 @@ be kept.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template settings for all new indexe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2532,8 +2305,7 @@ be kept.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_go">
 <a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -2543,8 +2315,7 @@ be kept.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_go">
 <a href="#maxindexcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
@@ -2553,8 +2324,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2563,8 +2333,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_go">
 <a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2573,8 +2342,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2584,8 +2352,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2594,8 +2361,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigpublicaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_go">
 <a href="#recoverybasebackupname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
@@ -2604,8 +2370,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2615,13 +2380,11 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
 <a href="#customdomain_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Domain</a>
@@ -2631,8 +2394,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the 
 Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablereplicationfactoradjustment_nodejs">
 <a href="#disablereplicationfactoradjustment_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Replication<wbr>Factor<wbr>Adjustment</a>
@@ -2644,8 +2406,7 @@ Aiven DNS name.
 adjustment for multi-node services. By default, Aiven ensures all indexes are replicated at
 least to two nodes. Note: setting this to true increases a risk of data loss in case of
 virtual machine failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -2654,8 +2415,7 @@ virtual machine failure.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchversion_nodejs">
 <a href="#elasticsearchversion_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Version</a>
@@ -2664,8 +2424,7 @@ virtual machine failure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexpatterns_nodejs">
 <a href="#indexpatterns_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Patterns</a>
@@ -2675,8 +2434,7 @@ virtual machine failure.
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indextemplate_nodejs">
 <a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
@@ -2685,8 +2443,7 @@ be kept.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Template settings for all new indexe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -2695,8 +2452,7 @@ be kept.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_nodejs">
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -2706,8 +2462,7 @@ be kept.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_nodejs">
 <a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
@@ -2716,8 +2471,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -2726,8 +2480,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_nodejs">
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
@@ -2736,8 +2489,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2747,8 +2499,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -2757,8 +2508,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigpublicaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_nodejs">
 <a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
@@ -2767,8 +2517,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2778,13 +2527,11 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
 <a href="#custom_domain_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>domain</a>
@@ -2794,8 +2541,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Serve the web frontend using a custom CNAME pointing to the 
 Aiven DNS name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_replication_factor_adjustment_python">
 <a href="#disable_replication_factor_adjustment_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>replication_<wbr>factor_<wbr>adjustment</a>
@@ -2807,8 +2553,7 @@ Aiven DNS name.
 adjustment for multi-node services. By default, Aiven ensures all indexes are replicated at
 least to two nodes. Note: setting this to true increases a risk of data loss in case of
 virtual machine failure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -2817,8 +2562,7 @@ virtual machine failure.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_version_python">
 <a href="#elasticsearch_version_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>version</a>
@@ -2827,8 +2571,7 @@ virtual machine failure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elasticsearch major version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_patterns_python">
 <a href="#index_patterns_python" style="color: inherit; text-decoration: inherit;">index_<wbr>patterns</a>
@@ -2838,8 +2581,7 @@ virtual machine failure.
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="index_template_python">
 <a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
@@ -2848,8 +2590,7 @@ be kept.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Template settings for all new indexe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -2858,8 +2599,7 @@ be kept.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_python">
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -2869,8 +2609,7 @@ be kept.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_index_count_python">
 <a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
@@ -2879,8 +2618,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -2889,8 +2627,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelink_access_python">
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
@@ -2899,8 +2636,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -2910,8 +2646,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -2920,8 +2655,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigpublicaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_basebackup_name_python">
 <a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
@@ -2930,8 +2664,7 @@ effect only when a new service is being created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -2941,8 +2674,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect 
 only when a new service is being created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigelasticsearch">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</h4>
@@ -2950,8 +2682,7 @@ only when a new service is being created.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionautocreateindexenabled_csharp">
 <a href="#actionautocreateindexenabled_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
@@ -2961,8 +2692,7 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Explicitly allow or block automatic 
 creation of indices. Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiondestructiverequiresname_csharp">
 <a href="#actiondestructiverequiresname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Destructive<wbr>Requires<wbr>Name</a>
@@ -2971,8 +2701,7 @@ creation of indices. Defaults to true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustermaxshardspernode_csharp">
 <a href="#clustermaxshardspernode_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
@@ -2982,8 +2711,7 @@ creation of indices. Defaults to true
     </dt>
     <dd>{{% md %}}Controls the number of shards allowed in the 
 cluster per data node
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxcontentlength_csharp">
 <a href="#httpmaxcontentlength_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Content<wbr>Length</a>
@@ -2993,8 +2721,7 @@ cluster per data node
     </dt>
     <dd>{{% md %}}Maximum content length for HTTP requests to 
 the Elasticsearch HTTP API, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxheadersize_csharp">
 <a href="#httpmaxheadersize_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Header<wbr>Size</a>
@@ -3003,8 +2730,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max size of allowed headers, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxinitiallinelength_csharp">
 <a href="#httpmaxinitiallinelength_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
@@ -3013,8 +2739,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max length of an HTTP URL, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesfielddatacachesize_csharp">
 <a href="#indicesfielddatacachesize_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
@@ -3026,8 +2751,7 @@ the Elasticsearch HTTP API, in bytes.
 heap memory used for field data cache. This is an expert setting; decreasing the
 value too much will increase overhead of loading field data; too much memory used
 for field data cache will decrease amount of heap available for other operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesmemoryindexbuffersize_csharp">
 <a href="#indicesmemoryindexbuffersize_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
@@ -3039,8 +2763,7 @@ for field data cache will decrease amount of heap available for other operations
 Total amount of heap used for indexing buffer, before writing segments to disk.
 This is an expert setting. Too low value will slow down indexing; too high value
 will increase indexing performance but causes performance issues for query performance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesqueriescachesize_csharp">
 <a href="#indicesqueriescachesize_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Queries<wbr>Cache<wbr>Size</a>
@@ -3052,8 +2775,7 @@ will increase indexing performance but causes performance issues for query perfo
 Maximum amount of heap used for query cache. This is an expert setting.
 Too low value will decrease query performance and increase performance for other
 operations; too high value will cause issues with other Elasticsearch functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesqueryboolmaxclausecount_csharp">
 <a href="#indicesqueryboolmaxclausecount_csharp" style="color: inherit; text-decoration: inherit;">Indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
@@ -3064,8 +2786,7 @@ operations; too high value will cause issues with other Elasticsearch functional
     <dd>{{% md %}}Maximum number of clauses Lucene 
 BooleanQuery can have. The default value (1024) is relatively high, and increasing it
 may cause performance issues. Investigate other approaches first before increasing this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reindexremotewhitelists_csharp">
 <a href="#reindexremotewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Reindex<wbr>Remote<wbr>Whitelists</a>
@@ -3075,8 +2796,7 @@ may cause performance issues. Investigate other approaches first before increasi
     </dt>
     <dd>{{% md %}}Whitelisted addresses for reindexing. 
 Changing this value will cause all Elasticsearch instances to restart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchmaxbuckets_csharp">
 <a href="#searchmaxbuckets_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
@@ -3086,8 +2806,7 @@ Changing this value will cause all Elasticsearch instances to restart.
     </dt>
     <dd>{{% md %}}Maximum number of aggregation buckets allowed 
 in a single response. Elasticsearch default value is used when this is not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolanalyzequeuesize_csharp">
 <a href="#threadpoolanalyzequeuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
@@ -3097,8 +2816,7 @@ in a single response. Elasticsearch default value is used when this is not defin
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolanalyzesize_csharp">
 <a href="#threadpoolanalyzesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
@@ -3109,8 +2827,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolforcemergesize_csharp">
 <a href="#threadpoolforcemergesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
@@ -3121,8 +2838,7 @@ value is automatically lowered if set to higher than maximum value.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolgetqueuesize_csharp">
 <a href="#threadpoolgetqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
@@ -3132,8 +2848,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolgetsize_csharp">
 <a href="#threadpoolgetsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Size</a>
@@ -3144,8 +2859,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolindexqueuesize_csharp">
 <a href="#threadpoolindexqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Index<wbr>Queue<wbr>Size</a>
@@ -3155,8 +2869,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolindexsize_csharp">
 <a href="#threadpoolindexsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Index<wbr>Size</a>
@@ -3167,8 +2880,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchqueuesize_csharp">
 <a href="#threadpoolsearchqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
@@ -3178,8 +2890,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchsize_csharp">
 <a href="#threadpoolsearchsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Size</a>
@@ -3190,8 +2901,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchthrottledqueuesize_csharp">
 <a href="#threadpoolsearchthrottledqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
@@ -3201,8 +2911,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchthrottledsize_csharp">
 <a href="#threadpoolsearchthrottledsize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
@@ -3213,8 +2922,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolwritequeuesize_csharp">
 <a href="#threadpoolwritequeuesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
@@ -3224,8 +2932,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolwritesize_csharp">
 <a href="#threadpoolwritesize_csharp" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Size</a>
@@ -3236,13 +2943,11 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionautocreateindexenabled_go">
 <a href="#actionautocreateindexenabled_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
@@ -3252,8 +2957,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Explicitly allow or block automatic 
 creation of indices. Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiondestructiverequiresname_go">
 <a href="#actiondestructiverequiresname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Destructive<wbr>Requires<wbr>Name</a>
@@ -3262,8 +2966,7 @@ creation of indices. Defaults to true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustermaxshardspernode_go">
 <a href="#clustermaxshardspernode_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
@@ -3273,8 +2976,7 @@ creation of indices. Defaults to true
     </dt>
     <dd>{{% md %}}Controls the number of shards allowed in the 
 cluster per data node
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxcontentlength_go">
 <a href="#httpmaxcontentlength_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Content<wbr>Length</a>
@@ -3284,8 +2986,7 @@ cluster per data node
     </dt>
     <dd>{{% md %}}Maximum content length for HTTP requests to 
 the Elasticsearch HTTP API, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxheadersize_go">
 <a href="#httpmaxheadersize_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Header<wbr>Size</a>
@@ -3294,8 +2995,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max size of allowed headers, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxinitiallinelength_go">
 <a href="#httpmaxinitiallinelength_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
@@ -3304,8 +3004,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max length of an HTTP URL, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesfielddatacachesize_go">
 <a href="#indicesfielddatacachesize_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
@@ -3317,8 +3016,7 @@ the Elasticsearch HTTP API, in bytes.
 heap memory used for field data cache. This is an expert setting; decreasing the
 value too much will increase overhead of loading field data; too much memory used
 for field data cache will decrease amount of heap available for other operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesmemoryindexbuffersize_go">
 <a href="#indicesmemoryindexbuffersize_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
@@ -3330,8 +3028,7 @@ for field data cache will decrease amount of heap available for other operations
 Total amount of heap used for indexing buffer, before writing segments to disk.
 This is an expert setting. Too low value will slow down indexing; too high value
 will increase indexing performance but causes performance issues for query performance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesqueriescachesize_go">
 <a href="#indicesqueriescachesize_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Queries<wbr>Cache<wbr>Size</a>
@@ -3343,8 +3040,7 @@ will increase indexing performance but causes performance issues for query perfo
 Maximum amount of heap used for query cache. This is an expert setting.
 Too low value will decrease query performance and increase performance for other
 operations; too high value will cause issues with other Elasticsearch functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesqueryboolmaxclausecount_go">
 <a href="#indicesqueryboolmaxclausecount_go" style="color: inherit; text-decoration: inherit;">Indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
@@ -3355,8 +3051,7 @@ operations; too high value will cause issues with other Elasticsearch functional
     <dd>{{% md %}}Maximum number of clauses Lucene 
 BooleanQuery can have. The default value (1024) is relatively high, and increasing it
 may cause performance issues. Investigate other approaches first before increasing this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reindexremotewhitelists_go">
 <a href="#reindexremotewhitelists_go" style="color: inherit; text-decoration: inherit;">Reindex<wbr>Remote<wbr>Whitelists</a>
@@ -3366,8 +3061,7 @@ may cause performance issues. Investigate other approaches first before increasi
     </dt>
     <dd>{{% md %}}Whitelisted addresses for reindexing. 
 Changing this value will cause all Elasticsearch instances to restart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchmaxbuckets_go">
 <a href="#searchmaxbuckets_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Max<wbr>Buckets</a>
@@ -3377,8 +3071,7 @@ Changing this value will cause all Elasticsearch instances to restart.
     </dt>
     <dd>{{% md %}}Maximum number of aggregation buckets allowed 
 in a single response. Elasticsearch default value is used when this is not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolanalyzequeuesize_go">
 <a href="#threadpoolanalyzequeuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
@@ -3388,8 +3081,7 @@ in a single response. Elasticsearch default value is used when this is not defin
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolanalyzesize_go">
 <a href="#threadpoolanalyzesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
@@ -3400,8 +3092,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolforcemergesize_go">
 <a href="#threadpoolforcemergesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
@@ -3412,8 +3103,7 @@ value is automatically lowered if set to higher than maximum value.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolgetqueuesize_go">
 <a href="#threadpoolgetqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
@@ -3423,8 +3113,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolgetsize_go">
 <a href="#threadpoolgetsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Get<wbr>Size</a>
@@ -3435,8 +3124,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolindexqueuesize_go">
 <a href="#threadpoolindexqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Index<wbr>Queue<wbr>Size</a>
@@ -3446,8 +3134,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolindexsize_go">
 <a href="#threadpoolindexsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Index<wbr>Size</a>
@@ -3458,8 +3145,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchqueuesize_go">
 <a href="#threadpoolsearchqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
@@ -3469,8 +3155,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchsize_go">
 <a href="#threadpoolsearchsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Size</a>
@@ -3481,8 +3166,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchthrottledqueuesize_go">
 <a href="#threadpoolsearchthrottledqueuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
@@ -3492,8 +3176,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchthrottledsize_go">
 <a href="#threadpoolsearchthrottledsize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
@@ -3504,8 +3187,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolwritequeuesize_go">
 <a href="#threadpoolwritequeuesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
@@ -3515,8 +3197,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolwritesize_go">
 <a href="#threadpoolwritesize_go" style="color: inherit; text-decoration: inherit;">Thread<wbr>Pool<wbr>Write<wbr>Size</a>
@@ -3527,13 +3208,11 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actionautocreateindexenabled_nodejs">
 <a href="#actionautocreateindexenabled_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Auto<wbr>Create<wbr>Index<wbr>Enabled</a>
@@ -3543,8 +3222,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Explicitly allow or block automatic 
 creation of indices. Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actiondestructiverequiresname_nodejs">
 <a href="#actiondestructiverequiresname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Destructive<wbr>Requires<wbr>Name</a>
@@ -3553,8 +3231,7 @@ creation of indices. Defaults to true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustermaxshardspernode_nodejs">
 <a href="#clustermaxshardspernode_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Max<wbr>Shards<wbr>Per<wbr>Node</a>
@@ -3564,8 +3241,7 @@ creation of indices. Defaults to true
     </dt>
     <dd>{{% md %}}Controls the number of shards allowed in the 
 cluster per data node
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxcontentlength_nodejs">
 <a href="#httpmaxcontentlength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Content<wbr>Length</a>
@@ -3575,8 +3251,7 @@ cluster per data node
     </dt>
     <dd>{{% md %}}Maximum content length for HTTP requests to 
 the Elasticsearch HTTP API, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxheadersize_nodejs">
 <a href="#httpmaxheadersize_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Header<wbr>Size</a>
@@ -3585,8 +3260,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max size of allowed headers, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpmaxinitiallinelength_nodejs">
 <a href="#httpmaxinitiallinelength_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Max<wbr>Initial<wbr>Line<wbr>Length</a>
@@ -3595,8 +3269,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max length of an HTTP URL, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesfielddatacachesize_nodejs">
 <a href="#indicesfielddatacachesize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Fielddata<wbr>Cache<wbr>Size</a>
@@ -3608,8 +3281,7 @@ the Elasticsearch HTTP API, in bytes.
 heap memory used for field data cache. This is an expert setting; decreasing the
 value too much will increase overhead of loading field data; too much memory used
 for field data cache will decrease amount of heap available for other operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesmemoryindexbuffersize_nodejs">
 <a href="#indicesmemoryindexbuffersize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Memory<wbr>Index<wbr>Buffer<wbr>Size</a>
@@ -3621,8 +3293,7 @@ for field data cache will decrease amount of heap available for other operations
 Total amount of heap used for indexing buffer, before writing segments to disk.
 This is an expert setting. Too low value will slow down indexing; too high value
 will increase indexing performance but causes performance issues for query performance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesqueriescachesize_nodejs">
 <a href="#indicesqueriescachesize_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Queries<wbr>Cache<wbr>Size</a>
@@ -3634,8 +3305,7 @@ will increase indexing performance but causes performance issues for query perfo
 Maximum amount of heap used for query cache. This is an expert setting.
 Too low value will decrease query performance and increase performance for other
 operations; too high value will cause issues with other Elasticsearch functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indicesqueryboolmaxclausecount_nodejs">
 <a href="#indicesqueryboolmaxclausecount_nodejs" style="color: inherit; text-decoration: inherit;">indices<wbr>Query<wbr>Bool<wbr>Max<wbr>Clause<wbr>Count</a>
@@ -3646,8 +3316,7 @@ operations; too high value will cause issues with other Elasticsearch functional
     <dd>{{% md %}}Maximum number of clauses Lucene 
 BooleanQuery can have. The default value (1024) is relatively high, and increasing it
 may cause performance issues. Investigate other approaches first before increasing this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reindexremotewhitelists_nodejs">
 <a href="#reindexremotewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">reindex<wbr>Remote<wbr>Whitelists</a>
@@ -3657,8 +3326,7 @@ may cause performance issues. Investigate other approaches first before increasi
     </dt>
     <dd>{{% md %}}Whitelisted addresses for reindexing. 
 Changing this value will cause all Elasticsearch instances to restart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchmaxbuckets_nodejs">
 <a href="#searchmaxbuckets_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Max<wbr>Buckets</a>
@@ -3668,8 +3336,7 @@ Changing this value will cause all Elasticsearch instances to restart.
     </dt>
     <dd>{{% md %}}Maximum number of aggregation buckets allowed 
 in a single response. Elasticsearch default value is used when this is not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolanalyzequeuesize_nodejs">
 <a href="#threadpoolanalyzequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Queue<wbr>Size</a>
@@ -3679,8 +3346,7 @@ in a single response. Elasticsearch default value is used when this is not defin
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolanalyzesize_nodejs">
 <a href="#threadpoolanalyzesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Analyze<wbr>Size</a>
@@ -3691,8 +3357,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolforcemergesize_nodejs">
 <a href="#threadpoolforcemergesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Force<wbr>Merge<wbr>Size</a>
@@ -3703,8 +3368,7 @@ value is automatically lowered if set to higher than maximum value.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolgetqueuesize_nodejs">
 <a href="#threadpoolgetqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Queue<wbr>Size</a>
@@ -3714,8 +3378,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolgetsize_nodejs">
 <a href="#threadpoolgetsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Get<wbr>Size</a>
@@ -3726,8 +3389,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolindexqueuesize_nodejs">
 <a href="#threadpoolindexqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Queue<wbr>Size</a>
@@ -3737,8 +3399,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolindexsize_nodejs">
 <a href="#threadpoolindexsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Index<wbr>Size</a>
@@ -3749,8 +3410,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchqueuesize_nodejs">
 <a href="#threadpoolsearchqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Queue<wbr>Size</a>
@@ -3760,8 +3420,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchsize_nodejs">
 <a href="#threadpoolsearchsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Size</a>
@@ -3772,8 +3431,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchthrottledqueuesize_nodejs">
 <a href="#threadpoolsearchthrottledqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Queue<wbr>Size</a>
@@ -3783,8 +3441,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolsearchthrottledsize_nodejs">
 <a href="#threadpoolsearchthrottledsize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Search<wbr>Throttled<wbr>Size</a>
@@ -3795,8 +3452,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolwritequeuesize_nodejs">
 <a href="#threadpoolwritequeuesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Queue<wbr>Size</a>
@@ -3806,8 +3462,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threadpoolwritesize_nodejs">
 <a href="#threadpoolwritesize_nodejs" style="color: inherit; text-decoration: inherit;">thread<wbr>Pool<wbr>Write<wbr>Size</a>
@@ -3818,13 +3473,11 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_auto_create_index_enabled_python">
 <a href="#action_auto_create_index_enabled_python" style="color: inherit; text-decoration: inherit;">action_<wbr>auto_<wbr>create_<wbr>index_<wbr>enabled</a>
@@ -3834,8 +3487,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Explicitly allow or block automatic 
 creation of indices. Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_destructive_requires_name_python">
 <a href="#action_destructive_requires_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>destructive_<wbr>requires_<wbr>name</a>
@@ -3844,8 +3496,7 @@ creation of indices. Defaults to true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Require explicit index names when deleting
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_max_shards_per_node_python">
 <a href="#cluster_max_shards_per_node_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>max_<wbr>shards_<wbr>per_<wbr>node</a>
@@ -3855,8 +3506,7 @@ creation of indices. Defaults to true
     </dt>
     <dd>{{% md %}}Controls the number of shards allowed in the 
 cluster per data node
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_max_content_length_python">
 <a href="#http_max_content_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>content_<wbr>length</a>
@@ -3866,8 +3516,7 @@ cluster per data node
     </dt>
     <dd>{{% md %}}Maximum content length for HTTP requests to 
 the Elasticsearch HTTP API, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_max_header_size_python">
 <a href="#http_max_header_size_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>header_<wbr>size</a>
@@ -3876,8 +3525,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The max size of allowed headers, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_max_initial_line_length_python">
 <a href="#http_max_initial_line_length_python" style="color: inherit; text-decoration: inherit;">http_<wbr>max_<wbr>initial_<wbr>line_<wbr>length</a>
@@ -3886,8 +3534,7 @@ the Elasticsearch HTTP API, in bytes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The max length of an HTTP URL, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indices_fielddata_cache_size_python">
 <a href="#indices_fielddata_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>fielddata_<wbr>cache_<wbr>size</a>
@@ -3899,8 +3546,7 @@ the Elasticsearch HTTP API, in bytes.
 heap memory used for field data cache. This is an expert setting; decreasing the
 value too much will increase overhead of loading field data; too much memory used
 for field data cache will decrease amount of heap available for other operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indices_memory_index_buffer_size_python">
 <a href="#indices_memory_index_buffer_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>memory_<wbr>index_<wbr>buffer_<wbr>size</a>
@@ -3912,8 +3558,7 @@ for field data cache will decrease amount of heap available for other operations
 Total amount of heap used for indexing buffer, before writing segments to disk.
 This is an expert setting. Too low value will slow down indexing; too high value
 will increase indexing performance but causes performance issues for query performance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indices_queries_cache_size_python">
 <a href="#indices_queries_cache_size_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>queries_<wbr>cache_<wbr>size</a>
@@ -3925,8 +3570,7 @@ will increase indexing performance but causes performance issues for query perfo
 Maximum amount of heap used for query cache. This is an expert setting.
 Too low value will decrease query performance and increase performance for other
 operations; too high value will cause issues with other Elasticsearch functionality.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indices_query_bool_max_clause_count_python">
 <a href="#indices_query_bool_max_clause_count_python" style="color: inherit; text-decoration: inherit;">indices_<wbr>query_<wbr>bool_<wbr>max_<wbr>clause_<wbr>count</a>
@@ -3937,8 +3581,7 @@ operations; too high value will cause issues with other Elasticsearch functional
     <dd>{{% md %}}Maximum number of clauses Lucene 
 BooleanQuery can have. The default value (1024) is relatively high, and increasing it
 may cause performance issues. Investigate other approaches first before increasing this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reindex_remote_whitelists_python">
 <a href="#reindex_remote_whitelists_python" style="color: inherit; text-decoration: inherit;">reindex_<wbr>remote_<wbr>whitelists</a>
@@ -3948,8 +3591,7 @@ may cause performance issues. Investigate other approaches first before increasi
     </dt>
     <dd>{{% md %}}Whitelisted addresses for reindexing. 
 Changing this value will cause all Elasticsearch instances to restart.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_max_buckets_python">
 <a href="#search_max_buckets_python" style="color: inherit; text-decoration: inherit;">search_<wbr>max_<wbr>buckets</a>
@@ -3959,8 +3601,7 @@ Changing this value will cause all Elasticsearch instances to restart.
     </dt>
     <dd>{{% md %}}Maximum number of aggregation buckets allowed 
 in a single response. Elasticsearch default value is used when this is not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_analyze_queue_size_python">
 <a href="#thread_pool_analyze_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>queue_<wbr>size</a>
@@ -3970,8 +3611,7 @@ in a single response. Elasticsearch default value is used when this is not defin
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_analyze_size_python">
 <a href="#thread_pool_analyze_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>analyze_<wbr>size</a>
@@ -3982,8 +3622,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_force_merge_size_python">
 <a href="#thread_pool_force_merge_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>force_<wbr>merge_<wbr>size</a>
@@ -3994,8 +3633,7 @@ value is automatically lowered if set to higher than maximum value.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_get_queue_size_python">
 <a href="#thread_pool_get_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>queue_<wbr>size</a>
@@ -4005,8 +3643,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_get_size_python">
 <a href="#thread_pool_get_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>get_<wbr>size</a>
@@ -4017,8 +3654,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_index_queue_size_python">
 <a href="#thread_pool_index_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>queue_<wbr>size</a>
@@ -4028,8 +3664,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_index_size_python">
 <a href="#thread_pool_index_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>index_<wbr>size</a>
@@ -4040,8 +3675,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count -
 value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_search_queue_size_python">
 <a href="#thread_pool_search_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>queue_<wbr>size</a>
@@ -4051,8 +3685,7 @@ value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_search_size_python">
 <a href="#thread_pool_search_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>size</a>
@@ -4063,8 +3696,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_search_throttled_queue_size_python">
 <a href="#thread_pool_search_throttled_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>queue_<wbr>size</a>
@@ -4074,8 +3706,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. 
 See documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_search_throttled_size_python">
 <a href="#thread_pool_search_throttled_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>search_<wbr>throttled_<wbr>size</a>
@@ -4086,8 +3717,7 @@ See documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See 
 documentation for exact details. Do note this may have maximum value depending on
 CPU count - value is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_write_queue_size_python">
 <a href="#thread_pool_write_queue_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>queue_<wbr>size</a>
@@ -4097,8 +3727,7 @@ CPU count - value is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Size for the thread pool queue. See 
 documentation for exact details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thread_pool_write_size_python">
 <a href="#thread_pool_write_size_python" style="color: inherit; text-decoration: inherit;">thread_<wbr>pool_<wbr>write_<wbr>size</a>
@@ -4109,8 +3738,7 @@ documentation for exact details.
     <dd>{{% md %}}Size for the thread pool. See documentation 
 for exact details. Do note this may have maximum value depending on CPU count - value
 is automatically lowered if set to higher than maximum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigindexpattern">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern</h4>
@@ -4118,8 +3746,7 @@ is automatically lowered if set to higher than maximum value.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_csharp">
 <a href="#maxindexcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
@@ -4128,8 +3755,7 @@ is automatically lowered if set to higher than maximum value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4139,8 +3765,7 @@ is automatically lowered if set to higher than maximum value.
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortingalgorithm_csharp">
 <a href="#sortingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
@@ -4149,13 +3774,11 @@ dots and glob characters (* and ?)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deletion sorting algorithm
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_go">
 <a href="#maxindexcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Index<wbr>Count</a>
@@ -4164,8 +3787,7 @@ dots and glob characters (* and ?)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -4175,8 +3797,7 @@ dots and glob characters (* and ?)
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortingalgorithm_go">
 <a href="#sortingalgorithm_go" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
@@ -4185,13 +3806,11 @@ dots and glob characters (* and ?)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deletion sorting algorithm
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_nodejs">
 <a href="#maxindexcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Index<wbr>Count</a>
@@ -4200,8 +3819,7 @@ dots and glob characters (* and ?)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -4211,8 +3829,7 @@ dots and glob characters (* and ?)
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortingalgorithm_nodejs">
 <a href="#sortingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Algorithm</a>
@@ -4221,13 +3838,11 @@ dots and glob characters (* and ?)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Deletion sorting algorithm
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_index_count_python">
 <a href="#max_index_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>index_<wbr>count</a>
@@ -4236,8 +3851,7 @@ dots and glob characters (* and ?)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of indexes to keep before deleting the oldest one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -4247,8 +3861,7 @@ dots and glob characters (* and ?)
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorting_algorithm_python">
 <a href="#sorting_algorithm_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>algorithm</a>
@@ -4257,8 +3870,7 @@ dots and glob characters (* and ?)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Deletion sorting algorithm
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</h4>
@@ -4266,8 +3878,7 @@ dots and glob characters (* and ?)
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mappingnestedobjectslimit_csharp">
 <a href="#mappingnestedobjectslimit_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
@@ -4278,8 +3889,7 @@ dots and glob characters (* and ?)
     <dd>{{% md %}}The maximum number of nested JSON objects that
 a single document can contain across all nested types. This limit helps to prevent out of
 memory errors when a document contains too many nested objects. Default is 10000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofreplicas_csharp">
 <a href="#numberofreplicas_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
@@ -4288,8 +3898,7 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of replicas each primary shard has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofshards_csharp">
 <a href="#numberofshards_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
@@ -4298,13 +3907,11 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of primary shards that an index should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mappingnestedobjectslimit_go">
 <a href="#mappingnestedobjectslimit_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
@@ -4315,8 +3922,7 @@ memory errors when a document contains too many nested objects. Default is 10000
     <dd>{{% md %}}The maximum number of nested JSON objects that
 a single document can contain across all nested types. This limit helps to prevent out of
 memory errors when a document contains too many nested objects. Default is 10000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofreplicas_go">
 <a href="#numberofreplicas_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
@@ -4325,8 +3931,7 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of replicas each primary shard has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofshards_go">
 <a href="#numberofshards_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
@@ -4335,13 +3940,11 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of primary shards that an index should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mappingnestedobjectslimit_nodejs">
 <a href="#mappingnestedobjectslimit_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
@@ -4352,8 +3955,7 @@ memory errors when a document contains too many nested objects. Default is 10000
     <dd>{{% md %}}The maximum number of nested JSON objects that
 a single document can contain across all nested types. This limit helps to prevent out of
 memory errors when a document contains too many nested objects. Default is 10000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofreplicas_nodejs">
 <a href="#numberofreplicas_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Replicas</a>
@@ -4362,8 +3964,7 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of replicas each primary shard has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofshards_nodejs">
 <a href="#numberofshards_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Shards</a>
@@ -4372,13 +3973,11 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of primary shards that an index should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="mapping_nested_objects_limit_python">
 <a href="#mapping_nested_objects_limit_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>nested_<wbr>objects_<wbr>limit</a>
@@ -4389,8 +3988,7 @@ memory errors when a document contains too many nested objects. Default is 10000
     <dd>{{% md %}}The maximum number of nested JSON objects that
 a single document can contain across all nested types. This limit helps to prevent out of
 memory errors when a document contains too many nested objects. Default is 10000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_replicas_python">
 <a href="#number_of_replicas_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>replicas</a>
@@ -4399,8 +3997,7 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of replicas each primary shard has.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_shards_python">
 <a href="#number_of_shards_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>shards</a>
@@ -4409,8 +4006,7 @@ memory errors when a document contains too many nested objects. Default is 10000
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of primary shards that an index should have.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigkibana">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</h4>
@@ -4418,8 +4014,7 @@ memory errors when a document contains too many nested objects. Default is 10000
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchrequesttimeout_csharp">
 <a href="#elasticsearchrequesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Request<wbr>Timeout</a>
@@ -4429,8 +4024,7 @@ memory errors when a document contains too many nested objects. Default is 10000
     </dt>
     <dd>{{% md %}}Timeout in milliseconds for requests 
 made by Kibana towards Elasticsearch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4439,8 +4033,7 @@ made by Kibana towards Elasticsearch.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable Kibana.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxoldspacesize_csharp">
 <a href="#maxoldspacesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Old<wbr>Space<wbr>Size</a>
@@ -4451,13 +4044,11 @@ made by Kibana towards Elasticsearch.
     <dd>{{% md %}}Limits the maximum amount of memory (in MiB) the 
 Kibana process can use. This sets the max_old_space_size option of the nodejs running
 the Kibana. Note: the memory reserved by Kibana is not available for Elasticsearch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchrequesttimeout_go">
 <a href="#elasticsearchrequesttimeout_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Request<wbr>Timeout</a>
@@ -4467,8 +4058,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
     </dt>
     <dd>{{% md %}}Timeout in milliseconds for requests 
 made by Kibana towards Elasticsearch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4477,8 +4067,7 @@ made by Kibana towards Elasticsearch.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable Kibana.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxoldspacesize_go">
 <a href="#maxoldspacesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Old<wbr>Space<wbr>Size</a>
@@ -4489,13 +4078,11 @@ made by Kibana towards Elasticsearch.
     <dd>{{% md %}}Limits the maximum amount of memory (in MiB) the 
 Kibana process can use. This sets the max_old_space_size option of the nodejs running
 the Kibana. Note: the memory reserved by Kibana is not available for Elasticsearch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearchrequesttimeout_nodejs">
 <a href="#elasticsearchrequesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Request<wbr>Timeout</a>
@@ -4505,8 +4092,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
     </dt>
     <dd>{{% md %}}Timeout in milliseconds for requests 
 made by Kibana towards Elasticsearch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4515,8 +4101,7 @@ made by Kibana towards Elasticsearch.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enable or disable Kibana.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxoldspacesize_nodejs">
 <a href="#maxoldspacesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Old<wbr>Space<wbr>Size</a>
@@ -4527,13 +4112,11 @@ made by Kibana towards Elasticsearch.
     <dd>{{% md %}}Limits the maximum amount of memory (in MiB) the 
 Kibana process can use. This sets the max_old_space_size option of the nodejs running
 the Kibana. Note: the memory reserved by Kibana is not available for Elasticsearch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_request_timeout_python">
 <a href="#elasticsearch_request_timeout_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>request_<wbr>timeout</a>
@@ -4543,8 +4126,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
     </dt>
     <dd>{{% md %}}Timeout in milliseconds for requests 
 made by Kibana towards Elasticsearch.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4553,8 +4135,7 @@ made by Kibana towards Elasticsearch.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enable or disable Kibana.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_old_space_size_python">
 <a href="#max_old_space_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>old_<wbr>space_<wbr>size</a>
@@ -4565,8 +4146,7 @@ made by Kibana towards Elasticsearch.
     <dd>{{% md %}}Limits the maximum amount of memory (in MiB) the 
 Kibana process can use. This sets the max_old_space_size option of the nodejs running
 the Kibana. Note: the memory reserved by Kibana is not available for Elasticsearch.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
@@ -4574,8 +4154,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -4584,8 +4163,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_csharp">
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -4595,8 +4173,7 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4606,13 +4183,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -4621,8 +4196,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_go">
 <a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -4632,8 +4206,7 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4643,13 +4216,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -4658,8 +4229,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_nodejs">
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -4669,8 +4239,7 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4680,13 +4249,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -4695,8 +4262,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_python">
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -4706,8 +4272,7 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4717,8 +4282,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
@@ -4726,8 +4290,7 @@ internet for service nodes that are in a project VPC or another type of private 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -4736,8 +4299,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_csharp">
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -4747,13 +4309,11 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -4762,8 +4322,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_go">
 <a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -4773,13 +4332,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -4788,8 +4345,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_nodejs">
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -4799,13 +4355,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -4814,8 +4368,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_python">
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -4825,8 +4378,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchelasticsearchuserconfigpublicaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
@@ -4834,8 +4386,7 @@ service nodes that are in a project VPC or another type of private network.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -4844,8 +4395,7 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_csharp">
 <a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -4855,8 +4405,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4866,13 +4415,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -4881,8 +4428,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_go">
 <a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
@@ -4892,8 +4438,7 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -4903,13 +4448,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -4918,8 +4461,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_nodejs">
 <a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -4929,8 +4471,7 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4940,13 +4481,11 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -4955,8 +4494,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elasticsearch specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kibana_python">
 <a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
@@ -4966,8 +4504,7 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
 service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -4977,8 +4514,7 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getelasticsearchserviceintegration">Get<wbr>Elastic<wbr>Search<wbr>Service<wbr>Integration</h4>
@@ -4986,8 +4522,7 @@ internet for service nodes that are in a project VPC or another type of private 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -4995,8 +4530,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -5004,13 +4538,11 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -5018,8 +4550,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -5027,13 +4558,11 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -5041,8 +4570,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -5050,13 +4578,11 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -5064,8 +4590,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -5073,8 +4598,7 @@ internet for service nodes that are in a project VPC or another type of private 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

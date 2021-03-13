@@ -1,8 +1,8 @@
 
 ---
 title: "Snapshot"
-title_tag: "Resource Snapshot | Package Civo"
-meta_desc: "Explore the Snapshot resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource which can be used to create a snapshot from an existing Civo Instance."
+title_tag: "civo.Snapshot"
+meta_desc: "Documentation for the civo.Snapshot resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the Snapshot resource of the Civo package, including example
 Provides a resource which can be used to create a snapshot from an existing Civo Instance.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Civo = Pulumi.Civo;
@@ -35,9 +41,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -59,9 +68,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_civo as civo
@@ -69,9 +81,12 @@ import pulumi_civo as civo
 myinstance_backup = civo.Snapshot("myinstance-backup", instance_id=civo_instance["myinstance"]["id"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -80,9 +95,16 @@ import * as civo from "@pulumi/civo";
 const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: civo_instance.myinstance.id});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Snapshot Resource {#create}
@@ -107,9 +129,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -117,9 +137,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -127,9 +145,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -137,10 +153,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -166,9 +179,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -176,9 +187,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -186,9 +195,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -196,9 +203,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -206,18 +211,13 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,9 +225,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -235,9 +233,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -245,10 +241,7 @@ const myinstance_backup = new civo.Snapshot("myinstance-backup", {instanceId: ci
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -263,9 +256,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -274,8 +265,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crontiming_csharp">
 <a href="#crontiming_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timing</a>
@@ -286,8 +276,7 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -296,8 +285,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safe_csharp">
 <a href="#safe_csharp" style="color: inherit; text-decoration: inherit;">Safe</a>
@@ -309,14 +297,11 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -325,8 +310,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crontiming_go">
 <a href="#crontiming_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timing</a>
@@ -337,8 +321,7 @@ of service, but a small risk of corruption.
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -347,8 +330,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safe_go">
 <a href="#safe_go" style="color: inherit; text-decoration: inherit;">Safe</a>
@@ -360,14 +342,11 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -376,8 +355,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crontiming_nodejs">
 <a href="#crontiming_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Timing</a>
@@ -388,8 +366,7 @@ of service, but a small risk of corruption.
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -398,8 +375,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safe_nodejs">
 <a href="#safe_nodejs" style="color: inherit; text-decoration: inherit;">safe</a>
@@ -411,14 +387,11 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -427,8 +400,7 @@ of service, but a small risk of corruption.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cron_timing_python">
 <a href="#cron_timing_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>timing</a>
@@ -439,8 +411,7 @@ of service, but a small risk of corruption.
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -449,8 +420,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safe_python">
 <a href="#safe_python" style="color: inherit; text-decoration: inherit;">safe</a>
@@ -462,8 +432,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -474,9 +443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completedat_csharp">
 <a href="#completedat_csharp" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -485,8 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -495,8 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -504,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextexecution_csharp">
 <a href="#nextexecution_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Execution</a>
@@ -514,8 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -524,8 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedat_csharp">
 <a href="#requestedat_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>At</a>
@@ -534,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizegb_csharp">
 <a href="#sizegb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -544,8 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -554,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templateid_csharp">
 <a href="#templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -564,14 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completedat_go">
 <a href="#completedat_go" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -580,8 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -590,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextexecution_go">
 <a href="#nextexecution_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Execution</a>
@@ -609,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -619,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedat_go">
 <a href="#requestedat_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>At</a>
@@ -629,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizegb_go">
 <a href="#sizegb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -639,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -649,8 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templateid_go">
 <a href="#templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -659,14 +607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completedat_nodejs">
 <a href="#completedat_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>At</a>
@@ -675,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -685,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -694,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nextexecution_nodejs">
 <a href="#nextexecution_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Execution</a>
@@ -704,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -714,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedat_nodejs">
 <a href="#requestedat_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>At</a>
@@ -724,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizegb_nodejs">
 <a href="#sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
@@ -734,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -744,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="templateid_nodejs">
 <a href="#templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
@@ -754,14 +691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completed_at_python">
 <a href="#completed_at_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>at</a>
@@ -770,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -780,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -789,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="next_execution_python">
 <a href="#next_execution_python" style="color: inherit; text-decoration: inherit;">next_<wbr>execution</a>
@@ -799,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -809,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requested_at_python">
 <a href="#requested_at_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>at</a>
@@ -819,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_gb_python">
 <a href="#size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
@@ -829,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -839,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="template_id_python">
 <a href="#template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
@@ -849,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -977,9 +902,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completedat_csharp">
 <a href="#state_completedat_csharp" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -988,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crontiming_csharp">
 <a href="#state_crontiming_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timing</a>
@@ -1000,8 +922,7 @@ The following state arguments are supported:
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1010,8 +931,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1020,8 +940,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1030,8 +949,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nextexecution_csharp">
 <a href="#state_nextexecution_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Execution</a>
@@ -1040,8 +958,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1050,8 +967,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedat_csharp">
 <a href="#state_requestedat_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>At</a>
@@ -1060,8 +976,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safe_csharp">
 <a href="#state_safe_csharp" style="color: inherit; text-decoration: inherit;">Safe</a>
@@ -1073,8 +988,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizegb_csharp">
 <a href="#state_sizegb_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -1083,8 +997,7 @@ of service, but a small risk of corruption.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1093,8 +1006,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateid_csharp">
 <a href="#state_templateid_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -1103,14 +1015,11 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completedat_go">
 <a href="#state_completedat_go" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -1119,8 +1028,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crontiming_go">
 <a href="#state_crontiming_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Timing</a>
@@ -1131,8 +1039,7 @@ of service, but a small risk of corruption.
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1141,8 +1048,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1151,8 +1057,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1161,8 +1066,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nextexecution_go">
 <a href="#state_nextexecution_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Execution</a>
@@ -1171,8 +1075,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1181,8 +1084,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedat_go">
 <a href="#state_requestedat_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>At</a>
@@ -1191,8 +1093,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safe_go">
 <a href="#state_safe_go" style="color: inherit; text-decoration: inherit;">Safe</a>
@@ -1204,8 +1105,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizegb_go">
 <a href="#state_sizegb_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Gb</a>
@@ -1214,8 +1114,7 @@ of service, but a small risk of corruption.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1224,8 +1123,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateid_go">
 <a href="#state_templateid_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Id</a>
@@ -1234,14 +1132,11 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completedat_nodejs">
 <a href="#state_completedat_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>At</a>
@@ -1250,8 +1145,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crontiming_nodejs">
 <a href="#state_crontiming_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Timing</a>
@@ -1262,8 +1156,7 @@ of service, but a small risk of corruption.
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1272,8 +1165,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1282,8 +1174,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1292,8 +1183,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nextexecution_nodejs">
 <a href="#state_nextexecution_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Execution</a>
@@ -1302,8 +1192,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1312,8 +1201,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedat_nodejs">
 <a href="#state_requestedat_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>At</a>
@@ -1322,8 +1210,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safe_nodejs">
 <a href="#state_safe_nodejs" style="color: inherit; text-decoration: inherit;">safe</a>
@@ -1335,8 +1222,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizegb_nodejs">
 <a href="#state_sizegb_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Gb</a>
@@ -1345,8 +1231,7 @@ of service, but a small risk of corruption.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1355,8 +1240,7 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateid_nodejs">
 <a href="#state_templateid_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Id</a>
@@ -1365,14 +1249,11 @@ of service, but a small risk of corruption.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completed_at_python">
 <a href="#state_completed_at_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>at</a>
@@ -1381,8 +1262,7 @@ of service, but a small risk of corruption.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cron_timing_python">
 <a href="#state_cron_timing_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>timing</a>
@@ -1393,8 +1273,7 @@ of service, but a small risk of corruption.
     <dd>{{% md %}}If a valid cron string is passed, the snapshot will be saved as an automated snapshot 
 continuing to automatically update based on the schedule of the cron sequence provided
 The default is nil meaning the snapshot will be saved as a one-off snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1403,8 +1282,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1413,8 +1291,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance from which the snapshot will be taken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1423,8 +1300,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the instance snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_execution_python">
 <a href="#state_next_execution_python" style="color: inherit; text-decoration: inherit;">next_<wbr>execution</a>
@@ -1433,8 +1309,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}if cron was define this date will be the next execution date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1443,8 +1318,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where the snapshot was take.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requested_at_python">
 <a href="#state_requested_at_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>at</a>
@@ -1453,8 +1327,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date where the snapshot was requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safe_python">
 <a href="#state_safe_python" style="color: inherit; text-decoration: inherit;">safe</a>
@@ -1466,8 +1339,7 @@ The default is nil meaning the snapshot will be saved as a one-off snapshot.
 are in a consistent state (e.g. database tables aren't in the middle of being optimised
 and hence risking corruption). The default is `false` so you experience no interruption
 of service, but a small risk of corruption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_gb_python">
 <a href="#state_size_gb_python" style="color: inherit; text-decoration: inherit;">size_<wbr>gb</a>
@@ -1476,8 +1348,7 @@ of service, but a small risk of corruption.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the snapshot in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1486,8 +1357,7 @@ of service, but a small risk of corruption.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_id_python">
 <a href="#state_template_id_python" style="color: inherit; text-decoration: inherit;">template_<wbr>id</a>
@@ -1496,8 +1366,7 @@ of service, but a small risk of corruption.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The template id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

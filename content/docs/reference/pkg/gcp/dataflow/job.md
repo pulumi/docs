@@ -454,8 +454,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tempgcslocation_csharp">
 <a href="#tempgcslocation_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Gcs<wbr>Location</a>
@@ -464,8 +463,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templategcspath_csharp">
 <a href="#templategcspath_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Gcs<wbr>Path</a>
@@ -474,8 +472,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalexperiments_csharp">
 <a href="#additionalexperiments_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Experiments</a>
@@ -484,8 +481,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_csharp">
 <a href="#ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
@@ -494,8 +490,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -504,8 +499,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -517,8 +511,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -527,8 +520,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworkers_csharp">
 <a href="#maxworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Workers</a>
@@ -537,8 +529,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +538,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -557,8 +547,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondelete_csharp">
 <a href="#ondelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -567,8 +556,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -577,8 +565,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -587,8 +574,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -597,8 +583,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_csharp">
 <a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -607,8 +592,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -617,8 +601,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformnamemapping_csharp">
 <a href="#transformnamemapping_csharp" style="color: inherit; text-decoration: inherit;">Transform<wbr>Name<wbr>Mapping</a>
@@ -627,8 +610,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -637,13 +619,11 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tempgcslocation_go">
 <a href="#tempgcslocation_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Gcs<wbr>Location</a>
@@ -652,8 +632,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templategcspath_go">
 <a href="#templategcspath_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Gcs<wbr>Path</a>
@@ -662,8 +641,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalexperiments_go">
 <a href="#additionalexperiments_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Experiments</a>
@@ -672,8 +650,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_go">
 <a href="#ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
@@ -682,8 +659,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -692,8 +668,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -705,8 +680,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -715,8 +689,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworkers_go">
 <a href="#maxworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Workers</a>
@@ -725,8 +698,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -735,8 +707,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -745,8 +716,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondelete_go">
 <a href="#ondelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -755,8 +725,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -765,8 +734,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -775,8 +743,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -785,8 +752,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_go">
 <a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -795,8 +761,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -805,8 +770,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformnamemapping_go">
 <a href="#transformnamemapping_go" style="color: inherit; text-decoration: inherit;">Transform<wbr>Name<wbr>Mapping</a>
@@ -815,8 +779,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -825,13 +788,11 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="tempgcslocation_nodejs">
 <a href="#tempgcslocation_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Gcs<wbr>Location</a>
@@ -840,8 +801,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="templategcspath_nodejs">
 <a href="#templategcspath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Gcs<wbr>Path</a>
@@ -850,8 +810,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalexperiments_nodejs">
 <a href="#additionalexperiments_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Experiments</a>
@@ -860,8 +819,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_nodejs">
 <a href="#ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
@@ -870,8 +828,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -880,8 +837,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -893,8 +849,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -903,8 +858,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxworkers_nodejs">
 <a href="#maxworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Workers</a>
@@ -913,8 +867,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -923,8 +876,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -933,8 +885,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondelete_nodejs">
 <a href="#ondelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Delete</a>
@@ -943,8 +894,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -953,8 +903,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -963,8 +912,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -973,8 +921,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_nodejs">
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
@@ -983,8 +930,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -993,8 +939,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transformnamemapping_nodejs">
 <a href="#transformnamemapping_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Name<wbr>Mapping</a>
@@ -1003,8 +948,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1013,13 +957,11 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="temp_gcs_location_python">
 <a href="#temp_gcs_location_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>gcs_<wbr>location</a>
@@ -1028,8 +970,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="template_gcs_path_python">
 <a href="#template_gcs_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>gcs_<wbr>path</a>
@@ -1038,8 +979,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_experiments_python">
 <a href="#additional_experiments_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>experiments</a>
@@ -1048,8 +988,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_configuration_python">
 <a href="#ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
@@ -1058,8 +997,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -1068,8 +1006,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1081,8 +1018,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -1091,8 +1027,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_workers_python">
 <a href="#max_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>workers</a>
@@ -1101,8 +1036,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1111,8 +1045,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1121,8 +1054,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_delete_python">
 <a href="#on_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>delete</a>
@@ -1131,8 +1063,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1141,8 +1072,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1151,8 +1081,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1161,8 +1090,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_email_python">
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
@@ -1171,8 +1099,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -1181,8 +1108,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transform_name_mapping_python">
 <a href="#transform_name_mapping_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>name_<wbr>mapping</a>
@@ -1191,8 +1117,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1201,8 +1126,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1213,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1222,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_csharp">
 <a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1232,8 +1154,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1242,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1252,13 +1172,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1266,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_go">
 <a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1276,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1286,8 +1202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1296,13 +1211,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1310,8 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_nodejs">
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -1320,8 +1232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1330,8 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1340,13 +1250,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1354,8 +1262,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="job_id_python">
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -1364,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1374,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1384,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1512,8 +1416,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalexperiments_csharp">
 <a href="#state_additionalexperiments_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Experiments</a>
@@ -1522,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfiguration_csharp">
 <a href="#state_ipconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
@@ -1532,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_csharp">
 <a href="#state_jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1542,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_csharp">
 <a href="#state_kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -1552,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1565,8 +1464,7 @@ The following state arguments are supported:
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machinetype_csharp">
 <a href="#state_machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1575,8 +1473,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxworkers_csharp">
 <a href="#state_maxworkers_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Workers</a>
@@ -1585,8 +1482,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1595,8 +1491,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1605,8 +1500,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondelete_csharp">
 <a href="#state_ondelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -1615,8 +1509,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1625,8 +1518,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1635,8 +1527,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1645,8 +1536,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_csharp">
 <a href="#state_serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -1655,8 +1545,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1665,8 +1554,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_csharp">
 <a href="#state_subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -1675,8 +1563,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tempgcslocation_csharp">
 <a href="#state_tempgcslocation_csharp" style="color: inherit; text-decoration: inherit;">Temp<wbr>Gcs<wbr>Location</a>
@@ -1685,8 +1572,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templategcspath_csharp">
 <a href="#state_templategcspath_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Gcs<wbr>Path</a>
@@ -1695,8 +1581,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transformnamemapping_csharp">
 <a href="#state_transformnamemapping_csharp" style="color: inherit; text-decoration: inherit;">Transform<wbr>Name<wbr>Mapping</a>
@@ -1705,8 +1590,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1715,8 +1599,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1725,13 +1608,11 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalexperiments_go">
 <a href="#state_additionalexperiments_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Experiments</a>
@@ -1740,8 +1621,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfiguration_go">
 <a href="#state_ipconfiguration_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration</a>
@@ -1750,8 +1630,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_go">
 <a href="#state_jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1760,8 +1639,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_go">
 <a href="#state_kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -1770,8 +1648,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1783,8 +1660,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machinetype_go">
 <a href="#state_machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1793,8 +1669,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxworkers_go">
 <a href="#state_maxworkers_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Workers</a>
@@ -1803,8 +1678,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1813,8 +1687,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1823,8 +1696,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondelete_go">
 <a href="#state_ondelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -1833,8 +1705,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1843,8 +1714,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1853,8 +1723,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1863,8 +1732,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_go">
 <a href="#state_serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -1873,8 +1741,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1883,8 +1750,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_go">
 <a href="#state_subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -1893,8 +1759,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tempgcslocation_go">
 <a href="#state_tempgcslocation_go" style="color: inherit; text-decoration: inherit;">Temp<wbr>Gcs<wbr>Location</a>
@@ -1903,8 +1768,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templategcspath_go">
 <a href="#state_templategcspath_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Gcs<wbr>Path</a>
@@ -1913,8 +1777,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transformnamemapping_go">
 <a href="#state_transformnamemapping_go" style="color: inherit; text-decoration: inherit;">Transform<wbr>Name<wbr>Mapping</a>
@@ -1923,8 +1786,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1933,8 +1795,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1943,13 +1804,11 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalexperiments_nodejs">
 <a href="#state_additionalexperiments_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Experiments</a>
@@ -1958,8 +1817,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfiguration_nodejs">
 <a href="#state_ipconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration</a>
@@ -1968,8 +1826,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_nodejs">
 <a href="#state_jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -1978,8 +1835,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyname_nodejs">
 <a href="#state_kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -1988,8 +1844,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2001,8 +1856,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machinetype_nodejs">
 <a href="#state_machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -2011,8 +1865,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxworkers_nodejs">
 <a href="#state_maxworkers_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Workers</a>
@@ -2021,8 +1874,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2031,8 +1883,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2041,8 +1892,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondelete_nodejs">
 <a href="#state_ondelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Delete</a>
@@ -2051,8 +1901,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -2061,8 +1910,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2071,8 +1919,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2081,8 +1928,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_nodejs">
 <a href="#state_serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
@@ -2091,8 +1937,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2101,8 +1946,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_nodejs">
 <a href="#state_subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2111,8 +1955,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tempgcslocation_nodejs">
 <a href="#state_tempgcslocation_nodejs" style="color: inherit; text-decoration: inherit;">temp<wbr>Gcs<wbr>Location</a>
@@ -2121,8 +1964,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templategcspath_nodejs">
 <a href="#state_templategcspath_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Gcs<wbr>Path</a>
@@ -2131,8 +1973,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transformnamemapping_nodejs">
 <a href="#state_transformnamemapping_nodejs" style="color: inherit; text-decoration: inherit;">transform<wbr>Name<wbr>Mapping</a>
@@ -2141,8 +1982,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2151,8 +1991,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2161,13 +2000,11 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additional_experiments_python">
 <a href="#state_additional_experiments_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>experiments</a>
@@ -2176,8 +2013,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_configuration_python">
 <a href="#state_ip_configuration_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration</a>
@@ -2186,8 +2022,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_id_python">
 <a href="#state_job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -2196,8 +2031,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_name_python">
 <a href="#state_kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -2206,8 +2040,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2219,8 +2052,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page.
 **NOTE**: Google-provided Dataflow templates often provide default labels that begin with `goog-dataflow-provided`.
 Unless explicitly set in config, these labels will be ignored to prevent diffs on re-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machine_type_python">
 <a href="#state_machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -2229,8 +2061,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to use for the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_workers_python">
 <a href="#state_max_workers_python" style="color: inherit; text-decoration: inherit;">max_<wbr>workers</a>
@@ -2239,8 +2070,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2249,8 +2079,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2259,8 +2088,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network to which VMs will be assigned. If it is not provided, "default" will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_on_delete_python">
 <a href="#state_on_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>delete</a>
@@ -2269,8 +2097,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -2279,8 +2106,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as used in the template).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2289,8 +2115,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2299,8 +2124,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_email_python">
 <a href="#state_service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
@@ -2309,8 +2133,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Account email used to create the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2319,8 +2142,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetwork_python">
 <a href="#state_subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2329,8 +2151,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_temp_gcs_location_python">
 <a href="#state_temp_gcs_location_python" style="color: inherit; text-decoration: inherit;">temp_<wbr>gcs_<wbr>location</a>
@@ -2339,8 +2160,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A writeable location on GCS for the Dataflow job to dump its temporary data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_gcs_path_python">
 <a href="#state_template_gcs_path_python" style="color: inherit; text-decoration: inherit;">template_<wbr>gcs_<wbr>path</a>
@@ -2349,8 +2169,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transform_name_mapping_python">
 <a href="#state_transform_name_mapping_python" style="color: inherit; text-decoration: inherit;">transform_<wbr>name_<wbr>mapping</a>
@@ -2359,8 +2178,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. This field is not used outside of update.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2369,8 +2187,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2379,8 +2196,7 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone in which the created job should run. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

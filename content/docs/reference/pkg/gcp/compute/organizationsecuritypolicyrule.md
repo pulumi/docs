@@ -169,8 +169,7 @@ The OrganizationSecurityPolicyRule resource accepts the following [input]({{< re
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -180,8 +179,7 @@ The OrganizationSecurityPolicyRule resource accepts the following [input]({{< re
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -191,8 +189,7 @@ The OrganizationSecurityPolicyRule resource accepts the following [input]({{< re
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -201,8 +198,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -213,8 +209,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -223,8 +218,7 @@ highest priority and 2147483647 is the lowest prority.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -234,8 +228,7 @@ highest priority and 2147483647 is the lowest prority.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -246,8 +239,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_csharp">
 <a href="#preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -256,8 +248,7 @@ configured export destination in Stackdriver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_csharp">
 <a href="#targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -269,8 +260,7 @@ configured export destination in Stackdriver.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_csharp">
 <a href="#targetserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -280,13 +270,11 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -296,8 +284,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -307,8 +294,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -317,8 +303,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -329,8 +314,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -339,8 +323,7 @@ highest priority and 2147483647 is the lowest prority.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -350,8 +333,7 @@ highest priority and 2147483647 is the lowest prority.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -362,8 +344,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_go">
 <a href="#preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -372,8 +353,7 @@ configured export destination in Stackdriver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_go">
 <a href="#targetresources_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -385,8 +365,7 @@ configured export destination in Stackdriver.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_go">
 <a href="#targetserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -396,13 +375,11 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -412,8 +389,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
@@ -423,8 +399,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -433,8 +408,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -445,8 +419,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -455,8 +428,7 @@ highest priority and 2147483647 is the lowest prority.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -466,8 +438,7 @@ highest priority and 2147483647 is the lowest prority.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -478,8 +449,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_nodejs">
 <a href="#preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -488,8 +458,7 @@ configured export destination in Stackdriver.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresources_nodejs">
 <a href="#targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
@@ -501,8 +470,7 @@ configured export destination in Stackdriver.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_nodejs">
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
@@ -512,13 +480,11 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -528,8 +494,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
@@ -539,8 +504,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -549,8 +513,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -561,8 +524,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -571,8 +533,7 @@ highest priority and 2147483647 is the lowest prority.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -582,8 +543,7 @@ highest priority and 2147483647 is the lowest prority.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -594,8 +554,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preview_python">
 <a href="#preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -604,8 +563,7 @@ configured export destination in Stackdriver.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resources_python">
 <a href="#target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
@@ -617,8 +575,7 @@ configured export destination in Stackdriver.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_service_accounts_python">
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
@@ -628,8 +585,7 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -640,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -649,13 +604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -663,13 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -677,13 +628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -691,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -819,8 +767,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -830,8 +777,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -840,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_csharp">
 <a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -851,8 +796,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -863,8 +807,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_csharp">
 <a href="#state_match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -874,8 +817,7 @@ configured export destination in Stackdriver.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -884,8 +826,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_csharp">
 <a href="#state_preview_csharp" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -894,8 +835,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -906,8 +846,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresources_csharp">
 <a href="#state_targetresources_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -919,8 +858,7 @@ highest priority and 2147483647 is the lowest prority.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_csharp">
 <a href="#state_targetserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -930,13 +868,11 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -946,8 +882,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -956,8 +891,7 @@ instances that are applied with this rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_go">
 <a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -967,8 +901,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -979,8 +912,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_go">
 <a href="#state_match_go" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -990,8 +922,7 @@ configured export destination in Stackdriver.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1000,8 +931,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_go">
 <a href="#state_preview_go" style="color: inherit; text-decoration: inherit;">Preview</a>
@@ -1010,8 +940,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1022,8 +951,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresources_go">
 <a href="#state_targetresources_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resources</a>
@@ -1035,8 +963,7 @@ highest priority and 2147483647 is the lowest prority.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_go">
 <a href="#state_targetserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -1046,13 +973,11 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1062,8 +987,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1072,8 +996,7 @@ instances that are applied with this rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_nodejs">
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1083,8 +1006,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -1095,8 +1017,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_nodejs">
 <a href="#state_match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1106,8 +1027,7 @@ configured export destination in Stackdriver.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -1116,8 +1036,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_nodejs">
 <a href="#state_preview_nodejs" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -1126,8 +1045,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1138,8 +1056,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresources_nodejs">
 <a href="#state_targetresources_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resources</a>
@@ -1151,8 +1068,7 @@ highest priority and 2147483647 is the lowest prority.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_nodejs">
 <a href="#state_targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
@@ -1162,13 +1078,11 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1178,8 +1092,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The Action to perform when the client connection triggers the rule. Can currently be either
 "allow", "deny" or "goto_next".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1188,8 +1101,7 @@ instances that are applied with this rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_python">
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1199,8 +1111,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The direction in which this rule applies. If unspecified an INGRESS rule is created.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -1211,8 +1122,7 @@ Possible values are `INGRESS` and `EGRESS`.
     <dd>{{% md %}}Denotes whether to enable logging for a particular rule.
 If logging is enabled, logs will be exported to the
 configured export destination in Stackdriver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_python">
 <a href="#state_match_python" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1222,8 +1132,7 @@ configured export destination in Stackdriver.
     </dt>
     <dd>{{% md %}}A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1232,8 +1141,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the OrganizationSecurityPolicy this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preview_python">
 <a href="#state_preview_python" style="color: inherit; text-decoration: inherit;">preview</a>
@@ -1242,8 +1150,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the specified action is not enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1254,8 +1161,7 @@ Structure is documented below.
     <dd>{{% md %}}An integer indicating the priority of a rule in the list. The priority must be a value
 between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the
 highest priority and 2147483647 is the lowest prority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_resources_python">
 <a href="#state_target_resources_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resources</a>
@@ -1267,8 +1173,7 @@ highest priority and 2147483647 is the lowest prority.
 This field allows you to control which network's VMs get
 this rule. If this field is left blank, all VMs
 within the organization will receive the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_service_accounts_python">
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
@@ -1278,8 +1183,7 @@ within the organization will receive the rule.
     </dt>
     <dd>{{% md %}}A list of service accounts indicating the sets of
 instances that are applied with this rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1294,8 +1198,7 @@ instances that are applied with this rule.
 <h4 id="organizationsecuritypolicyrulematch">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1305,8 +1208,7 @@ instances that are applied with this rule.
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1315,8 +1217,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionedexpr_csharp">
 <a href="#versionedexpr_csharp" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
@@ -1328,13 +1229,11 @@ Structure is documented below.
 the only supported type is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1344,8 +1243,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1354,8 +1252,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionedexpr_go">
 <a href="#versionedexpr_go" style="color: inherit; text-decoration: inherit;">Versioned<wbr>Expr</a>
@@ -1367,13 +1264,11 @@ Structure is documented below.
 the only supported type is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1383,8 +1278,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1393,8 +1287,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionedexpr_nodejs">
 <a href="#versionedexpr_nodejs" style="color: inherit; text-decoration: inherit;">versioned<wbr>Expr</a>
@@ -1406,13 +1299,11 @@ Structure is documented below.
 the only supported type is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1422,8 +1313,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}The configuration options for matching the rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1432,8 +1322,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioned_expr_python">
 <a href="#versioned_expr_python" style="color: inherit; text-decoration: inherit;">versioned_<wbr>expr</a>
@@ -1445,15 +1334,13 @@ Structure is documented below.
 the only supported type is "FIREWALL".
 Default value is `FIREWALL`.
 Possible values are `FIREWALL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="organizationsecuritypolicyrulematchconfig">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="layer4configs_csharp">
 <a href="#layer4configs_csharp" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -1463,8 +1350,7 @@ Possible values are `FIREWALL`.
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destipranges_csharp">
 <a href="#destipranges_csharp" style="color: inherit; text-decoration: inherit;">Dest<wbr>Ip<wbr>Ranges</a>
@@ -1474,8 +1360,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srcipranges_csharp">
 <a href="#srcipranges_csharp" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
@@ -1485,13 +1370,11 @@ EGRESS rules.
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="layer4configs_go">
 <a href="#layer4configs_go" style="color: inherit; text-decoration: inherit;">Layer4Configs</a>
@@ -1501,8 +1384,7 @@ INGRESS rules.
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destipranges_go">
 <a href="#destipranges_go" style="color: inherit; text-decoration: inherit;">Dest<wbr>Ip<wbr>Ranges</a>
@@ -1512,8 +1394,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srcipranges_go">
 <a href="#srcipranges_go" style="color: inherit; text-decoration: inherit;">Src<wbr>Ip<wbr>Ranges</a>
@@ -1523,13 +1404,11 @@ EGRESS rules.
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="layer4configs_nodejs">
 <a href="#layer4configs_nodejs" style="color: inherit; text-decoration: inherit;">layer4Configs</a>
@@ -1539,8 +1418,7 @@ INGRESS rules.
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destipranges_nodejs">
 <a href="#destipranges_nodejs" style="color: inherit; text-decoration: inherit;">dest<wbr>Ip<wbr>Ranges</a>
@@ -1550,8 +1428,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srcipranges_nodejs">
 <a href="#srcipranges_nodejs" style="color: inherit; text-decoration: inherit;">src<wbr>Ip<wbr>Ranges</a>
@@ -1561,13 +1438,11 @@ EGRESS rules.
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="layer4_configs_python">
 <a href="#layer4_configs_python" style="color: inherit; text-decoration: inherit;">layer4_<wbr>configs</a>
@@ -1577,8 +1452,7 @@ INGRESS rules.
     </dt>
     <dd>{{% md %}}Pairs of IP protocols and ports that the rule should match.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dest_ip_ranges_python">
 <a href="#dest_ip_ranges_python" style="color: inherit; text-decoration: inherit;">dest_<wbr>ip_<wbr>ranges</a>
@@ -1588,8 +1462,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination IP address range in CIDR format. Required for
 EGRESS rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="src_ip_ranges_python">
 <a href="#src_ip_ranges_python" style="color: inherit; text-decoration: inherit;">src_<wbr>ip_<wbr>ranges</a>
@@ -1599,15 +1472,13 @@ EGRESS rules.
     </dt>
     <dd>{{% md %}}Source IP address range in CIDR format. Required for
 INGRESS rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="organizationsecuritypolicyrulematchconfiglayer4config">Organization<wbr>Security<wbr>Policy<wbr>Rule<wbr>Match<wbr>Config<wbr>Layer4Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1620,8 +1491,7 @@ type is required when creating a firewall rule.
 This value can either be one of the following well
 known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
 or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1635,13 +1505,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1654,8 +1522,7 @@ type is required when creating a firewall rule.
 This value can either be one of the following well
 known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
 or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1669,13 +1536,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -1688,8 +1553,7 @@ type is required when creating a firewall rule.
 This value can either be one of the following well
 known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
 or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1703,13 +1567,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -1722,8 +1584,7 @@ type is required when creating a firewall rule.
 This value can either be one of the following well
 known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
 or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1737,8 +1598,7 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

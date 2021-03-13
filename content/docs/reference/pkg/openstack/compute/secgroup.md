@@ -410,8 +410,7 @@ The SecGroup resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -421,8 +420,7 @@ The SecGroup resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -432,8 +430,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -445,8 +442,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -458,13 +454,11 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -474,8 +468,7 @@ may be used.
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -485,8 +478,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -498,8 +490,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -511,13 +502,11 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -527,8 +516,7 @@ may be used.
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -538,8 +526,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -551,8 +538,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -564,13 +550,11 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -580,8 +564,7 @@ may be used.
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -591,8 +574,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -604,8 +586,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -617,8 +598,7 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -629,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -638,13 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -652,13 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,13 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -680,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -808,8 +780,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -819,8 +790,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -830,8 +800,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -843,8 +812,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -856,13 +824,11 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -872,8 +838,7 @@ may be used.
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -883,8 +848,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -896,8 +860,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -909,13 +872,11 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -925,8 +886,7 @@ may be used.
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -936,8 +896,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -949,8 +908,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -962,13 +920,11 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -978,8 +934,7 @@ may be used.
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -989,8 +944,7 @@ updates the `description` of an existing security group.
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1002,8 +956,7 @@ updates the `name` of an existing security group.
 A Compute client is needed to create a security group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1015,8 +968,7 @@ security group.
 rule object structure is documented below. Changing this updates the
 security group rules. As shown in the example above, multiple rule blocks
 may be used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1031,8 +983,7 @@ may be used.
 <h4 id="secgrouprule">Sec<wbr>Group<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -1042,8 +993,7 @@ may be used.
     </dt>
     <dd>{{% md %}}An integer representing the lower bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipprotocol_csharp">
 <a href="#ipprotocol_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1053,8 +1003,7 @@ range to open. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The protocol type that will be allowed. Changing
 this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1064,8 +1013,7 @@ this creates a new security group rule.
     </dt>
     <dd>{{% md %}}An integer representing the upper bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1077,8 +1025,7 @@ range to open. Changing this creates a new security group rule.
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
 to allow all IP addresses. Changing this creates a new security group rule. Cannot
 be combined with `from_group_id` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromgroupid_csharp">
 <a href="#fromgroupid_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Group<wbr>Id</a>
@@ -1089,8 +1036,7 @@ be combined with `from_group_id` or `self`.
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1098,8 +1044,7 @@ new security group rule. Cannot be combined with `cidr` or `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_csharp">
 <a href="#self_csharp" style="color: inherit; text-decoration: inherit;">Self</a>
@@ -1110,13 +1055,11 @@ new security group rule. Cannot be combined with `cidr` or `self`.
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -1126,8 +1069,7 @@ be combined with `cidr` or `from_group_id`.
     </dt>
     <dd>{{% md %}}An integer representing the lower bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipprotocol_go">
 <a href="#ipprotocol_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocol</a>
@@ -1137,8 +1079,7 @@ range to open. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The protocol type that will be allowed. Changing
 this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1148,8 +1089,7 @@ this creates a new security group rule.
     </dt>
     <dd>{{% md %}}An integer representing the upper bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1161,8 +1101,7 @@ range to open. Changing this creates a new security group rule.
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
 to allow all IP addresses. Changing this creates a new security group rule. Cannot
 be combined with `from_group_id` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromgroupid_go">
 <a href="#fromgroupid_go" style="color: inherit; text-decoration: inherit;">From<wbr>Group<wbr>Id</a>
@@ -1173,8 +1112,7 @@ be combined with `from_group_id` or `self`.
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1182,8 +1120,7 @@ new security group rule. Cannot be combined with `cidr` or `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_go">
 <a href="#self_go" style="color: inherit; text-decoration: inherit;">Self</a>
@@ -1194,13 +1131,11 @@ new security group rule. Cannot be combined with `cidr` or `self`.
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
@@ -1210,8 +1145,7 @@ be combined with `cidr` or `from_group_id`.
     </dt>
     <dd>{{% md %}}An integer representing the lower bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipprotocol_nodejs">
 <a href="#ipprotocol_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocol</a>
@@ -1221,8 +1155,7 @@ range to open. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The protocol type that will be allowed. Changing
 this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -1232,8 +1165,7 @@ this creates a new security group rule.
     </dt>
     <dd>{{% md %}}An integer representing the upper bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1245,8 +1177,7 @@ range to open. Changing this creates a new security group rule.
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
 to allow all IP addresses. Changing this creates a new security group rule. Cannot
 be combined with `from_group_id` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromgroupid_nodejs">
 <a href="#fromgroupid_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Group<wbr>Id</a>
@@ -1257,8 +1188,7 @@ be combined with `from_group_id` or `self`.
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1266,8 +1196,7 @@ new security group rule. Cannot be combined with `cidr` or `self`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_nodejs">
 <a href="#self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
@@ -1278,13 +1207,11 @@ new security group rule. Cannot be combined with `cidr` or `self`.
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
@@ -1294,8 +1221,7 @@ be combined with `cidr` or `from_group_id`.
     </dt>
     <dd>{{% md %}}An integer representing the lower bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_protocol_python">
 <a href="#ip_protocol_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocol</a>
@@ -1305,8 +1231,7 @@ range to open. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The protocol type that will be allowed. Changing
 this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
@@ -1316,8 +1241,7 @@ this creates a new security group rule.
     </dt>
     <dd>{{% md %}}An integer representing the upper bound of the port
 range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1329,8 +1253,7 @@ range to open. Changing this creates a new security group rule.
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
 to allow all IP addresses. Changing this creates a new security group rule. Cannot
 be combined with `from_group_id` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="from_group_id_python">
 <a href="#from_group_id_python" style="color: inherit; text-decoration: inherit;">from_<wbr>group_<wbr>id</a>
@@ -1341,8 +1264,7 @@ be combined with `from_group_id` or `self`.
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1350,8 +1272,7 @@ new security group rule. Cannot be combined with `cidr` or `self`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_python">
 <a href="#self_python" style="color: inherit; text-decoration: inherit;">self</a>
@@ -1362,8 +1283,7 @@ new security group rule. Cannot be combined with `cidr` or `self`.
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

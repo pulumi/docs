@@ -158,8 +158,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containergroupname_csharp">
 <a href="#containergroupname_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Name</a>
@@ -168,8 +167,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledetails_csharp">
 <a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
@@ -178,8 +176,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -188,8 +185,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Container Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -198,8 +194,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of resources returned in the response. Default value is `20`. Maximum value: `20`. The number of returned results is no greater than the specified number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -208,8 +203,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by Container Group name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -217,8 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -227,8 +220,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -237,8 +229,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,8 +238,7 @@ The following arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -257,8 +247,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withevent_csharp">
 <a href="#withevent_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Event</a>
@@ -266,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -276,13 +264,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containergroupname_go">
 <a href="#containergroupname_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Name</a>
@@ -291,8 +277,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledetails_go">
 <a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
@@ -301,8 +286,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -311,8 +295,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Container Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -321,8 +304,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of resources returned in the response. Default value is `20`. Maximum value: `20`. The number of returned results is no greater than the specified number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -331,8 +313,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by Container Group name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -340,8 +321,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -350,8 +330,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -360,8 +339,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -370,8 +348,7 @@ The following arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -380,8 +357,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withevent_go">
 <a href="#withevent_go" style="color: inherit; text-decoration: inherit;">With<wbr>Event</a>
@@ -389,8 +365,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -399,13 +374,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="containergroupname_nodejs">
 <a href="#containergroupname_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Group<wbr>Name</a>
@@ -414,8 +387,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledetails_nodejs">
 <a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
@@ -424,8 +396,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -434,8 +405,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Container Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -444,8 +414,7 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of resources returned in the response. Default value is `20`. Maximum value: `20`. The number of returned results is no greater than the specified number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
@@ -454,8 +423,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by Container Group name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
@@ -463,8 +431,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -473,8 +440,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -483,8 +449,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -493,8 +458,7 @@ The following arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -503,8 +467,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withevent_nodejs">
 <a href="#withevent_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Event</a>
@@ -512,8 +475,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -522,13 +484,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="container_group_name_python">
 <a href="#container_group_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>group_<wbr>name</a>
@@ -537,8 +497,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_details_python">
 <a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
@@ -547,8 +506,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -557,8 +515,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Container Group IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -567,8 +524,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of resources returned in the response. Default value is `20`. Maximum value: `20`. The number of returned results is no greater than the specified number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
@@ -577,8 +533,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by Container Group name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
@@ -586,8 +541,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -596,8 +550,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -606,8 +559,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -616,8 +568,7 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -626,8 +577,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_event_python">
 <a href="#with_event_python" style="color: inherit; text-decoration: inherit;">with_<wbr>event</a>
@@ -635,8 +585,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -645,8 +594,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -659,8 +607,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -668,8 +615,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainergroupsgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Outputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -678,8 +624,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -687,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -696,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containergroupname_csharp">
 <a href="#containergroupname_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Name</a>
@@ -705,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledetails_csharp">
 <a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
@@ -714,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -723,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -732,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_csharp">
 <a href="#outputfile_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -741,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -750,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -759,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -768,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -777,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withevent_csharp">
 <a href="#withevent_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Event</a>
@@ -786,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -795,13 +728,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -809,8 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainergroupsgroup">[]Get<wbr>Container<wbr>Groups<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,8 +749,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -828,8 +757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -837,8 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containergroupname_go">
 <a href="#containergroupname_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Name</a>
@@ -846,8 +773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledetails_go">
 <a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
@@ -855,8 +781,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -864,8 +789,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -873,8 +797,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_go">
 <a href="#outputfile_go" style="color: inherit; text-decoration: inherit;">Output<wbr>File</a>
@@ -882,8 +805,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -891,8 +813,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -900,8 +821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -909,8 +829,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -918,8 +837,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withevent_go">
 <a href="#withevent_go" style="color: inherit; text-decoration: inherit;">With<wbr>Event</a>
@@ -927,8 +845,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -936,13 +853,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -950,8 +865,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainergroupsgroup">Get<wbr>Container<wbr>Groups<wbr>Group[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -960,8 +874,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -969,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -978,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containergroupname_nodejs">
 <a href="#containergroupname_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Group<wbr>Name</a>
@@ -987,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledetails_nodejs">
 <a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
@@ -996,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -1005,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
@@ -1014,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputfile_nodejs">
 <a href="#outputfile_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>File</a>
@@ -1023,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1032,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1041,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1050,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -1059,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withevent_nodejs">
 <a href="#withevent_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Event</a>
@@ -1068,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1077,13 +978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1091,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcontainergroupsgroup">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1101,8 +999,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -1110,8 +1007,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -1119,8 +1015,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_group_name_python">
 <a href="#container_group_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>group_<wbr>name</a>
@@ -1128,8 +1023,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_details_python">
 <a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
@@ -1137,8 +1031,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -1146,8 +1039,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
@@ -1155,8 +1047,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_file_python">
 <a href="#output_file_python" style="color: inherit; text-decoration: inherit;">output_<wbr>file</a>
@@ -1164,8 +1055,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1173,8 +1063,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1182,8 +1071,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1191,8 +1079,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1200,8 +1087,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_event_python">
 <a href="#with_event_python" style="color: inherit; text-decoration: inherit;">with_<wbr>event</a>
@@ -1209,8 +1095,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1218,8 +1103,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1233,8 +1117,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containergroupid_csharp">
 <a href="#containergroupid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Id</a>
@@ -1243,8 +1126,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id if ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containergroupname_csharp">
 <a href="#containergroupname_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Name</a>
@@ -1253,8 +1135,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_csharp">
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
@@ -1263,8 +1144,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainer">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -1273,8 +1153,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="discount_csharp">
 <a href="#discount_csharp" style="color: inherit; text-decoration: inherit;">Discount</a>
@@ -1282,8 +1161,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsconfigs_csharp">
 <a href="#dnsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Configs</a>
@@ -1292,8 +1170,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecisecuritycontexts_csharp">
 <a href="#ecisecuritycontexts_csharp" style="color: inherit; text-decoration: inherit;">Eci<wbr>Security<wbr>Contexts</a>
@@ -1302,8 +1179,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The security context of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eniinstanceid_csharp">
 <a href="#eniinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Instance<wbr>Id</a>
@@ -1312,8 +1188,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ENI instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1322,8 +1197,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupevent">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The events of the container group. Maximum: `50`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiredtime_csharp">
 <a href="#expiredtime_csharp" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
@@ -1332,8 +1206,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the container group failed to run due to overdue payments. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failedtime_csharp">
 <a href="#failedtime_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Time</a>
@@ -1342,8 +1215,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the container failed to run tasks. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostaliases_csharp">
 <a href="#hostaliases_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Aliases</a>
@@ -1352,8 +1224,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgrouphostalias">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mapping between host names and IP addresses for a container in the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1362,8 +1233,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Container Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initcontainers_csharp">
 <a href="#initcontainers_csharp" style="color: inherit; text-decoration: inherit;">Init<wbr>Containers</a>
@@ -1372,8 +1242,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of init containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1382,8 +1251,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internetip_csharp">
 <a href="#internetip_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Ip</a>
@@ -1392,8 +1260,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intranetip_csharp">
 <a href="#intranetip_csharp" style="color: inherit; text-decoration: inherit;">Intranet<wbr>Ip</a>
@@ -1402,8 +1269,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -1412,8 +1278,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -1422,8 +1287,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ramrolename_csharp">
 <a href="#ramrolename_csharp" style="color: inherit; text-decoration: inherit;">Ram<wbr>Role<wbr>Name</a>
@@ -1432,8 +1296,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1442,8 +1305,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartpolicy_csharp">
 <a href="#restartpolicy_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
@@ -1452,8 +1314,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1462,8 +1323,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1472,8 +1332,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="succeededtime_csharp">
 <a href="#succeededtime_csharp" style="color: inherit; text-decoration: inherit;">Succeeded<wbr>Time</a>
@@ -1482,8 +1341,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when all containers in the container group completed running the specified tasks. The timestamp follows the UTC and RFC 3339 formats. For example, 2018-08-02T15:00:00Z.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1492,8 +1350,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -1502,8 +1359,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolume">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The information about the mounted volume. You can mount up to 20 volumes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1512,8 +1368,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The if of vpc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1522,8 +1377,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1532,13 +1386,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containergroupid_go">
 <a href="#containergroupid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Id</a>
@@ -1547,8 +1399,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id if ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containergroupname_go">
 <a href="#containergroupname_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Group<wbr>Name</a>
@@ -1557,8 +1408,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_go">
 <a href="#containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
@@ -1567,8 +1417,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainer">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}A list of containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -1577,8 +1426,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="discount_go">
 <a href="#discount_go" style="color: inherit; text-decoration: inherit;">Discount</a>
@@ -1586,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsconfigs_go">
 <a href="#dnsconfigs_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Configs</a>
@@ -1596,8 +1443,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecisecuritycontexts_go">
 <a href="#ecisecuritycontexts_go" style="color: inherit; text-decoration: inherit;">Eci<wbr>Security<wbr>Contexts</a>
@@ -1606,8 +1452,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context</a></span>
     </dt>
     <dd>{{% md %}}The security context of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eniinstanceid_go">
 <a href="#eniinstanceid_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Instance<wbr>Id</a>
@@ -1616,8 +1461,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ENI instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
@@ -1626,8 +1470,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupevent">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event</a></span>
     </dt>
     <dd>{{% md %}}The events of the container group. Maximum: `50`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiredtime_go">
 <a href="#expiredtime_go" style="color: inherit; text-decoration: inherit;">Expired<wbr>Time</a>
@@ -1636,8 +1479,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the container group failed to run due to overdue payments. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failedtime_go">
 <a href="#failedtime_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Time</a>
@@ -1646,8 +1488,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the container failed to run tasks. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostaliases_go">
 <a href="#hostaliases_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Aliases</a>
@@ -1656,8 +1497,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgrouphostalias">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias</a></span>
     </dt>
     <dd>{{% md %}}The mapping between host names and IP addresses for a container in the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1666,8 +1506,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Container Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initcontainers_go">
 <a href="#initcontainers_go" style="color: inherit; text-decoration: inherit;">Init<wbr>Containers</a>
@@ -1676,8 +1515,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}A list of init containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1686,8 +1524,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internetip_go">
 <a href="#internetip_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Ip</a>
@@ -1696,8 +1533,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intranetip_go">
 <a href="#intranetip_go" style="color: inherit; text-decoration: inherit;">Intranet<wbr>Ip</a>
@@ -1706,8 +1542,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -1716,8 +1551,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -1726,8 +1560,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ramrolename_go">
 <a href="#ramrolename_go" style="color: inherit; text-decoration: inherit;">Ram<wbr>Role<wbr>Name</a>
@@ -1736,8 +1569,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1746,8 +1578,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartpolicy_go">
 <a href="#restartpolicy_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Policy</a>
@@ -1756,8 +1587,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1766,8 +1596,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1776,8 +1605,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="succeededtime_go">
 <a href="#succeededtime_go" style="color: inherit; text-decoration: inherit;">Succeeded<wbr>Time</a>
@@ -1786,8 +1614,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when all containers in the container group completed running the specified tasks. The timestamp follows the UTC and RFC 3339 formats. For example, 2018-08-02T15:00:00Z.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1796,8 +1623,7 @@ The following output properties are available:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumes_go">
 <a href="#volumes_go" style="color: inherit; text-decoration: inherit;">Volumes</a>
@@ -1806,8 +1632,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolume">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume</a></span>
     </dt>
     <dd>{{% md %}}The information about the mounted volume. You can mount up to 20 volumes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1816,8 +1641,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The if of vpc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1826,8 +1650,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1836,13 +1659,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containergroupid_nodejs">
 <a href="#containergroupid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Group<wbr>Id</a>
@@ -1851,8 +1672,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id if ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containergroupname_nodejs">
 <a href="#containergroupname_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Group<wbr>Name</a>
@@ -1861,8 +1681,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_nodejs">
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
@@ -1871,8 +1690,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainer">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}A list of containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -1881,8 +1699,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="discount_nodejs">
 <a href="#discount_nodejs" style="color: inherit; text-decoration: inherit;">discount</a>
@@ -1890,8 +1707,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dnsconfigs_nodejs">
 <a href="#dnsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Configs</a>
@@ -1900,8 +1716,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ecisecuritycontexts_nodejs">
 <a href="#ecisecuritycontexts_nodejs" style="color: inherit; text-decoration: inherit;">eci<wbr>Security<wbr>Contexts</a>
@@ -1910,8 +1725,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context[]</a></span>
     </dt>
     <dd>{{% md %}}The security context of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eniinstanceid_nodejs">
 <a href="#eniinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Instance<wbr>Id</a>
@@ -1920,8 +1734,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the ENI instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
@@ -1930,8 +1743,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupevent">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event[]</a></span>
     </dt>
     <dd>{{% md %}}The events of the container group. Maximum: `50`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiredtime_nodejs">
 <a href="#expiredtime_nodejs" style="color: inherit; text-decoration: inherit;">expired<wbr>Time</a>
@@ -1940,8 +1752,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the container group failed to run due to overdue payments. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failedtime_nodejs">
 <a href="#failedtime_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Time</a>
@@ -1950,8 +1761,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the container failed to run tasks. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostaliases_nodejs">
 <a href="#hostaliases_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Aliases</a>
@@ -1960,8 +1770,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgrouphostalias">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias[]</a></span>
     </dt>
     <dd>{{% md %}}The mapping between host names and IP addresses for a container in the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1970,8 +1779,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Container Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initcontainers_nodejs">
 <a href="#initcontainers_nodejs" style="color: inherit; text-decoration: inherit;">init<wbr>Containers</a>
@@ -1980,8 +1788,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}A list of init containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1990,8 +1797,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internetip_nodejs">
 <a href="#internetip_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Ip</a>
@@ -2000,8 +1806,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intranetip_nodejs">
 <a href="#intranetip_nodejs" style="color: inherit; text-decoration: inherit;">intranet<wbr>Ip</a>
@@ -2010,8 +1815,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -2020,8 +1824,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2030,8 +1833,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ramrolename_nodejs">
 <a href="#ramrolename_nodejs" style="color: inherit; text-decoration: inherit;">ram<wbr>Role<wbr>Name</a>
@@ -2040,8 +1842,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -2050,8 +1851,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartpolicy_nodejs">
 <a href="#restartpolicy_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Policy</a>
@@ -2060,8 +1860,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -2070,8 +1869,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2080,8 +1878,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="succeededtime_nodejs">
 <a href="#succeededtime_nodejs" style="color: inherit; text-decoration: inherit;">succeeded<wbr>Time</a>
@@ -2090,8 +1887,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when all containers in the container group completed running the specified tasks. The timestamp follows the UTC and RFC 3339 formats. For example, 2018-08-02T15:00:00Z.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2100,8 +1896,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -2110,8 +1905,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolume">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}The information about the mounted volume. You can mount up to 20 volumes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -2120,8 +1914,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The if of vpc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -2130,8 +1923,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -2140,13 +1932,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_group_id_python">
 <a href="#container_group_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>group_<wbr>id</a>
@@ -2155,8 +1945,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id if ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_group_name_python">
 <a href="#container_group_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>group_<wbr>name</a>
@@ -2165,8 +1954,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of ContainerGroup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containers_python">
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
@@ -2175,8 +1963,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainer">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -2185,8 +1972,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="discount_python">
 <a href="#discount_python" style="color: inherit; text-decoration: inherit;">discount</a>
@@ -2194,8 +1980,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dns_configs_python">
 <a href="#dns_configs_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>configs</a>
@@ -2204,8 +1989,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfig">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The DNS settings.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eci_security_contexts_python">
 <a href="#eci_security_contexts_python" style="color: inherit; text-decoration: inherit;">eci_<wbr>security_<wbr>contexts</a>
@@ -2214,8 +1998,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontext">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The security context of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eni_instance_id_python">
 <a href="#eni_instance_id_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>instance_<wbr>id</a>
@@ -2224,8 +2007,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the ENI instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
@@ -2234,8 +2016,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupevent">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The events of the container group. Maximum: `50`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expired_time_python">
 <a href="#expired_time_python" style="color: inherit; text-decoration: inherit;">expired_<wbr>time</a>
@@ -2244,8 +2025,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the container group failed to run due to overdue payments. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="failed_time_python">
 <a href="#failed_time_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>time</a>
@@ -2254,8 +2034,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the container failed to run tasks. The timestamp follows the UTC and RFC3339 formats.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_aliases_python">
 <a href="#host_aliases_python" style="color: inherit; text-decoration: inherit;">host_<wbr>aliases</a>
@@ -2264,8 +2043,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgrouphostalias">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mapping between host names and IP addresses for a container in the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2274,8 +2052,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Container Group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="init_containers_python">
 <a href="#init_containers_python" style="color: inherit; text-decoration: inherit;">init_<wbr>containers</a>
@@ -2284,8 +2061,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainer">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of init containers. Each element contains the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -2294,8 +2070,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ECS instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="internet_ip_python">
 <a href="#internet_ip_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>ip</a>
@@ -2304,8 +2079,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intranet_ip_python">
 <a href="#intranet_ip_python" style="color: inherit; text-decoration: inherit;">intranet_<wbr>ip</a>
@@ -2314,8 +2088,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The internal IP address of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -2324,8 +2097,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2334,8 +2106,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ram_role_name_python">
 <a href="#ram_role_name_python" style="color: inherit; text-decoration: inherit;">ram_<wbr>role_<wbr>name</a>
@@ -2344,8 +2115,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RAM role that the container group assumes. ECI and ECS share the same RAM role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -2354,8 +2124,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource group to which the container group belongs. If you have not specified a resource group for the container group, it is added to the default resource group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restart_policy_python">
 <a href="#restart_policy_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>policy</a>
@@ -2364,8 +2133,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The restart policy of the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -2374,8 +2142,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2384,8 +2151,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="succeeded_time_python">
 <a href="#succeeded_time_python" style="color: inherit; text-decoration: inherit;">succeeded_<wbr>time</a>
@@ -2394,8 +2160,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when all containers in the container group completed running the specified tasks. The timestamp follows the UTC and RFC 3339 formats. For example, 2018-08-02T15:00:00Z.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2404,8 +2169,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The tags attached to the container group. Each tag is a key-value pair. You can attach up to 20 tags to a container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
@@ -2414,8 +2178,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolume">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The information about the mounted volume. You can mount up to 20 volumes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -2424,8 +2187,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The if of vpc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -2434,8 +2196,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vswitch id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -2444,8 +2205,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IDs of the zones where the container groups are deployed. If this parameter is not set, the system automatically selects the zones. By default, no value is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainer">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container</h4>
@@ -2453,8 +2213,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2463,8 +2222,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_csharp">
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -2473,8 +2231,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -2483,8 +2240,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environmentvars_csharp">
 <a href="#environmentvars_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Vars</a>
@@ -2493,8 +2249,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_csharp">
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -2503,8 +2258,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2513,8 +2267,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_csharp">
 <a href="#imagepullpolicy_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -2523,8 +2276,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -2533,8 +2285,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2543,8 +2294,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2553,8 +2303,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_csharp">
 <a href="#ready_csharp" style="color: inherit; text-decoration: inherit;">Ready</a>
@@ -2563,8 +2312,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartcount_csharp">
 <a href="#restartcount_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Count</a>
@@ -2573,8 +2321,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_csharp">
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -2583,8 +2330,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -2593,13 +2339,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2608,8 +2352,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_go">
 <a href="#commands_go" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -2618,8 +2361,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -2628,8 +2370,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environmentvars_go">
 <a href="#environmentvars_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Vars</a>
@@ -2638,8 +2379,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_go">
 <a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -2648,8 +2388,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2658,8 +2397,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_go">
 <a href="#imagepullpolicy_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -2668,8 +2406,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -2678,8 +2415,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2688,8 +2424,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2698,8 +2433,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_go">
 <a href="#ready_go" style="color: inherit; text-decoration: inherit;">Ready</a>
@@ -2708,8 +2442,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartcount_go">
 <a href="#restartcount_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Count</a>
@@ -2718,8 +2451,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_go">
 <a href="#volumemounts_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -2728,8 +2460,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -2738,13 +2469,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2753,8 +2482,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_nodejs">
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -2763,8 +2491,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -2773,8 +2500,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environmentvars_nodejs">
 <a href="#environmentvars_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Vars</a>
@@ -2783,8 +2509,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var[]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_nodejs">
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -2793,8 +2518,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2803,8 +2527,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_nodejs">
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
@@ -2813,8 +2536,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2823,8 +2545,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2833,8 +2554,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2843,8 +2563,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_nodejs">
 <a href="#ready_nodejs" style="color: inherit; text-decoration: inherit;">ready</a>
@@ -2853,8 +2572,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartcount_nodejs">
 <a href="#restartcount_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
@@ -2863,8 +2581,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_nodejs">
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
@@ -2873,8 +2590,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -2883,13 +2599,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2898,8 +2612,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_python">
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -2908,8 +2621,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -2918,8 +2630,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environment_vars_python">
 <a href="#environment_vars_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>vars</a>
@@ -2928,8 +2639,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerenvironmentvar">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_python">
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -2938,8 +2648,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2948,8 +2657,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_pull_policy_python">
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
@@ -2958,8 +2666,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -2968,8 +2675,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2978,8 +2684,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2988,8 +2693,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainerport">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_python">
 <a href="#ready_python" style="color: inherit; text-decoration: inherit;">ready</a>
@@ -2998,8 +2702,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restart_count_python">
 <a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
@@ -3008,8 +2711,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_mounts_python">
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
@@ -3018,8 +2720,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupcontainervolumemount">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -3028,8 +2729,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainerenvironmentvar">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var</h4>
@@ -3037,8 +2737,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3047,8 +2746,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3057,13 +2755,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3072,8 +2768,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3082,13 +2777,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3097,8 +2790,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3107,13 +2799,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3122,8 +2812,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3132,8 +2821,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainerport">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port</h4>
@@ -3141,8 +2829,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3151,8 +2838,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3161,13 +2847,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3176,8 +2860,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3186,13 +2869,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3201,8 +2882,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -3211,13 +2891,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3226,8 +2904,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -3236,8 +2913,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainervolumemount">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount</h4>
@@ -3245,8 +2921,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpath_csharp">
 <a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -3255,8 +2930,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3265,8 +2939,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -3275,13 +2948,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpath_go">
 <a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -3290,8 +2961,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3300,8 +2970,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -3310,13 +2979,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpath_nodejs">
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
@@ -3325,8 +2992,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3335,8 +3001,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -3345,13 +3010,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mount_path_python">
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
@@ -3360,8 +3023,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3370,8 +3032,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -3380,8 +3041,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupdnsconfig">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config</h4>
@@ -3389,8 +3049,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nameservers_csharp">
 <a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -3399,8 +3058,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of DNS server IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -3409,8 +3067,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of objects. Each object is a name-value pair. The value is optional.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searches_csharp">
 <a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -3419,13 +3076,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of DNS lookup domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nameservers_go">
 <a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -3434,8 +3089,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of DNS server IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -3444,8 +3098,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}The list of objects. Each object is a name-value pair. The value is optional.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searches_go">
 <a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -3454,13 +3107,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of DNS lookup domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nameservers_nodejs">
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
@@ -3469,8 +3120,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of DNS server IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -3479,8 +3129,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}The list of objects. Each object is a name-value pair. The value is optional.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searches_nodejs">
 <a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -3489,13 +3138,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of DNS lookup domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_servers_python">
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
@@ -3504,8 +3151,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of DNS server IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -3514,8 +3160,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupdnsconfigoption">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of objects. Each object is a name-value pair. The value is optional.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="searches_python">
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -3524,8 +3169,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of DNS lookup domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupdnsconfigoption">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option</h4>
@@ -3533,8 +3177,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3543,8 +3186,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3553,13 +3195,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3568,8 +3208,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3578,13 +3217,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3593,8 +3230,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3603,13 +3239,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3618,8 +3252,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3628,8 +3261,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupecisecuritycontext">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context</h4>
@@ -3637,8 +3269,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sysctls_csharp">
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -3647,13 +3278,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The system information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sysctls_go">
 <a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
@@ -3662,13 +3291,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl</a></span>
     </dt>
     <dd>{{% md %}}The system information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sysctls_nodejs">
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -3677,13 +3304,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl[]</a></span>
     </dt>
     <dd>{{% md %}}The system information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sysctls_python">
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
@@ -3692,8 +3317,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupecisecuritycontextsysctl">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The system information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupecisecuritycontextsysctl">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl</h4>
@@ -3701,8 +3325,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3711,8 +3334,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3721,13 +3343,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3736,8 +3356,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3746,13 +3365,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3761,8 +3378,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3771,13 +3387,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3786,8 +3400,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3796,8 +3409,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupevent">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event</h4>
@@ -3805,8 +3417,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -3815,8 +3426,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firsttimestamp_csharp">
 <a href="#firsttimestamp_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Timestamp</a>
@@ -3825,8 +3435,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the event started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lasttimestamp_csharp">
 <a href="#lasttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Timestamp</a>
@@ -3835,8 +3444,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the event ended.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -3845,8 +3453,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3855,8 +3462,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -3865,8 +3471,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3875,13 +3480,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -3890,8 +3493,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firsttimestamp_go">
 <a href="#firsttimestamp_go" style="color: inherit; text-decoration: inherit;">First<wbr>Timestamp</a>
@@ -3900,8 +3502,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the event started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lasttimestamp_go">
 <a href="#lasttimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Timestamp</a>
@@ -3910,8 +3511,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the event ended.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -3920,8 +3520,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3930,8 +3529,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -3940,8 +3538,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3950,13 +3547,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -3965,8 +3560,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firsttimestamp_nodejs">
 <a href="#firsttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Timestamp</a>
@@ -3975,8 +3569,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the event started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lasttimestamp_nodejs">
 <a href="#lasttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Timestamp</a>
@@ -3985,8 +3578,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the event ended.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -3995,8 +3587,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4005,8 +3596,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -4015,8 +3605,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4025,13 +3614,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -4040,8 +3627,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of events.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="first_timestamp_python">
 <a href="#first_timestamp_python" style="color: inherit; text-decoration: inherit;">first_<wbr>timestamp</a>
@@ -4050,8 +3636,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the event started.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_timestamp_python">
 <a href="#last_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>timestamp</a>
@@ -4060,8 +3645,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the event ended.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -4070,8 +3654,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4080,8 +3663,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -4090,8 +3672,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the event.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4100,8 +3681,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgrouphostalias">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias</h4>
@@ -4109,8 +3689,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostnames_csharp">
 <a href="#hostnames_csharp" style="color: inherit; text-decoration: inherit;">Hostnames</a>
@@ -4119,8 +3698,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The name of the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -4129,13 +3707,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostnames_go">
 <a href="#hostnames_go" style="color: inherit; text-decoration: inherit;">Hostnames</a>
@@ -4144,8 +3720,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The name of the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -4154,13 +3729,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostnames_nodejs">
 <a href="#hostnames_nodejs" style="color: inherit; text-decoration: inherit;">hostnames</a>
@@ -4169,8 +3742,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The name of the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -4179,13 +3751,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostnames_python">
 <a href="#hostnames_python" style="color: inherit; text-decoration: inherit;">hostnames</a>
@@ -4194,8 +3764,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The name of the host.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -4204,8 +3773,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainer">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container</h4>
@@ -4213,8 +3781,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -4223,8 +3790,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_csharp">
 <a href="#commands_csharp" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -4233,8 +3799,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_csharp">
 <a href="#cpu_csharp" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -4243,8 +3808,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environmentvars_csharp">
 <a href="#environmentvars_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Vars</a>
@@ -4253,8 +3817,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_csharp">
 <a href="#gpu_csharp" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -4263,8 +3826,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -4273,8 +3835,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_csharp">
 <a href="#imagepullpolicy_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -4283,8 +3844,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -4293,8 +3853,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4303,8 +3862,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -4313,8 +3871,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_csharp">
 <a href="#ready_csharp" style="color: inherit; text-decoration: inherit;">Ready</a>
@@ -4323,8 +3880,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartcount_csharp">
 <a href="#restartcount_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Count</a>
@@ -4333,8 +3889,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_csharp">
 <a href="#volumemounts_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -4343,8 +3898,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_csharp">
 <a href="#workingdir_csharp" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -4353,13 +3907,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -4368,8 +3920,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_go">
 <a href="#commands_go" style="color: inherit; text-decoration: inherit;">Commands</a>
@@ -4378,8 +3929,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_go">
 <a href="#cpu_go" style="color: inherit; text-decoration: inherit;">Cpu</a>
@@ -4388,8 +3938,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environmentvars_go">
 <a href="#environmentvars_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Vars</a>
@@ -4398,8 +3947,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_go">
 <a href="#gpu_go" style="color: inherit; text-decoration: inherit;">Gpu</a>
@@ -4408,8 +3956,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -4418,8 +3965,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_go">
 <a href="#imagepullpolicy_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Pull<wbr>Policy</a>
@@ -4428,8 +3974,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -4438,8 +3983,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4448,8 +3992,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -4458,8 +4001,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_go">
 <a href="#ready_go" style="color: inherit; text-decoration: inherit;">Ready</a>
@@ -4468,8 +4010,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartcount_go">
 <a href="#restartcount_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Count</a>
@@ -4478,8 +4019,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_go">
 <a href="#volumemounts_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Mounts</a>
@@ -4488,8 +4028,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_go">
 <a href="#workingdir_go" style="color: inherit; text-decoration: inherit;">Working<wbr>Dir</a>
@@ -4498,13 +4037,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -4513,8 +4050,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_nodejs">
 <a href="#commands_nodejs" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -4523,8 +4059,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_nodejs">
 <a href="#cpu_nodejs" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -4533,8 +4068,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environmentvars_nodejs">
 <a href="#environmentvars_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Vars</a>
@@ -4543,8 +4077,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var[]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_nodejs">
 <a href="#gpu_nodejs" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -4553,8 +4086,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -4563,8 +4095,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagepullpolicy_nodejs">
 <a href="#imagepullpolicy_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Pull<wbr>Policy</a>
@@ -4573,8 +4104,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -4583,8 +4113,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4593,8 +4122,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -4603,8 +4131,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_nodejs">
 <a href="#ready_nodejs" style="color: inherit; text-decoration: inherit;">ready</a>
@@ -4613,8 +4140,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restartcount_nodejs">
 <a href="#restartcount_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Count</a>
@@ -4623,8 +4149,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumemounts_nodejs">
 <a href="#volumemounts_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Mounts</a>
@@ -4633,8 +4158,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount[]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workingdir_nodejs">
 <a href="#workingdir_nodejs" style="color: inherit; text-decoration: inherit;">working<wbr>Dir</a>
@@ -4643,13 +4167,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -4658,8 +4180,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The arguments passed to the commands.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commands_python">
 <a href="#commands_python" style="color: inherit; text-decoration: inherit;">commands</a>
@@ -4668,8 +4189,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The commands run by the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cpu_python">
 <a href="#cpu_python" style="color: inherit; text-decoration: inherit;">cpu</a>
@@ -4678,8 +4198,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of CPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="environment_vars_python">
 <a href="#environment_vars_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>vars</a>
@@ -4688,8 +4207,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerenvironmentvar">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gpu_python">
 <a href="#gpu_python" style="color: inherit; text-decoration: inherit;">gpu</a>
@@ -4698,8 +4216,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of GPU resources allocated to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -4708,8 +4225,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image of the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_pull_policy_python">
 <a href="#image_pull_policy_python" style="color: inherit; text-decoration: inherit;">image_<wbr>pull_<wbr>policy</a>
@@ -4718,8 +4234,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy for pulling an image.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -4728,8 +4243,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of memory resources allocated to the container group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4738,8 +4252,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -4748,8 +4261,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainerport">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The exposed ports and protocols. Maximum: `100`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ready_python">
 <a href="#ready_python" style="color: inherit; text-decoration: inherit;">ready</a>
@@ -4758,8 +4270,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the container is ready.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restart_count_python">
 <a href="#restart_count_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>count</a>
@@ -4768,8 +4279,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of times that the container has restarted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_mounts_python">
 <a href="#volume_mounts_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>mounts</a>
@@ -4778,8 +4288,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupinitcontainervolumemount">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of volumes mounted to the container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="working_dir_python">
 <a href="#working_dir_python" style="color: inherit; text-decoration: inherit;">working_<wbr>dir</a>
@@ -4788,8 +4297,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The working directory of the container.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainerenvironmentvar">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var</h4>
@@ -4797,8 +4305,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4807,8 +4314,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4817,13 +4323,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4832,8 +4336,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4842,13 +4345,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4857,8 +4358,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4867,13 +4367,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4882,8 +4380,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4892,8 +4389,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainerport">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port</h4>
@@ -4901,8 +4397,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4911,8 +4406,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -4921,13 +4415,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4936,8 +4428,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -4946,13 +4437,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4961,8 +4450,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -4971,13 +4459,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4986,8 +4472,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number. Valid values: 1 to 65535.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -4996,8 +4481,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: `TCP` and `UDP`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainervolumemount">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount</h4>
@@ -5005,8 +4489,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpath_csharp">
 <a href="#mountpath_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -5015,8 +4498,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5025,8 +4507,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_csharp">
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -5035,13 +4516,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpath_go">
 <a href="#mountpath_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Path</a>
@@ -5050,8 +4529,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5060,8 +4538,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_go">
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
@@ -5070,13 +4547,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpath_nodejs">
 <a href="#mountpath_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Path</a>
@@ -5085,8 +4560,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5095,8 +4569,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readonly_nodejs">
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
@@ -5105,13 +4578,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mount_path_python">
 <a href="#mount_path_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>path</a>
@@ -5120,8 +4591,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The directory of the mounted volume. Data under this directory will be overwritten by the data in the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5130,8 +4600,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_only_python">
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
@@ -5140,8 +4609,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupvolume">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume</h4>
@@ -5149,8 +4617,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configfilevolumeconfigfiletopaths_csharp">
 <a href="#configfilevolumeconfigfiletopaths_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Paths</a>
@@ -5159,8 +4626,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Eci.<wbr>Inputs.<wbr>Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of configuration file paths.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskvolumediskid_csharp">
 <a href="#diskvolumediskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Volume<wbr>Disk<wbr>Id</a>
@@ -5169,8 +4635,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskvolumefstype_csharp">
 <a href="#diskvolumefstype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Volume<wbr>Fs<wbr>Type</a>
@@ -5179,8 +4644,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumedriver_csharp">
 <a href="#flexvolumedriver_csharp" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume<wbr>Driver</a>
@@ -5189,8 +4653,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FlexVolume driver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumefstype_csharp">
 <a href="#flexvolumefstype_csharp" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume<wbr>Fs<wbr>Type</a>
@@ -5199,8 +4662,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the mounted file system. The default value is determined by the script of FlexVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumeoptions_csharp">
 <a href="#flexvolumeoptions_csharp" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume<wbr>Options</a>
@@ -5209,8 +4671,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of FlexVolume objects.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5219,8 +4680,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumepath_csharp">
 <a href="#nfsvolumepath_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Volume<wbr>Path</a>
@@ -5229,8 +4689,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the NFS volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumereadonly_csharp">
 <a href="#nfsvolumereadonly_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Volume<wbr>Read<wbr>Only</a>
@@ -5239,8 +4698,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumeserver_csharp">
 <a href="#nfsvolumeserver_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Volume<wbr>Server</a>
@@ -5249,8 +4707,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the NFS server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5259,13 +4716,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configfilevolumeconfigfiletopaths_go">
 <a href="#configfilevolumeconfigfiletopaths_go" style="color: inherit; text-decoration: inherit;">Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Paths</a>
@@ -5274,8 +4729,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">[]Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}The list of configuration file paths.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskvolumediskid_go">
 <a href="#diskvolumediskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Volume<wbr>Disk<wbr>Id</a>
@@ -5284,8 +4738,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskvolumefstype_go">
 <a href="#diskvolumefstype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Volume<wbr>Fs<wbr>Type</a>
@@ -5294,8 +4747,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumedriver_go">
 <a href="#flexvolumedriver_go" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume<wbr>Driver</a>
@@ -5304,8 +4756,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FlexVolume driver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumefstype_go">
 <a href="#flexvolumefstype_go" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume<wbr>Fs<wbr>Type</a>
@@ -5314,8 +4765,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the mounted file system. The default value is determined by the script of FlexVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumeoptions_go">
 <a href="#flexvolumeoptions_go" style="color: inherit; text-decoration: inherit;">Flex<wbr>Volume<wbr>Options</a>
@@ -5324,8 +4774,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of FlexVolume objects.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5334,8 +4783,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumepath_go">
 <a href="#nfsvolumepath_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Volume<wbr>Path</a>
@@ -5344,8 +4792,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the NFS volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumereadonly_go">
 <a href="#nfsvolumereadonly_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Volume<wbr>Read<wbr>Only</a>
@@ -5354,8 +4801,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumeserver_go">
 <a href="#nfsvolumeserver_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Volume<wbr>Server</a>
@@ -5364,8 +4810,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the NFS server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5374,13 +4819,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configfilevolumeconfigfiletopaths_nodejs">
 <a href="#configfilevolumeconfigfiletopaths_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Paths</a>
@@ -5389,8 +4832,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}The list of configuration file paths.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskvolumediskid_nodejs">
 <a href="#diskvolumediskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Volume<wbr>Disk<wbr>Id</a>
@@ -5399,8 +4841,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskvolumefstype_nodejs">
 <a href="#diskvolumefstype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Volume<wbr>Fs<wbr>Type</a>
@@ -5409,8 +4850,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumedriver_nodejs">
 <a href="#flexvolumedriver_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume<wbr>Driver</a>
@@ -5419,8 +4859,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FlexVolume driver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumefstype_nodejs">
 <a href="#flexvolumefstype_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume<wbr>Fs<wbr>Type</a>
@@ -5429,8 +4868,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the mounted file system. The default value is determined by the script of FlexVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flexvolumeoptions_nodejs">
 <a href="#flexvolumeoptions_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Volume<wbr>Options</a>
@@ -5439,8 +4877,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of FlexVolume objects.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5449,8 +4886,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumepath_nodejs">
 <a href="#nfsvolumepath_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Volume<wbr>Path</a>
@@ -5459,8 +4895,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the NFS volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumereadonly_nodejs">
 <a href="#nfsvolumereadonly_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Volume<wbr>Read<wbr>Only</a>
@@ -5469,8 +4904,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfsvolumeserver_nodejs">
 <a href="#nfsvolumeserver_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Volume<wbr>Server</a>
@@ -5479,8 +4913,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the NFS server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5489,13 +4922,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_file_volume_config_file_to_paths_python">
 <a href="#config_file_volume_config_file_to_paths_python" style="color: inherit; text-decoration: inherit;">config_<wbr>file_<wbr>volume_<wbr>config_<wbr>file_<wbr>to_<wbr>paths</a>
@@ -5504,8 +4935,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">Sequence[Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of configuration file paths.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_volume_disk_id_python">
 <a href="#disk_volume_disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>volume_<wbr>disk_<wbr>id</a>
@@ -5514,8 +4944,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_volume_fs_type_python">
 <a href="#disk_volume_fs_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>volume_<wbr>fs_<wbr>type</a>
@@ -5524,8 +4953,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of DiskVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flex_volume_driver_python">
 <a href="#flex_volume_driver_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume_<wbr>driver</a>
@@ -5534,8 +4962,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the FlexVolume driver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flex_volume_fs_type_python">
 <a href="#flex_volume_fs_type_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume_<wbr>fs_<wbr>type</a>
@@ -5544,8 +4971,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the mounted file system. The default value is determined by the script of FlexVolume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flex_volume_options_python">
 <a href="#flex_volume_options_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>volume_<wbr>options</a>
@@ -5554,8 +4980,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The list of FlexVolume objects.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5564,8 +4989,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfs_volume_path_python">
 <a href="#nfs_volume_path_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>volume_<wbr>path</a>
@@ -5574,8 +4998,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the NFS volume.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfs_volume_read_only_python">
 <a href="#nfs_volume_read_only_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>volume_<wbr>read_<wbr>only</a>
@@ -5584,8 +5007,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nfs_volume_server_python">
 <a href="#nfs_volume_server_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>volume_<wbr>server</a>
@@ -5594,8 +5016,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the NFS server.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5604,8 +5025,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume. Currently, the following types of volumes are supported: EmptyDirVolume, NFSVolume, ConfigFileVolume, and FlexVolume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path</h4>
@@ -5613,8 +5033,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -5623,8 +5042,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the configuration file. Maximum size: 32 KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5633,13 +5051,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative file path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -5648,8 +5064,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the configuration file. Maximum size: 32 KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5658,13 +5073,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative file path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -5673,8 +5086,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the configuration file. Maximum size: 32 KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -5683,13 +5095,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative file path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -5698,8 +5108,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of the configuration file. Maximum size: 32 KB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -5708,8 +5117,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative file path.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -271,8 +271,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoacceptconnection_csharp">
 <a href="#autoacceptconnection_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Connection</a>
@@ -281,8 +280,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectbandwidth_csharp">
 <a href="#connectbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Bandwidth</a>
@@ -291,8 +289,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dryrun_csharp">
 <a href="#dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
@@ -301,8 +298,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payer_csharp">
 <a href="#payer_csharp" style="color: inherit; text-decoration: inherit;">Payer</a>
@@ -311,8 +307,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicedescription_csharp">
 <a href="#servicedescription_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Description</a>
@@ -321,13 +316,11 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoacceptconnection_go">
 <a href="#autoacceptconnection_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Connection</a>
@@ -336,8 +329,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectbandwidth_go">
 <a href="#connectbandwidth_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Bandwidth</a>
@@ -346,8 +338,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dryrun_go">
 <a href="#dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
@@ -356,8 +347,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payer_go">
 <a href="#payer_go" style="color: inherit; text-decoration: inherit;">Payer</a>
@@ -366,8 +356,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicedescription_go">
 <a href="#servicedescription_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Description</a>
@@ -376,13 +365,11 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoacceptconnection_nodejs">
 <a href="#autoacceptconnection_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Accept<wbr>Connection</a>
@@ -391,8 +378,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectbandwidth_nodejs">
 <a href="#connectbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Bandwidth</a>
@@ -401,8 +387,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dryrun_nodejs">
 <a href="#dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
@@ -411,8 +396,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payer_nodejs">
 <a href="#payer_nodejs" style="color: inherit; text-decoration: inherit;">payer</a>
@@ -421,8 +405,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicedescription_nodejs">
 <a href="#servicedescription_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Description</a>
@@ -431,13 +414,11 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_accept_connection_python">
 <a href="#auto_accept_connection_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>accept_<wbr>connection</a>
@@ -446,8 +427,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_bandwidth_python">
 <a href="#connect_bandwidth_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>bandwidth</a>
@@ -456,8 +436,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dry_run_python">
 <a href="#dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
@@ -466,8 +445,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payer_python">
 <a href="#payer_python" style="color: inherit; text-decoration: inherit;">payer</a>
@@ -476,8 +454,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_description_python">
 <a href="#service_description_python" style="color: inherit; text-decoration: inherit;">service_<wbr>description</a>
@@ -486,8 +463,7 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -498,8 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -507,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusinessstatus_csharp">
 <a href="#servicebusinessstatus_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Business<wbr>Status</a>
@@ -517,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicedomain_csharp">
 <a href="#servicedomain_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Domain</a>
@@ -527,8 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -537,13 +509,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -551,8 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusinessstatus_go">
 <a href="#servicebusinessstatus_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Business<wbr>Status</a>
@@ -561,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicedomain_go">
 <a href="#servicedomain_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Domain</a>
@@ -571,8 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -581,13 +548,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -595,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusinessstatus_nodejs">
 <a href="#servicebusinessstatus_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Business<wbr>Status</a>
@@ -605,8 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicedomain_nodejs">
 <a href="#servicedomain_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Domain</a>
@@ -615,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -625,13 +587,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -639,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_business_status_python">
 <a href="#service_business_status_python" style="color: inherit; text-decoration: inherit;">service_<wbr>business_<wbr>status</a>
@@ -649,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_domain_python">
 <a href="#service_domain_python" style="color: inherit; text-decoration: inherit;">service_<wbr>domain</a>
@@ -659,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -669,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -797,8 +753,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoacceptconnection_csharp">
 <a href="#state_autoacceptconnection_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Connection</a>
@@ -807,8 +762,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectbandwidth_csharp">
 <a href="#state_connectbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Bandwidth</a>
@@ -817,8 +771,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dryrun_csharp">
 <a href="#state_dryrun_csharp" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
@@ -827,8 +780,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payer_csharp">
 <a href="#state_payer_csharp" style="color: inherit; text-decoration: inherit;">Payer</a>
@@ -837,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusinessstatus_csharp">
 <a href="#state_servicebusinessstatus_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Business<wbr>Status</a>
@@ -847,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicedescription_csharp">
 <a href="#state_servicedescription_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Description</a>
@@ -857,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicedomain_csharp">
 <a href="#state_servicedomain_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Domain</a>
@@ -867,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -877,13 +825,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoacceptconnection_go">
 <a href="#state_autoacceptconnection_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Connection</a>
@@ -892,8 +838,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectbandwidth_go">
 <a href="#state_connectbandwidth_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Bandwidth</a>
@@ -902,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dryrun_go">
 <a href="#state_dryrun_go" style="color: inherit; text-decoration: inherit;">Dry<wbr>Run</a>
@@ -912,8 +856,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payer_go">
 <a href="#state_payer_go" style="color: inherit; text-decoration: inherit;">Payer</a>
@@ -922,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusinessstatus_go">
 <a href="#state_servicebusinessstatus_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Business<wbr>Status</a>
@@ -932,8 +874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicedescription_go">
 <a href="#state_servicedescription_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Description</a>
@@ -942,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicedomain_go">
 <a href="#state_servicedomain_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Domain</a>
@@ -952,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -962,13 +901,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoacceptconnection_nodejs">
 <a href="#state_autoacceptconnection_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Accept<wbr>Connection</a>
@@ -977,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectbandwidth_nodejs">
 <a href="#state_connectbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Bandwidth</a>
@@ -987,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dryrun_nodejs">
 <a href="#state_dryrun_nodejs" style="color: inherit; text-decoration: inherit;">dry<wbr>Run</a>
@@ -997,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payer_nodejs">
 <a href="#state_payer_nodejs" style="color: inherit; text-decoration: inherit;">payer</a>
@@ -1007,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusinessstatus_nodejs">
 <a href="#state_servicebusinessstatus_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Business<wbr>Status</a>
@@ -1017,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicedescription_nodejs">
 <a href="#state_servicedescription_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Description</a>
@@ -1027,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicedomain_nodejs">
 <a href="#state_servicedomain_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Domain</a>
@@ -1037,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1047,13 +977,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_accept_connection_python">
 <a href="#state_auto_accept_connection_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>accept_<wbr>connection</a>
@@ -1062,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connect_bandwidth_python">
 <a href="#state_connect_bandwidth_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>bandwidth</a>
@@ -1072,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The connection bandwidth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dry_run_python">
 <a href="#state_dry_run_python" style="color: inherit; text-decoration: inherit;">dry_<wbr>run</a>
@@ -1082,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to pre-check this request only. Default to: `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payer_python">
 <a href="#state_payer_python" style="color: inherit; text-decoration: inherit;">payer</a>
@@ -1092,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_business_status_python">
 <a href="#state_service_business_status_python" style="color: inherit; text-decoration: inherit;">service_<wbr>business_<wbr>status</a>
@@ -1102,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The business status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_description_python">
 <a href="#state_service_description_python" style="color: inherit; text-decoration: inherit;">service_<wbr>description</a>
@@ -1112,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the terminal node service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_domain_python">
 <a href="#state_service_domain_python" style="color: inherit; text-decoration: inherit;">service_<wbr>domain</a>
@@ -1122,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1132,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

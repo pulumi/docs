@@ -162,8 +162,7 @@ The TagCategory resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associabletypes_csharp">
 <a href="#associabletypes_csharp" style="color: inherit; text-decoration: inherit;">Associable<wbr>Types</a>
@@ -174,8 +173,7 @@ The TagCategory resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cardinality_csharp">
 <a href="#cardinality_csharp" style="color: inherit; text-decoration: inherit;">Cardinality</a>
@@ -187,8 +185,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -197,8 +194,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -207,13 +203,11 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associabletypes_go">
 <a href="#associabletypes_go" style="color: inherit; text-decoration: inherit;">Associable<wbr>Types</a>
@@ -224,8 +218,7 @@ multiple tags in this category). Forces a new resource if changed.
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cardinality_go">
 <a href="#cardinality_go" style="color: inherit; text-decoration: inherit;">Cardinality</a>
@@ -237,8 +230,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -247,8 +239,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -257,13 +248,11 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associabletypes_nodejs">
 <a href="#associabletypes_nodejs" style="color: inherit; text-decoration: inherit;">associable<wbr>Types</a>
@@ -274,8 +263,7 @@ multiple tags in this category). Forces a new resource if changed.
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cardinality_nodejs">
 <a href="#cardinality_nodejs" style="color: inherit; text-decoration: inherit;">cardinality</a>
@@ -287,8 +275,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -297,8 +284,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -307,13 +293,11 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associable_types_python">
 <a href="#associable_types_python" style="color: inherit; text-decoration: inherit;">associable_<wbr>types</a>
@@ -324,8 +308,7 @@ multiple tags in this category). Forces a new resource if changed.
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cardinality_python">
 <a href="#cardinality_python" style="color: inherit; text-decoration: inherit;">cardinality</a>
@@ -337,8 +320,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -347,8 +329,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -357,8 +338,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -369,8 +349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -378,13 +357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -392,13 +369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -406,13 +381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -420,8 +393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -548,8 +520,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associabletypes_csharp">
 <a href="#state_associabletypes_csharp" style="color: inherit; text-decoration: inherit;">Associable<wbr>Types</a>
@@ -560,8 +531,7 @@ The following state arguments are supported:
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cardinality_csharp">
 <a href="#state_cardinality_csharp" style="color: inherit; text-decoration: inherit;">Cardinality</a>
@@ -573,8 +543,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -583,8 +552,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -593,13 +561,11 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associabletypes_go">
 <a href="#state_associabletypes_go" style="color: inherit; text-decoration: inherit;">Associable<wbr>Types</a>
@@ -610,8 +576,7 @@ multiple tags in this category). Forces a new resource if changed.
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cardinality_go">
 <a href="#state_cardinality_go" style="color: inherit; text-decoration: inherit;">Cardinality</a>
@@ -623,8 +588,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -633,8 +597,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -643,13 +606,11 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associabletypes_nodejs">
 <a href="#state_associabletypes_nodejs" style="color: inherit; text-decoration: inherit;">associable<wbr>Types</a>
@@ -660,8 +621,7 @@ multiple tags in this category). Forces a new resource if changed.
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cardinality_nodejs">
 <a href="#state_cardinality_nodejs" style="color: inherit; text-decoration: inherit;">cardinality</a>
@@ -673,8 +633,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -683,8 +642,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -693,13 +651,11 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_associable_types_python">
 <a href="#state_associable_types_python" style="color: inherit; text-decoration: inherit;">associable_<wbr>types</a>
@@ -710,8 +666,7 @@ multiple tags in this category). Forces a new resource if changed.
     <dd>{{% md %}}A list object types that this category is
 valid to be assigned to. For a full list, click
 here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cardinality_python">
 <a href="#state_cardinality_python" style="color: inherit; text-decoration: inherit;">cardinality</a>
@@ -723,8 +678,7 @@ here.
 category to a single object at once. Can be one of `SINGLE` (object can only
 be assigned one tag in this category), to `MULTIPLE` (object can be assigned
 multiple tags in this category). Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -733,8 +687,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the category.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -743,8 +696,7 @@ multiple tags in this category). Forces a new resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the category.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

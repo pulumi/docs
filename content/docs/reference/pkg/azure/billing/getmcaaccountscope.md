@@ -159,8 +159,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_csharp">
 <a href="#billingaccountname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -169,8 +168,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Billing Account Name of the MCA account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilename_csharp">
 <a href="#billingprofilename_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Name</a>
@@ -179,8 +177,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Billing Profile Name in the above Billing Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionname_csharp">
 <a href="#invoicesectionname_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Name</a>
@@ -189,13 +186,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Invoice Section Name in the above Billing Profile.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_go">
 <a href="#billingaccountname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -204,8 +199,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Billing Account Name of the MCA account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilename_go">
 <a href="#billingprofilename_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Name</a>
@@ -214,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Billing Profile Name in the above Billing Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionname_go">
 <a href="#invoicesectionname_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Name</a>
@@ -224,13 +217,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Invoice Section Name in the above Billing Profile.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_nodejs">
 <a href="#billingaccountname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Name</a>
@@ -239,8 +230,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Billing Account Name of the MCA account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilename_nodejs">
 <a href="#billingprofilename_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Name</a>
@@ -249,8 +239,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Billing Profile Name in the above Billing Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionname_nodejs">
 <a href="#invoicesectionname_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Name</a>
@@ -259,13 +248,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Invoice Section Name in the above Billing Profile.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_account_name_python">
 <a href="#billing_account_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>name</a>
@@ -274,8 +261,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Billing Account Name of the MCA account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_profile_name_python">
 <a href="#billing_profile_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>name</a>
@@ -284,8 +270,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Billing Profile Name in the above Billing Account.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoice_section_name_python">
 <a href="#invoice_section_name_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>name</a>
@@ -294,8 +279,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Invoice Section Name in the above Billing Profile.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -308,8 +292,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billingaccountname_csharp">
 <a href="#billingaccountname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -317,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingprofilename_csharp">
 <a href="#billingprofilename_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Name</a>
@@ -326,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -336,8 +317,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invoicesectionname_csharp">
 <a href="#invoicesectionname_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Name</a>
@@ -345,13 +325,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billingaccountname_go">
 <a href="#billingaccountname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -359,8 +337,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingprofilename_go">
 <a href="#billingprofilename_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Name</a>
@@ -368,8 +345,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -378,8 +354,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invoicesectionname_go">
 <a href="#invoicesectionname_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Name</a>
@@ -387,13 +362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billingaccountname_nodejs">
 <a href="#billingaccountname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Name</a>
@@ -401,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingprofilename_nodejs">
 <a href="#billingprofilename_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Name</a>
@@ -410,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -420,8 +391,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invoicesectionname_nodejs">
 <a href="#invoicesectionname_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Name</a>
@@ -429,13 +399,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="billing_account_name_python">
 <a href="#billing_account_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>name</a>
@@ -443,8 +411,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billing_profile_name_python">
 <a href="#billing_profile_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>name</a>
@@ -452,8 +419,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -462,8 +428,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invoice_section_name_python">
 <a href="#invoice_section_name_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>name</a>
@@ -471,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

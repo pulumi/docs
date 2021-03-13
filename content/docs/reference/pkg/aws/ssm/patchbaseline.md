@@ -267,8 +267,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="approvalrules_csharp">
 <a href="#approvalrules_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Rules</a>
@@ -277,8 +276,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineapprovalrule">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatches_csharp">
 <a href="#approvedpatches_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches</a>
@@ -287,8 +285,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatchescompliancelevel_csharp">
 <a href="#approvedpatchescompliancelevel_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
@@ -297,8 +294,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatchesenablenonsecurity_csharp">
 <a href="#approvedpatchesenablenonsecurity_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
@@ -307,8 +303,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -317,8 +312,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalfilters_csharp">
 <a href="#globalfilters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Filters</a>
@@ -327,8 +321,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineglobalfilter">List&lt;Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -337,8 +330,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -347,8 +339,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejectedpatches_csharp">
 <a href="#rejectedpatches_csharp" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches</a>
@@ -357,8 +348,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejectedpatchesaction_csharp">
 <a href="#rejectedpatchesaction_csharp" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
@@ -367,8 +357,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -377,8 +366,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselinesource">List&lt;Patch<wbr>Baseline<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -387,13 +375,11 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="approvalrules_go">
 <a href="#approvalrules_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Rules</a>
@@ -402,8 +388,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatches_go">
 <a href="#approvedpatches_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches</a>
@@ -412,8 +397,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatchescompliancelevel_go">
 <a href="#approvedpatchescompliancelevel_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
@@ -422,8 +406,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatchesenablenonsecurity_go">
 <a href="#approvedpatchesenablenonsecurity_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
@@ -432,8 +415,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -442,8 +424,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalfilters_go">
 <a href="#globalfilters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Filters</a>
@@ -452,8 +433,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -462,8 +442,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -472,8 +451,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejectedpatches_go">
 <a href="#rejectedpatches_go" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches</a>
@@ -482,8 +460,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejectedpatchesaction_go">
 <a href="#rejectedpatchesaction_go" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
@@ -492,8 +469,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -502,8 +478,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -512,13 +487,11 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="approvalrules_nodejs">
 <a href="#approvalrules_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Rules</a>
@@ -527,8 +500,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatches_nodejs">
 <a href="#approvedpatches_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches</a>
@@ -537,8 +509,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatchescompliancelevel_nodejs">
 <a href="#approvedpatchescompliancelevel_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
@@ -547,8 +518,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approvedpatchesenablenonsecurity_nodejs">
 <a href="#approvedpatchesenablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
@@ -557,8 +527,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -567,8 +536,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalfilters_nodejs">
 <a href="#globalfilters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Filters</a>
@@ -577,8 +545,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -587,8 +554,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -597,8 +563,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejectedpatches_nodejs">
 <a href="#rejectedpatches_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches</a>
@@ -607,8 +572,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejectedpatchesaction_nodejs">
 <a href="#rejectedpatchesaction_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches<wbr>Action</a>
@@ -617,8 +581,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -627,8 +590,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselinesource">Patch<wbr>Baseline<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -637,13 +599,11 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="approval_rules_python">
 <a href="#approval_rules_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>rules</a>
@@ -652,8 +612,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineapprovalrule">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approved_patches_python">
 <a href="#approved_patches_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches</a>
@@ -662,8 +621,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approved_patches_compliance_level_python">
 <a href="#approved_patches_compliance_level_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>compliance_<wbr>level</a>
@@ -672,8 +630,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approved_patches_enable_non_security_python">
 <a href="#approved_patches_enable_non_security_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>enable_<wbr>non_<wbr>security</a>
@@ -682,8 +639,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -692,8 +648,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="global_filters_python">
 <a href="#global_filters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>filters</a>
@@ -702,8 +657,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselineglobalfilter">Sequence[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -712,8 +666,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -722,8 +675,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejected_patches_python">
 <a href="#rejected_patches_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches</a>
@@ -732,8 +684,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rejected_patches_action_python">
 <a href="#rejected_patches_action_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches_<wbr>action</a>
@@ -742,8 +693,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -752,8 +702,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#patchbaselinesource">Sequence[Patch<wbr>Baseline<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -762,8 +711,7 @@ The PatchBaseline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -774,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -784,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -793,13 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -808,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -817,13 +760,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -832,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -841,13 +781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -856,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -865,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -993,8 +929,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_approvalrules_csharp">
 <a href="#state_approvalrules_csharp" style="color: inherit; text-decoration: inherit;">Approval<wbr>Rules</a>
@@ -1003,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrule">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatches_csharp">
 <a href="#state_approvedpatches_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches</a>
@@ -1013,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatchescompliancelevel_csharp">
 <a href="#state_approvedpatchescompliancelevel_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
@@ -1023,8 +956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatchesenablenonsecurity_csharp">
 <a href="#state_approvedpatchesenablenonsecurity_csharp" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
@@ -1033,8 +965,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1043,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1053,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalfilters_csharp">
 <a href="#state_globalfilters_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Filters</a>
@@ -1063,8 +992,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineglobalfilter">List&lt;Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1073,8 +1001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_csharp">
 <a href="#state_operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -1083,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejectedpatches_csharp">
 <a href="#state_rejectedpatches_csharp" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches</a>
@@ -1093,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejectedpatchesaction_csharp">
 <a href="#state_rejectedpatchesaction_csharp" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
@@ -1103,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sources_csharp">
 <a href="#state_sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -1113,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselinesource">List&lt;Patch<wbr>Baseline<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1123,13 +1046,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_approvalrules_go">
 <a href="#state_approvalrules_go" style="color: inherit; text-decoration: inherit;">Approval<wbr>Rules</a>
@@ -1138,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrule">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatches_go">
 <a href="#state_approvedpatches_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches</a>
@@ -1148,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatchescompliancelevel_go">
 <a href="#state_approvedpatchescompliancelevel_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
@@ -1158,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatchesenablenonsecurity_go">
 <a href="#state_approvedpatchesenablenonsecurity_go" style="color: inherit; text-decoration: inherit;">Approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
@@ -1168,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1178,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1188,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalfilters_go">
 <a href="#state_globalfilters_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Filters</a>
@@ -1198,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineglobalfilter">[]Patch<wbr>Baseline<wbr>Global<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1208,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_go">
 <a href="#state_operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -1218,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejectedpatches_go">
 <a href="#state_rejectedpatches_go" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches</a>
@@ -1228,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejectedpatchesaction_go">
 <a href="#state_rejectedpatchesaction_go" style="color: inherit; text-decoration: inherit;">Rejected<wbr>Patches<wbr>Action</a>
@@ -1238,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sources_go">
 <a href="#state_sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -1248,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselinesource">[]Patch<wbr>Baseline<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1258,13 +1167,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_approvalrules_nodejs">
 <a href="#state_approvalrules_nodejs" style="color: inherit; text-decoration: inherit;">approval<wbr>Rules</a>
@@ -1273,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatches_nodejs">
 <a href="#state_approvedpatches_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches</a>
@@ -1283,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatchescompliancelevel_nodejs">
 <a href="#state_approvedpatchescompliancelevel_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Compliance<wbr>Level</a>
@@ -1293,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approvedpatchesenablenonsecurity_nodejs">
 <a href="#state_approvedpatchesenablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">approved<wbr>Patches<wbr>Enable<wbr>Non<wbr>Security</a>
@@ -1303,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1313,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1323,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalfilters_nodejs">
 <a href="#state_globalfilters_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Filters</a>
@@ -1333,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1343,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_nodejs">
 <a href="#state_operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -1353,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejectedpatches_nodejs">
 <a href="#state_rejectedpatches_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches</a>
@@ -1363,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejectedpatchesaction_nodejs">
 <a href="#state_rejectedpatchesaction_nodejs" style="color: inherit; text-decoration: inherit;">rejected<wbr>Patches<wbr>Action</a>
@@ -1373,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sources_nodejs">
 <a href="#state_sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -1383,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselinesource">Patch<wbr>Baseline<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1393,13 +1288,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_approval_rules_python">
 <a href="#state_approval_rules_python" style="color: inherit; text-decoration: inherit;">approval_<wbr>rules</a>
@@ -1408,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrule">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approved_patches_python">
 <a href="#state_approved_patches_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches</a>
@@ -1418,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of explicitly approved patches for the baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approved_patches_compliance_level_python">
 <a href="#state_approved_patches_compliance_level_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>compliance_<wbr>level</a>
@@ -1428,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_approved_patches_enable_non_security_python">
 <a href="#state_approved_patches_enable_non_security_python" style="color: inherit; text-decoration: inherit;">approved_<wbr>patches_<wbr>enable_<wbr>non_<wbr>security</a>
@@ -1438,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1448,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1458,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the patch baseline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_filters_python">
 <a href="#state_global_filters_python" style="color: inherit; text-decoration: inherit;">global_<wbr>filters</a>
@@ -1468,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineglobalfilter">Sequence[Patch<wbr>Baseline<wbr>Global<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1478,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operating_system_python">
 <a href="#state_operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -1488,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejected_patches_python">
 <a href="#state_rejected_patches_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches</a>
@@ -1498,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of rejected patches.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rejected_patches_action_python">
 <a href="#state_rejected_patches_action_python" style="color: inherit; text-decoration: inherit;">rejected_<wbr>patches_<wbr>action</a>
@@ -1508,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sources_python">
 <a href="#state_sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -1518,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselinesource">Sequence[Patch<wbr>Baseline<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1528,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1544,8 +1424,7 @@ The following state arguments are supported:
 <h4 id="patchbaselineapprovalrule">Patch<wbr>Baseline<wbr>Approval<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="patchfilters_csharp">
 <a href="#patchfilters_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Filters</a>
@@ -1554,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">List&lt;Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approveafterdays_csharp">
 <a href="#approveafterdays_csharp" style="color: inherit; text-decoration: inherit;">Approve<wbr>After<wbr>Days</a>
@@ -1564,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approveuntildate_csharp">
 <a href="#approveuntildate_csharp" style="color: inherit; text-decoration: inherit;">Approve<wbr>Until<wbr>Date</a>
@@ -1574,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliancelevel_csharp">
 <a href="#compliancelevel_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Level</a>
@@ -1584,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenonsecurity_csharp">
 <a href="#enablenonsecurity_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Non<wbr>Security</a>
@@ -1594,13 +1469,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="patchfilters_go">
 <a href="#patchfilters_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Filters</a>
@@ -1609,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">[]Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approveafterdays_go">
 <a href="#approveafterdays_go" style="color: inherit; text-decoration: inherit;">Approve<wbr>After<wbr>Days</a>
@@ -1619,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approveuntildate_go">
 <a href="#approveuntildate_go" style="color: inherit; text-decoration: inherit;">Approve<wbr>Until<wbr>Date</a>
@@ -1629,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliancelevel_go">
 <a href="#compliancelevel_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Level</a>
@@ -1639,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenonsecurity_go">
 <a href="#enablenonsecurity_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Non<wbr>Security</a>
@@ -1649,13 +1518,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="patchfilters_nodejs">
 <a href="#patchfilters_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Filters</a>
@@ -1664,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approveafterdays_nodejs">
 <a href="#approveafterdays_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>After<wbr>Days</a>
@@ -1674,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approveuntildate_nodejs">
 <a href="#approveuntildate_nodejs" style="color: inherit; text-decoration: inherit;">approve<wbr>Until<wbr>Date</a>
@@ -1684,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliancelevel_nodejs">
 <a href="#compliancelevel_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Level</a>
@@ -1694,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenonsecurity_nodejs">
 <a href="#enablenonsecurity_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Non<wbr>Security</a>
@@ -1704,13 +1567,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="patch_filters_python">
 <a href="#patch_filters_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>filters</a>
@@ -1719,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#patchbaselineapprovalrulepatchfilter">Sequence[Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The patch filter group that defines the criteria for the rule. Up to 5 patch filters can be specified per approval rule using Key/Value pairs. Valid Keys are `PATCH_SET | PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`. Valid combinations of these Keys and the `operating_system` value can be found in the [SSM DescribePatchProperties API Reference](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html). Valid Values are exact values for the patch property given as the key, or a wildcard `*`, which matches all values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approve_after_days_python">
 <a href="#approve_after_days_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>after_<wbr>days</a>
@@ -1729,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="approve_until_date_python">
 <a href="#approve_until_date_python" style="color: inherit; text-decoration: inherit;">approve_<wbr>until_<wbr>date</a>
@@ -1739,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cutoff date for auto approval of released patches. Any patches released on or before this date are installed automatically. Date is formatted as `YYYY-MM-DD`. Conflicts with `approve_after_days`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compliance_level_python">
 <a href="#compliance_level_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>level</a>
@@ -1749,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the compliance level for patches approved by this rule. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_non_security_python">
 <a href="#enable_non_security_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>non_<wbr>security</a>
@@ -1759,15 +1616,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean enabling the application of non-security updates. The default value is 'false'. Valid for Linux instances only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchbaselineapprovalrulepatchfilter">Patch<wbr>Baseline<wbr>Approval<wbr>Rule<wbr>Patch<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1775,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1784,13 +1638,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1798,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1807,13 +1658,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1821,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1830,13 +1678,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1844,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1853,15 +1698,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchbaselineglobalfilter">Patch<wbr>Baseline<wbr>Global<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1869,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1878,13 +1720,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1892,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1901,13 +1740,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1915,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1924,13 +1760,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1938,8 +1772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1947,15 +1780,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="patchbaselinesource">Patch<wbr>Baseline<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1964,8 +1795,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1974,8 +1804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_csharp">
 <a href="#products_csharp" style="color: inherit; text-decoration: inherit;">Products</a>
@@ -1984,13 +1813,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1999,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2009,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_go">
 <a href="#products_go" style="color: inherit; text-decoration: inherit;">Products</a>
@@ -2019,13 +1844,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -2034,8 +1857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2044,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_nodejs">
 <a href="#products_nodejs" style="color: inherit; text-decoration: inherit;">products</a>
@@ -2054,13 +1875,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -2069,8 +1888,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2079,8 +1897,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified to identify the patch source.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="products_python">
 <a href="#products_python" style="color: inherit; text-decoration: inherit;">products</a>
@@ -2089,8 +1906,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The specific operating system versions a patch repository applies to, such as `"Ubuntu16.04"`, `"AmazonLinux2016.09"`, `"RedhatEnterpriseLinux7.2"` or `"Suse12.7"`. For lists of supported product values, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

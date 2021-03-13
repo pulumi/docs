@@ -302,8 +302,7 @@ The FlexTemplateJob resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerspecgcspath_csharp">
 <a href="#containerspecgcspath_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Spec<wbr>Gcs<wbr>Path</a>
@@ -313,8 +312,7 @@ The FlexTemplateJob resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -322,8 +320,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -332,8 +329,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondelete_csharp">
 <a href="#ondelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -343,8 +339,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -355,8 +350,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -366,8 +360,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -376,13 +369,11 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerspecgcspath_go">
 <a href="#containerspecgcspath_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Spec<wbr>Gcs<wbr>Path</a>
@@ -392,8 +383,7 @@ provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -401,8 +391,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -411,8 +400,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondelete_go">
 <a href="#ondelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -422,8 +410,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -434,8 +421,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -445,8 +431,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -455,13 +440,11 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerspecgcspath_nodejs">
 <a href="#containerspecgcspath_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Spec<wbr>Gcs<wbr>Path</a>
@@ -471,8 +454,7 @@ provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -480,8 +462,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -490,8 +471,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ondelete_nodejs">
 <a href="#ondelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Delete</a>
@@ -501,8 +481,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -513,8 +492,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -524,8 +502,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -534,13 +511,11 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_spec_gcs_path_python">
 <a href="#container_spec_gcs_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>spec_<wbr>gcs_<wbr>path</a>
@@ -550,8 +525,7 @@ provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -559,8 +533,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -569,8 +542,7 @@ Template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_delete_python">
 <a href="#on_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>delete</a>
@@ -580,8 +552,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -592,8 +563,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -603,8 +573,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -613,8 +582,7 @@ provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -625,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -634,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_csharp">
 <a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -644,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -654,13 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -668,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_go">
 <a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -678,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -688,13 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -702,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_nodejs">
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -712,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -722,13 +679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="job_id_python">
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -746,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -756,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -884,8 +836,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerspecgcspath_csharp">
 <a href="#state_containerspecgcspath_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Spec<wbr>Gcs<wbr>Path</a>
@@ -895,8 +846,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_csharp">
 <a href="#state_jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -905,8 +855,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -914,8 +863,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -924,8 +872,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondelete_csharp">
 <a href="#state_ondelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -935,8 +882,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -947,8 +893,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -958,8 +903,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -968,8 +912,7 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -978,13 +921,11 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerspecgcspath_go">
 <a href="#state_containerspecgcspath_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Spec<wbr>Gcs<wbr>Path</a>
@@ -994,8 +935,7 @@ provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_go">
 <a href="#state_jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1004,8 +944,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1013,8 +952,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1023,8 +961,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondelete_go">
 <a href="#state_ondelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Delete</a>
@@ -1034,8 +971,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1046,8 +982,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1057,8 +992,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1067,8 +1001,7 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1077,13 +1010,11 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerspecgcspath_nodejs">
 <a href="#state_containerspecgcspath_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Spec<wbr>Gcs<wbr>Path</a>
@@ -1093,8 +1024,7 @@ provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_nodejs">
 <a href="#state_jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -1103,8 +1033,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1112,8 +1041,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1122,8 +1050,7 @@ Template.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ondelete_nodejs">
 <a href="#state_ondelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Delete</a>
@@ -1133,8 +1060,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1145,8 +1071,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1156,8 +1081,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1166,8 +1090,7 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1176,13 +1099,11 @@ provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_spec_gcs_path_python">
 <a href="#state_container_spec_gcs_path_python" style="color: inherit; text-decoration: inherit;">container_<wbr>spec_<wbr>gcs_<wbr>path</a>
@@ -1192,8 +1113,7 @@ provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The GCS path to the Dataflow job Flex
 Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_id_python">
 <a href="#state_job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -1202,8 +1122,7 @@ Template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID of this job.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1211,8 +1130,7 @@ Template.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated until the API supports this field{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1221,8 +1139,7 @@ Template.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for the resource, required by Dataflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_on_delete_python">
 <a href="#state_on_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>delete</a>
@@ -1232,8 +1149,7 @@ Template.
     </dt>
     <dd>{{% md %}}One of "drain" or "cancel". Specifies behavior of
 deletion during `pulumi destroy`.  See above note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1244,8 +1160,7 @@ deletion during `pulumi destroy`.  See above note.
     <dd>{{% md %}}Key/Value pairs to be passed to the Dataflow job (as
 used in the template). Additional [pipeline options](https://cloud.google.com/dataflow/docs/guides/specifying-exec-params#setting-other-cloud-dataflow-pipeline-options)
 such as `serviceAccount`, `workerMachineType`, etc can be specified here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1255,8 +1170,7 @@ such as `serviceAccount`, `workerMachineType`, etc can be specified here.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1265,8 +1179,7 @@ provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which the created job should run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1275,8 +1188,7 @@ provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

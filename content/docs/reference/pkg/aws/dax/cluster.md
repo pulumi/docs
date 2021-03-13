@@ -271,8 +271,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -282,8 +281,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iamrolearn_csharp">
 <a href="#iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -294,8 +292,7 @@ lowercase
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetype_csharp">
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -305,8 +302,7 @@ permissions to access DynamoDB on your behalf
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationfactor_csharp">
 <a href="#replicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -317,8 +313,7 @@ permissions to access DynamoDB on your behalf
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -328,8 +323,7 @@ replicas
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -338,8 +332,7 @@ nodes will be created
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_csharp">
 <a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -351,8 +344,7 @@ nodes will be created
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtopicarn_csharp">
 <a href="#notificationtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -363,8 +355,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_csharp">
 <a href="#parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -374,8 +365,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -385,8 +375,7 @@ with this DAX cluster
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_csharp">
 <a href="#serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
@@ -395,8 +384,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_csharp">
 <a href="#subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -406,8 +394,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -416,13 +403,11 @@ cluster
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -432,8 +417,7 @@ cluster
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iamrolearn_go">
 <a href="#iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -444,8 +428,7 @@ lowercase
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetype_go">
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -455,8 +438,7 @@ permissions to access DynamoDB on your behalf
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationfactor_go">
 <a href="#replicationfactor_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -467,8 +449,7 @@ permissions to access DynamoDB on your behalf
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -478,8 +459,7 @@ replicas
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -488,8 +468,7 @@ nodes will be created
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_go">
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -501,8 +480,7 @@ nodes will be created
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtopicarn_go">
 <a href="#notificationtopicarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -513,8 +491,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_go">
 <a href="#parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -524,8 +501,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -535,8 +511,7 @@ with this DAX cluster
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_go">
 <a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
@@ -545,8 +520,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_go">
 <a href="#subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -556,8 +530,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -566,13 +539,11 @@ cluster
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -582,8 +553,7 @@ cluster
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iamrolearn_nodejs">
 <a href="#iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -594,8 +564,7 @@ lowercase
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodetype_nodejs">
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
@@ -605,8 +574,7 @@ permissions to access DynamoDB on your behalf
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationfactor_nodejs">
 <a href="#replicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Factor</a>
@@ -617,8 +585,7 @@ permissions to access DynamoDB on your behalf
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -628,8 +595,7 @@ replicas
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -638,8 +604,7 @@ nodes will be created
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_nodejs">
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -651,8 +616,7 @@ nodes will be created
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtopicarn_nodejs">
 <a href="#notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
@@ -663,8 +627,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametergroupname_nodejs">
 <a href="#parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
@@ -674,8 +637,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -685,8 +647,7 @@ with this DAX cluster
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_nodejs">
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
@@ -695,8 +656,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetgroupname_nodejs">
 <a href="#subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
@@ -706,8 +666,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -716,13 +675,11 @@ cluster
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -732,8 +689,7 @@ cluster
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iam_role_arn_python">
 <a href="#iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -744,8 +700,7 @@ lowercase
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_type_python">
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
@@ -755,8 +710,7 @@ permissions to access DynamoDB on your behalf
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_factor_python">
 <a href="#replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
@@ -767,8 +721,7 @@ permissions to access DynamoDB on your behalf
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -778,8 +731,7 @@ replicas
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -788,8 +740,7 @@ nodes will be created
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_python">
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -801,8 +752,7 @@ nodes will be created
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_topic_arn_python">
 <a href="#notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
@@ -813,8 +763,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameter_group_name_python">
 <a href="#parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
@@ -824,8 +773,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -835,8 +783,7 @@ with this DAX cluster
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_python">
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
@@ -845,8 +792,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_group_name_python">
 <a href="#subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
@@ -856,8 +802,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -866,8 +811,7 @@ cluster
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -878,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -888,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_csharp">
 <a href="#clusteraddress_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -898,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configurationendpoint_csharp">
 <a href="#configurationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -909,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -918,8 +858,7 @@ consisting of a DNS name and a port number
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_csharp">
 <a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -930,8 +869,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -940,13 +878,11 @@ consisting of a DNS name and a port number
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -955,8 +891,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_go">
 <a href="#clusteraddress_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -965,8 +900,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configurationendpoint_go">
 <a href="#configurationendpoint_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -976,8 +910,7 @@ consisting of a DNS name and a port number
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -985,8 +918,7 @@ consisting of a DNS name and a port number
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_go">
 <a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -997,8 +929,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1007,13 +938,11 @@ consisting of a DNS name and a port number
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1022,8 +951,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clusteraddress_nodejs">
 <a href="#clusteraddress_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Address</a>
@@ -1032,8 +960,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configurationendpoint_nodejs">
 <a href="#configurationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint</a>
@@ -1043,8 +970,7 @@ consisting of a DNS name and a port number
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1052,8 +978,7 @@ consisting of a DNS name and a port number
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_nodejs">
 <a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1064,8 +989,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1074,13 +998,11 @@ consisting of a DNS name and a port number
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1089,8 +1011,7 @@ consisting of a DNS name and a port number
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_address_python">
 <a href="#cluster_address_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>address</a>
@@ -1099,8 +1020,7 @@ consisting of a DNS name and a port number
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configuration_endpoint_python">
 <a href="#configuration_endpoint_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint</a>
@@ -1110,8 +1030,7 @@ consisting of a DNS name and a port number
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1119,8 +1038,7 @@ consisting of a DNS name and a port number
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodes_python">
 <a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1131,8 +1049,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1141,8 +1058,7 @@ consisting of a DNS name and a port number
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1269,8 +1185,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1279,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
 <a href="#state_availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1290,8 +1204,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteraddress_csharp">
 <a href="#state_clusteraddress_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -1300,8 +1213,7 @@ nodes will be created
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_csharp">
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1311,8 +1223,7 @@ nodes will be created
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationendpoint_csharp">
 <a href="#state_configurationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -1322,8 +1233,7 @@ lowercase
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1332,8 +1242,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_csharp">
 <a href="#state_iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -1344,8 +1253,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindow_csharp">
 <a href="#state_maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -1357,8 +1265,7 @@ permissions to access DynamoDB on your behalf
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetype_csharp">
 <a href="#state_nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -1368,8 +1275,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_csharp">
 <a href="#state_nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1380,8 +1286,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtopicarn_csharp">
 <a href="#state_notificationtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -1392,8 +1297,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_csharp">
 <a href="#state_parametergroupname_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -1403,8 +1307,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1413,8 +1316,7 @@ with this DAX cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_csharp">
 <a href="#state_replicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -1425,8 +1327,7 @@ with this DAX cluster
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -1436,8 +1337,7 @@ replicas
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryption_csharp">
 <a href="#state_serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
@@ -1446,8 +1346,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_csharp">
 <a href="#state_subnetgroupname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -1457,8 +1356,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1467,13 +1365,11 @@ cluster
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1482,8 +1378,7 @@ cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
 <a href="#state_availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1493,8 +1388,7 @@ cluster
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteraddress_go">
 <a href="#state_clusteraddress_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Address</a>
@@ -1503,8 +1397,7 @@ nodes will be created
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_go">
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1514,8 +1407,7 @@ nodes will be created
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationendpoint_go">
 <a href="#state_configurationendpoint_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Endpoint</a>
@@ -1525,8 +1417,7 @@ lowercase
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1535,8 +1426,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_go">
 <a href="#state_iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -1547,8 +1437,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindow_go">
 <a href="#state_maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -1560,8 +1449,7 @@ permissions to access DynamoDB on your behalf
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetype_go">
 <a href="#state_nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
@@ -1571,8 +1459,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_go">
 <a href="#state_nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
@@ -1583,8 +1470,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtopicarn_go">
 <a href="#state_notificationtopicarn_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Topic<wbr>Arn</a>
@@ -1595,8 +1481,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_go">
 <a href="#state_parametergroupname_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Group<wbr>Name</a>
@@ -1606,8 +1491,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1616,8 +1500,7 @@ with this DAX cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_go">
 <a href="#state_replicationfactor_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -1628,8 +1511,7 @@ with this DAX cluster
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -1639,8 +1521,7 @@ replicas
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryption_go">
 <a href="#state_serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
@@ -1649,8 +1530,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_go">
 <a href="#state_subnetgroupname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Group<wbr>Name</a>
@@ -1660,8 +1540,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1670,13 +1549,11 @@ cluster
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1685,8 +1562,7 @@ cluster
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
 <a href="#state_availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -1696,8 +1572,7 @@ cluster
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteraddress_nodejs">
 <a href="#state_clusteraddress_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Address</a>
@@ -1706,8 +1581,7 @@ nodes will be created
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_nodejs">
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -1717,8 +1591,7 @@ nodes will be created
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configurationendpoint_nodejs">
 <a href="#state_configurationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Endpoint</a>
@@ -1728,8 +1601,7 @@ lowercase
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1738,8 +1610,7 @@ consisting of a DNS name and a port number
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_nodejs">
 <a href="#state_iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -1750,8 +1621,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindow_nodejs">
 <a href="#state_maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -1763,8 +1633,7 @@ permissions to access DynamoDB on your behalf
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodetype_nodejs">
 <a href="#state_nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
@@ -1774,8 +1643,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_nodejs">
 <a href="#state_nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1786,8 +1654,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtopicarn_nodejs">
 <a href="#state_notificationtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Topic<wbr>Arn</a>
@@ -1798,8 +1665,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parametergroupname_nodejs">
 <a href="#state_parametergroupname_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Group<wbr>Name</a>
@@ -1809,8 +1675,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1819,8 +1684,7 @@ with this DAX cluster
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_nodejs">
 <a href="#state_replicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Factor</a>
@@ -1831,8 +1695,7 @@ with this DAX cluster
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -1842,8 +1705,7 @@ replicas
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serversideencryption_nodejs">
 <a href="#state_serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
@@ -1852,8 +1714,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetgroupname_nodejs">
 <a href="#state_subnetgroupname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Group<wbr>Name</a>
@@ -1863,8 +1724,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1873,13 +1733,11 @@ cluster
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1888,8 +1746,7 @@ cluster
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
 <a href="#state_availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -1899,8 +1756,7 @@ cluster
     </dt>
     <dd>{{% md %}}List of Availability Zones in which the
 nodes will be created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_address_python">
 <a href="#state_cluster_address_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>address</a>
@@ -1909,8 +1765,7 @@ nodes will be created
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name of the DAX cluster without the port appended
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_name_python">
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -1920,8 +1775,7 @@ nodes will be created
     </dt>
     <dd>{{% md %}}Group identifier. DAX converts this name to
 lowercase
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_endpoint_python">
 <a href="#state_configuration_endpoint_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>endpoint</a>
@@ -1931,8 +1785,7 @@ lowercase
     </dt>
     <dd>{{% md %}}The configuration endpoint for this DAX cluster,
 consisting of a DNS name and a port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1941,8 +1794,7 @@ consisting of a DNS name and a port number
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_role_arn_python">
 <a href="#state_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -1953,8 +1805,7 @@ consisting of a DNS name and a port number
     <dd>{{% md %}}A valid Amazon Resource Name (ARN) that identifies
 an IAM role. At runtime, DAX will assume this role and use the role's
 permissions to access DynamoDB on your behalf
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_python">
 <a href="#state_maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -1966,8 +1817,7 @@ permissions to access DynamoDB on your behalf
 maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
 (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example:
 `sun:05:00-sun:09:00`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_type_python">
 <a href="#state_node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
@@ -1977,8 +1827,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     </dt>
     <dd>{{% md %}}The compute and memory capacity of the nodes. See
 [Nodes](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes) for supported node types
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodes_python">
 <a href="#state_nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
@@ -1989,8 +1838,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}List of node objects including `id`, `address`, `port` and
 `availability_zone`. Referenceable e.g. as
 `${aws_dax_cluster.test.nodes.0.address}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_topic_arn_python">
 <a href="#state_notification_topic_arn_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>topic_<wbr>arn</a>
@@ -2001,8 +1849,7 @@ maintenance on the cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi`
     <dd>{{% md %}}An Amazon Resource Name (ARN) of an
 SNS topic to send DAX notifications to. Example:
 `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameter_group_name_python">
 <a href="#state_parameter_group_name_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>group_<wbr>name</a>
@@ -2012,8 +1859,7 @@ SNS topic to send DAX notifications to. Example:
     </dt>
     <dd>{{% md %}}Name of the parameter group to associate
 with this DAX cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2022,8 +1868,7 @@ with this DAX cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_factor_python">
 <a href="#state_replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
@@ -2034,8 +1879,7 @@ with this DAX cluster
     <dd>{{% md %}}The number of nodes in the DAX cluster. A
 replication factor of 1 will create a single-node cluster, without any read
 replicas
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -2045,8 +1889,7 @@ replicas
     </dt>
     <dd>{{% md %}}One or more VPC security groups associated
 with the cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_side_encryption_python">
 <a href="#state_server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
@@ -2055,8 +1898,7 @@ with the cluster
         <span class="property-type"><a href="#clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_group_name_python">
 <a href="#state_subnet_group_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>group_<wbr>name</a>
@@ -2066,8 +1908,7 @@ with the cluster
     </dt>
     <dd>{{% md %}}Name of the subnet group to be used for the
 cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2076,8 +1917,7 @@ cluster
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2092,8 +1932,7 @@ cluster
 <h4 id="clusternode">Cluster<wbr>Node</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2101,8 +1940,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -2110,8 +1948,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2119,8 +1956,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2129,13 +1965,11 @@ cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2143,8 +1977,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -2152,8 +1985,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2161,8 +1993,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2171,13 +2002,11 @@ cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2185,8 +2014,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -2194,8 +2022,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2203,8 +2030,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2213,13 +2039,11 @@ cluster
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2227,8 +2051,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -2236,8 +2059,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2245,8 +2067,7 @@ cluster
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2255,15 +2076,13 @@ cluster
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the configuration endpoint
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterserversideencryption">Cluster<wbr>Server<wbr>Side<wbr>Encryption</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2272,13 +2091,11 @@ cluster
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2287,13 +2104,11 @@ cluster
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2302,13 +2117,11 @@ cluster
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2317,8 +2130,7 @@ cluster
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -270,8 +270,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archived_csharp">
 <a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -280,8 +279,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -290,8 +288,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includesubgroups_csharp">
 <a href="#includesubgroups_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Subgroups</a>
@@ -300,8 +297,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include projects in subgroups of this group. Default is `false`. Needs `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueryablepages_csharp">
 <a href="#maxqueryablepages_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queryable<wbr>Pages</a>
@@ -310,8 +306,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Prevents overloading your Gitlab instance in case of a misconfiguration. Default is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membership_csharp">
 <a href="#membership_csharp" style="color: inherit; text-decoration: inherit;">Membership</a>
@@ -320,8 +315,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects that the current user is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minaccesslevel_csharp">
 <a href="#minaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Access<wbr>Level</a>
@@ -330,8 +324,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limit to projects where current user has at least this access level, refer to the [official documentation](https://docs.gitlab.com/ee/api/members.html) for values. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderby_csharp">
 <a href="#orderby_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>By</a>
@@ -340,8 +333,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return projects ordered by `id`, `name`, `path`, `created_at`, `updated_at`, or `last_activity_at` fields. Default is `created_at`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owned_csharp">
 <a href="#owned_csharp" style="color: inherit; text-decoration: inherit;">Owned</a>
@@ -350,8 +342,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects owned by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="page_csharp">
 <a href="#page_csharp" style="color: inherit; text-decoration: inherit;">Page</a>
@@ -359,8 +350,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="perpage_csharp">
 <a href="#perpage_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Page</a>
@@ -368,8 +358,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_csharp">
 <a href="#search_csharp" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -378,8 +367,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return list of authorized projects matching the search criteria.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simple_csharp">
 <a href="#simple_csharp" style="color: inherit; text-decoration: inherit;">Simple</a>
@@ -388,8 +376,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Return only the ID, URL, name, and path of each project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_csharp">
 <a href="#sort_csharp" style="color: inherit; text-decoration: inherit;">Sort</a>
@@ -398,8 +385,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return projects sorted in `asc` or `desc` order. Default is `desc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starred_csharp">
 <a href="#starred_csharp" style="color: inherit; text-decoration: inherit;">Starred</a>
@@ -408,8 +394,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects starred by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistics_csharp">
 <a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
@@ -418,8 +403,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -428,8 +412,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withcustomattributes_csharp">
 <a href="#withcustomattributes_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Custom<wbr>Attributes</a>
@@ -438,8 +421,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include custom attributes in response _(admins only)_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withissuesenabled_csharp">
 <a href="#withissuesenabled_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Issues<wbr>Enabled</a>
@@ -448,8 +430,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects with issues feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withmergerequestsenabled_csharp">
 <a href="#withmergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Merge<wbr>Requests<wbr>Enabled</a>
@@ -458,8 +439,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects with merge requests feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withprogramminglanguage_csharp">
 <a href="#withprogramminglanguage_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Programming<wbr>Language</a>
@@ -468,8 +448,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by projects which use the given programming language. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withshared_csharp">
 <a href="#withshared_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Shared</a>
@@ -478,13 +457,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include projects shared to this group. Default is `true`. Needs `group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archived_go">
 <a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -493,8 +470,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -503,8 +479,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includesubgroups_go">
 <a href="#includesubgroups_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Subgroups</a>
@@ -513,8 +488,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include projects in subgroups of this group. Default is `false`. Needs `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueryablepages_go">
 <a href="#maxqueryablepages_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queryable<wbr>Pages</a>
@@ -523,8 +497,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Prevents overloading your Gitlab instance in case of a misconfiguration. Default is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membership_go">
 <a href="#membership_go" style="color: inherit; text-decoration: inherit;">Membership</a>
@@ -533,8 +506,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects that the current user is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minaccesslevel_go">
 <a href="#minaccesslevel_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Access<wbr>Level</a>
@@ -543,8 +515,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limit to projects where current user has at least this access level, refer to the [official documentation](https://docs.gitlab.com/ee/api/members.html) for values. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderby_go">
 <a href="#orderby_go" style="color: inherit; text-decoration: inherit;">Order<wbr>By</a>
@@ -553,8 +524,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return projects ordered by `id`, `name`, `path`, `created_at`, `updated_at`, or `last_activity_at` fields. Default is `created_at`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owned_go">
 <a href="#owned_go" style="color: inherit; text-decoration: inherit;">Owned</a>
@@ -563,8 +533,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects owned by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="page_go">
 <a href="#page_go" style="color: inherit; text-decoration: inherit;">Page</a>
@@ -572,8 +541,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="perpage_go">
 <a href="#perpage_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Page</a>
@@ -581,8 +549,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_go">
 <a href="#search_go" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -591,8 +558,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return list of authorized projects matching the search criteria.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simple_go">
 <a href="#simple_go" style="color: inherit; text-decoration: inherit;">Simple</a>
@@ -601,8 +567,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Return only the ID, URL, name, and path of each project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_go">
 <a href="#sort_go" style="color: inherit; text-decoration: inherit;">Sort</a>
@@ -611,8 +576,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return projects sorted in `asc` or `desc` order. Default is `desc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starred_go">
 <a href="#starred_go" style="color: inherit; text-decoration: inherit;">Starred</a>
@@ -621,8 +585,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects starred by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistics_go">
 <a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
@@ -631,8 +594,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -641,8 +603,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withcustomattributes_go">
 <a href="#withcustomattributes_go" style="color: inherit; text-decoration: inherit;">With<wbr>Custom<wbr>Attributes</a>
@@ -651,8 +612,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include custom attributes in response _(admins only)_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withissuesenabled_go">
 <a href="#withissuesenabled_go" style="color: inherit; text-decoration: inherit;">With<wbr>Issues<wbr>Enabled</a>
@@ -661,8 +621,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects with issues feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withmergerequestsenabled_go">
 <a href="#withmergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">With<wbr>Merge<wbr>Requests<wbr>Enabled</a>
@@ -671,8 +630,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects with merge requests feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withprogramminglanguage_go">
 <a href="#withprogramminglanguage_go" style="color: inherit; text-decoration: inherit;">With<wbr>Programming<wbr>Language</a>
@@ -681,8 +639,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by projects which use the given programming language. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withshared_go">
 <a href="#withshared_go" style="color: inherit; text-decoration: inherit;">With<wbr>Shared</a>
@@ -691,13 +648,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include projects shared to this group. Default is `true`. Needs `group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archived_nodejs">
 <a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -706,8 +661,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -716,8 +670,7 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includesubgroups_nodejs">
 <a href="#includesubgroups_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subgroups</a>
@@ -726,8 +679,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include projects in subgroups of this group. Default is `false`. Needs `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueryablepages_nodejs">
 <a href="#maxqueryablepages_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queryable<wbr>Pages</a>
@@ -736,8 +688,7 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Prevents overloading your Gitlab instance in case of a misconfiguration. Default is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membership_nodejs">
 <a href="#membership_nodejs" style="color: inherit; text-decoration: inherit;">membership</a>
@@ -746,8 +697,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by projects that the current user is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minaccesslevel_nodejs">
 <a href="#minaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Access<wbr>Level</a>
@@ -756,8 +706,7 @@ The following arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Limit to projects where current user has at least this access level, refer to the [official documentation](https://docs.gitlab.com/ee/api/members.html) for values. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderby_nodejs">
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
@@ -766,8 +715,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return projects ordered by `id`, `name`, `path`, `created_at`, `updated_at`, or `last_activity_at` fields. Default is `created_at`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owned_nodejs">
 <a href="#owned_nodejs" style="color: inherit; text-decoration: inherit;">owned</a>
@@ -776,8 +724,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by projects owned by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="page_nodejs">
 <a href="#page_nodejs" style="color: inherit; text-decoration: inherit;">page</a>
@@ -785,8 +732,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="perpage_nodejs">
 <a href="#perpage_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Page</a>
@@ -794,8 +740,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_nodejs">
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
@@ -804,8 +749,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return list of authorized projects matching the search criteria.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simple_nodejs">
 <a href="#simple_nodejs" style="color: inherit; text-decoration: inherit;">simple</a>
@@ -814,8 +758,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Return only the ID, URL, name, and path of each project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_nodejs">
 <a href="#sort_nodejs" style="color: inherit; text-decoration: inherit;">sort</a>
@@ -824,8 +767,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Return projects sorted in `asc` or `desc` order. Default is `desc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starred_nodejs">
 <a href="#starred_nodejs" style="color: inherit; text-decoration: inherit;">starred</a>
@@ -834,8 +776,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by projects starred by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistics_nodejs">
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
@@ -844,8 +785,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -854,8 +794,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withcustomattributes_nodejs">
 <a href="#withcustomattributes_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Custom<wbr>Attributes</a>
@@ -864,8 +803,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include custom attributes in response _(admins only)_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withissuesenabled_nodejs">
 <a href="#withissuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Issues<wbr>Enabled</a>
@@ -874,8 +812,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by projects with issues feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withmergerequestsenabled_nodejs">
 <a href="#withmergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Merge<wbr>Requests<wbr>Enabled</a>
@@ -884,8 +821,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by projects with merge requests feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withprogramminglanguage_nodejs">
 <a href="#withprogramminglanguage_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Programming<wbr>Language</a>
@@ -894,8 +830,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by projects which use the given programming language. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="withshared_nodejs">
 <a href="#withshared_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Shared</a>
@@ -904,13 +839,11 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Include projects shared to this group. Default is `true`. Needs `group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archived_python">
 <a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -919,8 +852,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -929,8 +861,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_subgroups_python">
 <a href="#include_subgroups_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subgroups</a>
@@ -939,8 +870,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include projects in subgroups of this group. Default is `false`. Needs `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_queryable_pages_python">
 <a href="#max_queryable_pages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queryable_<wbr>pages</a>
@@ -949,8 +879,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Prevents overloading your Gitlab instance in case of a misconfiguration. Default is `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="membership_python">
 <a href="#membership_python" style="color: inherit; text-decoration: inherit;">membership</a>
@@ -959,8 +888,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects that the current user is a member of.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_access_level_python">
 <a href="#min_access_level_python" style="color: inherit; text-decoration: inherit;">min_<wbr>access_<wbr>level</a>
@@ -969,8 +897,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limit to projects where current user has at least this access level, refer to the [official documentation](https://docs.gitlab.com/ee/api/members.html) for values. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_by_python">
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
@@ -979,8 +906,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Return projects ordered by `id`, `name`, `path`, `created_at`, `updated_at`, or `last_activity_at` fields. Default is `created_at`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owned_python">
 <a href="#owned_python" style="color: inherit; text-decoration: inherit;">owned</a>
@@ -989,8 +915,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects owned by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="page_python">
 <a href="#page_python" style="color: inherit; text-decoration: inherit;">page</a>
@@ -998,8 +923,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="per_page_python">
 <a href="#per_page_python" style="color: inherit; text-decoration: inherit;">per_<wbr>page</a>
@@ -1007,8 +931,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_python">
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
@@ -1017,8 +940,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Return list of authorized projects matching the search criteria.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="simple_python">
 <a href="#simple_python" style="color: inherit; text-decoration: inherit;">simple</a>
@@ -1027,8 +949,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Return only the ID, URL, name, and path of each project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_python">
 <a href="#sort_python" style="color: inherit; text-decoration: inherit;">sort</a>
@@ -1037,8 +958,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Return projects sorted in `asc` or `desc` order. Default is `desc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starred_python">
 <a href="#starred_python" style="color: inherit; text-decoration: inherit;">starred</a>
@@ -1047,8 +967,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects starred by the current user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statistics_python">
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
@@ -1057,8 +976,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1067,8 +985,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_custom_attributes_python">
 <a href="#with_custom_attributes_python" style="color: inherit; text-decoration: inherit;">with_<wbr>custom_<wbr>attributes</a>
@@ -1077,8 +994,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include custom attributes in response _(admins only)_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_issues_enabled_python">
 <a href="#with_issues_enabled_python" style="color: inherit; text-decoration: inherit;">with_<wbr>issues_<wbr>enabled</a>
@@ -1087,8 +1003,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects with issues feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_merge_requests_enabled_python">
 <a href="#with_merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">with_<wbr>merge_<wbr>requests_<wbr>enabled</a>
@@ -1097,8 +1012,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by projects with merge requests feature enabled. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_programming_language_python">
 <a href="#with_programming_language_python" style="color: inherit; text-decoration: inherit;">with_<wbr>programming_<wbr>language</a>
@@ -1107,8 +1021,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit by projects which use the given programming language. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="with_shared_python">
 <a href="#with_shared_python" style="color: inherit; text-decoration: inherit;">with_<wbr>shared</a>
@@ -1117,8 +1030,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Include projects shared to this group. Default is `true`. Needs `group_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1131,8 +1043,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1141,8 +1052,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_csharp">
 <a href="#projects_csharp" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -1151,8 +1061,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getprojectsproject">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Outputs.<wbr>Get<wbr>Projects<wbr>Project&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list containing the projects matching the supplied arguments
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="archived_csharp">
 <a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -1160,8 +1069,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1169,8 +1077,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includesubgroups_csharp">
 <a href="#includesubgroups_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Subgroups</a>
@@ -1178,8 +1085,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxqueryablepages_csharp">
 <a href="#maxqueryablepages_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queryable<wbr>Pages</a>
@@ -1187,8 +1093,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="membership_csharp">
 <a href="#membership_csharp" style="color: inherit; text-decoration: inherit;">Membership</a>
@@ -1196,8 +1101,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minaccesslevel_csharp">
 <a href="#minaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Access<wbr>Level</a>
@@ -1205,8 +1109,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderby_csharp">
 <a href="#orderby_csharp" style="color: inherit; text-decoration: inherit;">Order<wbr>By</a>
@@ -1214,8 +1117,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owned_csharp">
 <a href="#owned_csharp" style="color: inherit; text-decoration: inherit;">Owned</a>
@@ -1223,8 +1125,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="page_csharp">
 <a href="#page_csharp" style="color: inherit; text-decoration: inherit;">Page</a>
@@ -1232,8 +1133,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perpage_csharp">
 <a href="#perpage_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Page</a>
@@ -1241,8 +1141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="search_csharp">
 <a href="#search_csharp" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -1250,8 +1149,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="simple_csharp">
 <a href="#simple_csharp" style="color: inherit; text-decoration: inherit;">Simple</a>
@@ -1259,8 +1157,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sort_csharp">
 <a href="#sort_csharp" style="color: inherit; text-decoration: inherit;">Sort</a>
@@ -1268,8 +1165,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starred_csharp">
 <a href="#starred_csharp" style="color: inherit; text-decoration: inherit;">Starred</a>
@@ -1277,8 +1173,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statistics_csharp">
 <a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
@@ -1286,8 +1181,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -1296,8 +1190,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility of the project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withcustomattributes_csharp">
 <a href="#withcustomattributes_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Custom<wbr>Attributes</a>
@@ -1305,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withissuesenabled_csharp">
 <a href="#withissuesenabled_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Issues<wbr>Enabled</a>
@@ -1314,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withmergerequestsenabled_csharp">
 <a href="#withmergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Merge<wbr>Requests<wbr>Enabled</a>
@@ -1323,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withprogramminglanguage_csharp">
 <a href="#withprogramminglanguage_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Programming<wbr>Language</a>
@@ -1332,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withshared_csharp">
 <a href="#withshared_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Shared</a>
@@ -1341,13 +1230,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1356,8 +1243,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_go">
 <a href="#projects_go" style="color: inherit; text-decoration: inherit;">Projects</a>
@@ -1366,8 +1252,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getprojectsproject">[]Get<wbr>Projects<wbr>Project</a></span>
     </dt>
     <dd>{{% md %}}A list containing the projects matching the supplied arguments
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="archived_go">
 <a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -1375,8 +1260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1384,8 +1268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includesubgroups_go">
 <a href="#includesubgroups_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Subgroups</a>
@@ -1393,8 +1276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxqueryablepages_go">
 <a href="#maxqueryablepages_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queryable<wbr>Pages</a>
@@ -1402,8 +1284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="membership_go">
 <a href="#membership_go" style="color: inherit; text-decoration: inherit;">Membership</a>
@@ -1411,8 +1292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minaccesslevel_go">
 <a href="#minaccesslevel_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Access<wbr>Level</a>
@@ -1420,8 +1300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderby_go">
 <a href="#orderby_go" style="color: inherit; text-decoration: inherit;">Order<wbr>By</a>
@@ -1429,8 +1308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owned_go">
 <a href="#owned_go" style="color: inherit; text-decoration: inherit;">Owned</a>
@@ -1438,8 +1316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="page_go">
 <a href="#page_go" style="color: inherit; text-decoration: inherit;">Page</a>
@@ -1447,8 +1324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perpage_go">
 <a href="#perpage_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Page</a>
@@ -1456,8 +1332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="search_go">
 <a href="#search_go" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -1465,8 +1340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="simple_go">
 <a href="#simple_go" style="color: inherit; text-decoration: inherit;">Simple</a>
@@ -1474,8 +1348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sort_go">
 <a href="#sort_go" style="color: inherit; text-decoration: inherit;">Sort</a>
@@ -1483,8 +1356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starred_go">
 <a href="#starred_go" style="color: inherit; text-decoration: inherit;">Starred</a>
@@ -1492,8 +1364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statistics_go">
 <a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
@@ -1501,8 +1372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -1511,8 +1381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility of the project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withcustomattributes_go">
 <a href="#withcustomattributes_go" style="color: inherit; text-decoration: inherit;">With<wbr>Custom<wbr>Attributes</a>
@@ -1520,8 +1389,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withissuesenabled_go">
 <a href="#withissuesenabled_go" style="color: inherit; text-decoration: inherit;">With<wbr>Issues<wbr>Enabled</a>
@@ -1529,8 +1397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withmergerequestsenabled_go">
 <a href="#withmergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">With<wbr>Merge<wbr>Requests<wbr>Enabled</a>
@@ -1538,8 +1405,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withprogramminglanguage_go">
 <a href="#withprogramminglanguage_go" style="color: inherit; text-decoration: inherit;">With<wbr>Programming<wbr>Language</a>
@@ -1547,8 +1413,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withshared_go">
 <a href="#withshared_go" style="color: inherit; text-decoration: inherit;">With<wbr>Shared</a>
@@ -1556,13 +1421,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1571,8 +1434,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_nodejs">
 <a href="#projects_nodejs" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -1581,8 +1443,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getprojectsproject">Get<wbr>Projects<wbr>Project[]</a></span>
     </dt>
     <dd>{{% md %}}A list containing the projects matching the supplied arguments
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="archived_nodejs">
 <a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -1590,8 +1451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -1599,8 +1459,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includesubgroups_nodejs">
 <a href="#includesubgroups_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Subgroups</a>
@@ -1608,8 +1467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxqueryablepages_nodejs">
 <a href="#maxqueryablepages_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queryable<wbr>Pages</a>
@@ -1617,8 +1475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="membership_nodejs">
 <a href="#membership_nodejs" style="color: inherit; text-decoration: inherit;">membership</a>
@@ -1626,8 +1483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minaccesslevel_nodejs">
 <a href="#minaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Access<wbr>Level</a>
@@ -1635,8 +1491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orderby_nodejs">
 <a href="#orderby_nodejs" style="color: inherit; text-decoration: inherit;">order<wbr>By</a>
@@ -1644,8 +1499,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owned_nodejs">
 <a href="#owned_nodejs" style="color: inherit; text-decoration: inherit;">owned</a>
@@ -1653,8 +1507,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="page_nodejs">
 <a href="#page_nodejs" style="color: inherit; text-decoration: inherit;">page</a>
@@ -1662,8 +1515,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="perpage_nodejs">
 <a href="#perpage_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Page</a>
@@ -1671,8 +1523,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="search_nodejs">
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
@@ -1680,8 +1531,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="simple_nodejs">
 <a href="#simple_nodejs" style="color: inherit; text-decoration: inherit;">simple</a>
@@ -1689,8 +1539,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sort_nodejs">
 <a href="#sort_nodejs" style="color: inherit; text-decoration: inherit;">sort</a>
@@ -1698,8 +1547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starred_nodejs">
 <a href="#starred_nodejs" style="color: inherit; text-decoration: inherit;">starred</a>
@@ -1707,8 +1555,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statistics_nodejs">
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
@@ -1716,8 +1563,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1726,8 +1572,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The visibility of the project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withcustomattributes_nodejs">
 <a href="#withcustomattributes_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Custom<wbr>Attributes</a>
@@ -1735,8 +1580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withissuesenabled_nodejs">
 <a href="#withissuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Issues<wbr>Enabled</a>
@@ -1744,8 +1588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withmergerequestsenabled_nodejs">
 <a href="#withmergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Merge<wbr>Requests<wbr>Enabled</a>
@@ -1753,8 +1596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withprogramminglanguage_nodejs">
 <a href="#withprogramminglanguage_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Programming<wbr>Language</a>
@@ -1762,8 +1604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="withshared_nodejs">
 <a href="#withshared_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Shared</a>
@@ -1771,13 +1612,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1786,8 +1625,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projects_python">
 <a href="#projects_python" style="color: inherit; text-decoration: inherit;">projects</a>
@@ -1796,8 +1634,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getprojectsproject">Sequence[Get<wbr>Projects<wbr>Project]</a></span>
     </dt>
     <dd>{{% md %}}A list containing the projects matching the supplied arguments
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="archived_python">
 <a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -1805,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -1814,8 +1650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="include_subgroups_python">
 <a href="#include_subgroups_python" style="color: inherit; text-decoration: inherit;">include_<wbr>subgroups</a>
@@ -1823,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_queryable_pages_python">
 <a href="#max_queryable_pages_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queryable_<wbr>pages</a>
@@ -1832,8 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="membership_python">
 <a href="#membership_python" style="color: inherit; text-decoration: inherit;">membership</a>
@@ -1841,8 +1674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_access_level_python">
 <a href="#min_access_level_python" style="color: inherit; text-decoration: inherit;">min_<wbr>access_<wbr>level</a>
@@ -1850,8 +1682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="order_by_python">
 <a href="#order_by_python" style="color: inherit; text-decoration: inherit;">order_<wbr>by</a>
@@ -1859,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owned_python">
 <a href="#owned_python" style="color: inherit; text-decoration: inherit;">owned</a>
@@ -1868,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="page_python">
 <a href="#page_python" style="color: inherit; text-decoration: inherit;">page</a>
@@ -1877,8 +1706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="per_page_python">
 <a href="#per_page_python" style="color: inherit; text-decoration: inherit;">per_<wbr>page</a>
@@ -1886,8 +1714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="search_python">
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
@@ -1895,8 +1722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="simple_python">
 <a href="#simple_python" style="color: inherit; text-decoration: inherit;">simple</a>
@@ -1904,8 +1730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sort_python">
 <a href="#sort_python" style="color: inherit; text-decoration: inherit;">sort</a>
@@ -1913,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starred_python">
 <a href="#starred_python" style="color: inherit; text-decoration: inherit;">starred</a>
@@ -1922,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statistics_python">
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
@@ -1931,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1941,8 +1763,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The visibility of the project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_custom_attributes_python">
 <a href="#with_custom_attributes_python" style="color: inherit; text-decoration: inherit;">with_<wbr>custom_<wbr>attributes</a>
@@ -1950,8 +1771,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_issues_enabled_python">
 <a href="#with_issues_enabled_python" style="color: inherit; text-decoration: inherit;">with_<wbr>issues_<wbr>enabled</a>
@@ -1959,8 +1779,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_merge_requests_enabled_python">
 <a href="#with_merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">with_<wbr>merge_<wbr>requests_<wbr>enabled</a>
@@ -1968,8 +1787,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_programming_language_python">
 <a href="#with_programming_language_python" style="color: inherit; text-decoration: inherit;">with_<wbr>programming_<wbr>language</a>
@@ -1977,8 +1795,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="with_shared_python">
 <a href="#with_shared_python" style="color: inherit; text-decoration: inherit;">with_<wbr>shared</a>
@@ -1986,8 +1803,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2001,8 +1817,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="approvalsbeforemerge_csharp">
 <a href="#approvalsbeforemerge_csharp" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Before<wbr>Merge</a>
@@ -2011,8 +1826,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numbers of approvals needed in a merge requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archived_csharp">
 <a href="#archived_csharp" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -2021,8 +1835,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="avatarurl_csharp">
 <a href="#avatarurl_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Url</a>
@@ -2030,8 +1843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ciconfigpath_csharp">
 <a href="#ciconfigpath_csharp" style="color: inherit; text-decoration: inherit;">Ci<wbr>Config<wbr>Path</a>
@@ -2039,8 +1851,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerregistryenabled_csharp">
 <a href="#containerregistryenabled_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Enabled</a>
@@ -2048,8 +1859,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2057,8 +1867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creatorid_csharp">
 <a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -2066,8 +1875,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -2075,8 +1883,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultbranch_csharp">
 <a href="#defaultbranch_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
@@ -2084,8 +1891,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2093,8 +1899,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forkedfromproject_csharp">
 <a href="#forkedfromproject_csharp" style="color: inherit; text-decoration: inherit;">Forked<wbr>From<wbr>Project</a>
@@ -2102,8 +1907,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forkscount_csharp">
 <a href="#forkscount_csharp" style="color: inherit; text-decoration: inherit;">Forks<wbr>Count</a>
@@ -2111,8 +1915,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurltorepo_csharp">
 <a href="#httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
@@ -2121,8 +1924,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2131,8 +1933,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importerror_csharp">
 <a href="#importerror_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Error</a>
@@ -2140,8 +1941,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importstatus_csharp">
 <a href="#importstatus_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Status</a>
@@ -2149,8 +1949,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuesenabled_csharp">
 <a href="#issuesenabled_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
@@ -2158,8 +1957,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobsenabled_csharp">
 <a href="#jobsenabled_csharp" style="color: inherit; text-decoration: inherit;">Jobs<wbr>Enabled</a>
@@ -2168,8 +1966,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether pipelines are enabled for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastactivityat_csharp">
 <a href="#lastactivityat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>At</a>
@@ -2177,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lfsenabled_csharp">
 <a href="#lfsenabled_csharp" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
@@ -2186,8 +1982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mergemethod_csharp">
 <a href="#mergemethod_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Method</a>
@@ -2195,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mergerequestsenabled_csharp">
 <a href="#mergerequestsenabled_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
@@ -2204,8 +1998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_csharp">
 <a href="#mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -2213,8 +2006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroroverwritesdivergedbranches_csharp">
 <a href="#mirroroverwritesdivergedbranches_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
@@ -2222,8 +2014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirrortriggerbuilds_csharp">
 <a href="#mirrortriggerbuilds_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Trigger<wbr>Builds</a>
@@ -2231,8 +2022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroruserid_csharp">
 <a href="#mirroruserid_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>User<wbr>Id</a>
@@ -2240,8 +2030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2250,8 +2039,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namewithnamespace_csharp">
 <a href="#namewithnamespace_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>With<wbr>Namespace</a>
@@ -2260,8 +2048,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2269,8 +2056,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectnamespace">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Namespace<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlyallowmergeifalldiscussionsareresolved_csharp">
 <a href="#onlyallowmergeifalldiscussionsareresolved_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
@@ -2278,8 +2064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlyallowmergeifpipelinesucceeds_csharp">
 <a href="#onlyallowmergeifpipelinesucceeds_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
@@ -2287,8 +2072,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlymirrorprotectedbranches_csharp">
 <a href="#onlymirrorprotectedbranches_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
@@ -2296,8 +2080,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openissuescount_csharp">
 <a href="#openissuescount_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Issues<wbr>Count</a>
@@ -2305,8 +2088,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -2314,8 +2096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectowner">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Owner<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packagesenabled_csharp">
 <a href="#packagesenabled_csharp" style="color: inherit; text-decoration: inherit;">Packages<wbr>Enabled</a>
@@ -2323,8 +2104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2332,8 +2112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathwithnamespace_csharp">
 <a href="#pathwithnamespace_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
@@ -2342,8 +2121,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -2351,8 +2129,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectpermissions">Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Permissions<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -2361,8 +2138,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is public.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicbuilds_csharp">
 <a href="#publicbuilds_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Builds</a>
@@ -2370,8 +2146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readmeurl_csharp">
 <a href="#readmeurl_csharp" style="color: inherit; text-decoration: inherit;">Readme<wbr>Url</a>
@@ -2379,8 +2154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestaccessenabled_csharp">
 <a href="#requestaccessenabled_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
@@ -2388,8 +2162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resolveoutdateddiffdiscussions_csharp">
 <a href="#resolveoutdateddiffdiscussions_csharp" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Outdated<wbr>Diff<wbr>Discussions</a>
@@ -2397,8 +2170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runnerstoken_csharp">
 <a href="#runnerstoken_csharp" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
@@ -2406,8 +2178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedrunnersenabled_csharp">
 <a href="#sharedrunnersenabled_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Runners<wbr>Enabled</a>
@@ -2415,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedwithgroups_csharp">
 <a href="#sharedwithgroups_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
@@ -2424,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">List&lt;Pulumi.<wbr>Git<wbr>Lab.<wbr>Inputs.<wbr>Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snippetsenabled_csharp">
 <a href="#snippetsenabled_csharp" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
@@ -2433,8 +2202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshurltorepo_csharp">
 <a href="#sshurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
@@ -2443,8 +2211,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starcount_csharp">
 <a href="#starcount_csharp" style="color: inherit; text-decoration: inherit;">Star<wbr>Count</a>
@@ -2452,8 +2219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistics_csharp">
 <a href="#statistics_csharp" style="color: inherit; text-decoration: inherit;">Statistics</a>
@@ -2462,8 +2228,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taglists_csharp">
 <a href="#taglists_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Lists</a>
@@ -2472,8 +2237,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of the project topics (formerly called "project tags").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -2482,8 +2246,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weburl_csharp">
 <a href="#weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
@@ -2491,8 +2254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="wikienabled_csharp">
 <a href="#wikienabled_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
@@ -2500,8 +2262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="_links_csharp">
 <a href="#_links_csharp" style="color: inherit; text-decoration: inherit;">_<wbr>links</a>
@@ -2509,13 +2270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="approvalsbeforemerge_go">
 <a href="#approvalsbeforemerge_go" style="color: inherit; text-decoration: inherit;">Approvals<wbr>Before<wbr>Merge</a>
@@ -2524,8 +2283,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numbers of approvals needed in a merge requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archived_go">
 <a href="#archived_go" style="color: inherit; text-decoration: inherit;">Archived</a>
@@ -2534,8 +2292,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="avatarurl_go">
 <a href="#avatarurl_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Url</a>
@@ -2543,8 +2300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ciconfigpath_go">
 <a href="#ciconfigpath_go" style="color: inherit; text-decoration: inherit;">Ci<wbr>Config<wbr>Path</a>
@@ -2552,8 +2308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerregistryenabled_go">
 <a href="#containerregistryenabled_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Registry<wbr>Enabled</a>
@@ -2561,8 +2316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2570,8 +2324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creatorid_go">
 <a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
@@ -2579,8 +2332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -2588,8 +2340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultbranch_go">
 <a href="#defaultbranch_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Branch</a>
@@ -2597,8 +2348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2606,8 +2356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forkedfromproject_go">
 <a href="#forkedfromproject_go" style="color: inherit; text-decoration: inherit;">Forked<wbr>From<wbr>Project</a>
@@ -2615,8 +2364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forkscount_go">
 <a href="#forkscount_go" style="color: inherit; text-decoration: inherit;">Forks<wbr>Count</a>
@@ -2624,8 +2372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurltorepo_go">
 <a href="#httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
@@ -2634,8 +2381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2644,8 +2390,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importerror_go">
 <a href="#importerror_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Error</a>
@@ -2653,8 +2398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importstatus_go">
 <a href="#importstatus_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Status</a>
@@ -2662,8 +2406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuesenabled_go">
 <a href="#issuesenabled_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Enabled</a>
@@ -2671,8 +2414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobsenabled_go">
 <a href="#jobsenabled_go" style="color: inherit; text-decoration: inherit;">Jobs<wbr>Enabled</a>
@@ -2681,8 +2423,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether pipelines are enabled for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastactivityat_go">
 <a href="#lastactivityat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>At</a>
@@ -2690,8 +2431,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lfsenabled_go">
 <a href="#lfsenabled_go" style="color: inherit; text-decoration: inherit;">Lfs<wbr>Enabled</a>
@@ -2699,8 +2439,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mergemethod_go">
 <a href="#mergemethod_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Method</a>
@@ -2708,8 +2447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mergerequestsenabled_go">
 <a href="#mergerequestsenabled_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Enabled</a>
@@ -2717,8 +2455,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_go">
 <a href="#mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -2726,8 +2463,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroroverwritesdivergedbranches_go">
 <a href="#mirroroverwritesdivergedbranches_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
@@ -2735,8 +2471,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirrortriggerbuilds_go">
 <a href="#mirrortriggerbuilds_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Trigger<wbr>Builds</a>
@@ -2744,8 +2479,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroruserid_go">
 <a href="#mirroruserid_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>User<wbr>Id</a>
@@ -2753,8 +2487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2763,8 +2496,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namewithnamespace_go">
 <a href="#namewithnamespace_go" style="color: inherit; text-decoration: inherit;">Name<wbr>With<wbr>Namespace</a>
@@ -2773,8 +2505,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2782,8 +2513,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlyallowmergeifalldiscussionsareresolved_go">
 <a href="#onlyallowmergeifalldiscussionsareresolved_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
@@ -2791,8 +2521,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlyallowmergeifpipelinesucceeds_go">
 <a href="#onlyallowmergeifpipelinesucceeds_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
@@ -2800,8 +2529,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlymirrorprotectedbranches_go">
 <a href="#onlymirrorprotectedbranches_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
@@ -2809,8 +2537,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openissuescount_go">
 <a href="#openissuescount_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Issues<wbr>Count</a>
@@ -2818,8 +2545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -2827,8 +2553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packagesenabled_go">
 <a href="#packagesenabled_go" style="color: inherit; text-decoration: inherit;">Packages<wbr>Enabled</a>
@@ -2836,8 +2561,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2845,8 +2569,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathwithnamespace_go">
 <a href="#pathwithnamespace_go" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
@@ -2855,8 +2578,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -2864,8 +2586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -2874,8 +2595,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is public.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicbuilds_go">
 <a href="#publicbuilds_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Builds</a>
@@ -2883,8 +2603,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readmeurl_go">
 <a href="#readmeurl_go" style="color: inherit; text-decoration: inherit;">Readme<wbr>Url</a>
@@ -2892,8 +2611,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestaccessenabled_go">
 <a href="#requestaccessenabled_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Access<wbr>Enabled</a>
@@ -2901,8 +2619,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resolveoutdateddiffdiscussions_go">
 <a href="#resolveoutdateddiffdiscussions_go" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Outdated<wbr>Diff<wbr>Discussions</a>
@@ -2910,8 +2627,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runnerstoken_go">
 <a href="#runnerstoken_go" style="color: inherit; text-decoration: inherit;">Runners<wbr>Token</a>
@@ -2919,8 +2635,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedrunnersenabled_go">
 <a href="#sharedrunnersenabled_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Runners<wbr>Enabled</a>
@@ -2928,8 +2643,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedwithgroups_go">
 <a href="#sharedwithgroups_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>With<wbr>Groups</a>
@@ -2937,8 +2651,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">[]Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snippetsenabled_go">
 <a href="#snippetsenabled_go" style="color: inherit; text-decoration: inherit;">Snippets<wbr>Enabled</a>
@@ -2946,8 +2659,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshurltorepo_go">
 <a href="#sshurltorepo_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Url<wbr>To<wbr>Repo</a>
@@ -2956,8 +2668,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starcount_go">
 <a href="#starcount_go" style="color: inherit; text-decoration: inherit;">Star<wbr>Count</a>
@@ -2965,8 +2676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistics_go">
 <a href="#statistics_go" style="color: inherit; text-decoration: inherit;">Statistics</a>
@@ -2975,8 +2685,7 @@ The following output properties are available:
         <span class="property-type">map[string]int</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taglists_go">
 <a href="#taglists_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Lists</a>
@@ -2985,8 +2694,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of the project topics (formerly called "project tags").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -2995,8 +2703,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weburl_go">
 <a href="#weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
@@ -3004,8 +2711,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="wikienabled_go">
 <a href="#wikienabled_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Enabled</a>
@@ -3013,8 +2719,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="_links_go">
 <a href="#_links_go" style="color: inherit; text-decoration: inherit;">_<wbr>links</a>
@@ -3022,13 +2727,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="_links_nodejs">
 <a href="#_links_nodejs" style="color: inherit; text-decoration: inherit;">_<wbr>links</a>
@@ -3036,8 +2739,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="approvalsbeforemerge_nodejs">
 <a href="#approvalsbeforemerge_nodejs" style="color: inherit; text-decoration: inherit;">approvals<wbr>Before<wbr>Merge</a>
@@ -3046,8 +2748,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The numbers of approvals needed in a merge requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archived_nodejs">
 <a href="#archived_nodejs" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -3056,8 +2757,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="avatarurl_nodejs">
 <a href="#avatarurl_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Url</a>
@@ -3065,8 +2765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ciconfigpath_nodejs">
 <a href="#ciconfigpath_nodejs" style="color: inherit; text-decoration: inherit;">ci<wbr>Config<wbr>Path</a>
@@ -3074,8 +2773,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="containerregistryenabled_nodejs">
 <a href="#containerregistryenabled_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Registry<wbr>Enabled</a>
@@ -3083,8 +2781,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -3092,8 +2789,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creatorid_nodejs">
 <a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
@@ -3101,8 +2797,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -3110,8 +2805,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultbranch_nodejs">
 <a href="#defaultbranch_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Branch</a>
@@ -3119,8 +2813,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3128,8 +2821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forkedfromproject_nodejs">
 <a href="#forkedfromproject_nodejs" style="color: inherit; text-decoration: inherit;">forked<wbr>From<wbr>Project</a>
@@ -3137,8 +2829,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forkscount_nodejs">
 <a href="#forkscount_nodejs" style="color: inherit; text-decoration: inherit;">forks<wbr>Count</a>
@@ -3146,8 +2837,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurltorepo_nodejs">
 <a href="#httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
@@ -3156,8 +2846,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3166,8 +2855,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importerror_nodejs">
 <a href="#importerror_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Error</a>
@@ -3175,8 +2863,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="importstatus_nodejs">
 <a href="#importstatus_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Status</a>
@@ -3184,8 +2871,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issuesenabled_nodejs">
 <a href="#issuesenabled_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Enabled</a>
@@ -3193,8 +2879,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobsenabled_nodejs">
 <a href="#jobsenabled_nodejs" style="color: inherit; text-decoration: inherit;">jobs<wbr>Enabled</a>
@@ -3203,8 +2888,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether pipelines are enabled for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastactivityat_nodejs">
 <a href="#lastactivityat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>At</a>
@@ -3212,8 +2896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lfsenabled_nodejs">
 <a href="#lfsenabled_nodejs" style="color: inherit; text-decoration: inherit;">lfs<wbr>Enabled</a>
@@ -3221,8 +2904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mergemethod_nodejs">
 <a href="#mergemethod_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Method</a>
@@ -3230,8 +2912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mergerequestsenabled_nodejs">
 <a href="#mergerequestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Enabled</a>
@@ -3239,8 +2920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_nodejs">
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -3248,8 +2928,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroroverwritesdivergedbranches_nodejs">
 <a href="#mirroroverwritesdivergedbranches_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
@@ -3257,8 +2936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirrortriggerbuilds_nodejs">
 <a href="#mirrortriggerbuilds_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Trigger<wbr>Builds</a>
@@ -3266,8 +2944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroruserid_nodejs">
 <a href="#mirroruserid_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>User<wbr>Id</a>
@@ -3275,8 +2952,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3285,8 +2961,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namewithnamespace_nodejs">
 <a href="#namewithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>With<wbr>Namespace</a>
@@ -3295,8 +2970,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -3304,8 +2978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlyallowmergeifalldiscussionsareresolved_nodejs">
 <a href="#onlyallowmergeifalldiscussionsareresolved_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>All<wbr>Discussions<wbr>Are<wbr>Resolved</a>
@@ -3313,8 +2986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlyallowmergeifpipelinesucceeds_nodejs">
 <a href="#onlyallowmergeifpipelinesucceeds_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Allow<wbr>Merge<wbr>If<wbr>Pipeline<wbr>Succeeds</a>
@@ -3322,8 +2994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onlymirrorprotectedbranches_nodejs">
 <a href="#onlymirrorprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
@@ -3331,8 +3002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="openissuescount_nodejs">
 <a href="#openissuescount_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Issues<wbr>Count</a>
@@ -3340,8 +3010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -3349,8 +3018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packagesenabled_nodejs">
 <a href="#packagesenabled_nodejs" style="color: inherit; text-decoration: inherit;">packages<wbr>Enabled</a>
@@ -3358,8 +3026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3367,8 +3034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathwithnamespace_nodejs">
 <a href="#pathwithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
@@ -3377,8 +3043,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -3386,8 +3051,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -3396,8 +3060,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the project is public.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicbuilds_nodejs">
 <a href="#publicbuilds_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Builds</a>
@@ -3405,8 +3068,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readmeurl_nodejs">
 <a href="#readmeurl_nodejs" style="color: inherit; text-decoration: inherit;">readme<wbr>Url</a>
@@ -3414,8 +3076,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requestaccessenabled_nodejs">
 <a href="#requestaccessenabled_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Access<wbr>Enabled</a>
@@ -3423,8 +3084,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resolveoutdateddiffdiscussions_nodejs">
 <a href="#resolveoutdateddiffdiscussions_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Outdated<wbr>Diff<wbr>Discussions</a>
@@ -3432,8 +3092,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runnerstoken_nodejs">
 <a href="#runnerstoken_nodejs" style="color: inherit; text-decoration: inherit;">runners<wbr>Token</a>
@@ -3441,8 +3100,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedrunnersenabled_nodejs">
 <a href="#sharedrunnersenabled_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Runners<wbr>Enabled</a>
@@ -3450,8 +3108,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedwithgroups_nodejs">
 <a href="#sharedwithgroups_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>With<wbr>Groups</a>
@@ -3459,8 +3116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snippetsenabled_nodejs">
 <a href="#snippetsenabled_nodejs" style="color: inherit; text-decoration: inherit;">snippets<wbr>Enabled</a>
@@ -3468,8 +3124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshurltorepo_nodejs">
 <a href="#sshurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Url<wbr>To<wbr>Repo</a>
@@ -3478,8 +3133,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starcount_nodejs">
 <a href="#starcount_nodejs" style="color: inherit; text-decoration: inherit;">star<wbr>Count</a>
@@ -3487,8 +3141,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistics_nodejs">
 <a href="#statistics_nodejs" style="color: inherit; text-decoration: inherit;">statistics</a>
@@ -3497,8 +3150,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="taglists_nodejs">
 <a href="#taglists_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Lists</a>
@@ -3507,8 +3159,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of the project topics (formerly called "project tags").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -3517,8 +3168,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weburl_nodejs">
 <a href="#weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
@@ -3526,8 +3176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="wikienabled_nodejs">
 <a href="#wikienabled_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Enabled</a>
@@ -3535,13 +3184,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="_links_python">
 <a href="#_links_python" style="color: inherit; text-decoration: inherit;">_<wbr>links</a>
@@ -3549,8 +3196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="approvals_before_merge_python">
 <a href="#approvals_before_merge_python" style="color: inherit; text-decoration: inherit;">approvals_<wbr>before_<wbr>merge</a>
@@ -3559,8 +3205,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numbers of approvals needed in a merge requests.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="archived_python">
 <a href="#archived_python" style="color: inherit; text-decoration: inherit;">archived</a>
@@ -3569,8 +3214,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Limit by archived status.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="avatar_url_python">
 <a href="#avatar_url_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>url</a>
@@ -3578,8 +3222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ci_config_path_python">
 <a href="#ci_config_path_python" style="color: inherit; text-decoration: inherit;">ci_<wbr>config_<wbr>path</a>
@@ -3587,8 +3230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_registry_enabled_python">
 <a href="#container_registry_enabled_python" style="color: inherit; text-decoration: inherit;">container_<wbr>registry_<wbr>enabled</a>
@@ -3596,8 +3238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -3605,8 +3246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creator_id_python">
 <a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
@@ -3614,8 +3254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -3623,8 +3262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="default_branch_python">
 <a href="#default_branch_python" style="color: inherit; text-decoration: inherit;">default_<wbr>branch</a>
@@ -3632,8 +3270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3641,8 +3278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forked_from_project_python">
 <a href="#forked_from_project_python" style="color: inherit; text-decoration: inherit;">forked_<wbr>from_<wbr>project</a>
@@ -3650,8 +3286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="forks_count_python">
 <a href="#forks_count_python" style="color: inherit; text-decoration: inherit;">forks_<wbr>count</a>
@@ -3659,8 +3294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_url_to_repo_python">
 <a href="#http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
@@ -3669,8 +3303,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3679,8 +3312,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_error_python">
 <a href="#import_error_python" style="color: inherit; text-decoration: inherit;">import_<wbr>error</a>
@@ -3688,8 +3320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="import_status_python">
 <a href="#import_status_python" style="color: inherit; text-decoration: inherit;">import_<wbr>status</a>
@@ -3697,8 +3328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issues_enabled_python">
 <a href="#issues_enabled_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>enabled</a>
@@ -3706,8 +3336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobs_enabled_python">
 <a href="#jobs_enabled_python" style="color: inherit; text-decoration: inherit;">jobs_<wbr>enabled</a>
@@ -3716,8 +3345,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether pipelines are enabled for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_activity_at_python">
 <a href="#last_activity_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>at</a>
@@ -3725,8 +3353,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lfs_enabled_python">
 <a href="#lfs_enabled_python" style="color: inherit; text-decoration: inherit;">lfs_<wbr>enabled</a>
@@ -3734,8 +3361,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="merge_method_python">
 <a href="#merge_method_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>method</a>
@@ -3743,8 +3369,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="merge_requests_enabled_python">
 <a href="#merge_requests_enabled_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>enabled</a>
@@ -3752,8 +3377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_python">
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -3761,8 +3385,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_overwrites_diverged_branches_python">
 <a href="#mirror_overwrites_diverged_branches_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>overwrites_<wbr>diverged_<wbr>branches</a>
@@ -3770,8 +3393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_trigger_builds_python">
 <a href="#mirror_trigger_builds_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>trigger_<wbr>builds</a>
@@ -3779,8 +3401,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirror_user_id_python">
 <a href="#mirror_user_id_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>user_<wbr>id</a>
@@ -3788,8 +3409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3798,8 +3418,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_with_namespace_python">
 <a href="#name_with_namespace_python" style="color: inherit; text-decoration: inherit;">name_<wbr>with_<wbr>namespace</a>
@@ -3808,8 +3427,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -3817,8 +3435,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="only_allow_merge_if_all_discussions_are_resolved_python">
 <a href="#only_allow_merge_if_all_discussions_are_resolved_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>all_<wbr>discussions_<wbr>are_<wbr>resolved</a>
@@ -3826,8 +3443,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="only_allow_merge_if_pipeline_succeeds_python">
 <a href="#only_allow_merge_if_pipeline_succeeds_python" style="color: inherit; text-decoration: inherit;">only_<wbr>allow_<wbr>merge_<wbr>if_<wbr>pipeline_<wbr>succeeds</a>
@@ -3835,8 +3451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="only_mirror_protected_branches_python">
 <a href="#only_mirror_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>mirror_<wbr>protected_<wbr>branches</a>
@@ -3844,8 +3459,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="open_issues_count_python">
 <a href="#open_issues_count_python" style="color: inherit; text-decoration: inherit;">open_<wbr>issues_<wbr>count</a>
@@ -3853,8 +3467,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -3862,8 +3475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packages_enabled_python">
 <a href="#packages_enabled_python" style="color: inherit; text-decoration: inherit;">packages_<wbr>enabled</a>
@@ -3871,8 +3483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3880,8 +3491,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_with_namespace_python">
 <a href="#path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
@@ -3890,8 +3500,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -3899,8 +3508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -3909,8 +3517,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the project is public.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_builds_python">
 <a href="#public_builds_python" style="color: inherit; text-decoration: inherit;">public_<wbr>builds</a>
@@ -3918,8 +3525,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="readme_url_python">
 <a href="#readme_url_python" style="color: inherit; text-decoration: inherit;">readme_<wbr>url</a>
@@ -3927,8 +3533,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="request_access_enabled_python">
 <a href="#request_access_enabled_python" style="color: inherit; text-decoration: inherit;">request_<wbr>access_<wbr>enabled</a>
@@ -3936,8 +3541,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resolve_outdated_diff_discussions_python">
 <a href="#resolve_outdated_diff_discussions_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>outdated_<wbr>diff_<wbr>discussions</a>
@@ -3945,8 +3549,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runners_token_python">
 <a href="#runners_token_python" style="color: inherit; text-decoration: inherit;">runners_<wbr>token</a>
@@ -3954,8 +3557,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shared_runners_enabled_python">
 <a href="#shared_runners_enabled_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>runners_<wbr>enabled</a>
@@ -3963,8 +3565,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shared_with_groups_python">
 <a href="#shared_with_groups_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>with_<wbr>groups</a>
@@ -3972,8 +3573,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getprojectsprojectsharedwithgroup">Sequence[Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snippets_enabled_python">
 <a href="#snippets_enabled_python" style="color: inherit; text-decoration: inherit;">snippets_<wbr>enabled</a>
@@ -3981,8 +3581,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_url_to_repo_python">
 <a href="#ssh_url_to_repo_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>url_<wbr>to_<wbr>repo</a>
@@ -3991,8 +3590,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="star_count_python">
 <a href="#star_count_python" style="color: inherit; text-decoration: inherit;">star_<wbr>count</a>
@@ -4000,8 +3598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statistics_python">
 <a href="#statistics_python" style="color: inherit; text-decoration: inherit;">statistics</a>
@@ -4010,8 +3607,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}Include project statistics. Cannot be used with `group_id`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_lists_python">
 <a href="#tag_lists_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>lists</a>
@@ -4020,8 +3616,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of the project topics (formerly called "project tags").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -4030,8 +3625,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit by visibility `public`, `internal`, or `private`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="web_url_python">
 <a href="#web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
@@ -4039,8 +3633,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="wiki_enabled_python">
 <a href="#wiki_enabled_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>enabled</a>
@@ -4048,8 +3641,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project</h4>
@@ -4057,8 +3649,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpurltorepo_csharp">
 <a href="#httpurltorepo_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
@@ -4067,8 +3658,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4077,8 +3667,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4087,8 +3676,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namewithnamespace_csharp">
 <a href="#namewithnamespace_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>With<wbr>Namespace</a>
@@ -4097,8 +3685,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4106,8 +3693,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathwithnamespace_csharp">
 <a href="#pathwithnamespace_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
@@ -4116,8 +3702,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weburl_csharp">
 <a href="#weburl_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
@@ -4125,13 +3710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpurltorepo_go">
 <a href="#httpurltorepo_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url<wbr>To<wbr>Repo</a>
@@ -4140,8 +3723,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4150,8 +3732,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4160,8 +3741,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namewithnamespace_go">
 <a href="#namewithnamespace_go" style="color: inherit; text-decoration: inherit;">Name<wbr>With<wbr>Namespace</a>
@@ -4170,8 +3750,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4179,8 +3758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathwithnamespace_go">
 <a href="#pathwithnamespace_go" style="color: inherit; text-decoration: inherit;">Path<wbr>With<wbr>Namespace</a>
@@ -4189,8 +3767,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weburl_go">
 <a href="#weburl_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Url</a>
@@ -4198,13 +3775,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpurltorepo_nodejs">
 <a href="#httpurltorepo_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url<wbr>To<wbr>Repo</a>
@@ -4213,8 +3788,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4223,8 +3797,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4233,8 +3806,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namewithnamespace_nodejs">
 <a href="#namewithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>With<wbr>Namespace</a>
@@ -4243,8 +3815,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4252,8 +3823,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathwithnamespace_nodejs">
 <a href="#pathwithnamespace_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>With<wbr>Namespace</a>
@@ -4262,8 +3832,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weburl_nodejs">
 <a href="#weburl_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Url</a>
@@ -4271,13 +3840,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_url_to_repo_python">
 <a href="#http_url_to_repo_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url_<wbr>to_<wbr>repo</a>
@@ -4286,8 +3853,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP clone URL of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4296,8 +3862,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4306,8 +3871,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_with_namespace_python">
 <a href="#name_with_namespace_python" style="color: inherit; text-decoration: inherit;">name_<wbr>with_<wbr>namespace</a>
@@ -4316,8 +3880,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In `group / subgroup / project` or `user / project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4325,8 +3888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_with_namespace_python">
 <a href="#path_with_namespace_python" style="color: inherit; text-decoration: inherit;">path_<wbr>with_<wbr>namespace</a>
@@ -4335,8 +3897,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}In `group/subgroup/project` or `user/project` format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="web_url_python">
 <a href="#web_url_python" style="color: inherit; text-decoration: inherit;">web_<wbr>url</a>
@@ -4344,8 +3905,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace</h4>
@@ -4353,8 +3913,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullpath_csharp">
 <a href="#fullpath_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
@@ -4362,8 +3921,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4372,8 +3930,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -4381,8 +3938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4391,8 +3947,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4400,13 +3955,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullpath_go">
 <a href="#fullpath_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Path</a>
@@ -4414,8 +3967,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4424,8 +3976,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -4433,8 +3984,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4443,8 +3993,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -4452,13 +4001,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fullpath_nodejs">
 <a href="#fullpath_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Path</a>
@@ -4466,8 +4013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4476,8 +4022,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -4485,8 +4030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4495,8 +4039,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4504,13 +4047,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="full_path_python">
 <a href="#full_path_python" style="color: inherit; text-decoration: inherit;">full_<wbr>path</a>
@@ -4518,8 +4059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4528,8 +4068,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -4537,8 +4076,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4547,8 +4085,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -4556,8 +4093,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner</h4>
@@ -4565,8 +4101,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="avatarurl_csharp">
 <a href="#avatarurl_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Url</a>
@@ -4574,8 +4109,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4584,8 +4118,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4594,8 +4127,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -4603,8 +4135,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -4612,8 +4143,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websiteurl_csharp">
 <a href="#websiteurl_csharp" style="color: inherit; text-decoration: inherit;">Website<wbr>Url</a>
@@ -4621,13 +4151,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="avatarurl_go">
 <a href="#avatarurl_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Url</a>
@@ -4635,8 +4163,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4645,8 +4172,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4655,8 +4181,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -4664,8 +4189,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -4673,8 +4197,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websiteurl_go">
 <a href="#websiteurl_go" style="color: inherit; text-decoration: inherit;">Website<wbr>Url</a>
@@ -4682,13 +4205,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="avatarurl_nodejs">
 <a href="#avatarurl_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Url</a>
@@ -4696,8 +4217,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4706,8 +4226,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4716,8 +4235,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4725,8 +4243,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4734,8 +4251,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="websiteurl_nodejs">
 <a href="#websiteurl_nodejs" style="color: inherit; text-decoration: inherit;">website<wbr>Url</a>
@@ -4743,13 +4259,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="avatar_url_python">
 <a href="#avatar_url_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>url</a>
@@ -4757,8 +4271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4767,8 +4280,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4777,8 +4289,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4786,8 +4297,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4795,8 +4305,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="website_url_python">
 <a href="#website_url_python" style="color: inherit; text-decoration: inherit;">website_<wbr>url</a>
@@ -4804,8 +4313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions</h4>
@@ -4813,8 +4321,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccess_csharp">
 <a href="#groupaccess_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Access</a>
@@ -4822,8 +4329,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectaccess_csharp">
 <a href="#projectaccess_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
@@ -4831,13 +4337,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccess_go">
 <a href="#groupaccess_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Access</a>
@@ -4845,8 +4349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectaccess_go">
 <a href="#projectaccess_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Access</a>
@@ -4854,13 +4357,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccess_nodejs">
 <a href="#groupaccess_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Access</a>
@@ -4868,8 +4369,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectaccess_nodejs">
 <a href="#projectaccess_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Access</a>
@@ -4877,13 +4377,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_access_python">
 <a href="#group_access_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access</a>
@@ -4891,8 +4389,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_access_python">
 <a href="#project_access_python" style="color: inherit; text-decoration: inherit;">project_<wbr>access</a>
@@ -4900,8 +4397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectsharedwithgroup">Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group</h4>
@@ -4909,8 +4405,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccesslevel_csharp">
 <a href="#groupaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Access<wbr>Level</a>
@@ -4918,8 +4413,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -4928,8 +4422,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_csharp">
 <a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -4937,13 +4430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccesslevel_go">
 <a href="#groupaccesslevel_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Access<wbr>Level</a>
@@ -4951,8 +4442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -4961,8 +4451,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_go">
 <a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
@@ -4970,13 +4459,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupaccesslevel_nodejs">
 <a href="#groupaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Access<wbr>Level</a>
@@ -4984,8 +4471,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -4994,8 +4480,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="groupname_nodejs">
 <a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
@@ -5003,13 +4488,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_access_level_python">
 <a href="#group_access_level_python" style="color: inherit; text-decoration: inherit;">group_<wbr>access_<wbr>level</a>
@@ -5017,8 +4500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -5027,8 +4509,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the group owned by the authenticated user to look projects for within. Cannot be used with `min_access_level`, `with_programming_language` or `statistics`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="group_name_python">
 <a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
@@ -5036,8 +4517,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

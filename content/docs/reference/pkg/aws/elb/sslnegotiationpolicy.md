@@ -446,8 +446,7 @@ The SslNegotiationPolicy resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbport_csharp">
 <a href="#lbport_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
@@ -458,8 +457,7 @@ The SslNegotiationPolicy resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancer_csharp">
 <a href="#loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -469,8 +467,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -479,8 +476,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -489,13 +485,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbport_go">
 <a href="#lbport_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
@@ -506,8 +500,7 @@ should be attached.
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancer_go">
 <a href="#loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -517,8 +510,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -527,8 +519,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -537,13 +528,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbport_nodejs">
 <a href="#lbport_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Port</a>
@@ -554,8 +543,7 @@ should be attached.
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loadbalancer_nodejs">
 <a href="#loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
@@ -565,8 +553,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -575,8 +562,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -585,13 +571,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lb_port_python">
 <a href="#lb_port_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>port</a>
@@ -602,8 +586,7 @@ should be attached.
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="load_balancer_python">
 <a href="#load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
@@ -613,8 +596,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -623,8 +605,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">Sequence[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -633,8 +614,7 @@ should be attached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -645,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -654,13 +633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -668,13 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -682,13 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -696,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -824,8 +796,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_csharp">
 <a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -834,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">List&lt;Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbport_csharp">
 <a href="#state_lbport_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
@@ -846,8 +816,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_csharp">
 <a href="#state_loadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -857,8 +826,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -867,13 +835,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_go">
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -882,8 +848,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">[]Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbport_go">
 <a href="#state_lbport_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Port</a>
@@ -894,8 +859,7 @@ should be attached.
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_go">
 <a href="#state_loadbalancer_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer</a>
@@ -905,8 +869,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -915,13 +878,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_nodejs">
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -930,8 +891,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbport_nodejs">
 <a href="#state_lbport_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Port</a>
@@ -942,8 +902,7 @@ should be attached.
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancer_nodejs">
 <a href="#state_loadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer</a>
@@ -953,8 +912,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -963,13 +921,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_python">
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -978,8 +934,7 @@ should be attached.
         <span class="property-type"><a href="#sslnegotiationpolicyattribute">Sequence[Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An SSL Negotiation policy attribute. Each has two properties:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lb_port_python">
 <a href="#state_lb_port_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>port</a>
@@ -990,8 +945,7 @@ should be attached.
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
 balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_python">
 <a href="#state_load_balancer_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer</a>
@@ -1001,8 +955,7 @@ balancer.
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1011,8 +964,7 @@ should be attached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1027,8 +979,7 @@ should be attached.
 <h4 id="sslnegotiationpolicyattribute">Ssl<wbr>Negotiation<wbr>Policy<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1037,8 +988,7 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1047,13 +997,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1062,8 +1010,7 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1072,13 +1019,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1087,8 +1032,7 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1097,13 +1041,11 @@ should be attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1112,8 +1054,7 @@ should be attached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the attribute
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1122,8 +1063,7 @@ should be attached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the attribute
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

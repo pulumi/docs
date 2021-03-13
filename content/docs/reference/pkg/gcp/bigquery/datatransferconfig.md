@@ -385,8 +385,7 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_csharp">
 <a href="#datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -395,8 +394,7 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationdatasetid_csharp">
 <a href="#destinationdatasetid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
@@ -405,8 +403,7 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -415,8 +412,7 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_csharp">
 <a href="#params_csharp" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -425,8 +421,7 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datarefreshwindowdays_csharp">
 <a href="#datarefreshwindowdays_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Refresh<wbr>Window<wbr>Days</a>
@@ -439,8 +434,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -449,8 +443,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailpreferences_csharp">
 <a href="#emailpreferences_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
@@ -461,8 +454,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -472,8 +464,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpubsubtopic_csharp">
 <a href="#notificationpubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Pubsub<wbr>Topic</a>
@@ -483,8 +474,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -494,8 +484,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -511,8 +500,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleoptions_csharp">
 <a href="#scheduleoptions_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
@@ -522,8 +510,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitiveparams_csharp">
 <a href="#sensitiveparams_csharp" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
@@ -538,8 +525,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountname_csharp">
 <a href="#serviceaccountname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
@@ -550,13 +536,11 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_go">
 <a href="#datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -565,8 +549,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationdatasetid_go">
 <a href="#destinationdatasetid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
@@ -575,8 +558,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -585,8 +567,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_go">
 <a href="#params_go" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -595,8 +576,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datarefreshwindowdays_go">
 <a href="#datarefreshwindowdays_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Refresh<wbr>Window<wbr>Days</a>
@@ -609,8 +589,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -619,8 +598,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailpreferences_go">
 <a href="#emailpreferences_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
@@ -631,8 +609,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -642,8 +619,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpubsubtopic_go">
 <a href="#notificationpubsubtopic_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Pubsub<wbr>Topic</a>
@@ -653,8 +629,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -664,8 +639,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -681,8 +655,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleoptions_go">
 <a href="#scheduleoptions_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
@@ -692,8 +665,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitiveparams_go">
 <a href="#sensitiveparams_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
@@ -708,8 +680,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountname_go">
 <a href="#serviceaccountname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
@@ -720,13 +691,11 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasourceid_nodejs">
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
@@ -735,8 +704,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destinationdatasetid_nodejs">
 <a href="#destinationdatasetid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Dataset<wbr>Id</a>
@@ -745,8 +713,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -755,8 +722,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_nodejs">
 <a href="#params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
@@ -765,8 +731,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datarefreshwindowdays_nodejs">
 <a href="#datarefreshwindowdays_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Refresh<wbr>Window<wbr>Days</a>
@@ -779,8 +744,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -789,8 +753,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailpreferences_nodejs">
 <a href="#emailpreferences_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Preferences</a>
@@ -801,8 +764,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -812,8 +774,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationpubsubtopic_nodejs">
 <a href="#notificationpubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Pubsub<wbr>Topic</a>
@@ -823,8 +784,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -834,8 +794,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -851,8 +810,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleoptions_nodejs">
 <a href="#scheduleoptions_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Options</a>
@@ -862,8 +820,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitiveparams_nodejs">
 <a href="#sensitiveparams_nodejs" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Params</a>
@@ -878,8 +835,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountname_nodejs">
 <a href="#serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
@@ -890,13 +846,11 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_source_id_python">
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
@@ -905,8 +859,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="destination_dataset_id_python">
 <a href="#destination_dataset_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>dataset_<wbr>id</a>
@@ -915,8 +868,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -925,8 +877,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="params_python">
 <a href="#params_python" style="color: inherit; text-decoration: inherit;">params</a>
@@ -935,8 +886,7 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_refresh_window_days_python">
 <a href="#data_refresh_window_days_python" style="color: inherit; text-decoration: inherit;">data_<wbr>refresh_<wbr>window_<wbr>days</a>
@@ -949,8 +899,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -959,8 +908,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_preferences_python">
 <a href="#email_preferences_python" style="color: inherit; text-decoration: inherit;">email_<wbr>preferences</a>
@@ -971,8 +919,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -982,8 +929,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_pubsub_topic_python">
 <a href="#notification_pubsub_topic_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>pubsub_<wbr>topic</a>
@@ -993,8 +939,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1004,8 +949,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1021,8 +965,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_options_python">
 <a href="#schedule_options_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>options</a>
@@ -1032,8 +975,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitive_params_python">
 <a href="#sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
@@ -1048,8 +990,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_name_python">
 <a href="#service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
@@ -1060,8 +1001,7 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1072,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1081,8 +1020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1093,13 +1031,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1107,8 +1043,7 @@ required. The name is ignored when creating a transfer config.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1119,13 +1054,11 @@ required. The name is ignored when creating a transfer config.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1133,8 +1066,7 @@ required. The name is ignored when creating a transfer config.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1145,13 +1077,11 @@ required. The name is ignored when creating a transfer config.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1159,8 +1089,7 @@ required. The name is ignored when creating a transfer config.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1171,8 +1100,7 @@ required. The name is ignored when creating a transfer config.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1299,8 +1227,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datarefreshwindowdays_csharp">
 <a href="#state_datarefreshwindowdays_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Refresh<wbr>Window<wbr>Days</a>
@@ -1313,8 +1240,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourceid_csharp">
 <a href="#state_datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -1323,8 +1249,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationdatasetid_csharp">
 <a href="#state_destinationdatasetid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
@@ -1333,8 +1258,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1343,8 +1267,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1353,8 +1276,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailpreferences_csharp">
 <a href="#state_emailpreferences_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
@@ -1365,8 +1287,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1376,8 +1297,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1388,8 +1308,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationpubsubtopic_csharp">
 <a href="#state_notificationpubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Pubsub<wbr>Topic</a>
@@ -1399,8 +1318,7 @@ required. The name is ignored when creating a transfer config.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_params_csharp">
 <a href="#state_params_csharp" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -1409,8 +1327,7 @@ associated with this transfer config finish.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1420,8 +1337,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_csharp">
 <a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1437,8 +1353,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduleoptions_csharp">
 <a href="#state_scheduleoptions_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
@@ -1448,8 +1363,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sensitiveparams_csharp">
 <a href="#state_sensitiveparams_csharp" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
@@ -1464,8 +1378,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountname_csharp">
 <a href="#state_serviceaccountname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
@@ -1476,13 +1389,11 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datarefreshwindowdays_go">
 <a href="#state_datarefreshwindowdays_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Refresh<wbr>Window<wbr>Days</a>
@@ -1495,8 +1406,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourceid_go">
 <a href="#state_datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
@@ -1505,8 +1415,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationdatasetid_go">
 <a href="#state_destinationdatasetid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Dataset<wbr>Id</a>
@@ -1515,8 +1424,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1525,8 +1433,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1535,8 +1442,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailpreferences_go">
 <a href="#state_emailpreferences_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Preferences</a>
@@ -1547,8 +1453,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1558,8 +1463,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1570,8 +1474,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationpubsubtopic_go">
 <a href="#state_notificationpubsubtopic_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Pubsub<wbr>Topic</a>
@@ -1581,8 +1484,7 @@ required. The name is ignored when creating a transfer config.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_params_go">
 <a href="#state_params_go" style="color: inherit; text-decoration: inherit;">Params</a>
@@ -1591,8 +1493,7 @@ associated with this transfer config finish.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1602,8 +1503,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_go">
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1619,8 +1519,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduleoptions_go">
 <a href="#state_scheduleoptions_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Options</a>
@@ -1630,8 +1529,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sensitiveparams_go">
 <a href="#state_sensitiveparams_go" style="color: inherit; text-decoration: inherit;">Sensitive<wbr>Params</a>
@@ -1646,8 +1544,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountname_go">
 <a href="#state_serviceaccountname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Name</a>
@@ -1658,13 +1555,11 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datarefreshwindowdays_nodejs">
 <a href="#state_datarefreshwindowdays_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Refresh<wbr>Window<wbr>Days</a>
@@ -1677,8 +1572,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datasourceid_nodejs">
 <a href="#state_datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
@@ -1687,8 +1581,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationdatasetid_nodejs">
 <a href="#state_destinationdatasetid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Dataset<wbr>Id</a>
@@ -1697,8 +1590,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1707,8 +1599,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1717,8 +1608,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailpreferences_nodejs">
 <a href="#state_emailpreferences_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Preferences</a>
@@ -1729,8 +1619,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1740,8 +1629,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1752,8 +1640,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationpubsubtopic_nodejs">
 <a href="#state_notificationpubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Pubsub<wbr>Topic</a>
@@ -1763,8 +1650,7 @@ required. The name is ignored when creating a transfer config.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_params_nodejs">
 <a href="#state_params_nodejs" style="color: inherit; text-decoration: inherit;">params</a>
@@ -1773,8 +1659,7 @@ associated with this transfer config finish.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1784,8 +1669,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_nodejs">
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1801,8 +1685,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduleoptions_nodejs">
 <a href="#state_scheduleoptions_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Options</a>
@@ -1812,8 +1695,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sensitiveparams_nodejs">
 <a href="#state_sensitiveparams_nodejs" style="color: inherit; text-decoration: inherit;">sensitive<wbr>Params</a>
@@ -1828,8 +1710,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountname_nodejs">
 <a href="#state_serviceaccountname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Name</a>
@@ -1840,13 +1721,11 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_data_refresh_window_days_python">
 <a href="#state_data_refresh_window_days_python" style="color: inherit; text-decoration: inherit;">data_<wbr>refresh_<wbr>window_<wbr>days</a>
@@ -1859,8 +1738,7 @@ For example, if dataRefreshWindowDays = 10, then every day BigQuery
 reingests data for [today-10, today-1], rather than ingesting data for
 just [today-1]. Only valid if the data source supports the feature.
 Set the value to 0 to use the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_source_id_python">
 <a href="#state_data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
@@ -1869,8 +1747,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source id. Cannot be changed once the transfer config is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_dataset_id_python">
 <a href="#state_destination_dataset_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>dataset_<wbr>id</a>
@@ -1879,8 +1756,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BigQuery target dataset id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1889,8 +1765,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, no runs are scheduled for a given transfer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1899,8 +1774,7 @@ Set the value to 0 to use the default value.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user specified display name for the transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_preferences_python">
 <a href="#state_email_preferences_python" style="color: inherit; text-decoration: inherit;">email_<wbr>preferences</a>
@@ -1911,8 +1785,7 @@ Set the value to 0 to use the default value.
     <dd>{{% md %}}Email notifications will be sent according to these preferences to the
 email address of the user who owns this transfer config.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1922,8 +1795,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1934,8 +1806,7 @@ Examples: US, EU, asia-northeast1. The default value is US.
     <dd>{{% md %}}The resource name of the transfer config. Transfer config names have the form
 projects/{projectId}/locations/{location}/transferConfigs/{configId}. Where configId is usually a uuid, but this is not
 required. The name is ignored when creating a transfer config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_pubsub_topic_python">
 <a href="#state_notification_pubsub_topic_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>pubsub_<wbr>topic</a>
@@ -1945,8 +1816,7 @@ required. The name is ignored when creating a transfer config.
     </dt>
     <dd>{{% md %}}Pub/Sub topic where notifications will be sent after transfer runs
 associated with this transfer config finish.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_params_python">
 <a href="#state_params_python" style="color: inherit; text-decoration: inherit;">params</a>
@@ -1955,8 +1825,7 @@ associated with this transfer config finish.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}These parameters are specific to each data source.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1966,8 +1835,7 @@ associated with this transfer config finish.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_python">
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1983,8 +1851,7 @@ jun 13:15, and first sunday of quarter 00:00. See more explanation
 about the format here:
 https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
 NOTE: the granularity should be at least 8 hours, or less frequent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_options_python">
 <a href="#state_schedule_options_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>options</a>
@@ -1994,8 +1861,7 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
     </dt>
     <dd>{{% md %}}Options customizing the data transfer schedule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sensitive_params_python">
 <a href="#state_sensitive_params_python" style="color: inherit; text-decoration: inherit;">sensitive_<wbr>params</a>
@@ -2010,8 +1876,7 @@ in the `params` map in the api request.
 Credentials may not be specified in both locations and will cause an error. Changing from one location
 to a different credential configuration in the config will require an apply to update state.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_name_python">
 <a href="#state_service_account_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>name</a>
@@ -2022,8 +1887,7 @@ Structure is documented below.
     <dd>{{% md %}}Optional service account name. If this field is set, transfer config will
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2038,8 +1902,7 @@ requesting user calling this API has permissions to act as this service account.
 <h4 id="datatransferconfigemailpreferences">Data<wbr>Transfer<wbr>Config<wbr>Email<wbr>Preferences</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablefailureemail_csharp">
 <a href="#enablefailureemail_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Failure<wbr>Email</a>
@@ -2048,13 +1911,11 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablefailureemail_go">
 <a href="#enablefailureemail_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Failure<wbr>Email</a>
@@ -2063,13 +1924,11 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enablefailureemail_nodejs">
 <a href="#enablefailureemail_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Failure<wbr>Email</a>
@@ -2078,13 +1937,11 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_failure_email_python">
 <a href="#enable_failure_email_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>failure_<wbr>email</a>
@@ -2093,15 +1950,13 @@ requesting user calling this API has permissions to act as this service account.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, email notifications will be sent on transfer run failures.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datatransferconfigscheduleoptions">Data<wbr>Transfer<wbr>Config<wbr>Schedule<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disableautoscheduling_csharp">
 <a href="#disableautoscheduling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auto<wbr>Scheduling</a>
@@ -2114,8 +1969,7 @@ configuration will be disabled. The runs can be started on ad-hoc
 basis using transferConfigs.startManualRuns API. When automatic
 scheduling is disabled, the TransferConfig.schedule field will
 be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2127,8 +1981,7 @@ be ignored.
 scheduled at or after the end time. The end time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2141,13 +1994,11 @@ scheduled at or after the start time according to a recurrence pattern
 defined in the schedule string. The start time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disableautoscheduling_go">
 <a href="#disableautoscheduling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Auto<wbr>Scheduling</a>
@@ -2160,8 +2011,7 @@ configuration will be disabled. The runs can be started on ad-hoc
 basis using transferConfigs.startManualRuns API. When automatic
 scheduling is disabled, the TransferConfig.schedule field will
 be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2173,8 +2023,7 @@ be ignored.
 scheduled at or after the end time. The end time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2187,13 +2036,11 @@ scheduled at or after the start time according to a recurrence pattern
 defined in the schedule string. The start time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disableautoscheduling_nodejs">
 <a href="#disableautoscheduling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Auto<wbr>Scheduling</a>
@@ -2206,8 +2053,7 @@ configuration will be disabled. The runs can be started on ad-hoc
 basis using transferConfigs.startManualRuns API. When automatic
 scheduling is disabled, the TransferConfig.schedule field will
 be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2219,8 +2065,7 @@ be ignored.
 scheduled at or after the end time. The end time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2233,13 +2078,11 @@ scheduled at or after the start time according to a recurrence pattern
 defined in the schedule string. The start time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disable_auto_scheduling_python">
 <a href="#disable_auto_scheduling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>auto_<wbr>scheduling</a>
@@ -2252,8 +2095,7 @@ configuration will be disabled. The runs can be started on ad-hoc
 basis using transferConfigs.startManualRuns API. When automatic
 scheduling is disabled, the TransferConfig.schedule field will
 be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2265,8 +2107,7 @@ be ignored.
 scheduled at or after the end time. The end time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2279,15 +2120,13 @@ scheduled at or after the start time according to a recurrence pattern
 defined in the schedule string. The start time can be changed at any
 moment. The time when a data transfer can be triggered manually is not
 limited by this option.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datatransferconfigsensitiveparams">Data<wbr>Transfer<wbr>Config<wbr>Sensitive<wbr>Params</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_csharp">
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -2297,13 +2136,11 @@ limited by this option.
     </dt>
     <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_go">
 <a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -2313,13 +2150,11 @@ limited by this option.
     </dt>
     <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_nodejs">
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
@@ -2329,13 +2164,11 @@ limited by this option.
     </dt>
     <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="secret_access_key_python">
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
@@ -2345,8 +2178,7 @@ limited by this option.
     </dt>
     <dd>{{% md %}}The Secret Access Key of the AWS account transferring data from.
 **Note**: This property is sensitive and will not be displayed in the plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

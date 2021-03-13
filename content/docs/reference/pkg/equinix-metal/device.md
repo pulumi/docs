@@ -290,8 +290,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingcycle_csharp">
 <a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -300,8 +299,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="facilities_csharp">
 <a href="#facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
@@ -310,8 +308,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -320,8 +317,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -330,8 +326,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#operatingsystem">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -340,8 +335,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#plan">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -350,8 +344,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayspxe_csharp">
 <a href="#alwayspxe_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
@@ -361,8 +354,7 @@ The Device resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_csharp">
 <a href="#customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -371,8 +363,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -381,8 +372,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_csharp">
 <a href="#forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -391,8 +381,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardwarereservationid_csharp">
 <a href="#hardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
@@ -400,8 +389,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -410,8 +398,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipxescripturl_csharp">
 <a href="#ipxescripturl_csharp" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
@@ -423,8 +410,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_csharp">
 <a href="#projectsshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
@@ -433,8 +419,7 @@ doc.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_csharp">
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -444,8 +429,7 @@ doc.
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -454,8 +438,7 @@ doc.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -464,8 +447,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforreservationdeprovision_csharp">
 <a href="#waitforreservationdeprovision_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
@@ -474,13 +456,11 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingcycle_go">
 <a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -489,8 +469,7 @@ doc.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="facilities_go">
 <a href="#facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
@@ -499,8 +478,7 @@ doc.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -509,8 +487,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -519,8 +496,7 @@ doc.
         <span class="property-type">string | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -529,8 +505,7 @@ doc.
         <span class="property-type">string | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -539,8 +514,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayspxe_go">
 <a href="#alwayspxe_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
@@ -550,8 +524,7 @@ doc.
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_go">
 <a href="#customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -560,8 +533,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -570,8 +542,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_go">
 <a href="#forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -580,8 +551,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardwarereservationid_go">
 <a href="#hardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
@@ -589,8 +559,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -599,8 +568,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipxescripturl_go">
 <a href="#ipxescripturl_go" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
@@ -612,8 +580,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_go">
 <a href="#projectsshkeyids_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
@@ -622,8 +589,7 @@ doc.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_go">
 <a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -633,8 +599,7 @@ doc.
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -643,8 +608,7 @@ doc.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -653,8 +617,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforreservationdeprovision_go">
 <a href="#waitforreservationdeprovision_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
@@ -663,13 +626,11 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingcycle_nodejs">
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
@@ -678,8 +639,7 @@ doc.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="facilities_nodejs">
 <a href="#facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
@@ -688,8 +648,7 @@ doc.
         <span class="property-type">string | Facility[]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -698,8 +657,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -708,8 +666,7 @@ doc.
         <span class="property-type">string | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -718,8 +675,7 @@ doc.
         <span class="property-type">string | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -728,8 +684,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayspxe_nodejs">
 <a href="#alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
@@ -739,8 +694,7 @@ doc.
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdata_nodejs">
 <a href="#customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -749,8 +703,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -759,8 +712,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedetachvolumes_nodejs">
 <a href="#forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
@@ -769,8 +721,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardwarereservationid_nodejs">
 <a href="#hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
@@ -778,8 +729,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -788,8 +738,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipxescripturl_nodejs">
 <a href="#ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
@@ -801,8 +750,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectsshkeyids_nodejs">
 <a href="#projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
@@ -811,8 +759,7 @@ doc.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_nodejs">
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -822,8 +769,7 @@ doc.
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -832,8 +778,7 @@ doc.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -842,8 +787,7 @@ doc.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforreservationdeprovision_nodejs">
 <a href="#waitforreservationdeprovision_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
@@ -852,13 +796,11 @@ doc.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_cycle_python">
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
@@ -867,8 +809,7 @@ doc.
         <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="facilities_python">
 <a href="#facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
@@ -877,8 +818,7 @@ doc.
         <span class="property-type">Sequence[Union[str, Facility]]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -887,8 +827,7 @@ doc.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -897,8 +836,7 @@ doc.
         <span class="property-type">str | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -907,8 +845,7 @@ doc.
         <span class="property-type">str | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -917,8 +854,7 @@ doc.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="always_pxe_python">
 <a href="#always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
@@ -928,8 +864,7 @@ doc.
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_data_python">
 <a href="#custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -938,8 +873,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -948,8 +882,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_detach_volumes_python">
 <a href="#force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
@@ -958,8 +891,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardware_reservation_id_python">
 <a href="#hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
@@ -967,8 +899,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -977,8 +908,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">Sequence[Device<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipxe_script_url_python">
 <a href="#ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
@@ -990,8 +920,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_ssh_key_ids_python">
 <a href="#project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
@@ -1000,8 +929,7 @@ doc.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_python">
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -1011,8 +939,7 @@ doc.
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1021,8 +948,7 @@ doc.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -1031,8 +957,7 @@ doc.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_reservation_deprovision_python">
 <a href="#wait_for_reservation_deprovision_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>reservation_<wbr>deprovision</a>
@@ -1041,8 +966,7 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1053,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessprivateipv4_csharp">
 <a href="#accessprivateipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
@@ -1063,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv4_csharp">
 <a href="#accesspublicipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
@@ -1073,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv6_csharp">
 <a href="#accesspublicipv6_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
@@ -1083,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1093,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployedfacility_csharp">
 <a href="#deployedfacility_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
@@ -1103,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployedhardwarereservationid_csharp">
 <a href="#deployedhardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
@@ -1113,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1122,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1132,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="networktype_csharp">
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -1141,8 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -1156,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1166,8 +1079,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Outputs.<wbr>Device<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_csharp">
 <a href="#rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -1176,8 +1088,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshkeyids_csharp">
 <a href="#sshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
@@ -1186,8 +1097,7 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1196,8 +1106,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1206,13 +1115,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessprivateipv4_go">
 <a href="#accessprivateipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
@@ -1221,8 +1128,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv4_go">
 <a href="#accesspublicipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
@@ -1231,8 +1137,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv6_go">
 <a href="#accesspublicipv6_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
@@ -1241,8 +1146,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1251,8 +1155,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployedfacility_go">
 <a href="#deployedfacility_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
@@ -1261,8 +1164,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployedhardwarereservationid_go">
 <a href="#deployedhardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
@@ -1271,8 +1173,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1280,8 +1181,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1290,8 +1190,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="networktype_go">
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -1299,8 +1198,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -1314,8 +1212,7 @@ The fields of the network attributes are:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1324,8 +1221,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">[]Device<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_go">
 <a href="#rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -1334,8 +1230,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshkeyids_go">
 <a href="#sshkeyids_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
@@ -1344,8 +1239,7 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1354,8 +1248,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -1364,13 +1257,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessprivateipv4_nodejs">
 <a href="#accessprivateipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Private<wbr>Ipv4</a>
@@ -1379,8 +1270,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv4_nodejs">
 <a href="#accesspublicipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv4</a>
@@ -1389,8 +1279,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv6_nodejs">
 <a href="#accesspublicipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv6</a>
@@ -1399,8 +1288,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1409,8 +1297,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployedfacility_nodejs">
 <a href="#deployedfacility_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Facility</a>
@@ -1419,8 +1306,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployedhardwarereservationid_nodejs">
 <a href="#deployedhardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
@@ -1429,8 +1315,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1438,8 +1323,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1448,8 +1332,7 @@ The fields of the network attributes are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="networktype_nodejs">
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
@@ -1457,8 +1340,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1472,8 +1354,7 @@ The fields of the network attributes are:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1482,8 +1363,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_nodejs">
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
@@ -1492,8 +1372,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshkeyids_nodejs">
 <a href="#sshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Ids</a>
@@ -1502,8 +1381,7 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1512,8 +1390,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1522,13 +1399,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_private_ipv4_python">
 <a href="#access_private_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>private_<wbr>ipv4</a>
@@ -1537,8 +1412,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_public_ipv4_python">
 <a href="#access_public_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv4</a>
@@ -1547,8 +1421,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_public_ipv6_python">
 <a href="#access_public_ipv6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv6</a>
@@ -1557,8 +1430,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1567,8 +1439,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployed_facility_python">
 <a href="#deployed_facility_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>facility</a>
@@ -1577,8 +1448,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deployed_hardware_reservation_id_python">
 <a href="#deployed_hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>hardware_<wbr>reservation_<wbr>id</a>
@@ -1587,8 +1457,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1596,8 +1465,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1606,8 +1474,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="network_type_python">
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
@@ -1615,8 +1482,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1630,8 +1496,7 @@ The fields of the network attributes are:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1640,8 +1505,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">Sequence[Device<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_password_python">
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
@@ -1650,8 +1514,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssh_key_ids_python">
 <a href="#ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
@@ -1660,8 +1523,7 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1670,8 +1532,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -1680,8 +1541,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1808,8 +1668,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessprivateipv4_csharp">
 <a href="#state_accessprivateipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
@@ -1818,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesspublicipv4_csharp">
 <a href="#state_accesspublicipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
@@ -1828,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesspublicipv6_csharp">
 <a href="#state_accesspublicipv6_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
@@ -1838,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alwayspxe_csharp">
 <a href="#state_alwayspxe_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
@@ -1849,8 +1705,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_csharp">
 <a href="#state_billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -1859,8 +1714,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string | <a href="#billingcycle">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1869,8 +1723,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdata_csharp">
 <a href="#state_customdata_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -1879,8 +1732,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployedfacility_csharp">
 <a href="#state_deployedfacility_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
@@ -1889,8 +1741,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployedhardwarereservationid_csharp">
 <a href="#state_deployedhardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
@@ -1899,8 +1750,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1909,8 +1759,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_csharp">
 <a href="#state_facilities_csharp" style="color: inherit; text-decoration: inherit;">Facilities</a>
@@ -1919,8 +1768,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_csharp">
 <a href="#state_forcedetachvolumes_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -1929,8 +1777,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardwarereservationid_csharp">
 <a href="#state_hardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
@@ -1938,8 +1785,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -1948,8 +1794,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_csharp">
 <a href="#state_ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1958,8 +1803,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Device<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipxescripturl_csharp">
 <a href="#state_ipxescripturl_csharp" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
@@ -1971,8 +1815,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_csharp">
 <a href="#state_locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -1981,8 +1824,7 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_csharp">
 <a href="#state_networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -1990,8 +1832,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networktype">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Network<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_csharp">
 <a href="#state_networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -2005,8 +1846,7 @@ doc.
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_csharp">
 <a href="#state_operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -2015,8 +1855,7 @@ The fields of the network attributes are:
         <span class="property-type">string | <a href="#operatingsystem">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_csharp">
 <a href="#state_plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -2025,8 +1864,7 @@ The fields of the network attributes are:
         <span class="property-type">string | <a href="#plan">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_csharp">
 <a href="#state_ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2035,8 +1873,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Inputs.<wbr>Device<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2045,8 +1882,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectsshkeyids_csharp">
 <a href="#state_projectsshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
@@ -2055,8 +1891,7 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_csharp">
 <a href="#state_rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -2065,8 +1900,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshkeyids_csharp">
 <a href="#state_sshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
@@ -2075,8 +1909,7 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2085,8 +1918,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_csharp">
 <a href="#state_storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -2096,8 +1928,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2106,8 +1937,7 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_csharp">
 <a href="#state_updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -2116,8 +1946,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_csharp">
 <a href="#state_userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -2126,8 +1955,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforreservationdeprovision_csharp">
 <a href="#state_waitforreservationdeprovision_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
@@ -2136,13 +1964,11 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessprivateipv4_go">
 <a href="#state_accessprivateipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
@@ -2151,8 +1977,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesspublicipv4_go">
 <a href="#state_accesspublicipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
@@ -2161,8 +1986,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesspublicipv6_go">
 <a href="#state_accesspublicipv6_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
@@ -2171,8 +1995,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alwayspxe_go">
 <a href="#state_alwayspxe_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
@@ -2182,8 +2005,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_go">
 <a href="#state_billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -2192,8 +2014,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -2202,8 +2023,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdata_go">
 <a href="#state_customdata_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Data</a>
@@ -2212,8 +2032,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployedfacility_go">
 <a href="#state_deployedfacility_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Facility</a>
@@ -2222,8 +2041,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployedhardwarereservationid_go">
 <a href="#state_deployedhardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
@@ -2232,8 +2050,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2242,8 +2059,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_go">
 <a href="#state_facilities_go" style="color: inherit; text-decoration: inherit;">Facilities</a>
@@ -2252,8 +2068,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_go">
 <a href="#state_forcedetachvolumes_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Detach<wbr>Volumes</a>
@@ -2262,8 +2077,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardwarereservationid_go">
 <a href="#state_hardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
@@ -2271,8 +2085,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -2281,8 +2094,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_go">
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2291,8 +2103,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">[]Device<wbr>Ip<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipxescripturl_go">
 <a href="#state_ipxescripturl_go" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
@@ -2304,8 +2115,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_go">
 <a href="#state_locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -2314,8 +2124,7 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_go">
 <a href="#state_networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -2323,8 +2132,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networktype">Network<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_go">
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -2338,8 +2146,7 @@ doc.
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_go">
 <a href="#state_operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -2348,8 +2155,7 @@ The fields of the network attributes are:
         <span class="property-type">string | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_go">
 <a href="#state_plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -2358,8 +2164,7 @@ The fields of the network attributes are:
         <span class="property-type">string | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_go">
 <a href="#state_ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2368,8 +2173,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">[]Device<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2378,8 +2182,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectsshkeyids_go">
 <a href="#state_projectsshkeyids_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Ssh<wbr>Key<wbr>Ids</a>
@@ -2388,8 +2191,7 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_go">
 <a href="#state_rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -2398,8 +2200,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshkeyids_go">
 <a href="#state_sshkeyids_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
@@ -2408,8 +2209,7 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2418,8 +2218,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_go">
 <a href="#state_storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -2429,8 +2228,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2439,8 +2237,7 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_go">
 <a href="#state_updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -2449,8 +2246,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_go">
 <a href="#state_userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -2459,8 +2255,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforreservationdeprovision_go">
 <a href="#state_waitforreservationdeprovision_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
@@ -2469,13 +2264,11 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessprivateipv4_nodejs">
 <a href="#state_accessprivateipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Private<wbr>Ipv4</a>
@@ -2484,8 +2277,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesspublicipv4_nodejs">
 <a href="#state_accesspublicipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv4</a>
@@ -2494,8 +2286,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesspublicipv6_nodejs">
 <a href="#state_accesspublicipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv6</a>
@@ -2504,8 +2295,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alwayspxe_nodejs">
 <a href="#state_alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
@@ -2515,8 +2305,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingcycle_nodejs">
 <a href="#state_billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
@@ -2525,8 +2314,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -2535,8 +2323,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdata_nodejs">
 <a href="#state_customdata_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Data</a>
@@ -2545,8 +2332,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployedfacility_nodejs">
 <a href="#state_deployedfacility_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Facility</a>
@@ -2555,8 +2341,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployedhardwarereservationid_nodejs">
 <a href="#state_deployedhardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Hardware<wbr>Reservation<wbr>Id</a>
@@ -2565,8 +2350,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2575,8 +2359,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_nodejs">
 <a href="#state_facilities_nodejs" style="color: inherit; text-decoration: inherit;">facilities</a>
@@ -2585,8 +2368,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string | Facility[]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedetachvolumes_nodejs">
 <a href="#state_forcedetachvolumes_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Detach<wbr>Volumes</a>
@@ -2595,8 +2377,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardwarereservationid_nodejs">
 <a href="#state_hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
@@ -2604,8 +2385,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -2614,8 +2394,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_nodejs">
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -2624,8 +2403,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">Device<wbr>Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipxescripturl_nodejs">
 <a href="#state_ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
@@ -2637,8 +2415,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_nodejs">
 <a href="#state_locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -2647,8 +2424,7 @@ doc.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_networktype_nodejs">
 <a href="#state_networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
@@ -2656,8 +2432,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#networktype">Network<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_nodejs">
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -2671,8 +2446,7 @@ doc.
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operatingsystem_nodejs">
 <a href="#state_operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -2681,8 +2455,7 @@ The fields of the network attributes are:
         <span class="property-type">string | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_nodejs">
 <a href="#state_plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -2691,8 +2464,7 @@ The fields of the network attributes are:
         <span class="property-type">string | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_nodejs">
 <a href="#state_ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2701,8 +2473,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">Device<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -2711,8 +2482,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectsshkeyids_nodejs">
 <a href="#state_projectsshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Ssh<wbr>Key<wbr>Ids</a>
@@ -2721,8 +2491,7 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_nodejs">
 <a href="#state_rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
@@ -2731,8 +2500,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sshkeyids_nodejs">
 <a href="#state_sshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Ids</a>
@@ -2741,8 +2509,7 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2751,8 +2518,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_nodejs">
 <a href="#state_storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -2762,8 +2528,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2772,8 +2537,7 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_nodejs">
 <a href="#state_updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -2782,8 +2546,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userdata_nodejs">
 <a href="#state_userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -2792,8 +2555,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforreservationdeprovision_nodejs">
 <a href="#state_waitforreservationdeprovision_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Reservation<wbr>Deprovision</a>
@@ -2802,13 +2564,11 @@ The fields of the network attributes are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_private_ipv4_python">
 <a href="#state_access_private_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>private_<wbr>ipv4</a>
@@ -2817,8 +2577,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_public_ipv4_python">
 <a href="#state_access_public_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv4</a>
@@ -2827,8 +2586,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_public_ipv6_python">
 <a href="#state_access_public_ipv6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv6</a>
@@ -2837,8 +2595,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_always_pxe_python">
 <a href="#state_always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
@@ -2848,8 +2605,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_cycle_python">
 <a href="#state_billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
@@ -2858,8 +2614,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str | <a href="#billingcycle">Billing<wbr>Cycle</a></span>
     </dt>
     <dd>{{% md %}}monthly or hourly
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -2868,8 +2623,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_data_python">
 <a href="#state_custom_data_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>data</a>
@@ -2878,8 +2632,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired Custom Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployed_facility_python">
 <a href="#state_deployed_facility_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>facility</a>
@@ -2888,8 +2641,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployed_hardware_reservation_id_python">
 <a href="#state_deployed_hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>hardware_<wbr>reservation_<wbr>id</a>
@@ -2898,8 +2650,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of hardware reservation where this device was deployed. It is useful when using the `next-available` hardware reservation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2908,8 +2659,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facilities_python">
 <a href="#state_facilities_python" style="color: inherit; text-decoration: inherit;">facilities</a>
@@ -2918,8 +2668,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">Sequence[Union[str, Facility]]</span>
     </dt>
     <dd>{{% md %}}List of facility codes with deployment preferences. Equinix Metal API will go through the list and will deploy your device to first facility with free capacity. List items must be facility codes or `any` (a wildcard). To find the facility code, visit [Facilities API docs](https://metal.equinix.com/developers/api/facilities/), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_detach_volumes_python">
 <a href="#state_force_detach_volumes_python" style="color: inherit; text-decoration: inherit;">force_<wbr>detach_<wbr>volumes</a>
@@ -2928,8 +2677,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardware_reservation_id_python">
 <a href="#state_hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
@@ -2937,8 +2685,7 @@ continue to boot via iPXE on reboots.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -2947,8 +2694,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_addresses_python">
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -2957,8 +2703,7 @@ continue to boot via iPXE on reboots.
         <span class="property-type"><a href="#deviceipaddress">Sequence[Device<wbr>Ip<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP address types for the device (structure is documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipxe_script_url_python">
 <a href="#state_ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
@@ -2970,8 +2715,7 @@ continue to boot via iPXE on reboots.
 information is in the
 [Custom iPXE](https://metal.equinix.com/developers/docs/servers/custom-ipxe/)
 doc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locked_python">
 <a href="#state_locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -2980,8 +2724,7 @@ doc.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_network_type_python">
 <a href="#state_network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
@@ -2989,8 +2732,7 @@ doc.
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#networktype">Network<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}You should handle Network Type with the new metal_device_network_type resource.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_python">
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -3004,8 +2746,7 @@ doc.
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operating_system_python">
 <a href="#state_operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -3014,8 +2755,7 @@ The fields of the network attributes are:
         <span class="property-type">str | <a href="#operatingsystem">Operating<wbr>System</a></span>
     </dt>
     <dd>{{% md %}}The operating system slug. To find the slug, or visit [Operating Systems API docs](https://metal.equinix.com/developers/api/operatingsystems), set your API auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plan_python">
 <a href="#state_plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -3024,8 +2764,7 @@ The fields of the network attributes are:
         <span class="property-type">str | <a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}The device plan slug. To find the plan slug, visit [Device plans API docs](https://metal.equinix.com/developers/api/plans), set your auth token in the top of the page and see JSON from the API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ports_python">
 <a href="#state_ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -3034,8 +2773,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#deviceport">Sequence[Device<wbr>Port<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -3044,8 +2782,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_ssh_key_ids_python">
 <a href="#state_project_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">project_<wbr>ssh_<wbr>key_<wbr>ids</a>
@@ -3054,8 +2791,7 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of IDs of the project SSH keys which should be added to the device. If you omit this, SSH keys of all the members of the parent project will be added to the device. If you specify this array, only the listed project SSH keys will be added. Project SSH keys can be created with the equinix-metal.ProjectSshKey resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_password_python">
 <a href="#state_root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
@@ -3064,8 +2800,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssh_key_ids_python">
 <a href="#state_ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
@@ -3074,8 +2809,7 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3084,8 +2818,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_python">
 <a href="#state_storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -3095,8 +2828,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://metal.equinix.com/developers/docs/servers/custom-partitioning-raid/) doc.
 * Please note that the disks.partitions.size attribute must be a string, not an integer. It can be a number string, or size notation string, e.g. "4G" or "8M" (for gigabytes and megabytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3105,8 +2837,7 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_python">
 <a href="#state_updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -3115,8 +2846,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
 <a href="#state_user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -3125,8 +2855,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_reservation_deprovision_python">
 <a href="#state_wait_for_reservation_deprovision_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>reservation_<wbr>deprovision</a>
@@ -3135,8 +2864,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3151,46 +2879,33 @@ The fields of the network attributes are:
 <h4 id="billingcycle">Billing<wbr>Cycle</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Hourly</dt>
-    <dd>hourly</dd>
-    <dt>Monthly</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>Hourly</dt>
+    <dd>hourly</dd><dt>Monthly</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Billing<wbr>Cycle<wbr>Hourly</dt>
-    <dd>hourly</dd>
-    <dt>Billing<wbr>Cycle<wbr>Monthly</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>Billing<wbr>Cycle<wbr>Hourly</dt>
+    <dd>hourly</dd><dt>Billing<wbr>Cycle<wbr>Monthly</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Hourly</dt>
-    <dd>hourly</dd>
-    <dt>Monthly</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>Hourly</dt>
+    <dd>hourly</dd><dt>Monthly</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>HOURLY</dt>
-    <dd>hourly</dd>
-    <dt>MONTHLY</dt>
-    <dd>monthly</dd>
-</dl>
+<dl class="tabular"><dt>HOURLY</dt>
+    <dd>hourly</dd><dt>MONTHLY</dt>
+    <dd>monthly</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deviceipaddress">Device<wbr>Ip<wbr>Address</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3199,8 +2914,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -3209,8 +2923,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservationids_csharp">
 <a href="#reservationids_csharp" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Ids</a>
@@ -3219,13 +2932,11 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}String of UUID of IP block reservations from which the public IPv4 address should be taken.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3234,8 +2945,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -3244,8 +2954,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservationids_go">
 <a href="#reservationids_go" style="color: inherit; text-decoration: inherit;">Reservation<wbr>Ids</a>
@@ -3254,13 +2963,11 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}String of UUID of IP block reservations from which the public IPv4 address should be taken.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3269,8 +2976,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -3279,8 +2985,7 @@ The fields of the network attributes are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservationids_nodejs">
 <a href="#reservationids_nodejs" style="color: inherit; text-decoration: inherit;">reservation<wbr>Ids</a>
@@ -3289,13 +2994,11 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}String of UUID of IP block reservations from which the public IPv4 address should be taken.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3304,8 +3007,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -3314,8 +3016,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservation_ids_python">
 <a href="#reservation_ids_python" style="color: inherit; text-decoration: inherit;">reservation_<wbr>ids</a>
@@ -3324,15 +3025,13 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}String of UUID of IP block reservations from which the public IPv4 address should be taken.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="devicenetwork">Device<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -3341,8 +3040,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -3351,8 +3049,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -3362,8 +3059,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 * `network_type` Network type of a device, used in [Layer 2 networking](https://metal.equinix.com/developers/docs/networking/layer2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3372,8 +3068,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -3382,13 +3077,11 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -3397,8 +3090,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -3407,8 +3099,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -3418,8 +3109,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 * `network_type` Network type of a device, used in [Layer 2 networking](https://metal.equinix.com/developers/docs/networking/layer2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -3428,8 +3118,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -3438,13 +3127,11 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -3453,8 +3140,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -3463,8 +3149,7 @@ The fields of the network attributes are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -3474,8 +3159,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 * `network_type` Network type of a device, used in [Layer 2 networking](https://metal.equinix.com/developers/docs/networking/layer2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -3484,8 +3168,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}address of router
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -3494,13 +3177,11 @@ The fields of the network attributes are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -3509,8 +3190,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -3519,8 +3199,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -3530,8 +3209,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 * `network_type` Network type of a device, used in [Layer 2 networking](https://metal.equinix.com/developers/docs/networking/layer2/). Will be one of `layer3`, `hybrid`, `layer2-individual` and `layer2-bonded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -3540,8 +3218,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}address of router
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -3550,15 +3227,13 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deviceport">Device<wbr>Port</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bonded_csharp">
 <a href="#bonded_csharp" style="color: inherit; text-decoration: inherit;">Bonded</a>
@@ -3568,8 +3243,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3578,8 +3252,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_csharp">
 <a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -3588,8 +3261,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3598,8 +3270,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3608,13 +3279,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bonded_go">
 <a href="#bonded_go" style="color: inherit; text-decoration: inherit;">Bonded</a>
@@ -3624,8 +3293,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3634,8 +3302,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_go">
 <a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -3644,8 +3311,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3654,8 +3320,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3664,13 +3329,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bonded_nodejs">
 <a href="#bonded_nodejs" style="color: inherit; text-decoration: inherit;">bonded</a>
@@ -3680,8 +3343,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3690,8 +3352,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_nodejs">
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -3700,8 +3361,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3710,8 +3370,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3720,13 +3379,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bonded_python">
 <a href="#bonded_python" style="color: inherit; text-decoration: inherit;">bonded</a>
@@ -3736,8 +3393,7 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3746,8 +3402,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_python">
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -3756,8 +3411,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3766,8 +3420,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3776,746 +3429,397 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="facility">Facility</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Facility<wbr>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>Facility<wbr>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>Facility<wbr>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>Facility<wbr>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>Facility<wbr>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>Facility<wbr>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>Facility<wbr>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>Facility<wbr>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>Facility<wbr>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>Facility<wbr>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>Facility<wbr>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>Facility<wbr>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>Facility<wbr>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>Facility<wbr>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>Facility<wbr>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>Facility<wbr>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>Facility<wbr>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>Facility<wbr>AM6</dt>
-    <dd>am6</dd>
-    <dt>Facility<wbr>DC13</dt>
-    <dd>dc13</dd>
-    <dt>Facility<wbr>CH3</dt>
-    <dd>ch3</dd>
-    <dt>Facility<wbr>DA3</dt>
-    <dd>da3</dd>
-    <dt>Facility<wbr>DA11</dt>
-    <dd>da11</dd>
-    <dt>Facility<wbr>LA4</dt>
-    <dd>la4</dd>
-    <dt>Facility<wbr>NY5</dt>
-    <dd>ny5</dd>
-    <dt>Facility<wbr>SG1</dt>
-    <dd>sg1</dd>
-    <dt>Facility<wbr>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>Facility<wbr>EWR1</dt>
+    <dd>ewr1</dd><dt>Facility<wbr>SJC1</dt>
+    <dd>sjc1</dd><dt>Facility<wbr>DFW1</dt>
+    <dd>dfw1</dd><dt>Facility<wbr>DFW2</dt>
+    <dd>dfw2</dd><dt>Facility<wbr>AMS1</dt>
+    <dd>ams1</dd><dt>Facility<wbr>NRT1</dt>
+    <dd>nrt1</dd><dt>Facility<wbr>SEA1</dt>
+    <dd>sea1</dd><dt>Facility<wbr>LAX1</dt>
+    <dd>lax1</dd><dt>Facility<wbr>ORD1</dt>
+    <dd>ord1</dd><dt>Facility<wbr>ATL1</dt>
+    <dd>atl1</dd><dt>Facility<wbr>IAD1</dt>
+    <dd>iad1</dd><dt>Facility<wbr>SIN1</dt>
+    <dd>sin1</dd><dt>Facility<wbr>HKG1</dt>
+    <dd>hkg1</dd><dt>Facility<wbr>SYD1</dt>
+    <dd>syd1</dd><dt>Facility<wbr>MRS1</dt>
+    <dd>mrs1</dd><dt>Facility<wbr>YYZ1</dt>
+    <dd>yyz1</dd><dt>Facility<wbr>FRA2</dt>
+    <dd>fra2</dd><dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd><dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd><dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd><dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd><dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd><dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd><dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd><dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd><dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 <h4 id="operatingsystem">Operating<wbr>System</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Alpine3</dt>
-    <dd>alpine_3</dd>
-    <dt>Cent<wbr>OS6</dt>
-    <dd>centos_6</dd>
-    <dt>Cent<wbr>OS7</dt>
-    <dd>centos_7</dd>
-    <dt>Cent<wbr>OS8</dt>
-    <dd>centos_8</dd>
-    <dt>Core<wbr>OSAlpha</dt>
-    <dd>coreos_alpha</dd>
-    <dt>Core<wbr>OSBeta</dt>
-    <dd>coreos_beta</dd>
-    <dt>Core<wbr>OSStable</dt>
-    <dd>coreos_stable</dd>
-    <dt>Custom<wbr>IPXE</dt>
-    <dd>custom_ipxe</dd>
-    <dt>Debian8</dt>
-    <dd>debian_8</dd>
-    <dt>Debian9</dt>
-    <dd>debian_9</dd>
-    <dt>Debian10</dt>
-    <dd>debian_10</dd>
-    <dt>Flatcar<wbr>Alpha</dt>
-    <dd>flatcar_alpha</dd>
-    <dt>Flatcar<wbr>Beta</dt>
-    <dd>flatcar_beta</dd>
-    <dt>Flatcar<wbr>Edge</dt>
-    <dd>flatcar_edge</dd>
-    <dt>Flatcar<wbr>Stable</dt>
-    <dd>flatcar_stable</dd>
-    <dt>Free<wbr>BSD10_4</dt>
-    <dd>freebsd_10_4</dd>
-    <dt>Free<wbr>BSD11_1</dt>
-    <dd>freebsd_11_1</dd>
-    <dt>Free<wbr>BSD11_2</dt>
-    <dd>freebsd_11_2</dd>
-    <dt>Free<wbr>BSD12Testing</dt>
-    <dd>freebsd_12_testing</dd>
-    <dt>Nix<wbr>OS18_03</dt>
-    <dd>nixos_18_03</dd>
-    <dt>Nix<wbr>OS19_03</dt>
-    <dd>nixos_19_03</dd>
-    <dt>Open<wbr>SUSE42_3</dt>
-    <dd>opensuse_42_3</dd>
-    <dt>Rancher<wbr>OS</dt>
-    <dd>rancher</dd>
-    <dt>RHEL7</dt>
-    <dd>rhel_7</dd>
-    <dt>RHEL8</dt>
-    <dd>rhel_8</dd>
-    <dt>Scientific<wbr>Linux6</dt>
-    <dd>scientific_6</dd>
-    <dt>SLES12SP3</dt>
-    <dd>suse_sles12_sp3</dd>
-    <dt>Ubuntu1404</dt>
-    <dd>ubuntu_14_04</dd>
-    <dt>Ubuntu1604</dt>
-    <dd>ubuntu_16_04</dd>
-    <dt>Ubuntu1710</dt>
-    <dd>ubuntu_17_10</dd>
-    <dt>Ubuntu1804</dt>
-    <dd>ubuntu_18_04</dd>
-    <dt>Ubuntu2004</dt>
-    <dd>ubuntu_20_04</dd>
-    <dt>Ubuntu2010</dt>
-    <dd>ubuntu_20_10</dd>
-    <dt>VMWare<wbr>Esxi6_5</dt>
-    <dd>vmware_esxi_6_5</dd>
-    <dt>VMWare<wbr>Esxi6_7</dt>
-    <dd>vmware_esxi_6_7</dd>
-    <dt>VMWare<wbr>Esxi7_0</dt>
-    <dd>vmware_esxi_7_0</dd>
-    <dt>Windows2012R2</dt>
-    <dd>windows_2012_r2</dd>
-    <dt>Windows2016</dt>
-    <dd>windows_2016</dd>
-    <dt>Windows2019</dt>
-    <dd>windows_2019</dd>
-</dl>
+<dl class="tabular"><dt>Alpine3</dt>
+    <dd>alpine_3</dd><dt>Cent<wbr>OS6</dt>
+    <dd>centos_6</dd><dt>Cent<wbr>OS7</dt>
+    <dd>centos_7</dd><dt>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd><dt>Core<wbr>OSAlpha</dt>
+    <dd>coreos_alpha</dd><dt>Core<wbr>OSBeta</dt>
+    <dd>coreos_beta</dd><dt>Core<wbr>OSStable</dt>
+    <dd>coreos_stable</dd><dt>Custom<wbr>IPXE</dt>
+    <dd>custom_ipxe</dd><dt>Debian8</dt>
+    <dd>debian_8</dd><dt>Debian9</dt>
+    <dd>debian_9</dd><dt>Debian10</dt>
+    <dd>debian_10</dd><dt>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd><dt>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd><dt>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd><dt>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd><dt>Free<wbr>BSD10_4</dt>
+    <dd>freebsd_10_4</dd><dt>Free<wbr>BSD11_1</dt>
+    <dd>freebsd_11_1</dd><dt>Free<wbr>BSD11_2</dt>
+    <dd>freebsd_11_2</dd><dt>Free<wbr>BSD12Testing</dt>
+    <dd>freebsd_12_testing</dd><dt>Nix<wbr>OS18_03</dt>
+    <dd>nixos_18_03</dd><dt>Nix<wbr>OS19_03</dt>
+    <dd>nixos_19_03</dd><dt>Open<wbr>SUSE42_3</dt>
+    <dd>opensuse_42_3</dd><dt>Rancher<wbr>OS</dt>
+    <dd>rancher</dd><dt>RHEL7</dt>
+    <dd>rhel_7</dd><dt>RHEL8</dt>
+    <dd>rhel_8</dd><dt>Scientific<wbr>Linux6</dt>
+    <dd>scientific_6</dd><dt>SLES12SP3</dt>
+    <dd>suse_sles12_sp3</dd><dt>Ubuntu1404</dt>
+    <dd>ubuntu_14_04</dd><dt>Ubuntu1604</dt>
+    <dd>ubuntu_16_04</dd><dt>Ubuntu1710</dt>
+    <dd>ubuntu_17_10</dd><dt>Ubuntu1804</dt>
+    <dd>ubuntu_18_04</dd><dt>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd><dt>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd><dt>VMWare<wbr>Esxi6_5</dt>
+    <dd>vmware_esxi_6_5</dd><dt>VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd><dt>VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd><dt>Windows2012R2</dt>
+    <dd>windows_2012_r2</dd><dt>Windows2016</dt>
+    <dd>windows_2016</dd><dt>Windows2019</dt>
+    <dd>windows_2019</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Operating<wbr>System<wbr>Alpine3</dt>
-    <dd>alpine_3</dd>
-    <dt>Operating<wbr>System<wbr>Cent<wbr>OS6</dt>
-    <dd>centos_6</dd>
-    <dt>Operating<wbr>System<wbr>Cent<wbr>OS7</dt>
-    <dd>centos_7</dd>
-    <dt>Operating<wbr>System<wbr>Cent<wbr>OS8</dt>
-    <dd>centos_8</dd>
-    <dt>Operating<wbr>System<wbr>Core<wbr>OSAlpha</dt>
-    <dd>coreos_alpha</dd>
-    <dt>Operating<wbr>System<wbr>Core<wbr>OSBeta</dt>
-    <dd>coreos_beta</dd>
-    <dt>Operating<wbr>System<wbr>Core<wbr>OSStable</dt>
-    <dd>coreos_stable</dd>
-    <dt>Operating<wbr>System<wbr>Custom<wbr>IPXE</dt>
-    <dd>custom_ipxe</dd>
-    <dt>Operating<wbr>System<wbr>Debian8</dt>
-    <dd>debian_8</dd>
-    <dt>Operating<wbr>System<wbr>Debian9</dt>
-    <dd>debian_9</dd>
-    <dt>Operating<wbr>System<wbr>Debian10</dt>
-    <dd>debian_10</dd>
-    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Alpha</dt>
-    <dd>flatcar_alpha</dd>
-    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Beta</dt>
-    <dd>flatcar_beta</dd>
-    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Edge</dt>
-    <dd>flatcar_edge</dd>
-    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Stable</dt>
-    <dd>flatcar_stable</dd>
-    <dt>Operating<wbr>System_Free<wbr>BSD10_4</dt>
-    <dd>freebsd_10_4</dd>
-    <dt>Operating<wbr>System_Free<wbr>BSD11_1</dt>
-    <dd>freebsd_11_1</dd>
-    <dt>Operating<wbr>System_Free<wbr>BSD11_2</dt>
-    <dd>freebsd_11_2</dd>
-    <dt>Operating<wbr>System<wbr>Free<wbr>BSD12Testing</dt>
-    <dd>freebsd_12_testing</dd>
-    <dt>Operating<wbr>System_Nix<wbr>OS18_03</dt>
-    <dd>nixos_18_03</dd>
-    <dt>Operating<wbr>System_Nix<wbr>OS19_03</dt>
-    <dd>nixos_19_03</dd>
-    <dt>Operating<wbr>System_Open<wbr>SUSE42_3</dt>
-    <dd>opensuse_42_3</dd>
-    <dt>Operating<wbr>System<wbr>Rancher<wbr>OS</dt>
-    <dd>rancher</dd>
-    <dt>Operating<wbr>System<wbr>RHEL7</dt>
-    <dd>rhel_7</dd>
-    <dt>Operating<wbr>System<wbr>RHEL8</dt>
-    <dd>rhel_8</dd>
-    <dt>Operating<wbr>System<wbr>Scientific<wbr>Linux6</dt>
-    <dd>scientific_6</dd>
-    <dt>Operating<wbr>System<wbr>SLES12SP3</dt>
-    <dd>suse_sles12_sp3</dd>
-    <dt>Operating<wbr>System<wbr>Ubuntu1404</dt>
-    <dd>ubuntu_14_04</dd>
-    <dt>Operating<wbr>System<wbr>Ubuntu1604</dt>
-    <dd>ubuntu_16_04</dd>
-    <dt>Operating<wbr>System<wbr>Ubuntu1710</dt>
-    <dd>ubuntu_17_10</dd>
-    <dt>Operating<wbr>System<wbr>Ubuntu1804</dt>
-    <dd>ubuntu_18_04</dd>
-    <dt>Operating<wbr>System<wbr>Ubuntu2004</dt>
-    <dd>ubuntu_20_04</dd>
-    <dt>Operating<wbr>System<wbr>Ubuntu2010</dt>
-    <dd>ubuntu_20_10</dd>
-    <dt>Operating<wbr>System_VMWare<wbr>Esxi6_5</dt>
-    <dd>vmware_esxi_6_5</dd>
-    <dt>Operating<wbr>System_VMWare<wbr>Esxi6_7</dt>
-    <dd>vmware_esxi_6_7</dd>
-    <dt>Operating<wbr>System_VMWare<wbr>Esxi7_0</dt>
-    <dd>vmware_esxi_7_0</dd>
-    <dt>Operating<wbr>System<wbr>Windows2012R2</dt>
-    <dd>windows_2012_r2</dd>
-    <dt>Operating<wbr>System<wbr>Windows2016</dt>
-    <dd>windows_2016</dd>
-    <dt>Operating<wbr>System<wbr>Windows2019</dt>
-    <dd>windows_2019</dd>
-</dl>
+<dl class="tabular"><dt>Operating<wbr>System<wbr>Alpine3</dt>
+    <dd>alpine_3</dd><dt>Operating<wbr>System<wbr>Cent<wbr>OS6</dt>
+    <dd>centos_6</dd><dt>Operating<wbr>System<wbr>Cent<wbr>OS7</dt>
+    <dd>centos_7</dd><dt>Operating<wbr>System<wbr>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd><dt>Operating<wbr>System<wbr>Core<wbr>OSAlpha</dt>
+    <dd>coreos_alpha</dd><dt>Operating<wbr>System<wbr>Core<wbr>OSBeta</dt>
+    <dd>coreos_beta</dd><dt>Operating<wbr>System<wbr>Core<wbr>OSStable</dt>
+    <dd>coreos_stable</dd><dt>Operating<wbr>System<wbr>Custom<wbr>IPXE</dt>
+    <dd>custom_ipxe</dd><dt>Operating<wbr>System<wbr>Debian8</dt>
+    <dd>debian_8</dd><dt>Operating<wbr>System<wbr>Debian9</dt>
+    <dd>debian_9</dd><dt>Operating<wbr>System<wbr>Debian10</dt>
+    <dd>debian_10</dd><dt>Operating<wbr>System<wbr>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd><dt>Operating<wbr>System<wbr>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd><dt>Operating<wbr>System<wbr>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd><dt>Operating<wbr>System<wbr>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd><dt>Operating<wbr>System_Free<wbr>BSD10_4</dt>
+    <dd>freebsd_10_4</dd><dt>Operating<wbr>System_Free<wbr>BSD11_1</dt>
+    <dd>freebsd_11_1</dd><dt>Operating<wbr>System_Free<wbr>BSD11_2</dt>
+    <dd>freebsd_11_2</dd><dt>Operating<wbr>System<wbr>Free<wbr>BSD12Testing</dt>
+    <dd>freebsd_12_testing</dd><dt>Operating<wbr>System_Nix<wbr>OS18_03</dt>
+    <dd>nixos_18_03</dd><dt>Operating<wbr>System_Nix<wbr>OS19_03</dt>
+    <dd>nixos_19_03</dd><dt>Operating<wbr>System_Open<wbr>SUSE42_3</dt>
+    <dd>opensuse_42_3</dd><dt>Operating<wbr>System<wbr>Rancher<wbr>OS</dt>
+    <dd>rancher</dd><dt>Operating<wbr>System<wbr>RHEL7</dt>
+    <dd>rhel_7</dd><dt>Operating<wbr>System<wbr>RHEL8</dt>
+    <dd>rhel_8</dd><dt>Operating<wbr>System<wbr>Scientific<wbr>Linux6</dt>
+    <dd>scientific_6</dd><dt>Operating<wbr>System<wbr>SLES12SP3</dt>
+    <dd>suse_sles12_sp3</dd><dt>Operating<wbr>System<wbr>Ubuntu1404</dt>
+    <dd>ubuntu_14_04</dd><dt>Operating<wbr>System<wbr>Ubuntu1604</dt>
+    <dd>ubuntu_16_04</dd><dt>Operating<wbr>System<wbr>Ubuntu1710</dt>
+    <dd>ubuntu_17_10</dd><dt>Operating<wbr>System<wbr>Ubuntu1804</dt>
+    <dd>ubuntu_18_04</dd><dt>Operating<wbr>System<wbr>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd><dt>Operating<wbr>System<wbr>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd><dt>Operating<wbr>System_VMWare<wbr>Esxi6_5</dt>
+    <dd>vmware_esxi_6_5</dd><dt>Operating<wbr>System_VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd><dt>Operating<wbr>System_VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd><dt>Operating<wbr>System<wbr>Windows2012R2</dt>
+    <dd>windows_2012_r2</dd><dt>Operating<wbr>System<wbr>Windows2016</dt>
+    <dd>windows_2016</dd><dt>Operating<wbr>System<wbr>Windows2019</dt>
+    <dd>windows_2019</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Alpine3</dt>
-    <dd>alpine_3</dd>
-    <dt>Cent<wbr>OS6</dt>
-    <dd>centos_6</dd>
-    <dt>Cent<wbr>OS7</dt>
-    <dd>centos_7</dd>
-    <dt>Cent<wbr>OS8</dt>
-    <dd>centos_8</dd>
-    <dt>Core<wbr>OSAlpha</dt>
-    <dd>coreos_alpha</dd>
-    <dt>Core<wbr>OSBeta</dt>
-    <dd>coreos_beta</dd>
-    <dt>Core<wbr>OSStable</dt>
-    <dd>coreos_stable</dd>
-    <dt>Custom<wbr>IPXE</dt>
-    <dd>custom_ipxe</dd>
-    <dt>Debian8</dt>
-    <dd>debian_8</dd>
-    <dt>Debian9</dt>
-    <dd>debian_9</dd>
-    <dt>Debian10</dt>
-    <dd>debian_10</dd>
-    <dt>Flatcar<wbr>Alpha</dt>
-    <dd>flatcar_alpha</dd>
-    <dt>Flatcar<wbr>Beta</dt>
-    <dd>flatcar_beta</dd>
-    <dt>Flatcar<wbr>Edge</dt>
-    <dd>flatcar_edge</dd>
-    <dt>Flatcar<wbr>Stable</dt>
-    <dd>flatcar_stable</dd>
-    <dt>Free<wbr>BSD10_4</dt>
-    <dd>freebsd_10_4</dd>
-    <dt>Free<wbr>BSD11_1</dt>
-    <dd>freebsd_11_1</dd>
-    <dt>Free<wbr>BSD11_2</dt>
-    <dd>freebsd_11_2</dd>
-    <dt>Free<wbr>BSD12Testing</dt>
-    <dd>freebsd_12_testing</dd>
-    <dt>Nix<wbr>OS18_03</dt>
-    <dd>nixos_18_03</dd>
-    <dt>Nix<wbr>OS19_03</dt>
-    <dd>nixos_19_03</dd>
-    <dt>Open<wbr>SUSE42_3</dt>
-    <dd>opensuse_42_3</dd>
-    <dt>Rancher<wbr>OS</dt>
-    <dd>rancher</dd>
-    <dt>RHEL7</dt>
-    <dd>rhel_7</dd>
-    <dt>RHEL8</dt>
-    <dd>rhel_8</dd>
-    <dt>Scientific<wbr>Linux6</dt>
-    <dd>scientific_6</dd>
-    <dt>SLES12SP3</dt>
-    <dd>suse_sles12_sp3</dd>
-    <dt>Ubuntu1404</dt>
-    <dd>ubuntu_14_04</dd>
-    <dt>Ubuntu1604</dt>
-    <dd>ubuntu_16_04</dd>
-    <dt>Ubuntu1710</dt>
-    <dd>ubuntu_17_10</dd>
-    <dt>Ubuntu1804</dt>
-    <dd>ubuntu_18_04</dd>
-    <dt>Ubuntu2004</dt>
-    <dd>ubuntu_20_04</dd>
-    <dt>Ubuntu2010</dt>
-    <dd>ubuntu_20_10</dd>
-    <dt>VMWare<wbr>Esxi6_5</dt>
-    <dd>vmware_esxi_6_5</dd>
-    <dt>VMWare<wbr>Esxi6_7</dt>
-    <dd>vmware_esxi_6_7</dd>
-    <dt>VMWare<wbr>Esxi7_0</dt>
-    <dd>vmware_esxi_7_0</dd>
-    <dt>Windows2012R2</dt>
-    <dd>windows_2012_r2</dd>
-    <dt>Windows2016</dt>
-    <dd>windows_2016</dd>
-    <dt>Windows2019</dt>
-    <dd>windows_2019</dd>
-</dl>
+<dl class="tabular"><dt>Alpine3</dt>
+    <dd>alpine_3</dd><dt>Cent<wbr>OS6</dt>
+    <dd>centos_6</dd><dt>Cent<wbr>OS7</dt>
+    <dd>centos_7</dd><dt>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd><dt>Core<wbr>OSAlpha</dt>
+    <dd>coreos_alpha</dd><dt>Core<wbr>OSBeta</dt>
+    <dd>coreos_beta</dd><dt>Core<wbr>OSStable</dt>
+    <dd>coreos_stable</dd><dt>Custom<wbr>IPXE</dt>
+    <dd>custom_ipxe</dd><dt>Debian8</dt>
+    <dd>debian_8</dd><dt>Debian9</dt>
+    <dd>debian_9</dd><dt>Debian10</dt>
+    <dd>debian_10</dd><dt>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd><dt>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd><dt>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd><dt>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd><dt>Free<wbr>BSD10_4</dt>
+    <dd>freebsd_10_4</dd><dt>Free<wbr>BSD11_1</dt>
+    <dd>freebsd_11_1</dd><dt>Free<wbr>BSD11_2</dt>
+    <dd>freebsd_11_2</dd><dt>Free<wbr>BSD12Testing</dt>
+    <dd>freebsd_12_testing</dd><dt>Nix<wbr>OS18_03</dt>
+    <dd>nixos_18_03</dd><dt>Nix<wbr>OS19_03</dt>
+    <dd>nixos_19_03</dd><dt>Open<wbr>SUSE42_3</dt>
+    <dd>opensuse_42_3</dd><dt>Rancher<wbr>OS</dt>
+    <dd>rancher</dd><dt>RHEL7</dt>
+    <dd>rhel_7</dd><dt>RHEL8</dt>
+    <dd>rhel_8</dd><dt>Scientific<wbr>Linux6</dt>
+    <dd>scientific_6</dd><dt>SLES12SP3</dt>
+    <dd>suse_sles12_sp3</dd><dt>Ubuntu1404</dt>
+    <dd>ubuntu_14_04</dd><dt>Ubuntu1604</dt>
+    <dd>ubuntu_16_04</dd><dt>Ubuntu1710</dt>
+    <dd>ubuntu_17_10</dd><dt>Ubuntu1804</dt>
+    <dd>ubuntu_18_04</dd><dt>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd><dt>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd><dt>VMWare<wbr>Esxi6_5</dt>
+    <dd>vmware_esxi_6_5</dd><dt>VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd><dt>VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd><dt>Windows2012R2</dt>
+    <dd>windows_2012_r2</dd><dt>Windows2016</dt>
+    <dd>windows_2016</dd><dt>Windows2019</dt>
+    <dd>windows_2019</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALPINE3</dt>
-    <dd>alpine_3</dd>
-    <dt>CENT_OS6</dt>
-    <dd>centos_6</dd>
-    <dt>CENT_OS7</dt>
-    <dd>centos_7</dd>
-    <dt>CENT_OS8</dt>
-    <dd>centos_8</dd>
-    <dt>CORE_OS_ALPHA</dt>
-    <dd>coreos_alpha</dd>
-    <dt>CORE_OS_BETA</dt>
-    <dd>coreos_beta</dd>
-    <dt>CORE_OS_STABLE</dt>
-    <dd>coreos_stable</dd>
-    <dt>CUSTOM_IPXE</dt>
-    <dd>custom_ipxe</dd>
-    <dt>DEBIAN8</dt>
-    <dd>debian_8</dd>
-    <dt>DEBIAN9</dt>
-    <dd>debian_9</dd>
-    <dt>DEBIAN10</dt>
-    <dd>debian_10</dd>
-    <dt>FLATCAR_ALPHA</dt>
-    <dd>flatcar_alpha</dd>
-    <dt>FLATCAR_BETA</dt>
-    <dd>flatcar_beta</dd>
-    <dt>FLATCAR_EDGE</dt>
-    <dd>flatcar_edge</dd>
-    <dt>FLATCAR_STABLE</dt>
-    <dd>flatcar_stable</dd>
-    <dt>FREE_BSD10_4</dt>
-    <dd>freebsd_10_4</dd>
-    <dt>FREE_BSD11_1</dt>
-    <dd>freebsd_11_1</dd>
-    <dt>FREE_BSD11_2</dt>
-    <dd>freebsd_11_2</dd>
-    <dt>FREE_BSD12_TESTING</dt>
-    <dd>freebsd_12_testing</dd>
-    <dt>NIX_OS18_03</dt>
-    <dd>nixos_18_03</dd>
-    <dt>NIX_OS19_03</dt>
-    <dd>nixos_19_03</dd>
-    <dt>OPEN_SUSE42_3</dt>
-    <dd>opensuse_42_3</dd>
-    <dt>RANCHER_OS</dt>
-    <dd>rancher</dd>
-    <dt>RHEL7</dt>
-    <dd>rhel_7</dd>
-    <dt>RHEL8</dt>
-    <dd>rhel_8</dd>
-    <dt>SCIENTIFIC_LINUX6</dt>
-    <dd>scientific_6</dd>
-    <dt>SLES12_SP3</dt>
-    <dd>suse_sles12_sp3</dd>
-    <dt>UBUNTU1404</dt>
-    <dd>ubuntu_14_04</dd>
-    <dt>UBUNTU1604</dt>
-    <dd>ubuntu_16_04</dd>
-    <dt>UBUNTU1710</dt>
-    <dd>ubuntu_17_10</dd>
-    <dt>UBUNTU1804</dt>
-    <dd>ubuntu_18_04</dd>
-    <dt>UBUNTU2004</dt>
-    <dd>ubuntu_20_04</dd>
-    <dt>UBUNTU2010</dt>
-    <dd>ubuntu_20_10</dd>
-    <dt>VM_WARE_ESXI6_5</dt>
-    <dd>vmware_esxi_6_5</dd>
-    <dt>VM_WARE_ESXI6_7</dt>
-    <dd>vmware_esxi_6_7</dd>
-    <dt>VM_WARE_ESXI7_0</dt>
-    <dd>vmware_esxi_7_0</dd>
-    <dt>WINDOWS2012_R2</dt>
-    <dd>windows_2012_r2</dd>
-    <dt>WINDOWS2016</dt>
-    <dd>windows_2016</dd>
-    <dt>WINDOWS2019</dt>
-    <dd>windows_2019</dd>
-</dl>
+<dl class="tabular"><dt>ALPINE3</dt>
+    <dd>alpine_3</dd><dt>CENT_OS6</dt>
+    <dd>centos_6</dd><dt>CENT_OS7</dt>
+    <dd>centos_7</dd><dt>CENT_OS8</dt>
+    <dd>centos_8</dd><dt>CORE_OS_ALPHA</dt>
+    <dd>coreos_alpha</dd><dt>CORE_OS_BETA</dt>
+    <dd>coreos_beta</dd><dt>CORE_OS_STABLE</dt>
+    <dd>coreos_stable</dd><dt>CUSTOM_IPXE</dt>
+    <dd>custom_ipxe</dd><dt>DEBIAN8</dt>
+    <dd>debian_8</dd><dt>DEBIAN9</dt>
+    <dd>debian_9</dd><dt>DEBIAN10</dt>
+    <dd>debian_10</dd><dt>FLATCAR_ALPHA</dt>
+    <dd>flatcar_alpha</dd><dt>FLATCAR_BETA</dt>
+    <dd>flatcar_beta</dd><dt>FLATCAR_EDGE</dt>
+    <dd>flatcar_edge</dd><dt>FLATCAR_STABLE</dt>
+    <dd>flatcar_stable</dd><dt>FREE_BSD10_4</dt>
+    <dd>freebsd_10_4</dd><dt>FREE_BSD11_1</dt>
+    <dd>freebsd_11_1</dd><dt>FREE_BSD11_2</dt>
+    <dd>freebsd_11_2</dd><dt>FREE_BSD12_TESTING</dt>
+    <dd>freebsd_12_testing</dd><dt>NIX_OS18_03</dt>
+    <dd>nixos_18_03</dd><dt>NIX_OS19_03</dt>
+    <dd>nixos_19_03</dd><dt>OPEN_SUSE42_3</dt>
+    <dd>opensuse_42_3</dd><dt>RANCHER_OS</dt>
+    <dd>rancher</dd><dt>RHEL7</dt>
+    <dd>rhel_7</dd><dt>RHEL8</dt>
+    <dd>rhel_8</dd><dt>SCIENTIFIC_LINUX6</dt>
+    <dd>scientific_6</dd><dt>SLES12_SP3</dt>
+    <dd>suse_sles12_sp3</dd><dt>UBUNTU1404</dt>
+    <dd>ubuntu_14_04</dd><dt>UBUNTU1604</dt>
+    <dd>ubuntu_16_04</dd><dt>UBUNTU1710</dt>
+    <dd>ubuntu_17_10</dd><dt>UBUNTU1804</dt>
+    <dd>ubuntu_18_04</dd><dt>UBUNTU2004</dt>
+    <dd>ubuntu_20_04</dd><dt>UBUNTU2010</dt>
+    <dd>ubuntu_20_10</dd><dt>VM_WARE_ESXI6_5</dt>
+    <dd>vmware_esxi_6_5</dd><dt>VM_WARE_ESXI6_7</dt>
+    <dd>vmware_esxi_6_7</dd><dt>VM_WARE_ESXI7_0</dt>
+    <dd>vmware_esxi_7_0</dd><dt>WINDOWS2012_R2</dt>
+    <dd>windows_2012_r2</dd><dt>WINDOWS2016</dt>
+    <dd>windows_2016</dd><dt>WINDOWS2019</dt>
+    <dd>windows_2019</dd></dl>
 {{% /choosable %}}
 
 <h4 id="plan">Plan</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>C2Large<wbr>ARM</dt>
-    <dd>c2.large.arm</dd>
-    <dt>C2Medium<wbr>X86</dt>
-    <dd>c2.medium.x86</dd>
-    <dt>C1Small<wbr>X86</dt>
-    <dd>baremetal_1</dd>
-    <dt>C1Large<wbr>ARM</dt>
-    <dd>baremetal_2a</dd>
-    <dt>C1XLarge<wbr>X86</dt>
-    <dd>baremetal_3</dd>
-    <dt>X2XLarge<wbr>X86</dt>
-    <dd>x2.xlarge.x86</dd>
-    <dt>X1Small<wbr>X86</dt>
-    <dd>baremetal_1e</dd>
-    <dt>G2Large<wbr>X86</dt>
-    <dd>g2.large.x86</dd>
-    <dt>M2XLarge<wbr>X86</dt>
-    <dd>m2.xlarge.x86</dd>
-    <dt>M1XLarge<wbr>X86</dt>
-    <dd>baremetal_2</dd>
-    <dt>T1Small<wbr>X86</dt>
-    <dd>baremetal_0</dd>
-    <dt>S1Large<wbr>X86</dt>
-    <dd>baremetal_s</dd>
-    <dt>C3Small<wbr>X86</dt>
-    <dd>c3.small.x86</dd>
-    <dt>C3Medium<wbr>X86</dt>
-    <dd>c3.medium.x86</dd>
-    <dt>F3Medium<wbr>X86</dt>
-    <dd>f3.medium.x86</dd>
-    <dt>F3Large<wbr>X86</dt>
-    <dd>f3.large.x86</dd>
-    <dt>M3Large<wbr>X86</dt>
-    <dd>m3.large.x86</dd>
-    <dt>S3XLarge<wbr>X86</dt>
-    <dd>s3.xlarge.x86</dd>
-    <dt>N2XLarge<wbr>X86</dt>
-    <dd>n2.xlarge.x86</dd>
-</dl>
+<dl class="tabular"><dt>C2Large<wbr>ARM</dt>
+    <dd>c2.large.arm</dd><dt>C2Medium<wbr>X86</dt>
+    <dd>c2.medium.x86</dd><dt>C1Small<wbr>X86</dt>
+    <dd>baremetal_1</dd><dt>C1Large<wbr>ARM</dt>
+    <dd>baremetal_2a</dd><dt>C1XLarge<wbr>X86</dt>
+    <dd>baremetal_3</dd><dt>X2XLarge<wbr>X86</dt>
+    <dd>x2.xlarge.x86</dd><dt>X1Small<wbr>X86</dt>
+    <dd>baremetal_1e</dd><dt>G2Large<wbr>X86</dt>
+    <dd>g2.large.x86</dd><dt>M2XLarge<wbr>X86</dt>
+    <dd>m2.xlarge.x86</dd><dt>M1XLarge<wbr>X86</dt>
+    <dd>baremetal_2</dd><dt>T1Small<wbr>X86</dt>
+    <dd>baremetal_0</dd><dt>S1Large<wbr>X86</dt>
+    <dd>baremetal_s</dd><dt>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd><dt>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd><dt>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd><dt>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd><dt>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd><dt>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd><dt>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Plan<wbr>C2Large<wbr>ARM</dt>
-    <dd>c2.large.arm</dd>
-    <dt>Plan<wbr>C2Medium<wbr>X86</dt>
-    <dd>c2.medium.x86</dd>
-    <dt>Plan<wbr>C1Small<wbr>X86</dt>
-    <dd>baremetal_1</dd>
-    <dt>Plan<wbr>C1Large<wbr>ARM</dt>
-    <dd>baremetal_2a</dd>
-    <dt>Plan<wbr>C1XLarge<wbr>X86</dt>
-    <dd>baremetal_3</dd>
-    <dt>Plan<wbr>X2XLarge<wbr>X86</dt>
-    <dd>x2.xlarge.x86</dd>
-    <dt>Plan<wbr>X1Small<wbr>X86</dt>
-    <dd>baremetal_1e</dd>
-    <dt>Plan<wbr>G2Large<wbr>X86</dt>
-    <dd>g2.large.x86</dd>
-    <dt>Plan<wbr>M2XLarge<wbr>X86</dt>
-    <dd>m2.xlarge.x86</dd>
-    <dt>Plan<wbr>M1XLarge<wbr>X86</dt>
-    <dd>baremetal_2</dd>
-    <dt>Plan<wbr>T1Small<wbr>X86</dt>
-    <dd>baremetal_0</dd>
-    <dt>Plan<wbr>S1Large<wbr>X86</dt>
-    <dd>baremetal_s</dd>
-    <dt>Plan<wbr>C3Small<wbr>X86</dt>
-    <dd>c3.small.x86</dd>
-    <dt>Plan<wbr>C3Medium<wbr>X86</dt>
-    <dd>c3.medium.x86</dd>
-    <dt>Plan<wbr>F3Medium<wbr>X86</dt>
-    <dd>f3.medium.x86</dd>
-    <dt>Plan<wbr>F3Large<wbr>X86</dt>
-    <dd>f3.large.x86</dd>
-    <dt>Plan<wbr>M3Large<wbr>X86</dt>
-    <dd>m3.large.x86</dd>
-    <dt>Plan<wbr>S3XLarge<wbr>X86</dt>
-    <dd>s3.xlarge.x86</dd>
-    <dt>Plan<wbr>N2XLarge<wbr>X86</dt>
-    <dd>n2.xlarge.x86</dd>
-</dl>
+<dl class="tabular"><dt>Plan<wbr>C2Large<wbr>ARM</dt>
+    <dd>c2.large.arm</dd><dt>Plan<wbr>C2Medium<wbr>X86</dt>
+    <dd>c2.medium.x86</dd><dt>Plan<wbr>C1Small<wbr>X86</dt>
+    <dd>baremetal_1</dd><dt>Plan<wbr>C1Large<wbr>ARM</dt>
+    <dd>baremetal_2a</dd><dt>Plan<wbr>C1XLarge<wbr>X86</dt>
+    <dd>baremetal_3</dd><dt>Plan<wbr>X2XLarge<wbr>X86</dt>
+    <dd>x2.xlarge.x86</dd><dt>Plan<wbr>X1Small<wbr>X86</dt>
+    <dd>baremetal_1e</dd><dt>Plan<wbr>G2Large<wbr>X86</dt>
+    <dd>g2.large.x86</dd><dt>Plan<wbr>M2XLarge<wbr>X86</dt>
+    <dd>m2.xlarge.x86</dd><dt>Plan<wbr>M1XLarge<wbr>X86</dt>
+    <dd>baremetal_2</dd><dt>Plan<wbr>T1Small<wbr>X86</dt>
+    <dd>baremetal_0</dd><dt>Plan<wbr>S1Large<wbr>X86</dt>
+    <dd>baremetal_s</dd><dt>Plan<wbr>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd><dt>Plan<wbr>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd><dt>Plan<wbr>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd><dt>Plan<wbr>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd><dt>Plan<wbr>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd><dt>Plan<wbr>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd><dt>Plan<wbr>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>C2Large<wbr>ARM</dt>
-    <dd>c2.large.arm</dd>
-    <dt>C2Medium<wbr>X86</dt>
-    <dd>c2.medium.x86</dd>
-    <dt>C1Small<wbr>X86</dt>
-    <dd>baremetal_1</dd>
-    <dt>C1Large<wbr>ARM</dt>
-    <dd>baremetal_2a</dd>
-    <dt>C1XLarge<wbr>X86</dt>
-    <dd>baremetal_3</dd>
-    <dt>X2XLarge<wbr>X86</dt>
-    <dd>x2.xlarge.x86</dd>
-    <dt>X1Small<wbr>X86</dt>
-    <dd>baremetal_1e</dd>
-    <dt>G2Large<wbr>X86</dt>
-    <dd>g2.large.x86</dd>
-    <dt>M2XLarge<wbr>X86</dt>
-    <dd>m2.xlarge.x86</dd>
-    <dt>M1XLarge<wbr>X86</dt>
-    <dd>baremetal_2</dd>
-    <dt>T1Small<wbr>X86</dt>
-    <dd>baremetal_0</dd>
-    <dt>S1Large<wbr>X86</dt>
-    <dd>baremetal_s</dd>
-    <dt>C3Small<wbr>X86</dt>
-    <dd>c3.small.x86</dd>
-    <dt>C3Medium<wbr>X86</dt>
-    <dd>c3.medium.x86</dd>
-    <dt>F3Medium<wbr>X86</dt>
-    <dd>f3.medium.x86</dd>
-    <dt>F3Large<wbr>X86</dt>
-    <dd>f3.large.x86</dd>
-    <dt>M3Large<wbr>X86</dt>
-    <dd>m3.large.x86</dd>
-    <dt>S3XLarge<wbr>X86</dt>
-    <dd>s3.xlarge.x86</dd>
-    <dt>N2XLarge<wbr>X86</dt>
-    <dd>n2.xlarge.x86</dd>
-</dl>
+<dl class="tabular"><dt>C2Large<wbr>ARM</dt>
+    <dd>c2.large.arm</dd><dt>C2Medium<wbr>X86</dt>
+    <dd>c2.medium.x86</dd><dt>C1Small<wbr>X86</dt>
+    <dd>baremetal_1</dd><dt>C1Large<wbr>ARM</dt>
+    <dd>baremetal_2a</dd><dt>C1XLarge<wbr>X86</dt>
+    <dd>baremetal_3</dd><dt>X2XLarge<wbr>X86</dt>
+    <dd>x2.xlarge.x86</dd><dt>X1Small<wbr>X86</dt>
+    <dd>baremetal_1e</dd><dt>G2Large<wbr>X86</dt>
+    <dd>g2.large.x86</dd><dt>M2XLarge<wbr>X86</dt>
+    <dd>m2.xlarge.x86</dd><dt>M1XLarge<wbr>X86</dt>
+    <dd>baremetal_2</dd><dt>T1Small<wbr>X86</dt>
+    <dd>baremetal_0</dd><dt>S1Large<wbr>X86</dt>
+    <dd>baremetal_s</dd><dt>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd><dt>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd><dt>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd><dt>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd><dt>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd><dt>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd><dt>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>C2_LARGE_ARM</dt>
-    <dd>c2.large.arm</dd>
-    <dt>C2_MEDIUM_X86</dt>
-    <dd>c2.medium.x86</dd>
-    <dt>C1_SMALL_X86</dt>
-    <dd>baremetal_1</dd>
-    <dt>C1_LARGE_ARM</dt>
-    <dd>baremetal_2a</dd>
-    <dt>C1_X_LARGE_X86</dt>
-    <dd>baremetal_3</dd>
-    <dt>X2_X_LARGE_X86</dt>
-    <dd>x2.xlarge.x86</dd>
-    <dt>X1_SMALL_X86</dt>
-    <dd>baremetal_1e</dd>
-    <dt>G2_LARGE_X86</dt>
-    <dd>g2.large.x86</dd>
-    <dt>M2_X_LARGE_X86</dt>
-    <dd>m2.xlarge.x86</dd>
-    <dt>M1_X_LARGE_X86</dt>
-    <dd>baremetal_2</dd>
-    <dt>T1_SMALL_X86</dt>
-    <dd>baremetal_0</dd>
-    <dt>S1_LARGE_X86</dt>
-    <dd>baremetal_s</dd>
-    <dt>C3_SMALL_X86</dt>
-    <dd>c3.small.x86</dd>
-    <dt>C3_MEDIUM_X86</dt>
-    <dd>c3.medium.x86</dd>
-    <dt>F3_MEDIUM_X86</dt>
-    <dd>f3.medium.x86</dd>
-    <dt>F3_LARGE_X86</dt>
-    <dd>f3.large.x86</dd>
-    <dt>M3_LARGE_X86</dt>
-    <dd>m3.large.x86</dd>
-    <dt>S3_X_LARGE_X86</dt>
-    <dd>s3.xlarge.x86</dd>
-    <dt>N2_X_LARGE_X86</dt>
-    <dd>n2.xlarge.x86</dd>
-</dl>
+<dl class="tabular"><dt>C2_LARGE_ARM</dt>
+    <dd>c2.large.arm</dd><dt>C2_MEDIUM_X86</dt>
+    <dd>c2.medium.x86</dd><dt>C1_SMALL_X86</dt>
+    <dd>baremetal_1</dd><dt>C1_LARGE_ARM</dt>
+    <dd>baremetal_2a</dd><dt>C1_X_LARGE_X86</dt>
+    <dd>baremetal_3</dd><dt>X2_X_LARGE_X86</dt>
+    <dd>x2.xlarge.x86</dd><dt>X1_SMALL_X86</dt>
+    <dd>baremetal_1e</dd><dt>G2_LARGE_X86</dt>
+    <dd>g2.large.x86</dd><dt>M2_X_LARGE_X86</dt>
+    <dd>m2.xlarge.x86</dd><dt>M1_X_LARGE_X86</dt>
+    <dd>baremetal_2</dd><dt>T1_SMALL_X86</dt>
+    <dd>baremetal_0</dd><dt>S1_LARGE_X86</dt>
+    <dd>baremetal_s</dd><dt>C3_SMALL_X86</dt>
+    <dd>c3.small.x86</dd><dt>C3_MEDIUM_X86</dt>
+    <dd>c3.medium.x86</dd><dt>F3_MEDIUM_X86</dt>
+    <dd>f3.medium.x86</dd><dt>F3_LARGE_X86</dt>
+    <dd>f3.large.x86</dd><dt>M3_LARGE_X86</dt>
+    <dd>m3.large.x86</dd><dt>S3_X_LARGE_X86</dt>
+    <dd>s3.xlarge.x86</dd><dt>N2_X_LARGE_X86</dt>
+    <dd>n2.xlarge.x86</dd></dl>
 {{% /choosable %}}
 
 

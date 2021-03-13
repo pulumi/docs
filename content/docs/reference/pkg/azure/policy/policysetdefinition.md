@@ -336,8 +336,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -346,8 +345,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -356,8 +354,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -366,8 +363,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="managementgroupid_csharp">
 <a href="#managementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -376,8 +372,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroupname_csharp">
 <a href="#managementgroupname_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -386,8 +381,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -396,8 +390,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -406,8 +399,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -416,8 +408,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitiongroups_csharp">
 <a href="#policydefinitiongroups_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
@@ -426,8 +417,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferences_csharp">
 <a href="#policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
@@ -436,8 +426,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policydefinitions_csharp">
 <a href="#policydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
@@ -446,13 +435,11 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -461,8 +448,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -471,8 +457,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -481,8 +466,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="managementgroupid_go">
 <a href="#managementgroupid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -491,8 +475,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroupname_go">
 <a href="#managementgroupname_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -501,8 +484,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -511,8 +493,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -521,8 +502,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -531,8 +511,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitiongroups_go">
 <a href="#policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
@@ -541,8 +520,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferences_go">
 <a href="#policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
@@ -551,8 +529,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policydefinitions_go">
 <a href="#policydefinitions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
@@ -561,13 +538,11 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -576,8 +551,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -586,8 +560,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -596,8 +569,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="managementgroupid_nodejs">
 <a href="#managementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Id</a>
@@ -606,8 +578,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="managementgroupname_nodejs">
 <a href="#managementgroupname_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Name</a>
@@ -616,8 +587,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -626,8 +596,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -636,8 +605,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -646,8 +614,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitiongroups_nodejs">
 <a href="#policydefinitiongroups_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Groups</a>
@@ -656,8 +623,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydefinitionreferences_nodejs">
 <a href="#policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
@@ -666,8 +632,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policydefinitions_nodejs">
 <a href="#policydefinitions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definitions</a>
@@ -676,13 +641,11 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -691,8 +654,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -701,8 +663,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -711,8 +672,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="management_group_id_python">
 <a href="#management_group_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>id</a>
@@ -721,8 +681,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="management_group_name_python">
 <a href="#management_group_name_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>name</a>
@@ -731,8 +690,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -741,8 +699,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -751,8 +708,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -761,8 +717,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_definition_groups_python">
 <a href="#policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
@@ -771,8 +726,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Sequence[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_definition_references_python">
 <a href="#policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
@@ -781,8 +735,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">Sequence[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policy_definitions_python">
 <a href="#policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
@@ -791,8 +744,7 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -803,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -812,13 +763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -826,13 +775,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -840,13 +787,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -854,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -982,8 +926,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -992,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1002,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_managementgroupid_csharp">
 <a href="#state_managementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -1012,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementgroupname_csharp">
 <a href="#state_managementgroupname_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -1022,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1032,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1042,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1052,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefinitiongroups_csharp">
 <a href="#state_policydefinitiongroups_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
@@ -1062,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefinitionreferences_csharp">
 <a href="#state_policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
@@ -1072,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policydefinitions_csharp">
 <a href="#state_policydefinitions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
@@ -1082,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_csharp">
 <a href="#state_policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -1092,13 +1025,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1107,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1117,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_managementgroupid_go">
 <a href="#state_managementgroupid_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Id</a>
@@ -1127,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementgroupname_go">
 <a href="#state_managementgroupname_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Group<wbr>Name</a>
@@ -1137,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1147,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1157,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1167,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefinitiongroups_go">
 <a href="#state_policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
@@ -1177,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefinitionreferences_go">
 <a href="#state_policydefinitionreferences_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
@@ -1187,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policydefinitions_go">
 <a href="#state_policydefinitions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definitions</a>
@@ -1197,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_go">
 <a href="#state_policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -1207,13 +1128,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1222,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1232,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_managementgroupid_nodejs">
 <a href="#state_managementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Id</a>
@@ -1242,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementgroupname_nodejs">
 <a href="#state_managementgroupname_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Group<wbr>Name</a>
@@ -1252,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1262,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1272,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1282,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefinitiongroups_nodejs">
 <a href="#state_policydefinitiongroups_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Groups</a>
@@ -1292,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydefinitionreferences_nodejs">
 <a href="#state_policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
@@ -1302,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policydefinitions_nodejs">
 <a href="#state_policydefinitions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definitions</a>
@@ -1312,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytype_nodejs">
 <a href="#state_policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -1322,13 +1231,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1337,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1347,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_management_group_id_python">
 <a href="#state_management_group_id_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>id</a>
@@ -1357,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_group_name_python">
 <a href="#state_management_group_name_python" style="color: inherit; text-decoration: inherit;">management_<wbr>group_<wbr>name</a>
@@ -1367,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1377,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1387,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy set definition. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1397,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_definition_groups_python">
 <a href="#state_policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
@@ -1407,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Sequence[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_definition_references_python">
 <a href="#state_policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
@@ -1417,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policysetdefinitionpolicydefinitionreference">Sequence[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_definition_reference` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policy_definitions_python">
 <a href="#state_policy_definitions_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definitions</a>
@@ -1427,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy definitions for the policy set definition. This is a json object representing the bundled policy definitions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `policy_definition_reference`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_python">
 <a href="#state_policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -1437,8 +1334,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy set type. Possible values are `BuiltIn` or `Custom`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1453,8 +1349,7 @@ The following state arguments are supported:
 <h4 id="policysetdefinitionpolicydefinitiongroup">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1463,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalmetadataresourceid_csharp">
 <a href="#additionalmetadataresourceid_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
@@ -1472,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -1482,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The category of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1492,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1502,13 +1393,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this policy definition group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1517,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalmetadataresourceid_go">
 <a href="#additionalmetadataresourceid_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
@@ -1526,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -1536,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The category of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1546,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1556,13 +1441,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this policy definition group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1571,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalmetadataresourceid_nodejs">
 <a href="#additionalmetadataresourceid_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
@@ -1580,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -1590,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The category of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1600,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1610,13 +1489,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of this policy definition group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1625,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_metadata_resource_id_python">
 <a href="#additional_metadata_resource_id_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>metadata_<wbr>resource_<wbr>id</a>
@@ -1634,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -1644,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The category of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1654,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this policy definition group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1664,15 +1537,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of this policy definition group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydefinitionid_csharp">
 <a href="#policydefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
@@ -1681,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametervalues_csharp">
 <a href="#parametervalues_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
@@ -1691,8 +1561,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1701,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="policygroupnames_csharp">
 <a href="#policygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Group<wbr>Names</a>
@@ -1710,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceid_csharp">
 <a href="#referenceid_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
@@ -1720,13 +1587,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydefinitionid_go">
 <a href="#policydefinitionid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Id</a>
@@ -1735,8 +1600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametervalues_go">
 <a href="#parametervalues_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Values</a>
@@ -1745,8 +1609,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1755,8 +1618,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="policygroupnames_go">
 <a href="#policygroupnames_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Group<wbr>Names</a>
@@ -1764,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceid_go">
 <a href="#referenceid_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
@@ -1774,13 +1635,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydefinitionid_nodejs">
 <a href="#policydefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Id</a>
@@ -1789,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parametervalues_nodejs">
 <a href="#parametervalues_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Values</a>
@@ -1799,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1809,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="policygroupnames_nodejs">
 <a href="#policygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Group<wbr>Names</a>
@@ -1818,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceid_nodejs">
 <a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
@@ -1828,13 +1683,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_definition_id_python">
 <a href="#policy_definition_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>id</a>
@@ -1843,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition that will be included in this policy set definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameter_values_python">
 <a href="#parameter_values_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>values</a>
@@ -1853,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1863,8 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="policy_group_names_python">
 <a href="#policy_group_names_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>group_<wbr>names</a>
@@ -1872,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_id_python">
 <a href="#reference_id_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>id</a>
@@ -1882,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique ID within this policy set definition for this policy definition reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

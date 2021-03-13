@@ -351,8 +351,7 @@ The RouterRoute resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidr_csharp">
 <a href="#destinationcidr_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
@@ -362,8 +361,7 @@ The RouterRoute resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_csharp">
 <a href="#nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -373,8 +371,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routerid_csharp">
 <a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -384,8 +381,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -397,13 +393,11 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidr_go">
 <a href="#destinationcidr_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
@@ -413,8 +407,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_go">
 <a href="#nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -424,8 +417,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routerid_go">
 <a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -435,8 +427,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -448,13 +439,11 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationcidr_nodejs">
 <a href="#destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
@@ -464,8 +453,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_nodejs">
 <a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
@@ -475,8 +463,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routerid_nodejs">
 <a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
@@ -486,8 +473,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -499,13 +485,11 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_cidr_python">
 <a href="#destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
@@ -515,8 +499,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="next_hop_python">
 <a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
@@ -526,8 +509,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_id_python">
 <a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
@@ -537,8 +519,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -550,8 +531,7 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -562,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -571,13 +550,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -585,13 +562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -599,13 +574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -613,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -741,8 +713,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidr_csharp">
 <a href="#state_destinationcidr_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
@@ -752,8 +723,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthop_csharp">
 <a href="#state_nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -763,8 +733,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -776,8 +745,7 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_csharp">
 <a href="#state_routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -787,13 +755,11 @@ routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidr_go">
 <a href="#state_destinationcidr_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Cidr</a>
@@ -803,8 +769,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthop_go">
 <a href="#state_nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -814,8 +779,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -827,8 +791,7 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_go">
 <a href="#state_routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -838,13 +801,11 @@ routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationcidr_nodejs">
 <a href="#state_destinationcidr_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Cidr</a>
@@ -854,8 +815,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nexthop_nodejs">
 <a href="#state_nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
@@ -865,8 +825,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -878,8 +837,7 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_nodejs">
 <a href="#state_routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
@@ -889,13 +847,11 @@ routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destination_cidr_python">
 <a href="#state_destination_cidr_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>cidr</a>
@@ -905,8 +861,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_next_hop_python">
 <a href="#state_next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
@@ -916,8 +871,7 @@ this creates a new routing entry.
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -929,8 +883,7 @@ this creates a new routing entry.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_id_python">
 <a href="#state_router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
@@ -940,8 +893,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -265,8 +265,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -275,8 +274,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -285,8 +283,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderid_csharp">
 <a href="#senderid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Id</a>
@@ -295,8 +292,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortcode_csharp">
 <a href="#shortcode_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Code</a>
@@ -305,13 +301,11 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -320,8 +314,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -330,8 +323,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderid_go">
 <a href="#senderid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Id</a>
@@ -340,8 +332,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortcode_go">
 <a href="#shortcode_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Code</a>
@@ -350,13 +341,11 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -365,8 +354,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -375,8 +363,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senderid_nodejs">
 <a href="#senderid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Id</a>
@@ -385,8 +372,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortcode_nodejs">
 <a href="#shortcode_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Code</a>
@@ -395,13 +381,11 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -410,8 +394,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -420,8 +403,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sender_id_python">
 <a href="#sender_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>id</a>
@@ -430,8 +412,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="short_code_python">
 <a href="#short_code_python" style="color: inherit; text-decoration: inherit;">short_<wbr>code</a>
@@ -440,8 +421,7 @@ The SmsChannel resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -452,8 +432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -461,8 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="promotionalmessagespersecond_csharp">
 <a href="#promotionalmessagespersecond_csharp" style="color: inherit; text-decoration: inherit;">Promotional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -471,8 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transactionalmessagespersecond_csharp">
 <a href="#transactionalmessagespersecond_csharp" style="color: inherit; text-decoration: inherit;">Transactional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -481,13 +458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -495,8 +470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="promotionalmessagespersecond_go">
 <a href="#promotionalmessagespersecond_go" style="color: inherit; text-decoration: inherit;">Promotional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -505,8 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transactionalmessagespersecond_go">
 <a href="#transactionalmessagespersecond_go" style="color: inherit; text-decoration: inherit;">Transactional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -515,13 +488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -529,8 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="promotionalmessagespersecond_nodejs">
 <a href="#promotionalmessagespersecond_nodejs" style="color: inherit; text-decoration: inherit;">promotional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -539,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transactionalmessagespersecond_nodejs">
 <a href="#transactionalmessagespersecond_nodejs" style="color: inherit; text-decoration: inherit;">transactional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -549,13 +518,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -563,8 +530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="promotional_messages_per_second_python">
 <a href="#promotional_messages_per_second_python" style="color: inherit; text-decoration: inherit;">promotional_<wbr>messages_<wbr>per_<wbr>second</a>
@@ -573,8 +539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="transactional_messages_per_second_python">
 <a href="#transactional_messages_per_second_python" style="color: inherit; text-decoration: inherit;">transactional_<wbr>messages_<wbr>per_<wbr>second</a>
@@ -583,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -711,8 +675,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_csharp">
 <a href="#state_applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -721,8 +684,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -731,8 +693,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotionalmessagespersecond_csharp">
 <a href="#state_promotionalmessagespersecond_csharp" style="color: inherit; text-decoration: inherit;">Promotional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -741,8 +702,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_senderid_csharp">
 <a href="#state_senderid_csharp" style="color: inherit; text-decoration: inherit;">Sender<wbr>Id</a>
@@ -751,8 +711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortcode_csharp">
 <a href="#state_shortcode_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Code</a>
@@ -761,8 +720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transactionalmessagespersecond_csharp">
 <a href="#state_transactionalmessagespersecond_csharp" style="color: inherit; text-decoration: inherit;">Transactional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -771,13 +729,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_go">
 <a href="#state_applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -786,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -796,8 +751,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotionalmessagespersecond_go">
 <a href="#state_promotionalmessagespersecond_go" style="color: inherit; text-decoration: inherit;">Promotional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -806,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_senderid_go">
 <a href="#state_senderid_go" style="color: inherit; text-decoration: inherit;">Sender<wbr>Id</a>
@@ -816,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortcode_go">
 <a href="#state_shortcode_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Code</a>
@@ -826,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transactionalmessagespersecond_go">
 <a href="#state_transactionalmessagespersecond_go" style="color: inherit; text-decoration: inherit;">Transactional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -836,13 +787,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_nodejs">
 <a href="#state_applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -851,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -861,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotionalmessagespersecond_nodejs">
 <a href="#state_promotionalmessagespersecond_nodejs" style="color: inherit; text-decoration: inherit;">promotional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -871,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_senderid_nodejs">
 <a href="#state_senderid_nodejs" style="color: inherit; text-decoration: inherit;">sender<wbr>Id</a>
@@ -881,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortcode_nodejs">
 <a href="#state_shortcode_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Code</a>
@@ -891,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transactionalmessagespersecond_nodejs">
 <a href="#state_transactionalmessagespersecond_nodejs" style="color: inherit; text-decoration: inherit;">transactional<wbr>Messages<wbr>Per<wbr>Second</a>
@@ -901,13 +845,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_id_python">
 <a href="#state_application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -916,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -926,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the channel is enabled or disabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_promotional_messages_per_second_python">
 <a href="#state_promotional_messages_per_second_python" style="color: inherit; text-decoration: inherit;">promotional_<wbr>messages_<wbr>per_<wbr>second</a>
@@ -936,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Promotional messages per second that can be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sender_id_python">
 <a href="#state_sender_id_python" style="color: inherit; text-decoration: inherit;">sender_<wbr>id</a>
@@ -946,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sender identifier of your messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_short_code_python">
 <a href="#state_short_code_python" style="color: inherit; text-decoration: inherit;">short_<wbr>code</a>
@@ -956,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Short Code registered with the phone provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transactional_messages_per_second_python">
 <a href="#state_transactional_messages_per_second_python" style="color: inherit; text-decoration: inherit;">transactional_<wbr>messages_<wbr>per_<wbr>second</a>
@@ -966,8 +903,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Transactional messages per second that can be sent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

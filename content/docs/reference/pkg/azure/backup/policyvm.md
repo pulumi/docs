@@ -459,8 +459,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_csharp">
 <a href="#backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
@@ -469,8 +468,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_csharp">
 <a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -479,8 +477,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -489,8 +486,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instantrestoreretentiondays_csharp">
 <a href="#instantrestoreretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
@@ -499,8 +495,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -509,8 +504,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondaily_csharp">
 <a href="#retentiondaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
@@ -519,8 +513,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionmonthly_csharp">
 <a href="#retentionmonthly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
@@ -529,8 +522,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionweekly_csharp">
 <a href="#retentionweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
@@ -539,8 +531,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionyearly_csharp">
 <a href="#retentionyearly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
@@ -549,8 +540,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -559,8 +549,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -569,13 +558,11 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_go">
 <a href="#backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
@@ -584,8 +571,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_go">
 <a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -594,8 +580,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -604,8 +589,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instantrestoreretentiondays_go">
 <a href="#instantrestoreretentiondays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
@@ -614,8 +598,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -624,8 +607,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondaily_go">
 <a href="#retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
@@ -634,8 +616,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionmonthly_go">
 <a href="#retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
@@ -644,8 +625,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionweekly_go">
 <a href="#retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
@@ -654,8 +634,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionyearly_go">
 <a href="#retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
@@ -664,8 +643,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -674,8 +652,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -684,13 +661,11 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_nodejs">
 <a href="#backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
@@ -699,8 +674,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_nodejs">
 <a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
@@ -709,8 +683,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -719,8 +692,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instantrestoreretentiondays_nodejs">
 <a href="#instantrestoreretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Restore<wbr>Retention<wbr>Days</a>
@@ -729,8 +701,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -739,8 +710,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondaily_nodejs">
 <a href="#retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
@@ -749,8 +719,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionmonthly_nodejs">
 <a href="#retentionmonthly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Monthly</a>
@@ -759,8 +728,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionweekly_nodejs">
 <a href="#retentionweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Weekly</a>
@@ -769,8 +737,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionyearly_nodejs">
 <a href="#retentionyearly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Yearly</a>
@@ -779,8 +746,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -789,8 +755,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -799,13 +764,11 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_python">
 <a href="#backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
@@ -814,8 +777,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_vault_name_python">
 <a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
@@ -824,8 +786,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -834,8 +795,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instant_restore_retention_days_python">
 <a href="#instant_restore_retention_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>restore_<wbr>retention_<wbr>days</a>
@@ -844,8 +804,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -854,8 +813,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_daily_python">
 <a href="#retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
@@ -864,8 +822,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_monthly_python">
 <a href="#retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
@@ -874,8 +831,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_weekly_python">
 <a href="#retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
@@ -884,8 +840,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_yearly_python">
 <a href="#retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
@@ -894,8 +849,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -904,8 +858,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_python">
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -914,8 +867,7 @@ The PolicyVM resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -926,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -935,13 +886,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -949,13 +898,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -963,13 +910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -977,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1105,8 +1049,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_csharp">
 <a href="#state_backup_csharp" style="color: inherit; text-decoration: inherit;">Backup</a>
@@ -1115,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instantrestoreretentiondays_csharp">
 <a href="#state_instantrestoreretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
@@ -1125,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1135,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_csharp">
 <a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -1145,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1155,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondaily_csharp">
 <a href="#state_retentiondaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
@@ -1165,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionmonthly_csharp">
 <a href="#state_retentionmonthly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
@@ -1175,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionweekly_csharp">
 <a href="#state_retentionweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
@@ -1185,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionyearly_csharp">
 <a href="#state_retentionyearly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
@@ -1195,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1205,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_csharp">
 <a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -1215,13 +1148,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_go">
 <a href="#state_backup_go" style="color: inherit; text-decoration: inherit;">Backup</a>
@@ -1230,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instantrestoreretentiondays_go">
 <a href="#state_instantrestoreretentiondays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Restore<wbr>Retention<wbr>Days</a>
@@ -1240,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1250,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_go">
 <a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -1260,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1270,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondaily_go">
 <a href="#state_retentiondaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Daily</a>
@@ -1280,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionmonthly_go">
 <a href="#state_retentionmonthly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Monthly</a>
@@ -1290,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionweekly_go">
 <a href="#state_retentionweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Weekly</a>
@@ -1300,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionyearly_go">
 <a href="#state_retentionyearly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Yearly</a>
@@ -1310,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1320,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_go">
 <a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
@@ -1330,13 +1251,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_nodejs">
 <a href="#state_backup_nodejs" style="color: inherit; text-decoration: inherit;">backup</a>
@@ -1345,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instantrestoreretentiondays_nodejs">
 <a href="#state_instantrestoreretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Restore<wbr>Retention<wbr>Days</a>
@@ -1355,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1365,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_nodejs">
 <a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
@@ -1375,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1385,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondaily_nodejs">
 <a href="#state_retentiondaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Daily</a>
@@ -1395,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionmonthly_nodejs">
 <a href="#state_retentionmonthly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Monthly</a>
@@ -1405,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionweekly_nodejs">
 <a href="#state_retentionweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Weekly</a>
@@ -1415,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionyearly_nodejs">
 <a href="#state_retentionyearly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Yearly</a>
@@ -1425,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1435,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_nodejs">
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1445,13 +1354,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backup_python">
 <a href="#state_backup_python" style="color: inherit; text-decoration: inherit;">backup</a>
@@ -1460,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmbackup">Policy<wbr>VMBackup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the Policy backup frequency, times & days as documented in the `backup` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instant_restore_retention_days_python">
 <a href="#state_instant_restore_retention_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>restore_<wbr>retention_<wbr>days</a>
@@ -1470,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the instant restore retention range in days.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1480,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Backup Policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_vault_name_python">
 <a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
@@ -1490,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1500,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the policy. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_daily_python">
 <a href="#state_retention_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>daily</a>
@@ -1510,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy daily retention as documented in the `retention_daily` block below. Required when backup frequency is `Daily`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_monthly_python">
 <a href="#state_retention_monthly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>monthly</a>
@@ -1520,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy monthly retention as documented in the `retention_monthly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_weekly_python">
 <a href="#state_retention_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>weekly</a>
@@ -1530,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy weekly retention as documented in the `retention_weekly` block below. Required when backup frequency is `Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_yearly_python">
 <a href="#state_retention_yearly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>yearly</a>
@@ -1540,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configures the policy yearly retention as documented in the `retention_yearly` block below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1550,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_python">
 <a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
@@ -1560,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the timezone. [the possible values are defined here](http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/). Defaults to `UTC`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1576,8 +1472,7 @@ The following state arguments are supported:
 <h4 id="policyvmbackup">Policy<wbr>VMBackup</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1586,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the backup frequency. Must be either `Daily` or`Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1596,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day to perform the backup in 24hour format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -1606,13 +1499,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1621,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the backup frequency. Must be either `Daily` or`Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1631,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day to perform the backup in 24hour format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -1641,13 +1530,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1656,8 +1543,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the backup frequency. Must be either `Daily` or`Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1666,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day to perform the backup in 24hour format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -1676,13 +1561,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1691,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the backup frequency. Must be either `Daily` or`Weekly`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1701,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of day to perform the backup in 24hour format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekdays_python">
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -1711,15 +1592,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyvmretentiondaily">Policy<wbr>VMRetention<wbr>Daily</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1728,13 +1607,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1743,13 +1620,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1758,13 +1633,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1773,15 +1646,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyvmretentionmonthly">Policy<wbr>VMRetention<wbr>Monthly</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1790,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -1800,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_csharp">
 <a href="#weeks_csharp" style="color: inherit; text-decoration: inherit;">Weeks</a>
@@ -1810,13 +1679,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1825,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -1835,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_go">
 <a href="#weeks_go" style="color: inherit; text-decoration: inherit;">Weeks</a>
@@ -1845,13 +1710,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1860,8 +1723,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -1870,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_nodejs">
 <a href="#weeks_nodejs" style="color: inherit; text-decoration: inherit;">weeks</a>
@@ -1880,13 +1741,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1895,8 +1754,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_python">
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -1905,8 +1763,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_python">
 <a href="#weeks_python" style="color: inherit; text-decoration: inherit;">weeks</a>
@@ -1915,15 +1772,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyvmretentionweekly">Policy<wbr>VMRetention<wbr>Weekly</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1932,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -1942,13 +1796,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1957,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -1967,13 +1818,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1982,8 +1831,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -1992,13 +1840,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2007,8 +1853,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_python">
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -2017,15 +1862,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyvmretentionyearly">Policy<wbr>VMRetention<wbr>Yearly</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2034,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="months_csharp">
 <a href="#months_csharp" style="color: inherit; text-decoration: inherit;">Months</a>
@@ -2044,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -2054,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_csharp">
 <a href="#weeks_csharp" style="color: inherit; text-decoration: inherit;">Weeks</a>
@@ -2064,13 +1904,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2079,8 +1917,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="months_go">
 <a href="#months_go" style="color: inherit; text-decoration: inherit;">Months</a>
@@ -2089,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
@@ -2099,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_go">
 <a href="#weeks_go" style="color: inherit; text-decoration: inherit;">Weeks</a>
@@ -2109,13 +1944,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2124,8 +1957,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="months_nodejs">
 <a href="#months_nodejs" style="color: inherit; text-decoration: inherit;">months</a>
@@ -2134,8 +1966,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -2144,8 +1975,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_nodejs">
 <a href="#weeks_nodejs" style="color: inherit; text-decoration: inherit;">weeks</a>
@@ -2154,13 +1984,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2169,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of yearly backups to keep. Must be between `1` and `9999`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="months_python">
 <a href="#months_python" style="color: inherit; text-decoration: inherit;">months</a>
@@ -2179,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The months of the year to retain backups of. Must be one of `January`, `February`, `March`, `April`, `May`, `June`, `July`, `Augest`, `September`, `October`, `November` and `December`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weekdays_python">
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
@@ -2189,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The weekday backups to retain . Must be one of `Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday` or `Saturday`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weeks_python">
 <a href="#weeks_python" style="color: inherit; text-decoration: inherit;">weeks</a>
@@ -2199,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The weeks of the month to retain backups of. Must be one of `First`, `Second`, `Third`, `Fourth`, `Last`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

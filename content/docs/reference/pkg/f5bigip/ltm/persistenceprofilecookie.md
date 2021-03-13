@@ -303,8 +303,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultsfrom_csharp">
 <a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -313,8 +312,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -323,8 +321,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayssend_csharp">
 <a href="#alwayssend_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Send</a>
@@ -333,8 +330,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_csharp">
 <a href="#appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -342,8 +338,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieencryption_csharp">
 <a href="#cookieencryption_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption</a>
@@ -352,8 +347,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieencryptionpassphrase_csharp">
 <a href="#cookieencryptionpassphrase_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption<wbr>Passphrase</a>
@@ -362,8 +356,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_csharp">
 <a href="#cookiename_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -372,8 +365,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_csharp">
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -382,8 +374,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashlength_csharp">
 <a href="#hashlength_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Length</a>
@@ -392,8 +383,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashoffset_csharp">
 <a href="#hashoffset_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Offset</a>
@@ -402,8 +392,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httponly_csharp">
 <a href="#httponly_csharp" style="color: inherit; text-decoration: inherit;">Httponly</a>
@@ -412,8 +401,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrosspools_csharp">
 <a href="#matchacrosspools_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -422,8 +410,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossservices_csharp">
 <a href="#matchacrossservices_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -432,8 +419,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossvirtuals_csharp">
 <a href="#matchacrossvirtuals_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -442,8 +428,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -452,8 +437,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_csharp">
 <a href="#mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -462,8 +446,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrideconnlimit_csharp">
 <a href="#overrideconnlimit_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -473,8 +456,7 @@ The PersistenceProfileCookie resource accepts the following [input]({{< relref "
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -483,13 +465,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultsfrom_go">
 <a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -498,8 +478,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -508,8 +487,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayssend_go">
 <a href="#alwayssend_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Send</a>
@@ -518,8 +496,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_go">
 <a href="#appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -527,8 +504,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieencryption_go">
 <a href="#cookieencryption_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption</a>
@@ -537,8 +513,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieencryptionpassphrase_go">
 <a href="#cookieencryptionpassphrase_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption<wbr>Passphrase</a>
@@ -547,8 +522,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_go">
 <a href="#cookiename_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -557,8 +531,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_go">
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -567,8 +540,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashlength_go">
 <a href="#hashlength_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Length</a>
@@ -577,8 +549,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashoffset_go">
 <a href="#hashoffset_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Offset</a>
@@ -587,8 +558,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httponly_go">
 <a href="#httponly_go" style="color: inherit; text-decoration: inherit;">Httponly</a>
@@ -597,8 +567,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrosspools_go">
 <a href="#matchacrosspools_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -607,8 +576,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossservices_go">
 <a href="#matchacrossservices_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -617,8 +585,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossvirtuals_go">
 <a href="#matchacrossvirtuals_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -627,8 +594,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -637,8 +603,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_go">
 <a href="#mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -647,8 +612,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrideconnlimit_go">
 <a href="#overrideconnlimit_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -658,8 +622,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -668,13 +631,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultsfrom_nodejs">
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -683,8 +644,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -693,8 +653,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alwayssend_nodejs">
 <a href="#alwayssend_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Send</a>
@@ -703,8 +662,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_nodejs">
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -712,8 +670,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieencryption_nodejs">
 <a href="#cookieencryption_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption</a>
@@ -722,8 +679,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookieencryptionpassphrase_nodejs">
 <a href="#cookieencryptionpassphrase_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption<wbr>Passphrase</a>
@@ -732,8 +688,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiename_nodejs">
 <a href="#cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
@@ -742,8 +697,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_nodejs">
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -752,8 +706,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashlength_nodejs">
 <a href="#hashlength_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Length</a>
@@ -762,8 +715,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashoffset_nodejs">
 <a href="#hashoffset_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Offset</a>
@@ -772,8 +724,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httponly_nodejs">
 <a href="#httponly_nodejs" style="color: inherit; text-decoration: inherit;">httponly</a>
@@ -782,8 +733,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrosspools_nodejs">
 <a href="#matchacrosspools_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Pools</a>
@@ -792,8 +742,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossservices_nodejs">
 <a href="#matchacrossservices_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Services</a>
@@ -802,8 +751,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossvirtuals_nodejs">
 <a href="#matchacrossvirtuals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Virtuals</a>
@@ -812,8 +760,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -822,8 +769,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_nodejs">
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -832,8 +778,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrideconnlimit_nodejs">
 <a href="#overrideconnlimit_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Conn<wbr>Limit</a>
@@ -843,8 +788,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -853,13 +797,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaults_from_python">
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -868,8 +810,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -878,8 +819,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="always_send_python">
 <a href="#always_send_python" style="color: inherit; text-decoration: inherit;">always_<wbr>send</a>
@@ -888,8 +828,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_service_python">
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -897,8 +836,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_encryption_python">
 <a href="#cookie_encryption_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption</a>
@@ -907,8 +845,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_encryption_passphrase_python">
 <a href="#cookie_encryption_passphrase_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption_<wbr>passphrase</a>
@@ -917,8 +854,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookie_name_python">
 <a href="#cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
@@ -927,8 +863,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_python">
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -937,8 +872,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hash_length_python">
 <a href="#hash_length_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>length</a>
@@ -947,8 +881,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hash_offset_python">
 <a href="#hash_offset_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>offset</a>
@@ -957,8 +890,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httponly_python">
 <a href="#httponly_python" style="color: inherit; text-decoration: inherit;">httponly</a>
@@ -967,8 +899,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_across_pools_python">
 <a href="#match_across_pools_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>pools</a>
@@ -977,8 +908,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_across_services_python">
 <a href="#match_across_services_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>services</a>
@@ -987,8 +917,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_across_virtuals_python">
 <a href="#match_across_virtuals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>virtuals</a>
@@ -997,8 +926,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1007,8 +935,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_python">
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1017,8 +944,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="override_conn_limit_python">
 <a href="#override_conn_limit_python" style="color: inherit; text-decoration: inherit;">override_<wbr>conn_<wbr>limit</a>
@@ -1028,8 +954,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1038,8 +963,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1050,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1059,13 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1073,13 +994,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1087,13 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1101,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1229,8 +1145,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alwayssend_csharp">
 <a href="#state_alwayssend_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Send</a>
@@ -1239,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_csharp">
 <a href="#state_appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1248,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookieencryption_csharp">
 <a href="#state_cookieencryption_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption</a>
@@ -1258,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookieencryptionpassphrase_csharp">
 <a href="#state_cookieencryptionpassphrase_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption<wbr>Passphrase</a>
@@ -1268,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookiename_csharp">
 <a href="#state_cookiename_csharp" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -1278,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
 <a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1288,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_csharp">
 <a href="#state_expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1298,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashlength_csharp">
 <a href="#state_hashlength_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Length</a>
@@ -1308,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashoffset_csharp">
 <a href="#state_hashoffset_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Offset</a>
@@ -1318,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httponly_csharp">
 <a href="#state_httponly_csharp" style="color: inherit; text-decoration: inherit;">Httponly</a>
@@ -1328,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrosspools_csharp">
 <a href="#state_matchacrosspools_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -1338,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossservices_csharp">
 <a href="#state_matchacrossservices_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -1348,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossvirtuals_csharp">
 <a href="#state_matchacrossvirtuals_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -1358,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_csharp">
 <a href="#state_method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1368,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_csharp">
 <a href="#state_mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -1378,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1388,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overrideconnlimit_csharp">
 <a href="#state_overrideconnlimit_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -1399,8 +1298,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1409,13 +1307,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alwayssend_go">
 <a href="#state_alwayssend_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Send</a>
@@ -1424,8 +1320,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_go">
 <a href="#state_appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1433,8 +1328,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookieencryption_go">
 <a href="#state_cookieencryption_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption</a>
@@ -1443,8 +1337,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookieencryptionpassphrase_go">
 <a href="#state_cookieencryptionpassphrase_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Encryption<wbr>Passphrase</a>
@@ -1453,8 +1346,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookiename_go">
 <a href="#state_cookiename_go" style="color: inherit; text-decoration: inherit;">Cookie<wbr>Name</a>
@@ -1463,8 +1355,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
 <a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1473,8 +1364,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_go">
 <a href="#state_expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
@@ -1483,8 +1373,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashlength_go">
 <a href="#state_hashlength_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Length</a>
@@ -1493,8 +1382,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashoffset_go">
 <a href="#state_hashoffset_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Offset</a>
@@ -1503,8 +1391,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httponly_go">
 <a href="#state_httponly_go" style="color: inherit; text-decoration: inherit;">Httponly</a>
@@ -1513,8 +1400,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrosspools_go">
 <a href="#state_matchacrosspools_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -1523,8 +1409,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossservices_go">
 <a href="#state_matchacrossservices_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -1533,8 +1418,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossvirtuals_go">
 <a href="#state_matchacrossvirtuals_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -1543,8 +1427,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_go">
 <a href="#state_method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1553,8 +1436,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_go">
 <a href="#state_mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -1563,8 +1445,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1573,8 +1454,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overrideconnlimit_go">
 <a href="#state_overrideconnlimit_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -1584,8 +1464,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1594,13 +1473,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alwayssend_nodejs">
 <a href="#state_alwayssend_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Send</a>
@@ -1609,8 +1486,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_nodejs">
 <a href="#state_appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -1618,8 +1494,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookieencryption_nodejs">
 <a href="#state_cookieencryption_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption</a>
@@ -1628,8 +1503,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookieencryptionpassphrase_nodejs">
 <a href="#state_cookieencryptionpassphrase_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Encryption<wbr>Passphrase</a>
@@ -1638,8 +1512,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookiename_nodejs">
 <a href="#state_cookiename_nodejs" style="color: inherit; text-decoration: inherit;">cookie<wbr>Name</a>
@@ -1648,8 +1521,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -1658,8 +1530,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_nodejs">
 <a href="#state_expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1668,8 +1539,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashlength_nodejs">
 <a href="#state_hashlength_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Length</a>
@@ -1678,8 +1548,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashoffset_nodejs">
 <a href="#state_hashoffset_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Offset</a>
@@ -1688,8 +1557,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httponly_nodejs">
 <a href="#state_httponly_nodejs" style="color: inherit; text-decoration: inherit;">httponly</a>
@@ -1698,8 +1566,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrosspools_nodejs">
 <a href="#state_matchacrosspools_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Pools</a>
@@ -1708,8 +1575,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossservices_nodejs">
 <a href="#state_matchacrossservices_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Services</a>
@@ -1718,8 +1584,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossvirtuals_nodejs">
 <a href="#state_matchacrossvirtuals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Virtuals</a>
@@ -1728,8 +1593,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_nodejs">
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1738,8 +1602,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_nodejs">
 <a href="#state_mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1748,8 +1611,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1758,8 +1620,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overrideconnlimit_nodejs">
 <a href="#state_overrideconnlimit_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Conn<wbr>Limit</a>
@@ -1769,8 +1630,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1779,13 +1639,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_always_send_python">
 <a href="#state_always_send_python" style="color: inherit; text-decoration: inherit;">always_<wbr>send</a>
@@ -1794,8 +1652,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable always sending cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_service_python">
 <a href="#state_app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -1803,8 +1660,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookie_encryption_python">
 <a href="#state_cookie_encryption_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption</a>
@@ -1813,8 +1669,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To required, preferred, or disabled policy for cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookie_encryption_passphrase_python">
 <a href="#state_cookie_encryption_passphrase_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>encryption_<wbr>passphrase</a>
@@ -1823,8 +1678,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Passphrase for encrypted cookies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cookie_name_python">
 <a href="#state_cookie_name_python" style="color: inherit; text-decoration: inherit;">cookie_<wbr>name</a>
@@ -1833,8 +1687,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie to track persistence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -1843,8 +1696,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_python">
 <a href="#state_expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
@@ -1853,8 +1705,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expiration TTL for cookie specified in D:H:M:S or in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hash_length_python">
 <a href="#state_hash_length_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>length</a>
@@ -1863,8 +1714,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of hash to apply to cookie
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hash_offset_python">
 <a href="#state_hash_offset_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>offset</a>
@@ -1873,8 +1723,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters to skip in the cookie for the hash
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httponly_python">
 <a href="#state_httponly_python" style="color: inherit; text-decoration: inherit;">httponly</a>
@@ -1883,8 +1732,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable sending only over http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_across_pools_python">
 <a href="#state_match_across_pools_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>pools</a>
@@ -1893,8 +1741,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_across_services_python">
 <a href="#state_match_across_services_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>services</a>
@@ -1903,8 +1750,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_across_virtuals_python">
 <a href="#state_match_across_virtuals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>virtuals</a>
@@ -1913,8 +1759,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across virtual servers with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_python">
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1923,8 +1768,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of cookie processing that the system uses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_python">
 <a href="#state_mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1933,8 +1777,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1943,8 +1786,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_override_conn_limit_python">
 <a href="#state_override_conn_limit_python" style="color: inherit; text-decoration: inherit;">override_<wbr>conn_<wbr>limit</a>
@@ -1954,8 +1796,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1964,8 +1805,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

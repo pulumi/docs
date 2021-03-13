@@ -323,8 +323,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_csharp">
 <a href="#digitaltwinsid_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -333,8 +332,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicendpoint_csharp">
 <a href="#eventgridtopicendpoint_csharp" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Endpoint</a>
@@ -343,8 +341,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicprimaryaccesskey_csharp">
 <a href="#eventgridtopicprimaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Primary<wbr>Access<wbr>Key</a>
@@ -353,8 +350,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicsecondaryaccesskey_csharp">
 <a href="#eventgridtopicsecondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Secondary<wbr>Access<wbr>Key</a>
@@ -363,8 +359,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_csharp">
 <a href="#deadletterstoragesecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -373,8 +368,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -383,13 +377,11 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_go">
 <a href="#digitaltwinsid_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -398,8 +390,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicendpoint_go">
 <a href="#eventgridtopicendpoint_go" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Endpoint</a>
@@ -408,8 +399,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicprimaryaccesskey_go">
 <a href="#eventgridtopicprimaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Primary<wbr>Access<wbr>Key</a>
@@ -418,8 +408,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicsecondaryaccesskey_go">
 <a href="#eventgridtopicsecondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Secondary<wbr>Access<wbr>Key</a>
@@ -428,8 +417,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_go">
 <a href="#deadletterstoragesecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -438,8 +426,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -448,13 +435,11 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_nodejs">
 <a href="#digitaltwinsid_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Twins<wbr>Id</a>
@@ -463,8 +448,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicendpoint_nodejs">
 <a href="#eventgridtopicendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventgrid<wbr>Topic<wbr>Endpoint</a>
@@ -473,8 +457,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicprimaryaccesskey_nodejs">
 <a href="#eventgridtopicprimaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">eventgrid<wbr>Topic<wbr>Primary<wbr>Access<wbr>Key</a>
@@ -483,8 +466,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgridtopicsecondaryaccesskey_nodejs">
 <a href="#eventgridtopicsecondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">eventgrid<wbr>Topic<wbr>Secondary<wbr>Access<wbr>Key</a>
@@ -493,8 +475,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_nodejs">
 <a href="#deadletterstoragesecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -503,8 +484,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -513,13 +493,11 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digital_twins_id_python">
 <a href="#digital_twins_id_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>twins_<wbr>id</a>
@@ -528,8 +506,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgrid_topic_endpoint_python">
 <a href="#eventgrid_topic_endpoint_python" style="color: inherit; text-decoration: inherit;">eventgrid_<wbr>topic_<wbr>endpoint</a>
@@ -538,8 +515,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgrid_topic_primary_access_key_python">
 <a href="#eventgrid_topic_primary_access_key_python" style="color: inherit; text-decoration: inherit;">eventgrid_<wbr>topic_<wbr>primary_<wbr>access_<wbr>key</a>
@@ -548,8 +524,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventgrid_topic_secondary_access_key_python">
 <a href="#eventgrid_topic_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">eventgrid_<wbr>topic_<wbr>secondary_<wbr>access_<wbr>key</a>
@@ -558,8 +533,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_storage_secret_python">
 <a href="#dead_letter_storage_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>storage_<wbr>secret</a>
@@ -568,8 +542,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -578,8 +551,7 @@ The EndpointEventGrid resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -590,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,13 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -613,13 +582,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -627,13 +594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -641,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -769,8 +733,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_csharp">
 <a href="#state_deadletterstoragesecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -779,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_csharp">
 <a href="#state_digitaltwinsid_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -789,8 +751,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicendpoint_csharp">
 <a href="#state_eventgridtopicendpoint_csharp" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Endpoint</a>
@@ -799,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicprimaryaccesskey_csharp">
 <a href="#state_eventgridtopicprimaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Primary<wbr>Access<wbr>Key</a>
@@ -809,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicsecondaryaccesskey_csharp">
 <a href="#state_eventgridtopicsecondaryaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Secondary<wbr>Access<wbr>Key</a>
@@ -819,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -829,13 +787,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_go">
 <a href="#state_deadletterstoragesecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -844,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_go">
 <a href="#state_digitaltwinsid_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -854,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicendpoint_go">
 <a href="#state_eventgridtopicendpoint_go" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Endpoint</a>
@@ -864,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicprimaryaccesskey_go">
 <a href="#state_eventgridtopicprimaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Primary<wbr>Access<wbr>Key</a>
@@ -874,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicsecondaryaccesskey_go">
 <a href="#state_eventgridtopicsecondaryaccesskey_go" style="color: inherit; text-decoration: inherit;">Eventgrid<wbr>Topic<wbr>Secondary<wbr>Access<wbr>Key</a>
@@ -884,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -894,13 +845,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_nodejs">
 <a href="#state_deadletterstoragesecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -909,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_nodejs">
 <a href="#state_digitaltwinsid_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Twins<wbr>Id</a>
@@ -919,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicendpoint_nodejs">
 <a href="#state_eventgridtopicendpoint_nodejs" style="color: inherit; text-decoration: inherit;">eventgrid<wbr>Topic<wbr>Endpoint</a>
@@ -929,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicprimaryaccesskey_nodejs">
 <a href="#state_eventgridtopicprimaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">eventgrid<wbr>Topic<wbr>Primary<wbr>Access<wbr>Key</a>
@@ -939,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgridtopicsecondaryaccesskey_nodejs">
 <a href="#state_eventgridtopicsecondaryaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">eventgrid<wbr>Topic<wbr>Secondary<wbr>Access<wbr>Key</a>
@@ -949,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -959,13 +903,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dead_letter_storage_secret_python">
 <a href="#state_dead_letter_storage_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>storage_<wbr>secret</a>
@@ -974,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digital_twins_id_python">
 <a href="#state_digital_twins_id_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>twins_<wbr>id</a>
@@ -984,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgrid_topic_endpoint_python">
 <a href="#state_eventgrid_topic_endpoint_python" style="color: inherit; text-decoration: inherit;">eventgrid_<wbr>topic_<wbr>endpoint</a>
@@ -994,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgrid_topic_primary_access_key_python">
 <a href="#state_eventgrid_topic_primary_access_key_python" style="color: inherit; text-decoration: inherit;">eventgrid_<wbr>topic_<wbr>primary_<wbr>access_<wbr>key</a>
@@ -1004,8 +943,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgrid_topic_secondary_access_key_python">
 <a href="#state_eventgrid_topic_secondary_access_key_python" style="color: inherit; text-decoration: inherit;">eventgrid_<wbr>topic_<wbr>secondary_<wbr>access_<wbr>key</a>
@@ -1014,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary access key of the Event Grid Topic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1024,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -325,8 +325,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -335,8 +334,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iothubids_csharp">
 <a href="#iothubids_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Ids</a>
@@ -345,8 +343,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -355,8 +352,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -365,8 +361,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventstoexports_csharp">
 <a href="#eventstoexports_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>To<wbr>Exports</a>
@@ -375,8 +370,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -385,8 +379,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -395,8 +388,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logunmaskedipsenabled_csharp">
 <a href="#logunmaskedipsenabled_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
@@ -405,8 +397,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -415,8 +406,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryforresources_csharp">
 <a href="#queryforresources_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>For<wbr>Resources</a>
@@ -425,8 +415,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querysubscriptionids_csharp">
 <a href="#querysubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscription<wbr>Ids</a>
@@ -435,8 +424,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationsenabled_csharp">
 <a href="#recommendationsenabled_csharp" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
@@ -445,8 +433,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -455,13 +442,11 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -470,8 +455,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iothubids_go">
 <a href="#iothubids_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Ids</a>
@@ -480,8 +464,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -490,8 +473,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -500,8 +482,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventstoexports_go">
 <a href="#eventstoexports_go" style="color: inherit; text-decoration: inherit;">Events<wbr>To<wbr>Exports</a>
@@ -510,8 +491,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -520,8 +500,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -530,8 +509,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logunmaskedipsenabled_go">
 <a href="#logunmaskedipsenabled_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
@@ -540,8 +518,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -550,8 +527,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryforresources_go">
 <a href="#queryforresources_go" style="color: inherit; text-decoration: inherit;">Query<wbr>For<wbr>Resources</a>
@@ -560,8 +536,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querysubscriptionids_go">
 <a href="#querysubscriptionids_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscription<wbr>Ids</a>
@@ -570,8 +545,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationsenabled_go">
 <a href="#recommendationsenabled_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
@@ -580,8 +554,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -590,13 +563,11 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -605,8 +576,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iothubids_nodejs">
 <a href="#iothubids_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Ids</a>
@@ -615,8 +585,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -625,8 +594,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -635,8 +603,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventstoexports_nodejs">
 <a href="#eventstoexports_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>To<wbr>Exports</a>
@@ -645,8 +612,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -655,8 +621,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -665,8 +630,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logunmaskedipsenabled_nodejs">
 <a href="#logunmaskedipsenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
@@ -675,8 +639,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -685,8 +648,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryforresources_nodejs">
 <a href="#queryforresources_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>For<wbr>Resources</a>
@@ -695,8 +657,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querysubscriptionids_nodejs">
 <a href="#querysubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscription<wbr>Ids</a>
@@ -705,8 +666,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendationsenabled_nodejs">
 <a href="#recommendationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Enabled</a>
@@ -715,8 +675,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -725,13 +684,11 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -740,8 +697,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="iothub_ids_python">
 <a href="#iothub_ids_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>ids</a>
@@ -750,8 +706,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -760,8 +715,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -770,8 +724,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_to_exports_python">
 <a href="#events_to_exports_python" style="color: inherit; text-decoration: inherit;">events_<wbr>to_<wbr>exports</a>
@@ -780,8 +733,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -790,8 +742,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -800,8 +751,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_unmasked_ips_enabled_python">
 <a href="#log_unmasked_ips_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>unmasked_<wbr>ips_<wbr>enabled</a>
@@ -810,8 +760,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -820,8 +769,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_for_resources_python">
 <a href="#query_for_resources_python" style="color: inherit; text-decoration: inherit;">query_<wbr>for_<wbr>resources</a>
@@ -830,8 +778,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_subscription_ids_python">
 <a href="#query_subscription_ids_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscription_<wbr>ids</a>
@@ -840,8 +787,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recommendations_enabled_python">
 <a href="#recommendations_enabled_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>enabled</a>
@@ -850,8 +796,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -860,8 +805,7 @@ The SecuritySolution resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -872,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -881,13 +824,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -895,13 +836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -909,13 +848,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -923,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1051,8 +987,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1061,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1071,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventstoexports_csharp">
 <a href="#state_eventstoexports_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>To<wbr>Exports</a>
@@ -1081,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubids_csharp">
 <a href="#state_iothubids_csharp" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Ids</a>
@@ -1091,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1101,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_csharp">
 <a href="#state_loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1111,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logunmaskedipsenabled_csharp">
 <a href="#state_logunmaskedipsenabled_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
@@ -1121,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1131,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryforresources_csharp">
 <a href="#state_queryforresources_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>For<wbr>Resources</a>
@@ -1141,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querysubscriptionids_csharp">
 <a href="#state_querysubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscription<wbr>Ids</a>
@@ -1151,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recommendationsenabled_csharp">
 <a href="#state_recommendationsenabled_csharp" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
@@ -1161,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1171,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1181,13 +1104,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1196,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1206,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventstoexports_go">
 <a href="#state_eventstoexports_go" style="color: inherit; text-decoration: inherit;">Events<wbr>To<wbr>Exports</a>
@@ -1216,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubids_go">
 <a href="#state_iothubids_go" style="color: inherit; text-decoration: inherit;">Iothub<wbr>Ids</a>
@@ -1226,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1236,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_go">
 <a href="#state_loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1246,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logunmaskedipsenabled_go">
 <a href="#state_logunmaskedipsenabled_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
@@ -1256,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1266,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryforresources_go">
 <a href="#state_queryforresources_go" style="color: inherit; text-decoration: inherit;">Query<wbr>For<wbr>Resources</a>
@@ -1276,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querysubscriptionids_go">
 <a href="#state_querysubscriptionids_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscription<wbr>Ids</a>
@@ -1286,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recommendationsenabled_go">
 <a href="#state_recommendationsenabled_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Enabled</a>
@@ -1296,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1306,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1316,13 +1225,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1331,8 +1238,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1341,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventstoexports_nodejs">
 <a href="#state_eventstoexports_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>To<wbr>Exports</a>
@@ -1351,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothubids_nodejs">
 <a href="#state_iothubids_nodejs" style="color: inherit; text-decoration: inherit;">iothub<wbr>Ids</a>
@@ -1361,8 +1265,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1371,8 +1274,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_nodejs">
 <a href="#state_loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1381,8 +1283,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logunmaskedipsenabled_nodejs">
 <a href="#state_logunmaskedipsenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Unmasked<wbr>Ips<wbr>Enabled</a>
@@ -1391,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1401,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryforresources_nodejs">
 <a href="#state_queryforresources_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>For<wbr>Resources</a>
@@ -1411,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querysubscriptionids_nodejs">
 <a href="#state_querysubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscription<wbr>Ids</a>
@@ -1421,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recommendationsenabled_nodejs">
 <a href="#state_recommendationsenabled_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Enabled</a>
@@ -1431,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1441,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1451,13 +1346,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1466,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Display Name for this Iot Security Solution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1476,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the Iot Security Solution enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_to_exports_python">
 <a href="#state_events_to_exports_python" style="color: inherit; text-decoration: inherit;">events_<wbr>to_<wbr>exports</a>
@@ -1486,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of data which is to exported to analytic workspace. Valid values include `RawEvents`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iothub_ids_python">
 <a href="#state_iothub_ids_python" style="color: inherit; text-decoration: inherit;">iothub_<wbr>ids</a>
@@ -1496,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies the IoT Hub resource IDs to which this Iot Security Solution is applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1506,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_analytics_workspace_id_python">
 <a href="#state_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -1516,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Log Analytics Workspace ID to which the security data will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_unmasked_ips_enabled_python">
 <a href="#state_log_unmasked_ips_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>unmasked_<wbr>ips_<wbr>enabled</a>
@@ -1526,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should ip addressed be unmasked in the log? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1536,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_for_resources_python">
 <a href="#state_query_for_resources_python" style="color: inherit; text-decoration: inherit;">query_<wbr>for_<wbr>resources</a>
@@ -1546,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Azure Resource Graph query used to set the resources monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_subscription_ids_python">
 <a href="#state_query_subscription_ids_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscription_<wbr>ids</a>
@@ -1556,8 +1440,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subscription Ids on which the user defined resources query should be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recommendations_enabled_python">
 <a href="#state_recommendations_enabled_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>enabled</a>
@@ -1566,8 +1449,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recommendations_enabled` block of options to enable or disable as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1576,8 +1458,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource group in which to create the Iot Security Solution. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1586,8 +1467,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1602,8 +1482,7 @@ The following state arguments are supported:
 <h4 id="securitysolutionrecommendationsenabled">Security<wbr>Solution<wbr>Recommendations<wbr>Enabled</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acrauthentication_csharp">
 <a href="#acrauthentication_csharp" style="color: inherit; text-decoration: inherit;">Acr<wbr>Authentication</a>
@@ -1612,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Principal Authentication enabled for the ACR repository? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentsendunutilizedmsg_csharp">
 <a href="#agentsendunutilizedmsg_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Send<wbr>Unutilized<wbr>Msg</a>
@@ -1622,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Agent send underutilized messages enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseline_csharp">
 <a href="#baseline_csharp" style="color: inherit; text-decoration: inherit;">Baseline</a>
@@ -1632,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Security related system configuration issues identified? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgehubmemoptimize_csharp">
 <a href="#edgehubmemoptimize_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Hub<wbr>Mem<wbr>Optimize</a>
@@ -1642,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IoT Edge Hub memory optimized? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgeloggingoption_csharp">
 <a href="#edgeloggingoption_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Logging<wbr>Option</a>
@@ -1652,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is logging configured for IoT Edge module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inconsistentmodulesettings_csharp">
 <a href="#inconsistentmodulesettings_csharp" style="color: inherit; text-decoration: inherit;">Inconsistent<wbr>Module<wbr>Settings</a>
@@ -1662,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is inconsistent module settings enabled for SecurityGroup? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installagent_csharp">
 <a href="#installagent_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Agent</a>
@@ -1672,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is Azure IoT Security agent installed? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterdenyall_csharp">
 <a href="#ipfilterdenyall_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Deny<wbr>All</a>
@@ -1682,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Default IP filter policy denied? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterpermissiverule_csharp">
 <a href="#ipfilterpermissiverule_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Permissive<wbr>Rule</a>
@@ -1692,8 +1563,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IP filter rule source allowable IP range too large? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_csharp">
 <a href="#openports_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Ports</a>
@@ -1702,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any ports open on the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissivefirewallpolicy_csharp">
 <a href="#permissivefirewallpolicy_csharp" style="color: inherit; text-decoration: inherit;">Permissive<wbr>Firewall<wbr>Policy</a>
@@ -1712,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does firewall policy exist which allow necessary communication to/from the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiveinputfirewallrules_csharp">
 <a href="#permissiveinputfirewallrules_csharp" style="color: inherit; text-decoration: inherit;">Permissive<wbr>Input<wbr>Firewall<wbr>Rules</a>
@@ -1722,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted in? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiveoutputfirewallrules_csharp">
 <a href="#permissiveoutputfirewallrules_csharp" style="color: inherit; text-decoration: inherit;">Permissive<wbr>Output<wbr>Firewall<wbr>Rules</a>
@@ -1732,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted out? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilegeddockeroptions_csharp">
 <a href="#privilegeddockeroptions_csharp" style="color: inherit; text-decoration: inherit;">Privileged<wbr>Docker<wbr>Options</a>
@@ -1742,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is high level permissions are needed for the module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedcredentials_csharp">
 <a href="#sharedcredentials_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Credentials</a>
@@ -1752,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any credentials shared among devices? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerabletlsciphersuite_csharp">
 <a href="#vulnerabletlsciphersuite_csharp" style="color: inherit; text-decoration: inherit;">Vulnerable<wbr>Tls<wbr>Cipher<wbr>Suite</a>
@@ -1762,13 +1626,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does TLS cipher suite need to be updated? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acrauthentication_go">
 <a href="#acrauthentication_go" style="color: inherit; text-decoration: inherit;">Acr<wbr>Authentication</a>
@@ -1777,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Principal Authentication enabled for the ACR repository? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentsendunutilizedmsg_go">
 <a href="#agentsendunutilizedmsg_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Send<wbr>Unutilized<wbr>Msg</a>
@@ -1787,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Agent send underutilized messages enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseline_go">
 <a href="#baseline_go" style="color: inherit; text-decoration: inherit;">Baseline</a>
@@ -1797,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Security related system configuration issues identified? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgehubmemoptimize_go">
 <a href="#edgehubmemoptimize_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Hub<wbr>Mem<wbr>Optimize</a>
@@ -1807,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IoT Edge Hub memory optimized? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgeloggingoption_go">
 <a href="#edgeloggingoption_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Logging<wbr>Option</a>
@@ -1817,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is logging configured for IoT Edge module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inconsistentmodulesettings_go">
 <a href="#inconsistentmodulesettings_go" style="color: inherit; text-decoration: inherit;">Inconsistent<wbr>Module<wbr>Settings</a>
@@ -1827,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is inconsistent module settings enabled for SecurityGroup? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installagent_go">
 <a href="#installagent_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Agent</a>
@@ -1837,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is Azure IoT Security agent installed? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterdenyall_go">
 <a href="#ipfilterdenyall_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Deny<wbr>All</a>
@@ -1847,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Default IP filter policy denied? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterpermissiverule_go">
 <a href="#ipfilterpermissiverule_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filter<wbr>Permissive<wbr>Rule</a>
@@ -1857,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IP filter rule source allowable IP range too large? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_go">
 <a href="#openports_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Ports</a>
@@ -1867,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any ports open on the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissivefirewallpolicy_go">
 <a href="#permissivefirewallpolicy_go" style="color: inherit; text-decoration: inherit;">Permissive<wbr>Firewall<wbr>Policy</a>
@@ -1877,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does firewall policy exist which allow necessary communication to/from the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiveinputfirewallrules_go">
 <a href="#permissiveinputfirewallrules_go" style="color: inherit; text-decoration: inherit;">Permissive<wbr>Input<wbr>Firewall<wbr>Rules</a>
@@ -1887,8 +1738,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted in? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiveoutputfirewallrules_go">
 <a href="#permissiveoutputfirewallrules_go" style="color: inherit; text-decoration: inherit;">Permissive<wbr>Output<wbr>Firewall<wbr>Rules</a>
@@ -1897,8 +1747,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted out? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilegeddockeroptions_go">
 <a href="#privilegeddockeroptions_go" style="color: inherit; text-decoration: inherit;">Privileged<wbr>Docker<wbr>Options</a>
@@ -1907,8 +1756,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is high level permissions are needed for the module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedcredentials_go">
 <a href="#sharedcredentials_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Credentials</a>
@@ -1917,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any credentials shared among devices? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerabletlsciphersuite_go">
 <a href="#vulnerabletlsciphersuite_go" style="color: inherit; text-decoration: inherit;">Vulnerable<wbr>Tls<wbr>Cipher<wbr>Suite</a>
@@ -1927,13 +1774,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does TLS cipher suite need to be updated? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acrauthentication_nodejs">
 <a href="#acrauthentication_nodejs" style="color: inherit; text-decoration: inherit;">acr<wbr>Authentication</a>
@@ -1942,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Principal Authentication enabled for the ACR repository? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentsendunutilizedmsg_nodejs">
 <a href="#agentsendunutilizedmsg_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Send<wbr>Unutilized<wbr>Msg</a>
@@ -1952,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Agent send underutilized messages enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseline_nodejs">
 <a href="#baseline_nodejs" style="color: inherit; text-decoration: inherit;">baseline</a>
@@ -1962,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Security related system configuration issues identified? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgehubmemoptimize_nodejs">
 <a href="#edgehubmemoptimize_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Hub<wbr>Mem<wbr>Optimize</a>
@@ -1972,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is IoT Edge Hub memory optimized? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edgeloggingoption_nodejs">
 <a href="#edgeloggingoption_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Logging<wbr>Option</a>
@@ -1982,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is logging configured for IoT Edge module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inconsistentmodulesettings_nodejs">
 <a href="#inconsistentmodulesettings_nodejs" style="color: inherit; text-decoration: inherit;">inconsistent<wbr>Module<wbr>Settings</a>
@@ -1992,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is inconsistent module settings enabled for SecurityGroup? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installagent_nodejs">
 <a href="#installagent_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Agent</a>
@@ -2002,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}is Azure IoT Security agent installed? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterdenyall_nodejs">
 <a href="#ipfilterdenyall_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Deny<wbr>All</a>
@@ -2012,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is Default IP filter policy denied? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipfilterpermissiverule_nodejs">
 <a href="#ipfilterpermissiverule_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filter<wbr>Permissive<wbr>Rule</a>
@@ -2022,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is IP filter rule source allowable IP range too large? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openports_nodejs">
 <a href="#openports_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Ports</a>
@@ -2032,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is any ports open on the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissivefirewallpolicy_nodejs">
 <a href="#permissivefirewallpolicy_nodejs" style="color: inherit; text-decoration: inherit;">permissive<wbr>Firewall<wbr>Policy</a>
@@ -2042,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does firewall policy exist which allow necessary communication to/from the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiveinputfirewallrules_nodejs">
 <a href="#permissiveinputfirewallrules_nodejs" style="color: inherit; text-decoration: inherit;">permissive<wbr>Input<wbr>Firewall<wbr>Rules</a>
@@ -2052,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted in? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiveoutputfirewallrules_nodejs">
 <a href="#permissiveoutputfirewallrules_nodejs" style="color: inherit; text-decoration: inherit;">permissive<wbr>Output<wbr>Firewall<wbr>Rules</a>
@@ -2062,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted out? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privilegeddockeroptions_nodejs">
 <a href="#privilegeddockeroptions_nodejs" style="color: inherit; text-decoration: inherit;">privileged<wbr>Docker<wbr>Options</a>
@@ -2072,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is high level permissions are needed for the module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedcredentials_nodejs">
 <a href="#sharedcredentials_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Credentials</a>
@@ -2082,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is any credentials shared among devices? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerabletlsciphersuite_nodejs">
 <a href="#vulnerabletlsciphersuite_nodejs" style="color: inherit; text-decoration: inherit;">vulnerable<wbr>Tls<wbr>Cipher<wbr>Suite</a>
@@ -2092,13 +1922,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does TLS cipher suite need to be updated? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acr_authentication_python">
 <a href="#acr_authentication_python" style="color: inherit; text-decoration: inherit;">acr_<wbr>authentication</a>
@@ -2107,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Principal Authentication enabled for the ACR repository? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_send_unutilized_msg_python">
 <a href="#agent_send_unutilized_msg_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>send_<wbr>unutilized_<wbr>msg</a>
@@ -2117,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Agent send underutilized messages enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseline_python">
 <a href="#baseline_python" style="color: inherit; text-decoration: inherit;">baseline</a>
@@ -2127,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Security related system configuration issues identified? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edge_hub_mem_optimize_python">
 <a href="#edge_hub_mem_optimize_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>hub_<wbr>mem_<wbr>optimize</a>
@@ -2137,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IoT Edge Hub memory optimized? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edge_logging_option_python">
 <a href="#edge_logging_option_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>logging_<wbr>option</a>
@@ -2147,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is logging configured for IoT Edge module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inconsistent_module_settings_python">
 <a href="#inconsistent_module_settings_python" style="color: inherit; text-decoration: inherit;">inconsistent_<wbr>module_<wbr>settings</a>
@@ -2157,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is inconsistent module settings enabled for SecurityGroup? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="install_agent_python">
 <a href="#install_agent_python" style="color: inherit; text-decoration: inherit;">install_<wbr>agent</a>
@@ -2167,8 +1989,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is Azure IoT Security agent installed? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filter_deny_all_python">
 <a href="#ip_filter_deny_all_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>deny_<wbr>all</a>
@@ -2177,8 +1998,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is Default IP filter policy denied? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_filter_permissive_rule_python">
 <a href="#ip_filter_permissive_rule_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filter_<wbr>permissive_<wbr>rule</a>
@@ -2187,8 +2007,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is IP filter rule source allowable IP range too large? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_ports_python">
 <a href="#open_ports_python" style="color: inherit; text-decoration: inherit;">open_<wbr>ports</a>
@@ -2197,8 +2016,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any ports open on the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissive_firewall_policy_python">
 <a href="#permissive_firewall_policy_python" style="color: inherit; text-decoration: inherit;">permissive_<wbr>firewall_<wbr>policy</a>
@@ -2207,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does firewall policy exist which allow necessary communication to/from the device? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissive_input_firewall_rules_python">
 <a href="#permissive_input_firewall_rules_python" style="color: inherit; text-decoration: inherit;">permissive_<wbr>input_<wbr>firewall_<wbr>rules</a>
@@ -2217,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted in? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissive_output_firewall_rules_python">
 <a href="#permissive_output_firewall_rules_python" style="color: inherit; text-decoration: inherit;">permissive_<wbr>output_<wbr>firewall_<wbr>rules</a>
@@ -2227,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is only necessary addresses or ports are permitted out? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privileged_docker_options_python">
 <a href="#privileged_docker_options_python" style="color: inherit; text-decoration: inherit;">privileged_<wbr>docker_<wbr>options</a>
@@ -2237,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is high level permissions are needed for the module? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_credentials_python">
 <a href="#shared_credentials_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>credentials</a>
@@ -2247,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is any credentials shared among devices? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vulnerable_tls_cipher_suite_python">
 <a href="#vulnerable_tls_cipher_suite_python" style="color: inherit; text-decoration: inherit;">vulnerable_<wbr>tls_<wbr>cipher_<wbr>suite</a>
@@ -2257,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does TLS cipher suite need to be updated? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

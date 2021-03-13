@@ -430,8 +430,7 @@ The Trunk resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -440,8 +439,7 @@ The Trunk resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -452,8 +450,7 @@ The Trunk resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -463,8 +460,7 @@ The Trunk resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -474,8 +470,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -487,8 +482,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subports_csharp">
 <a href="#subports_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Ports</a>
@@ -498,8 +492,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -508,8 +501,7 @@ The structure of each subport is described below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -519,13 +511,11 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -534,8 +524,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -546,8 +535,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -557,8 +545,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -568,8 +555,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -581,8 +567,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subports_go">
 <a href="#subports_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Ports</a>
@@ -592,8 +577,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -602,8 +586,7 @@ The structure of each subport is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -613,13 +596,11 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -628,8 +609,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -640,8 +620,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -651,8 +630,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -662,8 +640,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -675,8 +652,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subports_nodejs">
 <a href="#subports_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Ports</a>
@@ -686,8 +662,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -696,8 +671,7 @@ The structure of each subport is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -707,13 +681,11 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -722,8 +694,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -734,8 +705,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -745,8 +715,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -756,8 +725,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -769,8 +737,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sub_ports_python">
 <a href="#sub_ports_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>ports</a>
@@ -780,8 +747,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -790,8 +756,7 @@ The structure of each subport is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -801,8 +766,7 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -813,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -824,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -833,13 +795,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -849,8 +809,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -858,13 +817,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -874,8 +831,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -883,13 +839,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -899,8 +853,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -908,8 +861,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1036,8 +988,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1048,8 +999,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1059,8 +1009,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1070,8 +1019,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1081,8 +1029,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1091,8 +1038,7 @@ updates the `name` of an existing trunk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1104,8 +1050,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subports_csharp">
 <a href="#state_subports_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Ports</a>
@@ -1115,8 +1060,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1125,8 +1069,7 @@ The structure of each subport is described below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1136,13 +1079,11 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1153,8 +1094,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1164,8 +1104,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1175,8 +1114,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1186,8 +1124,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1196,8 +1133,7 @@ updates the `name` of an existing trunk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1209,8 +1145,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subports_go">
 <a href="#state_subports_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Ports</a>
@@ -1220,8 +1155,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1230,8 +1164,7 @@ The structure of each subport is described below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1241,13 +1174,11 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1258,8 +1189,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1269,8 +1199,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1280,8 +1209,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1291,8 +1219,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -1301,8 +1228,7 @@ updates the `name` of an existing trunk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1314,8 +1240,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subports_nodejs">
 <a href="#state_subports_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Ports</a>
@@ -1325,8 +1250,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1335,8 +1259,7 @@ The structure of each subport is described below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1346,13 +1269,11 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1363,8 +1284,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
 `admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1374,8 +1294,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1385,8 +1304,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1396,8 +1314,7 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -1406,8 +1323,7 @@ updates the `name` of an existing trunk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1419,8 +1335,7 @@ updates the `name` of an existing trunk.
 A networking client is needed to create a trunk. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 trunk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sub_ports_python">
 <a href="#state_sub_ports_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>ports</a>
@@ -1430,8 +1345,7 @@ trunk.
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1440,8 +1354,7 @@ The structure of each subport is described below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1451,8 +1364,7 @@ The structure of each subport is described below.
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1467,8 +1379,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 <h4 id="trunksubport">Trunk<wbr>Sub<wbr>Port</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1477,8 +1388,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentationid_csharp">
 <a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -1487,8 +1397,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numeric id of the subport segment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentationtype_csharp">
 <a href="#segmentationtype_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Type</a>
@@ -1497,13 +1406,11 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The segmentation technology to use, e.g., "vlan".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1512,8 +1419,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentationid_go">
 <a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -1522,8 +1428,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numeric id of the subport segment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentationtype_go">
 <a href="#segmentationtype_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Type</a>
@@ -1532,13 +1437,11 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The segmentation technology to use, e.g., "vlan".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -1547,8 +1450,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentationid_nodejs">
 <a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
@@ -1557,8 +1459,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The numeric id of the subport segment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentationtype_nodejs">
 <a href="#segmentationtype_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Type</a>
@@ -1567,13 +1468,11 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The segmentation technology to use, e.g., "vlan".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -1582,8 +1481,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentation_id_python">
 <a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
@@ -1592,8 +1490,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numeric id of the subport segment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="segmentation_type_python">
 <a href="#segmentation_type_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>type</a>
@@ -1602,8 +1499,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The segmentation technology to use, e.g., "vlan".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

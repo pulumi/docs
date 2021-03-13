@@ -343,8 +343,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyblock_csharp">
 <a href="#policyblock_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Block</a>
@@ -354,8 +353,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_csharp">
 <a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -364,8 +362,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -374,13 +371,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -390,8 +385,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_go">
 <a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -400,8 +394,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -410,13 +403,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -426,8 +417,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_nodejs">
 <a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -436,8 +426,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -446,13 +435,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -462,8 +449,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vhost_python">
 <a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -472,8 +458,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -482,8 +467,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -494,8 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -503,13 +486,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -517,13 +498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -531,13 +510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -545,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -673,8 +649,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -683,8 +658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyblock_csharp">
 <a href="#state_policyblock_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Block</a>
@@ -694,8 +668,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
 <a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -704,13 +677,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -719,8 +690,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -730,8 +700,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
 <a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -740,13 +709,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -755,8 +722,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -766,8 +732,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
 <a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -776,13 +741,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -791,8 +754,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -802,8 +764,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the policy. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
 <a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -812,8 +773,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -828,8 +788,7 @@ described below.
 <h4 id="policypolicy">Policy<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applyto_csharp">
 <a href="#applyto_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>To</a>
@@ -838,8 +797,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can either be "exchanges", "queues", or "all".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definition_csharp">
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
@@ -849,8 +807,7 @@ described below.
     </dt>
     <dd>{{% md %}}Key/value pairs of the policy definition. See the
 RabbitMQ documentation for definition references and examples.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -859,8 +816,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pattern to match an exchange or queue name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -869,13 +825,11 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The policy with the greater priority is applied first.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applyto_go">
 <a href="#applyto_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>To</a>
@@ -884,8 +838,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can either be "exchanges", "queues", or "all".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definition_go">
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
@@ -895,8 +848,7 @@ RabbitMQ documentation for definition references and examples.
     </dt>
     <dd>{{% md %}}Key/value pairs of the policy definition. See the
 RabbitMQ documentation for definition references and examples.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -905,8 +857,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pattern to match an exchange or queue name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -915,13 +866,11 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The policy with the greater priority is applied first.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applyto_nodejs">
 <a href="#applyto_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>To</a>
@@ -930,8 +879,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can either be "exchanges", "queues", or "all".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definition_nodejs">
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
@@ -941,8 +889,7 @@ RabbitMQ documentation for definition references and examples.
     </dt>
     <dd>{{% md %}}Key/value pairs of the policy definition. See the
 RabbitMQ documentation for definition references and examples.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -951,8 +898,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pattern to match an exchange or queue name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -961,13 +907,11 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The policy with the greater priority is applied first.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apply_to_python">
 <a href="#apply_to_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>to</a>
@@ -976,8 +920,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can either be "exchanges", "queues", or "all".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="definition_python">
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
@@ -987,8 +930,7 @@ RabbitMQ documentation for definition references and examples.
     </dt>
     <dd>{{% md %}}Key/value pairs of the policy definition. See the
 RabbitMQ documentation for definition references and examples.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -997,8 +939,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A pattern to match an exchange or queue name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1007,8 +948,7 @@ RabbitMQ documentation for definition references and examples.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The policy with the greater priority is applied first.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -626,8 +626,7 @@ The InterfaceAttach resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -636,8 +635,7 @@ The InterfaceAttach resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_csharp">
 <a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -647,8 +645,7 @@ The InterfaceAttach resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -658,8 +655,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -669,8 +665,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -681,13 +676,11 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -696,8 +689,7 @@ creates a new attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_go">
 <a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -707,8 +699,7 @@ creates a new attachment.
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -718,8 +709,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -729,8 +719,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -741,13 +730,11 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -756,8 +743,7 @@ creates a new attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_nodejs">
 <a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -767,8 +753,7 @@ creates a new attachment.
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -778,8 +763,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -789,8 +773,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -801,13 +784,11 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -816,8 +797,7 @@ creates a new attachment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_ip_python">
 <a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -827,8 +807,7 @@ creates a new attachment.
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -838,8 +817,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -849,8 +827,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -861,8 +838,7 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -873,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -882,13 +857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -896,13 +869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -910,13 +881,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -924,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1052,8 +1020,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_csharp">
 <a href="#state_fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -1063,8 +1030,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1073,8 +1039,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
 <a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1084,8 +1049,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1095,8 +1059,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1107,13 +1070,11 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_go">
 <a href="#state_fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -1123,8 +1084,7 @@ creates a new attachment.
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1133,8 +1093,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
 <a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1144,8 +1103,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -1155,8 +1113,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1167,13 +1124,11 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_nodejs">
 <a href="#state_fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -1183,8 +1138,7 @@ creates a new attachment.
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1193,8 +1147,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -1204,8 +1157,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -1215,8 +1167,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1227,13 +1178,11 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixed_ip_python">
 <a href="#state_fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -1243,8 +1192,7 @@ creates a new attachment.
     </dt>
     <dd>{{% md %}}An IP address to assosciate with the port.
 _NOTE_: This option cannot be used with port_id. You must specifiy a network_id. The IP address must lie in a range on the supplied network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1253,8 +1201,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Port or Network to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1264,8 +1211,7 @@ _NOTE_: This option cannot be used with port_id. You must specifiy a network_id.
     </dt>
     <dd>{{% md %}}The ID of the Network to attach to an Instance. A port will be created automatically.
 _NOTE_: This option and `port_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -1275,8 +1221,7 @@ _NOTE_: This option and `port_id` are mutually exclusive.
     </dt>
     <dd>{{% md %}}The ID of the Port to attach to an Instance.
 _NOTE_: This option and `network_id` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1287,8 +1232,7 @@ _NOTE_: This option and `network_id` are mutually exclusive.
     <dd>{{% md %}}The region in which to create the interface attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new attachment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

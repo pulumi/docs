@@ -331,8 +331,7 @@ The MachineImage resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstance_csharp">
 <a href="#sourceinstance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
@@ -341,8 +340,7 @@ The MachineImage resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -351,8 +349,7 @@ The MachineImage resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestflush_csharp">
 <a href="#guestflush_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
@@ -362,8 +359,7 @@ The MachineImage resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machineimageencryptionkey_csharp">
 <a href="#machineimageencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -376,8 +372,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -386,8 +381,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -397,13 +391,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstance_go">
 <a href="#sourceinstance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
@@ -412,8 +404,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -422,8 +413,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestflush_go">
 <a href="#guestflush_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
@@ -433,8 +423,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machineimageencryptionkey_go">
 <a href="#machineimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -447,8 +436,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -457,8 +445,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -468,13 +455,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sourceinstance_nodejs">
 <a href="#sourceinstance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance</a>
@@ -483,8 +468,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -493,8 +477,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guestflush_nodejs">
 <a href="#guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
@@ -504,8 +487,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machineimageencryptionkey_nodejs">
 <a href="#machineimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -518,8 +500,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -528,8 +509,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -539,13 +519,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="source_instance_python">
 <a href="#source_instance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance</a>
@@ -554,8 +532,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -564,8 +541,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="guest_flush_python">
 <a href="#guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
@@ -575,8 +551,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machine_image_encryption_key_python">
 <a href="#machine_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>image_<wbr>encryption_<wbr>key</a>
@@ -589,8 +564,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -599,8 +573,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -610,8 +583,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -631,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -641,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagelocations_csharp">
 <a href="#storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
@@ -651,13 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -665,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -675,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagelocations_go">
 <a href="#storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
@@ -685,13 +650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -699,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -709,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagelocations_nodejs">
 <a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
@@ -719,13 +680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -733,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -743,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_locations_python">
 <a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
@@ -753,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -881,8 +837,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -891,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestflush_csharp">
 <a href="#state_guestflush_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
@@ -902,8 +856,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machineimageencryptionkey_csharp">
 <a href="#state_machineimageencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -916,8 +869,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -926,8 +878,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -937,8 +888,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -947,8 +897,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceinstance_csharp">
 <a href="#state_sourceinstance_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
@@ -957,8 +906,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagelocations_csharp">
 <a href="#state_storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
@@ -967,13 +915,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -982,8 +928,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestflush_go">
 <a href="#state_guestflush_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
@@ -993,8 +938,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machineimageencryptionkey_go">
 <a href="#state_machineimageencryptionkey_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -1007,8 +951,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1017,8 +960,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1028,8 +970,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1038,8 +979,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceinstance_go">
 <a href="#state_sourceinstance_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Instance</a>
@@ -1048,8 +988,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagelocations_go">
 <a href="#state_storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
@@ -1058,13 +997,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1073,8 +1010,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guestflush_nodejs">
 <a href="#state_guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
@@ -1084,8 +1020,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machineimageencryptionkey_nodejs">
 <a href="#state_machineimageencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Image<wbr>Encryption<wbr>Key</a>
@@ -1098,8 +1033,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1108,8 +1042,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1119,8 +1052,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1129,8 +1061,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceinstance_nodejs">
 <a href="#state_sourceinstance_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Instance</a>
@@ -1139,8 +1070,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagelocations_nodejs">
 <a href="#state_storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
@@ -1149,13 +1079,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1164,8 +1092,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A text description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_guest_flush_python">
 <a href="#state_guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
@@ -1175,8 +1102,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
 Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machine_image_encryption_key_python">
 <a href="#state_machine_image_encryption_key_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>image_<wbr>encryption_<wbr>key</a>
@@ -1189,8 +1115,7 @@ After you encrypt a machine image with a customer-supplied key, you must
 provide the same key if you use the machine image later (e.g. to create a
 instance from the image)
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1199,8 +1124,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1210,8 +1134,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1220,8 +1143,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_instance_python">
 <a href="#state_source_instance_python" style="color: inherit; text-decoration: inherit;">source_<wbr>instance</a>
@@ -1230,8 +1152,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_locations_python">
 <a href="#state_storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
@@ -1240,8 +1161,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1256,8 +1176,7 @@ If it is not provided, the provider project is used.
 <h4 id="machineimagemachineimageencryptionkey">Machine<wbr>Image<wbr>Machine<wbr>Image<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -1267,8 +1186,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}-
 The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_csharp">
 <a href="#kmskeyserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -1278,8 +1196,7 @@ The name of the encryption key that is stored in Google Cloud KMS.
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -1289,8 +1206,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -1301,13 +1217,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the
 customer-supplied encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -1317,8 +1231,7 @@ customer-supplied encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}-
 The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_go">
 <a href="#kmskeyserviceaccount_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -1328,8 +1241,7 @@ The name of the encryption key that is stored in Google Cloud KMS.
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -1339,8 +1251,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -1351,13 +1262,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the
 customer-supplied encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -1367,8 +1276,7 @@ customer-supplied encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}-
 The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyserviceaccount_nodejs">
 <a href="#kmskeyserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Service<wbr>Account</a>
@@ -1378,8 +1286,7 @@ The name of the encryption key that is stored in Google Cloud KMS.
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -1389,8 +1296,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -1401,13 +1307,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the
 customer-supplied encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -1417,8 +1321,7 @@ customer-supplied encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}-
 The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_service_account_python">
 <a href="#kms_key_service_account_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>service_<wbr>account</a>
@@ -1428,8 +1331,7 @@ The name of the encryption key that is stored in Google Cloud KMS.
     </dt>
     <dd>{{% md %}}The service account used for the encryption request for the given KMS key.
 If absent, the Compute Engine Service Agent service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -1439,8 +1341,7 @@ If absent, the Compute Engine Service Agent service account is used.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -1451,8 +1352,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the
 customer-supplied encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

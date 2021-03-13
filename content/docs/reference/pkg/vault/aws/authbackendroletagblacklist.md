@@ -279,8 +279,7 @@ The AuthBackendRoletagBlacklist resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -290,8 +289,7 @@ The AuthBackendRoletagBlacklist resource accepts the following [input]({{< relre
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperiodictidy_csharp">
 <a href="#disableperiodictidy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -301,8 +299,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safetybuffer_csharp">
 <a href="#safetybuffer_csharp" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -313,13 +310,11 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -329,8 +324,7 @@ Defaults to 259,200 seconds, or 72 hours.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperiodictidy_go">
 <a href="#disableperiodictidy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -340,8 +334,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safetybuffer_go">
 <a href="#safetybuffer_go" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -352,13 +345,11 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -368,8 +359,7 @@ Defaults to 259,200 seconds, or 72 hours.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableperiodictidy_nodejs">
 <a href="#disableperiodictidy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Periodic<wbr>Tidy</a>
@@ -379,8 +369,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safetybuffer_nodejs">
 <a href="#safetybuffer_nodejs" style="color: inherit; text-decoration: inherit;">safety<wbr>Buffer</a>
@@ -391,13 +380,11 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -407,8 +394,7 @@ Defaults to 259,200 seconds, or 72 hours.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_periodic_tidy_python">
 <a href="#disable_periodic_tidy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>periodic_<wbr>tidy</a>
@@ -418,8 +404,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="safety_buffer_python">
 <a href="#safety_buffer_python" style="color: inherit; text-decoration: inherit;">safety_<wbr>buffer</a>
@@ -430,8 +415,7 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -442,8 +426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -451,13 +434,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -465,13 +446,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -479,13 +458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -493,8 +470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -621,8 +597,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -632,8 +607,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableperiodictidy_csharp">
 <a href="#state_disableperiodictidy_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -643,8 +617,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safetybuffer_csharp">
 <a href="#state_safetybuffer_csharp" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -655,13 +628,11 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -671,8 +642,7 @@ Defaults to 259,200 seconds, or 72 hours.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableperiodictidy_go">
 <a href="#state_disableperiodictidy_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Periodic<wbr>Tidy</a>
@@ -682,8 +652,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safetybuffer_go">
 <a href="#state_safetybuffer_go" style="color: inherit; text-decoration: inherit;">Safety<wbr>Buffer</a>
@@ -694,13 +663,11 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -710,8 +677,7 @@ Defaults to 259,200 seconds, or 72 hours.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableperiodictidy_nodejs">
 <a href="#state_disableperiodictidy_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Periodic<wbr>Tidy</a>
@@ -721,8 +687,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safetybuffer_nodejs">
 <a href="#state_safetybuffer_nodejs" style="color: inherit; text-decoration: inherit;">safety<wbr>Buffer</a>
@@ -733,13 +698,11 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -749,8 +712,7 @@ Defaults to 259,200 seconds, or 72 hours.
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_periodic_tidy_python">
 <a href="#state_disable_periodic_tidy_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>periodic_<wbr>tidy</a>
@@ -760,8 +722,7 @@ mounted at.
     </dt>
     <dd>{{% md %}}If set to true, disables the periodic
 tidying of the roletag blacklist entries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_safety_buffer_python">
 <a href="#state_safety_buffer_python" style="color: inherit; text-decoration: inherit;">safety_<wbr>buffer</a>
@@ -772,8 +733,7 @@ tidying of the roletag blacklist entries. Defaults to false.
     <dd>{{% md %}}The amount of extra time that must have passed
 beyond the roletag expiration, before it is removed from the backend storage.
 Defaults to 259,200 seconds, or 72 hours.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

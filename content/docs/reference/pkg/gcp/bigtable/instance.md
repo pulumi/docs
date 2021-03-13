@@ -296,8 +296,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusters_csharp">
 <a href="#clusters_csharp" style="color: inherit; text-decoration: inherit;">Clusters</a>
@@ -307,8 +306,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -318,8 +316,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -328,8 +325,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -342,8 +338,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -352,8 +347,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -362,8 +356,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -373,13 +366,11 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusters_go">
 <a href="#clusters_go" style="color: inherit; text-decoration: inherit;">Clusters</a>
@@ -389,8 +380,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -400,8 +390,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -410,8 +399,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -424,8 +412,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -434,8 +421,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -444,8 +430,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -455,13 +440,11 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusters_nodejs">
 <a href="#clusters_nodejs" style="color: inherit; text-decoration: inherit;">clusters</a>
@@ -471,8 +454,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -482,8 +464,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -492,8 +473,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -506,8 +486,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -516,8 +495,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -526,8 +504,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -537,13 +514,11 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusters_python">
 <a href="#clusters_python" style="color: inherit; text-decoration: inherit;">clusters</a>
@@ -553,8 +528,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -564,8 +538,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -574,8 +547,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -588,8 +560,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -598,8 +569,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -608,8 +578,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -619,8 +588,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -631,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -640,13 +607,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -654,13 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -668,13 +631,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -682,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -810,8 +770,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusters_csharp">
 <a href="#state_clusters_csharp" style="color: inherit; text-decoration: inherit;">Clusters</a>
@@ -821,8 +780,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_csharp">
 <a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -832,8 +790,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -842,8 +799,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_instancetype_csharp">
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -856,8 +812,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -866,8 +821,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -876,8 +830,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -887,13 +840,11 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusters_go">
 <a href="#state_clusters_go" style="color: inherit; text-decoration: inherit;">Clusters</a>
@@ -903,8 +854,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_go">
 <a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -914,8 +864,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -924,8 +873,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_instancetype_go">
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -938,8 +886,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -948,8 +895,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -958,8 +904,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -969,13 +914,11 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusters_nodejs">
 <a href="#state_clusters_nodejs" style="color: inherit; text-decoration: inherit;">clusters</a>
@@ -985,8 +928,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_nodejs">
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -996,8 +938,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1006,8 +947,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_instancetype_nodejs">
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1020,8 +960,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1030,8 +969,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1040,8 +978,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1051,13 +988,11 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusters_python">
 <a href="#state_clusters_python" style="color: inherit; text-decoration: inherit;">clusters</a>
@@ -1067,8 +1002,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}A block of cluster configuration options. This can be specified at least once, and up to 4 times.
 See structure below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_protection_python">
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -1078,8 +1012,7 @@ See structure below.
     </dt>
     <dd>{{% md %}}Whether or not to allow this provider to destroy the instance. Unless this field is set to false
 in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1088,8 +1021,7 @@ in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instan
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_instance_type_python">
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1102,8 +1034,7 @@ It is recommended to leave this field unspecified since the distinction between 
 and all instances will become `"PRODUCTION"` instances. This means that new and existing `"DEVELOPMENT"` instances will be converted to
 `"PRODUCTION"` instances. It is recommended for users to use `"PRODUCTION"` instances in any case, since a 1-node `"PRODUCTION"` instance
 is functionally identical to a `"DEVELOPMENT"` instance, but without the accompanying restrictions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}It is recommended to leave this field unspecified since the distinction between &#34;DEVELOPMENT&#34; and &#34;PRODUCTION&#34; instances is going away, and all instances will become &#34;PRODUCTION&#34; instances. This means that new and existing &#34;DEVELOPMENT&#34; instances will be converted to &#34;PRODUCTION&#34; instances. It is recommended for users to use &#34;PRODUCTION&#34; instances in any case, since a 1-node &#34;PRODUCTION&#34; instance is functionally identical to a &#34;DEVELOPMENT&#34; instance, but without the accompanying restrictions.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1112,8 +1043,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1122,8 +1052,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1133,8 +1062,7 @@ is functionally identical to a `"DEVELOPMENT"` instance, but without the accompa
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1149,8 +1077,7 @@ is not provided, the provider project is used.
 <h4 id="instancecluster">Instance<wbr>Cluster</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1159,8 +1086,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numnodes_csharp">
 <a href="#numnodes_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
@@ -1171,8 +1097,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
 Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1182,8 +1107,7 @@ for a `DEVELOPMENT` instance.
     </dt>
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1194,13 +1118,11 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
 specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
 Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1209,8 +1131,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numnodes_go">
 <a href="#numnodes_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Nodes</a>
@@ -1221,8 +1142,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
 Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1232,8 +1152,7 @@ for a `DEVELOPMENT` instance.
     </dt>
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1244,13 +1163,11 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
 specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
 Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1259,8 +1176,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numnodes_nodejs">
 <a href="#numnodes_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Nodes</a>
@@ -1271,8 +1187,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
 Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
@@ -1282,8 +1197,7 @@ for a `DEVELOPMENT` instance.
     </dt>
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1294,13 +1208,11 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
 specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
 Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1309,8 +1221,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Cloud Bigtable cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_nodes_python">
 <a href="#num_nodes_python" style="color: inherit; text-decoration: inherit;">num_<wbr>nodes</a>
@@ -1321,8 +1232,7 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
     <dd>{{% md %}}The number of nodes in your Cloud Bigtable cluster.
 Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
 for a `DEVELOPMENT` instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
@@ -1332,8 +1242,7 @@ for a `DEVELOPMENT` instance.
     </dt>
     <dd>{{% md %}}The storage type to use. One of `"SSD"` or
 `"HDD"`. Defaults to `"SSD"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1344,8 +1253,7 @@ for a `DEVELOPMENT` instance.
     <dd>{{% md %}}The zone to create the Cloud Bigtable cluster in. If it not
 specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
 Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

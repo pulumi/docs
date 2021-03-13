@@ -1,6 +1,6 @@
 ---
-title: "cloudinit"
-title_tag: "Module cloudinit | Package cloudinit"
+title: "cloud-init"
+title_tag: "cloudinit.cloud-init"
 meta_desc: "A Pulumi package for creating and managing cloudinit cloud resources."
 menu:
     reference:

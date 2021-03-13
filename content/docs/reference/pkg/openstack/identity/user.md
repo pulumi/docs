@@ -170,8 +170,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultprojectid_csharp">
 <a href="#defaultprojectid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
@@ -180,8 +179,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -190,8 +188,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -200,8 +197,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -211,8 +207,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_csharp">
 <a href="#extra_csharp" style="color: inherit; text-decoration: inherit;">Extra</a>
@@ -221,8 +216,7 @@ values are `true` and `false`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorechangepassworduponfirstuse_csharp">
 <a href="#ignorechangepassworduponfirstuse_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Change<wbr>Password<wbr>Upon<wbr>First<wbr>Use</a>
@@ -232,8 +226,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorelockoutfailureattempts_csharp">
 <a href="#ignorelockoutfailureattempts_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Lockout<wbr>Failure<wbr>Attempts</a>
@@ -243,8 +236,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepasswordexpiry_csharp">
 <a href="#ignorepasswordexpiry_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Password<wbr>Expiry</a>
@@ -254,8 +246,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multifactorauthenabled_csharp">
 <a href="#multifactorauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Enabled</a>
@@ -265,8 +256,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multifactorauthrules_csharp">
 <a href="#multifactorauthrules_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Rules</a>
@@ -278,8 +268,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -288,8 +277,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -298,8 +286,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -310,13 +297,11 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultprojectid_go">
 <a href="#defaultprojectid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
@@ -325,8 +310,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -335,8 +319,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -345,8 +328,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -356,8 +338,7 @@ creates a new User.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_go">
 <a href="#extra_go" style="color: inherit; text-decoration: inherit;">Extra</a>
@@ -366,8 +347,7 @@ values are `true` and `false`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorechangepassworduponfirstuse_go">
 <a href="#ignorechangepassworduponfirstuse_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Change<wbr>Password<wbr>Upon<wbr>First<wbr>Use</a>
@@ -377,8 +357,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorelockoutfailureattempts_go">
 <a href="#ignorelockoutfailureattempts_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Lockout<wbr>Failure<wbr>Attempts</a>
@@ -388,8 +367,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepasswordexpiry_go">
 <a href="#ignorepasswordexpiry_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Password<wbr>Expiry</a>
@@ -399,8 +377,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multifactorauthenabled_go">
 <a href="#multifactorauthenabled_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Enabled</a>
@@ -410,8 +387,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multifactorauthrules_go">
 <a href="#multifactorauthrules_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Rules</a>
@@ -423,8 +399,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +408,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -443,8 +417,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -455,13 +428,11 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultprojectid_nodejs">
 <a href="#defaultprojectid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Project<wbr>Id</a>
@@ -470,8 +441,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -480,8 +450,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -490,8 +459,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -501,8 +469,7 @@ creates a new User.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_nodejs">
 <a href="#extra_nodejs" style="color: inherit; text-decoration: inherit;">extra</a>
@@ -511,8 +478,7 @@ values are `true` and `false`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorechangepassworduponfirstuse_nodejs">
 <a href="#ignorechangepassworduponfirstuse_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Change<wbr>Password<wbr>Upon<wbr>First<wbr>Use</a>
@@ -522,8 +488,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorelockoutfailureattempts_nodejs">
 <a href="#ignorelockoutfailureattempts_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Lockout<wbr>Failure<wbr>Attempts</a>
@@ -533,8 +498,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepasswordexpiry_nodejs">
 <a href="#ignorepasswordexpiry_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Password<wbr>Expiry</a>
@@ -544,8 +508,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multifactorauthenabled_nodejs">
 <a href="#multifactorauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Factor<wbr>Auth<wbr>Enabled</a>
@@ -555,8 +518,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multifactorauthrules_nodejs">
 <a href="#multifactorauthrules_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Factor<wbr>Auth<wbr>Rules</a>
@@ -568,8 +530,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -578,8 +539,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -588,8 +548,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -600,13 +559,11 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_project_id_python">
 <a href="#default_project_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>project_<wbr>id</a>
@@ -615,8 +572,7 @@ creates a new User.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -625,8 +581,7 @@ creates a new User.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -635,8 +590,7 @@ creates a new User.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -646,8 +600,7 @@ creates a new User.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_python">
 <a href="#extra_python" style="color: inherit; text-decoration: inherit;">extra</a>
@@ -656,8 +609,7 @@ values are `true` and `false`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_change_password_upon_first_use_python">
 <a href="#ignore_change_password_upon_first_use_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>change_<wbr>password_<wbr>upon_<wbr>first_<wbr>use</a>
@@ -667,8 +619,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_lockout_failure_attempts_python">
 <a href="#ignore_lockout_failure_attempts_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>lockout_<wbr>failure_<wbr>attempts</a>
@@ -678,8 +629,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_password_expiry_python">
 <a href="#ignore_password_expiry_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>password_<wbr>expiry</a>
@@ -689,8 +639,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_factor_auth_enabled_python">
 <a href="#multi_factor_auth_enabled_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>factor_<wbr>auth_<wbr>enabled</a>
@@ -700,8 +649,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_factor_auth_rules_python">
 <a href="#multi_factor_auth_rules_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>factor_<wbr>auth_<wbr>rules</a>
@@ -713,8 +661,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -723,8 +670,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -733,8 +679,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -745,8 +690,7 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -757,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -766,13 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -780,13 +721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -794,13 +733,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -808,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -936,8 +872,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprojectid_csharp">
 <a href="#state_defaultprojectid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
@@ -946,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -956,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_csharp">
 <a href="#state_domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -966,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -977,8 +909,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_csharp">
 <a href="#state_extra_csharp" style="color: inherit; text-decoration: inherit;">Extra</a>
@@ -987,8 +918,7 @@ values are `true` and `false`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorechangepassworduponfirstuse_csharp">
 <a href="#state_ignorechangepassworduponfirstuse_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Change<wbr>Password<wbr>Upon<wbr>First<wbr>Use</a>
@@ -998,8 +928,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorelockoutfailureattempts_csharp">
 <a href="#state_ignorelockoutfailureattempts_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Lockout<wbr>Failure<wbr>Attempts</a>
@@ -1009,8 +938,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorepasswordexpiry_csharp">
 <a href="#state_ignorepasswordexpiry_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Password<wbr>Expiry</a>
@@ -1020,8 +948,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multifactorauthenabled_csharp">
 <a href="#state_multifactorauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Enabled</a>
@@ -1031,8 +958,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multifactorauthrules_csharp">
 <a href="#state_multifactorauthrules_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Rules</a>
@@ -1044,8 +970,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1054,8 +979,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1064,8 +988,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1076,13 +999,11 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprojectid_go">
 <a href="#state_defaultprojectid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Project<wbr>Id</a>
@@ -1091,8 +1012,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1101,8 +1021,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_go">
 <a href="#state_domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -1111,8 +1030,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1122,8 +1040,7 @@ creates a new User.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_go">
 <a href="#state_extra_go" style="color: inherit; text-decoration: inherit;">Extra</a>
@@ -1132,8 +1049,7 @@ values are `true` and `false`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorechangepassworduponfirstuse_go">
 <a href="#state_ignorechangepassworduponfirstuse_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Change<wbr>Password<wbr>Upon<wbr>First<wbr>Use</a>
@@ -1143,8 +1059,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorelockoutfailureattempts_go">
 <a href="#state_ignorelockoutfailureattempts_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Lockout<wbr>Failure<wbr>Attempts</a>
@@ -1154,8 +1069,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorepasswordexpiry_go">
 <a href="#state_ignorepasswordexpiry_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Password<wbr>Expiry</a>
@@ -1165,8 +1079,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multifactorauthenabled_go">
 <a href="#state_multifactorauthenabled_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Enabled</a>
@@ -1176,8 +1089,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multifactorauthrules_go">
 <a href="#state_multifactorauthrules_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Factor<wbr>Auth<wbr>Rules</a>
@@ -1189,8 +1101,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1199,8 +1110,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1209,8 +1119,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1221,13 +1130,11 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprojectid_nodejs">
 <a href="#state_defaultprojectid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Project<wbr>Id</a>
@@ -1236,8 +1143,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1246,8 +1152,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_nodejs">
 <a href="#state_domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -1256,8 +1161,7 @@ creates a new User.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1267,8 +1171,7 @@ creates a new User.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_nodejs">
 <a href="#state_extra_nodejs" style="color: inherit; text-decoration: inherit;">extra</a>
@@ -1277,8 +1180,7 @@ values are `true` and `false`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorechangepassworduponfirstuse_nodejs">
 <a href="#state_ignorechangepassworduponfirstuse_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Change<wbr>Password<wbr>Upon<wbr>First<wbr>Use</a>
@@ -1288,8 +1190,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorelockoutfailureattempts_nodejs">
 <a href="#state_ignorelockoutfailureattempts_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Lockout<wbr>Failure<wbr>Attempts</a>
@@ -1299,8 +1200,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorepasswordexpiry_nodejs">
 <a href="#state_ignorepasswordexpiry_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Password<wbr>Expiry</a>
@@ -1310,8 +1210,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multifactorauthenabled_nodejs">
 <a href="#state_multifactorauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Factor<wbr>Auth<wbr>Enabled</a>
@@ -1321,8 +1220,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multifactorauthrules_nodejs">
 <a href="#state_multifactorauthrules_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Factor<wbr>Auth<wbr>Rules</a>
@@ -1334,8 +1232,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1344,8 +1241,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1354,8 +1250,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1366,13 +1261,11 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_default_project_id_python">
 <a href="#state_default_project_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>project_<wbr>id</a>
@@ -1381,8 +1274,7 @@ creates a new User.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default project this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1391,8 +1283,7 @@ creates a new User.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_id_python">
 <a href="#state_domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -1401,8 +1292,7 @@ creates a new User.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain this user belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1412,8 +1302,7 @@ creates a new User.
     </dt>
     <dd>{{% md %}}Whether the user is enabled or disabled. Valid
 values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_python">
 <a href="#state_extra_python" style="color: inherit; text-decoration: inherit;">extra</a>
@@ -1422,8 +1311,7 @@ values are `true` and `false`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Free-form key/value pairs of extra information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_change_password_upon_first_use_python">
 <a href="#state_ignore_change_password_upon_first_use_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>change_<wbr>password_<wbr>upon_<wbr>first_<wbr>use</a>
@@ -1433,8 +1321,7 @@ values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have to
 change their password upon first use. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_lockout_failure_attempts_python">
 <a href="#state_ignore_lockout_failure_attempts_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>lockout_<wbr>failure_<wbr>attempts</a>
@@ -1444,8 +1331,7 @@ change their password upon first use. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User will not have a failure
 lockout placed on their account. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_password_expiry_python">
 <a href="#state_ignore_password_expiry_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>password_<wbr>expiry</a>
@@ -1455,8 +1341,7 @@ lockout placed on their account. Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}User's password will not expire.
 Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multi_factor_auth_enabled_python">
 <a href="#state_multi_factor_auth_enabled_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>factor_<wbr>auth_<wbr>enabled</a>
@@ -1466,8 +1351,7 @@ Valid values are `true` and `false`.
     </dt>
     <dd>{{% md %}}Whether to enable multi-factor
 authentication. Valid values are `true` and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multi_factor_auth_rules_python">
 <a href="#state_multi_factor_auth_rules_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>factor_<wbr>auth_<wbr>rules</a>
@@ -1479,8 +1363,7 @@ authentication. Valid values are `true` and `false`.
 The structure is documented below. Please see the
 [Ocata release notes](https://docs.openstack.org/releasenotes/keystone/ocata.html)
 for more information on how to use mulit-factor rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1489,8 +1372,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1499,8 +1381,7 @@ for more information on how to use mulit-factor rules.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1511,8 +1392,7 @@ for more information on how to use mulit-factor rules.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1527,8 +1407,7 @@ creates a new User.
 <h4 id="usermultifactorauthrule">User<wbr>Multi<wbr>Factor<wbr>Auth<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1538,13 +1417,11 @@ creates a new User.
     </dt>
     <dd>{{% md %}}A list of authentication plugins that the user must
 authenticate with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1554,13 +1431,11 @@ authenticate with.
     </dt>
     <dd>{{% md %}}A list of authentication plugins that the user must
 authenticate with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1570,13 +1445,11 @@ authenticate with.
     </dt>
     <dd>{{% md %}}A list of authentication plugins that the user must
 authenticate with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1586,8 +1459,7 @@ authenticate with.
     </dt>
     <dd>{{% md %}}A list of authentication plugins that the user must
 authenticate with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -278,8 +278,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -288,8 +287,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerimage_csharp">
 <a href="#containerimage_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -299,8 +297,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -309,8 +306,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -319,8 +315,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -330,8 +325,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststartupscript_csharp">
 <a href="#poststartupscript_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -341,8 +335,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -352,8 +345,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmimage_csharp">
 <a href="#vmimage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -363,13 +355,11 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -378,8 +368,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerimage_go">
 <a href="#containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -389,8 +378,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -399,8 +387,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -409,8 +396,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -420,8 +406,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststartupscript_go">
 <a href="#poststartupscript_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -431,8 +416,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -442,8 +426,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmimage_go">
 <a href="#vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -453,13 +436,11 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -468,8 +449,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerimage_nodejs">
 <a href="#containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
@@ -479,8 +459,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -489,8 +468,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -499,8 +477,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -510,8 +487,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststartupscript_nodejs">
 <a href="#poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
@@ -521,8 +497,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -532,8 +507,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmimage_nodejs">
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
@@ -543,13 +517,11 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -558,8 +530,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_image_python">
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
@@ -569,8 +540,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -579,8 +549,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -589,8 +558,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -600,8 +568,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_startup_script_python">
 <a href="#post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
@@ -611,8 +578,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -622,8 +588,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_image_python">
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
@@ -633,8 +598,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -645,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -655,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -664,13 +626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -679,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -688,13 +647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -703,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -712,13 +668,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -727,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -864,8 +816,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerimage_csharp">
 <a href="#state_containerimage_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -875,8 +826,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -885,8 +835,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -895,8 +844,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -905,8 +853,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -915,8 +862,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -926,8 +872,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststartupscript_csharp">
 <a href="#state_poststartupscript_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -937,8 +882,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -948,8 +892,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_csharp">
 <a href="#state_vmimage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -959,13 +902,11 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerimage_go">
 <a href="#state_containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -975,8 +916,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -985,8 +925,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -995,8 +934,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1005,8 +943,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1015,8 +952,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1026,8 +962,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststartupscript_go">
 <a href="#state_poststartupscript_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -1037,8 +972,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1048,8 +982,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_go">
 <a href="#state_vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -1059,13 +992,11 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_containerimage_nodejs">
 <a href="#state_containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
@@ -1075,8 +1006,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1085,8 +1015,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1095,8 +1024,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1105,8 +1033,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1115,8 +1042,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1126,8 +1052,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststartupscript_nodejs">
 <a href="#state_poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
@@ -1137,8 +1062,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1148,8 +1072,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_nodejs">
 <a href="#state_vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
@@ -1159,13 +1082,11 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_container_image_python">
 <a href="#state_container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
@@ -1175,8 +1096,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1185,8 +1105,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1195,8 +1114,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1205,8 +1123,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of this environment for the UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1215,8 +1132,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1226,8 +1142,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name specified for the Environment instance.
 Format: projects/{project_id}/locations/{location}/environments/{environmentId}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_startup_script_python">
 <a href="#state_post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
@@ -1237,8 +1152,7 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
     </dt>
     <dd>{{% md %}}Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1248,8 +1162,7 @@ The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-n
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_image_python">
 <a href="#state_vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
@@ -1259,8 +1172,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1275,8 +1187,7 @@ Structure is documented below.
 <h4 id="environmentcontainerimage">Environment<wbr>Container<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -1286,8 +1197,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -1296,13 +1206,11 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -1312,8 +1220,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -1322,13 +1229,11 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -1338,8 +1243,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -1348,13 +1252,11 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -1364,8 +1266,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -1374,15 +1275,13 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentvmimage">Environment<wbr>Vm<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1392,8 +1291,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefamily_csharp">
 <a href="#imagefamily_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Family</a>
@@ -1402,8 +1300,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1412,13 +1309,11 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1428,8 +1323,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefamily_go">
 <a href="#imagefamily_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Family</a>
@@ -1438,8 +1332,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1448,13 +1341,11 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1464,8 +1355,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefamily_nodejs">
 <a href="#imagefamily_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Family</a>
@@ -1474,8 +1364,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1484,13 +1373,11 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1500,8 +1387,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_family_python">
 <a href="#image_family_python" style="color: inherit; text-decoration: inherit;">image_<wbr>family</a>
@@ -1510,8 +1396,7 @@ Format: projects/{project_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -1520,8 +1405,7 @@ Format: projects/{project_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

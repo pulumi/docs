@@ -483,8 +483,7 @@ The InstanceGroupManager resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseinstancename_csharp">
 <a href="#baseinstancename_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
@@ -498,8 +497,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versions_csharp">
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -510,8 +508,7 @@ name.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autohealingpolicies_csharp">
 <a href="#autohealingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
@@ -521,8 +518,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -532,8 +528,7 @@ group. You can specify only one value. Structure is documented below. For more i
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -542,8 +537,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namedports_csharp">
 <a href="#namedports_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
@@ -553,8 +547,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -564,8 +557,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statefuldisks_csharp">
 <a href="#statefuldisks_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
@@ -574,8 +566,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpools_csharp">
 <a href="#targetpools_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
@@ -586,8 +577,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_csharp">
 <a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -596,8 +586,7 @@ not affect existing instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_csharp">
 <a href="#updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -606,8 +595,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforinstances_csharp">
 <a href="#waitforinstances_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
@@ -618,8 +606,7 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -629,13 +616,11 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseinstancename_go">
 <a href="#baseinstancename_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
@@ -649,8 +634,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versions_go">
 <a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -661,8 +645,7 @@ name.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autohealingpolicies_go">
 <a href="#autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
@@ -672,8 +655,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -683,8 +665,7 @@ group. You can specify only one value. Structure is documented below. For more i
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -693,8 +674,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namedports_go">
 <a href="#namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
@@ -704,8 +684,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -715,8 +694,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statefuldisks_go">
 <a href="#statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
@@ -725,8 +703,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpools_go">
 <a href="#targetpools_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
@@ -737,8 +714,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_go">
 <a href="#targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -747,8 +723,7 @@ not affect existing instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_go">
 <a href="#updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -757,8 +732,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforinstances_go">
 <a href="#waitforinstances_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
@@ -769,8 +743,7 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -780,13 +753,11 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="baseinstancename_nodejs">
 <a href="#baseinstancename_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Instance<wbr>Name</a>
@@ -800,8 +771,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versions_nodejs">
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -812,8 +782,7 @@ name.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autohealingpolicies_nodejs">
 <a href="#autohealingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing<wbr>Policies</a>
@@ -823,8 +792,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -834,8 +802,7 @@ group. You can specify only one value. Structure is documented below. For more i
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -844,8 +811,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namedports_nodejs">
 <a href="#namedports_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
@@ -855,8 +821,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -866,8 +831,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statefuldisks_nodejs">
 <a href="#statefuldisks_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Disks</a>
@@ -876,8 +840,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetpools_nodejs">
 <a href="#targetpools_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pools</a>
@@ -888,8 +851,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_nodejs">
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
@@ -898,8 +860,7 @@ not affect existing instances.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatepolicy_nodejs">
 <a href="#updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
@@ -908,8 +869,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforinstances_nodejs">
 <a href="#waitforinstances_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Instances</a>
@@ -920,8 +880,7 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -931,13 +890,11 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="base_instance_name_python">
 <a href="#base_instance_name_python" style="color: inherit; text-decoration: inherit;">base_<wbr>instance_<wbr>name</a>
@@ -951,8 +908,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versions_python">
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -963,8 +919,7 @@ name.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_healing_policies_python">
 <a href="#auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
@@ -974,8 +929,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -985,8 +939,7 @@ group. You can specify only one value. Structure is documented below. For more i
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -995,8 +948,7 @@ group manager.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="named_ports_python">
 <a href="#named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
@@ -1006,8 +958,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1017,8 +968,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateful_disks_python">
 <a href="#stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
@@ -1027,8 +977,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_pools_python">
 <a href="#target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
@@ -1039,8 +988,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_size_python">
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
@@ -1049,8 +997,7 @@ not affect existing instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_policy_python">
 <a href="#update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
@@ -1059,8 +1006,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_instances_python">
 <a href="#wait_for_instances_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>instances</a>
@@ -1071,8 +1017,7 @@ not affect existing instances.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1082,8 +1027,7 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1094,8 +1038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1104,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1113,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancegroup_csharp">
 <a href="#instancegroup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
@@ -1123,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1132,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1142,13 +1081,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1157,8 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1166,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancegroup_go">
 <a href="#instancegroup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
@@ -1176,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1185,8 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1195,13 +1128,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1210,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1219,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instancegroup_nodejs">
 <a href="#instancegroup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group</a>
@@ -1229,8 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1238,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1248,13 +1175,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1263,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1272,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_group_python">
 <a href="#instance_group_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group</a>
@@ -1282,8 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1291,8 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1301,8 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1429,8 +1349,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autohealingpolicies_csharp">
 <a href="#state_autohealingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
@@ -1440,8 +1359,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseinstancename_csharp">
 <a href="#state_baseinstancename_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
@@ -1455,8 +1373,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1466,8 +1383,7 @@ name.
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1476,8 +1392,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancegroup_csharp">
 <a href="#state_instancegroup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
@@ -1486,8 +1401,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1496,8 +1410,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namedports_csharp">
 <a href="#state_namedports_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
@@ -1507,8 +1420,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_csharp">
 <a href="#state_operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1516,8 +1428,7 @@ for details on configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1527,8 +1438,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1537,8 +1447,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statefuldisks_csharp">
 <a href="#state_statefuldisks_csharp" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
@@ -1547,8 +1456,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">List&lt;Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetpools_csharp">
 <a href="#state_targetpools_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
@@ -1559,8 +1467,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetsize_csharp">
 <a href="#state_targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -1569,8 +1476,7 @@ not affect existing instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_csharp">
 <a href="#state_updatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -1579,8 +1485,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versions_csharp">
 <a href="#state_versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -1591,8 +1496,7 @@ not affect existing instances.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforinstances_csharp">
 <a href="#state_waitforinstances_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
@@ -1603,8 +1507,7 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1614,13 +1517,11 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autohealingpolicies_go">
 <a href="#state_autohealingpolicies_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing<wbr>Policies</a>
@@ -1630,8 +1531,7 @@ in.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseinstancename_go">
 <a href="#state_baseinstancename_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Instance<wbr>Name</a>
@@ -1645,8 +1545,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1656,8 +1555,7 @@ name.
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1666,8 +1564,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancegroup_go">
 <a href="#state_instancegroup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group</a>
@@ -1676,8 +1573,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1686,8 +1582,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namedports_go">
 <a href="#state_namedports_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Ports</a>
@@ -1697,8 +1592,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_go">
 <a href="#state_operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1706,8 +1600,7 @@ for details on configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1717,8 +1610,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1727,8 +1619,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statefuldisks_go">
 <a href="#state_statefuldisks_go" style="color: inherit; text-decoration: inherit;">Stateful<wbr>Disks</a>
@@ -1737,8 +1628,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">[]Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetpools_go">
 <a href="#state_targetpools_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Pools</a>
@@ -1749,8 +1639,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetsize_go">
 <a href="#state_targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -1759,8 +1648,7 @@ not affect existing instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_go">
 <a href="#state_updatepolicy_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Policy</a>
@@ -1769,8 +1657,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versions_go">
 <a href="#state_versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -1781,8 +1668,7 @@ not affect existing instances.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforinstances_go">
 <a href="#state_waitforinstances_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Instances</a>
@@ -1793,8 +1679,7 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1804,13 +1689,11 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autohealingpolicies_nodejs">
 <a href="#state_autohealingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing<wbr>Policies</a>
@@ -1820,8 +1703,7 @@ in.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseinstancename_nodejs">
 <a href="#state_baseinstancename_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Instance<wbr>Name</a>
@@ -1835,8 +1717,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1846,8 +1727,7 @@ name.
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1856,8 +1736,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancegroup_nodejs">
 <a href="#state_instancegroup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group</a>
@@ -1866,8 +1745,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1876,8 +1754,7 @@ group manager.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namedports_nodejs">
 <a href="#state_namedports_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Ports</a>
@@ -1887,8 +1764,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_nodejs">
 <a href="#state_operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1896,8 +1772,7 @@ for details on configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1907,8 +1782,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1917,8 +1791,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statefuldisks_nodejs">
 <a href="#state_statefuldisks_nodejs" style="color: inherit; text-decoration: inherit;">stateful<wbr>Disks</a>
@@ -1927,8 +1800,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetpools_nodejs">
 <a href="#state_targetpools_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Pools</a>
@@ -1939,8 +1811,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetsize_nodejs">
 <a href="#state_targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
@@ -1949,8 +1820,7 @@ not affect existing instances.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatepolicy_nodejs">
 <a href="#state_updatepolicy_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Policy</a>
@@ -1959,8 +1829,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versions_nodejs">
 <a href="#state_versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -1971,8 +1840,7 @@ not affect existing instances.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforinstances_nodejs">
 <a href="#state_waitforinstances_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Instances</a>
@@ -1983,8 +1851,7 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1994,13 +1861,11 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_healing_policies_python">
 <a href="#state_auto_healing_policies_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing_<wbr>policies</a>
@@ -2010,8 +1875,7 @@ in.
     </dt>
     <dd>{{% md %}}The autohealing policies for this managed instance
 group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_base_instance_name_python">
 <a href="#state_base_instance_name_python" style="color: inherit; text-decoration: inherit;">base_<wbr>instance_<wbr>name</a>
@@ -2025,8 +1889,7 @@ instances in this group. The value must be a valid
 are lowercase letters, numbers, and hyphens (-). Instances are named by
 appending a hyphen and a random four-character string to the base instance
 name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2036,8 +1899,7 @@ name.
     </dt>
     <dd>{{% md %}}An optional textual description of the instance
 group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -2046,8 +1908,7 @@ group manager.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_group_python">
 <a href="#state_instance_group_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group</a>
@@ -2056,8 +1917,7 @@ group manager.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full URL of the instance group created by the manager.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2066,8 +1926,7 @@ group manager.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_named_ports_python">
 <a href="#state_named_ports_python" style="color: inherit; text-decoration: inherit;">named_<wbr>ports</a>
@@ -2077,8 +1936,7 @@ group manager.
     </dt>
     <dd>{{% md %}}The named port configuration. See the section below
 for details on configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_python">
 <a href="#state_operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -2086,8 +1944,7 @@ for details on configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2097,8 +1954,7 @@ for details on configuration.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2107,8 +1963,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stateful_disks_python">
 <a href="#state_stateful_disks_python" style="color: inherit; text-decoration: inherit;">stateful_<wbr>disks</a>
@@ -2117,8 +1972,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#instancegroupmanagerstatefuldisk">Sequence[Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_pools_python">
 <a href="#state_target_pools_python" style="color: inherit; text-decoration: inherit;">target_<wbr>pools</a>
@@ -2129,8 +1983,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The full URL of all target pools to which new
 instances in the group are added. Updating the target pools attribute does
 not affect existing instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_size_python">
 <a href="#state_target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
@@ -2139,8 +1992,7 @@ not affect existing instances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_policy_python">
 <a href="#state_update_policy_python" style="color: inherit; text-decoration: inherit;">update_<wbr>policy</a>
@@ -2149,8 +2001,7 @@ not affect existing instances.
         <span class="property-type"><a href="#instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versions_python">
 <a href="#state_versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -2161,8 +2012,7 @@ not affect existing instances.
     <dd>{{% md %}}Application versions managed by this instance group. Each
 version deals with a specific instance template, allowing canary release scenarios.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_instances_python">
 <a href="#state_wait_for_instances_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>instances</a>
@@ -2173,8 +2023,7 @@ Structure is documented below.
     <dd>{{% md %}}Whether to wait for all instances to be created/updated before
 returning. Note that if this is set to true and the operation does not succeed, this provider will
 continue trying until it times out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2184,8 +2033,7 @@ continue trying until it times out.
     </dt>
     <dd>{{% md %}}The zone that instances in this group should be created
 in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2200,8 +2048,7 @@ in.
 <h4 id="instancegroupmanagerautohealingpolicies">Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -2210,8 +2057,7 @@ in.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check resource that signals autohealing.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialdelaysec_csharp">
 <a href="#initialdelaysec_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
@@ -2221,13 +2067,11 @@ in.
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before
 it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -2236,8 +2080,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check resource that signals autohealing.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialdelaysec_go">
 <a href="#initialdelaysec_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Sec</a>
@@ -2247,13 +2090,11 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before
 it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
@@ -2262,8 +2103,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check resource that signals autohealing.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialdelaysec_nodejs">
 <a href="#initialdelaysec_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Sec</a>
@@ -2273,13 +2113,11 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before
 it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_check_python">
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
@@ -2288,8 +2126,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health check resource that signals autohealing.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initial_delay_sec_python">
 <a href="#initial_delay_sec_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>sec</a>
@@ -2299,15 +2136,13 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The number of seconds that the managed instance group waits before
 it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagernamedport">Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2316,8 +2151,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2327,13 +2161,11 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The port number.
 - - -
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2342,8 +2174,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2353,13 +2184,11 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The port number.
 - - -
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2368,8 +2197,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2379,13 +2207,11 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The port number.
 - - -
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2394,8 +2220,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2405,15 +2230,13 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}The port number.
 - - -
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerstatefuldisk">Instance<wbr>Group<wbr>Manager<wbr>Stateful<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2422,8 +2245,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, The device name of the disk to be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleterule_csharp">
 <a href="#deleterule_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
@@ -2432,13 +2254,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2447,8 +2267,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, The device name of the disk to be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleterule_go">
 <a href="#deleterule_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
@@ -2457,13 +2276,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2472,8 +2289,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, The device name of the disk to be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleterule_nodejs">
 <a href="#deleterule_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
@@ -2482,13 +2298,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2497,8 +2311,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}, The device name of the disk to be attached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_rule_python">
 <a href="#delete_rule_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>rule</a>
@@ -2507,15 +2320,13 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}, A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerupdatepolicy">Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minimalaction_csharp">
 <a href="#minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
@@ -2524,8 +2335,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Minimal action to be taken on an instance. You can specify either `RESTART` to restart existing instances or `REPLACE` to delete and create new instances from the target template. If you specify a `RESTART`, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2534,8 +2344,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The type of update process. You can specify either `PROACTIVE` so that the instance group manager proactively executes actions in order to bring instances to their target versions or `OPPORTUNISTIC` so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsurgefixed_csharp">
 <a href="#maxsurgefixed_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Fixed</a>
@@ -2544,8 +2353,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with `max_surge_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsurgepercent_csharp">
 <a href="#maxsurgepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Percent</a>
@@ -2554,8 +2362,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with `max_surge_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxunavailablefixed_csharp">
 <a href="#maxunavailablefixed_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Fixed</a>
@@ -2564,8 +2371,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be unavailable during the update process. Conflicts with `max_unavailable_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxunavailablepercent_csharp">
 <a href="#maxunavailablepercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Percent</a>
@@ -2574,8 +2380,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with `max_unavailable_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minreadysec_csharp">
 <a href="#minreadysec_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ready<wbr>Sec</a>
@@ -2585,8 +2390,7 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
 - - -
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_csharp">
 <a href="#replacementmethod_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
@@ -2594,13 +2398,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minimalaction_go">
 <a href="#minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
@@ -2609,8 +2411,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Minimal action to be taken on an instance. You can specify either `RESTART` to restart existing instances or `REPLACE` to delete and create new instances from the target template. If you specify a `RESTART`, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2619,8 +2420,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The type of update process. You can specify either `PROACTIVE` so that the instance group manager proactively executes actions in order to bring instances to their target versions or `OPPORTUNISTIC` so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsurgefixed_go">
 <a href="#maxsurgefixed_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Fixed</a>
@@ -2629,8 +2429,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with `max_surge_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsurgepercent_go">
 <a href="#maxsurgepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge<wbr>Percent</a>
@@ -2639,8 +2438,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with `max_surge_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxunavailablefixed_go">
 <a href="#maxunavailablefixed_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Fixed</a>
@@ -2649,8 +2447,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be unavailable during the update process. Conflicts with `max_unavailable_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxunavailablepercent_go">
 <a href="#maxunavailablepercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Unavailable<wbr>Percent</a>
@@ -2659,8 +2456,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with `max_unavailable_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minreadysec_go">
 <a href="#minreadysec_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ready<wbr>Sec</a>
@@ -2670,8 +2466,7 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
 - - -
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_go">
 <a href="#replacementmethod_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Method</a>
@@ -2679,13 +2474,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minimalaction_nodejs">
 <a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
@@ -2694,8 +2487,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Minimal action to be taken on an instance. You can specify either `RESTART` to restart existing instances or `REPLACE` to delete and create new instances from the target template. If you specify a `RESTART`, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2704,8 +2496,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The type of update process. You can specify either `PROACTIVE` so that the instance group manager proactively executes actions in order to bring instances to their target versions or `OPPORTUNISTIC` so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsurgefixed_nodejs">
 <a href="#maxsurgefixed_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Fixed</a>
@@ -2714,8 +2505,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with `max_surge_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsurgepercent_nodejs">
 <a href="#maxsurgepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge<wbr>Percent</a>
@@ -2724,8 +2514,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with `max_surge_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxunavailablefixed_nodejs">
 <a href="#maxunavailablefixed_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Fixed</a>
@@ -2734,8 +2523,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be unavailable during the update process. Conflicts with `max_unavailable_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxunavailablepercent_nodejs">
 <a href="#maxunavailablepercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Unavailable<wbr>Percent</a>
@@ -2744,8 +2532,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with `max_unavailable_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minreadysec_nodejs">
 <a href="#minreadysec_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ready<wbr>Sec</a>
@@ -2755,8 +2542,7 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
 - - -
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacementmethod_nodejs">
 <a href="#replacementmethod_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Method</a>
@@ -2764,13 +2550,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minimal_action_python">
 <a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
@@ -2779,8 +2563,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Minimal action to be taken on an instance. You can specify either `RESTART` to restart existing instances or `REPLACE` to delete and create new instances from the target template. If you specify a `RESTART`, the Updater will attempt to perform that action only. However, if the Updater determines that the minimal action you specify is not enough to perform the update, it might perform a more disruptive action.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2789,8 +2572,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- The type of update process. You can specify either `PROACTIVE` so that the instance group manager proactively executes actions in order to bring instances to their target versions or `OPPORTUNISTIC` so that no action is proactively executed but the update will be performed as part of other actions (for example, resizes or recreateInstances calls).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_surge_fixed_python">
 <a href="#max_surge_fixed_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge_<wbr>fixed</a>
@@ -2799,8 +2581,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with `max_surge_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_surge_percent_python">
 <a href="#max_surge_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge_<wbr>percent</a>
@@ -2809,8 +2590,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be created above the specified targetSize during the update process. Conflicts with `max_surge_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_unavailable_fixed_python">
 <a href="#max_unavailable_fixed_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>fixed</a>
@@ -2819,8 +2599,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances that can be unavailable during the update process. Conflicts with `max_unavailable_percent`. If neither is set, defaults to 1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_unavailable_percent_python">
 <a href="#max_unavailable_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>unavailable_<wbr>percent</a>
@@ -2829,8 +2608,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The maximum number of instances(calculated as percentage) that can be unavailable during the update process. Conflicts with `max_unavailable_fixed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_ready_sec_python">
 <a href="#min_ready_sec_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ready_<wbr>sec</a>
@@ -2840,8 +2618,7 @@ it applies autohealing policies to new instances or recently recreated instances
     </dt>
     <dd>{{% md %}}, Minimum number of seconds to wait for after a newly created instance becomes available. This value must be from range [0, 3600]
 - - -
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replacement_method_python">
 <a href="#replacement_method_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>method</a>
@@ -2849,15 +2626,13 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerversion">Instance<wbr>Group<wbr>Manager<wbr>Version</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancetemplate_csharp">
 <a href="#instancetemplate_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Template</a>
@@ -2866,8 +2641,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The full URL to an instance template from which all new instances of this version will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2876,8 +2650,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_csharp">
 <a href="#targetsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -2886,13 +2659,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancetemplate_go">
 <a href="#instancetemplate_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Template</a>
@@ -2901,8 +2672,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The full URL to an instance template from which all new instances of this version will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2911,8 +2681,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_go">
 <a href="#targetsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Size</a>
@@ -2921,13 +2690,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancetemplate_nodejs">
 <a href="#instancetemplate_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Template</a>
@@ -2936,8 +2703,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- The full URL to an instance template from which all new instances of this version will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2946,8 +2712,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsize_nodejs">
 <a href="#targetsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Size</a>
@@ -2956,13 +2721,11 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_template_python">
 <a href="#instance_template_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>template</a>
@@ -2971,8 +2734,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- The full URL to an instance template from which all new instances of this version will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2981,8 +2743,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Version name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_size_python">
 <a href="#target_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>size</a>
@@ -2991,15 +2752,13 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type"><a href="#instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}- The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancegroupmanagerversiontargetsize">Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
 <a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -3008,8 +2767,7 @@ it applies autohealing policies to new instances or recently recreated instances
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The number of instances which are managed for this version. Conflicts with `percent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -3020,13 +2778,11 @@ it applies autohealing policies to new instances or recently recreated instances
     <dd>{{% md %}}, The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
 Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
 one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
 <a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
@@ -3035,8 +2791,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The number of instances which are managed for this version. Conflicts with `percent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
@@ -3047,13 +2802,11 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
     <dd>{{% md %}}, The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
 Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
 one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -3062,8 +2815,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}, The number of instances which are managed for this version. Conflicts with `percent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -3074,13 +2826,11 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
     <dd>{{% md %}}, The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
 Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
 one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_python">
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
@@ -3089,8 +2839,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}, The number of instances which are managed for this version. Conflicts with `percent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
@@ -3101,8 +2850,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
     <dd>{{% md %}}, The number of instances (calculated as percentage) which are managed for this version. Conflicts with `fixed`.
 Note that when using `percent`, rounding will be in favor of explicitly set `target_size` values; a managed instance group with 2 instances and 2 `version`s,
 one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -177,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiclientlogging_csharp">
 <a href="#apiclientlogging_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Client<wbr>Logging</a>
@@ -187,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
- It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -197,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API key for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitoken_csharp">
 <a href="#apitoken_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -207,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiuserservicekey_csharp">
 <a href="#apiuserservicekey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>User<wbr>Service<wbr>Key</a>
@@ -217,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -227,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_csharp">
 <a href="#maxbackoff_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Backoff</a>
@@ -237,8 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minbackoff_csharp">
 <a href="#minbackoff_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Backoff</a>
@@ -247,8 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -257,8 +248,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
- It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rps_csharp">
 <a href="#rps_csharp" style="color: inherit; text-decoration: inherit;">Rps</a>
@@ -267,13 +257,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
- It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -282,8 +270,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiclientlogging_go">
 <a href="#apiclientlogging_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Client<wbr>Logging</a>
@@ -292,8 +279,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
- It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -302,8 +288,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API key for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitoken_go">
 <a href="#apitoken_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Token</a>
@@ -312,8 +297,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiuserservicekey_go">
 <a href="#apiuserservicekey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>User<wbr>Service<wbr>Key</a>
@@ -322,8 +306,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -332,8 +315,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_go">
 <a href="#maxbackoff_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Backoff</a>
@@ -342,8 +324,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minbackoff_go">
 <a href="#minbackoff_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Backoff</a>
@@ -352,8 +333,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_go">
 <a href="#retries_go" style="color: inherit; text-decoration: inherit;">Retries</a>
@@ -362,8 +342,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
- It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rps_go">
 <a href="#rps_go" style="color: inherit; text-decoration: inherit;">Rps</a>
@@ -372,13 +351,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
- It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -387,8 +364,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiclientlogging_nodejs">
 <a href="#apiclientlogging_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Client<wbr>Logging</a>
@@ -397,8 +373,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
- It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -407,8 +382,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API key for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apitoken_nodejs">
 <a href="#apitoken_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Token</a>
@@ -417,8 +391,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiuserservicekey_nodejs">
 <a href="#apiuserservicekey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>User<wbr>Service<wbr>Key</a>
@@ -427,8 +400,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -437,8 +409,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbackoff_nodejs">
 <a href="#maxbackoff_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Backoff</a>
@@ -447,8 +418,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minbackoff_nodejs">
 <a href="#minbackoff_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Backoff</a>
@@ -457,8 +427,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -467,8 +436,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
- It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rps_nodejs">
 <a href="#rps_nodejs" style="color: inherit; text-decoration: inherit;">rps</a>
@@ -477,13 +445,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
- It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -492,8 +458,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_client_logging_python">
 <a href="#api_client_logging_python" style="color: inherit; text-decoration: inherit;">api_<wbr>client_<wbr>logging</a>
@@ -502,8 +467,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
- It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_API_CLIENT_LOGGING`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -512,8 +476,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API key for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_token_python">
 <a href="#api_token_python" style="color: inherit; text-decoration: inherit;">api_<wbr>token</a>
@@ -522,8 +485,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_user_service_key_python">
 <a href="#api_user_service_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>user_<wbr>service_<wbr>key</a>
@@ -532,8 +494,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -542,8 +503,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_backoff_python">
 <a href="#max_backoff_python" style="color: inherit; text-decoration: inherit;">max_<wbr>backoff</a>
@@ -552,8 +512,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MAX_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_backoff_python">
 <a href="#min_backoff_python" style="color: inherit; text-decoration: inherit;">min_<wbr>backoff</a>
@@ -562,8 +521,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
- It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_MIN_BACKOFF`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retries_python">
 <a href="#retries_python" style="color: inherit; text-decoration: inherit;">retries</a>
@@ -572,8 +530,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
- It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RETRIES`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rps_python">
 <a href="#rps_python" style="color: inherit; text-decoration: inherit;">rps</a>
@@ -582,8 +539,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
- It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `CLOUDFLARE_RPS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -594,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -603,13 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -617,13 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -631,13 +582,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -645,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

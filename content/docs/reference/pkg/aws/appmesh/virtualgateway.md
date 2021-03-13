@@ -493,8 +493,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meshname_csharp">
 <a href="#meshname_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
@@ -503,8 +502,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_csharp">
 <a href="#spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -513,8 +511,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meshowner_csharp">
 <a href="#meshowner_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
@@ -523,8 +520,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -533,8 +529,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -543,13 +538,11 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meshname_go">
 <a href="#meshname_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
@@ -558,8 +551,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_go">
 <a href="#spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -568,8 +560,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meshowner_go">
 <a href="#meshowner_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
@@ -578,8 +569,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -588,8 +578,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -598,13 +587,11 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="meshname_nodejs">
 <a href="#meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
@@ -613,8 +600,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
 <a href="#spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -623,8 +609,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="meshowner_nodejs">
 <a href="#meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
@@ -633,8 +618,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -643,8 +627,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -653,13 +636,11 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mesh_name_python">
 <a href="#mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
@@ -668,8 +649,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spec_python">
 <a href="#spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -678,8 +658,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mesh_owner_python">
 <a href="#mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
@@ -688,8 +667,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -698,8 +676,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -708,8 +685,7 @@ The VirtualGateway resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -720,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -730,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -740,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -749,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdateddate_csharp">
 <a href="#lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
@@ -759,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceowner_csharp">
 <a href="#resourceowner_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
@@ -769,13 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -784,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -794,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -803,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdateddate_go">
 <a href="#lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
@@ -813,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceowner_go">
 <a href="#resourceowner_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
@@ -823,13 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -838,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -848,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -857,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdateddate_nodejs">
 <a href="#lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
@@ -867,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceowner_nodejs">
 <a href="#resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
@@ -877,13 +836,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -892,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -902,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_date_python">
 <a href="#last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
@@ -921,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_owner_python">
 <a href="#resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
@@ -931,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1059,8 +1011,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1069,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createddate_csharp">
 <a href="#state_createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -1079,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_csharp">
 <a href="#state_lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
@@ -1089,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meshname_csharp">
 <a href="#state_meshname_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
@@ -1099,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meshowner_csharp">
 <a href="#state_meshowner_csharp" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
@@ -1109,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1119,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceowner_csharp">
 <a href="#state_resourceowner_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
@@ -1129,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_csharp">
 <a href="#state_spec_csharp" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -1139,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1149,13 +1092,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1164,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createddate_go">
 <a href="#state_createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -1174,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_go">
 <a href="#state_lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
@@ -1184,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meshname_go">
 <a href="#state_meshname_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Name</a>
@@ -1194,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meshowner_go">
 <a href="#state_meshowner_go" style="color: inherit; text-decoration: inherit;">Mesh<wbr>Owner</a>
@@ -1204,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1214,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceowner_go">
 <a href="#state_resourceowner_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner</a>
@@ -1224,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_go">
 <a href="#state_spec_go" style="color: inherit; text-decoration: inherit;">Spec</a>
@@ -1234,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1244,13 +1177,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1259,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createddate_nodejs">
 <a href="#state_createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -1269,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastupdateddate_nodejs">
 <a href="#state_lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
@@ -1279,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meshname_nodejs">
 <a href="#state_meshname_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Name</a>
@@ -1289,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_meshowner_nodejs">
 <a href="#state_meshowner_nodejs" style="color: inherit; text-decoration: inherit;">mesh<wbr>Owner</a>
@@ -1299,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1309,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceowner_nodejs">
 <a href="#state_resourceowner_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner</a>
@@ -1319,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_nodejs">
 <a href="#state_spec_nodejs" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -1329,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1339,13 +1262,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1354,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_date_python">
 <a href="#state_created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1364,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_updated_date_python">
 <a href="#state_last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
@@ -1374,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mesh_name_python">
 <a href="#state_mesh_name_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>name</a>
@@ -1384,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mesh_owner_python">
 <a href="#state_mesh_owner_python" style="color: inherit; text-decoration: inherit;">mesh_<wbr>owner</a>
@@ -1394,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1404,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual gateway. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_owner_python">
 <a href="#state_resource_owner_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner</a>
@@ -1414,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource owner's AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spec_python">
 <a href="#state_spec_python" style="color: inherit; text-decoration: inherit;">spec</a>
@@ -1424,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual gateway specification to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1434,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1450,8 +1362,7 @@ The following state arguments are supported:
 <h4 id="virtualgatewayspec">Virtual<wbr>Gateway<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_csharp">
 <a href="#listener_csharp" style="color: inherit; text-decoration: inherit;">Listener</a>
@@ -1460,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backenddefaults_csharp">
 <a href="#backenddefaults_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Defaults</a>
@@ -1470,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_csharp">
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
@@ -1480,13 +1389,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_go">
 <a href="#listener_go" style="color: inherit; text-decoration: inherit;">Listener</a>
@@ -1495,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backenddefaults_go">
 <a href="#backenddefaults_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Defaults</a>
@@ -1505,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_go">
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
@@ -1515,13 +1420,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_nodejs">
 <a href="#listener_nodejs" style="color: inherit; text-decoration: inherit;">listener</a>
@@ -1530,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backenddefaults_nodejs">
 <a href="#backenddefaults_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Defaults</a>
@@ -1540,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_nodejs">
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
@@ -1550,13 +1451,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_python">
 <a href="#listener_python" style="color: inherit; text-decoration: inherit;">listener</a>
@@ -1565,8 +1464,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_defaults_python">
 <a href="#backend_defaults_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>defaults</a>
@@ -1575,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The defaults for backends.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_python">
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
@@ -1585,15 +1482,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The inbound and outbound access logging information for the virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaults">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientpolicy_csharp">
 <a href="#clientpolicy_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
@@ -1602,13 +1497,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientpolicy_go">
 <a href="#clientpolicy_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Policy</a>
@@ -1617,13 +1510,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientpolicy_nodejs">
 <a href="#clientpolicy_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Policy</a>
@@ -1632,13 +1523,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_policy_python">
 <a href="#client_policy_python" style="color: inherit; text-decoration: inherit;">client_<wbr>policy</a>
@@ -1647,15 +1536,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default client policy for virtual gateway backends.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicy">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -1664,13 +1551,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -1679,13 +1564,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1694,13 +1577,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1709,15 +1590,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) client policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytls">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="validation_csharp">
 <a href="#validation_csharp" style="color: inherit; text-decoration: inherit;">Validation</a>
@@ -1726,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_csharp">
 <a href="#enforce_csharp" style="color: inherit; text-decoration: inherit;">Enforce</a>
@@ -1735,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1745,13 +1622,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}One or more ports that the policy is enforced for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="validation_go">
 <a href="#validation_go" style="color: inherit; text-decoration: inherit;">Validation</a>
@@ -1760,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_go">
 <a href="#enforce_go" style="color: inherit; text-decoration: inherit;">Enforce</a>
@@ -1769,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1779,13 +1652,11 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}One or more ports that the policy is enforced for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="validation_nodejs">
 <a href="#validation_nodejs" style="color: inherit; text-decoration: inherit;">validation</a>
@@ -1794,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_nodejs">
 <a href="#enforce_nodejs" style="color: inherit; text-decoration: inherit;">enforce</a>
@@ -1803,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1813,13 +1682,11 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}One or more ports that the policy is enforced for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="validation_python">
 <a href="#validation_python" style="color: inherit; text-decoration: inherit;">validation</a>
@@ -1828,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_python">
 <a href="#enforce_python" style="color: inherit; text-decoration: inherit;">enforce</a>
@@ -1837,8 +1703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1847,15 +1712,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}One or more ports that the policy is enforced for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidation">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trust_csharp">
 <a href="#trust_csharp" style="color: inherit; text-decoration: inherit;">Trust</a>
@@ -1864,13 +1727,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trust_go">
 <a href="#trust_go" style="color: inherit; text-decoration: inherit;">Trust</a>
@@ -1879,13 +1740,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trust_nodejs">
 <a href="#trust_nodejs" style="color: inherit; text-decoration: inherit;">trust</a>
@@ -1894,13 +1753,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="trust_python">
 <a href="#trust_python" style="color: inherit; text-decoration: inherit;">trust</a>
@@ -1909,15 +1766,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrust">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_csharp">
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
@@ -1926,8 +1781,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_csharp">
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
@@ -1936,13 +1790,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_go">
 <a href="#acm_go" style="color: inherit; text-decoration: inherit;">Acm</a>
@@ -1951,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_go">
 <a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
@@ -1961,13 +1812,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_nodejs">
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
@@ -1976,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_nodejs">
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
@@ -1986,13 +1834,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_python">
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
@@ -2001,8 +1847,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_python">
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
@@ -2011,15 +1856,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TLS validation context trust for a local file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>Acm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthorityarns_csharp">
 <a href="#certificateauthorityarns_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
@@ -2028,13 +1871,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthorityarns_go">
 <a href="#certificateauthorityarns_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
@@ -2043,13 +1884,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthorityarns_nodejs">
 <a href="#certificateauthorityarns_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Arns</a>
@@ -2058,13 +1897,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_authority_arns_python">
 <a href="#certificate_authority_arns_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>arns</a>
@@ -2073,15 +1910,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}One or more ACM Amazon Resource Name (ARN)s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecbackenddefaultsclientpolicytlsvalidationtrustfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Backend<wbr>Defaults<wbr>Client<wbr>Policy<wbr>Tls<wbr>Validation<wbr>Trust<wbr>File</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatechain_csharp">
 <a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -2090,13 +1925,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatechain_go">
 <a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -2105,13 +1938,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatechain_nodejs">
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
@@ -2120,13 +1951,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_chain_python">
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
@@ -2135,15 +1964,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistener">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portmapping_csharp">
 <a href="#portmapping_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Mapping</a>
@@ -2152,8 +1979,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionpool_csharp">
 <a href="#connectionpool_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool</a>
@@ -2162,8 +1988,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -2172,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -2182,13 +2006,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portmapping_go">
 <a href="#portmapping_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Mapping</a>
@@ -2197,8 +2019,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionpool_go">
 <a href="#connectionpool_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool</a>
@@ -2207,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
@@ -2217,8 +2037,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -2227,13 +2046,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="portmapping_nodejs">
 <a href="#portmapping_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Mapping</a>
@@ -2242,8 +2059,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionpool_nodejs">
 <a href="#connectionpool_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool</a>
@@ -2252,8 +2068,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
@@ -2262,8 +2077,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -2272,13 +2086,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_mapping_python">
 <a href="#port_mapping_python" style="color: inherit; text-decoration: inherit;">port_<wbr>mapping</a>
@@ -2287,8 +2099,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_pool_python">
 <a href="#connection_pool_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool</a>
@@ -2297,8 +2108,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The connection pool information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_python">
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
@@ -2307,8 +2117,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The health check information for the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -2317,15 +2126,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpc_csharp">
 <a href="#grpc_csharp" style="color: inherit; text-decoration: inherit;">Grpc</a>
@@ -2334,8 +2141,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -2344,8 +2150,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_csharp">
 <a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
@@ -2354,13 +2159,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpc_go">
 <a href="#grpc_go" style="color: inherit; text-decoration: inherit;">Grpc</a>
@@ -2369,8 +2172,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -2379,8 +2181,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_go">
 <a href="#http2_go" style="color: inherit; text-decoration: inherit;">Http2</a>
@@ -2389,13 +2190,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpc_nodejs">
 <a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
@@ -2404,8 +2203,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -2414,8 +2212,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_nodejs">
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
@@ -2424,13 +2221,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="grpc_python">
 <a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
@@ -2439,8 +2234,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for gRPC listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -2449,8 +2243,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP listeners.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_python">
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
@@ -2459,15 +2252,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
     </dt>
     <dd>{{% md %}}Connection pool information for HTTP2 listeners.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequests_csharp">
 <a href="#maxrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
@@ -2476,13 +2267,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequests_go">
 <a href="#maxrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
@@ -2491,13 +2280,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequests_nodejs">
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
@@ -2506,13 +2293,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_requests_python">
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
@@ -2521,15 +2306,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxconnections_csharp">
 <a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
@@ -2538,8 +2321,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpendingrequests_csharp">
 <a href="#maxpendingrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Requests</a>
@@ -2548,13 +2330,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxconnections_go">
 <a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
@@ -2563,8 +2343,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpendingrequests_go">
 <a href="#maxpendingrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Requests</a>
@@ -2573,13 +2352,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxconnections_nodejs">
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
@@ -2588,8 +2365,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpendingrequests_nodejs">
 <a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
@@ -2598,13 +2374,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_connections_python">
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
@@ -2613,8 +2387,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_pending_requests_python">
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
@@ -2623,15 +2396,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequests_csharp">
 <a href="#maxrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
@@ -2640,13 +2411,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequests_go">
 <a href="#maxrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
@@ -2655,13 +2424,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxrequests_nodejs">
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
@@ -2670,13 +2437,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_requests_python">
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
@@ -2685,15 +2450,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerhealthcheck">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthythreshold_csharp">
 <a href="#healthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -2702,8 +2465,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intervalmillis_csharp">
 <a href="#intervalmillis_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Millis</a>
@@ -2712,8 +2474,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2722,8 +2483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeoutmillis_csharp">
 <a href="#timeoutmillis_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Millis</a>
@@ -2732,8 +2492,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unhealthythreshold_csharp">
 <a href="#unhealthythreshold_csharp" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -2742,8 +2501,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2752,8 +2510,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2762,13 +2519,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthythreshold_go">
 <a href="#healthythreshold_go" style="color: inherit; text-decoration: inherit;">Healthy<wbr>Threshold</a>
@@ -2777,8 +2532,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intervalmillis_go">
 <a href="#intervalmillis_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Millis</a>
@@ -2787,8 +2541,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2797,8 +2550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeoutmillis_go">
 <a href="#timeoutmillis_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Millis</a>
@@ -2807,8 +2559,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unhealthythreshold_go">
 <a href="#unhealthythreshold_go" style="color: inherit; text-decoration: inherit;">Unhealthy<wbr>Threshold</a>
@@ -2817,8 +2568,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2827,8 +2577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2837,13 +2586,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthythreshold_nodejs">
 <a href="#healthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">healthy<wbr>Threshold</a>
@@ -2852,8 +2599,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="intervalmillis_nodejs">
 <a href="#intervalmillis_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Millis</a>
@@ -2862,8 +2608,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2872,8 +2617,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeoutmillis_nodejs">
 <a href="#timeoutmillis_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Millis</a>
@@ -2882,8 +2626,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unhealthythreshold_nodejs">
 <a href="#unhealthythreshold_nodejs" style="color: inherit; text-decoration: inherit;">unhealthy<wbr>Threshold</a>
@@ -2892,8 +2635,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2902,8 +2644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2912,13 +2653,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthy_threshold_python">
 <a href="#healthy_threshold_python" style="color: inherit; text-decoration: inherit;">healthy_<wbr>threshold</a>
@@ -2927,8 +2666,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="interval_millis_python">
 <a href="#interval_millis_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>millis</a>
@@ -2937,8 +2675,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time period in milliseconds between each health check execution.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2947,8 +2684,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http`, `http2`, and `grpc`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeout_millis_python">
 <a href="#timeout_millis_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>millis</a>
@@ -2957,8 +2693,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unhealthy_threshold_python">
 <a href="#unhealthy_threshold_python" style="color: inherit; text-decoration: inherit;">unhealthy_<wbr>threshold</a>
@@ -2967,8 +2702,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2977,8 +2711,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2987,15 +2720,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3004,8 +2735,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3014,13 +2744,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3029,8 +2757,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -3039,13 +2766,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3054,8 +2779,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -3064,13 +2788,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3079,8 +2801,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -3089,15 +2810,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http`, `http2`, `tcp` and `grpc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3106,8 +2825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3116,13 +2834,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3131,8 +2847,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -3141,13 +2856,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3156,8 +2869,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -3166,13 +2878,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3181,8 +2891,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The listener's TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -3191,15 +2900,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertlscertificate">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_csharp">
 <a href="#acm_csharp" style="color: inherit; text-decoration: inherit;">Acm</a>
@@ -3208,8 +2915,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_csharp">
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
@@ -3218,13 +2924,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_go">
 <a href="#acm_go" style="color: inherit; text-decoration: inherit;">Acm</a>
@@ -3233,8 +2937,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_go">
 <a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
@@ -3243,13 +2946,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_nodejs">
 <a href="#acm_nodejs" style="color: inherit; text-decoration: inherit;">acm</a>
@@ -3258,8 +2959,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_nodejs">
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
@@ -3268,13 +2968,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_python">
 <a href="#acm_python" style="color: inherit; text-decoration: inherit;">acm</a>
@@ -3283,8 +2981,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS Certificate Manager (ACM) certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_python">
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
@@ -3293,15 +2990,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A local file certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertlscertificateacm">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>Acm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatearn_csharp">
 <a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -3310,13 +3005,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatearn_go">
 <a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -3325,13 +3018,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatearn_nodejs">
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
@@ -3340,13 +3031,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_arn_python">
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
@@ -3355,15 +3044,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclistenertlscertificatefile">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Certificate<wbr>File</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatechain_csharp">
 <a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -3372,8 +3059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -3382,13 +3068,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatechain_go">
 <a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -3397,8 +3081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -3407,13 +3090,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatechain_nodejs">
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
@@ -3422,8 +3103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -3432,13 +3112,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_chain_python">
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
@@ -3447,8 +3125,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -3457,15 +3134,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspeclogging">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesslog_csharp">
 <a href="#accesslog_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Log</a>
@@ -3474,13 +3149,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesslog_go">
 <a href="#accesslog_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Log</a>
@@ -3489,13 +3162,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesslog_nodejs">
 <a href="#accesslog_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Log</a>
@@ -3504,13 +3175,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_log_python">
 <a href="#access_log_python" style="color: inherit; text-decoration: inherit;">access_<wbr>log</a>
@@ -3519,15 +3188,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The access log configuration for a virtual gateway.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecloggingaccesslog">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_csharp">
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
@@ -3536,13 +3203,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_go">
 <a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
@@ -3551,13 +3216,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_nodejs">
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
@@ -3566,13 +3229,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_python">
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
@@ -3581,15 +3242,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The file object to send virtual gateway access logs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualgatewayspecloggingaccesslogfile">Virtual<wbr>Gateway<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3598,13 +3257,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -3613,13 +3270,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3628,13 +3283,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -3643,8 +3296,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

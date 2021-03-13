@@ -272,8 +272,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarmcontactname_csharp">
 <a href="#alarmcontactname_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Name</a>
@@ -282,8 +281,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="describe_csharp">
 <a href="#describe_csharp" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -292,8 +290,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsaliim_csharp">
 <a href="#channelsaliim_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Aliim</a>
@@ -302,8 +299,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsdingwebhook_csharp">
 <a href="#channelsdingwebhook_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Ding<wbr>Web<wbr>Hook</a>
@@ -312,8 +308,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsmail_csharp">
 <a href="#channelsmail_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Mail</a>
@@ -322,8 +317,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelssms_csharp">
 <a href="#channelssms_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Sms</a>
@@ -332,8 +326,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_csharp">
 <a href="#lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -342,13 +335,11 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarmcontactname_go">
 <a href="#alarmcontactname_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Name</a>
@@ -357,8 +348,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="describe_go">
 <a href="#describe_go" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -367,8 +357,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsaliim_go">
 <a href="#channelsaliim_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Aliim</a>
@@ -377,8 +366,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsdingwebhook_go">
 <a href="#channelsdingwebhook_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Ding<wbr>Web<wbr>Hook</a>
@@ -387,8 +375,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsmail_go">
 <a href="#channelsmail_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Mail</a>
@@ -397,8 +384,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelssms_go">
 <a href="#channelssms_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Sms</a>
@@ -407,8 +393,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_go">
 <a href="#lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -417,13 +402,11 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarmcontactname_nodejs">
 <a href="#alarmcontactname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Contact<wbr>Name</a>
@@ -432,8 +415,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="describe_nodejs">
 <a href="#describe_nodejs" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -442,8 +424,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsaliim_nodejs">
 <a href="#channelsaliim_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Aliim</a>
@@ -452,8 +433,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsdingwebhook_nodejs">
 <a href="#channelsdingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Ding<wbr>Web<wbr>Hook</a>
@@ -462,8 +442,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelsmail_nodejs">
 <a href="#channelsmail_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Mail</a>
@@ -472,8 +451,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channelssms_nodejs">
 <a href="#channelssms_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Sms</a>
@@ -482,8 +460,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_nodejs">
 <a href="#lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -492,13 +469,11 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alarm_contact_name_python">
 <a href="#alarm_contact_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>contact_<wbr>name</a>
@@ -507,8 +482,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="describe_python">
 <a href="#describe_python" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -517,8 +491,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channels_aliim_python">
 <a href="#channels_aliim_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>aliim</a>
@@ -527,8 +500,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channels_ding_web_hook_python">
 <a href="#channels_ding_web_hook_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>ding_<wbr>web_<wbr>hook</a>
@@ -537,8 +509,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channels_mail_python">
 <a href="#channels_mail_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>mail</a>
@@ -547,8 +518,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="channels_sms_python">
 <a href="#channels_sms_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>sms</a>
@@ -557,8 +527,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lang_python">
 <a href="#lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -567,8 +536,7 @@ The AlarmContact resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -579,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,13 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,13 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -616,13 +579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -630,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -758,8 +718,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmcontactname_csharp">
 <a href="#state_alarmcontactname_csharp" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Name</a>
@@ -768,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsaliim_csharp">
 <a href="#state_channelsaliim_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Aliim</a>
@@ -778,8 +736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsdingwebhook_csharp">
 <a href="#state_channelsdingwebhook_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Ding<wbr>Web<wbr>Hook</a>
@@ -788,8 +745,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsmail_csharp">
 <a href="#state_channelsmail_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Mail</a>
@@ -798,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelssms_csharp">
 <a href="#state_channelssms_csharp" style="color: inherit; text-decoration: inherit;">Channels<wbr>Sms</a>
@@ -808,8 +763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_csharp">
 <a href="#state_describe_csharp" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -818,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_csharp">
 <a href="#state_lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -828,13 +781,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmcontactname_go">
 <a href="#state_alarmcontactname_go" style="color: inherit; text-decoration: inherit;">Alarm<wbr>Contact<wbr>Name</a>
@@ -843,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsaliim_go">
 <a href="#state_channelsaliim_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Aliim</a>
@@ -853,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsdingwebhook_go">
 <a href="#state_channelsdingwebhook_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Ding<wbr>Web<wbr>Hook</a>
@@ -863,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsmail_go">
 <a href="#state_channelsmail_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Mail</a>
@@ -873,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelssms_go">
 <a href="#state_channelssms_go" style="color: inherit; text-decoration: inherit;">Channels<wbr>Sms</a>
@@ -883,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_go">
 <a href="#state_describe_go" style="color: inherit; text-decoration: inherit;">Describe</a>
@@ -893,8 +839,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_go">
 <a href="#state_lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -903,13 +848,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarmcontactname_nodejs">
 <a href="#state_alarmcontactname_nodejs" style="color: inherit; text-decoration: inherit;">alarm<wbr>Contact<wbr>Name</a>
@@ -918,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsaliim_nodejs">
 <a href="#state_channelsaliim_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Aliim</a>
@@ -928,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsdingwebhook_nodejs">
 <a href="#state_channelsdingwebhook_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Ding<wbr>Web<wbr>Hook</a>
@@ -938,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelsmail_nodejs">
 <a href="#state_channelsmail_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Mail</a>
@@ -948,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channelssms_nodejs">
 <a href="#state_channelssms_nodejs" style="color: inherit; text-decoration: inherit;">channels<wbr>Sms</a>
@@ -958,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_nodejs">
 <a href="#state_describe_nodejs" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -968,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_nodejs">
 <a href="#state_lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -978,13 +915,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alarm_contact_name_python">
 <a href="#state_alarm_contact_name_python" style="color: inherit; text-decoration: inherit;">alarm_<wbr>contact_<wbr>name</a>
@@ -993,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channels_aliim_python">
 <a href="#state_channels_aliim_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>aliim</a>
@@ -1003,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TradeManager ID of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channels_ding_web_hook_python">
 <a href="#state_channels_ding_web_hook_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>ding_<wbr>web_<wbr>hook</a>
@@ -1013,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook URL of the DingTalk chatbot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channels_mail_python">
 <a href="#state_channels_mail_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>mail</a>
@@ -1023,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_channels_sms_python">
 <a href="#state_channels_sms_python" style="color: inherit; text-decoration: inherit;">channels_<wbr>sms</a>
@@ -1033,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number of the alarm contact. After you add or modify an email address, the recipient receives an email that contains an activation link. The system adds the recipient to the list of alarm contacts only after the recipient activates the email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_describe_python">
 <a href="#state_describe_python" style="color: inherit; text-decoration: inherit;">describe</a>
@@ -1043,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the alarm contact.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_python">
 <a href="#state_lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -1053,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language type of the alarm. Valid values: `en`, `zh-cn`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -164,8 +164,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_csharp">
 <a href="#principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -174,8 +173,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -184,8 +182,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogresource_csharp">
 <a href="#catalogresource_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Resource</a>
@@ -194,8 +191,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datalocation_csharp">
 <a href="#datalocation_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
@@ -204,8 +200,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -214,8 +209,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_csharp">
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -224,8 +218,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablewithcolumns_csharp">
 <a href="#tablewithcolumns_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
@@ -234,13 +227,11 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_go">
 <a href="#principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -249,8 +240,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -259,8 +249,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogresource_go">
 <a href="#catalogresource_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Resource</a>
@@ -269,8 +258,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datalocation_go">
 <a href="#datalocation_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
@@ -279,8 +267,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -289,8 +276,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_go">
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -299,8 +285,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablewithcolumns_go">
 <a href="#tablewithcolumns_go" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
@@ -309,13 +294,11 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_nodejs">
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -324,8 +307,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -334,8 +316,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalogresource_nodejs">
 <a href="#catalogresource_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Resource</a>
@@ -344,8 +325,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datalocation_nodejs">
 <a href="#datalocation_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Location</a>
@@ -354,8 +334,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -364,8 +343,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_nodejs">
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
@@ -374,8 +352,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablewithcolumns_nodejs">
 <a href="#tablewithcolumns_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>With<wbr>Columns</a>
@@ -384,13 +361,11 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_python">
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -399,8 +374,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Principal to be granted the permissions on the resource. Supported principals are IAM users or IAM roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -409,8 +383,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_resource_python">
 <a href="#catalog_resource_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>resource</a>
@@ -419,8 +392,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_location_python">
 <a href="#data_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>location</a>
@@ -429,8 +401,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a data location resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -439,8 +410,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a database resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_python">
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
@@ -449,8 +419,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table resource. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_with_columns_python">
 <a href="#table_with_columns_python" style="color: inherit; text-decoration: inherit;">table_<wbr>with_<wbr>columns</a>
@@ -459,8 +428,7 @@ The following arguments are supported:
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for a table with columns resource. Detailed below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -473,8 +441,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datalocation_csharp">
 <a href="#datalocation_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
@@ -482,8 +449,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -491,8 +457,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -501,8 +466,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -511,8 +475,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of permissions granted to the principal. For details on permissions, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissionswithgrantoptions_csharp">
 <a href="#permissionswithgrantoptions_csharp" style="color: inherit; text-decoration: inherit;">Permissions<wbr>With<wbr>Grant<wbr>Options</a>
@@ -521,8 +484,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Subset of `permissions` which the principal can pass.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_csharp">
 <a href="#principal_csharp" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -530,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="table_csharp">
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -539,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tablewithcolumns_csharp">
 <a href="#tablewithcolumns_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
@@ -548,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -557,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogresource_csharp">
 <a href="#catalogresource_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Resource</a>
@@ -566,13 +524,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datalocation_go">
 <a href="#datalocation_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Location</a>
@@ -580,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -589,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +553,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -609,8 +562,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of permissions granted to the principal. For details on permissions, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissionswithgrantoptions_go">
 <a href="#permissionswithgrantoptions_go" style="color: inherit; text-decoration: inherit;">Permissions<wbr>With<wbr>Grant<wbr>Options</a>
@@ -619,8 +571,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Subset of `permissions` which the principal can pass.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_go">
 <a href="#principal_go" style="color: inherit; text-decoration: inherit;">Principal</a>
@@ -628,8 +579,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="table_go">
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -637,8 +587,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tablewithcolumns_go">
 <a href="#tablewithcolumns_go" style="color: inherit; text-decoration: inherit;">Table<wbr>With<wbr>Columns</a>
@@ -646,8 +595,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -655,8 +603,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogresource_go">
 <a href="#catalogresource_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Resource</a>
@@ -664,13 +611,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datalocation_nodejs">
 <a href="#datalocation_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Location</a>
@@ -678,8 +623,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -687,8 +631,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -697,8 +640,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -707,8 +649,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of permissions granted to the principal. For details on permissions, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissionswithgrantoptions_nodejs">
 <a href="#permissionswithgrantoptions_nodejs" style="color: inherit; text-decoration: inherit;">permissions<wbr>With<wbr>Grant<wbr>Options</a>
@@ -717,8 +658,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Subset of `permissions` which the principal can pass.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_nodejs">
 <a href="#principal_nodejs" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -726,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="table_nodejs">
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
@@ -735,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tablewithcolumns_nodejs">
 <a href="#tablewithcolumns_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>With<wbr>Columns</a>
@@ -744,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -753,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalogresource_nodejs">
 <a href="#catalogresource_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Resource</a>
@@ -762,13 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_location_python">
 <a href="#data_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>location</a>
@@ -776,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -785,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -795,8 +727,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -805,8 +736,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of permissions granted to the principal. For details on permissions, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_with_grant_options_python">
 <a href="#permissions_with_grant_options_python" style="color: inherit; text-decoration: inherit;">permissions_<wbr>with_<wbr>grant_<wbr>options</a>
@@ -815,8 +745,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Subset of `permissions` which the principal can pass.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principal_python">
 <a href="#principal_python" style="color: inherit; text-decoration: inherit;">principal</a>
@@ -824,8 +753,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="table_python">
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
@@ -833,8 +761,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstable">Get<wbr>Permissions<wbr>Table</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="table_with_columns_python">
 <a href="#table_with_columns_python" style="color: inherit; text-decoration: inherit;">table_<wbr>with_<wbr>columns</a>
@@ -842,8 +769,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -851,8 +777,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="catalog_resource_python">
 <a href="#catalog_resource_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>resource</a>
@@ -860,8 +785,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -875,8 +799,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -885,8 +808,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) that uniquely identifies the data location resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -895,13 +817,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -910,8 +830,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) that uniquely identifies the data location resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -920,13 +839,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -935,8 +852,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) that uniquely identifies the data location resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -945,13 +861,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -960,8 +874,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) that uniquely identifies the data location resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -970,8 +883,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</h4>
@@ -979,8 +891,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -989,8 +900,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -999,13 +909,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -1014,8 +922,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1024,13 +931,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -1039,8 +944,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1049,13 +953,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -1064,8 +966,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1074,8 +975,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpermissionstable">Get<wbr>Permissions<wbr>Table</h4>
@@ -1083,8 +983,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -1093,8 +992,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1103,8 +1001,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1113,8 +1010,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_csharp">
 <a href="#wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -1123,13 +1019,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -1138,8 +1032,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1148,8 +1041,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1158,8 +1050,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_go">
 <a href="#wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -1168,13 +1059,11 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -1183,8 +1072,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1193,8 +1081,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1203,8 +1090,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_nodejs">
 <a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -1213,13 +1099,11 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -1228,8 +1112,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1238,8 +1121,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1248,8 +1130,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_python">
 <a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -1258,8 +1139,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</h4>
@@ -1267,8 +1147,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_csharp">
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -1277,8 +1156,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1287,8 +1165,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1297,8 +1174,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columnnames_csharp">
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
@@ -1307,8 +1183,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_csharp">
 <a href="#excludedcolumnnames_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Column<wbr>Names</a>
@@ -1317,13 +1192,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_go">
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
@@ -1332,8 +1205,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1342,8 +1214,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1352,8 +1223,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columnnames_go">
 <a href="#columnnames_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
@@ -1362,8 +1232,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_go">
 <a href="#excludedcolumnnames_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Column<wbr>Names</a>
@@ -1372,13 +1241,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogid_nodejs">
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
@@ -1387,8 +1254,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1397,8 +1263,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1407,8 +1272,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columnnames_nodejs">
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
@@ -1417,8 +1281,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedcolumnnames_nodejs">
 <a href="#excludedcolumnnames_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Column<wbr>Names</a>
@@ -1427,13 +1290,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_id_python">
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
@@ -1442,8 +1303,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Data Catalog. By default, it is the account ID of the caller.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1452,8 +1312,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the database for the table with columns resource. Unique to the Data Catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1462,8 +1321,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_names_python">
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
@@ -1472,8 +1330,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of column names for the table. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_column_names_python">
 <a href="#excluded_column_names_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>column_<wbr>names</a>
@@ -1482,8 +1339,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of column names for the table to exclude. At least one of `column_names` or `excluded_column_names` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

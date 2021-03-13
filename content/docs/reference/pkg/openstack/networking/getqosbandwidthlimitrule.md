@@ -103,8 +103,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qospolicyid_csharp">
 <a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -113,8 +112,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxburstkbps_csharp">
 <a href="#maxburstkbps_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Kbps</a>
@@ -123,8 +121,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum burst size in kilobits of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxkbps_csharp">
 <a href="#maxkbps_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Kbps</a>
@@ -133,8 +130,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum kilobits per second of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -145,13 +141,11 @@ The following arguments are supported:
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qospolicyid_go">
 <a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -160,8 +154,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxburstkbps_go">
 <a href="#maxburstkbps_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Kbps</a>
@@ -170,8 +163,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum burst size in kilobits of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxkbps_go">
 <a href="#maxkbps_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Kbps</a>
@@ -180,8 +172,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum kilobits per second of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -192,13 +183,11 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qospolicyid_nodejs">
 <a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -207,8 +196,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxburstkbps_nodejs">
 <a href="#maxburstkbps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Kbps</a>
@@ -217,8 +205,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum burst size in kilobits of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxkbps_nodejs">
 <a href="#maxkbps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Kbps</a>
@@ -227,8 +214,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum kilobits per second of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -239,13 +225,11 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qos_policy_id_python">
 <a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -254,8 +238,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The QoS policy reference.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_burst_kbps_python">
 <a href="#max_burst_kbps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>kbps</a>
@@ -264,8 +247,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum burst size in kilobits of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_kbps_python">
 <a href="#max_kbps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>kbps</a>
@@ -274,8 +256,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum kilobits per second of a QoS bandwidth limit rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -286,8 +267,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron QoS bandwidth limit rule. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -300,8 +280,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -310,8 +289,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -320,8 +298,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxburstkbps_csharp">
 <a href="#maxburstkbps_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Kbps</a>
@@ -330,8 +307,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxkbps_csharp">
 <a href="#maxkbps_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Kbps</a>
@@ -340,8 +316,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="qospolicyid_csharp">
 <a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -350,8 +325,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -360,13 +334,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -375,8 +347,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -385,8 +356,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxburstkbps_go">
 <a href="#maxburstkbps_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Burst<wbr>Kbps</a>
@@ -395,8 +365,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxkbps_go">
 <a href="#maxkbps_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Kbps</a>
@@ -405,8 +374,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="qospolicyid_go">
 <a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -415,8 +383,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -425,13 +392,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -440,8 +405,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -450,8 +414,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxburstkbps_nodejs">
 <a href="#maxburstkbps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Burst<wbr>Kbps</a>
@@ -460,8 +423,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxkbps_nodejs">
 <a href="#maxkbps_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Kbps</a>
@@ -470,8 +432,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="qospolicyid_nodejs">
 <a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -480,8 +441,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -490,13 +450,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -505,8 +463,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -515,8 +472,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_burst_kbps_python">
 <a href="#max_burst_kbps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>burst_<wbr>kbps</a>
@@ -525,8 +481,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_kbps_python">
 <a href="#max_kbps_python" style="color: inherit; text-decoration: inherit;">max_<wbr>kbps</a>
@@ -535,8 +490,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="qos_policy_id_python">
 <a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -545,8 +499,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -555,8 +508,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

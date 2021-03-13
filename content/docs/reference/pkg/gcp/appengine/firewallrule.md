@@ -317,8 +317,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -328,8 +327,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerange_csharp">
 <a href="#sourcerange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Range</a>
@@ -338,8 +336,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -348,8 +345,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -362,8 +358,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -373,13 +368,11 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -389,8 +382,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerange_go">
 <a href="#sourcerange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Range</a>
@@ -399,8 +391,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -409,8 +400,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -423,8 +413,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -434,13 +423,11 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -450,8 +437,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerange_nodejs">
 <a href="#sourcerange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Range</a>
@@ -460,8 +446,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -470,8 +455,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -484,8 +468,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -495,13 +478,11 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -511,8 +492,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_range_python">
 <a href="#source_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>range</a>
@@ -521,8 +501,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -531,8 +510,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -545,8 +523,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -556,8 +533,7 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -568,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -577,13 +552,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -591,13 +564,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -605,13 +576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -619,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -747,8 +715,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -758,8 +725,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -768,8 +734,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -782,8 +747,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -793,8 +757,7 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerange_csharp">
 <a href="#state_sourcerange_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Range</a>
@@ -803,13 +766,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -819,8 +780,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -829,8 +789,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -843,8 +802,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -854,8 +812,7 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerange_go">
 <a href="#state_sourcerange_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Range</a>
@@ -864,13 +821,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -880,8 +835,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -890,8 +844,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -904,8 +857,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -915,8 +867,7 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerange_nodejs">
 <a href="#state_sourcerange_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Range</a>
@@ -925,13 +876,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -941,8 +890,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The action to take if this rule matches.
 Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -951,8 +899,7 @@ Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional string description of this rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -965,8 +912,7 @@ Rules with the lowest priority are evaluated first.
 A default rule at priority Int32.MaxValue matches all IPv4 and
 IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -976,8 +922,7 @@ this rule can be modified by the user.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_range_python">
 <a href="#state_source_range_python" style="color: inherit; text-decoration: inherit;">source_<wbr>range</a>
@@ -986,8 +931,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address or range, defined using CIDR notation, of requests that this rule applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

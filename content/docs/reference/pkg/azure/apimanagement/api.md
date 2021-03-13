@@ -345,8 +345,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementname_csharp">
 <a href="#apimanagementname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -355,8 +354,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -365,8 +363,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -375,8 +372,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -385,8 +381,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -395,8 +390,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -405,8 +399,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -415,8 +408,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_csharp">
 <a href="#import_csharp" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -425,8 +417,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -435,8 +426,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2authorization_csharp">
 <a href="#oauth2authorization_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
@@ -445,8 +435,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidauthentication_csharp">
 <a href="#openidauthentication_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
@@ -455,8 +444,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceurl_csharp">
 <a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
@@ -465,8 +453,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soappassthrough_csharp">
 <a href="#soappassthrough_csharp" style="color: inherit; text-decoration: inherit;">Soap<wbr>Pass<wbr>Through</a>
@@ -475,8 +462,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_csharp">
 <a href="#subscriptionkeyparameternames_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -485,8 +471,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionrequired_csharp">
 <a href="#subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
@@ -495,8 +480,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -505,8 +489,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionsetid_csharp">
 <a href="#versionsetid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
@@ -515,13 +498,11 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementname_go">
 <a href="#apimanagementname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -530,8 +511,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -540,8 +520,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -550,8 +529,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -560,8 +538,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -570,8 +547,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -580,8 +556,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -590,8 +565,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_go">
 <a href="#import_go" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -600,8 +574,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiimport">Api<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -610,8 +583,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2authorization_go">
 <a href="#oauth2authorization_go" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
@@ -620,8 +592,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidauthentication_go">
 <a href="#openidauthentication_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
@@ -630,8 +601,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceurl_go">
 <a href="#serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
@@ -640,8 +610,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soappassthrough_go">
 <a href="#soappassthrough_go" style="color: inherit; text-decoration: inherit;">Soap<wbr>Pass<wbr>Through</a>
@@ -650,8 +619,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_go">
 <a href="#subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -660,8 +628,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionrequired_go">
 <a href="#subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
@@ -670,8 +637,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -680,8 +646,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionsetid_go">
 <a href="#versionsetid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
@@ -690,13 +655,11 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementname_nodejs">
 <a href="#apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
@@ -705,8 +668,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -715,8 +677,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -725,8 +686,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -735,8 +695,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -745,8 +704,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -755,8 +713,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -765,8 +722,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import_nodejs">
 <a href="#import_nodejs" style="color: inherit; text-decoration: inherit;">import</a>
@@ -775,8 +731,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiimport">Api<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -785,8 +740,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2authorization_nodejs">
 <a href="#oauth2authorization_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Authorization</a>
@@ -795,8 +749,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidauthentication_nodejs">
 <a href="#openidauthentication_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Authentication</a>
@@ -805,8 +758,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceurl_nodejs">
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
@@ -815,8 +767,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soappassthrough_nodejs">
 <a href="#soappassthrough_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Pass<wbr>Through</a>
@@ -825,8 +776,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_nodejs">
 <a href="#subscriptionkeyparameternames_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -835,8 +785,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionrequired_nodejs">
 <a href="#subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
@@ -845,8 +794,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -855,8 +803,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionsetid_nodejs">
 <a href="#versionsetid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Set<wbr>Id</a>
@@ -865,13 +812,11 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_management_name_python">
 <a href="#api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
@@ -880,8 +825,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -890,8 +834,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -900,8 +843,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -910,8 +852,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -920,8 +861,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -930,8 +870,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -940,8 +879,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="import__python">
 <a href="#import__python" style="color: inherit; text-decoration: inherit;">import_</a>
@@ -950,8 +888,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -960,8 +897,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2_authorization_python">
 <a href="#oauth2_authorization_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>authorization</a>
@@ -970,8 +906,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openid_authentication_python">
 <a href="#openid_authentication_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>authentication</a>
@@ -980,8 +915,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_url_python">
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
@@ -990,8 +924,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="soap_pass_through_python">
 <a href="#soap_pass_through_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>pass_<wbr>through</a>
@@ -1000,8 +933,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_key_parameter_names_python">
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
@@ -1010,8 +942,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_required_python">
 <a href="#subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
@@ -1020,8 +951,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1030,8 +960,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_set_id_python">
 <a href="#version_set_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>set_<wbr>id</a>
@@ -1040,8 +969,7 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1052,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1061,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscurrent_csharp">
 <a href="#iscurrent_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
@@ -1071,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isonline_csharp">
 <a href="#isonline_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
@@ -1081,13 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1095,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscurrent_go">
 <a href="#iscurrent_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
@@ -1105,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isonline_go">
 <a href="#isonline_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
@@ -1115,13 +1036,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1129,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="iscurrent_nodejs">
 <a href="#iscurrent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Current</a>
@@ -1139,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isonline_nodejs">
 <a href="#isonline_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Online</a>
@@ -1149,13 +1066,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1163,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_current_python">
 <a href="#is_current_python" style="color: inherit; text-decoration: inherit;">is_<wbr>current</a>
@@ -1173,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_online_python">
 <a href="#is_online_python" style="color: inherit; text-decoration: inherit;">is_<wbr>online</a>
@@ -1183,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1311,8 +1223,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementname_csharp">
 <a href="#state_apimanagementname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -1321,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1331,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1341,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_csharp">
 <a href="#state_import_csharp" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -1351,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscurrent_csharp">
 <a href="#state_iscurrent_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
@@ -1361,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isonline_csharp">
 <a href="#state_isonline_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
@@ -1371,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1381,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oauth2authorization_csharp">
 <a href="#state_oauth2authorization_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
@@ -1391,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openidauthentication_csharp">
 <a href="#state_openidauthentication_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
@@ -1401,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1411,8 +1313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_csharp">
 <a href="#state_protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -1421,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1431,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_csharp">
 <a href="#state_revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -1441,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceurl_csharp">
 <a href="#state_serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
@@ -1451,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_soappassthrough_csharp">
 <a href="#state_soappassthrough_csharp" style="color: inherit; text-decoration: inherit;">Soap<wbr>Pass<wbr>Through</a>
@@ -1461,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionkeyparameternames_csharp">
 <a href="#state_subscriptionkeyparameternames_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -1471,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionrequired_csharp">
 <a href="#state_subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
@@ -1481,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1491,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionsetid_csharp">
 <a href="#state_versionsetid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
@@ -1501,13 +1394,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementname_go">
 <a href="#state_apimanagementname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Name</a>
@@ -1516,8 +1407,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1526,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1536,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_go">
 <a href="#state_import_go" style="color: inherit; text-decoration: inherit;">Import</a>
@@ -1546,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimport">Api<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscurrent_go">
 <a href="#state_iscurrent_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
@@ -1556,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isonline_go">
 <a href="#state_isonline_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
@@ -1566,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1576,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oauth2authorization_go">
 <a href="#state_oauth2authorization_go" style="color: inherit; text-decoration: inherit;">Oauth2Authorization</a>
@@ -1586,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openidauthentication_go">
 <a href="#state_openidauthentication_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Authentication</a>
@@ -1596,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1606,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_go">
 <a href="#state_protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -1616,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1626,8 +1506,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_go">
 <a href="#state_revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -1636,8 +1515,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceurl_go">
 <a href="#state_serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
@@ -1646,8 +1524,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_soappassthrough_go">
 <a href="#state_soappassthrough_go" style="color: inherit; text-decoration: inherit;">Soap<wbr>Pass<wbr>Through</a>
@@ -1656,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionkeyparameternames_go">
 <a href="#state_subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -1666,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionrequired_go">
 <a href="#state_subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
@@ -1676,8 +1551,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1686,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionsetid_go">
 <a href="#state_versionsetid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
@@ -1696,13 +1569,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementname_nodejs">
 <a href="#state_apimanagementname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Name</a>
@@ -1711,8 +1582,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1721,8 +1591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1731,8 +1600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import_nodejs">
 <a href="#state_import_nodejs" style="color: inherit; text-decoration: inherit;">import</a>
@@ -1741,8 +1609,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimport">Api<wbr>Import</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscurrent_nodejs">
 <a href="#state_iscurrent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Current</a>
@@ -1751,8 +1618,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isonline_nodejs">
 <a href="#state_isonline_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Online</a>
@@ -1761,8 +1627,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1771,8 +1636,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oauth2authorization_nodejs">
 <a href="#state_oauth2authorization_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Authorization</a>
@@ -1781,8 +1645,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openidauthentication_nodejs">
 <a href="#state_openidauthentication_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Authentication</a>
@@ -1791,8 +1654,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1801,8 +1663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_nodejs">
 <a href="#state_protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -1811,8 +1672,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1821,8 +1681,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_nodejs">
 <a href="#state_revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -1831,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceurl_nodejs">
 <a href="#state_serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
@@ -1841,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_soappassthrough_nodejs">
 <a href="#state_soappassthrough_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Pass<wbr>Through</a>
@@ -1851,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionkeyparameternames_nodejs">
 <a href="#state_subscriptionkeyparameternames_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
@@ -1861,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptionrequired_nodejs">
 <a href="#state_subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
@@ -1871,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1881,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versionsetid_nodejs">
 <a href="#state_versionsetid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Set<wbr>Id</a>
@@ -1891,13 +1744,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_management_name_python">
 <a href="#state_api_management_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>name</a>
@@ -1906,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where this API should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1916,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the API Management API, which may include HTML formatting tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1926,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_import__python">
 <a href="#state_import__python" style="color: inherit; text-decoration: inherit;">import_</a>
@@ -1936,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimport">Api<wbr>Import<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `import` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_current_python">
 <a href="#state_is_current_python" style="color: inherit; text-decoration: inherit;">is_<wbr>current</a>
@@ -1946,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this the current API Revision?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_online_python">
 <a href="#state_is_online_python" style="color: inherit; text-decoration: inherit;">is_<wbr>online</a>
@@ -1956,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is this API Revision online/accessible via the Gateway?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1966,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management API. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oauth2_authorization_python">
 <a href="#state_oauth2_authorization_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>authorization</a>
@@ -1976,8 +1820,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apioauth2authorization">Api<wbr>Oauth2Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `oauth2_authorization` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openid_authentication_python">
 <a href="#state_openid_authentication_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>authentication</a>
@@ -1986,8 +1829,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiopenidauthentication">Api<wbr>Openid<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `openid_authentication` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1996,8 +1838,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Path for this API Management API, which is a relative URL which uniquely identifies this API and all of its resource paths within the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_python">
 <a href="#state_protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -2006,8 +1847,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of protocols the operations in this API can be invoked. Possible values are `http` and `https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2016,8 +1856,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group where the API Management API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_python">
 <a href="#state_revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2026,8 +1865,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Revision which used for this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_url_python">
 <a href="#state_service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
@@ -2036,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_soap_pass_through_python">
 <a href="#state_soap_pass_through_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>pass_<wbr>through</a>
@@ -2046,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_key_parameter_names_python">
 <a href="#state_subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
@@ -2056,8 +1892,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `subscription_key_parameter_names` block as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_required_python">
 <a href="#state_subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
@@ -2066,8 +1901,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this API require a subscription key?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2076,8 +1910,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Version number of this API, if this API is versioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_set_id_python">
 <a href="#state_version_set_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>set_<wbr>id</a>
@@ -2086,8 +1919,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Version Set which this API is associated with.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2102,8 +1934,7 @@ The following state arguments are supported:
 <h4 id="apiimport">Api<wbr>Import</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contentformat_csharp">
 <a href="#contentformat_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Format</a>
@@ -2112,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content from which the API Definition should be imported. Possible values are: `openapi`, `openapi+json`, `openapi+json-link`, `openapi-link`, `swagger-json`, `swagger-link-json`, `wadl-link-json`, `wadl-xml`, `wsdl` and `wsdl-link`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contentvalue_csharp">
 <a href="#contentvalue_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Value</a>
@@ -2122,8 +1952,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content from which the API Definition should be imported. When a `content_format` of `*-link-*` is specified this must be a URL, otherwise this must be defined inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsdlselector_csharp">
 <a href="#wsdlselector_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Selector</a>
@@ -2132,13 +1961,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contentformat_go">
 <a href="#contentformat_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Format</a>
@@ -2147,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content from which the API Definition should be imported. Possible values are: `openapi`, `openapi+json`, `openapi+json-link`, `openapi-link`, `swagger-json`, `swagger-link-json`, `wadl-link-json`, `wadl-xml`, `wsdl` and `wsdl-link`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contentvalue_go">
 <a href="#contentvalue_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Value</a>
@@ -2157,8 +1983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content from which the API Definition should be imported. When a `content_format` of `*-link-*` is specified this must be a URL, otherwise this must be defined inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsdlselector_go">
 <a href="#wsdlselector_go" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Selector</a>
@@ -2167,13 +1992,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contentformat_nodejs">
 <a href="#contentformat_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Format</a>
@@ -2182,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content from which the API Definition should be imported. Possible values are: `openapi`, `openapi+json`, `openapi+json-link`, `openapi-link`, `swagger-json`, `swagger-link-json`, `wadl-link-json`, `wadl-xml`, `wsdl` and `wsdl-link`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contentvalue_nodejs">
 <a href="#contentvalue_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Value</a>
@@ -2192,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Content from which the API Definition should be imported. When a `content_format` of `*-link-*` is specified this must be a URL, otherwise this must be defined inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsdlselector_nodejs">
 <a href="#wsdlselector_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Selector</a>
@@ -2202,13 +2023,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_format_python">
 <a href="#content_format_python" style="color: inherit; text-decoration: inherit;">content_<wbr>format</a>
@@ -2217,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the content from which the API Definition should be imported. Possible values are: `openapi`, `openapi+json`, `openapi+json-link`, `openapi-link`, `swagger-json`, `swagger-link-json`, `wadl-link-json`, `wadl-xml`, `wsdl` and `wsdl-link`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_value_python">
 <a href="#content_value_python" style="color: inherit; text-decoration: inherit;">content_<wbr>value</a>
@@ -2227,8 +2045,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Content from which the API Definition should be imported. When a `content_format` of `*-link-*` is specified this must be a URL, otherwise this must be defined inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsdl_selector_python">
 <a href="#wsdl_selector_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>selector</a>
@@ -2237,15 +2054,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `wsdl_selector` block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when `content_format` is `wsdl` or `wsdl-link`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiimportwsdlselector">Api<wbr>Import<wbr>Wsdl<wbr>Selector</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_csharp">
 <a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -2254,8 +2069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of endpoint (port) to import from WSDL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -2264,13 +2078,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of service to import from WSDL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_go">
 <a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -2279,8 +2091,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of endpoint (port) to import from WSDL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -2289,13 +2100,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of service to import from WSDL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointname_nodejs">
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
@@ -2304,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of endpoint (port) to import from WSDL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -2314,13 +2122,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of service to import from WSDL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_name_python">
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
@@ -2329,8 +2135,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of endpoint (port) to import from WSDL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -2339,15 +2144,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of service to import from WSDL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apioauth2authorization">Api<wbr>Oauth2Authorization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationservername_csharp">
 <a href="#authorizationservername_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Name</a>
@@ -2356,8 +2159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier. The name of an OAuth2 Authorization Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2366,13 +2168,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operations scope.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationservername_go">
 <a href="#authorizationservername_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Name</a>
@@ -2381,8 +2181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier. The name of an OAuth2 Authorization Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2391,13 +2190,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operations scope.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorizationservername_nodejs">
 <a href="#authorizationservername_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Name</a>
@@ -2406,8 +2203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier. The name of an OAuth2 Authorization Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2416,13 +2212,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operations scope.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authorization_server_name_python">
 <a href="#authorization_server_name_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>name</a>
@@ -2431,8 +2225,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier. The name of an OAuth2 Authorization Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2441,15 +2234,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operations scope.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apiopenidauthentication">Api<wbr>Openid<wbr>Authentication</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="openidprovidername_csharp">
 <a href="#openidprovidername_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Name</a>
@@ -2458,8 +2249,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenID Connect provider identifier. The name of an OpenID Connect Provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bearertokensendingmethods_csharp">
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -2468,13 +2258,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="openidprovidername_go">
 <a href="#openidprovidername_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Name</a>
@@ -2483,8 +2271,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenID Connect provider identifier. The name of an OpenID Connect Provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bearertokensendingmethods_go">
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -2493,13 +2280,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="openidprovidername_nodejs">
 <a href="#openidprovidername_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Name</a>
@@ -2508,8 +2293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenID Connect provider identifier. The name of an OpenID Connect Provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bearertokensendingmethods_nodejs">
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -2518,13 +2302,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="openid_provider_name_python">
 <a href="#openid_provider_name_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>name</a>
@@ -2533,8 +2315,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenID Connect provider identifier. The name of an OpenID Connect Provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bearer_token_sending_methods_python">
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
@@ -2543,15 +2324,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server. A list of zero or more methods. Valid values are `authorizationHeader` and `query`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apisubscriptionkeyparameternames">Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -2560,8 +2339,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP Header which should be used for the Subscription Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2570,13 +2348,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the QueryString parameter which should be used for the Subscription Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -2585,8 +2361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP Header which should be used for the Subscription Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2595,13 +2370,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the QueryString parameter which should be used for the Subscription Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
@@ -2610,8 +2383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP Header which should be used for the Subscription Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2620,13 +2392,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the QueryString parameter which should be used for the Subscription Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
@@ -2635,8 +2405,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP Header which should be used for the Subscription Key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2645,8 +2414,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the QueryString parameter which should be used for the Subscription Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

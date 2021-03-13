@@ -175,8 +175,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -186,8 +185,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -197,13 +195,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -213,8 +209,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -224,13 +219,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -240,8 +233,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -251,13 +243,11 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -267,8 +257,7 @@ The `sort` block is documented below.
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -278,8 +267,7 @@ The `filter` block is documented below.
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -292,8 +280,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="droplets_csharp">
 <a href="#droplets_csharp" style="color: inherit; text-decoration: inherit;">Droplets</a>
@@ -302,8 +289,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdropletsdroplet">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Droplets<wbr>Droplet&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -312,8 +298,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -321,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Droplets<wbr>Filter&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_csharp">
 <a href="#sorts_csharp" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -330,13 +314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletssort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Droplets<wbr>Sort&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="droplets_go">
 <a href="#droplets_go" style="color: inherit; text-decoration: inherit;">Droplets</a>
@@ -345,8 +327,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdropletsdroplet">[]Get<wbr>Droplets<wbr>Droplet</a></span>
     </dt>
     <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -355,8 +336,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -364,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsfilter">[]Get<wbr>Droplets<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_go">
 <a href="#sorts_go" style="color: inherit; text-decoration: inherit;">Sorts</a>
@@ -373,13 +352,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletssort">[]Get<wbr>Droplets<wbr>Sort</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="droplets_nodejs">
 <a href="#droplets_nodejs" style="color: inherit; text-decoration: inherit;">droplets</a>
@@ -388,8 +365,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdropletsdroplet">Get<wbr>Droplets<wbr>Droplet[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -398,8 +374,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -407,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsfilter">Get<wbr>Droplets<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_nodejs">
 <a href="#sorts_nodejs" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -416,13 +390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletssort">Get<wbr>Droplets<wbr>Sort[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="droplets_python">
 <a href="#droplets_python" style="color: inherit; text-decoration: inherit;">droplets</a>
@@ -431,8 +403,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getdropletsdroplet">Sequence[Get<wbr>Droplets<wbr>Droplet]</a></span>
     </dt>
     <dd>{{% md %}}A list of Droplets satisfying any `filter` and `sort` criteria. Each Droplet has the following attributes:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -441,8 +412,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -450,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletsfilter">Sequence[Get<wbr>Droplets<wbr>Filter]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sorts_python">
 <a href="#sorts_python" style="color: inherit; text-decoration: inherit;">sorts</a>
@@ -459,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdropletssort">Sequence[Get<wbr>Droplets<wbr>Sort]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -474,8 +442,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backups_csharp">
 <a href="#backups_csharp" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -484,8 +451,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -493,8 +459,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_csharp">
 <a href="#disk_csharp" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -503,8 +468,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Droplet's disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -513,8 +477,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -523,8 +486,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -533,8 +495,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addressprivate_csharp">
 <a href="#ipv4addressprivate_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
@@ -543,8 +504,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -553,8 +513,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IPv6 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -563,8 +522,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addressprivate_csharp">
 <a href="#ipv6addressprivate_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Private</a>
@@ -573,8 +531,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -583,8 +540,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Droplet is locked.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_csharp">
 <a href="#memory_csharp" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -593,8 +549,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of the Droplet's memory in MB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -603,8 +558,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether monitoring agent is installed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -612,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricehourly_csharp">
 <a href="#pricehourly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
@@ -622,8 +575,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricemonthly_csharp">
 <a href="#pricemonthly_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
@@ -632,8 +584,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatenetworking_csharp">
 <a href="#privatenetworking_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -642,8 +593,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether private networks are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -652,8 +602,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the Droplet is running in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -662,8 +611,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that identifies the type of Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -672,8 +620,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -682,8 +629,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags associated to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urn_csharp">
 <a href="#urn_csharp" style="color: inherit; text-decoration: inherit;">Urn</a>
@@ -692,8 +638,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_csharp">
 <a href="#vcpus_csharp" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -702,8 +647,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the Droplet's virtual CPUs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeids_csharp">
 <a href="#volumeids_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
@@ -712,8 +656,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcuuid_csharp">
 <a href="#vpcuuid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -722,13 +665,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backups_go">
 <a href="#backups_go" style="color: inherit; text-decoration: inherit;">Backups</a>
@@ -737,8 +678,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -746,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_go">
 <a href="#disk_go" style="color: inherit; text-decoration: inherit;">Disk</a>
@@ -756,8 +695,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Droplet's disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -766,8 +704,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -776,8 +713,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -786,8 +722,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addressprivate_go">
 <a href="#ipv4addressprivate_go" style="color: inherit; text-decoration: inherit;">Ipv4Address<wbr>Private</a>
@@ -796,8 +731,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -806,8 +740,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IPv6 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
@@ -816,8 +749,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addressprivate_go">
 <a href="#ipv6addressprivate_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Private</a>
@@ -826,8 +758,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -836,8 +767,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Droplet is locked.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_go">
 <a href="#memory_go" style="color: inherit; text-decoration: inherit;">Memory</a>
@@ -846,8 +776,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of the Droplet's memory in MB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -856,8 +785,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether monitoring agent is installed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -865,8 +793,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricehourly_go">
 <a href="#pricehourly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Hourly</a>
@@ -875,8 +802,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricemonthly_go">
 <a href="#pricemonthly_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Monthly</a>
@@ -885,8 +811,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatenetworking_go">
 <a href="#privatenetworking_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Networking</a>
@@ -895,8 +820,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether private networks are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -905,8 +829,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the Droplet is running in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -915,8 +838,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that identifies the type of Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -925,8 +847,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -935,8 +856,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the tags associated to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urn_go">
 <a href="#urn_go" style="color: inherit; text-decoration: inherit;">Urn</a>
@@ -945,8 +865,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_go">
 <a href="#vcpus_go" style="color: inherit; text-decoration: inherit;">Vcpus</a>
@@ -955,8 +874,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the Droplet's virtual CPUs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeids_go">
 <a href="#volumeids_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Ids</a>
@@ -965,8 +883,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcuuid_go">
 <a href="#vpcuuid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Uuid</a>
@@ -975,13 +892,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backups_nodejs">
 <a href="#backups_nodejs" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -990,8 +905,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -999,8 +913,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_nodejs">
 <a href="#disk_nodejs" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1009,8 +922,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the Droplet's disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1019,8 +931,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1029,8 +940,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -1039,8 +949,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4addressprivate_nodejs">
 <a href="#ipv4addressprivate_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address<wbr>Private</a>
@@ -1049,8 +958,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1059,8 +967,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether IPv6 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
@@ -1069,8 +976,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6addressprivate_nodejs">
 <a href="#ipv6addressprivate_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Private</a>
@@ -1079,8 +985,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1089,8 +994,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the Droplet is locked.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_nodejs">
 <a href="#memory_nodejs" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -1099,8 +1003,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of the Droplet's memory in MB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -1109,8 +1012,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether monitoring agent is installed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1118,8 +1020,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricehourly_nodejs">
 <a href="#pricehourly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Hourly</a>
@@ -1128,8 +1029,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pricemonthly_nodejs">
 <a href="#pricemonthly_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Monthly</a>
@@ -1138,8 +1038,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatenetworking_nodejs">
 <a href="#privatenetworking_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Networking</a>
@@ -1148,8 +1047,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether private networks are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1158,8 +1056,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the Droplet is running in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1168,8 +1065,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique slug that identifies the type of Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1178,8 +1074,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1188,8 +1083,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the tags associated to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urn_nodejs">
 <a href="#urn_nodejs" style="color: inherit; text-decoration: inherit;">urn</a>
@@ -1198,8 +1092,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_nodejs">
 <a href="#vcpus_nodejs" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -1208,8 +1101,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the Droplet's virtual CPUs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeids_nodejs">
 <a href="#volumeids_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Ids</a>
@@ -1218,8 +1110,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcuuid_nodejs">
 <a href="#vpcuuid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Uuid</a>
@@ -1228,13 +1119,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backups_python">
 <a href="#backups_python" style="color: inherit; text-decoration: inherit;">backups</a>
@@ -1243,8 +1132,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether backups are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1252,8 +1140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_python">
 <a href="#disk_python" style="color: inherit; text-decoration: inherit;">disk</a>
@@ -1262,8 +1149,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the Droplet's disk in GB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1272,8 +1158,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -1282,8 +1167,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet image ID or slug.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -1292,8 +1176,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv4_address_private_python">
 <a href="#ipv4_address_private_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address_<wbr>private</a>
@@ -1302,8 +1185,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv4 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1312,8 +1194,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether IPv6 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
@@ -1322,8 +1203,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet's public IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipv6_address_private_python">
 <a href="#ipv6_address_private_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>private</a>
@@ -1332,8 +1212,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Droplet's private IPv6 address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -1342,8 +1221,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Droplet is locked.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="memory_python">
 <a href="#memory_python" style="color: inherit; text-decoration: inherit;">memory</a>
@@ -1352,8 +1230,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of the Droplet's memory in MB.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -1362,8 +1239,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether monitoring agent is installed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1371,8 +1247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="price_hourly_python">
 <a href="#price_hourly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>hourly</a>
@@ -1381,8 +1256,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet hourly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="price_monthly_python">
 <a href="#price_monthly_python" style="color: inherit; text-decoration: inherit;">price_<wbr>monthly</a>
@@ -1391,8 +1265,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Droplet monthly price.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_networking_python">
 <a href="#private_networking_python" style="color: inherit; text-decoration: inherit;">private_<wbr>networking</a>
@@ -1401,8 +1274,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether private networks are enabled.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1411,8 +1283,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region the Droplet is running in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1421,8 +1292,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique slug that identifies the type of Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1431,8 +1301,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1441,8 +1310,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the tags associated to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urn_python">
 <a href="#urn_python" style="color: inherit; text-decoration: inherit;">urn</a>
@@ -1451,8 +1319,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uniform resource name of the Droplet
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vcpus_python">
 <a href="#vcpus_python" style="color: inherit; text-decoration: inherit;">vcpus</a>
@@ -1461,8 +1328,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the Droplet's virtual CPUs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_ids_python">
 <a href="#volume_ids_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>ids</a>
@@ -1471,8 +1337,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of the IDs of each volumes attached to the Droplet.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_uuid_python">
 <a href="#vpc_uuid_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>uuid</a>
@@ -1481,8 +1346,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC where the Droplet is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdropletsfilter">Get<wbr>Droplets<wbr>Filter</h4>
@@ -1490,8 +1354,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1503,8 +1366,7 @@ The following output properties are available:
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1514,8 +1376,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
@@ -1526,8 +1387,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_csharp">
 <a href="#matchby_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
@@ -1538,13 +1398,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1556,8 +1414,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1567,8 +1424,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
@@ -1579,8 +1435,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_go">
 <a href="#matchby_go" style="color: inherit; text-decoration: inherit;">Match<wbr>By</a>
@@ -1591,13 +1446,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1609,8 +1462,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1620,8 +1472,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
@@ -1632,8 +1483,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchby_nodejs">
 <a href="#matchby_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>By</a>
@@ -1644,13 +1494,11 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1662,8 +1510,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `tags`, `urn`, `vcpus`, `volume_ids`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1673,8 +1520,7 @@ substrings to find within the string field.
     </dt>
     <dd>{{% md %}}A list of values to match against the `key` field. Only retrieves Droplets
 where the `key` field takes on one or more of the values provided here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
@@ -1685,8 +1531,7 @@ where the `key` field takes on one or more of the values provided here.
     <dd>{{% md %}}Set to `true` to require that a field match all of the `values` instead of just one or more of
 them. This is useful when matching against multi-valued fields such as lists or sets where you want to ensure
 that all of the `values` are present in the list or set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_by_python">
 <a href="#match_by_python" style="color: inherit; text-decoration: inherit;">match_<wbr>by</a>
@@ -1697,8 +1542,7 @@ that all of the `values` are present in the list or set.
     <dd>{{% md %}}One of `exact` (default), `re`, or `substring`. For string-typed fields, specify `re` to
 match by using the `values` as regular expressions, or specify `substring` to match by treating the `values` as
 substrings to find within the string field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdropletssort">Get<wbr>Droplets<wbr>Sort</h4>
@@ -1706,8 +1550,7 @@ substrings to find within the string field.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1719,8 +1562,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `urn`, `vcpus`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1729,13 +1571,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1747,8 +1587,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `urn`, `vcpus`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1757,13 +1596,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1775,8 +1612,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `urn`, `vcpus`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1785,13 +1621,11 @@ substrings to find within the string field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1803,8 +1637,7 @@ substrings to find within the string field.
 `image`, `ipv4_address`, `ipv4_address_private`, `ipv6`, `ipv6_address`, `ipv6_address_private`, `locked`,
 `memory`, `monitoring`, `name`, `price_hourly`, `price_monthly`, `private_networking`, `region`, `size`,
 `status`, `urn`, `vcpus`, or `vpc_uuid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1813,8 +1646,7 @@ substrings to find within the string field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

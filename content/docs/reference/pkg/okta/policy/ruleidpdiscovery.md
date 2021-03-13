@@ -419,8 +419,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -429,8 +428,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appexcludes_csharp">
 <a href="#appexcludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
@@ -439,8 +437,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appincludes_csharp">
 <a href="#appincludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
@@ -449,8 +446,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpid_csharp">
 <a href="#idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -459,8 +455,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idptype_csharp">
 <a href="#idptype_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
@@ -469,8 +464,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -479,8 +473,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_csharp">
 <a href="#networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -489,8 +482,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_csharp">
 <a href="#networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -499,8 +491,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_csharp">
 <a href="#networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -509,8 +500,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformincludes_csharp">
 <a href="#platformincludes_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
@@ -518,8 +508,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -528,8 +517,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -538,8 +526,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifierattribute_csharp">
 <a href="#useridentifierattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
@@ -548,8 +535,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifierpatterns_csharp">
 <a href="#useridentifierpatterns_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
@@ -558,8 +544,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifiertype_csharp">
 <a href="#useridentifiertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
@@ -568,13 +553,11 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -583,8 +566,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appexcludes_go">
 <a href="#appexcludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
@@ -593,8 +575,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appincludes_go">
 <a href="#appincludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
@@ -603,8 +584,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpid_go">
 <a href="#idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -613,8 +593,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idptype_go">
 <a href="#idptype_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
@@ -623,8 +602,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -633,8 +611,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_go">
 <a href="#networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -643,8 +620,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_go">
 <a href="#networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -653,8 +629,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_go">
 <a href="#networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -663,8 +638,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformincludes_go">
 <a href="#platformincludes_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
@@ -672,8 +646,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -682,8 +655,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -692,8 +664,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifierattribute_go">
 <a href="#useridentifierattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
@@ -702,8 +673,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifierpatterns_go">
 <a href="#useridentifierpatterns_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
@@ -712,8 +682,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifiertype_go">
 <a href="#useridentifiertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
@@ -722,13 +691,11 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -737,8 +704,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appexcludes_nodejs">
 <a href="#appexcludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Excludes</a>
@@ -747,8 +713,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appincludes_nodejs">
 <a href="#appincludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Includes</a>
@@ -757,8 +722,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpid_nodejs">
 <a href="#idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
@@ -767,8 +731,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idptype_nodejs">
 <a href="#idptype_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Type</a>
@@ -777,8 +740,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -787,8 +749,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_nodejs">
 <a href="#networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
@@ -797,8 +758,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_nodejs">
 <a href="#networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
@@ -807,8 +767,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_nodejs">
 <a href="#networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
@@ -817,8 +776,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformincludes_nodejs">
 <a href="#platformincludes_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Includes</a>
@@ -826,8 +784,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -836,8 +793,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -846,8 +802,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifierattribute_nodejs">
 <a href="#useridentifierattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Attribute</a>
@@ -856,8 +811,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifierpatterns_nodejs">
 <a href="#useridentifierpatterns_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Patterns</a>
@@ -866,8 +820,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridentifiertype_nodejs">
 <a href="#useridentifiertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Type</a>
@@ -876,13 +829,11 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_python">
 <a href="#policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -891,8 +842,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_excludes_python">
 <a href="#app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
@@ -901,8 +851,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_includes_python">
 <a href="#app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
@@ -911,8 +860,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idp_id_python">
 <a href="#idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
@@ -921,8 +869,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idp_type_python">
 <a href="#idp_type_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>type</a>
@@ -931,8 +878,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -941,8 +887,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_connection_python">
 <a href="#network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
@@ -951,8 +896,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_excludes_python">
 <a href="#network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
@@ -961,8 +905,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_includes_python">
 <a href="#network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
@@ -971,8 +914,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_includes_python">
 <a href="#platform_includes_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>includes</a>
@@ -980,8 +922,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -990,8 +931,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1000,8 +940,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_identifier_attribute_python">
 <a href="#user_identifier_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>attribute</a>
@@ -1010,8 +949,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_identifier_patterns_python">
 <a href="#user_identifier_patterns_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>patterns</a>
@@ -1020,8 +958,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_identifier_type_python">
 <a href="#user_identifier_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>type</a>
@@ -1030,8 +967,7 @@ The RuleIdpDiscovery resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1042,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1051,13 +986,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1065,13 +998,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,13 +1010,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1093,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1221,8 +1149,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appexcludes_csharp">
 <a href="#state_appexcludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
@@ -1231,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appincludes_csharp">
 <a href="#state_appincludes_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
@@ -1241,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpid_csharp">
 <a href="#state_idpid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -1251,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idptype_csharp">
 <a href="#state_idptype_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
@@ -1261,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1271,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_csharp">
 <a href="#state_networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -1281,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_csharp">
 <a href="#state_networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -1291,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_csharp">
 <a href="#state_networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -1301,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformincludes_csharp">
 <a href="#state_platformincludes_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
@@ -1310,8 +1229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -1320,8 +1238,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1330,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1340,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifierattribute_csharp">
 <a href="#state_useridentifierattribute_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
@@ -1350,8 +1265,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifierpatterns_csharp">
 <a href="#state_useridentifierpatterns_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
@@ -1360,8 +1274,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifiertype_csharp">
 <a href="#state_useridentifiertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
@@ -1370,13 +1283,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appexcludes_go">
 <a href="#state_appexcludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Excludes</a>
@@ -1385,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appincludes_go">
 <a href="#state_appincludes_go" style="color: inherit; text-decoration: inherit;">App<wbr>Includes</a>
@@ -1395,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpid_go">
 <a href="#state_idpid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Id</a>
@@ -1405,8 +1314,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idptype_go">
 <a href="#state_idptype_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Type</a>
@@ -1415,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1425,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_go">
 <a href="#state_networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -1435,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_go">
 <a href="#state_networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -1445,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_go">
 <a href="#state_networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -1455,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformincludes_go">
 <a href="#state_platformincludes_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Includes</a>
@@ -1464,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -1474,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1484,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1494,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifierattribute_go">
 <a href="#state_useridentifierattribute_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Attribute</a>
@@ -1504,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifierpatterns_go">
 <a href="#state_useridentifierpatterns_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Patterns</a>
@@ -1514,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifiertype_go">
 <a href="#state_useridentifiertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Identifier<wbr>Type</a>
@@ -1524,13 +1421,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appexcludes_nodejs">
 <a href="#state_appexcludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Excludes</a>
@@ -1539,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appincludes_nodejs">
 <a href="#state_appincludes_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Includes</a>
@@ -1549,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpid_nodejs">
 <a href="#state_idpid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Id</a>
@@ -1559,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idptype_nodejs">
 <a href="#state_idptype_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Type</a>
@@ -1569,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1579,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_nodejs">
 <a href="#state_networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
@@ -1589,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_nodejs">
 <a href="#state_networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
@@ -1599,8 +1488,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_nodejs">
 <a href="#state_networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
@@ -1609,8 +1497,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformincludes_nodejs">
 <a href="#state_platformincludes_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Includes</a>
@@ -1618,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -1628,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1638,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1648,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifierattribute_nodejs">
 <a href="#state_useridentifierattribute_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Attribute</a>
@@ -1658,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifierpatterns_nodejs">
 <a href="#state_useridentifierpatterns_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Patterns</a>
@@ -1668,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useridentifiertype_nodejs">
 <a href="#state_useridentifiertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Identifier<wbr>Type</a>
@@ -1678,13 +1559,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_excludes_python">
 <a href="#state_app_excludes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>excludes</a>
@@ -1693,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery. See `app_include` for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_includes_python">
 <a href="#state_app_includes_python" style="color: inherit; text-decoration: inherit;">app_<wbr>includes</a>
@@ -1703,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idp_id_python">
 <a href="#state_idp_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>id</a>
@@ -1713,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the Idp the rule should route to if all conditions are met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idp_type_python">
 <a href="#state_idp_type_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>type</a>
@@ -1723,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of Idp. One of: `"SAML2"`, `"IWA"`, `"AgentlessDSSO"`, `"X509"`, `"FACEBOOK"`, `"GOOGLE"`, `"LINKEDIN"`, `"MICROSOFT"`, `"OIDC"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1733,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_connection_python">
 <a href="#state_network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
@@ -1743,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The network selection mode. One of `"ANYWEHRE"` or `"ZONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_excludes_python">
 <a href="#state_network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
@@ -1753,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to exclude.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_includes_python">
 <a href="#state_network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
@@ -1763,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required if `network_connection` = `"ZONE"`. Indicates the network zones to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_includes_python">
 <a href="#state_platform_includes_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>includes</a>
@@ -1772,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_python">
 <a href="#state_policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -1782,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1792,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Idp rule priority. This attribute can be set to a valid priority. To avoid an endless diff situation an error is thrown if an invalid property is provided. The Okta API defaults to the last (lowest) if not provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1802,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Idp rule status: `"ACTIVE"` or `"INACTIVE"`. By default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_identifier_attribute_python">
 <a href="#state_user_identifier_attribute_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>attribute</a>
@@ -1812,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Profile attribute matching can only have a single value that describes the type indicated in `user_identifier_type`. This is the attribute or identifier that the `user_identifier_patterns` are checked against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_identifier_patterns_python">
 <a href="#state_user_identifier_patterns_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>patterns</a>
@@ -1822,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Sequence[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a User Identifier pattern condition to match against. If `match_type` of `"EXPRESSION"` is used, only a *single* element can be set, otherwise multiple elements of matching patterns may be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_identifier_type_python">
 <a href="#state_user_identifier_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>identifier_<wbr>type</a>
@@ -1832,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `"IDENTIFIER"`, `"ATTRIBUTE"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1848,8 +1712,7 @@ The following state arguments are supported:
 <h4 id="ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1858,8 +1721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1868,8 +1730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1878,13 +1739,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1893,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1903,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1913,13 +1770,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1928,8 +1783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1938,8 +1792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1948,13 +1801,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1963,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1973,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1983,15 +1832,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2000,8 +1847,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2010,8 +1856,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2020,13 +1865,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2035,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2045,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2055,13 +1896,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2070,8 +1909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2080,8 +1918,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2090,13 +1927,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2105,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use if `type` is `"APP"` to indicate the application id to include.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2115,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use if the `type` is `"APP_TYPE"` to indicate the type of application(s) to include in instances where an entire group (i.e. `yahoo_mail`) of applications should be included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2125,15 +1958,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osexpression_csharp">
 <a href="#osexpression_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Expression</a>
@@ -2142,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only available when using `os_type = "OTHER"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -2152,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"IOS"`, `"WINDOWS"`, `"ANDROID"`, `"OTHER"`, `"OSX"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2162,13 +1991,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osexpression_go">
 <a href="#osexpression_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Expression</a>
@@ -2177,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only available when using `os_type = "OTHER"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -2187,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"IOS"`, `"WINDOWS"`, `"ANDROID"`, `"OTHER"`, `"OSX"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2197,13 +2022,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osexpression_nodejs">
 <a href="#osexpression_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Expression</a>
@@ -2212,8 +2035,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only available when using `os_type = "OTHER"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -2222,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"IOS"`, `"WINDOWS"`, `"ANDROID"`, `"OTHER"`, `"OSX"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2232,13 +2053,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="os_expression_python">
 <a href="#os_expression_python" style="color: inherit; text-decoration: inherit;">os_<wbr>expression</a>
@@ -2247,8 +2066,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only available when using `os_type = "OTHER"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -2257,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"IOS"`, `"WINDOWS"`, `"ANDROID"`, `"OTHER"`, `"OSX"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2267,15 +2084,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of: `"ANY"`, `"MOBILE"`, `"DESKTOP"`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_csharp">
 <a href="#matchtype_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
@@ -2284,8 +2099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of pattern. For regex, use `"EXPRESSION"`. For simple string matches, use one of the following: `"SUFFIX"`, `"EQUALS"`, `"STARTS_WITH"`, `"CONTAINS"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2294,13 +2108,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regex or simple match string to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_go">
 <a href="#matchtype_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
@@ -2309,8 +2121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of pattern. For regex, use `"EXPRESSION"`. For simple string matches, use one of the following: `"SUFFIX"`, `"EQUALS"`, `"STARTS_WITH"`, `"CONTAINS"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2319,13 +2130,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regex or simple match string to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_nodejs">
 <a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
@@ -2334,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of pattern. For regex, use `"EXPRESSION"`. For simple string matches, use one of the following: `"SUFFIX"`, `"EQUALS"`, `"STARTS_WITH"`, `"CONTAINS"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2344,13 +2152,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regex or simple match string to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="match_type_python">
 <a href="#match_type_python" style="color: inherit; text-decoration: inherit;">match_<wbr>type</a>
@@ -2359,8 +2165,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of pattern. For regex, use `"EXPRESSION"`. For simple string matches, use one of the following: `"SUFFIX"`, `"EQUALS"`, `"STARTS_WITH"`, `"CONTAINS"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2369,8 +2174,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regex or simple match string to match against.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -164,8 +164,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustersecuritygroup_csharp">
 <a href="#clustersecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group</a>
@@ -173,8 +172,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ekscluster_csharp">
 <a href="#ekscluster_csharp" style="color: inherit; text-decoration: inherit;">Eks<wbr>Cluster</a>
@@ -182,8 +180,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Eks.<wbr>Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -191,8 +188,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -200,13 +196,11 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustersecuritygroup_go">
 <a href="#clustersecuritygroup_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Security<wbr>Group</a>
@@ -214,8 +208,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ekscluster_go">
 <a href="#ekscluster_go" style="color: inherit; text-decoration: inherit;">Eks<wbr>Cluster</a>
@@ -223,8 +216,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -232,8 +224,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -241,13 +232,11 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustersecuritygroup_nodejs">
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
@@ -255,8 +244,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ekscluster_nodejs">
 <a href="#ekscluster_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster</a>
@@ -264,8 +252,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -273,8 +260,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -282,13 +268,11 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_security_group_python">
 <a href="#cluster_security_group_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>security_<wbr>group</a>
@@ -296,8 +280,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The security group associated with the EKS cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eks_cluster_python">
 <a href="#eks_cluster_python" style="color: inherit; text-decoration: inherit;">eks_<wbr>cluster</a>
@@ -305,8 +288,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Cluster</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The EKS cluster associated with the worker node group{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -314,8 +296,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The VPC in which to create the worker node group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -323,8 +304,7 @@ The NodeGroupSecurityGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value mapping of tags to apply to this security group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -335,8 +315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -344,8 +323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroup_csharp">
 <a href="#securitygroup_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
@@ -353,8 +331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygrouprule_csharp">
 <a href="#securitygrouprule_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Rule</a>
@@ -362,13 +339,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -376,8 +351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroup_go">
 <a href="#securitygroup_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group</a>
@@ -385,8 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygrouprule_go">
 <a href="#securitygrouprule_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Rule</a>
@@ -394,13 +367,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -408,8 +379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygroup_nodejs">
 <a href="#securitygroup_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group</a>
@@ -417,8 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="securitygrouprule_nodejs">
 <a href="#securitygrouprule_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Rule</a>
@@ -426,13 +395,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -440,8 +407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_group_python">
 <a href="#security_group_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group</a>
@@ -449,8 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group</span>
     </dt>
-    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The security group for node groups with the default ingress & egress rules required to connect and work with the EKS cluster security group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="security_group_rule_python">
 <a href="#security_group_rule_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>rule</a>
@@ -458,8 +423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Security<wbr>Group<wbr>Rule</span>
     </dt>
-    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The EKS cluster ingress rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

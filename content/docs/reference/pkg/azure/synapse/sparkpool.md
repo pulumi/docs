@@ -402,8 +402,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodesize_csharp">
 <a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -412,8 +411,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesizefamily_csharp">
 <a href="#nodesizefamily_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
@@ -422,8 +420,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="synapseworkspaceid_csharp">
 <a href="#synapseworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
@@ -432,8 +429,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopause_csharp">
 <a href="#autopause_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
@@ -442,8 +438,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_csharp">
 <a href="#autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -452,8 +447,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="libraryrequirement_csharp">
 <a href="#libraryrequirement_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
@@ -462,8 +456,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,8 +465,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -482,8 +474,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_csharp">
 <a href="#sparkeventsfolder_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
@@ -492,8 +483,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparklogfolder_csharp">
 <a href="#sparklogfolder_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Log<wbr>Folder</a>
@@ -502,8 +492,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkversion_csharp">
 <a href="#sparkversion_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Version</a>
@@ -512,8 +501,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -522,13 +510,11 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodesize_go">
 <a href="#nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -537,8 +523,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesizefamily_go">
 <a href="#nodesizefamily_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
@@ -547,8 +532,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="synapseworkspaceid_go">
 <a href="#synapseworkspaceid_go" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
@@ -557,8 +541,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopause_go">
 <a href="#autopause_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
@@ -567,8 +550,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_go">
 <a href="#autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -577,8 +559,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="libraryrequirement_go">
 <a href="#libraryrequirement_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
@@ -587,8 +568,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -597,8 +577,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -607,8 +586,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_go">
 <a href="#sparkeventsfolder_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
@@ -617,8 +595,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparklogfolder_go">
 <a href="#sparklogfolder_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Log<wbr>Folder</a>
@@ -627,8 +604,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkversion_go">
 <a href="#sparkversion_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Version</a>
@@ -637,8 +613,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -647,13 +622,11 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodesize_nodejs">
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
@@ -662,8 +635,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesizefamily_nodejs">
 <a href="#nodesizefamily_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size<wbr>Family</a>
@@ -672,8 +644,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="synapseworkspaceid_nodejs">
 <a href="#synapseworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">synapse<wbr>Workspace<wbr>Id</a>
@@ -682,8 +653,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autopause_nodejs">
 <a href="#autopause_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause</a>
@@ -692,8 +662,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_nodejs">
 <a href="#autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
@@ -702,8 +671,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="libraryrequirement_nodejs">
 <a href="#libraryrequirement_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Requirement</a>
@@ -712,8 +680,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -722,8 +689,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -732,8 +698,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkeventsfolder_nodejs">
 <a href="#sparkeventsfolder_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Events<wbr>Folder</a>
@@ -742,8 +707,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparklogfolder_nodejs">
 <a href="#sparklogfolder_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Log<wbr>Folder</a>
@@ -752,8 +716,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkversion_nodejs">
 <a href="#sparkversion_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Version</a>
@@ -762,8 +725,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -772,13 +734,11 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_size_python">
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
@@ -787,8 +747,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_size_family_python">
 <a href="#node_size_family_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size_<wbr>family</a>
@@ -797,8 +756,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="synapse_workspace_id_python">
 <a href="#synapse_workspace_id_python" style="color: inherit; text-decoration: inherit;">synapse_<wbr>workspace_<wbr>id</a>
@@ -807,8 +765,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_pause_python">
 <a href="#auto_pause_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause</a>
@@ -817,8 +774,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scale_python">
 <a href="#auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
@@ -827,8 +783,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="library_requirement_python">
 <a href="#library_requirement_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirement</a>
@@ -837,8 +792,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -847,8 +801,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -857,8 +810,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_events_folder_python">
 <a href="#spark_events_folder_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>events_<wbr>folder</a>
@@ -867,8 +819,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_log_folder_python">
 <a href="#spark_log_folder_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>log_<wbr>folder</a>
@@ -877,8 +828,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_version_python">
 <a href="#spark_version_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>version</a>
@@ -887,8 +837,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -897,8 +846,7 @@ The SparkPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -909,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -918,13 +865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -932,13 +877,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -946,13 +889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -960,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1088,8 +1028,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autopause_csharp">
 <a href="#state_autopause_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
@@ -1098,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_csharp">
 <a href="#state_autoscale_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -1108,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_libraryrequirement_csharp">
 <a href="#state_libraryrequirement_csharp" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
@@ -1118,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1128,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_csharp">
 <a href="#state_nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1138,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesize_csharp">
 <a href="#state_nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -1148,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesizefamily_csharp">
 <a href="#state_nodesizefamily_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
@@ -1158,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkeventsfolder_csharp">
 <a href="#state_sparkeventsfolder_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
@@ -1168,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparklogfolder_csharp">
 <a href="#state_sparklogfolder_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Log<wbr>Folder</a>
@@ -1178,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkversion_csharp">
 <a href="#state_sparkversion_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Version</a>
@@ -1188,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapseworkspaceid_csharp">
 <a href="#state_synapseworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
@@ -1198,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1208,13 +1136,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autopause_go">
 <a href="#state_autopause_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Pause</a>
@@ -1223,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_go">
 <a href="#state_autoscale_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scale</a>
@@ -1233,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_libraryrequirement_go">
 <a href="#state_libraryrequirement_go" style="color: inherit; text-decoration: inherit;">Library<wbr>Requirement</a>
@@ -1243,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1253,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_go">
 <a href="#state_nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1263,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesize_go">
 <a href="#state_nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -1273,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesizefamily_go">
 <a href="#state_nodesizefamily_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size<wbr>Family</a>
@@ -1283,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkeventsfolder_go">
 <a href="#state_sparkeventsfolder_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Events<wbr>Folder</a>
@@ -1293,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparklogfolder_go">
 <a href="#state_sparklogfolder_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Log<wbr>Folder</a>
@@ -1303,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkversion_go">
 <a href="#state_sparkversion_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Version</a>
@@ -1313,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapseworkspaceid_go">
 <a href="#state_synapseworkspaceid_go" style="color: inherit; text-decoration: inherit;">Synapse<wbr>Workspace<wbr>Id</a>
@@ -1323,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1333,13 +1248,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autopause_nodejs">
 <a href="#state_autopause_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Pause</a>
@@ -1348,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_nodejs">
 <a href="#state_autoscale_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scale</a>
@@ -1358,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_libraryrequirement_nodejs">
 <a href="#state_libraryrequirement_nodejs" style="color: inherit; text-decoration: inherit;">library<wbr>Requirement</a>
@@ -1368,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1378,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodecount_nodejs">
 <a href="#state_nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -1388,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesize_nodejs">
 <a href="#state_nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
@@ -1398,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesizefamily_nodejs">
 <a href="#state_nodesizefamily_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size<wbr>Family</a>
@@ -1408,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkeventsfolder_nodejs">
 <a href="#state_sparkeventsfolder_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Events<wbr>Folder</a>
@@ -1418,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparklogfolder_nodejs">
 <a href="#state_sparklogfolder_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Log<wbr>Folder</a>
@@ -1428,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkversion_nodejs">
 <a href="#state_sparkversion_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Version</a>
@@ -1438,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapseworkspaceid_nodejs">
 <a href="#state_synapseworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">synapse<wbr>Workspace<wbr>Id</a>
@@ -1448,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1458,13 +1360,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_pause_python">
 <a href="#state_auto_pause_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>pause</a>
@@ -1473,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_pause` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scale_python">
 <a href="#state_auto_scale_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scale</a>
@@ -1483,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_scale` block as defined below. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_library_requirement_python">
 <a href="#state_library_requirement_python" style="color: inherit; text-decoration: inherit;">library_<wbr>requirement</a>
@@ -1493,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `library_requirement` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1503,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Synapse Spark Pool. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_count_python">
 <a href="#state_node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1513,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Spark Pool. Exactly one of `node_count` or `auto_scale` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_size_python">
 <a href="#state_node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
@@ -1523,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The level of node in the Spark Pool. Possible value is `Small`, `Medium` and `Large`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_size_family_python">
 <a href="#state_node_size_family_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size_<wbr>family</a>
@@ -1533,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of nodes that the Spark Pool provides. Possible value is `MemoryOptimized`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spark_events_folder_python">
 <a href="#state_spark_events_folder_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>events_<wbr>folder</a>
@@ -1543,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Spark events folder. Defaults to `/events`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spark_log_folder_python">
 <a href="#state_spark_log_folder_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>log_<wbr>folder</a>
@@ -1553,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default folder where Spark logs will be written. Defaults to `/logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spark_version_python">
 <a href="#state_spark_version_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>version</a>
@@ -1563,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Apache Spark version. Possible value is `2.4`. Defaults to `2.4`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synapse_workspace_id_python">
 <a href="#state_synapse_workspace_id_python" style="color: inherit; text-decoration: inherit;">synapse_<wbr>workspace_<wbr>id</a>
@@ -1573,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Synapse Workspace where the Synapse Spark Pool should exist. Changing this forces a new Synapse Spark Pool to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1583,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Synapse Spark Pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1599,8 +1487,7 @@ The following state arguments are supported:
 <h4 id="sparkpoolautopause">Spark<wbr>Pool<wbr>Auto<wbr>Pause</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delayinminutes_csharp">
 <a href="#delayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Delay<wbr>In<wbr>Minutes</a>
@@ -1609,13 +1496,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes of idle time before the Spark Pool is automatically paused. Must be between `5` and `10080`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delayinminutes_go">
 <a href="#delayinminutes_go" style="color: inherit; text-decoration: inherit;">Delay<wbr>In<wbr>Minutes</a>
@@ -1624,13 +1509,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes of idle time before the Spark Pool is automatically paused. Must be between `5` and `10080`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delayinminutes_nodejs">
 <a href="#delayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">delay<wbr>In<wbr>Minutes</a>
@@ -1639,13 +1522,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes of idle time before the Spark Pool is automatically paused. Must be between `5` and `10080`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="delay_in_minutes_python">
 <a href="#delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">delay_<wbr>in_<wbr>minutes</a>
@@ -1654,15 +1535,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes of idle time before the Spark Pool is automatically paused. Must be between `5` and `10080`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sparkpoolautoscale">Spark<wbr>Pool<wbr>Auto<wbr>Scale</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxnodecount_csharp">
 <a href="#maxnodecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -1671,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -1681,13 +1559,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxnodecount_go">
 <a href="#maxnodecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -1696,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -1706,13 +1581,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxnodecount_nodejs">
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
@@ -1721,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -1731,13 +1603,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_node_count_python">
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
@@ -1746,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -1756,15 +1625,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of nodes the Spark Pool can support. Must be between `3` and `200`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sparkpoollibraryrequirement">Spark<wbr>Pool<wbr>Library<wbr>Requirement</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1773,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of library requirements.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1783,13 +1649,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the library requirements file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1798,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of library requirements.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -1808,13 +1671,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the library requirements file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1823,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of library requirements.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1833,13 +1693,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the library requirements file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1848,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of library requirements.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -1858,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the library requirements file.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

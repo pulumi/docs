@@ -312,8 +312,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -322,8 +321,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planrule">List&lt;Plan<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedbackupsettings_csharp">
 <a href="#advancedbackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
@@ -332,8 +330,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planadvancedbackupsetting">List&lt;Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -342,8 +339,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -352,13 +348,11 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -367,8 +361,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedbackupsettings_go">
 <a href="#advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
@@ -377,8 +370,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -387,8 +379,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -397,13 +388,11 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -412,8 +401,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedbackupsettings_nodejs">
 <a href="#advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
@@ -422,8 +410,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -432,8 +419,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -442,13 +428,11 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -457,8 +441,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planrule">Sequence[Plan<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advanced_backup_settings_python">
 <a href="#advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
@@ -467,8 +450,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type"><a href="#planadvancedbackupsetting">Sequence[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -477,8 +459,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -487,8 +468,7 @@ The Plan resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -499,8 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -509,8 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -518,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -528,13 +505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -543,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -552,8 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -562,13 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -577,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -586,8 +556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -596,13 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -611,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -620,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -630,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -758,8 +722,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedbackupsettings_csharp">
 <a href="#state_advancedbackupsettings_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
@@ -768,8 +731,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planadvancedbackupsetting">List&lt;Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -778,8 +740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -788,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -798,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrule">List&lt;Plan<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -808,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -818,13 +776,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedbackupsettings_go">
 <a href="#state_advancedbackupsettings_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Backup<wbr>Settings</a>
@@ -833,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planadvancedbackupsetting">[]Plan<wbr>Advanced<wbr>Backup<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -843,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -853,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -863,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrule">[]Plan<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -873,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -883,13 +834,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedbackupsettings_nodejs">
 <a href="#state_advancedbackupsettings_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Backup<wbr>Settings</a>
@@ -898,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -908,8 +856,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -918,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -928,8 +874,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrule">Plan<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -938,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -948,13 +892,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advanced_backup_settings_python">
 <a href="#state_advanced_backup_settings_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>backup_<wbr>settings</a>
@@ -963,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planadvancedbackupsetting">Sequence[Plan<wbr>Advanced<wbr>Backup<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An object that specifies backup options for each resource type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -973,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -983,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of a backup plan.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -993,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrule">Sequence[Plan<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A rule object that specifies a scheduled task that is used to back up a selection of resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1003,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the plans you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1013,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1029,8 +965,7 @@ The following state arguments are supported:
 <h4 id="planadvancedbackupsetting">Plan<wbr>Advanced<wbr>Backup<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupoptions_csharp">
 <a href="#backupoptions_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Options</a>
@@ -1039,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1049,13 +983,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupoptions_go">
 <a href="#backupoptions_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Options</a>
@@ -1064,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -1074,13 +1005,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backupoptions_nodejs">
 <a href="#backupoptions_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Options</a>
@@ -1089,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -1099,13 +1027,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backup_options_python">
 <a href="#backup_options_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>options</a>
@@ -1114,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -1124,15 +1049,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of AWS resource to be backed up. For VSS Windows backups, the only supported resource type is Amazon EC2. Valid values: `EC2`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planrule">Plan<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -1141,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetvaultname_csharp">
 <a href="#targetvaultname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vault<wbr>Name</a>
@@ -1151,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a logical container where backups are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completionwindow_csharp">
 <a href="#completionwindow_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Window</a>
@@ -1161,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyactions_csharp">
 <a href="#copyactions_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>Actions</a>
@@ -1171,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyaction">List&lt;Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_csharp">
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
@@ -1181,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointtags_csharp">
 <a href="#recoverypointtags_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Tags</a>
@@ -1191,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1201,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startwindow_csharp">
 <a href="#startwindow_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Window</a>
@@ -1211,13 +1127,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -1226,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetvaultname_go">
 <a href="#targetvaultname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vault<wbr>Name</a>
@@ -1236,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a logical container where backups are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completionwindow_go">
 <a href="#completionwindow_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Window</a>
@@ -1246,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyactions_go">
 <a href="#copyactions_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>Actions</a>
@@ -1256,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyaction">[]Plan<wbr>Rule<wbr>Copy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_go">
 <a href="#lifecycle_go" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
@@ -1266,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointtags_go">
 <a href="#recoverypointtags_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Tags</a>
@@ -1276,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1286,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startwindow_go">
 <a href="#startwindow_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Window</a>
@@ -1296,13 +1203,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -1311,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetvaultname_nodejs">
 <a href="#targetvaultname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vault<wbr>Name</a>
@@ -1321,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a logical container where backups are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completionwindow_nodejs">
 <a href="#completionwindow_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Window</a>
@@ -1331,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copyactions_nodejs">
 <a href="#copyactions_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>Actions</a>
@@ -1341,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyaction">Plan<wbr>Rule<wbr>Copy<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_nodejs">
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
@@ -1351,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverypointtags_nodejs">
 <a href="#recoverypointtags_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Tags</a>
@@ -1361,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1371,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startwindow_nodejs">
 <a href="#startwindow_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Window</a>
@@ -1381,13 +1279,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -1396,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An display name for a backup rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_vault_name_python">
 <a href="#target_vault_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vault_<wbr>name</a>
@@ -1406,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a logical container where backups are stored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="completion_window_python">
 <a href="#completion_window_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>window</a>
@@ -1416,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="copy_actions_python">
 <a href="#copy_actions_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>actions</a>
@@ -1426,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyaction">Sequence[Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with copy operation settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_python">
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
@@ -1436,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_point_tags_python">
 <a href="#recovery_point_tags_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>tags</a>
@@ -1446,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata that you can assign to help organize the resources that you create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1456,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CRON expression specifying when AWS Backup initiates a backup job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_window_python">
 <a href="#start_window_python" style="color: inherit; text-decoration: inherit;">start_<wbr>window</a>
@@ -1466,15 +1355,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in minutes before beginning a backup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planrulecopyaction">Plan<wbr>Rule<wbr>Copy<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationvaultarn_csharp">
 <a href="#destinationvaultarn_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Vault<wbr>Arn</a>
@@ -1483,8 +1370,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_csharp">
 <a href="#lifecycle_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
@@ -1493,13 +1379,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationvaultarn_go">
 <a href="#destinationvaultarn_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Vault<wbr>Arn</a>
@@ -1508,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_go">
 <a href="#lifecycle_go" style="color: inherit; text-decoration: inherit;">Lifecycle</a>
@@ -1518,13 +1401,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationvaultarn_nodejs">
 <a href="#destinationvaultarn_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Vault<wbr>Arn</a>
@@ -1533,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_nodejs">
 <a href="#lifecycle_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle</a>
@@ -1543,13 +1423,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_vault_arn_python">
 <a href="#destination_vault_arn_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>vault_<wbr>arn</a>
@@ -1558,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_python">
 <a href="#lifecycle_python" style="color: inherit; text-decoration: inherit;">lifecycle</a>
@@ -1568,15 +1445,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planrulecopyactionlifecycle">Plan<wbr>Rule<wbr>Copy<wbr>Action<wbr>Lifecycle</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coldstorageafter_csharp">
 <a href="#coldstorageafter_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>After</a>
@@ -1585,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_csharp">
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1595,13 +1469,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coldstorageafter_go">
 <a href="#coldstorageafter_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>After</a>
@@ -1610,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_go">
 <a href="#deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1620,13 +1491,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coldstorageafter_nodejs">
 <a href="#coldstorageafter_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>After</a>
@@ -1635,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_nodejs">
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
@@ -1645,13 +1513,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cold_storage_after_python">
 <a href="#cold_storage_after_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>after</a>
@@ -1660,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_after_python">
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
@@ -1670,15 +1535,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planrulelifecycle">Plan<wbr>Rule<wbr>Lifecycle</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coldstorageafter_csharp">
 <a href="#coldstorageafter_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>After</a>
@@ -1687,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_csharp">
 <a href="#deleteafter_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1697,13 +1559,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coldstorageafter_go">
 <a href="#coldstorageafter_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>After</a>
@@ -1712,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_go">
 <a href="#deleteafter_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>After</a>
@@ -1722,13 +1581,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coldstorageafter_nodejs">
 <a href="#coldstorageafter_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>After</a>
@@ -1737,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteafter_nodejs">
 <a href="#deleteafter_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>After</a>
@@ -1747,13 +1603,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cold_storage_after_python">
 <a href="#cold_storage_after_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>after</a>
@@ -1762,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is moved to cold storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_after_python">
 <a href="#delete_after_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>after</a>
@@ -1772,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

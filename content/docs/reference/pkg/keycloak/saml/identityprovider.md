@@ -321,8 +321,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -331,8 +330,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_csharp">
 <a href="#realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -341,8 +339,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="singlesignonserviceurl_csharp">
 <a href="#singlesignonserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</a>
@@ -351,8 +348,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addreadtokenroleoncreate_csharp">
 <a href="#addreadtokenroleoncreate_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -361,8 +357,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatebydefault_csharp">
 <a href="#authenticatebydefault_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -371,8 +366,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backchannelsupported_csharp">
 <a href="#backchannelsupported_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Supported</a>
@@ -381,8 +375,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -391,8 +384,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -401,8 +393,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbrokerloginflowalias_csharp">
 <a href="#firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -411,8 +402,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceauthn_csharp">
 <a href="#forceauthn_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Authn</a>
@@ -421,8 +411,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_csharp">
 <a href="#hideonloginpage_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -431,8 +420,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkonly_csharp">
 <a href="#linkonly_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -441,8 +429,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidpolicyformat_csharp">
 <a href="#nameidpolicyformat_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Id<wbr>Policy<wbr>Format</a>
@@ -451,8 +438,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindingauthnrequest_csharp">
 <a href="#postbindingauthnrequest_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Authn<wbr>Request</a>
@@ -461,8 +447,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindinglogout_csharp">
 <a href="#postbindinglogout_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Logout</a>
@@ -471,8 +456,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindingresponse_csharp">
 <a href="#postbindingresponse_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Response</a>
@@ -481,8 +465,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbrokerloginflowalias_csharp">
 <a href="#postbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -491,8 +474,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -501,8 +483,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificate_csharp">
 <a href="#signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
@@ -511,8 +492,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutserviceurl_csharp">
 <a href="#singlelogoutserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Service<wbr>Url</a>
@@ -521,8 +501,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storetoken_csharp">
 <a href="#storetoken_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -531,8 +510,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_csharp">
 <a href="#trustemail_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -541,8 +519,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validatesignature_csharp">
 <a href="#validatesignature_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Signature</a>
@@ -551,8 +528,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wantassertionsencrypted_csharp">
 <a href="#wantassertionsencrypted_csharp" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Encrypted</a>
@@ -561,8 +537,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wantassertionssigned_csharp">
 <a href="#wantassertionssigned_csharp" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Signed</a>
@@ -571,8 +546,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmlsignkeyinfokeynametransformer_csharp">
 <a href="#xmlsignkeyinfokeynametransformer_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</a>
@@ -581,13 +555,11 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -596,8 +568,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_go">
 <a href="#realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -606,8 +577,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="singlesignonserviceurl_go">
 <a href="#singlesignonserviceurl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</a>
@@ -616,8 +586,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addreadtokenroleoncreate_go">
 <a href="#addreadtokenroleoncreate_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -626,8 +595,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatebydefault_go">
 <a href="#authenticatebydefault_go" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -636,8 +604,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backchannelsupported_go">
 <a href="#backchannelsupported_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Supported</a>
@@ -646,8 +613,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -656,8 +622,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -666,8 +631,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbrokerloginflowalias_go">
 <a href="#firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -676,8 +640,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceauthn_go">
 <a href="#forceauthn_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Authn</a>
@@ -686,8 +649,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_go">
 <a href="#hideonloginpage_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -696,8 +658,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkonly_go">
 <a href="#linkonly_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -706,8 +667,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidpolicyformat_go">
 <a href="#nameidpolicyformat_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Id<wbr>Policy<wbr>Format</a>
@@ -716,8 +676,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindingauthnrequest_go">
 <a href="#postbindingauthnrequest_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Authn<wbr>Request</a>
@@ -726,8 +685,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindinglogout_go">
 <a href="#postbindinglogout_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Logout</a>
@@ -736,8 +694,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindingresponse_go">
 <a href="#postbindingresponse_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Response</a>
@@ -746,8 +703,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbrokerloginflowalias_go">
 <a href="#postbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -756,8 +712,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -766,8 +721,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificate_go">
 <a href="#signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
@@ -776,8 +730,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutserviceurl_go">
 <a href="#singlelogoutserviceurl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Service<wbr>Url</a>
@@ -786,8 +739,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storetoken_go">
 <a href="#storetoken_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -796,8 +748,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_go">
 <a href="#trustemail_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -806,8 +757,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validatesignature_go">
 <a href="#validatesignature_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Signature</a>
@@ -816,8 +766,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wantassertionsencrypted_go">
 <a href="#wantassertionsencrypted_go" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Encrypted</a>
@@ -826,8 +775,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wantassertionssigned_go">
 <a href="#wantassertionssigned_go" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Signed</a>
@@ -836,8 +784,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmlsignkeyinfokeynametransformer_go">
 <a href="#xmlsignkeyinfokeynametransformer_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</a>
@@ -846,13 +793,11 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -861,8 +806,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_nodejs">
 <a href="#realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -871,8 +815,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="singlesignonserviceurl_nodejs">
 <a href="#singlesignonserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</a>
@@ -881,8 +824,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addreadtokenroleoncreate_nodejs">
 <a href="#addreadtokenroleoncreate_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -891,8 +833,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticatebydefault_nodejs">
 <a href="#authenticatebydefault_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>By<wbr>Default</a>
@@ -901,8 +842,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backchannelsupported_nodejs">
 <a href="#backchannelsupported_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Supported</a>
@@ -911,8 +851,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -921,8 +860,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -931,8 +869,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbrokerloginflowalias_nodejs">
 <a href="#firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -941,8 +878,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceauthn_nodejs">
 <a href="#forceauthn_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Authn</a>
@@ -951,8 +887,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideonloginpage_nodejs">
 <a href="#hideonloginpage_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -961,8 +896,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkonly_nodejs">
 <a href="#linkonly_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Only</a>
@@ -971,8 +905,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameidpolicyformat_nodejs">
 <a href="#nameidpolicyformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Id<wbr>Policy<wbr>Format</a>
@@ -981,8 +914,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindingauthnrequest_nodejs">
 <a href="#postbindingauthnrequest_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Binding<wbr>Authn<wbr>Request</a>
@@ -991,8 +923,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindinglogout_nodejs">
 <a href="#postbindinglogout_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Binding<wbr>Logout</a>
@@ -1001,8 +932,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbindingresponse_nodejs">
 <a href="#postbindingresponse_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Binding<wbr>Response</a>
@@ -1011,8 +941,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postbrokerloginflowalias_nodejs">
 <a href="#postbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1021,8 +950,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
@@ -1031,8 +959,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signingcertificate_nodejs">
 <a href="#signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
@@ -1041,8 +968,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutserviceurl_nodejs">
 <a href="#singlelogoutserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Service<wbr>Url</a>
@@ -1051,8 +977,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storetoken_nodejs">
 <a href="#storetoken_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Token</a>
@@ -1061,8 +986,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustemail_nodejs">
 <a href="#trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
@@ -1071,8 +995,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validatesignature_nodejs">
 <a href="#validatesignature_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Signature</a>
@@ -1081,8 +1004,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wantassertionsencrypted_nodejs">
 <a href="#wantassertionsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">want<wbr>Assertions<wbr>Encrypted</a>
@@ -1091,8 +1013,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wantassertionssigned_nodejs">
 <a href="#wantassertionssigned_nodejs" style="color: inherit; text-decoration: inherit;">want<wbr>Assertions<wbr>Signed</a>
@@ -1101,8 +1022,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmlsignkeyinfokeynametransformer_nodejs">
 <a href="#xmlsignkeyinfokeynametransformer_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</a>
@@ -1111,13 +1031,11 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1126,8 +1044,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="realm_python">
 <a href="#realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -1136,8 +1053,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="single_sign_on_service_url_python">
 <a href="#single_sign_on_service_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>service_<wbr>url</a>
@@ -1146,8 +1062,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_read_token_role_on_create_python">
 <a href="#add_read_token_role_on_create_python" style="color: inherit; text-decoration: inherit;">add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</a>
@@ -1156,8 +1071,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authenticate_by_default_python">
 <a href="#authenticate_by_default_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>by_<wbr>default</a>
@@ -1166,8 +1080,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backchannel_supported_python">
 <a href="#backchannel_supported_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>supported</a>
@@ -1176,8 +1089,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1186,8 +1098,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1196,8 +1107,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="first_broker_login_flow_alias_python">
 <a href="#first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -1206,8 +1116,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_authn_python">
 <a href="#force_authn_python" style="color: inherit; text-decoration: inherit;">force_<wbr>authn</a>
@@ -1216,8 +1125,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_on_login_page_python">
 <a href="#hide_on_login_page_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>on_<wbr>login_<wbr>page</a>
@@ -1226,8 +1134,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="link_only_python">
 <a href="#link_only_python" style="color: inherit; text-decoration: inherit;">link_<wbr>only</a>
@@ -1236,8 +1143,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_id_policy_format_python">
 <a href="#name_id_policy_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>id_<wbr>policy_<wbr>format</a>
@@ -1246,8 +1152,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_binding_authn_request_python">
 <a href="#post_binding_authn_request_python" style="color: inherit; text-decoration: inherit;">post_<wbr>binding_<wbr>authn_<wbr>request</a>
@@ -1256,8 +1161,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_binding_logout_python">
 <a href="#post_binding_logout_python" style="color: inherit; text-decoration: inherit;">post_<wbr>binding_<wbr>logout</a>
@@ -1266,8 +1170,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_binding_response_python">
 <a href="#post_binding_response_python" style="color: inherit; text-decoration: inherit;">post_<wbr>binding_<wbr>response</a>
@@ -1276,8 +1179,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_broker_login_flow_alias_python">
 <a href="#post_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -1286,8 +1188,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
@@ -1296,8 +1197,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signing_certificate_python">
 <a href="#signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
@@ -1306,8 +1206,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_logout_service_url_python">
 <a href="#single_logout_service_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>service_<wbr>url</a>
@@ -1316,8 +1215,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="store_token_python">
 <a href="#store_token_python" style="color: inherit; text-decoration: inherit;">store_<wbr>token</a>
@@ -1326,8 +1224,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trust_email_python">
 <a href="#trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
@@ -1336,8 +1233,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_signature_python">
 <a href="#validate_signature_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>signature</a>
@@ -1346,8 +1242,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="want_assertions_encrypted_python">
 <a href="#want_assertions_encrypted_python" style="color: inherit; text-decoration: inherit;">want_<wbr>assertions_<wbr>encrypted</a>
@@ -1356,8 +1251,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="want_assertions_signed_python">
 <a href="#want_assertions_signed_python" style="color: inherit; text-decoration: inherit;">want_<wbr>assertions_<wbr>signed</a>
@@ -1366,8 +1260,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xml_sign_key_info_key_name_transformer_python">
 <a href="#xml_sign_key_info_key_name_transformer_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>sign_<wbr>key_<wbr>info_<wbr>key_<wbr>name_<wbr>transformer</a>
@@ -1376,8 +1269,7 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1388,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1397,8 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_csharp">
 <a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1407,13 +1297,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1421,8 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_go">
 <a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1431,13 +1318,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1445,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_nodejs">
 <a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -1455,13 +1339,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1469,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internal_id_python">
 <a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -1479,8 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1607,8 +1487,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addreadtokenroleoncreate_csharp">
 <a href="#state_addreadtokenroleoncreate_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -1617,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_csharp">
 <a href="#state_alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1627,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatebydefault_csharp">
 <a href="#state_authenticatebydefault_csharp" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -1637,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backchannelsupported_csharp">
 <a href="#state_backchannelsupported_csharp" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Supported</a>
@@ -1647,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1657,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1667,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstbrokerloginflowalias_csharp">
 <a href="#state_firstbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1677,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceauthn_csharp">
 <a href="#state_forceauthn_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Authn</a>
@@ -1687,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_csharp">
 <a href="#state_hideonloginpage_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -1697,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_csharp">
 <a href="#state_internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1707,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkonly_csharp">
 <a href="#state_linkonly_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -1717,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameidpolicyformat_csharp">
 <a href="#state_nameidpolicyformat_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Id<wbr>Policy<wbr>Format</a>
@@ -1727,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindingauthnrequest_csharp">
 <a href="#state_postbindingauthnrequest_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Authn<wbr>Request</a>
@@ -1737,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindinglogout_csharp">
 <a href="#state_postbindinglogout_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Logout</a>
@@ -1747,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindingresponse_csharp">
 <a href="#state_postbindingresponse_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Response</a>
@@ -1757,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbrokerloginflowalias_csharp">
 <a href="#state_postbrokerloginflowalias_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1767,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_csharp">
 <a href="#state_realm_csharp" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -1777,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_csharp">
 <a href="#state_signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -1787,8 +1649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signingcertificate_csharp">
 <a href="#state_signingcertificate_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
@@ -1797,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutserviceurl_csharp">
 <a href="#state_singlelogoutserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Service<wbr>Url</a>
@@ -1807,8 +1667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonserviceurl_csharp">
 <a href="#state_singlesignonserviceurl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</a>
@@ -1817,8 +1676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storetoken_csharp">
 <a href="#state_storetoken_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -1827,8 +1685,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_csharp">
 <a href="#state_trustemail_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -1837,8 +1694,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validatesignature_csharp">
 <a href="#state_validatesignature_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Signature</a>
@@ -1847,8 +1703,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wantassertionsencrypted_csharp">
 <a href="#state_wantassertionsencrypted_csharp" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Encrypted</a>
@@ -1857,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wantassertionssigned_csharp">
 <a href="#state_wantassertionssigned_csharp" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Signed</a>
@@ -1867,8 +1721,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xmlsignkeyinfokeynametransformer_csharp">
 <a href="#state_xmlsignkeyinfokeynametransformer_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</a>
@@ -1877,13 +1730,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addreadtokenroleoncreate_go">
 <a href="#state_addreadtokenroleoncreate_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -1892,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_go">
 <a href="#state_alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -1902,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatebydefault_go">
 <a href="#state_authenticatebydefault_go" style="color: inherit; text-decoration: inherit;">Authenticate<wbr>By<wbr>Default</a>
@@ -1912,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backchannelsupported_go">
 <a href="#state_backchannelsupported_go" style="color: inherit; text-decoration: inherit;">Backchannel<wbr>Supported</a>
@@ -1922,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1932,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1942,8 +1788,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstbrokerloginflowalias_go">
 <a href="#state_firstbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -1952,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceauthn_go">
 <a href="#state_forceauthn_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Authn</a>
@@ -1962,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_go">
 <a href="#state_hideonloginpage_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -1972,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_go">
 <a href="#state_internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -1982,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkonly_go">
 <a href="#state_linkonly_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Only</a>
@@ -1992,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameidpolicyformat_go">
 <a href="#state_nameidpolicyformat_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Id<wbr>Policy<wbr>Format</a>
@@ -2002,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindingauthnrequest_go">
 <a href="#state_postbindingauthnrequest_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Authn<wbr>Request</a>
@@ -2012,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindinglogout_go">
 <a href="#state_postbindinglogout_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Logout</a>
@@ -2022,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindingresponse_go">
 <a href="#state_postbindingresponse_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Binding<wbr>Response</a>
@@ -2032,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbrokerloginflowalias_go">
 <a href="#state_postbrokerloginflowalias_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -2042,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_go">
 <a href="#state_realm_go" style="color: inherit; text-decoration: inherit;">Realm</a>
@@ -2052,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_go">
 <a href="#state_signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -2062,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signingcertificate_go">
 <a href="#state_signingcertificate_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Certificate</a>
@@ -2072,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutserviceurl_go">
 <a href="#state_singlelogoutserviceurl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Service<wbr>Url</a>
@@ -2082,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonserviceurl_go">
 <a href="#state_singlesignonserviceurl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</a>
@@ -2092,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storetoken_go">
 <a href="#state_storetoken_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Token</a>
@@ -2102,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_go">
 <a href="#state_trustemail_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Email</a>
@@ -2112,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validatesignature_go">
 <a href="#state_validatesignature_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Signature</a>
@@ -2122,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wantassertionsencrypted_go">
 <a href="#state_wantassertionsencrypted_go" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Encrypted</a>
@@ -2132,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wantassertionssigned_go">
 <a href="#state_wantassertionssigned_go" style="color: inherit; text-decoration: inherit;">Want<wbr>Assertions<wbr>Signed</a>
@@ -2142,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xmlsignkeyinfokeynametransformer_go">
 <a href="#state_xmlsignkeyinfokeynametransformer_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</a>
@@ -2152,13 +1977,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addreadtokenroleoncreate_nodejs">
 <a href="#state_addreadtokenroleoncreate_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</a>
@@ -2167,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_nodejs">
 <a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -2177,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticatebydefault_nodejs">
 <a href="#state_authenticatebydefault_nodejs" style="color: inherit; text-decoration: inherit;">authenticate<wbr>By<wbr>Default</a>
@@ -2187,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backchannelsupported_nodejs">
 <a href="#state_backchannelsupported_nodejs" style="color: inherit; text-decoration: inherit;">backchannel<wbr>Supported</a>
@@ -2197,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2207,8 +2026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2217,8 +2035,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firstbrokerloginflowalias_nodejs">
 <a href="#state_firstbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -2227,8 +2044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceauthn_nodejs">
 <a href="#state_forceauthn_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Authn</a>
@@ -2237,8 +2053,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideonloginpage_nodejs">
 <a href="#state_hideonloginpage_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>On<wbr>Login<wbr>Page</a>
@@ -2247,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internalid_nodejs">
 <a href="#state_internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -2257,8 +2071,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkonly_nodejs">
 <a href="#state_linkonly_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Only</a>
@@ -2267,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameidpolicyformat_nodejs">
 <a href="#state_nameidpolicyformat_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Id<wbr>Policy<wbr>Format</a>
@@ -2277,8 +2089,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindingauthnrequest_nodejs">
 <a href="#state_postbindingauthnrequest_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Binding<wbr>Authn<wbr>Request</a>
@@ -2287,8 +2098,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindinglogout_nodejs">
 <a href="#state_postbindinglogout_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Binding<wbr>Logout</a>
@@ -2297,8 +2107,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbindingresponse_nodejs">
 <a href="#state_postbindingresponse_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Binding<wbr>Response</a>
@@ -2307,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postbrokerloginflowalias_nodejs">
 <a href="#state_postbrokerloginflowalias_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</a>
@@ -2317,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_nodejs">
 <a href="#state_realm_nodejs" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -2327,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_nodejs">
 <a href="#state_signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
@@ -2337,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signingcertificate_nodejs">
 <a href="#state_signingcertificate_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Certificate</a>
@@ -2347,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutserviceurl_nodejs">
 <a href="#state_singlelogoutserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Service<wbr>Url</a>
@@ -2357,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonserviceurl_nodejs">
 <a href="#state_singlesignonserviceurl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</a>
@@ -2367,8 +2170,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storetoken_nodejs">
 <a href="#state_storetoken_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Token</a>
@@ -2377,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustemail_nodejs">
 <a href="#state_trustemail_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Email</a>
@@ -2387,8 +2188,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validatesignature_nodejs">
 <a href="#state_validatesignature_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Signature</a>
@@ -2397,8 +2197,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wantassertionsencrypted_nodejs">
 <a href="#state_wantassertionsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">want<wbr>Assertions<wbr>Encrypted</a>
@@ -2407,8 +2206,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wantassertionssigned_nodejs">
 <a href="#state_wantassertionssigned_nodejs" style="color: inherit; text-decoration: inherit;">want<wbr>Assertions<wbr>Signed</a>
@@ -2417,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xmlsignkeyinfokeynametransformer_nodejs">
 <a href="#state_xmlsignkeyinfokeynametransformer_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</a>
@@ -2427,13 +2224,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_add_read_token_role_on_create_python">
 <a href="#state_add_read_token_role_on_create_python" style="color: inherit; text-decoration: inherit;">add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</a>
@@ -2442,8 +2237,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, new users will be able to read stored tokens. This will automatically assign the `broker.read-token` role. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_python">
 <a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -2452,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of identity provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticate_by_default_python">
 <a href="#state_authenticate_by_default_python" style="color: inherit; text-decoration: inherit;">authenticate_<wbr>by_<wbr>default</a>
@@ -2462,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Authenticate users by default. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backchannel_supported_python">
 <a href="#state_backchannel_supported_python" style="color: inherit; text-decoration: inherit;">backchannel_<wbr>supported</a>
@@ -2472,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support back-channel logout ?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2482,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the realm that is shown when logging in to the admin console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2492,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `false`, users and clients will not be able to access this realm. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_first_broker_login_flow_alias_python">
 <a href="#state_first_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -2502,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to `first broker login`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_authn_python">
 <a href="#state_force_authn_python" style="color: inherit; text-decoration: inherit;">force_<wbr>authn</a>
@@ -2512,8 +2300,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_on_login_page_python">
 <a href="#state_hide_on_login_page_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>on_<wbr>login_<wbr>page</a>
@@ -2522,8 +2309,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_internal_id_python">
 <a href="#state_internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -2532,8 +2318,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_link_only_python">
 <a href="#state_link_only_python" style="color: inherit; text-decoration: inherit;">link_<wbr>only</a>
@@ -2542,8 +2327,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, users cannot login using this provider, but their existing accounts will be linked when possible. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_id_policy_format_python">
 <a href="#state_name_id_policy_format_python" style="color: inherit; text-decoration: inherit;">name_<wbr>id_<wbr>policy_<wbr>format</a>
@@ -2552,8 +2336,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the URI reference corresponding to a name identifier format. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_binding_authn_request_python">
 <a href="#state_post_binding_authn_request_python" style="color: inherit; text-decoration: inherit;">post_<wbr>binding_<wbr>authn_<wbr>request</a>
@@ -2562,8 +2345,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_binding_logout_python">
 <a href="#state_post_binding_logout_python" style="color: inherit; text-decoration: inherit;">post_<wbr>binding_<wbr>logout</a>
@@ -2572,8 +2354,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_binding_response_python">
 <a href="#state_post_binding_response_python" style="color: inherit; text-decoration: inherit;">post_<wbr>binding_<wbr>response</a>
@@ -2582,8 +2363,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_broker_login_flow_alias_python">
 <a href="#state_post_broker_login_flow_alias_python" style="color: inherit; text-decoration: inherit;">post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</a>
@@ -2592,8 +2372,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_python">
 <a href="#state_realm_python" style="color: inherit; text-decoration: inherit;">realm</a>
@@ -2602,8 +2381,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm. This is unique across Keycloak.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_algorithm_python">
 <a href="#state_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
@@ -2612,8 +2390,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm. Defaults to empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signing_certificate_python">
 <a href="#state_signing_certificate_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>certificate</a>
@@ -2622,8 +2399,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_logout_service_url_python">
 <a href="#state_single_logout_service_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>service_<wbr>url</a>
@@ -2632,8 +2408,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send logout requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_sign_on_service_url_python">
 <a href="#state_single_sign_on_service_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>service_<wbr>url</a>
@@ -2642,8 +2417,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Url that must be used to send authentication requests (SAML AuthnRequest).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_store_token_python">
 <a href="#state_store_token_python" style="color: inherit; text-decoration: inherit;">store_<wbr>token</a>
@@ -2652,8 +2426,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, tokens will be stored after authenticating users. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_email_python">
 <a href="#state_trust_email_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>email</a>
@@ -2662,8 +2435,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, email addresses for users in this provider will automatically be verified regardless of the realm's email verification policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validate_signature_python">
 <a href="#state_validate_signature_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>signature</a>
@@ -2672,8 +2444,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_want_assertions_encrypted_python">
 <a href="#state_want_assertions_encrypted_python" style="color: inherit; text-decoration: inherit;">want_<wbr>assertions_<wbr>encrypted</a>
@@ -2682,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects an encrypted Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_want_assertions_signed_python">
 <a href="#state_want_assertions_signed_python" style="color: inherit; text-decoration: inherit;">want_<wbr>assertions_<wbr>signed</a>
@@ -2692,8 +2462,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this service provider expects a signed Assertion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xml_sign_key_info_key_name_transformer_python">
 <a href="#state_xml_sign_key_info_key_name_transformer_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>sign_<wbr>key_<wbr>info_<wbr>key_<wbr>name_<wbr>transformer</a>
@@ -2702,8 +2471,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer. Defaults to empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

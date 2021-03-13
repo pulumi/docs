@@ -288,8 +288,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_csharp">
 <a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -298,8 +297,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -308,8 +306,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceadmins_csharp">
 <a href="#enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
@@ -318,8 +315,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresignedcommits_csharp">
 <a href="#requiresignedcommits_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
@@ -328,8 +324,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredpullrequestreviews_csharp">
 <a href="#requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
@@ -338,8 +333,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredstatuschecks_csharp">
 <a href="#requiredstatuschecks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
@@ -348,8 +342,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_csharp">
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -358,13 +351,11 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_go">
 <a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -373,8 +364,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -383,8 +373,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceadmins_go">
 <a href="#enforceadmins_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
@@ -393,8 +382,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresignedcommits_go">
 <a href="#requiresignedcommits_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
@@ -403,8 +391,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredpullrequestreviews_go">
 <a href="#requiredpullrequestreviews_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
@@ -413,8 +400,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredstatuschecks_go">
 <a href="#requiredstatuschecks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
@@ -423,8 +409,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_go">
 <a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -433,13 +418,11 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_nodejs">
 <a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -448,8 +431,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -458,8 +440,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceadmins_nodejs">
 <a href="#enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
@@ -468,8 +449,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresignedcommits_nodejs">
 <a href="#requiresignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Signed<wbr>Commits</a>
@@ -478,8 +458,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredpullrequestreviews_nodejs">
 <a href="#requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
@@ -488,8 +467,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredstatuschecks_nodejs">
 <a href="#requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
@@ -498,8 +476,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -508,13 +485,11 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="branch_python">
 <a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -523,8 +498,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -533,8 +507,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_admins_python">
 <a href="#enforce_admins_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>admins</a>
@@ -543,8 +516,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_signed_commits_python">
 <a href="#require_signed_commits_python" style="color: inherit; text-decoration: inherit;">require_<wbr>signed_<wbr>commits</a>
@@ -553,8 +525,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_pull_request_reviews_python">
 <a href="#required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
@@ -563,8 +534,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_status_checks_python">
 <a href="#required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
@@ -573,8 +543,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_python">
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -583,8 +552,7 @@ The BranchProtectionV3 resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -595,8 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -604,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -613,13 +579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -627,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,13 +599,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -650,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -659,13 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -673,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -682,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -810,8 +766,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branch_csharp">
 <a href="#state_branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -820,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforceadmins_csharp">
 <a href="#state_enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
@@ -830,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -839,8 +792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_csharp">
 <a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -849,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiresignedcommits_csharp">
 <a href="#state_requiresignedcommits_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
@@ -859,8 +810,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredpullrequestreviews_csharp">
 <a href="#state_requiredpullrequestreviews_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
@@ -869,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredstatuschecks_csharp">
 <a href="#state_requiredstatuschecks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
@@ -879,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_csharp">
 <a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -889,13 +837,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branch_go">
 <a href="#state_branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
@@ -904,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforceadmins_go">
 <a href="#state_enforceadmins_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
@@ -914,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -923,8 +867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_go">
 <a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -933,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiresignedcommits_go">
 <a href="#state_requiresignedcommits_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Signed<wbr>Commits</a>
@@ -943,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredpullrequestreviews_go">
 <a href="#state_requiredpullrequestreviews_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Pull<wbr>Request<wbr>Reviews</a>
@@ -953,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredstatuschecks_go">
 <a href="#state_requiredstatuschecks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Status<wbr>Checks</a>
@@ -963,8 +903,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_go">
 <a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -973,13 +912,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branch_nodejs">
 <a href="#state_branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -988,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforceadmins_nodejs">
 <a href="#state_enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
@@ -998,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1007,8 +942,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_nodejs">
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -1017,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiresignedcommits_nodejs">
 <a href="#state_requiresignedcommits_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Signed<wbr>Commits</a>
@@ -1027,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredpullrequestreviews_nodejs">
 <a href="#state_requiredpullrequestreviews_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Pull<wbr>Request<wbr>Reviews</a>
@@ -1037,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredstatuschecks_nodejs">
 <a href="#state_requiredstatuschecks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Status<wbr>Checks</a>
@@ -1047,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_nodejs">
 <a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -1057,13 +987,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_branch_python">
 <a href="#state_branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
@@ -1072,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Git branch to protect.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_admins_python">
 <a href="#state_enforce_admins_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>admins</a>
@@ -1082,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` enforces status checks for repository administrators.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1091,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_python">
 <a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -1101,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub repository name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_require_signed_commits_python">
 <a href="#state_require_signed_commits_python" style="color: inherit; text-decoration: inherit;">require_<wbr>signed_<wbr>commits</a>
@@ -1111,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean, setting this to `true` requires all commits to be signed with GPG.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_pull_request_reviews_python">
 <a href="#state_required_pull_request_reviews_python" style="color: inherit; text-decoration: inherit;">required_<wbr>pull_<wbr>request_<wbr>reviews</a>
@@ -1121,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_status_checks_python">
 <a href="#state_required_status_checks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>status_<wbr>checks</a>
@@ -1131,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for required status checks. See Required Status Checks below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_python">
 <a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -1141,8 +1062,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enforce restrictions for the users and teams that may push to the branch. See Restrictions below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1157,8 +1077,7 @@ The following state arguments are supported:
 <h4 id="branchprotectionv3requiredpullrequestreviews">Branch<wbr>Protection<wbr>V3Required<wbr>Pull<wbr>Request<wbr>Reviews</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dismissstalereviews_csharp">
 <a href="#dismissstalereviews_csharp" style="color: inherit; text-decoration: inherit;">Dismiss<wbr>Stale<wbr>Reviews</a>
@@ -1166,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissalteams_csharp">
 <a href="#dismissalteams_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Teams</a>
@@ -1175,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissalusers_csharp">
 <a href="#dismissalusers_csharp" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Users</a>
@@ -1184,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="includeadmins_csharp">
 <a href="#includeadmins_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
@@ -1193,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="requirecodeownerreviews_csharp">
 <a href="#requirecodeownerreviews_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Code<wbr>Owner<wbr>Reviews</a>
@@ -1202,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredapprovingreviewcount_csharp">
 <a href="#requiredapprovingreviewcount_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Approving<wbr>Review<wbr>Count</a>
@@ -1211,13 +1125,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dismissstalereviews_go">
 <a href="#dismissstalereviews_go" style="color: inherit; text-decoration: inherit;">Dismiss<wbr>Stale<wbr>Reviews</a>
@@ -1225,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissalteams_go">
 <a href="#dismissalteams_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Teams</a>
@@ -1234,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissalusers_go">
 <a href="#dismissalusers_go" style="color: inherit; text-decoration: inherit;">Dismissal<wbr>Users</a>
@@ -1243,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="includeadmins_go">
 <a href="#includeadmins_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
@@ -1252,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="requirecodeownerreviews_go">
 <a href="#requirecodeownerreviews_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Code<wbr>Owner<wbr>Reviews</a>
@@ -1261,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredapprovingreviewcount_go">
 <a href="#requiredapprovingreviewcount_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Approving<wbr>Review<wbr>Count</a>
@@ -1270,13 +1177,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dismissstalereviews_nodejs">
 <a href="#dismissstalereviews_nodejs" style="color: inherit; text-decoration: inherit;">dismiss<wbr>Stale<wbr>Reviews</a>
@@ -1284,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissalteams_nodejs">
 <a href="#dismissalteams_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Teams</a>
@@ -1293,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissalusers_nodejs">
 <a href="#dismissalusers_nodejs" style="color: inherit; text-decoration: inherit;">dismissal<wbr>Users</a>
@@ -1302,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="includeadmins_nodejs">
 <a href="#includeadmins_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
@@ -1311,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="requirecodeownerreviews_nodejs">
 <a href="#requirecodeownerreviews_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Code<wbr>Owner<wbr>Reviews</a>
@@ -1320,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredapprovingreviewcount_nodejs">
 <a href="#requiredapprovingreviewcount_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Approving<wbr>Review<wbr>Count</a>
@@ -1329,13 +1229,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dismiss_stale_reviews_python">
 <a href="#dismiss_stale_reviews_python" style="color: inherit; text-decoration: inherit;">dismiss_<wbr>stale_<wbr>reviews</a>
@@ -1343,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissal_teams_python">
 <a href="#dismissal_teams_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>teams</a>
@@ -1352,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dismissal_users_python">
 <a href="#dismissal_users_python" style="color: inherit; text-decoration: inherit;">dismissal_<wbr>users</a>
@@ -1361,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="include_admins_python">
 <a href="#include_admins_python" style="color: inherit; text-decoration: inherit;">include_<wbr>admins</a>
@@ -1370,8 +1265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="require_code_owner_reviews_python">
 <a href="#require_code_owner_reviews_python" style="color: inherit; text-decoration: inherit;">require_<wbr>code_<wbr>owner_<wbr>reviews</a>
@@ -1379,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_approving_review_count_python">
 <a href="#required_approving_review_count_python" style="color: inherit; text-decoration: inherit;">required_<wbr>approving_<wbr>review_<wbr>count</a>
@@ -1388,15 +1281,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="branchprotectionv3requiredstatuschecks">Branch<wbr>Protection<wbr>V3Required<wbr>Status<wbr>Checks</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contexts_csharp">
 <a href="#contexts_csharp" style="color: inherit; text-decoration: inherit;">Contexts</a>
@@ -1404,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="includeadmins_csharp">
 <a href="#includeadmins_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
@@ -1413,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="strict_csharp">
 <a href="#strict_csharp" style="color: inherit; text-decoration: inherit;">Strict</a>
@@ -1422,13 +1311,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contexts_go">
 <a href="#contexts_go" style="color: inherit; text-decoration: inherit;">Contexts</a>
@@ -1436,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="includeadmins_go">
 <a href="#includeadmins_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Admins</a>
@@ -1445,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="strict_go">
 <a href="#strict_go" style="color: inherit; text-decoration: inherit;">Strict</a>
@@ -1454,13 +1339,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contexts_nodejs">
 <a href="#contexts_nodejs" style="color: inherit; text-decoration: inherit;">contexts</a>
@@ -1468,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="includeadmins_nodejs">
 <a href="#includeadmins_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Admins</a>
@@ -1477,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="strict_nodejs">
 <a href="#strict_nodejs" style="color: inherit; text-decoration: inherit;">strict</a>
@@ -1486,13 +1367,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contexts_python">
 <a href="#contexts_python" style="color: inherit; text-decoration: inherit;">contexts</a>
@@ -1500,8 +1379,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="include_admins_python">
 <a href="#include_admins_python" style="color: inherit; text-decoration: inherit;">include_<wbr>admins</a>
@@ -1509,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use enforce_admins instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="strict_python">
 <a href="#strict_python" style="color: inherit; text-decoration: inherit;">strict</a>
@@ -1518,15 +1395,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="branchprotectionv3restrictions">Branch<wbr>Protection<wbr>V3Restrictions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apps_csharp">
 <a href="#apps_csharp" style="color: inherit; text-decoration: inherit;">Apps</a>
@@ -1534,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_csharp">
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -1543,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1552,13 +1425,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apps_go">
 <a href="#apps_go" style="color: inherit; text-decoration: inherit;">Apps</a>
@@ -1566,8 +1437,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_go">
 <a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -1575,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1584,13 +1453,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apps_nodejs">
 <a href="#apps_nodejs" style="color: inherit; text-decoration: inherit;">apps</a>
@@ -1598,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_nodejs">
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -1607,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1616,13 +1481,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apps_python">
 <a href="#apps_python" style="color: inherit; text-decoration: inherit;">apps</a>
@@ -1630,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_python">
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -1639,8 +1501,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1648,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

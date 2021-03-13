@@ -170,8 +170,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -180,8 +179,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -190,8 +188,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#databaseuserrole">List&lt;Database<wbr>User<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -200,8 +197,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdatabasename_csharp">
 <a href="#authdatabasename_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Database<wbr>Name</a>
@@ -211,8 +207,7 @@ The DatabaseUser resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsiamtype_csharp">
 <a href="#awsiamtype_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iam<wbr>Type</a>
@@ -221,8 +216,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -231,8 +225,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -240,8 +233,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">List&lt;Database<wbr>User<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -249,8 +241,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -258,8 +249,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">List&lt;Database<wbr>User<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509type_csharp">
 <a href="#x509type_csharp" style="color: inherit; text-decoration: inherit;">X509Type</a>
@@ -268,13 +258,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -283,8 +271,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -293,8 +280,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">[]Database<wbr>User<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -303,8 +289,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdatabasename_go">
 <a href="#authdatabasename_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Database<wbr>Name</a>
@@ -314,8 +299,7 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsiamtype_go">
 <a href="#awsiamtype_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iam<wbr>Type</a>
@@ -324,8 +308,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -334,8 +317,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -343,8 +325,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">[]Database<wbr>User<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -352,8 +333,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -361,8 +341,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">[]Database<wbr>User<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509type_go">
 <a href="#x509type_go" style="color: inherit; text-decoration: inherit;">X509Type</a>
@@ -371,13 +350,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -386,8 +363,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -396,8 +372,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">Database<wbr>User<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -406,8 +381,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdatabasename_nodejs">
 <a href="#authdatabasename_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Database<wbr>Name</a>
@@ -417,8 +391,7 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awsiamtype_nodejs">
 <a href="#awsiamtype_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Iam<wbr>Type</a>
@@ -427,8 +400,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -437,8 +409,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -446,8 +417,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">Database<wbr>User<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -455,8 +425,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -464,8 +433,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">Database<wbr>User<wbr>Scope[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509type_nodejs">
 <a href="#x509type_nodejs" style="color: inherit; text-decoration: inherit;">x509Type</a>
@@ -474,13 +442,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -489,8 +455,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -499,8 +464,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">Sequence[Database<wbr>User<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -509,8 +473,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_database_name_python">
 <a href="#auth_database_name_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>database_<wbr>name</a>
@@ -520,8 +483,7 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_iam_type_python">
 <a href="#aws_iam_type_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>iam_<wbr>type</a>
@@ -530,8 +492,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -540,8 +501,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -549,8 +509,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">Sequence[Database<wbr>User<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -558,8 +517,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -567,8 +525,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">Sequence[Database<wbr>User<wbr>Scope<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="x509_type_python">
 <a href="#x509_type_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>type</a>
@@ -577,8 +534,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -589,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -598,13 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -612,13 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -626,13 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -640,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -768,8 +716,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authdatabasename_csharp">
 <a href="#state_authdatabasename_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Database<wbr>Name</a>
@@ -779,8 +726,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_awsiamtype_csharp">
 <a href="#state_awsiamtype_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iam<wbr>Type</a>
@@ -789,8 +735,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -799,8 +744,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -808,8 +752,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">List&lt;Database<wbr>User<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -817,8 +760,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -827,8 +769,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -837,8 +778,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">List&lt;Database<wbr>User<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopes_csharp">
 <a href="#state_scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -846,8 +786,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">List&lt;Database<wbr>User<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -856,8 +795,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509type_csharp">
 <a href="#state_x509type_csharp" style="color: inherit; text-decoration: inherit;">X509Type</a>
@@ -866,13 +804,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authdatabasename_go">
 <a href="#state_authdatabasename_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Database<wbr>Name</a>
@@ -882,8 +818,7 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_awsiamtype_go">
 <a href="#state_awsiamtype_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Iam<wbr>Type</a>
@@ -892,8 +827,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -902,8 +836,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -911,8 +844,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">[]Database<wbr>User<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -920,8 +852,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -930,8 +861,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -940,8 +870,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">[]Database<wbr>User<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopes_go">
 <a href="#state_scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -949,8 +878,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">[]Database<wbr>User<wbr>Scope</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -959,8 +887,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509type_go">
 <a href="#state_x509type_go" style="color: inherit; text-decoration: inherit;">X509Type</a>
@@ -969,13 +896,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authdatabasename_nodejs">
 <a href="#state_authdatabasename_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Database<wbr>Name</a>
@@ -985,8 +910,7 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_awsiamtype_nodejs">
 <a href="#state_awsiamtype_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Iam<wbr>Type</a>
@@ -995,8 +919,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1005,8 +928,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1014,8 +936,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">Database<wbr>User<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1023,8 +944,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1033,8 +953,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1043,8 +962,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">Database<wbr>User<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopes_nodejs">
 <a href="#state_scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1052,8 +970,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">Database<wbr>User<wbr>Scope[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1062,8 +979,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509type_nodejs">
 <a href="#state_x509type_nodejs" style="color: inherit; text-decoration: inherit;">x509Type</a>
@@ -1072,13 +988,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auth_database_name_python">
 <a href="#state_auth_database_name_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>database_<wbr>name</a>
@@ -1088,8 +1002,7 @@ Accepted values include:
     </dt>
     <dd>{{% md %}}Database against which Atlas authenticates the user. A user must provide both a username and authentication database to log into MongoDB.
 Accepted values include:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aws_iam_type_python">
 <a href="#state_aws_iam_type_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>iam_<wbr>type</a>
@@ -1098,8 +1011,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this value is set, the new database user authenticates with AWS IAM credentials. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1108,8 +1020,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use auth_database_name instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1117,8 +1028,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserlabel">Sequence[Database<wbr>User<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1126,8 +1036,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1136,8 +1045,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1146,8 +1054,7 @@ Accepted values include:
         <span class="property-type"><a href="#databaseuserrole">Sequence[Database<wbr>User<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of user’s roles and the databases / collections on which the roles apply. A role allows the user to perform particular actions on the specified database. A role on the admin database can include privileges that apply to the other databases as well. See Roles below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopes_python">
 <a href="#state_scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1155,8 +1062,7 @@ Accepted values include:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseuserscope">Sequence[Database<wbr>User<wbr>Scope<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1165,8 +1071,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for authenticating to MongoDB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_x509_type_python">
 <a href="#state_x509_type_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>type</a>
@@ -1175,8 +1080,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}X.509 method by which the provided username is authenticated. If no value is given, Atlas uses the default value of NONE. The accepted types are:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1191,8 +1095,7 @@ Accepted values include:
 <h4 id="databaseuserlabel">Database<wbr>User<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1201,8 +1104,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1211,13 +1113,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1226,8 +1126,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1236,13 +1135,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1251,8 +1148,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1261,13 +1157,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1276,8 +1170,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1286,15 +1179,13 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseuserrole">Database<wbr>User<wbr>Role</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="collectionname_csharp">
 <a href="#collectionname_csharp" style="color: inherit; text-decoration: inherit;">Collection<wbr>Name</a>
@@ -1303,8 +1194,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1313,8 +1203,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1323,13 +1212,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the role to grant. See [Create a Database User](https://docs.atlas.mongodb.com/reference/api/database-users-create-a-user/) `roles.roleName` for valid values and restrictions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="collectionname_go">
 <a href="#collectionname_go" style="color: inherit; text-decoration: inherit;">Collection<wbr>Name</a>
@@ -1338,8 +1225,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1348,8 +1234,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1358,13 +1243,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the role to grant. See [Create a Database User](https://docs.atlas.mongodb.com/reference/api/database-users-create-a-user/) `roles.roleName` for valid values and restrictions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="collectionname_nodejs">
 <a href="#collectionname_nodejs" style="color: inherit; text-decoration: inherit;">collection<wbr>Name</a>
@@ -1373,8 +1256,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1383,8 +1265,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -1393,13 +1274,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the role to grant. See [Create a Database User](https://docs.atlas.mongodb.com/reference/api/database-users-create-a-user/) `roles.roleName` for valid values and restrictions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="collection_name_python">
 <a href="#collection_name_python" style="color: inherit; text-decoration: inherit;">collection_<wbr>name</a>
@@ -1408,8 +1287,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Collection for which the role applies. You can specify a collection for the `read` and `readWrite` roles. If you do not specify a collection for `read` and `readWrite`, the role applies to all collections in the database (excluding some collections in the `system`. database).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1418,8 +1296,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database on which the user has the specified role. A role on the `admin` database can include privileges that apply to the other databases.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -1428,15 +1305,13 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the role to grant. See [Create a Database User](https://docs.atlas.mongodb.com/reference/api/database-users-create-a-user/) `roles.roleName` for valid values and restrictions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databaseuserscope">Database<wbr>User<wbr>Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1445,8 +1320,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster or Atlas Data Lake that the user has access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1455,13 +1329,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1470,8 +1342,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster or Atlas Data Lake that the user has access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1480,13 +1351,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1495,8 +1364,7 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster or Atlas Data Lake that the user has access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1505,13 +1373,11 @@ Accepted values include:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1520,8 +1386,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cluster or Atlas Data Lake that the user has access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1530,8 +1395,7 @@ Accepted values include:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of resource that the user has access to. Valid values are: `CLUSTER` and `DATA_LAKE`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

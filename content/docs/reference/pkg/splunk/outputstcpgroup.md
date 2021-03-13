@@ -1,8 +1,8 @@
 
 ---
 title: "OutputsTcpGroup"
-title_tag: "Resource OutputsTcpGroup | Package Splunk"
-meta_desc: "Explore the OutputsTcpGroup resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.OutputsTcpGroup"
+title_tag: "splunk.OutputsTcpGroup"
+meta_desc: "Documentation for the splunk.OutputsTcpGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Access to the configuration of a group of one or more data forwarding destinatio
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -46,9 +52,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -77,9 +86,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -95,9 +107,12 @@ tcp_group = splunk.OutputsTcpGroup("tcpGroup",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -115,9 +130,16 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a OutputsTcpGroup Resource {#create}
@@ -142,9 +164,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -152,9 +172,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -162,9 +180,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -172,10 +188,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +214,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -211,9 +222,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +230,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +238,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,18 +246,13 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +260,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +268,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +276,7 @@ const tcpGroup = new splunk.OutputsTcpGroup("tcp_group", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +291,7 @@ The OutputsTcpGroup resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_csharp">
 <a href="#servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -309,8 +300,7 @@ The OutputsTcpGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -319,8 +309,7 @@ The OutputsTcpGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressed_csharp">
 <a href="#compressed_csharp" style="color: inherit; text-decoration: inherit;">Compressed</a>
@@ -329,8 +318,7 @@ The OutputsTcpGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -339,8 +327,7 @@ The OutputsTcpGroup resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropeventsonqueuefull_csharp">
 <a href="#dropeventsonqueuefull_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Events<wbr>On<wbr>Queue<wbr>Full</a>
@@ -352,8 +339,7 @@ The OutputsTcpGroup resource accepts the following [input]({{< relref "/docs/int
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="heartbeatfrequency_csharp">
 <a href="#heartbeatfrequency_csharp" style="color: inherit; text-decoration: inherit;">Heartbeat<wbr>Frequency</a>
@@ -363,8 +349,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueuesize_csharp">
 <a href="#maxqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Size</a>
@@ -378,8 +363,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -388,8 +372,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -398,8 +381,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendcookeddata_csharp">
 <a href="#sendcookeddata_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Cooked<wbr>Data</a>
@@ -409,8 +391,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -419,14 +400,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_go">
 <a href="#servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -435,8 +413,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -445,8 +422,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressed_go">
 <a href="#compressed_go" style="color: inherit; text-decoration: inherit;">Compressed</a>
@@ -455,8 +431,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -465,8 +440,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropeventsonqueuefull_go">
 <a href="#dropeventsonqueuefull_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Events<wbr>On<wbr>Queue<wbr>Full</a>
@@ -478,8 +452,7 @@ Set to false if you are sending to a third-party system.
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="heartbeatfrequency_go">
 <a href="#heartbeatfrequency_go" style="color: inherit; text-decoration: inherit;">Heartbeat<wbr>Frequency</a>
@@ -489,8 +462,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueuesize_go">
 <a href="#maxqueuesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Size</a>
@@ -504,8 +476,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -514,8 +485,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -524,8 +494,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendcookeddata_go">
 <a href="#sendcookeddata_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Cooked<wbr>Data</a>
@@ -535,8 +504,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -545,14 +513,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_nodejs">
 <a href="#servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -561,8 +526,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -571,8 +535,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressed_nodejs">
 <a href="#compressed_nodejs" style="color: inherit; text-decoration: inherit;">compressed</a>
@@ -581,8 +544,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -591,8 +553,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dropeventsonqueuefull_nodejs">
 <a href="#dropeventsonqueuefull_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Events<wbr>On<wbr>Queue<wbr>Full</a>
@@ -604,8 +565,7 @@ Set to false if you are sending to a third-party system.
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="heartbeatfrequency_nodejs">
 <a href="#heartbeatfrequency_nodejs" style="color: inherit; text-decoration: inherit;">heartbeat<wbr>Frequency</a>
@@ -615,8 +575,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxqueuesize_nodejs">
 <a href="#maxqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queue<wbr>Size</a>
@@ -630,8 +589,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -640,8 +598,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -650,8 +607,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendcookeddata_nodejs">
 <a href="#sendcookeddata_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Cooked<wbr>Data</a>
@@ -661,8 +617,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -671,14 +626,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servers_python">
 <a href="#servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -687,8 +639,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -697,8 +648,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressed_python">
 <a href="#compressed_python" style="color: inherit; text-decoration: inherit;">compressed</a>
@@ -707,8 +657,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -717,8 +666,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drop_events_on_queue_full_python">
 <a href="#drop_events_on_queue_full_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>events_<wbr>on_<wbr>queue_<wbr>full</a>
@@ -730,8 +678,7 @@ Set to false if you are sending to a third-party system.
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="heartbeat_frequency_python">
 <a href="#heartbeat_frequency_python" style="color: inherit; text-decoration: inherit;">heartbeat_<wbr>frequency</a>
@@ -741,8 +688,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_queue_size_python">
 <a href="#max_queue_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queue_<wbr>size</a>
@@ -756,8 +702,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -766,8 +711,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -776,8 +720,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="send_cooked_data_python">
 <a href="#send_cooked_data_python" style="color: inherit; text-decoration: inherit;">send_<wbr>cooked_<wbr>data</a>
@@ -787,8 +730,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -797,8 +739,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,9 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,14 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -834,14 +770,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -849,14 +782,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -864,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -992,9 +921,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1003,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressed_csharp">
 <a href="#state_compressed_csharp" style="color: inherit; text-decoration: inherit;">Compressed</a>
@@ -1013,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1023,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropeventsonqueuefull_csharp">
 <a href="#state_dropeventsonqueuefull_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Events<wbr>On<wbr>Queue<wbr>Full</a>
@@ -1036,8 +960,7 @@ The following state arguments are supported:
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_heartbeatfrequency_csharp">
 <a href="#state_heartbeatfrequency_csharp" style="color: inherit; text-decoration: inherit;">Heartbeat<wbr>Frequency</a>
@@ -1047,8 +970,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxqueuesize_csharp">
 <a href="#state_maxqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Size</a>
@@ -1062,8 +984,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_csharp">
 <a href="#state_method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1072,8 +993,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1082,8 +1002,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sendcookeddata_csharp">
 <a href="#state_sendcookeddata_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Cooked<wbr>Data</a>
@@ -1093,8 +1012,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_csharp">
 <a href="#state_servers_csharp" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1103,8 +1021,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1113,14 +1030,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1129,8 +1043,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressed_go">
 <a href="#state_compressed_go" style="color: inherit; text-decoration: inherit;">Compressed</a>
@@ -1139,8 +1052,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1149,8 +1061,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropeventsonqueuefull_go">
 <a href="#state_dropeventsonqueuefull_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Events<wbr>On<wbr>Queue<wbr>Full</a>
@@ -1162,8 +1073,7 @@ Set to false if you are sending to a third-party system.
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_heartbeatfrequency_go">
 <a href="#state_heartbeatfrequency_go" style="color: inherit; text-decoration: inherit;">Heartbeat<wbr>Frequency</a>
@@ -1173,8 +1083,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxqueuesize_go">
 <a href="#state_maxqueuesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Size</a>
@@ -1188,8 +1097,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_go">
 <a href="#state_method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1198,8 +1106,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1208,8 +1115,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sendcookeddata_go">
 <a href="#state_sendcookeddata_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Cooked<wbr>Data</a>
@@ -1219,8 +1125,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_go">
 <a href="#state_servers_go" style="color: inherit; text-decoration: inherit;">Servers</a>
@@ -1229,8 +1134,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1239,14 +1143,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1255,8 +1156,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressed_nodejs">
 <a href="#state_compressed_nodejs" style="color: inherit; text-decoration: inherit;">compressed</a>
@@ -1265,8 +1165,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1275,8 +1174,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropeventsonqueuefull_nodejs">
 <a href="#state_dropeventsonqueuefull_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Events<wbr>On<wbr>Queue<wbr>Full</a>
@@ -1288,8 +1186,7 @@ Set to false if you are sending to a third-party system.
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_heartbeatfrequency_nodejs">
 <a href="#state_heartbeatfrequency_nodejs" style="color: inherit; text-decoration: inherit;">heartbeat<wbr>Frequency</a>
@@ -1299,8 +1196,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxqueuesize_nodejs">
 <a href="#state_maxqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queue<wbr>Size</a>
@@ -1314,8 +1210,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_nodejs">
 <a href="#state_method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1324,8 +1219,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1334,8 +1228,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sendcookeddata_nodejs">
 <a href="#state_sendcookeddata_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Cooked<wbr>Data</a>
@@ -1345,8 +1238,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_nodejs">
 <a href="#state_servers_nodejs" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1355,8 +1247,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1365,14 +1256,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1381,8 +1269,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type"><a href="#outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressed_python">
 <a href="#state_compressed_python" style="color: inherit; text-decoration: inherit;">compressed</a>
@@ -1391,8 +1278,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, forwarder sends compressed data. If set to true, the receiver port must also have compression turned on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1401,8 +1287,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, disables the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drop_events_on_queue_full_python">
 <a href="#state_drop_events_on_queue_full_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>events_<wbr>on_<wbr>queue_<wbr>full</a>
@@ -1414,8 +1299,7 @@ Set to false if you are sending to a third-party system.
 <br>CAUTION: Do not set this value to a positive integer if you are monitoring files.
 Setting this to -1 or 0 causes the output queue to block when it gets full, which causes further blocking up the processing chain. If any target group queue is blocked, no more data reaches any other target group.
 Using auto load-balancing is the best way to minimize this condition, because, in that case, multiple receivers must be down (or jammed up) before queue blocking can occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_heartbeat_frequency_python">
 <a href="#state_heartbeat_frequency_python" style="color: inherit; text-decoration: inherit;">heartbeat_<wbr>frequency</a>
@@ -1425,8 +1309,7 @@ Using auto load-balancing is the best way to minimize this condition, because, i
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a heartbeat packet to the receiving server.
 Heartbeats are only sent if sendCookedData=true. Defaults to 30 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_queue_size_python">
 <a href="#state_max_queue_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queue_<wbr>size</a>
@@ -1440,8 +1323,7 @@ Although the wait queue and the output queues are both configured by this attrib
 For heavy forwarders sending parsed data, maxQueueSize is the maximum number of events. Since events are typically much shorter than data blocks, the memory consumed by the queue on a parsing forwarder is likely to be much smaller than on a non-parsing forwarder, if you use this version of the setting.
 If specified as a lone integer (for example, maxQueueSize=100), maxQueueSize indicates the maximum number of queued events (for parsed data) or blocks of data (for unparsed data). A block of data is approximately 64KB. For non-parsing forwarders, such as universal forwarders, that send unparsed data, maxQueueSize is the maximum number of data blocks.
 If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=100MB), maxQueueSize indicates the maximum RAM allocated to the queue buffer. Defaults to 500KB (which means a maximum size of 500KB for the output queue and 1500KB for the wait queue, if any).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_method_python">
 <a href="#state_method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1450,8 +1332,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (tcpout | syslog). Specifies the type of output processor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1460,8 +1341,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the group of receivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_send_cooked_data_python">
 <a href="#state_send_cooked_data_python" style="color: inherit; text-decoration: inherit;">send_<wbr>cooked_<wbr>data</a>
@@ -1471,8 +1351,7 @@ If specified as an integer followed by KB, MB, or GB (for example, maxQueueSize=
     </dt>
     <dd>{{% md %}}If true, events are cooked (processed by Splunk software). If false, events are raw and untouched prior to sending. Defaults to true.
 Set to false if you are sending to a third-party system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servers_python">
 <a href="#state_servers_python" style="color: inherit; text-decoration: inherit;">servers</a>
@@ -1481,8 +1360,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Comma-separated list of servers to include in the group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1491,8 +1369,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token value generated by the indexer after configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1507,9 +1384,7 @@ Set to false if you are sending to a third-party system.
 <h4 id="outputstcpgroupacl">Outputs<wbr>Tcp<wbr>Group<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1517,8 +1392,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1526,8 +1400,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1535,8 +1408,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1544,8 +1416,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1553,8 +1424,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1562,8 +1432,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1571,8 +1440,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1580,8 +1448,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1589,8 +1456,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1598,8 +1464,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1607,14 +1472,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -1622,8 +1484,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -1631,8 +1492,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -1640,8 +1500,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -1649,8 +1508,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -1658,8 +1516,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -1667,8 +1524,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1676,8 +1532,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -1685,8 +1540,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -1694,8 +1548,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -1703,8 +1556,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -1712,14 +1564,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1727,8 +1576,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -1736,8 +1584,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -1745,8 +1592,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -1754,8 +1600,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -1763,8 +1608,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -1772,8 +1616,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1781,8 +1624,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1790,8 +1632,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1799,8 +1640,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1808,8 +1648,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1817,14 +1656,11 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -1832,8 +1668,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -1841,8 +1676,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -1850,8 +1684,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -1859,8 +1692,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -1868,8 +1700,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -1877,8 +1708,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1886,8 +1716,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -1895,8 +1724,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -1904,8 +1732,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -1913,8 +1740,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -1922,8 +1748,7 @@ Set to false if you are sending to a third-party system.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -270,8 +270,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -280,8 +279,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -290,8 +288,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#alertmutingrulefilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Alert<wbr>Muting<wbr>Rule<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -300,8 +297,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectors_csharp">
 <a href="#detectors_csharp" style="color: inherit; text-decoration: inherit;">Detectors</a>
@@ -310,8 +306,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stoptime_csharp">
 <a href="#stoptime_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Time</a>
@@ -320,13 +315,11 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -335,8 +328,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -345,8 +337,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#alertmutingrulefilter">[]Alert<wbr>Muting<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -355,8 +346,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectors_go">
 <a href="#detectors_go" style="color: inherit; text-decoration: inherit;">Detectors</a>
@@ -365,8 +355,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stoptime_go">
 <a href="#stoptime_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Time</a>
@@ -375,13 +364,11 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -390,8 +377,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -400,8 +386,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#alertmutingrulefilter">Alert<wbr>Muting<wbr>Rule<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -410,8 +395,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectors_nodejs">
 <a href="#detectors_nodejs" style="color: inherit; text-decoration: inherit;">detectors</a>
@@ -420,8 +404,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stoptime_nodejs">
 <a href="#stoptime_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Time</a>
@@ -430,13 +413,11 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -445,8 +426,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -455,8 +435,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#alertmutingrulefilter">Sequence[Alert<wbr>Muting<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -465,8 +444,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="detectors_python">
 <a href="#detectors_python" style="color: inherit; text-decoration: inherit;">detectors</a>
@@ -475,8 +453,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stop_time_python">
 <a href="#stop_time_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>time</a>
@@ -485,8 +462,7 @@ The AlertMutingRule resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -497,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="effectivestarttime_csharp">
 <a href="#effectivestarttime_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Start<wbr>Time</a>
@@ -506,8 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -515,13 +489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="effectivestarttime_go">
 <a href="#effectivestarttime_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Start<wbr>Time</a>
@@ -529,8 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -538,13 +509,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="effectivestarttime_nodejs">
 <a href="#effectivestarttime_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Start<wbr>Time</a>
@@ -552,8 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,13 +529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="effective_start_time_python">
 <a href="#effective_start_time_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>start_<wbr>time</a>
@@ -575,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -584,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -712,8 +676,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -722,8 +685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectors_csharp">
 <a href="#state_detectors_csharp" style="color: inherit; text-decoration: inherit;">Detectors</a>
@@ -732,8 +694,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effectivestarttime_csharp">
 <a href="#state_effectivestarttime_csharp" style="color: inherit; text-decoration: inherit;">Effective<wbr>Start<wbr>Time</a>
@@ -741,8 +702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
 <a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -751,8 +711,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertmutingrulefilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Alert<wbr>Muting<wbr>Rule<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -761,8 +720,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stoptime_csharp">
 <a href="#state_stoptime_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Time</a>
@@ -771,13 +729,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -786,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectors_go">
 <a href="#state_detectors_go" style="color: inherit; text-decoration: inherit;">Detectors</a>
@@ -796,8 +751,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effectivestarttime_go">
 <a href="#state_effectivestarttime_go" style="color: inherit; text-decoration: inherit;">Effective<wbr>Start<wbr>Time</a>
@@ -805,8 +759,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -815,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertmutingrulefilter">[]Alert<wbr>Muting<wbr>Rule<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_go">
 <a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -825,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stoptime_go">
 <a href="#state_stoptime_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Time</a>
@@ -835,13 +786,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -850,8 +799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectors_nodejs">
 <a href="#state_detectors_nodejs" style="color: inherit; text-decoration: inherit;">detectors</a>
@@ -860,8 +808,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effectivestarttime_nodejs">
 <a href="#state_effectivestarttime_nodejs" style="color: inherit; text-decoration: inherit;">effective<wbr>Start<wbr>Time</a>
@@ -869,8 +816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -879,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertmutingrulefilter">Alert<wbr>Muting<wbr>Rule<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -889,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stoptime_nodejs">
 <a href="#state_stoptime_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Time</a>
@@ -899,13 +843,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -914,8 +856,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description for this muting rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detectors_python">
 <a href="#state_detectors_python" style="color: inherit; text-decoration: inherit;">detectors</a>
@@ -924,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A convenience attribute that associated this muting rule with specific detector ids.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_effective_start_time_python">
 <a href="#state_effective_start_time_python" style="color: inherit; text-decoration: inherit;">effective_<wbr>start_<wbr>time</a>
@@ -933,8 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -943,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertmutingrulefilter">Sequence[Alert<wbr>Muting<wbr>Rule<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filters for this rule. See [Creating muting rules from scratch](https://docs.signalfx.com/en/latest/detect-alert/mute-notifications.html#rule-from-scratch) for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -953,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unit time stamp in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stop_time_python">
 <a href="#state_stop_time_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>time</a>
@@ -963,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Starting time of an alert muting rule as a Unix time stamp in seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -979,8 +915,7 @@ The following state arguments are supported:
 <h4 id="alertmutingrulefilter">Alert<wbr>Muting<wbr>Rule<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -989,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyvalue_csharp">
 <a href="#propertyvalue_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Value</a>
@@ -999,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_csharp">
 <a href="#negated_csharp" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -1009,13 +942,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if this is a "not" filter. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -1024,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyvalue_go">
 <a href="#propertyvalue_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Value</a>
@@ -1034,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_go">
 <a href="#negated_go" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -1044,13 +973,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if this is a "not" filter. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -1059,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propertyvalue_nodejs">
 <a href="#propertyvalue_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Value</a>
@@ -1069,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property value to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_nodejs">
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -1079,13 +1004,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if this is a "not" filter. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -1094,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_value_python">
 <a href="#property_value_python" style="color: inherit; text-decoration: inherit;">property_<wbr>value</a>
@@ -1104,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property value to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_python">
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -1114,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if this is a "not" filter. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

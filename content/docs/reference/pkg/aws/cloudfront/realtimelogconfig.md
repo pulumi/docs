@@ -432,8 +432,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -442,8 +441,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_csharp">
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -452,8 +450,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="samplingrate_csharp">
 <a href="#samplingrate_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
@@ -462,8 +459,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,13 +468,11 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -487,8 +481,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_go">
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -497,8 +490,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="samplingrate_go">
 <a href="#samplingrate_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
@@ -507,8 +499,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -517,13 +508,11 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -532,8 +521,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_nodejs">
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -542,8 +530,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="samplingrate_nodejs">
 <a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
@@ -552,8 +539,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -562,13 +548,11 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -577,8 +561,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fields_python">
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -587,8 +570,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sampling_rate_python">
 <a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
@@ -597,8 +579,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +588,7 @@ The RealtimeLogConfig resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -619,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -629,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -638,13 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -653,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -662,13 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -677,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -686,13 +658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -701,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -710,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -838,8 +806,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -848,8 +815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -858,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_csharp">
 <a href="#state_fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -868,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -878,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingrate_csharp">
 <a href="#state_samplingrate_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
@@ -888,13 +851,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -903,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -913,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_go">
 <a href="#state_fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
@@ -923,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -933,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingrate_go">
 <a href="#state_samplingrate_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
@@ -943,13 +900,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -958,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -968,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_nodejs">
 <a href="#state_fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -978,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -988,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingrate_nodejs">
 <a href="#state_samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
@@ -998,13 +949,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1013,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1023,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data streams where real-time log data is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fields_python">
 <a href="#state_fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
@@ -1033,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1043,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name to identify this real-time log configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sampling_rate_python">
 <a href="#state_sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
@@ -1053,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1069,8 +1013,7 @@ The following state arguments are supported:
 <h4 id="realtimelogconfigendpoint">Realtime<wbr>Log<wbr>Config<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kinesisstreamconfig_csharp">
 <a href="#kinesisstreamconfig_csharp" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream<wbr>Config</a>
@@ -1079,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamtype_csharp">
 <a href="#streamtype_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Type</a>
@@ -1089,13 +1031,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kinesisstreamconfig_go">
 <a href="#kinesisstreamconfig_go" style="color: inherit; text-decoration: inherit;">Kinesis<wbr>Stream<wbr>Config</a>
@@ -1104,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamtype_go">
 <a href="#streamtype_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Type</a>
@@ -1114,13 +1053,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kinesisstreamconfig_nodejs">
 <a href="#kinesisstreamconfig_nodejs" style="color: inherit; text-decoration: inherit;">kinesis<wbr>Stream<wbr>Config</a>
@@ -1129,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamtype_nodejs">
 <a href="#streamtype_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Type</a>
@@ -1139,13 +1075,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kinesis_stream_config_python">
 <a href="#kinesis_stream_config_python" style="color: inherit; text-decoration: inherit;">kinesis_<wbr>stream_<wbr>config</a>
@@ -1154,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis data stream configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stream_type_python">
 <a href="#stream_type_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>type</a>
@@ -1164,15 +1097,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="realtimelogconfigendpointkinesisstreamconfig">Realtime<wbr>Log<wbr>Config<wbr>Endpoint<wbr>Kinesis<wbr>Stream<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1182,8 +1113,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream.
 See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamarn_csharp">
 <a href="#streamarn_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Arn</a>
@@ -1192,13 +1122,11 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis data stream.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
@@ -1208,8 +1136,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream.
 See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamarn_go">
 <a href="#streamarn_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Arn</a>
@@ -1218,13 +1145,11 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis data stream.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
@@ -1234,8 +1159,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream.
 See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamarn_nodejs">
 <a href="#streamarn_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Arn</a>
@@ -1244,13 +1168,11 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis data stream.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
@@ -1260,8 +1182,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream.
 See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stream_arn_python">
 <a href="#stream_arn_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>arn</a>
@@ -1270,8 +1191,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Kinesis data stream.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

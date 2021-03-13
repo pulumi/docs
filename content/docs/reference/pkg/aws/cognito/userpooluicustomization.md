@@ -165,8 +165,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="userpoolid_csharp">
 <a href="#userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -175,8 +174,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -185,8 +183,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="css_csharp">
 <a href="#css_csharp" style="color: inherit; text-decoration: inherit;">Css</a>
@@ -195,8 +192,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefile_csharp">
 <a href="#imagefile_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>File</a>
@@ -205,13 +201,11 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="userpoolid_go">
 <a href="#userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -220,8 +214,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -230,8 +223,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="css_go">
 <a href="#css_go" style="color: inherit; text-decoration: inherit;">Css</a>
@@ -240,8 +232,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefile_go">
 <a href="#imagefile_go" style="color: inherit; text-decoration: inherit;">Image<wbr>File</a>
@@ -250,13 +241,11 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="userpoolid_nodejs">
 <a href="#userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
@@ -265,8 +254,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -275,8 +263,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="css_nodejs">
 <a href="#css_nodejs" style="color: inherit; text-decoration: inherit;">css</a>
@@ -285,8 +272,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefile_nodejs">
 <a href="#imagefile_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>File</a>
@@ -295,13 +281,11 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_pool_id_python">
 <a href="#user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
@@ -310,8 +294,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -320,8 +303,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="css_python">
 <a href="#css_python" style="color: inherit; text-decoration: inherit;">css</a>
@@ -330,8 +312,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_file_python">
 <a href="#image_file_python" style="color: inherit; text-decoration: inherit;">image_<wbr>file</a>
@@ -340,8 +321,7 @@ The UserPoolUICustomization resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -352,8 +332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -362,8 +341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cssversion_csharp">
 <a href="#cssversion_csharp" style="color: inherit; text-decoration: inherit;">Css<wbr>Version</a>
@@ -372,8 +350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -381,8 +358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageurl_csharp">
 <a href="#imageurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -391,8 +367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifieddate_csharp">
 <a href="#lastmodifieddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -401,13 +376,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -416,8 +389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cssversion_go">
 <a href="#cssversion_go" style="color: inherit; text-decoration: inherit;">Css<wbr>Version</a>
@@ -426,8 +398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -435,8 +406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageurl_go">
 <a href="#imageurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -445,8 +415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifieddate_go">
 <a href="#lastmodifieddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -455,13 +424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -470,8 +437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cssversion_nodejs">
 <a href="#cssversion_nodejs" style="color: inherit; text-decoration: inherit;">css<wbr>Version</a>
@@ -480,8 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -489,8 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageurl_nodejs">
 <a href="#imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
@@ -499,8 +463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifieddate_nodejs">
 <a href="#lastmodifieddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date</a>
@@ -509,13 +472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -524,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="css_version_python">
 <a href="#css_version_python" style="color: inherit; text-decoration: inherit;">css_<wbr>version</a>
@@ -534,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -543,8 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_url_python">
 <a href="#image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
@@ -553,8 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_date_python">
 <a href="#last_modified_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date</a>
@@ -563,8 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -691,8 +647,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -701,8 +656,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_csharp">
 <a href="#state_creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -711,8 +665,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_css_csharp">
 <a href="#state_css_csharp" style="color: inherit; text-decoration: inherit;">Css</a>
@@ -721,8 +674,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cssversion_csharp">
 <a href="#state_cssversion_csharp" style="color: inherit; text-decoration: inherit;">Css<wbr>Version</a>
@@ -731,8 +683,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagefile_csharp">
 <a href="#state_imagefile_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>File</a>
@@ -741,8 +692,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageurl_csharp">
 <a href="#state_imageurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -751,8 +701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifieddate_csharp">
 <a href="#state_lastmodifieddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -761,8 +710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpoolid_csharp">
 <a href="#state_userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -771,13 +719,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -786,8 +732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_go">
 <a href="#state_creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -796,8 +741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_css_go">
 <a href="#state_css_go" style="color: inherit; text-decoration: inherit;">Css</a>
@@ -806,8 +750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cssversion_go">
 <a href="#state_cssversion_go" style="color: inherit; text-decoration: inherit;">Css<wbr>Version</a>
@@ -816,8 +759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagefile_go">
 <a href="#state_imagefile_go" style="color: inherit; text-decoration: inherit;">Image<wbr>File</a>
@@ -826,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageurl_go">
 <a href="#state_imageurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Url</a>
@@ -836,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifieddate_go">
 <a href="#state_lastmodifieddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -846,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpoolid_go">
 <a href="#state_userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
@@ -856,13 +795,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -871,8 +808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_nodejs">
 <a href="#state_creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -881,8 +817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_css_nodejs">
 <a href="#state_css_nodejs" style="color: inherit; text-decoration: inherit;">css</a>
@@ -891,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cssversion_nodejs">
 <a href="#state_cssversion_nodejs" style="color: inherit; text-decoration: inherit;">css<wbr>Version</a>
@@ -901,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagefile_nodejs">
 <a href="#state_imagefile_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>File</a>
@@ -911,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageurl_nodejs">
 <a href="#state_imageurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Url</a>
@@ -921,8 +853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifieddate_nodejs">
 <a href="#state_lastmodifieddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date</a>
@@ -931,8 +862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpoolid_nodejs">
 <a href="#state_userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
@@ -941,13 +871,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -956,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_date_python">
 <a href="#state_creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -966,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_css_python">
 <a href="#state_css_python" style="color: inherit; text-decoration: inherit;">css</a>
@@ -976,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_css_version_python">
 <a href="#state_css_version_python" style="color: inherit; text-decoration: inherit;">css_<wbr>version</a>
@@ -986,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CSS version number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_file_python">
 <a href="#state_image_file_python" style="color: inherit; text-decoration: inherit;">image_<wbr>file</a>
@@ -996,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_url_python">
 <a href="#state_image_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>url</a>
@@ -1006,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The logo image URL for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_date_python">
 <a href="#state_last_modified_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date</a>
@@ -1016,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_pool_id_python">
 <a href="#state_user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
@@ -1026,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user pool ID for the user pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

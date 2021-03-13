@@ -297,8 +297,7 @@ The RbacPolicyV2 resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -308,8 +307,7 @@ The RbacPolicyV2 resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -320,8 +318,7 @@ The RbacPolicyV2 resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objecttype_csharp">
 <a href="#objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
@@ -331,8 +328,7 @@ The RbacPolicyV2 resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettenant_csharp">
 <a href="#targettenant_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tenant</a>
@@ -342,8 +338,7 @@ affects. Can either be `qos-policy` or `network`.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -355,13 +350,11 @@ will be enforced.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -371,8 +364,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -383,8 +375,7 @@ routing entry.
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objecttype_go">
 <a href="#objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
@@ -394,8 +385,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettenant_go">
 <a href="#targettenant_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tenant</a>
@@ -405,8 +395,7 @@ affects. Can either be `qos-policy` or `network`.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -418,13 +407,11 @@ will be enforced.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -434,8 +421,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -446,8 +432,7 @@ routing entry.
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objecttype_nodejs">
 <a href="#objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
@@ -457,8 +442,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targettenant_nodejs">
 <a href="#targettenant_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tenant</a>
@@ -468,8 +452,7 @@ affects. Can either be `qos-policy` or `network`.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -481,13 +464,11 @@ will be enforced.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -497,8 +478,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -509,8 +489,7 @@ routing entry.
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_type_python">
 <a href="#object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
@@ -520,8 +499,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_tenant_python">
 <a href="#target_tenant_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tenant</a>
@@ -531,8 +509,7 @@ affects. Can either be `qos-policy` or `network`.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -544,8 +521,7 @@ will be enforced.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -556,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,8 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -574,13 +548,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -597,13 +568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -611,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -620,13 +588,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -634,8 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -643,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -771,8 +735,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -782,8 +745,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectid_csharp">
 <a href="#state_objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -794,8 +756,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objecttype_csharp">
 <a href="#state_objecttype_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
@@ -805,8 +766,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -814,8 +774,7 @@ affects. Can either be `qos-policy` or `network`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -827,8 +786,7 @@ affects. Can either be `qos-policy` or `network`.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettenant_csharp">
 <a href="#state_targettenant_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tenant</a>
@@ -838,13 +796,11 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -854,8 +810,7 @@ will be enforced.
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectid_go">
 <a href="#state_objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -866,8 +821,7 @@ will be enforced.
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objecttype_go">
 <a href="#state_objecttype_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Type</a>
@@ -877,8 +831,7 @@ will be enforced.
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -886,8 +839,7 @@ affects. Can either be `qos-policy` or `network`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -899,8 +851,7 @@ affects. Can either be `qos-policy` or `network`.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettenant_go">
 <a href="#state_targettenant_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tenant</a>
@@ -910,13 +861,11 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -926,8 +875,7 @@ will be enforced.
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectid_nodejs">
 <a href="#state_objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -938,8 +886,7 @@ will be enforced.
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objecttype_nodejs">
 <a href="#state_objecttype_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Type</a>
@@ -949,8 +896,7 @@ will be enforced.
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -958,8 +904,7 @@ affects. Can either be `qos-policy` or `network`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -971,8 +916,7 @@ affects. Can either be `qos-policy` or `network`.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettenant_nodejs">
 <a href="#state_targettenant_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tenant</a>
@@ -982,13 +926,11 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -998,8 +940,7 @@ will be enforced.
     </dt>
     <dd>{{% md %}}Action for the RBAC policy. Can either be
 `access_as_external` or `access_as_shared`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_id_python">
 <a href="#state_object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1010,8 +951,7 @@ will be enforced.
     <dd>{{% md %}}The ID of the `object_type` resource. An
 `object_type` of `network` returns a network ID and an `object_type` of
 `qos_policy` returns a QoS ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_type_python">
 <a href="#state_object_type_python" style="color: inherit; text-decoration: inherit;">object_<wbr>type</a>
@@ -1021,8 +961,7 @@ will be enforced.
     </dt>
     <dd>{{% md %}}The type of the object that the RBAC policy
 affects. Can either be `qos-policy` or `network`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1030,8 +969,7 @@ affects. Can either be `qos-policy` or `network`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1043,8 +981,7 @@ affects. Can either be `qos-policy` or `network`.
 A networking client is needed to configure a routing entry on a subnet. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_tenant_python">
 <a href="#state_target_tenant_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tenant</a>
@@ -1054,8 +991,7 @@ routing entry.
     </dt>
     <dd>{{% md %}}The ID of the tenant to which the RBAC policy
 will be enforced.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

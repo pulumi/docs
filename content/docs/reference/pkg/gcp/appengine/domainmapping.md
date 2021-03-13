@@ -278,8 +278,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -288,8 +287,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overridestrategy_csharp">
 <a href="#overridestrategy_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Strategy</a>
@@ -301,8 +299,7 @@ The DomainMapping resource accepts the following [input]({{< relref "/docs/intro
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -312,8 +309,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslsettings_csharp">
 <a href="#sslsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Settings</a>
@@ -323,13 +319,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -338,8 +332,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overridestrategy_go">
 <a href="#overridestrategy_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Strategy</a>
@@ -351,8 +344,7 @@ Structure is documented below.
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -362,8 +354,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslsettings_go">
 <a href="#sslsettings_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Settings</a>
@@ -373,13 +364,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -388,8 +377,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overridestrategy_nodejs">
 <a href="#overridestrategy_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Strategy</a>
@@ -401,8 +389,7 @@ Structure is documented below.
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -412,8 +399,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslsettings_nodejs">
 <a href="#sslsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Settings</a>
@@ -423,13 +409,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -438,8 +422,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="override_strategy_python">
 <a href="#override_strategy_python" style="color: inherit; text-decoration: inherit;">override_<wbr>strategy</a>
@@ -451,8 +434,7 @@ Structure is documented below.
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -462,8 +444,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_settings_python">
 <a href="#ssl_settings_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>settings</a>
@@ -473,8 +454,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -485,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -494,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -504,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcerecords_csharp">
 <a href="#resourcerecords_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -515,13 +492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -529,8 +504,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -539,8 +513,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcerecords_go">
 <a href="#resourcerecords_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -550,13 +523,11 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -564,8 +535,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +544,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcerecords_nodejs">
 <a href="#resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
@@ -585,13 +554,11 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -599,8 +566,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -609,8 +575,7 @@ configuration in order to serve the application via this domain mapping.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_records_python">
 <a href="#resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
@@ -620,8 +585,7 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -748,8 +712,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_csharp">
 <a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -758,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -768,8 +730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overridestrategy_csharp">
 <a href="#state_overridestrategy_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Strategy</a>
@@ -781,8 +742,7 @@ The following state arguments are supported:
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -792,8 +752,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcerecords_csharp">
 <a href="#state_resourcerecords_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -803,8 +762,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslsettings_csharp">
 <a href="#state_sslsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Settings</a>
@@ -814,13 +772,11 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
 <a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -829,8 +785,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -839,8 +794,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overridestrategy_go">
 <a href="#state_overridestrategy_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Strategy</a>
@@ -852,8 +806,7 @@ Structure is documented below.
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -863,8 +816,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcerecords_go">
 <a href="#state_resourcerecords_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Records</a>
@@ -874,8 +826,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslsettings_go">
 <a href="#state_sslsettings_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Settings</a>
@@ -885,13 +836,11 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -900,8 +849,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -910,8 +858,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overridestrategy_nodejs">
 <a href="#state_overridestrategy_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Strategy</a>
@@ -923,8 +870,7 @@ Structure is documented below.
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -934,8 +880,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcerecords_nodejs">
 <a href="#state_resourcerecords_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Records</a>
@@ -945,8 +890,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslsettings_nodejs">
 <a href="#state_sslsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Settings</a>
@@ -956,13 +900,11 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_python">
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -971,8 +913,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative name of the domain serving the application. Example: example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -981,8 +922,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_override_strategy_python">
 <a href="#state_override_strategy_python" style="color: inherit; text-decoration: inherit;">override_<wbr>strategy</a>
@@ -994,8 +934,7 @@ Structure is documented below.
 By default, overrides are rejected.
 Default value is `STRICT`.
 Possible values are `STRICT` and `OVERRIDE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1005,8 +944,7 @@ Possible values are `STRICT` and `OVERRIDE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_records_python">
 <a href="#state_resource_records_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>records</a>
@@ -1016,8 +954,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The resource records required to configure this domain mapping. These records must be added to the domain's DNS
 configuration in order to serve the application via this domain mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_settings_python">
 <a href="#state_ssl_settings_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>settings</a>
@@ -1027,8 +964,7 @@ configuration in order to serve the application via this domain mapping.
     </dt>
     <dd>{{% md %}}SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1043,8 +979,7 @@ Structure is documented below.
 <h4 id="domainmappingresourcerecord">Domain<wbr>Mapping<wbr>Resource<wbr>Record</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1052,8 +987,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_csharp">
 <a href="#rrdata_csharp" style="color: inherit; text-decoration: inherit;">Rrdata</a>
@@ -1061,8 +995,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1070,13 +1003,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1084,8 +1015,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_go">
 <a href="#rrdata_go" style="color: inherit; text-decoration: inherit;">Rrdata</a>
@@ -1093,8 +1023,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1102,13 +1031,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1116,8 +1043,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_nodejs">
 <a href="#rrdata_nodejs" style="color: inherit; text-decoration: inherit;">rrdata</a>
@@ -1125,8 +1051,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1134,13 +1059,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1148,8 +1071,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rrdata_python">
 <a href="#rrdata_python" style="color: inherit; text-decoration: inherit;">rrdata</a>
@@ -1157,8 +1079,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1166,15 +1087,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainmappingsslsettings">Domain<wbr>Mapping<wbr>Ssl<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sslmanagementtype_csharp">
 <a href="#sslmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Management<wbr>Type</a>
@@ -1185,8 +1104,7 @@ Structure is documented below.
     <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
 If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
 Possible values are `AUTOMATIC` and `MANUAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateid_csharp">
 <a href="#certificateid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
@@ -1200,8 +1118,7 @@ By default, a managed certificate is automatically created for every domain mapp
 or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
 authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
 Example: 12345.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pendingmanagedcertificateid_csharp">
 <a href="#pendingmanagedcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Pending<wbr>Managed<wbr>Certificate<wbr>Id</a>
@@ -1215,13 +1132,11 @@ managed certificate has been successfully provisioned, the previous SSL state wi
 provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
 field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
 `certificateId` field with an update request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sslmanagementtype_go">
 <a href="#sslmanagementtype_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Management<wbr>Type</a>
@@ -1232,8 +1147,7 @@ field will be left empty. To remove SSL support while there is still a pending m
     <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
 If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
 Possible values are `AUTOMATIC` and `MANUAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateid_go">
 <a href="#certificateid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Id</a>
@@ -1247,8 +1161,7 @@ By default, a managed certificate is automatically created for every domain mapp
 or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
 authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
 Example: 12345.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pendingmanagedcertificateid_go">
 <a href="#pendingmanagedcertificateid_go" style="color: inherit; text-decoration: inherit;">Pending<wbr>Managed<wbr>Certificate<wbr>Id</a>
@@ -1262,13 +1175,11 @@ managed certificate has been successfully provisioned, the previous SSL state wi
 provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
 field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
 `certificateId` field with an update request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sslmanagementtype_nodejs">
 <a href="#sslmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Management<wbr>Type</a>
@@ -1279,8 +1190,7 @@ field will be left empty. To remove SSL support while there is still a pending m
     <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
 If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
 Possible values are `AUTOMATIC` and `MANUAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateid_nodejs">
 <a href="#certificateid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Id</a>
@@ -1294,8 +1204,7 @@ By default, a managed certificate is automatically created for every domain mapp
 or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
 authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
 Example: 12345.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pendingmanagedcertificateid_nodejs">
 <a href="#pendingmanagedcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Managed<wbr>Certificate<wbr>Id</a>
@@ -1309,13 +1218,11 @@ managed certificate has been successfully provisioned, the previous SSL state wi
 provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
 field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
 `certificateId` field with an update request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ssl_management_type_python">
 <a href="#ssl_management_type_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>management_<wbr>type</a>
@@ -1326,8 +1233,7 @@ field will be left empty. To remove SSL support while there is still a pending m
     <dd>{{% md %}}SSL management type for this domain. If `AUTOMATIC`, a managed certificate is automatically provisioned.
 If `MANUAL`, `certificateId` must be manually specified in order to configure SSL for this domain.
 Possible values are `AUTOMATIC` and `MANUAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_id_python">
 <a href="#certificate_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>id</a>
@@ -1341,8 +1247,7 @@ By default, a managed certificate is automatically created for every domain mapp
 or to configure SSL manually, specify `SslManagementType.MANUAL` on a `CREATE` or `UPDATE` request. You must be
 authorized to administer the `AuthorizedCertificate` resource to manually map it to a DomainMapping resource.
 Example: 12345.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pending_managed_certificate_id_python">
 <a href="#pending_managed_certificate_id_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>managed_<wbr>certificate_<wbr>id</a>
@@ -1356,8 +1261,7 @@ managed certificate has been successfully provisioned, the previous SSL state wi
 provisioning process completes, the `certificateId` field will reflect the new managed certificate and this
 field will be left empty. To remove SSL support while there is still a pending managed certificate, clear the
 `certificateId` field with an update request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

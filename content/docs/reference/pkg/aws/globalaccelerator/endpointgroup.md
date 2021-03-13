@@ -281,8 +281,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarn_csharp">
 <a href="#listenerarn_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arn</a>
@@ -291,8 +290,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointconfigurations_csharp">
 <a href="#endpointconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
@@ -301,8 +299,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointgroupregion_csharp">
 <a href="#endpointgroupregion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Group<wbr>Region</a>
@@ -311,8 +308,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckintervalseconds_csharp">
 <a href="#healthcheckintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval<wbr>Seconds</a>
@@ -321,8 +317,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_csharp">
 <a href="#healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -330,8 +325,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckport_csharp">
 <a href="#healthcheckport_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Port</a>
@@ -339,8 +333,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckprotocol_csharp">
 <a href="#healthcheckprotocol_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Protocol</a>
@@ -349,8 +342,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portoverrides_csharp">
 <a href="#portoverrides_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
@@ -359,8 +351,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupportoverride">List&lt;Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdcount_csharp">
 <a href="#thresholdcount_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
@@ -369,8 +360,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficdialpercentage_csharp">
 <a href="#trafficdialpercentage_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Dial<wbr>Percentage</a>
@@ -379,13 +369,11 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarn_go">
 <a href="#listenerarn_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arn</a>
@@ -394,8 +382,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointconfigurations_go">
 <a href="#endpointconfigurations_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
@@ -404,8 +391,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointgroupregion_go">
 <a href="#endpointgroupregion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Group<wbr>Region</a>
@@ -414,8 +400,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckintervalseconds_go">
 <a href="#healthcheckintervalseconds_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval<wbr>Seconds</a>
@@ -424,8 +409,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_go">
 <a href="#healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -433,8 +417,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckport_go">
 <a href="#healthcheckport_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Port</a>
@@ -442,8 +425,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckprotocol_go">
 <a href="#healthcheckprotocol_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Protocol</a>
@@ -452,8 +434,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portoverrides_go">
 <a href="#portoverrides_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
@@ -462,8 +443,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdcount_go">
 <a href="#thresholdcount_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
@@ -472,8 +452,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficdialpercentage_go">
 <a href="#trafficdialpercentage_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Dial<wbr>Percentage</a>
@@ -482,13 +461,11 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listenerarn_nodejs">
 <a href="#listenerarn_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arn</a>
@@ -497,8 +474,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointconfigurations_nodejs">
 <a href="#endpointconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
@@ -507,8 +483,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointgroupregion_nodejs">
 <a href="#endpointgroupregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Region</a>
@@ -517,8 +492,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckintervalseconds_nodejs">
 <a href="#healthcheckintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval<wbr>Seconds</a>
@@ -527,8 +501,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckpath_nodejs">
 <a href="#healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
@@ -536,8 +509,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckport_nodejs">
 <a href="#healthcheckport_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Port</a>
@@ -545,8 +517,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckprotocol_nodejs">
 <a href="#healthcheckprotocol_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Protocol</a>
@@ -555,8 +526,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portoverrides_nodejs">
 <a href="#portoverrides_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Overrides</a>
@@ -565,8 +535,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupportoverride">Endpoint<wbr>Group<wbr>Port<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdcount_nodejs">
 <a href="#thresholdcount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Count</a>
@@ -575,8 +544,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficdialpercentage_nodejs">
 <a href="#trafficdialpercentage_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Dial<wbr>Percentage</a>
@@ -585,13 +553,11 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listener_arn_python">
 <a href="#listener_arn_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arn</a>
@@ -600,8 +566,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_configurations_python">
 <a href="#endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
@@ -610,8 +575,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">Sequence[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_group_region_python">
 <a href="#endpoint_group_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>region</a>
@@ -620,8 +584,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_interval_seconds_python">
 <a href="#health_check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval_<wbr>seconds</a>
@@ -630,8 +593,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_path_python">
 <a href="#health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
@@ -639,8 +601,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_port_python">
 <a href="#health_check_port_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>port</a>
@@ -648,8 +609,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_protocol_python">
 <a href="#health_check_protocol_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>protocol</a>
@@ -658,8 +618,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_overrides_python">
 <a href="#port_overrides_python" style="color: inherit; text-decoration: inherit;">port_<wbr>overrides</a>
@@ -668,8 +627,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#endpointgroupportoverride">Sequence[Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_count_python">
 <a href="#threshold_count_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>count</a>
@@ -678,8 +636,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_dial_percentage_python">
 <a href="#traffic_dial_percentage_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>dial_<wbr>percentage</a>
@@ -688,8 +645,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -700,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -710,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -719,13 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -734,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,13 +694,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -758,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -767,13 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -782,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -791,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -919,8 +863,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -929,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfigurations_csharp">
 <a href="#state_endpointconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
@@ -939,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointgroupregion_csharp">
 <a href="#state_endpointgroupregion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Group<wbr>Region</a>
@@ -949,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckintervalseconds_csharp">
 <a href="#state_healthcheckintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval<wbr>Seconds</a>
@@ -959,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_csharp">
 <a href="#state_healthcheckpath_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -968,8 +907,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckport_csharp">
 <a href="#state_healthcheckport_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Port</a>
@@ -977,8 +915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckprotocol_csharp">
 <a href="#state_healthcheckprotocol_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Protocol</a>
@@ -987,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerarn_csharp">
 <a href="#state_listenerarn_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arn</a>
@@ -997,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portoverrides_csharp">
 <a href="#state_portoverrides_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
@@ -1007,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupportoverride">List&lt;Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdcount_csharp">
 <a href="#state_thresholdcount_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
@@ -1017,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficdialpercentage_csharp">
 <a href="#state_trafficdialpercentage_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Dial<wbr>Percentage</a>
@@ -1027,13 +960,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1042,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfigurations_go">
 <a href="#state_endpointconfigurations_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configurations</a>
@@ -1052,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointgroupregion_go">
 <a href="#state_endpointgroupregion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Group<wbr>Region</a>
@@ -1062,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckintervalseconds_go">
 <a href="#state_healthcheckintervalseconds_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Interval<wbr>Seconds</a>
@@ -1072,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_go">
 <a href="#state_healthcheckpath_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Path</a>
@@ -1081,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckport_go">
 <a href="#state_healthcheckport_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Port</a>
@@ -1090,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckprotocol_go">
 <a href="#state_healthcheckprotocol_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Protocol</a>
@@ -1100,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerarn_go">
 <a href="#state_listenerarn_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Arn</a>
@@ -1110,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portoverrides_go">
 <a href="#state_portoverrides_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Overrides</a>
@@ -1120,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupportoverride">[]Endpoint<wbr>Group<wbr>Port<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdcount_go">
 <a href="#state_thresholdcount_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Count</a>
@@ -1130,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficdialpercentage_go">
 <a href="#state_trafficdialpercentage_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Dial<wbr>Percentage</a>
@@ -1140,13 +1061,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1155,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfigurations_nodejs">
 <a href="#state_endpointconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configurations</a>
@@ -1165,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointgroupregion_nodejs">
 <a href="#state_endpointgroupregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Group<wbr>Region</a>
@@ -1175,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckintervalseconds_nodejs">
 <a href="#state_healthcheckintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Interval<wbr>Seconds</a>
@@ -1185,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckpath_nodejs">
 <a href="#state_healthcheckpath_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Path</a>
@@ -1194,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckport_nodejs">
 <a href="#state_healthcheckport_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Port</a>
@@ -1203,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckprotocol_nodejs">
 <a href="#state_healthcheckprotocol_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Protocol</a>
@@ -1213,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listenerarn_nodejs">
 <a href="#state_listenerarn_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Arn</a>
@@ -1223,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portoverrides_nodejs">
 <a href="#state_portoverrides_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Overrides</a>
@@ -1233,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupportoverride">Endpoint<wbr>Group<wbr>Port<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdcount_nodejs">
 <a href="#state_thresholdcount_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Count</a>
@@ -1243,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficdialpercentage_nodejs">
 <a href="#state_trafficdialpercentage_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Dial<wbr>Percentage</a>
@@ -1253,13 +1162,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1268,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the endpoint group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_configurations_python">
 <a href="#state_endpoint_configurations_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configurations</a>
@@ -1278,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupendpointconfiguration">Sequence[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_group_region_python">
 <a href="#state_endpoint_group_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>group_<wbr>region</a>
@@ -1288,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_interval_seconds_python">
 <a href="#state_health_check_interval_seconds_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>interval_<wbr>seconds</a>
@@ -1298,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_path_python">
 <a href="#state_health_check_path_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>path</a>
@@ -1307,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_port_python">
 <a href="#state_health_check_port_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>port</a>
@@ -1316,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_protocol_python">
 <a href="#state_health_check_protocol_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>protocol</a>
@@ -1326,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_listener_arn_python">
 <a href="#state_listener_arn_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>arn</a>
@@ -1336,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_overrides_python">
 <a href="#state_port_overrides_python" style="color: inherit; text-decoration: inherit;">port_<wbr>overrides</a>
@@ -1346,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgroupportoverride">Sequence[Endpoint<wbr>Group<wbr>Port<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_count_python">
 <a href="#state_threshold_count_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>count</a>
@@ -1356,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_dial_percentage_python">
 <a href="#state_traffic_dial_percentage_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>dial_<wbr>percentage</a>
@@ -1366,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1382,8 +1278,7 @@ The following state arguments are supported:
 <h4 id="endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientippreservationenabled_csharp">
 <a href="#clientippreservationenabled_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Ip<wbr>Preservation<wbr>Enabled</a>
@@ -1391,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointid_csharp">
 <a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -1401,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1411,13 +1304,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientippreservationenabled_go">
 <a href="#clientippreservationenabled_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Ip<wbr>Preservation<wbr>Enabled</a>
@@ -1425,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointid_go">
 <a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -1435,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1445,13 +1334,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientippreservationenabled_nodejs">
 <a href="#clientippreservationenabled_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ip<wbr>Preservation<wbr>Enabled</a>
@@ -1459,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointid_nodejs">
 <a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
@@ -1469,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1479,13 +1364,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_ip_preservation_enabled_python">
 <a href="#client_ip_preservation_enabled_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ip_<wbr>preservation_<wbr>enabled</a>
@@ -1493,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_id_python">
 <a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
@@ -1503,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1513,15 +1394,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointgroupportoverride">Endpoint<wbr>Group<wbr>Port<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointport_csharp">
 <a href="#endpointport_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Port</a>
@@ -1530,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerport_csharp">
 <a href="#listenerport_csharp" style="color: inherit; text-decoration: inherit;">Listener<wbr>Port</a>
@@ -1540,13 +1418,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointport_go">
 <a href="#endpointport_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Port</a>
@@ -1555,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerport_go">
 <a href="#listenerport_go" style="color: inherit; text-decoration: inherit;">Listener<wbr>Port</a>
@@ -1565,13 +1440,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointport_nodejs">
 <a href="#endpointport_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Port</a>
@@ -1580,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listenerport_nodejs">
 <a href="#listenerport_nodejs" style="color: inherit; text-decoration: inherit;">listener<wbr>Port</a>
@@ -1590,13 +1462,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_port_python">
 <a href="#endpoint_port_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>port</a>
@@ -1605,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="listener_port_python">
 <a href="#listener_port_python" style="color: inherit; text-decoration: inherit;">listener_<wbr>port</a>
@@ -1615,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

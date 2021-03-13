@@ -325,8 +325,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultlanguagecode_csharp">
 <a href="#defaultlanguagecode_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Language<wbr>Code</a>
@@ -336,8 +335,7 @@ The Agent resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -346,8 +344,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -357,8 +354,7 @@ for a list of the currently supported language codes. This field cannot be updat
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -373,8 +369,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avataruri_csharp">
 <a href="#avataruri_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri</a>
@@ -385,8 +380,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="classificationthreshold_csharp">
 <a href="#classificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Threshold</a>
@@ -399,8 +393,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -409,8 +402,7 @@ default of 0.3 is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -419,8 +411,7 @@ default of 0.3 is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchmode_csharp">
 <a href="#matchmode_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Mode</a>
@@ -434,8 +425,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -445,8 +435,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedlanguagecodes_csharp">
 <a href="#supportedlanguagecodes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Language<wbr>Codes</a>
@@ -455,8 +444,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -470,13 +458,11 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultlanguagecode_go">
 <a href="#defaultlanguagecode_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Language<wbr>Code</a>
@@ -486,8 +472,7 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -496,8 +481,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -507,8 +491,7 @@ for a list of the currently supported language codes. This field cannot be updat
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -523,8 +506,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avataruri_go">
 <a href="#avataruri_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri</a>
@@ -535,8 +517,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="classificationthreshold_go">
 <a href="#classificationthreshold_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Threshold</a>
@@ -549,8 +530,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -559,8 +539,7 @@ default of 0.3 is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -569,8 +548,7 @@ default of 0.3 is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchmode_go">
 <a href="#matchmode_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Mode</a>
@@ -584,8 +562,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -595,8 +572,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedlanguagecodes_go">
 <a href="#supportedlanguagecodes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Language<wbr>Codes</a>
@@ -605,8 +581,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -620,13 +595,11 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultlanguagecode_nodejs">
 <a href="#defaultlanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Language<wbr>Code</a>
@@ -636,8 +609,7 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -646,8 +618,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -657,8 +628,7 @@ for a list of the currently supported language codes. This field cannot be updat
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -673,8 +643,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avataruri_nodejs">
 <a href="#avataruri_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Uri</a>
@@ -685,8 +654,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="classificationthreshold_nodejs">
 <a href="#classificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Threshold</a>
@@ -699,8 +667,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -709,8 +676,7 @@ default of 0.3 is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -719,8 +685,7 @@ default of 0.3 is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchmode_nodejs">
 <a href="#matchmode_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Mode</a>
@@ -734,8 +699,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -745,8 +709,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportedlanguagecodes_nodejs">
 <a href="#supportedlanguagecodes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Language<wbr>Codes</a>
@@ -755,8 +718,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -770,13 +732,11 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_language_code_python">
 <a href="#default_language_code_python" style="color: inherit; text-decoration: inherit;">default_<wbr>language_<wbr>code</a>
@@ -786,8 +746,7 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -796,8 +755,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -807,8 +765,7 @@ for a list of the currently supported language codes. This field cannot be updat
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -823,8 +780,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="avatar_uri_python">
 <a href="#avatar_uri_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>uri</a>
@@ -835,8 +791,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="classification_threshold_python">
 <a href="#classification_threshold_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>threshold</a>
@@ -849,8 +804,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -859,8 +813,7 @@ default of 0.3 is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -869,8 +822,7 @@ default of 0.3 is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_mode_python">
 <a href="#match_mode_python" style="color: inherit; text-decoration: inherit;">match_<wbr>mode</a>
@@ -884,8 +836,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -895,8 +846,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supported_language_codes_python">
 <a href="#supported_language_codes_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>language_<wbr>codes</a>
@@ -905,8 +855,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -920,8 +869,7 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -932,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="avataruribackend_csharp">
 <a href="#avataruribackend_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri<wbr>Backend</a>
@@ -943,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -952,13 +898,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="avataruribackend_go">
 <a href="#avataruribackend_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri<wbr>Backend</a>
@@ -968,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -977,13 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="avataruribackend_nodejs">
 <a href="#avataruribackend_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Uri<wbr>Backend</a>
@@ -993,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1002,13 +942,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="avatar_uri_backend_python">
 <a href="#avatar_uri_backend_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>uri_<wbr>backend</a>
@@ -1018,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1027,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1155,8 +1091,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiversion_csharp">
 <a href="#state_apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -1171,8 +1106,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avataruri_csharp">
 <a href="#state_avataruri_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri</a>
@@ -1183,8 +1117,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avataruribackend_csharp">
 <a href="#state_avataruribackend_csharp" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri<wbr>Backend</a>
@@ -1194,8 +1127,7 @@ from the API will be shown in the [avatarUriBackend] field.
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_classificationthreshold_csharp">
 <a href="#state_classificationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Threshold</a>
@@ -1208,8 +1140,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultlanguagecode_csharp">
 <a href="#state_defaultlanguagecode_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Language<wbr>Code</a>
@@ -1219,8 +1150,7 @@ default of 0.3 is used.
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1229,8 +1159,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1239,8 +1168,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -1249,8 +1177,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchmode_csharp">
 <a href="#state_matchmode_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Mode</a>
@@ -1264,8 +1191,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1275,8 +1201,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportedlanguagecodes_csharp">
 <a href="#state_supportedlanguagecodes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Language<wbr>Codes</a>
@@ -1285,8 +1210,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1300,8 +1224,7 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_csharp">
 <a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -1311,13 +1234,11 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiversion_go">
 <a href="#state_apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -1332,8 +1253,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avataruri_go">
 <a href="#state_avataruri_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri</a>
@@ -1344,8 +1264,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avataruribackend_go">
 <a href="#state_avataruribackend_go" style="color: inherit; text-decoration: inherit;">Avatar<wbr>Uri<wbr>Backend</a>
@@ -1355,8 +1274,7 @@ from the API will be shown in the [avatarUriBackend] field.
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_classificationthreshold_go">
 <a href="#state_classificationthreshold_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Threshold</a>
@@ -1369,8 +1287,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultlanguagecode_go">
 <a href="#state_defaultlanguagecode_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Language<wbr>Code</a>
@@ -1380,8 +1297,7 @@ default of 0.3 is used.
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1390,8 +1306,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1400,8 +1315,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -1410,8 +1324,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchmode_go">
 <a href="#state_matchmode_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Mode</a>
@@ -1425,8 +1338,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1436,8 +1348,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportedlanguagecodes_go">
 <a href="#state_supportedlanguagecodes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Language<wbr>Codes</a>
@@ -1446,8 +1357,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1461,8 +1371,7 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_go">
 <a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -1472,13 +1381,11 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiversion_nodejs">
 <a href="#state_apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -1493,8 +1400,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avataruri_nodejs">
 <a href="#state_avataruri_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Uri</a>
@@ -1505,8 +1411,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avataruribackend_nodejs">
 <a href="#state_avataruribackend_nodejs" style="color: inherit; text-decoration: inherit;">avatar<wbr>Uri<wbr>Backend</a>
@@ -1516,8 +1421,7 @@ from the API will be shown in the [avatarUriBackend] field.
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_classificationthreshold_nodejs">
 <a href="#state_classificationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Threshold</a>
@@ -1530,8 +1434,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultlanguagecode_nodejs">
 <a href="#state_defaultlanguagecode_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Language<wbr>Code</a>
@@ -1541,8 +1444,7 @@ default of 0.3 is used.
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1551,8 +1453,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1561,8 +1462,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -1571,8 +1471,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchmode_nodejs">
 <a href="#state_matchmode_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Mode</a>
@@ -1586,8 +1485,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1597,8 +1495,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportedlanguagecodes_nodejs">
 <a href="#state_supportedlanguagecodes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Language<wbr>Codes</a>
@@ -1607,8 +1504,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1622,8 +1518,7 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timezone_nodejs">
 <a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -1633,13 +1528,11 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_version_python">
 <a href="#state_api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -1654,8 +1547,7 @@ the specified API version.
 * API_VERSION_V2: V2 API.
 * API_VERSION_V2_BETA_1: V2beta1 API.
 Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avatar_uri_python">
 <a href="#state_avatar_uri_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>uri</a>
@@ -1666,8 +1558,7 @@ Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA
     <dd>{{% md %}}The URI of the agent's avatar, which are used throughout the Dialogflow console. When an image URL is entered
 into this field, the Dialogflow will save the image in the backend. The address of the backend image returned
 from the API will be shown in the [avatarUriBackend] field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_avatar_uri_backend_python">
 <a href="#state_avatar_uri_backend_python" style="color: inherit; text-decoration: inherit;">avatar_<wbr>uri_<wbr>backend</a>
@@ -1677,8 +1568,7 @@ from the API will be shown in the [avatarUriBackend] field.
     </dt>
     <dd>{{% md %}}The URI of the agent's avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
 [avatarUri] field can be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_classification_threshold_python">
 <a href="#state_classification_threshold_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>threshold</a>
@@ -1691,8 +1581,7 @@ you can tune the machine learning classification threshold. If the returned scor
 value, then a fallback intent will be triggered or, if there are no fallback intents defined, no intent will be
 triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
 default of 0.3 is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_language_code_python">
 <a href="#state_default_language_code_python" style="color: inherit; text-decoration: inherit;">default_<wbr>language_<wbr>code</a>
@@ -1702,8 +1591,7 @@ default of 0.3 is used.
     </dt>
     <dd>{{% md %}}The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
 for a list of the currently supported language codes. This field cannot be updated after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1712,8 +1600,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1722,8 +1609,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this agent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -1732,8 +1618,7 @@ for a list of the currently supported language codes. This field cannot be updat
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether this agent should log conversation queries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_mode_python">
 <a href="#state_match_mode_python" style="color: inherit; text-decoration: inherit;">match_<wbr>mode</a>
@@ -1747,8 +1632,7 @@ syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities.
 Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1758,8 +1642,7 @@ Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supported_language_codes_python">
 <a href="#state_supported_language_codes_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>language_<wbr>codes</a>
@@ -1768,8 +1651,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of all languages supported by this agent (except for the defaultLanguageCode).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1783,8 +1665,7 @@ If it is not provided, the provider project is used.
 * TIER_ENTERPRISE_PLUS: Enterprise tier (Plus).
 NOTE: Due to consistency issues, the provider will not read this field from the API. Drift is possible between
 the the provider state and Dialogflow if the agent tier is changed outside of the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_zone_python">
 <a href="#state_time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -1794,8 +1675,7 @@ the the provider state and Dialogflow if the agent tier is changed outside of th
     </dt>
     <dd>{{% md %}}The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

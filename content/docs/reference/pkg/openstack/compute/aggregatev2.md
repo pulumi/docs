@@ -368,8 +368,7 @@ The AggregateV2 resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -380,8 +379,7 @@ The AggregateV2 resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -390,8 +388,7 @@ aggregate.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -400,8 +397,7 @@ aggregate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -411,13 +407,11 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -428,8 +422,7 @@ availability zone.
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -438,8 +431,7 @@ aggregate.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -448,8 +440,7 @@ aggregate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -459,13 +450,11 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -476,8 +465,7 @@ availability zone.
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -486,8 +474,7 @@ aggregate.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -496,8 +483,7 @@ aggregate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -507,13 +493,11 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -524,8 +508,7 @@ availability zone.
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -534,8 +517,7 @@ aggregate.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -544,8 +526,7 @@ aggregate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -555,8 +536,7 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -567,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -576,13 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -590,13 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -604,13 +579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -618,8 +591,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -746,8 +718,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_csharp">
 <a href="#state_hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -758,8 +729,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -768,8 +738,7 @@ aggregate.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -778,8 +747,7 @@ aggregate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -789,13 +757,11 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_go">
 <a href="#state_hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -806,8 +772,7 @@ availability zone.
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -816,8 +781,7 @@ aggregate.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -826,8 +790,7 @@ aggregate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -837,13 +800,11 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_nodejs">
 <a href="#state_hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -854,8 +815,7 @@ availability zone.
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -864,8 +824,7 @@ aggregate.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -874,8 +833,7 @@ aggregate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -885,13 +843,11 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hosts_python">
 <a href="#state_hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -902,8 +858,7 @@ availability zone.
     <dd>{{% md %}}The list of hosts contained in the Host Aggregate. The hosts must be added
 to Openstack and visible in the web interface, or the provider will fail to add them to the host
 aggregate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -912,8 +867,7 @@ aggregate.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The metadata of the Host Aggregate. Can be useful to indicate scheduler hints.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -922,8 +876,7 @@ aggregate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Host Aggregate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -933,8 +886,7 @@ aggregate.
     </dt>
     <dd>{{% md %}}The name of the Availability Zone to use. If ommited, it will take the default
 availability zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

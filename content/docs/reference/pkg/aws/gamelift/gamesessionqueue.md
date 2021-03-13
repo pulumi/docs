@@ -282,8 +282,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinations_csharp">
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -292,8 +291,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -302,8 +300,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playerlatencypolicies_csharp">
 <a href="#playerlatencypolicies_csharp" style="color: inherit; text-decoration: inherit;">Player<wbr>Latency<wbr>Policies</a>
@@ -312,8 +309,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -322,8 +318,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_csharp">
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -332,13 +327,11 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinations_go">
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -347,8 +340,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -357,8 +349,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playerlatencypolicies_go">
 <a href="#playerlatencypolicies_go" style="color: inherit; text-decoration: inherit;">Player<wbr>Latency<wbr>Policies</a>
@@ -367,8 +358,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -377,8 +367,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_go">
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -387,13 +376,11 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinations_nodejs">
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -402,8 +389,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -412,8 +398,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playerlatencypolicies_nodejs">
 <a href="#playerlatencypolicies_nodejs" style="color: inherit; text-decoration: inherit;">player<wbr>Latency<wbr>Policies</a>
@@ -422,8 +407,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -432,8 +416,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_nodejs">
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
@@ -442,13 +425,11 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinations_python">
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -457,8 +438,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -467,8 +447,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="player_latency_policies_python">
 <a href="#player_latency_policies_python" style="color: inherit; text-decoration: inherit;">player_<wbr>latency_<wbr>policies</a>
@@ -477,8 +456,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">Sequence[Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -487,8 +465,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_seconds_python">
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
@@ -497,8 +474,7 @@ The GameSessionQueue resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -509,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -519,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -528,13 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -543,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -552,13 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -567,8 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -576,13 +544,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -591,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -600,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -728,8 +692,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -738,8 +701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinations_csharp">
 <a href="#state_destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -748,8 +710,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -758,8 +719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_playerlatencypolicies_csharp">
 <a href="#state_playerlatencypolicies_csharp" style="color: inherit; text-decoration: inherit;">Player<wbr>Latency<wbr>Policies</a>
@@ -768,8 +728,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">List&lt;Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -778,8 +737,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutinseconds_csharp">
 <a href="#state_timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -788,13 +746,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -803,8 +759,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinations_go">
 <a href="#state_destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -813,8 +768,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -823,8 +777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_playerlatencypolicies_go">
 <a href="#state_playerlatencypolicies_go" style="color: inherit; text-decoration: inherit;">Player<wbr>Latency<wbr>Policies</a>
@@ -833,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">[]Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -843,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutinseconds_go">
 <a href="#state_timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -853,13 +804,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -868,8 +817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinations_nodejs">
 <a href="#state_destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -878,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -888,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_playerlatencypolicies_nodejs">
 <a href="#state_playerlatencypolicies_nodejs" style="color: inherit; text-decoration: inherit;">player<wbr>Latency<wbr>Policies</a>
@@ -898,8 +844,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -908,8 +853,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutinseconds_nodejs">
 <a href="#state_timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
@@ -918,13 +862,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -933,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinations_python">
 <a href="#state_destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -943,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -953,8 +893,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_player_latency_policies_python">
 <a href="#state_player_latency_policies_python" style="color: inherit; text-decoration: inherit;">player_<wbr>latency_<wbr>policies</a>
@@ -963,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#gamesessionqueueplayerlatencypolicy">Sequence[Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more policies used to choose fleet based on player latency. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -973,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_in_seconds_python">
 <a href="#state_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
@@ -983,8 +920,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -999,8 +935,7 @@ The following state arguments are supported:
 <h4 id="gamesessionqueueplayerlatencypolicy">Game<wbr>Session<wbr>Queue<wbr>Player<wbr>Latency<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumindividualplayerlatencymilliseconds_csharp">
 <a href="#maximumindividualplayerlatencymilliseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</a>
@@ -1009,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydurationseconds_csharp">
 <a href="#policydurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Duration<wbr>Seconds</a>
@@ -1019,13 +953,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumindividualplayerlatencymilliseconds_go">
 <a href="#maximumindividualplayerlatencymilliseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</a>
@@ -1034,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydurationseconds_go">
 <a href="#policydurationseconds_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Duration<wbr>Seconds</a>
@@ -1044,13 +975,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumindividualplayerlatencymilliseconds_nodejs">
 <a href="#maximumindividualplayerlatencymilliseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</a>
@@ -1059,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policydurationseconds_nodejs">
 <a href="#policydurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Duration<wbr>Seconds</a>
@@ -1069,13 +997,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximum_individual_player_latency_milliseconds_python">
 <a href="#maximum_individual_player_latency_milliseconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>individual_<wbr>player_<wbr>latency_<wbr>milliseconds</a>
@@ -1084,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_duration_seconds_python">
 <a href="#policy_duration_seconds_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>duration_<wbr>seconds</a>
@@ -1094,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

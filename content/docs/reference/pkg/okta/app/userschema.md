@@ -285,8 +285,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -295,8 +294,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -305,8 +303,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -315,8 +312,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -325,8 +321,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayenums_csharp">
 <a href="#arrayenums_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Enums</a>
@@ -335,8 +330,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayoneofs_csharp">
 <a href="#arrayoneofs_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>One<wbr>Ofs</a>
@@ -345,8 +339,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaarrayoneof">List&lt;User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arraytype_csharp">
 <a href="#arraytype_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
@@ -355,8 +348,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -365,8 +357,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enums_csharp">
 <a href="#enums_csharp" style="color: inherit; text-decoration: inherit;">Enums</a>
@@ -375,8 +366,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalname_csharp">
 <a href="#externalname_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Name</a>
@@ -385,8 +375,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalnamespace_csharp">
 <a href="#externalnamespace_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
@@ -395,8 +384,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_csharp">
 <a href="#master_csharp" style="color: inherit; text-decoration: inherit;">Master</a>
@@ -405,8 +393,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_csharp">
 <a href="#maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -415,8 +402,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlength_csharp">
 <a href="#minlength_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
@@ -425,8 +411,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneofs_csharp">
 <a href="#oneofs_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Ofs</a>
@@ -435,8 +420,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaoneof">List&lt;User<wbr>Schema<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -445,8 +429,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -455,8 +438,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_csharp">
 <a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -465,8 +447,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -475,8 +456,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="union_csharp">
 <a href="#union_csharp" style="color: inherit; text-decoration: inherit;">Union</a>
@@ -485,8 +465,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_csharp">
 <a href="#unique_csharp" style="color: inherit; text-decoration: inherit;">Unique</a>
@@ -495,8 +474,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usertype_csharp">
 <a href="#usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
@@ -505,13 +483,11 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -520,8 +496,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_go">
 <a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -530,8 +505,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -540,8 +514,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -550,8 +523,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayenums_go">
 <a href="#arrayenums_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Enums</a>
@@ -560,8 +532,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayoneofs_go">
 <a href="#arrayoneofs_go" style="color: inherit; text-decoration: inherit;">Array<wbr>One<wbr>Ofs</a>
@@ -570,8 +541,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaarrayoneof">[]User<wbr>Schema<wbr>Array<wbr>One<wbr>Of</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arraytype_go">
 <a href="#arraytype_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
@@ -580,8 +550,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -590,8 +559,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enums_go">
 <a href="#enums_go" style="color: inherit; text-decoration: inherit;">Enums</a>
@@ -600,8 +568,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalname_go">
 <a href="#externalname_go" style="color: inherit; text-decoration: inherit;">External<wbr>Name</a>
@@ -610,8 +577,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalnamespace_go">
 <a href="#externalnamespace_go" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
@@ -620,8 +586,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_go">
 <a href="#master_go" style="color: inherit; text-decoration: inherit;">Master</a>
@@ -630,8 +595,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_go">
 <a href="#maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -640,8 +604,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlength_go">
 <a href="#minlength_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
@@ -650,8 +613,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneofs_go">
 <a href="#oneofs_go" style="color: inherit; text-decoration: inherit;">One<wbr>Ofs</a>
@@ -660,8 +622,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaoneof">[]User<wbr>Schema<wbr>One<wbr>Of</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -670,8 +631,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -680,8 +640,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_go">
 <a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -690,8 +649,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -700,8 +658,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="union_go">
 <a href="#union_go" style="color: inherit; text-decoration: inherit;">Union</a>
@@ -710,8 +667,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_go">
 <a href="#unique_go" style="color: inherit; text-decoration: inherit;">Unique</a>
@@ -720,8 +676,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usertype_go">
 <a href="#usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
@@ -730,13 +685,11 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -745,8 +698,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_nodejs">
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -755,8 +707,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -765,8 +716,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -775,8 +725,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayenums_nodejs">
 <a href="#arrayenums_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Enums</a>
@@ -785,8 +734,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arrayoneofs_nodejs">
 <a href="#arrayoneofs_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>One<wbr>Ofs</a>
@@ -795,8 +743,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaarrayoneof">User<wbr>Schema<wbr>Array<wbr>One<wbr>Of[]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arraytype_nodejs">
 <a href="#arraytype_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Type</a>
@@ -805,8 +752,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -815,8 +761,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enums_nodejs">
 <a href="#enums_nodejs" style="color: inherit; text-decoration: inherit;">enums</a>
@@ -825,8 +770,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalname_nodejs">
 <a href="#externalname_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Name</a>
@@ -835,8 +779,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="externalnamespace_nodejs">
 <a href="#externalnamespace_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Namespace</a>
@@ -845,8 +788,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_nodejs">
 <a href="#master_nodejs" style="color: inherit; text-decoration: inherit;">master</a>
@@ -855,8 +797,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxlength_nodejs">
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
@@ -865,8 +806,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlength_nodejs">
 <a href="#minlength_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
@@ -875,8 +815,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneofs_nodejs">
 <a href="#oneofs_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Ofs</a>
@@ -885,8 +824,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaoneof">User<wbr>Schema<wbr>One<wbr>Of[]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -895,8 +833,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -905,8 +842,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_nodejs">
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
@@ -915,8 +851,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -925,8 +860,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="union_nodejs">
 <a href="#union_nodejs" style="color: inherit; text-decoration: inherit;">union</a>
@@ -935,8 +869,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_nodejs">
 <a href="#unique_nodejs" style="color: inherit; text-decoration: inherit;">unique</a>
@@ -945,8 +878,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usertype_nodejs">
 <a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
@@ -955,13 +887,11 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -970,8 +900,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="index_python">
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -980,8 +909,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -990,8 +918,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1000,8 +927,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_enums_python">
 <a href="#array_enums_python" style="color: inherit; text-decoration: inherit;">array_<wbr>enums</a>
@@ -1010,8 +936,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_one_ofs_python">
 <a href="#array_one_ofs_python" style="color: inherit; text-decoration: inherit;">array_<wbr>one_<wbr>ofs</a>
@@ -1020,8 +945,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaarrayoneof">Sequence[User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="array_type_python">
 <a href="#array_type_python" style="color: inherit; text-decoration: inherit;">array_<wbr>type</a>
@@ -1030,8 +954,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1040,8 +963,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enums_python">
 <a href="#enums_python" style="color: inherit; text-decoration: inherit;">enums</a>
@@ -1050,8 +972,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_name_python">
 <a href="#external_name_python" style="color: inherit; text-decoration: inherit;">external_<wbr>name</a>
@@ -1060,8 +981,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_namespace_python">
 <a href="#external_namespace_python" style="color: inherit; text-decoration: inherit;">external_<wbr>namespace</a>
@@ -1070,8 +990,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_python">
 <a href="#master_python" style="color: inherit; text-decoration: inherit;">master</a>
@@ -1080,8 +999,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_length_python">
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
@@ -1090,8 +1008,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_length_python">
 <a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
@@ -1100,8 +1017,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="one_ofs_python">
 <a href="#one_ofs_python" style="color: inherit; text-decoration: inherit;">one_<wbr>ofs</a>
@@ -1110,8 +1026,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#userschemaoneof">Sequence[User<wbr>Schema<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -1120,8 +1035,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1130,8 +1044,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_python">
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
@@ -1140,8 +1053,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1150,8 +1062,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="union_python">
 <a href="#union_python" style="color: inherit; text-decoration: inherit;">union</a>
@@ -1160,8 +1071,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_python">
 <a href="#unique_python" style="color: inherit; text-decoration: inherit;">unique</a>
@@ -1170,8 +1080,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_type_python">
 <a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
@@ -1180,8 +1089,7 @@ The UserSchema resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1192,8 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1201,13 +1108,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1215,13 +1120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1229,13 +1132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1243,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1371,8 +1271,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_csharp">
 <a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1381,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arrayenums_csharp">
 <a href="#state_arrayenums_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Enums</a>
@@ -1391,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arrayoneofs_csharp">
 <a href="#state_arrayoneofs_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>One<wbr>Ofs</a>
@@ -1401,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaarrayoneof">List&lt;User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arraytype_csharp">
 <a href="#state_arraytype_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
@@ -1411,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1421,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enums_csharp">
 <a href="#state_enums_csharp" style="color: inherit; text-decoration: inherit;">Enums</a>
@@ -1431,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalname_csharp">
 <a href="#state_externalname_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Name</a>
@@ -1441,8 +1334,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalnamespace_csharp">
 <a href="#state_externalnamespace_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
@@ -1451,8 +1343,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_csharp">
 <a href="#state_index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -1461,8 +1352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_csharp">
 <a href="#state_master_csharp" style="color: inherit; text-decoration: inherit;">Master</a>
@@ -1471,8 +1361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxlength_csharp">
 <a href="#state_maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -1481,8 +1370,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minlength_csharp">
 <a href="#state_minlength_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
@@ -1491,8 +1379,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneofs_csharp">
 <a href="#state_oneofs_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Ofs</a>
@@ -1501,8 +1388,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaoneof">List&lt;User<wbr>Schema<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pattern_csharp">
 <a href="#state_pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -1511,8 +1397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_csharp">
 <a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -1521,8 +1406,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_csharp">
 <a href="#state_required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -1531,8 +1415,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_csharp">
 <a href="#state_scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1541,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_csharp">
 <a href="#state_title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1551,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1561,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_union_csharp">
 <a href="#state_union_csharp" style="color: inherit; text-decoration: inherit;">Union</a>
@@ -1571,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_csharp">
 <a href="#state_unique_csharp" style="color: inherit; text-decoration: inherit;">Unique</a>
@@ -1581,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usertype_csharp">
 <a href="#state_usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
@@ -1591,13 +1469,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_go">
 <a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1606,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arrayenums_go">
 <a href="#state_arrayenums_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Enums</a>
@@ -1616,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arrayoneofs_go">
 <a href="#state_arrayoneofs_go" style="color: inherit; text-decoration: inherit;">Array<wbr>One<wbr>Ofs</a>
@@ -1626,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaarrayoneof">[]User<wbr>Schema<wbr>Array<wbr>One<wbr>Of</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arraytype_go">
 <a href="#state_arraytype_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Type</a>
@@ -1636,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1646,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enums_go">
 <a href="#state_enums_go" style="color: inherit; text-decoration: inherit;">Enums</a>
@@ -1656,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalname_go">
 <a href="#state_externalname_go" style="color: inherit; text-decoration: inherit;">External<wbr>Name</a>
@@ -1666,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalnamespace_go">
 <a href="#state_externalnamespace_go" style="color: inherit; text-decoration: inherit;">External<wbr>Namespace</a>
@@ -1676,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_go">
 <a href="#state_index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -1686,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_go">
 <a href="#state_master_go" style="color: inherit; text-decoration: inherit;">Master</a>
@@ -1696,8 +1563,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxlength_go">
 <a href="#state_maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -1706,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minlength_go">
 <a href="#state_minlength_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
@@ -1716,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneofs_go">
 <a href="#state_oneofs_go" style="color: inherit; text-decoration: inherit;">One<wbr>Ofs</a>
@@ -1726,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaoneof">[]User<wbr>Schema<wbr>One<wbr>Of</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pattern_go">
 <a href="#state_pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
@@ -1736,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_go">
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -1746,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_go">
 <a href="#state_required_go" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -1756,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_go">
 <a href="#state_scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -1766,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_go">
 <a href="#state_title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1776,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1786,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_union_go">
 <a href="#state_union_go" style="color: inherit; text-decoration: inherit;">Union</a>
@@ -1796,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_go">
 <a href="#state_unique_go" style="color: inherit; text-decoration: inherit;">Unique</a>
@@ -1806,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usertype_go">
 <a href="#state_usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
@@ -1816,13 +1671,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_nodejs">
 <a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -1831,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arrayenums_nodejs">
 <a href="#state_arrayenums_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Enums</a>
@@ -1841,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arrayoneofs_nodejs">
 <a href="#state_arrayoneofs_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>One<wbr>Ofs</a>
@@ -1851,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaarrayoneof">User<wbr>Schema<wbr>Array<wbr>One<wbr>Of[]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arraytype_nodejs">
 <a href="#state_arraytype_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Type</a>
@@ -1861,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1871,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enums_nodejs">
 <a href="#state_enums_nodejs" style="color: inherit; text-decoration: inherit;">enums</a>
@@ -1881,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalname_nodejs">
 <a href="#state_externalname_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Name</a>
@@ -1891,8 +1738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalnamespace_nodejs">
 <a href="#state_externalnamespace_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Namespace</a>
@@ -1901,8 +1747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_nodejs">
 <a href="#state_index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1911,8 +1756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_nodejs">
 <a href="#state_master_nodejs" style="color: inherit; text-decoration: inherit;">master</a>
@@ -1921,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxlength_nodejs">
 <a href="#state_maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
@@ -1931,8 +1774,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minlength_nodejs">
 <a href="#state_minlength_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
@@ -1941,8 +1783,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneofs_nodejs">
 <a href="#state_oneofs_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Ofs</a>
@@ -1951,8 +1792,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaoneof">User<wbr>Schema<wbr>One<wbr>Of[]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pattern_nodejs">
 <a href="#state_pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -1961,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_nodejs">
 <a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1971,8 +1810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_nodejs">
 <a href="#state_required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
@@ -1981,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_nodejs">
 <a href="#state_scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -1991,8 +1828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_nodejs">
 <a href="#state_title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2001,8 +1837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2011,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_union_nodejs">
 <a href="#state_union_nodejs" style="color: inherit; text-decoration: inherit;">union</a>
@@ -2021,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_nodejs">
 <a href="#state_unique_nodejs" style="color: inherit; text-decoration: inherit;">unique</a>
@@ -2031,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usertype_nodejs">
 <a href="#state_usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
@@ -2041,13 +1873,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_id_python">
 <a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -2056,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's ID the user custom schema property should be assigned to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_array_enums_python">
 <a href="#state_array_enums_python" style="color: inherit; text-decoration: inherit;">array_<wbr>enums</a>
@@ -2066,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_array_one_ofs_python">
 <a href="#state_array_one_ofs_python" style="color: inherit; text-decoration: inherit;">array_<wbr>one_<wbr>ofs</a>
@@ -2076,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaarrayoneof">Sequence[User<wbr>Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_array_type_python">
 <a href="#state_array_type_python" style="color: inherit; text-decoration: inherit;">array_<wbr>type</a>
@@ -2086,8 +1913,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2096,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enums_python">
 <a href="#state_enums_python" style="color: inherit; text-decoration: inherit;">enums</a>
@@ -2106,8 +1931,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_name_python">
 <a href="#state_external_name_python" style="color: inherit; text-decoration: inherit;">external_<wbr>name</a>
@@ -2116,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_namespace_python">
 <a href="#state_external_namespace_python" style="color: inherit; text-decoration: inherit;">external_<wbr>namespace</a>
@@ -2126,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External namespace of the user schema property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_python">
 <a href="#state_index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -2136,8 +1958,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_python">
 <a href="#state_master_python" style="color: inherit; text-decoration: inherit;">master</a>
@@ -2146,8 +1967,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_length_python">
 <a href="#state_max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
@@ -2156,8 +1976,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_length_python">
 <a href="#state_min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
@@ -2166,8 +1985,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_one_ofs_python">
 <a href="#state_one_ofs_python" style="color: inherit; text-decoration: inherit;">one_<wbr>ofs</a>
@@ -2176,8 +1994,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userschemaoneof">Sequence[User<wbr>Schema<wbr>One<wbr>Of<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pattern_python">
 <a href="#state_pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
@@ -2186,8 +2003,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_python">
 <a href="#state_permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -2196,8 +2012,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_python">
 <a href="#state_required_python" style="color: inherit; text-decoration: inherit;">required</a>
@@ -2206,8 +2021,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_python">
 <a href="#state_scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2216,8 +2030,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_title_python">
 <a href="#state_title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2226,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2236,8 +2048,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_union_python">
 <a href="#state_union_python" style="color: inherit; text-decoration: inherit;">union</a>
@@ -2246,8 +2057,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used to assign attribute group priority. Can not be set to 'true' if `scope` is set to Individual level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_python">
 <a href="#state_unique_python" style="color: inherit; text-decoration: inherit;">unique</a>
@@ -2256,8 +2066,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subschema unique restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_type_python">
 <a href="#state_user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
@@ -2266,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom subschema user type
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2282,8 +2090,7 @@ The following state arguments are supported:
 <h4 id="userschemaarrayoneof">User<wbr>Schema<wbr>Array<wbr>One<wbr>Of</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_csharp">
 <a href="#const_csharp" style="color: inherit; text-decoration: inherit;">Const</a>
@@ -2292,8 +2099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -2302,13 +2108,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_go">
 <a href="#const_go" style="color: inherit; text-decoration: inherit;">Const</a>
@@ -2317,8 +2121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -2327,13 +2130,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_nodejs">
 <a href="#const_nodejs" style="color: inherit; text-decoration: inherit;">const</a>
@@ -2342,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2352,13 +2152,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_python">
 <a href="#const_python" style="color: inherit; text-decoration: inherit;">const</a>
@@ -2367,8 +2165,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2377,15 +2174,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userschemaoneof">User<wbr>Schema<wbr>One<wbr>Of</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_csharp">
 <a href="#const_csharp" style="color: inherit; text-decoration: inherit;">Const</a>
@@ -2394,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -2404,13 +2198,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_go">
 <a href="#const_go" style="color: inherit; text-decoration: inherit;">Const</a>
@@ -2419,8 +2211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -2429,13 +2220,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_nodejs">
 <a href="#const_nodejs" style="color: inherit; text-decoration: inherit;">const</a>
@@ -2444,8 +2233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2454,13 +2242,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="const_python">
 <a href="#const_python" style="color: inherit; text-decoration: inherit;">const</a>
@@ -2469,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}value mapping to member of `enum`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -2479,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

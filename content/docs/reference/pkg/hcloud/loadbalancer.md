@@ -1,8 +1,8 @@
 
 ---
 title: "LoadBalancer"
-title_tag: "Resource LoadBalancer | Package Hetzner Cloud"
-meta_desc: "Explore the LoadBalancer resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Load Balancer to represent a Load Balancer in the Hetzner Cloud."
+title_tag: "hcloud.LoadBalancer"
+meta_desc: "Documentation for the hcloud.LoadBalancer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the LoadBalancer resource of the Hetzner Cloud package, incl
 Provides a Hetzner Cloud Load Balancer to represent a Load Balancer in the Hetzner Cloud.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using HCloud = Pulumi.HCloud;
@@ -49,9 +55,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -87,9 +96,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_hcloud as hcloud
@@ -106,9 +118,12 @@ load_balancer = hcloud.LoadBalancer("loadBalancer",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LoadBalancer Resource {#create}
@@ -155,9 +177,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const loadBalancer = new hcloud.LoadBalancer("loadBalancer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +304,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancertype_csharp">
 <a href="#loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -322,8 +313,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -332,8 +322,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -342,8 +331,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -352,8 +340,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -362,8 +349,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkzone_csharp">
 <a href="#networkzone_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Zone</a>
@@ -372,8 +358,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -382,14 +367,11 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancertype_go">
 <a href="#loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -398,8 +380,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -408,8 +389,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -418,8 +398,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -428,8 +407,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -438,8 +416,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkzone_go">
 <a href="#networkzone_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Zone</a>
@@ -448,8 +425,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -458,14 +434,11 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancertype_nodejs">
 <a href="#loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
@@ -474,8 +447,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -484,8 +456,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -494,8 +465,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -504,8 +474,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -514,8 +483,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkzone_nodejs">
 <a href="#networkzone_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Zone</a>
@@ -524,8 +492,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -534,14 +501,11 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancertarget">Load<wbr>Balancer<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="load_balancer_type_python">
 <a href="#load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
@@ -550,8 +514,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -560,8 +523,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -570,8 +532,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -580,8 +541,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -590,8 +550,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_zone_python">
 <a href="#network_zone_python" style="color: inherit; text-decoration: inherit;">network_<wbr>zone</a>
@@ -600,8 +559,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -610,8 +568,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancertarget">Sequence[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -632,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4_csharp">
 <a href="#ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -642,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -652,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -661,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkip_csharp">
 <a href="#networkip_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -670,14 +621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -685,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4_go">
 <a href="#ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -695,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -705,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -714,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkip_go">
 <a href="#networkip_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -723,14 +667,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -738,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4_nodejs">
 <a href="#ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -748,8 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -758,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -767,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkip_nodejs">
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
@@ -776,14 +713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -791,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv4_python">
 <a href="#ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -801,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -811,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -820,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_ip_python">
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
@@ -829,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -957,9 +886,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_csharp">
 <a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -968,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_csharp">
 <a href="#state_ipv4_csharp" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -978,8 +904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_csharp">
 <a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -988,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -998,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancertype_csharp">
 <a href="#state_loadbalancertype_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -1008,8 +931,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1018,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1028,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
 <a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1037,8 +957,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkip_csharp">
 <a href="#state_networkip_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -1046,8 +965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkzone_csharp">
 <a href="#state_networkzone_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Zone</a>
@@ -1056,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_csharp">
 <a href="#state_targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -1066,14 +983,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancertarget">List&lt;Pulumi.<wbr>HCloud.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_go">
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1082,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_go">
 <a href="#state_ipv4_go" style="color: inherit; text-decoration: inherit;">Ipv4</a>
@@ -1092,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_go">
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1102,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1112,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancertype_go">
 <a href="#state_loadbalancertype_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Type</a>
@@ -1122,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1132,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1142,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
 <a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1151,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkip_go">
 <a href="#state_networkip_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -1160,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkzone_go">
 <a href="#state_networkzone_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Zone</a>
@@ -1170,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_go">
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -1180,14 +1084,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancertarget">[]Load<wbr>Balancer<wbr>Target<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_nodejs">
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1196,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_nodejs">
 <a href="#state_ipv4_nodejs" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -1206,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_nodejs">
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1216,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1226,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancertype_nodejs">
 <a href="#state_loadbalancertype_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Type</a>
@@ -1236,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1246,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1256,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -1265,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkip_nodejs">
 <a href="#state_networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
@@ -1274,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkzone_nodejs">
 <a href="#state_networkzone_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Zone</a>
@@ -1284,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_nodejs">
 <a href="#state_targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -1294,14 +1185,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancertarget">Load<wbr>Balancer<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_python">
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1310,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the algorithm the Load Balancer use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv4_python">
 <a href="#state_ipv4_python" style="color: inherit; text-decoration: inherit;">ipv4</a>
@@ -1320,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_python">
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1330,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) IPv4 Address of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1340,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_type_python">
 <a href="#state_load_balancer_type_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>type</a>
@@ -1350,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1360,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Load Balancer. Require when no network_zone is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1370,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Load Balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1379,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_ip_python">
 <a href="#state_network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
@@ -1388,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_zone_python">
 <a href="#state_network_zone_python" style="color: inherit; text-decoration: inherit;">network_<wbr>zone</a>
@@ -1398,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network Zone of the Load Balancer. Require when no location is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_python">
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -1408,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancertarget">Sequence[Load<wbr>Balancer<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of targets of the Load Balancer.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1424,9 +1301,7 @@ The following state arguments are supported:
 <h4 id="loadbalanceralgorithm">Load<wbr>Balancer<wbr>Algorithm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1435,14 +1310,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1451,14 +1323,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1467,14 +1336,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1483,16 +1349,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the Load Balancer Algorithm. `round_robin` or `least_connections`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancertarget">Load<wbr>Balancer<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1501,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the target. `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -1511,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useprivateip_csharp">
 <a href="#useprivateip_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -1520,14 +1381,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1536,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the target. `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -1546,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useprivateip_go">
 <a href="#useprivateip_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Private<wbr>Ip</a>
@@ -1555,14 +1411,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1571,8 +1424,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the target. `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -1581,8 +1433,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="useprivateip_nodejs">
 <a href="#useprivateip_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Private<wbr>Ip</a>
@@ -1590,14 +1441,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1606,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the target. `server`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_id_python">
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -1616,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server which should be a target for this Load Balancer. Required if `type` is `server`
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="use_private_ip_python">
 <a href="#use_private_ip_python" style="color: inherit; text-decoration: inherit;">use_<wbr>private_<wbr>ip</a>
@@ -1625,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Does not work. Use the hcloud_load_balancer_target resource instead.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 ## Import
 

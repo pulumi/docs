@@ -543,8 +543,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementid_csharp">
 <a href="#apimanagementid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Id</a>
@@ -553,8 +552,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerportals_csharp">
 <a href="#developerportals_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
@@ -563,8 +561,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomaindeveloperportal">List&lt;Custom<wbr>Domain<wbr>Developer<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_csharp">
 <a href="#managements_csharp" style="color: inherit; text-decoration: inherit;">Managements</a>
@@ -573,8 +570,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainmanagement">List&lt;Custom<wbr>Domain<wbr>Management<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_csharp">
 <a href="#portals_csharp" style="color: inherit; text-decoration: inherit;">Portals</a>
@@ -583,8 +579,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainportal">List&lt;Custom<wbr>Domain<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_csharp">
 <a href="#proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -593,8 +588,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainproxy">List&lt;Custom<wbr>Domain<wbr>Proxy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_csharp">
 <a href="#scms_csharp" style="color: inherit; text-decoration: inherit;">Scms</a>
@@ -603,13 +597,11 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainscm">List&lt;Custom<wbr>Domain<wbr>Scm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementid_go">
 <a href="#apimanagementid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Id</a>
@@ -618,8 +610,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerportals_go">
 <a href="#developerportals_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
@@ -628,8 +619,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomaindeveloperportal">[]Custom<wbr>Domain<wbr>Developer<wbr>Portal</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_go">
 <a href="#managements_go" style="color: inherit; text-decoration: inherit;">Managements</a>
@@ -638,8 +628,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainmanagement">[]Custom<wbr>Domain<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_go">
 <a href="#portals_go" style="color: inherit; text-decoration: inherit;">Portals</a>
@@ -648,8 +637,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainportal">[]Custom<wbr>Domain<wbr>Portal</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_go">
 <a href="#proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -658,8 +646,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainproxy">[]Custom<wbr>Domain<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_go">
 <a href="#scms_go" style="color: inherit; text-decoration: inherit;">Scms</a>
@@ -668,13 +655,11 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainscm">[]Custom<wbr>Domain<wbr>Scm</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apimanagementid_nodejs">
 <a href="#apimanagementid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Id</a>
@@ -683,8 +668,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developerportals_nodejs">
 <a href="#developerportals_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
@@ -693,8 +677,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomaindeveloperportal">Custom<wbr>Domain<wbr>Developer<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_nodejs">
 <a href="#managements_nodejs" style="color: inherit; text-decoration: inherit;">managements</a>
@@ -703,8 +686,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainmanagement">Custom<wbr>Domain<wbr>Management[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_nodejs">
 <a href="#portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
@@ -713,8 +695,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainportal">Custom<wbr>Domain<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_nodejs">
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -723,8 +704,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainproxy">Custom<wbr>Domain<wbr>Proxy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_nodejs">
 <a href="#scms_nodejs" style="color: inherit; text-decoration: inherit;">scms</a>
@@ -733,13 +713,11 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainscm">Custom<wbr>Domain<wbr>Scm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_management_id_python">
 <a href="#api_management_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>id</a>
@@ -748,8 +726,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_portals_python">
 <a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
@@ -758,8 +735,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomaindeveloperportal">Sequence[Custom<wbr>Domain<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_python">
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
@@ -768,8 +744,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainmanagement">Sequence[Custom<wbr>Domain<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_python">
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
@@ -778,8 +753,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainportal">Sequence[Custom<wbr>Domain<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_python">
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -788,8 +762,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainproxy">Sequence[Custom<wbr>Domain<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_python">
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
@@ -798,8 +771,7 @@ The CustomDomain resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#customdomainscm">Sequence[Custom<wbr>Domain<wbr>Scm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -810,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,13 +790,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -833,13 +802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -847,13 +814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -861,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -989,8 +953,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementid_csharp">
 <a href="#state_apimanagementid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Id</a>
@@ -999,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportals_csharp">
 <a href="#state_developerportals_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
@@ -1009,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomaindeveloperportal">List&lt;Custom<wbr>Domain<wbr>Developer<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managements_csharp">
 <a href="#state_managements_csharp" style="color: inherit; text-decoration: inherit;">Managements</a>
@@ -1019,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainmanagement">List&lt;Custom<wbr>Domain<wbr>Management<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portals_csharp">
 <a href="#state_portals_csharp" style="color: inherit; text-decoration: inherit;">Portals</a>
@@ -1029,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainportal">List&lt;Custom<wbr>Domain<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_csharp">
 <a href="#state_proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -1039,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainproxy">List&lt;Custom<wbr>Domain<wbr>Proxy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scms_csharp">
 <a href="#state_scms_csharp" style="color: inherit; text-decoration: inherit;">Scms</a>
@@ -1049,13 +1007,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainscm">List&lt;Custom<wbr>Domain<wbr>Scm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementid_go">
 <a href="#state_apimanagementid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Id</a>
@@ -1064,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportals_go">
 <a href="#state_developerportals_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
@@ -1074,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomaindeveloperportal">[]Custom<wbr>Domain<wbr>Developer<wbr>Portal</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managements_go">
 <a href="#state_managements_go" style="color: inherit; text-decoration: inherit;">Managements</a>
@@ -1084,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainmanagement">[]Custom<wbr>Domain<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portals_go">
 <a href="#state_portals_go" style="color: inherit; text-decoration: inherit;">Portals</a>
@@ -1094,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainportal">[]Custom<wbr>Domain<wbr>Portal</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_go">
 <a href="#state_proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -1104,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainproxy">[]Custom<wbr>Domain<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scms_go">
 <a href="#state_scms_go" style="color: inherit; text-decoration: inherit;">Scms</a>
@@ -1114,13 +1065,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainscm">[]Custom<wbr>Domain<wbr>Scm</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apimanagementid_nodejs">
 <a href="#state_apimanagementid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Management<wbr>Id</a>
@@ -1129,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportals_nodejs">
 <a href="#state_developerportals_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
@@ -1139,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomaindeveloperportal">Custom<wbr>Domain<wbr>Developer<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managements_nodejs">
 <a href="#state_managements_nodejs" style="color: inherit; text-decoration: inherit;">managements</a>
@@ -1149,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainmanagement">Custom<wbr>Domain<wbr>Management[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portals_nodejs">
 <a href="#state_portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
@@ -1159,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainportal">Custom<wbr>Domain<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_nodejs">
 <a href="#state_proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -1169,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainproxy">Custom<wbr>Domain<wbr>Proxy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scms_nodejs">
 <a href="#state_scms_nodejs" style="color: inherit; text-decoration: inherit;">scms</a>
@@ -1179,13 +1123,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainscm">Custom<wbr>Domain<wbr>Scm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_management_id_python">
 <a href="#state_api_management_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>management_<wbr>id</a>
@@ -1194,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the API Management service for which to configure Custom Domains. Changing this forces a new API Management Custom Domain resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developer_portals_python">
 <a href="#state_developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
@@ -1204,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomaindeveloperportal">Sequence[Custom<wbr>Domain<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managements_python">
 <a href="#state_managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
@@ -1214,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainmanagement">Sequence[Custom<wbr>Domain<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portals_python">
 <a href="#state_portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
@@ -1224,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainportal">Sequence[Custom<wbr>Domain<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxies_python">
 <a href="#state_proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -1234,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainproxy">Sequence[Custom<wbr>Domain<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scms_python">
 <a href="#state_scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
@@ -1244,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customdomainscm">Sequence[Custom<wbr>Domain<wbr>Scm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1260,8 +1196,7 @@ The following state arguments are supported:
 <h4 id="customdomaindeveloperportal">Custom<wbr>Domain<wbr>Developer<wbr>Portal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1270,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1280,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1290,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1300,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1310,13 +1241,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1325,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1335,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1345,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1355,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1365,13 +1290,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1380,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1390,8 +1312,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -1400,8 +1321,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -1410,8 +1330,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -1420,13 +1339,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1435,8 +1352,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1445,8 +1361,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -1455,8 +1370,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -1465,8 +1379,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -1475,15 +1388,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainmanagement">Custom<wbr>Domain<wbr>Management</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1492,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1502,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1512,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1522,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1532,13 +1439,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1547,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1557,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1567,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1577,8 +1479,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1587,13 +1488,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1602,8 +1501,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1612,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -1622,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -1632,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -1642,13 +1537,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1657,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1667,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -1677,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -1687,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -1697,15 +1586,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainportal">Custom<wbr>Domain<wbr>Portal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1714,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1724,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1734,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1744,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1754,13 +1637,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1769,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1779,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1789,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1799,8 +1677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1809,13 +1686,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1824,8 +1699,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1834,8 +1708,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -1844,8 +1717,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -1854,8 +1726,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -1864,13 +1735,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1879,8 +1748,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1889,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -1899,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -1909,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -1919,15 +1784,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainproxy">Custom<wbr>Domain<wbr>Proxy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1936,8 +1799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the API Proxy Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1946,8 +1808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -1956,8 +1817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslbinding_csharp">
 <a href="#defaultsslbinding_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Binding</a>
@@ -1966,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1976,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -1986,13 +1844,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -2001,8 +1857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the API Proxy Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2011,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -2021,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslbinding_go">
 <a href="#defaultsslbinding_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Binding</a>
@@ -2031,8 +1884,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -2041,8 +1893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -2051,13 +1902,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -2066,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the API Proxy Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2076,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -2086,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslbinding_nodejs">
 <a href="#defaultsslbinding_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Binding</a>
@@ -2096,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -2106,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -2116,13 +1960,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -2131,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the API Proxy Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2141,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -2151,8 +1991,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ssl_binding_python">
 <a href="#default_ssl_binding_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>binding</a>
@@ -2161,8 +2000,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -2171,8 +2009,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -2181,15 +2018,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customdomainscm">Custom<wbr>Domain<wbr>Scm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -2198,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2208,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -2218,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -2228,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -2238,13 +2069,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -2253,8 +2082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2263,8 +2091,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -2273,8 +2100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -2283,8 +2109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -2293,13 +2118,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -2308,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2318,8 +2140,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -2328,8 +2149,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -2338,8 +2158,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -2348,13 +2167,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -2363,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the corresponding endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2373,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate. (Mutually exlusive with `key_vault_id`.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -2383,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -2393,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -2403,8 +2216,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

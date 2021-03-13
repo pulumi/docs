@@ -371,8 +371,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -381,8 +380,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -391,8 +389,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -401,8 +398,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledalerts_csharp">
 <a href="#disabledalerts_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
@@ -411,8 +407,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaccountadmins_csharp">
 <a href="#emailaccountadmins_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
@@ -421,8 +416,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_csharp">
 <a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -431,8 +425,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondays_csharp">
 <a href="#retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -441,8 +434,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_csharp">
 <a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -451,8 +443,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_csharp">
 <a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -461,13 +452,11 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -476,8 +465,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -486,8 +474,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -496,8 +483,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledalerts_go">
 <a href="#disabledalerts_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
@@ -506,8 +492,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaccountadmins_go">
 <a href="#emailaccountadmins_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
@@ -516,8 +501,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_go">
 <a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -526,8 +510,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondays_go">
 <a href="#retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -536,8 +519,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_go">
 <a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -546,8 +528,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_go">
 <a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -556,13 +537,11 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -571,8 +550,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -581,8 +559,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -591,8 +568,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabledalerts_nodejs">
 <a href="#disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
@@ -601,8 +577,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaccountadmins_nodejs">
 <a href="#emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
@@ -611,8 +586,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_nodejs">
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
@@ -621,8 +595,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentiondays_nodejs">
 <a href="#retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
@@ -631,8 +604,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountaccesskey_nodejs">
 <a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -641,8 +613,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageendpoint_nodejs">
 <a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
@@ -651,13 +622,11 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -666,8 +635,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -676,8 +644,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -686,8 +653,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_alerts_python">
 <a href="#disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
@@ -696,8 +662,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_account_admins_python">
 <a href="#email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
@@ -706,8 +671,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_addresses_python">
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
@@ -716,8 +680,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_days_python">
 <a href="#retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
@@ -726,8 +689,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_access_key_python">
 <a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -736,8 +698,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_endpoint_python">
 <a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
@@ -746,8 +707,7 @@ The ServerSecurityAlertPolicy resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -758,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -767,13 +726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -781,13 +738,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -795,13 +750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -809,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -937,8 +889,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabledalerts_csharp">
 <a href="#state_disabledalerts_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
@@ -947,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailaccountadmins_csharp">
 <a href="#state_emailaccountadmins_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
@@ -957,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailaddresses_csharp">
 <a href="#state_emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -967,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -977,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondays_csharp">
 <a href="#state_retentiondays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -987,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_csharp">
 <a href="#state_servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -997,8 +943,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1007,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskey_csharp">
 <a href="#state_storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -1017,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageendpoint_csharp">
 <a href="#state_storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -1027,13 +970,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabledalerts_go">
 <a href="#state_disabledalerts_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Alerts</a>
@@ -1042,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailaccountadmins_go">
 <a href="#state_emailaccountadmins_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Account<wbr>Admins</a>
@@ -1052,8 +992,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailaddresses_go">
 <a href="#state_emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -1062,8 +1001,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1072,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondays_go">
 <a href="#state_retentiondays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Days</a>
@@ -1082,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_go">
 <a href="#state_servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1092,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1102,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskey_go">
 <a href="#state_storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -1112,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageendpoint_go">
 <a href="#state_storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
@@ -1122,13 +1055,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabledalerts_nodejs">
 <a href="#state_disabledalerts_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Alerts</a>
@@ -1137,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailaccountadmins_nodejs">
 <a href="#state_emailaccountadmins_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Account<wbr>Admins</a>
@@ -1147,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailaddresses_nodejs">
 <a href="#state_emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
@@ -1157,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1167,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentiondays_nodejs">
 <a href="#state_retentiondays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Days</a>
@@ -1177,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servername_nodejs">
 <a href="#state_servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -1187,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1197,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountaccesskey_nodejs">
 <a href="#state_storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
@@ -1207,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageendpoint_nodejs">
 <a href="#state_storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
@@ -1217,13 +1140,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_alerts_python">
 <a href="#state_disabled_alerts_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>alerts</a>
@@ -1232,8 +1153,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of alerts that are disabled. Allowed values are: `Sql_Injection`, `Sql_Injection_Vulnerability`, `Access_Anomaly`, `Data_Exfiltration`, `Unsafe_Action`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_account_admins_python">
 <a href="#state_email_account_admins_python" style="color: inherit; text-decoration: inherit;">email_<wbr>account_<wbr>admins</a>
@@ -1242,8 +1162,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_addresses_python">
 <a href="#state_email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
@@ -1252,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies an array of e-mail addresses to which the alert is sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1262,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_days_python">
 <a href="#state_retention_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>days</a>
@@ -1272,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days to keep in the Threat Detection audit logs. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_name_python">
 <a href="#state_server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -1282,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the MS SQL Server. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1292,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Allowed values are: `Disabled`, `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_access_key_python">
 <a href="#state_storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
@@ -1302,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier key of the Threat Detection audit storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_endpoint_python">
 <a href="#state_storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
@@ -1312,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

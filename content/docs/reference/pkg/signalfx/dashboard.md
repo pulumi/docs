@@ -162,8 +162,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dashboardgroup_csharp">
 <a href="#dashboardgroup_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Group</a>
@@ -172,8 +171,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedwriterteams_csharp">
 <a href="#authorizedwriterteams_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
@@ -182,8 +180,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedwriterusers_csharp">
 <a href="#authorizedwriterusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
@@ -192,8 +189,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charts_csharp">
 <a href="#charts_csharp" style="color: inherit; text-decoration: inherit;">Charts</a>
@@ -202,8 +198,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardchart">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Chart<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartsresolution_csharp">
 <a href="#chartsresolution_csharp" style="color: inherit; text-decoration: inherit;">Charts<wbr>Resolution</a>
@@ -212,8 +207,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columns_csharp">
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -222,8 +216,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardcolumn">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -232,8 +225,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveryoptionsquery_csharp">
 <a href="#discoveryoptionsquery_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Query</a>
@@ -241,8 +233,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveryoptionsselectors_csharp">
 <a href="#discoveryoptionsselectors_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Selectors</a>
@@ -250,8 +241,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -260,8 +250,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventoverlays_csharp">
 <a href="#eventoverlays_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Overlays</a>
@@ -270,8 +259,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardeventoverlay">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Event<wbr>Overlay<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -280,8 +268,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grids_csharp">
 <a href="#grids_csharp" style="color: inherit; text-decoration: inherit;">Grids</a>
@@ -290,8 +277,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardgrid">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Grid<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -300,8 +286,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectedeventoverlays_csharp">
 <a href="#selectedeventoverlays_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Event<wbr>Overlays</a>
@@ -310,8 +295,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardselectedeventoverlay">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -320,8 +304,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerange_csharp">
 <a href="#timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -330,8 +313,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_csharp">
 <a href="#variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -340,13 +322,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardvariable">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dashboardgroup_go">
 <a href="#dashboardgroup_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Group</a>
@@ -355,8 +335,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedwriterteams_go">
 <a href="#authorizedwriterteams_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
@@ -365,8 +344,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedwriterusers_go">
 <a href="#authorizedwriterusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
@@ -375,8 +353,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charts_go">
 <a href="#charts_go" style="color: inherit; text-decoration: inherit;">Charts</a>
@@ -385,8 +362,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardchart">[]Dashboard<wbr>Chart</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartsresolution_go">
 <a href="#chartsresolution_go" style="color: inherit; text-decoration: inherit;">Charts<wbr>Resolution</a>
@@ -395,8 +371,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columns_go">
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -405,8 +380,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardcolumn">[]Dashboard<wbr>Column</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -415,8 +389,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveryoptionsquery_go">
 <a href="#discoveryoptionsquery_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Query</a>
@@ -424,8 +397,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveryoptionsselectors_go">
 <a href="#discoveryoptionsselectors_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Selectors</a>
@@ -433,8 +405,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -443,8 +414,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventoverlays_go">
 <a href="#eventoverlays_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Overlays</a>
@@ -453,8 +423,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardeventoverlay">[]Dashboard<wbr>Event<wbr>Overlay</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -463,8 +432,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">[]Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grids_go">
 <a href="#grids_go" style="color: inherit; text-decoration: inherit;">Grids</a>
@@ -473,8 +441,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardgrid">[]Dashboard<wbr>Grid</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -483,8 +450,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectedeventoverlays_go">
 <a href="#selectedeventoverlays_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Event<wbr>Overlays</a>
@@ -493,8 +459,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardselectedeventoverlay">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -503,8 +468,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerange_go">
 <a href="#timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -513,8 +477,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_go">
 <a href="#variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -523,13 +486,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardvariable">[]Dashboard<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dashboardgroup_nodejs">
 <a href="#dashboardgroup_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Group</a>
@@ -538,8 +499,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedwriterteams_nodejs">
 <a href="#authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
@@ -548,8 +508,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizedwriterusers_nodejs">
 <a href="#authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
@@ -558,8 +517,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charts_nodejs">
 <a href="#charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
@@ -568,8 +526,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart[]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="chartsresolution_nodejs">
 <a href="#chartsresolution_nodejs" style="color: inherit; text-decoration: inherit;">charts<wbr>Resolution</a>
@@ -578,8 +535,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columns_nodejs">
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -588,8 +544,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -598,8 +553,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveryoptionsquery_nodejs">
 <a href="#discoveryoptionsquery_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Query</a>
@@ -607,8 +561,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discoveryoptionsselectors_nodejs">
 <a href="#discoveryoptionsselectors_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Selectors</a>
@@ -616,8 +569,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -626,8 +578,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventoverlays_nodejs">
 <a href="#eventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Overlays</a>
@@ -636,8 +587,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay[]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -646,8 +596,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grids_nodejs">
 <a href="#grids_nodejs" style="color: inherit; text-decoration: inherit;">grids</a>
@@ -656,8 +605,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid[]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -666,8 +614,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectedeventoverlays_nodejs">
 <a href="#selectedeventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Event<wbr>Overlays</a>
@@ -676,8 +623,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay[]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -686,8 +632,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerange_nodejs">
 <a href="#timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
@@ -696,8 +641,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_nodejs">
 <a href="#variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -706,13 +650,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dashboard_group_python">
 <a href="#dashboard_group_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>group</a>
@@ -721,8 +663,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_writer_teams_python">
 <a href="#authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
@@ -731,8 +672,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorized_writer_users_python">
 <a href="#authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
@@ -741,8 +681,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charts_python">
 <a href="#charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
@@ -751,8 +690,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardchart">Sequence[Dashboard<wbr>Chart<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charts_resolution_python">
 <a href="#charts_resolution_python" style="color: inherit; text-decoration: inherit;">charts_<wbr>resolution</a>
@@ -761,8 +699,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="columns_python">
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -771,8 +708,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardcolumn">Sequence[Dashboard<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -781,8 +717,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discovery_options_query_python">
 <a href="#discovery_options_query_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>query</a>
@@ -790,8 +725,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="discovery_options_selectors_python">
 <a href="#discovery_options_selectors_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>selectors</a>
@@ -799,8 +733,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -809,8 +742,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_overlays_python">
 <a href="#event_overlays_python" style="color: inherit; text-decoration: inherit;">event_<wbr>overlays</a>
@@ -819,8 +751,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardeventoverlay">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -829,8 +760,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardfilter">Sequence[Dashboard<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grids_python">
 <a href="#grids_python" style="color: inherit; text-decoration: inherit;">grids</a>
@@ -839,8 +769,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardgrid">Sequence[Dashboard<wbr>Grid<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -849,8 +778,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selected_event_overlays_python">
 <a href="#selected_event_overlays_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>event_<wbr>overlays</a>
@@ -859,8 +787,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardselectedeventoverlay">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -869,8 +796,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_range_python">
 <a href="#time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
@@ -879,8 +805,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="variables_python">
 <a href="#variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -889,8 +814,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#dashboardvariable">Sequence[Dashboard<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -901,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -910,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -920,13 +842,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -934,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -944,13 +863,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -958,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -968,13 +884,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -982,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -992,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1120,8 +1032,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedwriterteams_csharp">
 <a href="#state_authorizedwriterteams_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
@@ -1130,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedwriterusers_csharp">
 <a href="#state_authorizedwriterusers_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
@@ -1140,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_charts_csharp">
 <a href="#state_charts_csharp" style="color: inherit; text-decoration: inherit;">Charts</a>
@@ -1150,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardchart">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Chart<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chartsresolution_csharp">
 <a href="#state_chartsresolution_csharp" style="color: inherit; text-decoration: inherit;">Charts<wbr>Resolution</a>
@@ -1160,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_csharp">
 <a href="#state_columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -1170,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardcolumn">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboardgroup_csharp">
 <a href="#state_dashboardgroup_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Group</a>
@@ -1180,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1190,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryoptionsquery_csharp">
 <a href="#state_discoveryoptionsquery_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Query</a>
@@ -1199,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryoptionsselectors_csharp">
 <a href="#state_discoveryoptionsselectors_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Selectors</a>
@@ -1208,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_csharp">
 <a href="#state_endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1218,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventoverlays_csharp">
 <a href="#state_eventoverlays_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Overlays</a>
@@ -1228,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlay">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Event<wbr>Overlay<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
 <a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1238,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grids_csharp">
 <a href="#state_grids_csharp" style="color: inherit; text-decoration: inherit;">Grids</a>
@@ -1248,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardgrid">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Grid<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1258,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectedeventoverlays_csharp">
 <a href="#state_selectedeventoverlays_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Event<wbr>Overlays</a>
@@ -1268,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlay">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1278,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerange_csharp">
 <a href="#state_timerange_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -1288,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1298,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_csharp">
 <a href="#state_variables_csharp" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -1308,13 +1201,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardvariable">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Variable<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedwriterteams_go">
 <a href="#state_authorizedwriterteams_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Teams</a>
@@ -1323,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedwriterusers_go">
 <a href="#state_authorizedwriterusers_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Writer<wbr>Users</a>
@@ -1333,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_charts_go">
 <a href="#state_charts_go" style="color: inherit; text-decoration: inherit;">Charts</a>
@@ -1343,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardchart">[]Dashboard<wbr>Chart</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chartsresolution_go">
 <a href="#state_chartsresolution_go" style="color: inherit; text-decoration: inherit;">Charts<wbr>Resolution</a>
@@ -1353,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_go">
 <a href="#state_columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -1363,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardcolumn">[]Dashboard<wbr>Column</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboardgroup_go">
 <a href="#state_dashboardgroup_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Group</a>
@@ -1373,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1383,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryoptionsquery_go">
 <a href="#state_discoveryoptionsquery_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Query</a>
@@ -1392,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryoptionsselectors_go">
 <a href="#state_discoveryoptionsselectors_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Options<wbr>Selectors</a>
@@ -1401,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_go">
 <a href="#state_endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1411,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventoverlays_go">
 <a href="#state_eventoverlays_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Overlays</a>
@@ -1421,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlay">[]Dashboard<wbr>Event<wbr>Overlay</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -1431,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">[]Dashboard<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grids_go">
 <a href="#state_grids_go" style="color: inherit; text-decoration: inherit;">Grids</a>
@@ -1441,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardgrid">[]Dashboard<wbr>Grid</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1451,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectedeventoverlays_go">
 <a href="#state_selectedeventoverlays_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Event<wbr>Overlays</a>
@@ -1461,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlay">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_go">
 <a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1471,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerange_go">
 <a href="#state_timerange_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Range</a>
@@ -1481,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1491,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_go">
 <a href="#state_variables_go" style="color: inherit; text-decoration: inherit;">Variables</a>
@@ -1501,13 +1374,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardvariable">[]Dashboard<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedwriterteams_nodejs">
 <a href="#state_authorizedwriterteams_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Teams</a>
@@ -1516,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizedwriterusers_nodejs">
 <a href="#state_authorizedwriterusers_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Writer<wbr>Users</a>
@@ -1526,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_charts_nodejs">
 <a href="#state_charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
@@ -1536,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardchart">Dashboard<wbr>Chart[]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_chartsresolution_nodejs">
 <a href="#state_chartsresolution_nodejs" style="color: inherit; text-decoration: inherit;">charts<wbr>Resolution</a>
@@ -1546,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_nodejs">
 <a href="#state_columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -1556,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardcolumn">Dashboard<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboardgroup_nodejs">
 <a href="#state_dashboardgroup_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Group</a>
@@ -1566,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1576,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryoptionsquery_nodejs">
 <a href="#state_discoveryoptionsquery_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Query</a>
@@ -1585,8 +1449,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discoveryoptionsselectors_nodejs">
 <a href="#state_discoveryoptionsselectors_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Options<wbr>Selectors</a>
@@ -1594,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_nodejs">
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1604,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventoverlays_nodejs">
 <a href="#state_eventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Overlays</a>
@@ -1614,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay[]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1624,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Dashboard<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grids_nodejs">
 <a href="#state_grids_nodejs" style="color: inherit; text-decoration: inherit;">grids</a>
@@ -1634,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardgrid">Dashboard<wbr>Grid[]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1644,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectedeventoverlays_nodejs">
 <a href="#state_selectedeventoverlays_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Event<wbr>Overlays</a>
@@ -1654,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay[]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1664,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerange_nodejs">
 <a href="#state_timerange_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Range</a>
@@ -1674,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1684,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_nodejs">
 <a href="#state_variables_nodejs" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -1694,13 +1547,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardvariable">Dashboard<wbr>Variable[]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_writer_teams_python">
 <a href="#state_authorized_writer_teams_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>teams</a>
@@ -1709,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorized_writer_users_python">
 <a href="#state_authorized_writer_users_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>writer_<wbr>users</a>
@@ -1719,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_charts_python">
 <a href="#state_charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
@@ -1729,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardchart">Sequence[Dashboard<wbr>Chart<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Chart ID and layout information for the charts in the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_charts_resolution_python">
 <a href="#state_charts_resolution_python" style="color: inherit; text-decoration: inherit;">charts_<wbr>resolution</a>
@@ -1739,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the chart data display resolution for charts in this dashboard. Value can be one of `"default"`,  `"low"`, `"high"`, or  `"highest"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_columns_python">
 <a href="#state_columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -1749,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardcolumn">Sequence[Dashboard<wbr>Column<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_group_python">
 <a href="#state_dashboard_group_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>group</a>
@@ -1759,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the dashboard group that contains the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1769,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discovery_options_query_python">
 <a href="#state_discovery_options_query_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>query</a>
@@ -1778,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_discovery_options_selectors_python">
 <a href="#state_discovery_options_selectors_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>options_<wbr>selectors</a>
@@ -1787,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_end_time_python">
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1797,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_overlays_python">
 <a href="#state_event_overlays_python" style="color: inherit; text-decoration: inherit;">event_<wbr>overlays</a>
@@ -1807,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlay">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the *suggested* event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the `selected_event_overlay` property instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1817,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardfilter">Sequence[Dashboard<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Filter to apply to the charts when displaying the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grids_python">
 <a href="#state_grids_python" style="color: inherit; text-decoration: inherit;">grids</a>
@@ -1827,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardgrid">Sequence[Dashboard<wbr>Grid<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1837,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selected_event_overlays_python">
 <a href="#state_selected_event_overlays_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>event_<wbr>overlays</a>
@@ -1847,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlay">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines event overlays which are enabled by **default**. Any overlay specified here should have an accompanying entry in `event_overlay`, which are similar to the properties here.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1857,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds since epoch. Used for visualization.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_range_python">
 <a href="#state_time_range_python" style="color: inherit; text-decoration: inherit;">time_<wbr>range</a>
@@ -1867,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time range prior to now to visualize. SignalFx time syntax (e.g. `"-5m"`, `"-1h"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1877,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_variables_python">
 <a href="#state_variables_python" style="color: inherit; text-decoration: inherit;">variables</a>
@@ -1887,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardvariable">Sequence[Dashboard<wbr>Variable<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard variable to apply to each chart in the dashboard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1903,8 +1735,7 @@ The following state arguments are supported:
 <h4 id="dashboardchart">Dashboard<wbr>Chart</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartid_csharp">
 <a href="#chartid_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Id</a>
@@ -1913,8 +1744,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the chart to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_csharp">
 <a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1923,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_csharp">
 <a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -1933,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_csharp">
 <a href="#row_csharp" style="color: inherit; text-decoration: inherit;">Row</a>
@@ -1943,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_csharp">
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -1953,13 +1780,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartid_go">
 <a href="#chartid_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Id</a>
@@ -1968,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the chart to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_go">
 <a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -1978,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_go">
 <a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -1988,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_go">
 <a href="#row_go" style="color: inherit; text-decoration: inherit;">Row</a>
@@ -1998,8 +1820,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_go">
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2008,13 +1829,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartid_nodejs">
 <a href="#chartid_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Id</a>
@@ -2023,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the chart to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_nodejs">
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2033,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_nodejs">
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2043,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_nodejs">
 <a href="#row_nodejs" style="color: inherit; text-decoration: inherit;">row</a>
@@ -2053,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_nodejs">
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2063,13 +1878,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chart_id_python">
 <a href="#chart_id_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>id</a>
@@ -2078,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the chart to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_python">
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2088,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_python">
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2098,8 +1909,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="row_python">
 <a href="#row_python" style="color: inherit; text-decoration: inherit;">row</a>
@@ -2108,8 +1918,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The row to show the chart in (zero-based); if `height > 1`, this value represents the topmost row of the chart (greater than or equal to `0`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_python">
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2118,15 +1927,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardcolumn">Dashboard<wbr>Column</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartids_csharp">
 <a href="#chartids_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Ids</a>
@@ -2135,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_csharp">
 <a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -2145,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_csharp">
 <a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -2155,8 +1960,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_csharp">
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2165,13 +1969,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartids_go">
 <a href="#chartids_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Ids</a>
@@ -2180,8 +1982,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_go">
 <a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
@@ -2190,8 +1991,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_go">
 <a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -2200,8 +2000,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_go">
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2210,13 +2009,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartids_nodejs">
 <a href="#chartids_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Ids</a>
@@ -2225,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_nodejs">
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2235,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_nodejs">
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2245,8 +2040,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_nodejs">
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2255,13 +2049,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chart_ids_python">
 <a href="#chart_ids_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>ids</a>
@@ -2270,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="column_python">
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
@@ -2280,8 +2071,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Column number for the layout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_python">
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2290,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_python">
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2300,15 +2089,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_csharp">
 <a href="#signal_csharp" style="color: inherit; text-decoration: inherit;">Signal</a>
@@ -2317,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -2327,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2337,8 +2122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text shown in the dropdown when selecting this overlay from the menu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="line_csharp">
 <a href="#line_csharp" style="color: inherit; text-decoration: inherit;">Line</a>
@@ -2347,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show a vertical line for the event. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -2357,8 +2140,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlaysource">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2367,13 +2149,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_go">
 <a href="#signal_go" style="color: inherit; text-decoration: inherit;">Signal</a>
@@ -2382,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
@@ -2392,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2402,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text shown in the dropdown when selecting this overlay from the menu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="line_go">
 <a href="#line_go" style="color: inherit; text-decoration: inherit;">Line</a>
@@ -2412,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show a vertical line for the event. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -2422,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlaysource">[]Dashboard<wbr>Event<wbr>Overlay<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2432,13 +2207,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_nodejs">
 <a href="#signal_nodejs" style="color: inherit; text-decoration: inherit;">signal</a>
@@ -2447,8 +2220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2457,8 +2229,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2467,8 +2238,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Text shown in the dropdown when selecting this overlay from the menu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="line_nodejs">
 <a href="#line_nodejs" style="color: inherit; text-decoration: inherit;">line</a>
@@ -2477,8 +2247,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Show a vertical line for the event. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -2487,8 +2256,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2497,13 +2265,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_python">
 <a href="#signal_python" style="color: inherit; text-decoration: inherit;">signal</a>
@@ -2512,8 +2278,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
@@ -2522,8 +2287,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Color to use : gray, blue, azure, navy, brown, orange, yellow, iris, magenta, pink, purple, violet, lilac, emerald, green, aquamarine.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2532,8 +2296,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Text shown in the dropdown when selecting this overlay from the menu.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="line_python">
 <a href="#line_python" style="color: inherit; text-decoration: inherit;">line</a>
@@ -2542,8 +2305,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Show a vertical line for the event. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -2552,8 +2314,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardeventoverlaysource">Sequence[Dashboard<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2562,15 +2323,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -2579,8 +2338,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2589,8 +2347,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_csharp">
 <a href="#negated_csharp" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -2599,13 +2356,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -2614,8 +2369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2624,8 +2378,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_go">
 <a href="#negated_go" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -2634,13 +2387,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -2649,8 +2400,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2659,8 +2409,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_nodejs">
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -2669,13 +2418,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -2684,8 +2431,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2694,8 +2440,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_python">
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -2704,15 +2449,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardfilter">Dashboard<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -2721,8 +2464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2731,8 +2473,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyifexist_csharp">
 <a href="#applyifexist_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>If<wbr>Exist</a>
@@ -2741,8 +2482,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_csharp">
 <a href="#negated_csharp" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -2751,13 +2491,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -2766,8 +2504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2776,8 +2513,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyifexist_go">
 <a href="#applyifexist_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>If<wbr>Exist</a>
@@ -2786,8 +2522,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_go">
 <a href="#negated_go" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -2796,13 +2531,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -2811,8 +2544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2821,8 +2553,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyifexist_nodejs">
 <a href="#applyifexist_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>If<wbr>Exist</a>
@@ -2831,8 +2562,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_nodejs">
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -2841,13 +2571,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -2856,8 +2584,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2866,8 +2593,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_if_exist_python">
 <a href="#apply_if_exist_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>if_<wbr>exist</a>
@@ -2876,8 +2602,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_python">
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -2886,15 +2611,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardgrid">Dashboard<wbr>Grid</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartids_csharp">
 <a href="#chartids_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Ids</a>
@@ -2903,8 +2626,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_csharp">
 <a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -2913,8 +2635,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_csharp">
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2923,13 +2644,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartids_go">
 <a href="#chartids_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Ids</a>
@@ -2938,8 +2657,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_go">
 <a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
@@ -2948,8 +2666,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_go">
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2958,13 +2675,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chartids_nodejs">
 <a href="#chartids_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Ids</a>
@@ -2973,8 +2688,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_nodejs">
 <a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
@@ -2983,8 +2697,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_nodejs">
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2993,13 +2706,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chart_ids_python">
 <a href="#chart_ids_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>ids</a>
@@ -3008,8 +2719,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IDs of the charts to display.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="height_python">
 <a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
@@ -3018,8 +2728,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many rows every chart should take up (greater than or equal to 1). 1 by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_python">
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
@@ -3028,15 +2737,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many columns (out of a total of `12`) every chart should take up (between `1` and `12`). `12` by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_csharp">
 <a href="#signal_csharp" style="color: inherit; text-decoration: inherit;">Signal</a>
@@ -3045,8 +2752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -3055,8 +2761,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlaysource">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3065,13 +2770,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_go">
 <a href="#signal_go" style="color: inherit; text-decoration: inherit;">Signal</a>
@@ -3080,8 +2783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
@@ -3090,8 +2792,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlaysource">[]Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3100,13 +2801,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_nodejs">
 <a href="#signal_nodejs" style="color: inherit; text-decoration: inherit;">signal</a>
@@ -3115,8 +2814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -3125,8 +2823,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3135,13 +2832,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="signal_python">
 <a href="#signal_python" style="color: inherit; text-decoration: inherit;">signal</a>
@@ -3150,8 +2845,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Search term used to choose the events shown in the overlay.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
@@ -3160,8 +2854,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#dashboardselectedeventoverlaysource">Sequence[Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element specifies a filter to use against the signal specified in the `signal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3170,15 +2863,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Can be set to `eventTimeSeries` (the default) to refer to externally reported events, or `detectorEvents` to refer to events from detector triggers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -3187,8 +2878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3197,8 +2887,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_csharp">
 <a href="#negated_csharp" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -3207,13 +2896,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -3222,8 +2909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3232,8 +2918,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_go">
 <a href="#negated_go" style="color: inherit; text-decoration: inherit;">Negated</a>
@@ -3242,13 +2927,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -3257,8 +2940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3267,8 +2949,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_nodejs">
 <a href="#negated_nodejs" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -3277,13 +2958,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -3292,8 +2971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3302,8 +2980,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negated_python">
 <a href="#negated_python" style="color: inherit; text-decoration: inherit;">negated</a>
@@ -3312,15 +2989,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardvariable">Dashboard<wbr>Variable</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -3329,8 +3004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -3339,8 +3013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyifexist_csharp">
 <a href="#applyifexist_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>If<wbr>Exist</a>
@@ -3349,8 +3022,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3359,8 +3031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceonly_csharp">
 <a href="#replaceonly_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Only</a>
@@ -3369,8 +3040,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable will only apply to charts that have a filter for the property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedsuggestions_csharp">
 <a href="#restrictedsuggestions_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Suggestions</a>
@@ -3379,8 +3049,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable may only be set to the values listed in `values_suggested` and only these values will appear in autosuggestion menus. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuerequired_csharp">
 <a href="#valuerequired_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Required</a>
@@ -3389,8 +3058,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3399,8 +3067,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuessuggesteds_csharp">
 <a href="#valuessuggesteds_csharp" style="color: inherit; text-decoration: inherit;">Values<wbr>Suggesteds</a>
@@ -3409,13 +3076,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -3424,8 +3089,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
@@ -3434,8 +3098,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyifexist_go">
 <a href="#applyifexist_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>If<wbr>Exist</a>
@@ -3444,8 +3107,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3454,8 +3116,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceonly_go">
 <a href="#replaceonly_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Only</a>
@@ -3464,8 +3125,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable will only apply to charts that have a filter for the property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedsuggestions_go">
 <a href="#restrictedsuggestions_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Suggestions</a>
@@ -3474,8 +3134,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable may only be set to the values listed in `values_suggested` and only these values will appear in autosuggestion menus. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuerequired_go">
 <a href="#valuerequired_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Required</a>
@@ -3484,8 +3143,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3494,8 +3152,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuessuggesteds_go">
 <a href="#valuessuggesteds_go" style="color: inherit; text-decoration: inherit;">Values<wbr>Suggesteds</a>
@@ -3504,13 +3161,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -3519,8 +3174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
@@ -3529,8 +3183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyifexist_nodejs">
 <a href="#applyifexist_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>If<wbr>Exist</a>
@@ -3539,8 +3192,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3549,8 +3201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceonly_nodejs">
 <a href="#replaceonly_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Only</a>
@@ -3559,8 +3210,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable will only apply to charts that have a filter for the property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedsuggestions_nodejs">
 <a href="#restrictedsuggestions_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Suggestions</a>
@@ -3569,8 +3219,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable may only be set to the values listed in `values_suggested` and only these values will appear in autosuggestion menus. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuerequired_nodejs">
 <a href="#valuerequired_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Required</a>
@@ -3579,8 +3228,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3589,8 +3237,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuessuggesteds_nodejs">
 <a href="#valuessuggesteds_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>Suggesteds</a>
@@ -3599,13 +3246,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -3614,8 +3259,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alias for the dashboard variable. This text will appear as the label for the dropdown field on the dashboard.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
@@ -3624,8 +3268,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a dimension to filter against.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_if_exist_python">
 <a href="#apply_if_exist_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>if_<wbr>exist</a>
@@ -3634,8 +3277,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this variable will also match data that doesn't have this property at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3644,8 +3286,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_only_python">
 <a href="#replace_only_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>only</a>
@@ -3654,8 +3295,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable will only apply to charts that have a filter for the property.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restricted_suggestions_python">
 <a href="#restricted_suggestions_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>suggestions</a>
@@ -3664,8 +3304,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, this variable may only be set to the values listed in `values_suggested` and only these values will appear in autosuggestion menus. `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_required_python">
 <a href="#value_required_python" style="color: inherit; text-decoration: inherit;">value_<wbr>required</a>
@@ -3674,8 +3313,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether a value is required for this variable (and therefore whether it will be possible to view this dashboard without this filter applied). `false` by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3684,8 +3322,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of values to be used with the `property`, they will be combined via `OR`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_suggesteds_python">
 <a href="#values_suggesteds_python" style="color: inherit; text-decoration: inherit;">values_<wbr>suggesteds</a>
@@ -3694,8 +3331,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

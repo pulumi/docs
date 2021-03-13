@@ -298,8 +298,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="firewallpolicyarn_csharp">
 <a href="#firewallpolicyarn_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Arn</a>
@@ -308,8 +307,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetmappings_csharp">
 <a href="#subnetmappings_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -318,8 +316,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#firewallsubnetmapping">List&lt;Firewall<wbr>Subnet<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -328,8 +325,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteprotection_csharp">
 <a href="#deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -338,8 +334,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -348,8 +343,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallpolicychangeprotection_csharp">
 <a href="#firewallpolicychangeprotection_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
@@ -358,8 +352,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -368,8 +361,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetchangeprotection_csharp">
 <a href="#subnetchangeprotection_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Change<wbr>Protection</a>
@@ -378,8 +370,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -388,13 +379,11 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="firewallpolicyarn_go">
 <a href="#firewallpolicyarn_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Arn</a>
@@ -403,8 +392,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetmappings_go">
 <a href="#subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -413,8 +401,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#firewallsubnetmapping">[]Firewall<wbr>Subnet<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -423,8 +410,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteprotection_go">
 <a href="#deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -433,8 +419,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -443,8 +428,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallpolicychangeprotection_go">
 <a href="#firewallpolicychangeprotection_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
@@ -453,8 +437,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -463,8 +446,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetchangeprotection_go">
 <a href="#subnetchangeprotection_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Change<wbr>Protection</a>
@@ -473,8 +455,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -483,13 +464,11 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="firewallpolicyarn_nodejs">
 <a href="#firewallpolicyarn_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Arn</a>
@@ -498,8 +477,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetmappings_nodejs">
 <a href="#subnetmappings_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mappings</a>
@@ -508,8 +486,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#firewallsubnetmapping">Firewall<wbr>Subnet<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -518,8 +495,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteprotection_nodejs">
 <a href="#deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
@@ -528,8 +504,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -538,8 +513,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallpolicychangeprotection_nodejs">
 <a href="#firewallpolicychangeprotection_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
@@ -548,8 +522,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -558,8 +531,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetchangeprotection_nodejs">
 <a href="#subnetchangeprotection_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Change<wbr>Protection</a>
@@ -568,8 +540,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -578,13 +549,11 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="firewall_policy_arn_python">
 <a href="#firewall_policy_arn_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>arn</a>
@@ -593,8 +562,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_mappings_python">
 <a href="#subnet_mappings_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mappings</a>
@@ -603,8 +571,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#firewallsubnetmapping">Sequence[Firewall<wbr>Subnet<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -613,8 +580,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_protection_python">
 <a href="#delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
@@ -623,8 +589,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -633,8 +598,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewall_policy_change_protection_python">
 <a href="#firewall_policy_change_protection_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>change_<wbr>protection</a>
@@ -643,8 +607,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -653,8 +616,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_change_protection_python">
 <a href="#subnet_change_protection_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>change_<wbr>protection</a>
@@ -663,8 +625,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -673,8 +634,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -685,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -695,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallstatuses_csharp">
 <a href="#firewallstatuses_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
@@ -705,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#firewallfirewallstatus">List&lt;Firewall<wbr>Firewall<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -714,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetoken_csharp">
 <a href="#updatetoken_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -724,13 +680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -739,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallstatuses_go">
 <a href="#firewallstatuses_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
@@ -749,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#firewallfirewallstatus">[]Firewall<wbr>Firewall<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -758,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetoken_go">
 <a href="#updatetoken_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -768,13 +719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -783,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewallstatuses_nodejs">
 <a href="#firewallstatuses_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Statuses</a>
@@ -793,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#firewallfirewallstatus">Firewall<wbr>Firewall<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -802,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetoken_nodejs">
 <a href="#updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
@@ -812,13 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -827,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firewall_statuses_python">
 <a href="#firewall_statuses_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>statuses</a>
@@ -837,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#firewallfirewallstatus">Sequence[Firewall<wbr>Firewall<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_token_python">
 <a href="#update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
@@ -856,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -984,8 +924,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -994,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteprotection_csharp">
 <a href="#state_deleteprotection_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -1004,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1014,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyarn_csharp">
 <a href="#state_firewallpolicyarn_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Arn</a>
@@ -1024,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicychangeprotection_csharp">
 <a href="#state_firewallpolicychangeprotection_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
@@ -1034,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallstatuses_csharp">
 <a href="#state_firewallstatuses_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
@@ -1044,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatus">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1054,8 +987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetchangeprotection_csharp">
 <a href="#state_subnetchangeprotection_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Change<wbr>Protection</a>
@@ -1064,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetmappings_csharp">
 <a href="#state_subnetmappings_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -1074,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallsubnetmapping">List&lt;Firewall<wbr>Subnet<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1084,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_csharp">
 <a href="#state_updatetoken_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -1094,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1104,13 +1032,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1119,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteprotection_go">
 <a href="#state_deleteprotection_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Protection</a>
@@ -1129,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1139,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyarn_go">
 <a href="#state_firewallpolicyarn_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Arn</a>
@@ -1149,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicychangeprotection_go">
 <a href="#state_firewallpolicychangeprotection_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
@@ -1159,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallstatuses_go">
 <a href="#state_firewallstatuses_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
@@ -1169,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatus">[]Firewall<wbr>Firewall<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1179,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetchangeprotection_go">
 <a href="#state_subnetchangeprotection_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Change<wbr>Protection</a>
@@ -1189,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetmappings_go">
 <a href="#state_subnetmappings_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Mappings</a>
@@ -1199,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallsubnetmapping">[]Firewall<wbr>Subnet<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1209,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_go">
 <a href="#state_updatetoken_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Token</a>
@@ -1219,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1229,13 +1144,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1244,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleteprotection_nodejs">
 <a href="#state_deleteprotection_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Protection</a>
@@ -1254,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1264,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicyarn_nodejs">
 <a href="#state_firewallpolicyarn_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Arn</a>
@@ -1274,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallpolicychangeprotection_nodejs">
 <a href="#state_firewallpolicychangeprotection_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Change<wbr>Protection</a>
@@ -1284,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewallstatuses_nodejs">
 <a href="#state_firewallstatuses_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Statuses</a>
@@ -1294,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatus">Firewall<wbr>Firewall<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1304,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetchangeprotection_nodejs">
 <a href="#state_subnetchangeprotection_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Change<wbr>Protection</a>
@@ -1314,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetmappings_nodejs">
 <a href="#state_subnetmappings_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Mappings</a>
@@ -1324,8 +1229,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallsubnetmapping">Firewall<wbr>Subnet<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1334,8 +1238,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetoken_nodejs">
 <a href="#state_updatetoken_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Token</a>
@@ -1344,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1354,13 +1256,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1369,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_protection_python">
 <a href="#state_delete_protection_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>protection</a>
@@ -1379,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1389,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly description of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewall_policy_arn_python">
 <a href="#state_firewall_policy_arn_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>arn</a>
@@ -1399,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the VPC Firewall policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewall_policy_change_protection_python">
 <a href="#state_firewall_policy_change_protection_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>change_<wbr>protection</a>
@@ -1409,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_firewall_statuses_python">
 <a href="#state_firewall_statuses_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>statuses</a>
@@ -1419,8 +1314,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatus">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested list of information about the current status of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1429,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A friendly name of the firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_change_protection_python">
 <a href="#state_subnet_change_protection_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>change_<wbr>protection</a>
@@ -1439,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_mappings_python">
 <a href="#state_subnet_mappings_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>mappings</a>
@@ -1449,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallsubnetmapping">Sequence[Firewall<wbr>Subnet<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1459,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The key:value pairs to associate with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_token_python">
 <a href="#state_update_token_python" style="color: inherit; text-decoration: inherit;">update_<wbr>token</a>
@@ -1469,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string token used when updating a firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1479,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the VPC where AWS Network Firewall should create the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1495,8 +1383,7 @@ The following state arguments are supported:
 <h4 id="firewallfirewallstatus">Firewall<wbr>Firewall<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="syncstates_csharp">
 <a href="#syncstates_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>States</a>
@@ -1505,13 +1392,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstate">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="syncstates_go">
 <a href="#syncstates_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>States</a>
@@ -1520,13 +1405,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstate">[]Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="syncstates_nodejs">
 <a href="#syncstates_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>States</a>
@@ -1535,13 +1418,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstate">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State[]</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sync_states_python">
 <a href="#sync_states_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>states</a>
@@ -1550,15 +1431,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstate">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of subnets configured for use by the firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallfirewallstatussyncstate">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachments_csharp">
 <a href="#attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -1567,8 +1446,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1577,13 +1455,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone where the subnet is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachments_go">
 <a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -1592,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">[]Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1602,13 +1477,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone where the subnet is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachments_nodejs">
 <a href="#attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -1617,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment[]</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1627,13 +1499,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone where the subnet is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attachments_python">
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -1642,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1652,15 +1521,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Availability Zone where the subnet is configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallfirewallstatussyncstateattachment">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointid_csharp">
 <a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -1669,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1679,13 +1545,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointid_go">
 <a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -1694,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1704,13 +1567,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointid_nodejs">
 <a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
@@ -1719,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1729,13 +1589,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_id_python">
 <a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
@@ -1744,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1754,15 +1611,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallsubnetmapping">Firewall<wbr>Subnet<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1771,13 +1626,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1786,13 +1639,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1801,13 +1652,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1816,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

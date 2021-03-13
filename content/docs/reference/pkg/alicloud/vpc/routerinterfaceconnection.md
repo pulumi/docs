@@ -449,8 +449,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceid_csharp">
 <a href="#interfaceid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
@@ -459,8 +458,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oppositeinterfaceid_csharp">
 <a href="#oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
@@ -469,8 +467,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositeinterfaceownerid_csharp">
 <a href="#oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
@@ -478,8 +475,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositerouterid_csharp">
 <a href="#oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
@@ -488,8 +484,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositeroutertype_csharp">
 <a href="#oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
@@ -498,13 +493,11 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceid_go">
 <a href="#interfaceid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
@@ -513,8 +506,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oppositeinterfaceid_go">
 <a href="#oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
@@ -523,8 +515,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositeinterfaceownerid_go">
 <a href="#oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
@@ -532,8 +523,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositerouterid_go">
 <a href="#oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
@@ -542,8 +532,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositeroutertype_go">
 <a href="#oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
@@ -552,13 +541,11 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceid_nodejs">
 <a href="#interfaceid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Id</a>
@@ -567,8 +554,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oppositeinterfaceid_nodejs">
 <a href="#oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
@@ -577,8 +563,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositeinterfaceownerid_nodejs">
 <a href="#oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
@@ -586,8 +571,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositerouterid_nodejs">
 <a href="#oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
@@ -596,8 +580,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oppositeroutertype_nodejs">
 <a href="#oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
@@ -606,13 +589,11 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_id_python">
 <a href="#interface_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>id</a>
@@ -621,8 +602,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="opposite_interface_id_python">
 <a href="#opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
@@ -631,8 +611,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opposite_interface_owner_id_python">
 <a href="#opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
@@ -640,8 +619,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opposite_router_id_python">
 <a href="#opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
@@ -650,8 +628,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="opposite_router_type_python">
 <a href="#opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
@@ -660,8 +637,7 @@ The RouterInterfaceConnection resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -672,8 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -681,13 +656,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -695,13 +668,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -709,13 +680,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -723,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -851,8 +819,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceid_csharp">
 <a href="#state_interfaceid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
@@ -861,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceid_csharp">
 <a href="#state_oppositeinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
@@ -871,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceownerid_csharp">
 <a href="#state_oppositeinterfaceownerid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
@@ -880,8 +845,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositerouterid_csharp">
 <a href="#state_oppositerouterid_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
@@ -890,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeroutertype_csharp">
 <a href="#state_oppositeroutertype_csharp" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
@@ -900,13 +863,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceid_go">
 <a href="#state_interfaceid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Id</a>
@@ -915,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceid_go">
 <a href="#state_oppositeinterfaceid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Id</a>
@@ -925,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceownerid_go">
 <a href="#state_oppositeinterfaceownerid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
@@ -934,8 +893,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositerouterid_go">
 <a href="#state_oppositerouterid_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Id</a>
@@ -944,8 +902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeroutertype_go">
 <a href="#state_oppositeroutertype_go" style="color: inherit; text-decoration: inherit;">Opposite<wbr>Router<wbr>Type</a>
@@ -954,13 +911,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceid_nodejs">
 <a href="#state_interfaceid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Id</a>
@@ -969,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceid_nodejs">
 <a href="#state_oppositeinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Id</a>
@@ -979,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeinterfaceownerid_nodejs">
 <a href="#state_oppositeinterfaceownerid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Interface<wbr>Owner<wbr>Id</a>
@@ -988,8 +941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositerouterid_nodejs">
 <a href="#state_oppositerouterid_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Id</a>
@@ -998,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oppositeroutertype_nodejs">
 <a href="#state_oppositeroutertype_nodejs" style="color: inherit; text-decoration: inherit;">opposite<wbr>Router<wbr>Type</a>
@@ -1008,13 +959,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_interface_id_python">
 <a href="#state_interface_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>id</a>
@@ -1023,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One side router interface ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opposite_interface_id_python">
 <a href="#state_opposite_interface_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>id</a>
@@ -1033,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router interface ID. It must belong the specified "opposite_interface_owner_id" account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opposite_interface_owner_id_python">
 <a href="#state_opposite_interface_owner_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>interface_<wbr>owner_<wbr>id</a>
@@ -1042,8 +989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opposite_router_id_python">
 <a href="#state_opposite_router_id_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>id</a>
@@ -1052,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router ID. It must belong the specified "opposite_interface_owner_id" account. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_opposite_router_type_python">
 <a href="#state_opposite_router_type_python" style="color: inherit; text-decoration: inherit;">opposite_<wbr>router_<wbr>type</a>
@@ -1062,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Another side router Type. Optional value: VRouter, VBR. It is valid when field "opposite_interface_owner_id" is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

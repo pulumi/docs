@@ -335,8 +335,7 @@ The FolderSink resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -377,8 +376,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -388,8 +386,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryoptions_csharp">
 <a href="#bigqueryoptions_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
@@ -398,8 +395,7 @@ accepted.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -408,8 +404,7 @@ accepted.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -418,8 +413,7 @@ accepted.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_csharp">
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
@@ -429,8 +423,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -441,8 +434,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechildren_csharp">
 <a href="#includechildren_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
@@ -452,8 +444,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -462,13 +453,11 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -509,8 +498,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -520,8 +508,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryoptions_go">
 <a href="#bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
@@ -530,8 +517,7 @@ accepted.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -540,8 +526,7 @@ accepted.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -550,8 +535,7 @@ accepted.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_go">
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
@@ -561,8 +545,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -573,8 +556,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechildren_go">
 <a href="#includechildren_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
@@ -584,8 +566,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -594,13 +575,11 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -641,8 +620,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -652,8 +630,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryoptions_nodejs">
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Options</a>
@@ -662,8 +639,7 @@ accepted.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -672,8 +648,7 @@ accepted.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -682,8 +657,7 @@ accepted.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_nodejs">
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
@@ -693,8 +667,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -705,8 +678,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includechildren_nodejs">
 <a href="#includechildren_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Children</a>
@@ -716,8 +688,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -726,13 +697,11 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -773,8 +742,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -784,8 +752,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigquery_options_python">
 <a href="#bigquery_options_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>options</a>
@@ -794,8 +761,7 @@ accepted.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -804,8 +770,7 @@ accepted.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -814,8 +779,7 @@ accepted.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusions_python">
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
@@ -825,8 +789,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -837,8 +800,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_children_python">
 <a href="#include_children_python" style="color: inherit; text-decoration: inherit;">include_<wbr>children</a>
@@ -848,8 +810,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -858,8 +819,7 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -870,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -879,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writeridentity_csharp">
 <a href="#writeridentity_csharp" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
@@ -890,13 +848,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -904,8 +860,7 @@ configured `destination`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writeridentity_go">
 <a href="#writeridentity_go" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
@@ -915,13 +870,11 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -929,8 +882,7 @@ configured `destination`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writeridentity_nodejs">
 <a href="#writeridentity_nodejs" style="color: inherit; text-decoration: inherit;">writer<wbr>Identity</a>
@@ -940,13 +892,11 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -954,8 +904,7 @@ configured `destination`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="writer_identity_python">
 <a href="#writer_identity_python" style="color: inherit; text-decoration: inherit;">writer_<wbr>identity</a>
@@ -965,8 +914,7 @@ configured `destination`.
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1093,8 +1041,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryoptions_csharp">
 <a href="#state_bigqueryoptions_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
@@ -1103,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1113,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1155,8 +1100,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1165,8 +1109,7 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_csharp">
 <a href="#state_exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
@@ -1176,8 +1119,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1188,8 +1130,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1199,8 +1140,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includechildren_csharp">
 <a href="#state_includechildren_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
@@ -1210,8 +1150,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1220,8 +1159,7 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeridentity_csharp">
 <a href="#state_writeridentity_csharp" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
@@ -1231,13 +1169,11 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryoptions_go">
 <a href="#state_bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
@@ -1246,8 +1182,7 @@ configured `destination`.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1256,8 +1191,7 @@ configured `destination`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1298,8 +1232,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1308,8 +1241,7 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_go">
 <a href="#state_exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
@@ -1319,8 +1251,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1331,8 +1262,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1342,8 +1272,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includechildren_go">
 <a href="#state_includechildren_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
@@ -1353,8 +1282,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1363,8 +1291,7 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeridentity_go">
 <a href="#state_writeridentity_go" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
@@ -1374,13 +1301,11 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryoptions_nodejs">
 <a href="#state_bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Options</a>
@@ -1389,8 +1314,7 @@ configured `destination`.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1399,8 +1323,7 @@ configured `destination`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1441,8 +1364,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1451,8 +1373,7 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_nodejs">
 <a href="#state_exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
@@ -1462,8 +1383,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1474,8 +1394,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1485,8 +1404,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includechildren_nodejs">
 <a href="#state_includechildren_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Children</a>
@@ -1496,8 +1414,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1506,8 +1423,7 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writeridentity_nodejs">
 <a href="#state_writeridentity_nodejs" style="color: inherit; text-decoration: inherit;">writer<wbr>Identity</a>
@@ -1517,13 +1433,11 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigquery_options_python">
 <a href="#state_bigquery_options_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>options</a>
@@ -1532,8 +1446,7 @@ configured `destination`.
         <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1542,8 +1455,7 @@ configured `destination`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1584,8 +1496,7 @@ func main() {
 }
 ```
 The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1594,8 +1505,7 @@ The writer associated with the sink must have access to write to the above resou
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_python">
 <a href="#state_exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
@@ -1605,8 +1515,7 @@ The writer associated with the sink must have access to write to the above resou
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1617,8 +1526,7 @@ one of exclusion_filters it will not be exported.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1628,8 +1536,7 @@ write a filter.
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_include_children_python">
 <a href="#state_include_children_python" style="color: inherit; text-decoration: inherit;">include_<wbr>children</a>
@@ -1639,8 +1546,7 @@ accepted.
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1649,8 +1555,7 @@ associated with child projects are also exported; otherwise only logs relating t
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_writer_identity_python">
 <a href="#state_writer_identity_python" style="color: inherit; text-decoration: inherit;">writer_<wbr>identity</a>
@@ -1660,8 +1565,7 @@ associated with child projects are also exported; otherwise only logs relating t
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1676,8 +1580,7 @@ configured `destination`.
 <h4 id="foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usepartitionedtables_csharp">
 <a href="#usepartitionedtables_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Partitioned<wbr>Tables</a>
@@ -1689,13 +1592,11 @@ configured `destination`.
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usepartitionedtables_go">
 <a href="#usepartitionedtables_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Partitioned<wbr>Tables</a>
@@ -1707,13 +1608,11 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="usepartitionedtables_nodejs">
 <a href="#usepartitionedtables_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Partitioned<wbr>Tables</a>
@@ -1725,13 +1624,11 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="use_partitioned_tables_python">
 <a href="#use_partitioned_tables_python" style="color: inherit; text-decoration: inherit;">use_<wbr>partitioned_<wbr>tables</a>
@@ -1743,15 +1640,13 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="foldersinkexclusion">Folder<wbr>Sink<wbr>Exclusion</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1762,8 +1657,7 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1772,8 +1666,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1782,8 +1675,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1792,13 +1684,11 @@ write a filter.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1809,8 +1699,7 @@ write a filter.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1819,8 +1708,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1829,8 +1717,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1839,13 +1726,11 @@ write a filter.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1856,8 +1741,7 @@ write a filter.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1866,8 +1750,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1876,8 +1759,7 @@ write a filter.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1886,13 +1768,11 @@ write a filter.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1903,8 +1783,7 @@ write a filter.
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1913,8 +1792,7 @@ write a filter.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1923,8 +1801,7 @@ write a filter.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1933,8 +1810,7 @@ write a filter.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

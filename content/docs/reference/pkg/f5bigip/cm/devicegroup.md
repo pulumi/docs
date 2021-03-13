@@ -307,8 +307,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autosync_csharp">
 <a href="#autosync_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
@@ -317,8 +316,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -327,8 +325,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_csharp">
 <a href="#devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -337,8 +334,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#devicegroupdevice">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>CM.<wbr>Inputs.<wbr>Device<wbr>Group<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullloadonsync_csharp">
 <a href="#fullloadonsync_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
@@ -347,8 +343,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incrementalconfig_csharp">
 <a href="#incrementalconfig_csharp" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
@@ -357,8 +352,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -367,8 +361,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkfailover_csharp">
 <a href="#networkfailover_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
@@ -377,8 +370,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_csharp">
 <a href="#partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -387,8 +379,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saveonautosync_csharp">
 <a href="#saveonautosync_csharp" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
@@ -397,8 +388,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -407,13 +397,11 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autosync_go">
 <a href="#autosync_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
@@ -422,8 +410,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -432,8 +419,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_go">
 <a href="#devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -442,8 +428,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#devicegroupdevice">[]Device<wbr>Group<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullloadonsync_go">
 <a href="#fullloadonsync_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
@@ -452,8 +437,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incrementalconfig_go">
 <a href="#incrementalconfig_go" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
@@ -462,8 +446,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,8 +455,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkfailover_go">
 <a href="#networkfailover_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
@@ -482,8 +464,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_go">
 <a href="#partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -492,8 +473,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saveonautosync_go">
 <a href="#saveonautosync_go" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
@@ -502,8 +482,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -512,13 +491,11 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autosync_nodejs">
 <a href="#autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
@@ -527,8 +504,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -537,8 +513,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_nodejs">
 <a href="#devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -547,8 +522,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#devicegroupdevice">Device<wbr>Group<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fullloadonsync_nodejs">
 <a href="#fullloadonsync_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>On<wbr>Sync</a>
@@ -557,8 +531,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incrementalconfig_nodejs">
 <a href="#incrementalconfig_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Config</a>
@@ -567,8 +540,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -577,8 +549,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkfailover_nodejs">
 <a href="#networkfailover_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Failover</a>
@@ -587,8 +558,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_nodejs">
 <a href="#partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -597,8 +567,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saveonautosync_nodejs">
 <a href="#saveonautosync_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>On<wbr>Auto<wbr>Sync</a>
@@ -607,8 +576,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -617,13 +585,11 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_sync_python">
 <a href="#auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
@@ -632,8 +598,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -642,8 +607,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devices_python">
 <a href="#devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -652,8 +616,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#devicegroupdevice">Sequence[Device<wbr>Group<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="full_load_on_sync_python">
 <a href="#full_load_on_sync_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>on_<wbr>sync</a>
@@ -662,8 +625,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incremental_config_python">
 <a href="#incremental_config_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>config</a>
@@ -672,8 +634,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -682,8 +643,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_failover_python">
 <a href="#network_failover_python" style="color: inherit; text-decoration: inherit;">network_<wbr>failover</a>
@@ -692,8 +652,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_python">
 <a href="#partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -702,8 +661,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="save_on_auto_sync_python">
 <a href="#save_on_auto_sync_python" style="color: inherit; text-decoration: inherit;">save_<wbr>on_<wbr>auto_<wbr>sync</a>
@@ -712,8 +670,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -722,8 +679,7 @@ The DeviceGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -734,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,13 +698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -757,13 +710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -771,13 +722,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -785,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -913,8 +861,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autosync_csharp">
 <a href="#state_autosync_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
@@ -923,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -933,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_csharp">
 <a href="#state_devices_csharp" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -943,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#devicegroupdevice">List&lt;Pulumi.<wbr>F5Big<wbr>IP.<wbr>CM.<wbr>Inputs.<wbr>Device<wbr>Group<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullloadonsync_csharp">
 <a href="#state_fullloadonsync_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
@@ -953,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incrementalconfig_csharp">
 <a href="#state_incrementalconfig_csharp" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
@@ -963,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -973,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkfailover_csharp">
 <a href="#state_networkfailover_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
@@ -983,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_csharp">
 <a href="#state_partition_csharp" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -993,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saveonautosync_csharp">
 <a href="#state_saveonautosync_csharp" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
@@ -1003,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1013,13 +951,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autosync_go">
 <a href="#state_autosync_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Sync</a>
@@ -1028,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1038,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_go">
 <a href="#state_devices_go" style="color: inherit; text-decoration: inherit;">Devices</a>
@@ -1048,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#devicegroupdevice">[]Device<wbr>Group<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullloadonsync_go">
 <a href="#state_fullloadonsync_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Load<wbr>On<wbr>Sync</a>
@@ -1058,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incrementalconfig_go">
 <a href="#state_incrementalconfig_go" style="color: inherit; text-decoration: inherit;">Incremental<wbr>Config</a>
@@ -1068,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1078,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkfailover_go">
 <a href="#state_networkfailover_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Failover</a>
@@ -1088,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_go">
 <a href="#state_partition_go" style="color: inherit; text-decoration: inherit;">Partition</a>
@@ -1098,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saveonautosync_go">
 <a href="#state_saveonautosync_go" style="color: inherit; text-decoration: inherit;">Save<wbr>On<wbr>Auto<wbr>Sync</a>
@@ -1108,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1118,13 +1045,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autosync_nodejs">
 <a href="#state_autosync_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Sync</a>
@@ -1133,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1143,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_nodejs">
 <a href="#state_devices_nodejs" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -1153,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#devicegroupdevice">Device<wbr>Group<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fullloadonsync_nodejs">
 <a href="#state_fullloadonsync_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Load<wbr>On<wbr>Sync</a>
@@ -1163,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incrementalconfig_nodejs">
 <a href="#state_incrementalconfig_nodejs" style="color: inherit; text-decoration: inherit;">incremental<wbr>Config</a>
@@ -1173,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1183,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkfailover_nodejs">
 <a href="#state_networkfailover_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Failover</a>
@@ -1193,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_nodejs">
 <a href="#state_partition_nodejs" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -1203,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_saveonautosync_nodejs">
 <a href="#state_saveonautosync_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>On<wbr>Auto<wbr>Sync</a>
@@ -1213,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1223,13 +1139,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_sync_python">
 <a href="#state_auto_sync_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>sync</a>
@@ -1238,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will automatically sync configuration data to its members
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1248,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of Device group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devices_python">
 <a href="#state_devices_python" style="color: inherit; text-decoration: inherit;">devices</a>
@@ -1258,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#devicegroupdevice">Sequence[Device<wbr>Group<wbr>Device<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of the device to be included in device group, this need to be configured before using devicegroup resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_full_load_on_sync_python">
 <a href="#state_full_load_on_sync_python" style="color: inherit; text-decoration: inherit;">full_<wbr>load_<wbr>on_<wbr>sync</a>
@@ -1268,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will perform a full-load upon sync
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incremental_config_python">
 <a href="#state_incremental_config_python" style="color: inherit; text-decoration: inherit;">incremental_<wbr>config</a>
@@ -1278,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1288,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_failover_python">
 <a href="#state_network_failover_python" style="color: inherit; text-decoration: inherit;">network_<wbr>failover</a>
@@ -1298,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will use a network connection for failover
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_python">
 <a href="#state_partition_python" style="color: inherit; text-decoration: inherit;">partition</a>
@@ -1308,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Device administrative partition
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_save_on_auto_sync_python">
 <a href="#state_save_on_auto_sync_python" style="color: inherit; text-decoration: inherit;">save_<wbr>on_<wbr>auto_<wbr>sync</a>
@@ -1318,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the configuration should be saved upon auto-sync.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1328,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies if the device-group will be used for failover or resource syncing
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1344,8 +1248,7 @@ The following state arguments are supported:
 <h4 id="devicegroupdevice">Device<wbr>Group<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1354,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setsyncleader_csharp">
 <a href="#setsyncleader_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Sync<wbr>Leader</a>
@@ -1363,13 +1265,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1378,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setsyncleader_go">
 <a href="#setsyncleader_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Sync<wbr>Leader</a>
@@ -1387,13 +1286,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1402,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setsyncleader_nodejs">
 <a href="#setsyncleader_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Sync<wbr>Leader</a>
@@ -1411,13 +1307,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1426,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Is the name of the device Group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="set_sync_leader_python">
 <a href="#set_sync_leader_python" style="color: inherit; text-decoration: inherit;">set_<wbr>sync_<wbr>leader</a>
@@ -1435,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

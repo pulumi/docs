@@ -1,8 +1,8 @@
 
 ---
 title: "NotificationRule"
-title_tag: "Resource NotificationRule | Package opsgenie"
-meta_desc: "Explore the NotificationRule resource of the opsgenie package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Notification Rule within Opsgenie."
+title_tag: "opsgenie.NotificationRule"
+meta_desc: "Documentation for the opsgenie.NotificationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the NotificationRule resource of the opsgenie package, inclu
 Manages a Notification Rule within Opsgenie.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Opsgenie = Pulumi.Opsgenie;
@@ -61,9 +67,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -108,9 +117,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_opsgenie as opsgenie
@@ -134,9 +146,12 @@ test_notification_rule = opsgenie.NotificationRule("testNotificationRule",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -163,9 +178,16 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NotificationRule Resource {#create}
@@ -190,9 +212,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -200,9 +220,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -210,9 +228,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -220,10 +236,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -249,9 +262,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -259,9 +270,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -269,9 +278,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -279,9 +286,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -289,18 +294,13 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -308,9 +308,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -318,9 +316,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -328,10 +324,7 @@ const testNotificationRule = new opsgenie.NotificationRule("testNotificationRule
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -346,9 +339,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -357,8 +348,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -367,8 +357,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_csharp">
 <a href="#criterias_csharp" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -376,8 +365,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">List&lt;Notification<wbr>Rule<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -386,8 +374,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -396,8 +383,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtimes_csharp">
 <a href="#notificationtimes_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Times</a>
@@ -406,8 +392,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -416,8 +401,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_csharp">
 <a href="#repeats_csharp" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -425,8 +409,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">List&lt;Notification<wbr>Rule<wbr>Repeat<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -434,8 +417,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">List&lt;Notification<wbr>Rule<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_csharp">
 <a href="#steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
@@ -444,8 +426,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#notificationrulestep">List&lt;Notification<wbr>Rule<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerestrictions_csharp">
 <a href="#timerestrictions_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -453,14 +434,11 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">List&lt;Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -469,8 +447,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -479,8 +456,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_go">
 <a href="#criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -488,8 +464,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">[]Notification<wbr>Rule<wbr>Criteria</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -498,8 +473,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -508,8 +482,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtimes_go">
 <a href="#notificationtimes_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Times</a>
@@ -518,8 +491,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -528,8 +500,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_go">
 <a href="#repeats_go" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -537,8 +508,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">[]Notification<wbr>Rule<wbr>Repeat</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -546,8 +516,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">[]Notification<wbr>Rule<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_go">
 <a href="#steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
@@ -556,8 +525,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#notificationrulestep">[]Notification<wbr>Rule<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerestrictions_go">
 <a href="#timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -565,14 +533,11 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">[]Notification<wbr>Rule<wbr>Time<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -581,8 +546,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -591,8 +555,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_nodejs">
 <a href="#criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -600,8 +563,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">Notification<wbr>Rule<wbr>Criteria[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -610,8 +572,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -620,8 +581,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationtimes_nodejs">
 <a href="#notificationtimes_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Times</a>
@@ -630,8 +590,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -640,8 +599,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_nodejs">
 <a href="#repeats_nodejs" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -649,8 +607,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">Notification<wbr>Rule<wbr>Repeat[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -658,8 +615,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">Notification<wbr>Rule<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_nodejs">
 <a href="#steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
@@ -668,8 +624,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#notificationrulestep">Notification<wbr>Rule<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timerestrictions_nodejs">
 <a href="#timerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Restrictions</a>
@@ -677,14 +632,11 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_type_python">
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -693,8 +645,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -703,8 +654,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criterias_python">
 <a href="#criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -712,8 +662,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">Sequence[Notification<wbr>Rule<wbr>Criteria<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -722,8 +671,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -732,8 +680,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_times_python">
 <a href="#notification_times_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>times</a>
@@ -742,8 +689,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -752,8 +698,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeats_python">
 <a href="#repeats_python" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -761,8 +706,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">Sequence[Notification<wbr>Rule<wbr>Repeat<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -770,8 +714,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">Sequence[Notification<wbr>Rule<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steps_python">
 <a href="#steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
@@ -780,8 +723,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#notificationrulestep">Sequence[Notification<wbr>Rule<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_restrictions_python">
 <a href="#time_restrictions_python" style="color: inherit; text-decoration: inherit;">time_<wbr>restrictions</a>
@@ -789,8 +731,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">Sequence[Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,9 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -811,14 +750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -826,14 +762,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -841,14 +774,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -856,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -984,9 +913,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actiontype_csharp">
 <a href="#state_actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -995,8 +922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_csharp">
 <a href="#state_criterias_csharp" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -1004,8 +930,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">List&lt;Notification<wbr>Rule<wbr>Criteria<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1014,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1024,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtimes_csharp">
 <a href="#state_notificationtimes_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Times</a>
@@ -1034,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_csharp">
 <a href="#state_order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1044,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_csharp">
 <a href="#state_repeats_csharp" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -1053,8 +974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">List&lt;Notification<wbr>Rule<wbr>Repeat<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_csharp">
 <a href="#state_schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -1062,8 +982,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">List&lt;Notification<wbr>Rule<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steps_csharp">
 <a href="#state_steps_csharp" style="color: inherit; text-decoration: inherit;">Steps</a>
@@ -1072,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestep">List&lt;Notification<wbr>Rule<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerestrictions_csharp">
 <a href="#state_timerestrictions_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -1081,8 +999,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">List&lt;Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1091,14 +1008,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actiontype_go">
 <a href="#state_actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -1107,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_go">
 <a href="#state_criterias_go" style="color: inherit; text-decoration: inherit;">Criterias</a>
@@ -1116,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">[]Notification<wbr>Rule<wbr>Criteria</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1126,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1136,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtimes_go">
 <a href="#state_notificationtimes_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Times</a>
@@ -1146,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_go">
 <a href="#state_order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1156,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_go">
 <a href="#state_repeats_go" style="color: inherit; text-decoration: inherit;">Repeats</a>
@@ -1165,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">[]Notification<wbr>Rule<wbr>Repeat</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_go">
 <a href="#state_schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -1174,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">[]Notification<wbr>Rule<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steps_go">
 <a href="#state_steps_go" style="color: inherit; text-decoration: inherit;">Steps</a>
@@ -1184,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestep">[]Notification<wbr>Rule<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerestrictions_go">
 <a href="#state_timerestrictions_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Restrictions</a>
@@ -1193,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">[]Notification<wbr>Rule<wbr>Time<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1203,14 +1107,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_actiontype_nodejs">
 <a href="#state_actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -1219,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_nodejs">
 <a href="#state_criterias_nodejs" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -1228,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">Notification<wbr>Rule<wbr>Criteria[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1238,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1248,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationtimes_nodejs">
 <a href="#state_notificationtimes_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Times</a>
@@ -1258,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_nodejs">
 <a href="#state_order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1268,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_nodejs">
 <a href="#state_repeats_nodejs" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -1277,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">Notification<wbr>Rule<wbr>Repeat[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_nodejs">
 <a href="#state_schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -1286,8 +1180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">Notification<wbr>Rule<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steps_nodejs">
 <a href="#state_steps_nodejs" style="color: inherit; text-decoration: inherit;">steps</a>
@@ -1296,8 +1189,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestep">Notification<wbr>Rule<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timerestrictions_nodejs">
 <a href="#state_timerestrictions_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Restrictions</a>
@@ -1305,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1315,14 +1206,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_type_python">
 <a href="#state_action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -1331,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the action that notification rule will have. Allowed values: "create-alert", "acknowledged-alert", "closed-alert", "assigned-alert", "add-note", "schedule-start", "schedule-end", "incoming-call-routing"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criterias_python">
 <a href="#state_criterias_python" style="color: inherit; text-decoration: inherit;">criterias</a>
@@ -1340,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulecriteria">Sequence[Notification<wbr>Rule<wbr>Criteria<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1350,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1360,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_times_python">
 <a href="#state_notification_times_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>times</a>
@@ -1370,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Time Periods that notification for schedule start/end will be sent. Allowed values: "just-before", "15-minutes-ago", "1-hour-ago", "1-day-ago". If `action_type` is "schedule-start" or "schedule-end" then it is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_order_python">
 <a href="#state_order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1380,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeats_python">
 <a href="#state_repeats_python" style="color: inherit; text-decoration: inherit;">repeats</a>
@@ -1389,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationrulerepeat">Sequence[Notification<wbr>Rule<wbr>Repeat<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedules_python">
 <a href="#state_schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -1398,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruleschedule">Sequence[Notification<wbr>Rule<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steps_python">
 <a href="#state_steps_python" style="color: inherit; text-decoration: inherit;">steps</a>
@@ -1408,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestep">Sequence[Notification<wbr>Rule<wbr>Step<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Notification rule steps to take (eg. SMS or email message). This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_restrictions_python">
 <a href="#state_time_restrictions_python" style="color: inherit; text-decoration: inherit;">time_<wbr>restrictions</a>
@@ -1417,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestriction">Sequence[Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1427,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of user to which this notification rule belongs to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1443,9 +1320,7 @@ The following state arguments are supported:
 <h4 id="notificationrulecriteria">Notification<wbr>Rule<wbr>Criteria</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1454,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1464,14 +1338,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulecriteriacondition">List&lt;Notification<wbr>Rule<wbr>Criteria<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the fields and values when the condition applies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1480,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1490,14 +1360,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulecriteriacondition">[]Notification<wbr>Rule<wbr>Criteria<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Defines the fields and values when the condition applies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1506,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1516,14 +1382,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulecriteriacondition">Notification<wbr>Rule<wbr>Criteria<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}Defines the fields and values when the condition applies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1532,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1542,16 +1404,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulecriteriacondition">Sequence[Notification<wbr>Rule<wbr>Criteria<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the fields and values when the condition applies
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationrulecriteriacondition">Notification<wbr>Rule<wbr>Criteria<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1560,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1570,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_csharp">
 <a href="#expectedvalue_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -1579,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1589,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If 'field' is set as 'extra-properties', key could be used for key-value pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_csharp">
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
@@ -1599,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1609,14 +1463,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
@@ -1625,8 +1476,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
@@ -1635,8 +1485,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_go">
 <a href="#expectedvalue_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Value</a>
@@ -1644,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -1654,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If 'field' is set as 'extra-properties', key could be used for key-value pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_go">
 <a href="#not_go" style="color: inherit; text-decoration: inherit;">Not</a>
@@ -1664,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1674,14 +1520,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1690,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1700,8 +1542,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values: "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedvalue_nodejs">
 <a href="#expectedvalue_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Value</a>
@@ -1709,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1719,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If 'field' is set as 'extra-properties', key could be used for key-value pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_nodejs">
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
@@ -1729,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1739,14 +1577,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
@@ -1755,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values: "message", "alias", "description", "source", "entity", "tags", "actions", "details", "extra-properties", "recipients", "teams", "priority"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
@@ -1765,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values: "matches", "contains", "starts-with", "ends-with", "equals", "contains-key", "contains-value", "greater-than", "less-than", "is-empty", "equals-ignore-whitespace
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_value_python">
 <a href="#expected_value_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>value</a>
@@ -1774,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1784,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If 'field' is set as 'extra-properties', key could be used for key-value pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not__python">
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
@@ -1794,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates behaviour of the given operation. Default value is false
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1804,16 +1634,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Order of the condition in conditions list
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationrulerepeat">Notification<wbr>Rule<wbr>Repeat</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loopafter_csharp">
 <a href="#loopafter_csharp" style="color: inherit; text-decoration: inherit;">Loop<wbr>After</a>
@@ -1821,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1831,14 +1657,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loopafter_go">
 <a href="#loopafter_go" style="color: inherit; text-decoration: inherit;">Loop<wbr>After</a>
@@ -1846,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1856,14 +1678,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loopafter_nodejs">
 <a href="#loopafter_nodejs" style="color: inherit; text-decoration: inherit;">loop<wbr>After</a>
@@ -1871,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1881,14 +1699,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loop_after_python">
 <a href="#loop_after_python" style="color: inherit; text-decoration: inherit;">loop_<wbr>after</a>
@@ -1896,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1906,16 +1720,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationruleschedule">Notification<wbr>Rule<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1924,8 +1735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1934,14 +1744,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1950,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1960,14 +1766,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1976,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1986,14 +1788,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2002,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the notification policy
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2012,16 +1810,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationrulestep">Notification<wbr>Rule<wbr>Step</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contacts_csharp">
 <a href="#contacts_csharp" style="color: inherit; text-decoration: inherit;">Contacts</a>
@@ -2030,8 +1825,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestepcontact">List&lt;Notification<wbr>Rule<wbr>Step<wbr>Contact<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Defines the contact that notification will be sent to. This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2040,8 +1834,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendafter_csharp">
 <a href="#sendafter_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>After</a>
@@ -2050,14 +1843,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minute time period notification will be sent after.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contacts_go">
 <a href="#contacts_go" style="color: inherit; text-decoration: inherit;">Contacts</a>
@@ -2066,8 +1856,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestepcontact">[]Notification<wbr>Rule<wbr>Step<wbr>Contact</a></span>
     </dt>
     <dd>{{% md %}}Defines the contact that notification will be sent to. This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2076,8 +1865,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendafter_go">
 <a href="#sendafter_go" style="color: inherit; text-decoration: inherit;">Send<wbr>After</a>
@@ -2086,14 +1874,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minute time period notification will be sent after.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contacts_nodejs">
 <a href="#contacts_nodejs" style="color: inherit; text-decoration: inherit;">contacts</a>
@@ -2102,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestepcontact">Notification<wbr>Rule<wbr>Step<wbr>Contact[]</a></span>
     </dt>
     <dd>{{% md %}}Defines the contact that notification will be sent to. This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2112,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendafter_nodejs">
 <a href="#sendafter_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>After</a>
@@ -2122,14 +1905,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minute time period notification will be sent after.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contacts_python">
 <a href="#contacts_python" style="color: inherit; text-decoration: inherit;">contacts</a>
@@ -2138,8 +1918,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#notificationrulestepcontact">Sequence[Notification<wbr>Rule<wbr>Step<wbr>Contact<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Defines the contact that notification will be sent to. This is a block, structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2148,8 +1927,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defined if this step is enabled. Default: true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="send_after_python">
 <a href="#send_after_python" style="color: inherit; text-decoration: inherit;">send_<wbr>after</a>
@@ -2158,16 +1936,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minute time period notification will be sent after.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationrulestepcontact">Notification<wbr>Rule<wbr>Step<wbr>Contact</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -2176,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact method. Possible values: "email", "sms", "voice", "mobile"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2186,14 +1960,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of a given method (eg. phone number for sms/voice or email address for email)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -2202,8 +1973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact method. Possible values: "email", "sms", "voice", "mobile"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2212,14 +1982,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of a given method (eg. phone number for sms/voice or email address for email)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -2228,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contact method. Possible values: "email", "sms", "voice", "mobile"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2238,14 +2004,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of a given method (eg. phone number for sms/voice or email address for email)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -2254,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contact method. Possible values: "email", "sms", "voice", "mobile"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2264,16 +2026,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address of a given method (eg. phone number for sms/voice or email address for email)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationruletimerestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2282,8 +2041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_csharp">
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -2291,14 +2049,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestrictionrestriction">List&lt;Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2307,8 +2062,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_go">
 <a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -2316,14 +2070,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestrictionrestriction">[]Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2332,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -2341,14 +2091,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestrictionrestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2357,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of matching filter  "match-all", "match-any-condition", "match-all-conditions"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictions_python">
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -2366,16 +2112,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationruletimerestrictionrestriction">Sequence[Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="notificationruletimerestrictionrestriction">Notification<wbr>Rule<wbr>Time<wbr>Restriction<wbr>Restriction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endday_csharp">
 <a href="#endday_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Day</a>
@@ -2383,8 +2126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_csharp">
 <a href="#endhour_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Hour</a>
@@ -2392,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endmin_csharp">
 <a href="#endmin_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Min</a>
@@ -2401,8 +2142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startday_csharp">
 <a href="#startday_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Day</a>
@@ -2410,8 +2150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_csharp">
 <a href="#starthour_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
@@ -2419,8 +2158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startmin_csharp">
 <a href="#startmin_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Min</a>
@@ -2428,14 +2166,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endday_go">
 <a href="#endday_go" style="color: inherit; text-decoration: inherit;">End<wbr>Day</a>
@@ -2443,8 +2178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_go">
 <a href="#endhour_go" style="color: inherit; text-decoration: inherit;">End<wbr>Hour</a>
@@ -2452,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endmin_go">
 <a href="#endmin_go" style="color: inherit; text-decoration: inherit;">End<wbr>Min</a>
@@ -2461,8 +2194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startday_go">
 <a href="#startday_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Day</a>
@@ -2470,8 +2202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_go">
 <a href="#starthour_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour</a>
@@ -2479,8 +2210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startmin_go">
 <a href="#startmin_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Min</a>
@@ -2488,14 +2218,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endday_nodejs">
 <a href="#endday_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Day</a>
@@ -2503,8 +2230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endhour_nodejs">
 <a href="#endhour_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Hour</a>
@@ -2512,8 +2238,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endmin_nodejs">
 <a href="#endmin_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Min</a>
@@ -2521,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startday_nodejs">
 <a href="#startday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Day</a>
@@ -2530,8 +2254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthour_nodejs">
 <a href="#starthour_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour</a>
@@ -2539,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startmin_nodejs">
 <a href="#startmin_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Min</a>
@@ -2548,14 +2270,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_day_python">
 <a href="#end_day_python" style="color: inherit; text-decoration: inherit;">end_<wbr>day</a>
@@ -2563,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_hour_python">
 <a href="#end_hour_python" style="color: inherit; text-decoration: inherit;">end_<wbr>hour</a>
@@ -2572,8 +2290,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_min_python">
 <a href="#end_min_python" style="color: inherit; text-decoration: inherit;">end_<wbr>min</a>
@@ -2581,8 +2298,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_day_python">
 <a href="#start_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>day</a>
@@ -2590,8 +2306,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_hour_python">
 <a href="#start_hour_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour</a>
@@ -2599,8 +2314,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_min_python">
 <a href="#start_min_python" style="color: inherit; text-decoration: inherit;">start_<wbr>min</a>
@@ -2608,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

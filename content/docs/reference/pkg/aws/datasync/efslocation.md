@@ -283,8 +283,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ec2config_csharp">
 <a href="#ec2config_csharp" style="color: inherit; text-decoration: inherit;">Ec2Config</a>
@@ -293,8 +292,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="efsfilesystemarn_csharp">
 <a href="#efsfilesystemarn_csharp" style="color: inherit; text-decoration: inherit;">Efs<wbr>File<wbr>System<wbr>Arn</a>
@@ -303,8 +301,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdirectory_csharp">
 <a href="#subdirectory_csharp" style="color: inherit; text-decoration: inherit;">Subdirectory</a>
@@ -313,8 +310,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -323,13 +319,11 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ec2config_go">
 <a href="#ec2config_go" style="color: inherit; text-decoration: inherit;">Ec2Config</a>
@@ -338,8 +332,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="efsfilesystemarn_go">
 <a href="#efsfilesystemarn_go" style="color: inherit; text-decoration: inherit;">Efs<wbr>File<wbr>System<wbr>Arn</a>
@@ -348,8 +341,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdirectory_go">
 <a href="#subdirectory_go" style="color: inherit; text-decoration: inherit;">Subdirectory</a>
@@ -358,8 +350,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -368,13 +359,11 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ec2config_nodejs">
 <a href="#ec2config_nodejs" style="color: inherit; text-decoration: inherit;">ec2Config</a>
@@ -383,8 +372,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="efsfilesystemarn_nodejs">
 <a href="#efsfilesystemarn_nodejs" style="color: inherit; text-decoration: inherit;">efs<wbr>File<wbr>System<wbr>Arn</a>
@@ -393,8 +381,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdirectory_nodejs">
 <a href="#subdirectory_nodejs" style="color: inherit; text-decoration: inherit;">subdirectory</a>
@@ -403,8 +390,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -413,13 +399,11 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ec2_config_python">
 <a href="#ec2_config_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>config</a>
@@ -428,8 +412,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="efs_file_system_arn_python">
 <a href="#efs_file_system_arn_python" style="color: inherit; text-decoration: inherit;">efs_<wbr>file_<wbr>system_<wbr>arn</a>
@@ -438,8 +421,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdirectory_python">
 <a href="#subdirectory_python" style="color: inherit; text-decoration: inherit;">subdirectory</a>
@@ -448,8 +430,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -458,8 +439,7 @@ The EfsLocation resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -470,8 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -480,8 +459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,8 +467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -498,13 +475,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -513,8 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -522,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -531,13 +504,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -546,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -555,8 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -564,13 +533,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -579,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -588,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -597,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -725,8 +689,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -735,8 +698,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2config_csharp">
 <a href="#state_ec2config_csharp" style="color: inherit; text-decoration: inherit;">Ec2Config</a>
@@ -745,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_efsfilesystemarn_csharp">
 <a href="#state_efsfilesystemarn_csharp" style="color: inherit; text-decoration: inherit;">Efs<wbr>File<wbr>System<wbr>Arn</a>
@@ -755,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdirectory_csharp">
 <a href="#state_subdirectory_csharp" style="color: inherit; text-decoration: inherit;">Subdirectory</a>
@@ -765,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -775,8 +734,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_csharp">
 <a href="#state_uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -784,13 +742,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -799,8 +755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2config_go">
 <a href="#state_ec2config_go" style="color: inherit; text-decoration: inherit;">Ec2Config</a>
@@ -809,8 +764,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_efsfilesystemarn_go">
 <a href="#state_efsfilesystemarn_go" style="color: inherit; text-decoration: inherit;">Efs<wbr>File<wbr>System<wbr>Arn</a>
@@ -819,8 +773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdirectory_go">
 <a href="#state_subdirectory_go" style="color: inherit; text-decoration: inherit;">Subdirectory</a>
@@ -829,8 +782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -839,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_go">
 <a href="#state_uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -848,13 +799,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -863,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2config_nodejs">
 <a href="#state_ec2config_nodejs" style="color: inherit; text-decoration: inherit;">ec2Config</a>
@@ -873,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_efsfilesystemarn_nodejs">
 <a href="#state_efsfilesystemarn_nodejs" style="color: inherit; text-decoration: inherit;">efs<wbr>File<wbr>System<wbr>Arn</a>
@@ -883,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdirectory_nodejs">
 <a href="#state_subdirectory_nodejs" style="color: inherit; text-decoration: inherit;">subdirectory</a>
@@ -893,8 +839,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -903,8 +848,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_nodejs">
 <a href="#state_uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -912,13 +856,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -927,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ec2_config_python">
 <a href="#state_ec2_config_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>config</a>
@@ -937,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_efs_file_system_arn_python">
 <a href="#state_efs_file_system_arn_python" style="color: inherit; text-decoration: inherit;">efs_<wbr>file_<wbr>system_<wbr>arn</a>
@@ -947,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subdirectory_python">
 <a href="#state_subdirectory_python" style="color: inherit; text-decoration: inherit;">subdirectory</a>
@@ -957,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -967,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uri_python">
 <a href="#state_uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -976,8 +913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -992,8 +928,7 @@ The following state arguments are supported:
 <h4 id="efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygrouparns_csharp">
 <a href="#securitygrouparns_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Arns</a>
@@ -1002,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetarn_csharp">
 <a href="#subnetarn_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arn</a>
@@ -1012,13 +946,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygrouparns_go">
 <a href="#securitygrouparns_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Arns</a>
@@ -1027,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetarn_go">
 <a href="#subnetarn_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Arn</a>
@@ -1037,13 +968,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="securitygrouparns_nodejs">
 <a href="#securitygrouparns_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Arns</a>
@@ -1052,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetarn_nodejs">
 <a href="#subnetarn_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Arn</a>
@@ -1062,13 +990,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="security_group_arns_python">
 <a href="#security_group_arns_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>arns</a>
@@ -1077,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_arn_python">
 <a href="#subnet_arn_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>arn</a>
@@ -1087,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EC2 Subnet that is associated with the EFS Mount Target.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

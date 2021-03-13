@@ -156,8 +156,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peercloudaccount_csharp">
 <a href="#peercloudaccount_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cloud<wbr>Account</a>
@@ -167,8 +166,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}defines the identifier of the cloud account the VPC is being
 peered with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peervpc_csharp">
 <a href="#peervpc_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc</a>
@@ -177,8 +175,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the identifier or name of the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -187,8 +184,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the Aiven VPC the peering connection is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerazureappid_csharp">
 <a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
@@ -197,8 +193,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerazuretenantid_csharp">
 <a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
@@ -207,8 +202,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -217,8 +211,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerresourcegroup_csharp">
 <a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
@@ -227,8 +220,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringconnectionid_csharp">
 <a href="#peeringconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Connection<wbr>Id</a>
@@ -237,8 +229,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -250,8 +241,7 @@ peered with.
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateinfo_csharp">
 <a href="#stateinfo_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Info</a>
@@ -260,13 +250,11 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peercloudaccount_go">
 <a href="#peercloudaccount_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cloud<wbr>Account</a>
@@ -276,8 +264,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
     </dt>
     <dd>{{% md %}}defines the identifier of the cloud account the VPC is being
 peered with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peervpc_go">
 <a href="#peervpc_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc</a>
@@ -286,8 +273,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the identifier or name of the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -296,8 +282,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the Aiven VPC the peering connection is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerazureappid_go">
 <a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
@@ -306,8 +291,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerazuretenantid_go">
 <a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
@@ -316,8 +300,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -326,8 +309,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerresourcegroup_go">
 <a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
@@ -336,8 +318,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringconnectionid_go">
 <a href="#peeringconnectionid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Connection<wbr>Id</a>
@@ -346,8 +327,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -359,8 +339,7 @@ peered with.
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateinfo_go">
 <a href="#stateinfo_go" style="color: inherit; text-decoration: inherit;">State<wbr>Info</a>
@@ -369,13 +348,11 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peercloudaccount_nodejs">
 <a href="#peercloudaccount_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cloud<wbr>Account</a>
@@ -385,8 +362,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
     </dt>
     <dd>{{% md %}}defines the identifier of the cloud account the VPC is being
 peered with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peervpc_nodejs">
 <a href="#peervpc_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vpc</a>
@@ -395,8 +371,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the identifier or name of the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -405,8 +380,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the Aiven VPC the peering connection is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerazureappid_nodejs">
 <a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
@@ -415,8 +389,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerazuretenantid_nodejs">
 <a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
@@ -425,8 +398,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
@@ -435,8 +407,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerresourcegroup_nodejs">
 <a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
@@ -445,8 +416,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peeringconnectionid_nodejs">
 <a href="#peeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Connection<wbr>Id</a>
@@ -455,8 +425,7 @@ peered with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -468,8 +437,7 @@ peered with.
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stateinfo_nodejs">
 <a href="#stateinfo_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Info</a>
@@ -478,13 +446,11 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_cloud_account_python">
 <a href="#peer_cloud_account_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cloud_<wbr>account</a>
@@ -494,8 +460,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
     </dt>
     <dd>{{% md %}}defines the identifier of the cloud account the VPC is being
 peered with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_vpc_python">
 <a href="#peer_vpc_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vpc</a>
@@ -504,8 +469,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the identifier or name of the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -514,8 +478,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the Aiven VPC the peering connection is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_azure_app_id_python">
 <a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
@@ -524,8 +487,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_azure_tenant_id_python">
 <a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
@@ -534,8 +496,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
@@ -544,8 +505,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_resource_group_python">
 <a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
@@ -554,8 +514,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peering_connection_id_python">
 <a href="#peering_connection_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>connection_<wbr>id</a>
@@ -564,8 +523,7 @@ peered with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -577,8 +535,7 @@ peered with.
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_info_python">
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">state_<wbr>info</a>
@@ -587,8 +544,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -601,8 +557,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -611,8 +566,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercloudaccount_csharp">
 <a href="#peercloudaccount_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cloud<wbr>Account</a>
@@ -620,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervpc_csharp">
 <a href="#peervpc_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc</a>
@@ -629,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringconnectionid_csharp">
 <a href="#peeringconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Connection<wbr>Id</a>
@@ -639,8 +591,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -652,8 +603,7 @@ The following output properties are available:
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stateinfo_csharp">
 <a href="#stateinfo_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Info</a>
@@ -662,8 +612,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -671,8 +620,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerazureappid_csharp">
 <a href="#peerazureappid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
@@ -681,8 +629,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerazuretenantid_csharp">
 <a href="#peerazuretenantid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
@@ -691,8 +638,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -701,8 +647,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerresourcegroup_csharp">
 <a href="#peerresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
@@ -711,13 +656,11 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -726,8 +669,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercloudaccount_go">
 <a href="#peercloudaccount_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cloud<wbr>Account</a>
@@ -735,8 +677,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervpc_go">
 <a href="#peervpc_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc</a>
@@ -744,8 +685,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringconnectionid_go">
 <a href="#peeringconnectionid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Connection<wbr>Id</a>
@@ -754,8 +694,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -767,8 +706,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stateinfo_go">
 <a href="#stateinfo_go" style="color: inherit; text-decoration: inherit;">State<wbr>Info</a>
@@ -777,8 +715,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -786,8 +723,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerazureappid_go">
 <a href="#peerazureappid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>App<wbr>Id</a>
@@ -796,8 +732,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerazuretenantid_go">
 <a href="#peerazuretenantid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
@@ -806,8 +741,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -816,8 +750,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerresourcegroup_go">
 <a href="#peerresourcegroup_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Resource<wbr>Group</a>
@@ -826,13 +759,11 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -841,8 +772,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peercloudaccount_nodejs">
 <a href="#peercloudaccount_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cloud<wbr>Account</a>
@@ -850,8 +780,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peervpc_nodejs">
 <a href="#peervpc_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vpc</a>
@@ -859,8 +788,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peeringconnectionid_nodejs">
 <a href="#peeringconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Connection<wbr>Id</a>
@@ -869,8 +797,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -882,8 +809,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="stateinfo_nodejs">
 <a href="#stateinfo_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Info</a>
@@ -892,8 +818,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -901,8 +826,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerazureappid_nodejs">
 <a href="#peerazureappid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>App<wbr>Id</a>
@@ -911,8 +835,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerazuretenantid_nodejs">
 <a href="#peerazuretenantid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Azure<wbr>Tenant<wbr>Id</a>
@@ -921,8 +844,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
@@ -931,8 +853,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peerresourcegroup_nodejs">
 <a href="#peerresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Resource<wbr>Group</a>
@@ -941,13 +862,11 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -956,8 +875,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_cloud_account_python">
 <a href="#peer_cloud_account_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cloud_<wbr>account</a>
@@ -965,8 +883,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_vpc_python">
 <a href="#peer_vpc_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vpc</a>
@@ -974,8 +891,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_connection_id_python">
 <a href="#peering_connection_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>connection_<wbr>id</a>
@@ -984,8 +900,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}a cloud provider identifier for the peering connection if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -997,8 +912,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 `PENDING_PEER`, `ACTIVE`, `DELETED`, `DELETED_BY_PEER`, `REJECTED_BY_PEER` and
 `INVALID_SPECIFICATION`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_info_python">
 <a href="#state_info_python" style="color: inherit; text-decoration: inherit;">state_<wbr>info</a>
@@ -1007,8 +921,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}state-specific help or error information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1016,8 +929,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_azure_app_id_python">
 <a href="#peer_azure_app_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>app_<wbr>id</a>
@@ -1026,8 +938,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an Azure app registration id in UUID4 form that is allowed to create a peering to the peer vnet.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_azure_tenant_id_python">
 <a href="#peer_azure_tenant_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>azure_<wbr>tenant_<wbr>id</a>
@@ -1036,8 +947,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an Azure tenant id in UUID4 form.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
@@ -1046,8 +956,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the region of the remote VPC if it is not in the same region as Aiven VPC.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peer_resource_group_python">
 <a href="#peer_resource_group_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>resource_<wbr>group</a>
@@ -1056,8 +965,7 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}an Azure resource group name of the peered VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

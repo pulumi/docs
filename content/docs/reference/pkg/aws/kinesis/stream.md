@@ -296,8 +296,7 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shardcount_csharp">
 <a href="#shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -307,8 +306,7 @@ The Stream resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -317,8 +315,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiontype_csharp">
 <a href="#encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
@@ -327,8 +324,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceconsumerdeletion_csharp">
 <a href="#enforceconsumerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
@@ -337,8 +333,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -347,8 +342,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -357,8 +351,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -367,8 +360,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardlevelmetrics_csharp">
 <a href="#shardlevelmetrics_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
@@ -377,8 +369,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -387,13 +378,11 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shardcount_go">
 <a href="#shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -403,8 +392,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -413,8 +401,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiontype_go">
 <a href="#encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
@@ -423,8 +410,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceconsumerdeletion_go">
 <a href="#enforceconsumerdeletion_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
@@ -433,8 +419,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -443,8 +428,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -453,8 +437,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -463,8 +446,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardlevelmetrics_go">
 <a href="#shardlevelmetrics_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
@@ -473,8 +455,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -483,13 +464,11 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shardcount_nodejs">
 <a href="#shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
@@ -499,8 +478,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -509,8 +487,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptiontype_nodejs">
 <a href="#encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
@@ -519,8 +496,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforceconsumerdeletion_nodejs">
 <a href="#enforceconsumerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Consumer<wbr>Deletion</a>
@@ -529,8 +505,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -539,8 +514,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -549,8 +523,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -559,8 +532,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shardlevelmetrics_nodejs">
 <a href="#shardlevelmetrics_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Level<wbr>Metrics</a>
@@ -569,8 +541,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -579,13 +550,11 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="shard_count_python">
 <a href="#shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
@@ -595,8 +564,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -605,8 +573,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_type_python">
 <a href="#encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
@@ -615,8 +582,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enforce_consumer_deletion_python">
 <a href="#enforce_consumer_deletion_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>consumer_<wbr>deletion</a>
@@ -625,8 +591,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -635,8 +600,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -645,8 +609,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_period_python">
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -655,8 +618,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shard_level_metrics_python">
 <a href="#shard_level_metrics_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>level_<wbr>metrics</a>
@@ -665,8 +627,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -675,8 +636,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -687,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -696,13 +655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -710,13 +667,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -724,13 +679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -738,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -866,8 +818,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -876,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptiontype_csharp">
 <a href="#state_encryptiontype_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
@@ -886,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforceconsumerdeletion_csharp">
 <a href="#state_enforceconsumerdeletion_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
@@ -896,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
 <a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -906,8 +854,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -916,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_csharp">
 <a href="#state_retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -926,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardcount_csharp">
 <a href="#state_shardcount_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -937,8 +882,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardlevelmetrics_csharp">
 <a href="#state_shardlevelmetrics_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
@@ -947,8 +891,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -957,13 +900,11 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -972,8 +913,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptiontype_go">
 <a href="#state_encryptiontype_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Type</a>
@@ -982,8 +922,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforceconsumerdeletion_go">
 <a href="#state_enforceconsumerdeletion_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Consumer<wbr>Deletion</a>
@@ -992,8 +931,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
 <a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1002,8 +940,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1012,8 +949,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_go">
 <a href="#state_retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1022,8 +958,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardcount_go">
 <a href="#state_shardcount_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Count</a>
@@ -1033,8 +968,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardlevelmetrics_go">
 <a href="#state_shardlevelmetrics_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Level<wbr>Metrics</a>
@@ -1043,8 +977,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1053,13 +986,11 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1068,8 +999,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptiontype_nodejs">
 <a href="#state_encryptiontype_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Type</a>
@@ -1078,8 +1008,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforceconsumerdeletion_nodejs">
 <a href="#state_enforceconsumerdeletion_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Consumer<wbr>Deletion</a>
@@ -1088,8 +1017,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1098,8 +1026,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1108,8 +1035,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_nodejs">
 <a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -1118,8 +1044,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardcount_nodejs">
 <a href="#state_shardcount_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Count</a>
@@ -1129,8 +1054,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardlevelmetrics_nodejs">
 <a href="#state_shardlevelmetrics_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Level<wbr>Metrics</a>
@@ -1139,8 +1063,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1149,13 +1072,11 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1164,8 +1085,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_type_python">
 <a href="#state_encryption_type_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>type</a>
@@ -1174,8 +1094,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encryption type to use. The only acceptable values are `NONE` or `KMS`. The default value is `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enforce_consumer_deletion_python">
 <a href="#state_enforce_consumer_deletion_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>consumer_<wbr>deletion</a>
@@ -1184,8 +1103,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all registered consumers should be deregistered from the stream so that the stream can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1194,8 +1112,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GUID for the customer-managed KMS key to use for encryption. You can also use a Kinesis-owned master key by specifying the alias `alias/aws/kinesis`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1204,8 +1121,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_period_python">
 <a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -1214,8 +1130,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shard_count_python">
 <a href="#state_shard_count_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>count</a>
@@ -1225,8 +1140,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
     </dt>
     <dd>{{% md %}}The number of shards that the stream will use.
 Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See [Amazon Kinesis Streams](https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html) for more.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shard_level_metrics_python">
 <a href="#state_shard_level_metrics_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>level_<wbr>metrics</a>
@@ -1235,8 +1149,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of shard-level CloudWatch metrics which can be enabled for the stream. See [Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html) for more. Note that the value ALL should not be used; instead you should provide an explicit list of metrics you wish to enable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1245,8 +1158,7 @@ Amazon has guidelines for specifying the Stream size that should be referenced w
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

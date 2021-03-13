@@ -18,11 +18,17 @@ teams. The credentials used must have the `manage_teams` permission set.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Ns1 = Pulumi.Ns1;
@@ -78,9 +84,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -133,9 +142,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_ns1 as ns1
@@ -169,9 +181,12 @@ example2 = ns1.Team("example2",
     dns_zones_denies=["myother.zone"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -210,9 +225,16 @@ const example2 = new ns1.Team("example2", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Team Resource {#create}
@@ -237,9 +259,7 @@ const example2 = new ns1.Team("example2", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -247,9 +267,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -257,9 +275,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -267,10 +283,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -296,9 +309,7 @@ const example2 = new ns1.Team("example2", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -306,9 +317,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -316,9 +325,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -326,9 +333,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -336,18 +341,13 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -355,9 +355,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -365,9 +363,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -375,10 +371,7 @@ const example2 = new ns1.Team("example2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -393,9 +386,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountmanageaccountsettings_csharp">
 <a href="#accountmanageaccountsettings_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -404,8 +395,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageapikeys_csharp">
 <a href="#accountmanageapikeys_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Apikeys</a>
@@ -414,8 +404,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageipwhitelist_csharp">
 <a href="#accountmanageipwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
@@ -424,8 +413,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanagepaymentmethods_csharp">
 <a href="#accountmanagepaymentmethods_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Payment<wbr>Methods</a>
@@ -434,8 +422,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accountmanageplan_csharp">
 <a href="#accountmanageplan_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
@@ -444,8 +431,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageteams_csharp">
 <a href="#accountmanageteams_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Teams</a>
@@ -454,8 +440,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageusers_csharp">
 <a href="#accountmanageusers_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Users</a>
@@ -464,8 +449,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewactivitylog_csharp">
 <a href="#accountviewactivitylog_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Activity<wbr>Log</a>
@@ -474,8 +458,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewinvoices_csharp">
 <a href="#accountviewinvoices_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Invoices</a>
@@ -484,8 +467,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatafeeds_csharp">
 <a href="#datamanagedatafeeds_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datafeeds</a>
@@ -494,8 +476,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatasources_csharp">
 <a href="#datamanagedatasources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datasources</a>
@@ -504,8 +485,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapushtodatafeeds_csharp">
 <a href="#datapushtodatafeeds_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Push<wbr>To<wbr>Datafeeds</a>
@@ -514,8 +494,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpmanagedhcp_csharp">
 <a href="#dhcpmanagedhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Manage<wbr>Dhcp</a>
@@ -525,8 +504,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpviewdhcp_csharp">
 <a href="#dhcpviewdhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>View<wbr>Dhcp</a>
@@ -536,8 +514,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsmanagezones_csharp">
 <a href="#dnsmanagezones_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Manage<wbr>Zones</a>
@@ -546,8 +523,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsviewzones_csharp">
 <a href="#dnsviewzones_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -556,8 +532,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallowbydefault_csharp">
 <a href="#dnszonesallowbydefault_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
@@ -566,8 +541,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallows_csharp">
 <a href="#dnszonesallows_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allows</a>
@@ -576,8 +550,7 @@ Only relevant for the DDI product.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesdenies_csharp">
 <a href="#dnszonesdenies_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Denies</a>
@@ -586,8 +559,7 @@ Only relevant for the DDI product.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhitelists_csharp">
 <a href="#ipwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Whitelists</a>
@@ -596,8 +568,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">List&lt;Team<wbr>Ip<wbr>Whitelist<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_csharp">
 <a href="#ipammanageipam_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Manage<wbr>Ipam</a>
@@ -607,8 +578,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamviewipam_csharp">
 <a href="#ipamviewipam_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>View<wbr>Ipam</a>
@@ -618,8 +588,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagejobs_csharp">
 <a href="#monitoringmanagejobs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -628,8 +597,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagelists_csharp">
 <a href="#monitoringmanagelists_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Lists</a>
@@ -638,8 +606,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringviewjobs_csharp">
 <a href="#monitoringviewjobs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>View<wbr>Jobs</a>
@@ -648,8 +615,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -658,8 +624,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageactivedirectory_csharp">
 <a href="#securitymanageactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Active<wbr>Directory</a>
@@ -669,8 +634,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageglobal2fa_csharp">
 <a href="#securitymanageglobal2fa_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Global2fa</a>
@@ -679,14 +643,11 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountmanageaccountsettings_go">
 <a href="#accountmanageaccountsettings_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -695,8 +656,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageapikeys_go">
 <a href="#accountmanageapikeys_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Apikeys</a>
@@ -705,8 +665,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageipwhitelist_go">
 <a href="#accountmanageipwhitelist_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
@@ -715,8 +674,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanagepaymentmethods_go">
 <a href="#accountmanagepaymentmethods_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Payment<wbr>Methods</a>
@@ -725,8 +683,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accountmanageplan_go">
 <a href="#accountmanageplan_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
@@ -735,8 +692,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageteams_go">
 <a href="#accountmanageteams_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Teams</a>
@@ -745,8 +701,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageusers_go">
 <a href="#accountmanageusers_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Users</a>
@@ -755,8 +710,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewactivitylog_go">
 <a href="#accountviewactivitylog_go" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Activity<wbr>Log</a>
@@ -765,8 +719,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewinvoices_go">
 <a href="#accountviewinvoices_go" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Invoices</a>
@@ -775,8 +728,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatafeeds_go">
 <a href="#datamanagedatafeeds_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datafeeds</a>
@@ -785,8 +737,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatasources_go">
 <a href="#datamanagedatasources_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datasources</a>
@@ -795,8 +746,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapushtodatafeeds_go">
 <a href="#datapushtodatafeeds_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Push<wbr>To<wbr>Datafeeds</a>
@@ -805,8 +755,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpmanagedhcp_go">
 <a href="#dhcpmanagedhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Manage<wbr>Dhcp</a>
@@ -816,8 +765,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpviewdhcp_go">
 <a href="#dhcpviewdhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>View<wbr>Dhcp</a>
@@ -827,8 +775,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsmanagezones_go">
 <a href="#dnsmanagezones_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Manage<wbr>Zones</a>
@@ -837,8 +784,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsviewzones_go">
 <a href="#dnsviewzones_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -847,8 +793,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallowbydefault_go">
 <a href="#dnszonesallowbydefault_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
@@ -857,8 +802,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallows_go">
 <a href="#dnszonesallows_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allows</a>
@@ -867,8 +811,7 @@ Only relevant for the DDI product.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesdenies_go">
 <a href="#dnszonesdenies_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Denies</a>
@@ -877,8 +820,7 @@ Only relevant for the DDI product.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhitelists_go">
 <a href="#ipwhitelists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Whitelists</a>
@@ -887,8 +829,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_go">
 <a href="#ipammanageipam_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Manage<wbr>Ipam</a>
@@ -898,8 +839,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamviewipam_go">
 <a href="#ipamviewipam_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>View<wbr>Ipam</a>
@@ -909,8 +849,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagejobs_go">
 <a href="#monitoringmanagejobs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -919,8 +858,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagelists_go">
 <a href="#monitoringmanagelists_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Lists</a>
@@ -929,8 +867,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringviewjobs_go">
 <a href="#monitoringviewjobs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>View<wbr>Jobs</a>
@@ -939,8 +876,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -949,8 +885,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageactivedirectory_go">
 <a href="#securitymanageactivedirectory_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Active<wbr>Directory</a>
@@ -960,8 +895,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageglobal2fa_go">
 <a href="#securitymanageglobal2fa_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Global2fa</a>
@@ -970,14 +904,11 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountmanageaccountsettings_nodejs">
 <a href="#accountmanageaccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -986,8 +917,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageapikeys_nodejs">
 <a href="#accountmanageapikeys_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Apikeys</a>
@@ -996,8 +926,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageipwhitelist_nodejs">
 <a href="#accountmanageipwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
@@ -1006,8 +935,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanagepaymentmethods_nodejs">
 <a href="#accountmanagepaymentmethods_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Payment<wbr>Methods</a>
@@ -1016,8 +944,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accountmanageplan_nodejs">
 <a href="#accountmanageplan_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Plan</a>
@@ -1026,8 +953,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageteams_nodejs">
 <a href="#accountmanageteams_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Teams</a>
@@ -1036,8 +962,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountmanageusers_nodejs">
 <a href="#accountmanageusers_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Users</a>
@@ -1046,8 +971,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewactivitylog_nodejs">
 <a href="#accountviewactivitylog_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Activity<wbr>Log</a>
@@ -1056,8 +980,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountviewinvoices_nodejs">
 <a href="#accountviewinvoices_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Invoices</a>
@@ -1066,8 +989,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatafeeds_nodejs">
 <a href="#datamanagedatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datafeeds</a>
@@ -1076,8 +998,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datamanagedatasources_nodejs">
 <a href="#datamanagedatasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datasources</a>
@@ -1086,8 +1007,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapushtodatafeeds_nodejs">
 <a href="#datapushtodatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Push<wbr>To<wbr>Datafeeds</a>
@@ -1096,8 +1016,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpmanagedhcp_nodejs">
 <a href="#dhcpmanagedhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Manage<wbr>Dhcp</a>
@@ -1107,8 +1026,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpviewdhcp_nodejs">
 <a href="#dhcpviewdhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>View<wbr>Dhcp</a>
@@ -1118,8 +1036,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsmanagezones_nodejs">
 <a href="#dnsmanagezones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Manage<wbr>Zones</a>
@@ -1128,8 +1045,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsviewzones_nodejs">
 <a href="#dnsviewzones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>View<wbr>Zones</a>
@@ -1138,8 +1054,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallowbydefault_nodejs">
 <a href="#dnszonesallowbydefault_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
@@ -1148,8 +1063,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesallows_nodejs">
 <a href="#dnszonesallows_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allows</a>
@@ -1158,8 +1072,7 @@ Only relevant for the DDI product.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnszonesdenies_nodejs">
 <a href="#dnszonesdenies_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Denies</a>
@@ -1168,8 +1081,7 @@ Only relevant for the DDI product.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhitelists_nodejs">
 <a href="#ipwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Whitelists</a>
@@ -1178,8 +1090,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">Team<wbr>Ip<wbr>Whitelist[]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipammanageipam_nodejs">
 <a href="#ipammanageipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Manage<wbr>Ipam</a>
@@ -1189,8 +1100,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipamviewipam_nodejs">
 <a href="#ipamviewipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>View<wbr>Ipam</a>
@@ -1200,8 +1110,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagejobs_nodejs">
 <a href="#monitoringmanagejobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Jobs</a>
@@ -1210,8 +1119,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringmanagelists_nodejs">
 <a href="#monitoringmanagelists_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Lists</a>
@@ -1220,8 +1128,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringviewjobs_nodejs">
 <a href="#monitoringviewjobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>View<wbr>Jobs</a>
@@ -1230,8 +1137,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1240,8 +1146,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageactivedirectory_nodejs">
 <a href="#securitymanageactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Active<wbr>Directory</a>
@@ -1251,8 +1156,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitymanageglobal2fa_nodejs">
 <a href="#securitymanageglobal2fa_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Global2fa</a>
@@ -1261,14 +1165,11 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="account_manage_account_settings_python">
 <a href="#account_manage_account_settings_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>account_<wbr>settings</a>
@@ -1277,8 +1178,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_apikeys_python">
 <a href="#account_manage_apikeys_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>apikeys</a>
@@ -1287,8 +1187,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_ip_whitelist_python">
 <a href="#account_manage_ip_whitelist_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>ip_<wbr>whitelist</a>
@@ -1297,8 +1196,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_payment_methods_python">
 <a href="#account_manage_payment_methods_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>payment_<wbr>methods</a>
@@ -1307,8 +1205,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="account_manage_plan_python">
 <a href="#account_manage_plan_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>plan</a>
@@ -1317,8 +1214,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_teams_python">
 <a href="#account_manage_teams_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>teams</a>
@@ -1327,8 +1223,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_manage_users_python">
 <a href="#account_manage_users_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>users</a>
@@ -1337,8 +1232,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_view_activity_log_python">
 <a href="#account_view_activity_log_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>activity_<wbr>log</a>
@@ -1347,8 +1241,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_view_invoices_python">
 <a href="#account_view_invoices_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>invoices</a>
@@ -1357,8 +1250,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_manage_datafeeds_python">
 <a href="#data_manage_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datafeeds</a>
@@ -1367,8 +1259,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_manage_datasources_python">
 <a href="#data_manage_datasources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datasources</a>
@@ -1377,8 +1268,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_push_to_datafeeds_python">
 <a href="#data_push_to_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>push_<wbr>to_<wbr>datafeeds</a>
@@ -1387,8 +1277,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_manage_dhcp_python">
 <a href="#dhcp_manage_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>manage_<wbr>dhcp</a>
@@ -1398,8 +1287,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_view_dhcp_python">
 <a href="#dhcp_view_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>view_<wbr>dhcp</a>
@@ -1409,8 +1297,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_manage_zones_python">
 <a href="#dns_manage_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>manage_<wbr>zones</a>
@@ -1419,8 +1306,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_view_zones_python">
 <a href="#dns_view_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>view_<wbr>zones</a>
@@ -1429,8 +1315,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_zones_allow_by_default_python">
 <a href="#dns_zones_allow_by_default_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allow_<wbr>by_<wbr>default</a>
@@ -1439,8 +1324,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_zones_allows_python">
 <a href="#dns_zones_allows_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allows</a>
@@ -1449,8 +1333,7 @@ Only relevant for the DDI product.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_zones_denies_python">
 <a href="#dns_zones_denies_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>denies</a>
@@ -1459,8 +1342,7 @@ Only relevant for the DDI product.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_whitelists_python">
 <a href="#ip_whitelists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelists</a>
@@ -1469,8 +1351,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">Sequence[Team<wbr>Ip<wbr>Whitelist<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipam_manage_ipam_python">
 <a href="#ipam_manage_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>manage_<wbr>ipam</a>
@@ -1480,8 +1361,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipam_view_ipam_python">
 <a href="#ipam_view_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>view_<wbr>ipam</a>
@@ -1491,8 +1371,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_manage_jobs_python">
 <a href="#monitoring_manage_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>jobs</a>
@@ -1501,8 +1380,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_manage_lists_python">
 <a href="#monitoring_manage_lists_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>lists</a>
@@ -1511,8 +1389,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_view_jobs_python">
 <a href="#monitoring_view_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>view_<wbr>jobs</a>
@@ -1521,8 +1398,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1531,8 +1407,7 @@ Only relevant for the DDI product.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_manage_active_directory_python">
 <a href="#security_manage_active_directory_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>active_<wbr>directory</a>
@@ -1542,8 +1417,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_manage_global2fa_python">
 <a href="#security_manage_global2fa_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>global2fa</a>
@@ -1552,8 +1426,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1564,9 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1574,14 +1445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1589,14 +1457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1604,14 +1469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1619,8 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1747,9 +1608,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageaccountsettings_csharp">
 <a href="#state_accountmanageaccountsettings_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -1758,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageapikeys_csharp">
 <a href="#state_accountmanageapikeys_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Apikeys</a>
@@ -1768,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageipwhitelist_csharp">
 <a href="#state_accountmanageipwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
@@ -1778,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanagepaymentmethods_csharp">
 <a href="#state_accountmanagepaymentmethods_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Payment<wbr>Methods</a>
@@ -1788,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accountmanageplan_csharp">
 <a href="#state_accountmanageplan_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
@@ -1798,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageteams_csharp">
 <a href="#state_accountmanageteams_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Teams</a>
@@ -1808,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageusers_csharp">
 <a href="#state_accountmanageusers_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Users</a>
@@ -1818,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewactivitylog_csharp">
 <a href="#state_accountviewactivitylog_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Activity<wbr>Log</a>
@@ -1828,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewinvoices_csharp">
 <a href="#state_accountviewinvoices_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Invoices</a>
@@ -1838,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatafeeds_csharp">
 <a href="#state_datamanagedatafeeds_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datafeeds</a>
@@ -1848,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatasources_csharp">
 <a href="#state_datamanagedatasources_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datasources</a>
@@ -1858,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datapushtodatafeeds_csharp">
 <a href="#state_datapushtodatafeeds_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Push<wbr>To<wbr>Datafeeds</a>
@@ -1868,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpmanagedhcp_csharp">
 <a href="#state_dhcpmanagedhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Manage<wbr>Dhcp</a>
@@ -1879,8 +1726,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpviewdhcp_csharp">
 <a href="#state_dhcpviewdhcp_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>View<wbr>Dhcp</a>
@@ -1890,8 +1736,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsmanagezones_csharp">
 <a href="#state_dnsmanagezones_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Manage<wbr>Zones</a>
@@ -1900,8 +1745,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsviewzones_csharp">
 <a href="#state_dnsviewzones_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -1910,8 +1754,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallowbydefault_csharp">
 <a href="#state_dnszonesallowbydefault_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
@@ -1920,8 +1763,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallows_csharp">
 <a href="#state_dnszonesallows_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allows</a>
@@ -1930,8 +1772,7 @@ Only relevant for the DDI product.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesdenies_csharp">
 <a href="#state_dnszonesdenies_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Denies</a>
@@ -1940,8 +1781,7 @@ Only relevant for the DDI product.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhitelists_csharp">
 <a href="#state_ipwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Whitelists</a>
@@ -1950,8 +1790,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">List&lt;Team<wbr>Ip<wbr>Whitelist<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_csharp">
 <a href="#state_ipammanageipam_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Manage<wbr>Ipam</a>
@@ -1961,8 +1800,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamviewipam_csharp">
 <a href="#state_ipamviewipam_csharp" style="color: inherit; text-decoration: inherit;">Ipam<wbr>View<wbr>Ipam</a>
@@ -1972,8 +1810,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_csharp">
 <a href="#state_monitoringmanagejobs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -1982,8 +1819,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagelists_csharp">
 <a href="#state_monitoringmanagelists_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Lists</a>
@@ -1992,8 +1828,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringviewjobs_csharp">
 <a href="#state_monitoringviewjobs_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>View<wbr>Jobs</a>
@@ -2002,8 +1837,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2012,8 +1846,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageactivedirectory_csharp">
 <a href="#state_securitymanageactivedirectory_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Active<wbr>Directory</a>
@@ -2023,8 +1856,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageglobal2fa_csharp">
 <a href="#state_securitymanageglobal2fa_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Global2fa</a>
@@ -2033,14 +1865,11 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageaccountsettings_go">
 <a href="#state_accountmanageaccountsettings_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -2049,8 +1878,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageapikeys_go">
 <a href="#state_accountmanageapikeys_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Apikeys</a>
@@ -2059,8 +1887,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageipwhitelist_go">
 <a href="#state_accountmanageipwhitelist_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
@@ -2069,8 +1896,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanagepaymentmethods_go">
 <a href="#state_accountmanagepaymentmethods_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Payment<wbr>Methods</a>
@@ -2079,8 +1905,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accountmanageplan_go">
 <a href="#state_accountmanageplan_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Plan</a>
@@ -2089,8 +1914,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageteams_go">
 <a href="#state_accountmanageteams_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Teams</a>
@@ -2099,8 +1923,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageusers_go">
 <a href="#state_accountmanageusers_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Users</a>
@@ -2109,8 +1932,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewactivitylog_go">
 <a href="#state_accountviewactivitylog_go" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Activity<wbr>Log</a>
@@ -2119,8 +1941,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewinvoices_go">
 <a href="#state_accountviewinvoices_go" style="color: inherit; text-decoration: inherit;">Account<wbr>View<wbr>Invoices</a>
@@ -2129,8 +1950,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatafeeds_go">
 <a href="#state_datamanagedatafeeds_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datafeeds</a>
@@ -2139,8 +1959,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatasources_go">
 <a href="#state_datamanagedatasources_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manage<wbr>Datasources</a>
@@ -2149,8 +1968,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datapushtodatafeeds_go">
 <a href="#state_datapushtodatafeeds_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Push<wbr>To<wbr>Datafeeds</a>
@@ -2159,8 +1977,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpmanagedhcp_go">
 <a href="#state_dhcpmanagedhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Manage<wbr>Dhcp</a>
@@ -2170,8 +1987,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpviewdhcp_go">
 <a href="#state_dhcpviewdhcp_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>View<wbr>Dhcp</a>
@@ -2181,8 +1997,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsmanagezones_go">
 <a href="#state_dnsmanagezones_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Manage<wbr>Zones</a>
@@ -2191,8 +2006,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsviewzones_go">
 <a href="#state_dnsviewzones_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>View<wbr>Zones</a>
@@ -2201,8 +2015,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallowbydefault_go">
 <a href="#state_dnszonesallowbydefault_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
@@ -2211,8 +2024,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallows_go">
 <a href="#state_dnszonesallows_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Allows</a>
@@ -2221,8 +2033,7 @@ Only relevant for the DDI product.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesdenies_go">
 <a href="#state_dnszonesdenies_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Zones<wbr>Denies</a>
@@ -2231,8 +2042,7 @@ Only relevant for the DDI product.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhitelists_go">
 <a href="#state_ipwhitelists_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Whitelists</a>
@@ -2241,8 +2051,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">[]Team<wbr>Ip<wbr>Whitelist</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_go">
 <a href="#state_ipammanageipam_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>Manage<wbr>Ipam</a>
@@ -2252,8 +2061,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamviewipam_go">
 <a href="#state_ipamviewipam_go" style="color: inherit; text-decoration: inherit;">Ipam<wbr>View<wbr>Ipam</a>
@@ -2263,8 +2071,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_go">
 <a href="#state_monitoringmanagejobs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Jobs</a>
@@ -2273,8 +2080,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagelists_go">
 <a href="#state_monitoringmanagelists_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Manage<wbr>Lists</a>
@@ -2283,8 +2089,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringviewjobs_go">
 <a href="#state_monitoringviewjobs_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>View<wbr>Jobs</a>
@@ -2293,8 +2098,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2303,8 +2107,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageactivedirectory_go">
 <a href="#state_securitymanageactivedirectory_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Active<wbr>Directory</a>
@@ -2314,8 +2117,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageglobal2fa_go">
 <a href="#state_securitymanageglobal2fa_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Manage<wbr>Global2fa</a>
@@ -2324,14 +2126,11 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageaccountsettings_nodejs">
 <a href="#state_accountmanageaccountsettings_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Account<wbr>Settings</a>
@@ -2340,8 +2139,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageapikeys_nodejs">
 <a href="#state_accountmanageapikeys_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Apikeys</a>
@@ -2350,8 +2148,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageipwhitelist_nodejs">
 <a href="#state_accountmanageipwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
@@ -2360,8 +2157,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanagepaymentmethods_nodejs">
 <a href="#state_accountmanagepaymentmethods_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Payment<wbr>Methods</a>
@@ -2370,8 +2166,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accountmanageplan_nodejs">
 <a href="#state_accountmanageplan_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Plan</a>
@@ -2380,8 +2175,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageteams_nodejs">
 <a href="#state_accountmanageteams_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Teams</a>
@@ -2390,8 +2184,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountmanageusers_nodejs">
 <a href="#state_accountmanageusers_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Users</a>
@@ -2400,8 +2193,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewactivitylog_nodejs">
 <a href="#state_accountviewactivitylog_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Activity<wbr>Log</a>
@@ -2410,8 +2202,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accountviewinvoices_nodejs">
 <a href="#state_accountviewinvoices_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>View<wbr>Invoices</a>
@@ -2420,8 +2211,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatafeeds_nodejs">
 <a href="#state_datamanagedatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datafeeds</a>
@@ -2430,8 +2220,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datamanagedatasources_nodejs">
 <a href="#state_datamanagedatasources_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manage<wbr>Datasources</a>
@@ -2440,8 +2229,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datapushtodatafeeds_nodejs">
 <a href="#state_datapushtodatafeeds_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Push<wbr>To<wbr>Datafeeds</a>
@@ -2450,8 +2238,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpmanagedhcp_nodejs">
 <a href="#state_dhcpmanagedhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Manage<wbr>Dhcp</a>
@@ -2461,8 +2248,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcpviewdhcp_nodejs">
 <a href="#state_dhcpviewdhcp_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>View<wbr>Dhcp</a>
@@ -2472,8 +2258,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsmanagezones_nodejs">
 <a href="#state_dnsmanagezones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Manage<wbr>Zones</a>
@@ -2482,8 +2267,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsviewzones_nodejs">
 <a href="#state_dnsviewzones_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>View<wbr>Zones</a>
@@ -2492,8 +2276,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallowbydefault_nodejs">
 <a href="#state_dnszonesallowbydefault_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allow<wbr>By<wbr>Default</a>
@@ -2502,8 +2285,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesallows_nodejs">
 <a href="#state_dnszonesallows_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Allows</a>
@@ -2512,8 +2294,7 @@ Only relevant for the DDI product.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnszonesdenies_nodejs">
 <a href="#state_dnszonesdenies_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Zones<wbr>Denies</a>
@@ -2522,8 +2303,7 @@ Only relevant for the DDI product.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhitelists_nodejs">
 <a href="#state_ipwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Whitelists</a>
@@ -2532,8 +2312,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">Team<wbr>Ip<wbr>Whitelist[]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipammanageipam_nodejs">
 <a href="#state_ipammanageipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>Manage<wbr>Ipam</a>
@@ -2543,8 +2322,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipamviewipam_nodejs">
 <a href="#state_ipamviewipam_nodejs" style="color: inherit; text-decoration: inherit;">ipam<wbr>View<wbr>Ipam</a>
@@ -2554,8 +2332,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagejobs_nodejs">
 <a href="#state_monitoringmanagejobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Jobs</a>
@@ -2564,8 +2341,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringmanagelists_nodejs">
 <a href="#state_monitoringmanagelists_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Manage<wbr>Lists</a>
@@ -2574,8 +2350,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoringviewjobs_nodejs">
 <a href="#state_monitoringviewjobs_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>View<wbr>Jobs</a>
@@ -2584,8 +2359,7 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2594,8 +2368,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageactivedirectory_nodejs">
 <a href="#state_securitymanageactivedirectory_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Active<wbr>Directory</a>
@@ -2605,8 +2378,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitymanageglobal2fa_nodejs">
 <a href="#state_securitymanageglobal2fa_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Manage<wbr>Global2fa</a>
@@ -2615,14 +2387,11 @@ Only relevant for the DDI product.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_account_settings_python">
 <a href="#state_account_manage_account_settings_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>account_<wbr>settings</a>
@@ -2631,8 +2400,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_apikeys_python">
 <a href="#state_account_manage_apikeys_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>apikeys</a>
@@ -2641,8 +2409,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_ip_whitelist_python">
 <a href="#state_account_manage_ip_whitelist_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>ip_<wbr>whitelist</a>
@@ -2651,8 +2418,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage ip whitelist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_payment_methods_python">
 <a href="#state_account_manage_payment_methods_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>payment_<wbr>methods</a>
@@ -2661,8 +2427,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account payment methods.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_account_manage_plan_python">
 <a href="#state_account_manage_plan_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>plan</a>
@@ -2671,8 +2436,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the account plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}obsolete, should no longer be used{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_teams_python">
 <a href="#state_account_manage_teams_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>teams</a>
@@ -2681,8 +2445,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify other teams in the account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_manage_users_python">
 <a href="#state_account_manage_users_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>users</a>
@@ -2691,8 +2454,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_view_activity_log_python">
 <a href="#state_account_view_activity_log_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>activity_<wbr>log</a>
@@ -2701,8 +2463,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view activity logs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_account_view_invoices_python">
 <a href="#state_account_view_invoices_python" style="color: inherit; text-decoration: inherit;">account_<wbr>view_<wbr>invoices</a>
@@ -2711,8 +2472,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view invoices.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_manage_datafeeds_python">
 <a href="#state_data_manage_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datafeeds</a>
@@ -2721,8 +2481,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_manage_datasources_python">
 <a href="#state_data_manage_datasources_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manage_<wbr>datasources</a>
@@ -2731,8 +2490,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify data sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_push_to_datafeeds_python">
 <a href="#state_data_push_to_datafeeds_python" style="color: inherit; text-decoration: inherit;">data_<wbr>push_<wbr>to_<wbr>datafeeds</a>
@@ -2741,8 +2499,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can publish to data feeds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcp_manage_dhcp_python">
 <a href="#state_dhcp_manage_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>manage_<wbr>dhcp</a>
@@ -2752,8 +2509,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dhcp_view_dhcp_python">
 <a href="#state_dhcp_view_dhcp_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>view_<wbr>dhcp</a>
@@ -2763,8 +2519,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view DHCP.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_manage_zones_python">
 <a href="#state_dns_manage_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>manage_<wbr>zones</a>
@@ -2773,8 +2528,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_view_zones_python">
 <a href="#state_dns_view_zones_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>view_<wbr>zones</a>
@@ -2783,8 +2537,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view the accounts zones.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_zones_allow_by_default_python">
 <a href="#state_dns_zones_allow_by_default_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allow_<wbr>by_<wbr>default</a>
@@ -2793,8 +2546,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enable the `dns_zones_allow` list, otherwise enable the `dns_zones_deny` list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_zones_allows_python">
 <a href="#state_dns_zones_allows_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>allows</a>
@@ -2803,8 +2555,7 @@ Only relevant for the DDI product.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_zones_denies_python">
 <a href="#state_dns_zones_denies_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>zones_<wbr>denies</a>
@@ -2813,8 +2564,7 @@ Only relevant for the DDI product.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of zones that the team may not access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_whitelists_python">
 <a href="#state_ip_whitelists_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>whitelists</a>
@@ -2823,8 +2573,7 @@ Only relevant for the DDI product.
         <span class="property-type"><a href="#teamipwhitelist">Sequence[Team<wbr>Ip<wbr>Whitelist<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The IP addresses to whitelist for this key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipam_manage_ipam_python">
 <a href="#state_ipam_manage_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>manage_<wbr>ipam</a>
@@ -2834,8 +2583,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipam_view_ipam_python">
 <a href="#state_ipam_view_ipam_python" style="color: inherit; text-decoration: inherit;">ipam_<wbr>view_<wbr>ipam</a>
@@ -2845,8 +2593,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can view IPAM.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_manage_jobs_python">
 <a href="#state_monitoring_manage_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>jobs</a>
@@ -2855,8 +2602,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_manage_lists_python">
 <a href="#state_monitoring_manage_lists_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>manage_<wbr>lists</a>
@@ -2865,8 +2611,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify notification lists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitoring_view_jobs_python">
 <a href="#state_monitoring_view_jobs_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>view_<wbr>jobs</a>
@@ -2875,8 +2620,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can view monitoring jobs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2885,8 +2629,7 @@ Only relevant for the DDI product.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_manage_active_directory_python">
 <a href="#state_security_manage_active_directory_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>active_<wbr>directory</a>
@@ -2896,8 +2639,7 @@ Only relevant for the DDI product.
     </dt>
     <dd>{{% md %}}Whether the team can manage global active directory.
 Only relevant for the DDI product.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_manage_global2fa_python">
 <a href="#state_security_manage_global2fa_python" style="color: inherit; text-decoration: inherit;">security_<wbr>manage_<wbr>global2fa</a>
@@ -2906,8 +2648,7 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can manage global two factor authentication.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2922,9 +2663,7 @@ Only relevant for the DDI product.
 <h4 id="teamipwhitelist">Team<wbr>Ip<wbr>Whitelist</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2933,8 +2672,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2942,14 +2680,11 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2958,8 +2693,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -2967,14 +2701,11 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2983,8 +2714,7 @@ Only relevant for the DDI product.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -2992,14 +2722,11 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3008,8 +2735,7 @@ Only relevant for the DDI product.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The free form name of the team.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3017,8 +2743,7 @@ Only relevant for the DDI product.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

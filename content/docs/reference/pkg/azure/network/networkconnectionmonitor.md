@@ -318,8 +318,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -328,8 +327,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatcherid_csharp">
 <a href="#networkwatcherid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Id</a>
@@ -338,8 +336,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurations_csharp">
 <a href="#testconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -348,8 +345,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testgroups_csharp">
 <a href="#testgroups_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
@@ -358,8 +354,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="autostart_csharp">
 <a href="#autostart_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start</a>
@@ -367,8 +362,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -376,8 +370,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="intervalinseconds_csharp">
 <a href="#intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -385,8 +378,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -395,8 +387,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -405,8 +396,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -415,8 +405,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputworkspaceresourceids_csharp">
 <a href="#outputworkspaceresourceids_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -425,8 +414,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -434,8 +422,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -444,13 +431,11 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -459,8 +444,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatcherid_go">
 <a href="#networkwatcherid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Id</a>
@@ -469,8 +453,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurations_go">
 <a href="#testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -479,8 +462,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testgroups_go">
 <a href="#testgroups_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
@@ -489,8 +471,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="autostart_go">
 <a href="#autostart_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start</a>
@@ -498,8 +479,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -507,8 +487,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="intervalinseconds_go">
 <a href="#intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -516,8 +495,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -526,8 +504,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -536,8 +513,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -546,8 +522,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputworkspaceresourceids_go">
 <a href="#outputworkspaceresourceids_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -556,8 +531,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -565,8 +539,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -575,13 +548,11 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -590,8 +561,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatcherid_nodejs">
 <a href="#networkwatcherid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Id</a>
@@ -600,8 +570,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurations_nodejs">
 <a href="#testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
@@ -610,8 +579,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testgroups_nodejs">
 <a href="#testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
@@ -620,8 +588,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="autostart_nodejs">
 <a href="#autostart_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start</a>
@@ -629,8 +596,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -638,8 +604,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="intervalinseconds_nodejs">
 <a href="#intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
@@ -647,8 +612,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -657,8 +621,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -667,8 +630,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -677,8 +639,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputworkspaceresourceids_nodejs">
 <a href="#outputworkspaceresourceids_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -687,8 +648,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -696,8 +656,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -706,13 +665,11 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -721,8 +678,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_watcher_id_python">
 <a href="#network_watcher_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>id</a>
@@ -731,8 +687,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="test_configurations_python">
 <a href="#test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
@@ -741,8 +696,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="test_groups_python">
 <a href="#test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
@@ -751,8 +705,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="auto_start_python">
 <a href="#auto_start_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start</a>
@@ -760,8 +713,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -769,8 +721,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="interval_in_seconds_python">
 <a href="#interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
@@ -778,8 +729,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -788,8 +738,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -798,8 +747,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -808,8 +756,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_workspace_resource_ids_python">
 <a href="#output_workspace_resource_ids_python" style="color: inherit; text-decoration: inherit;">output_<wbr>workspace_<wbr>resource_<wbr>ids</a>
@@ -818,8 +765,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -827,8 +773,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -837,8 +782,7 @@ The NetworkConnectionMonitor resource accepts the following [input]({{< relref "
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -849,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -858,13 +801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -872,13 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -886,13 +825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1028,8 +964,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_autostart_csharp">
 <a href="#state_autostart_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start</a>
@@ -1037,8 +972,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1046,8 +980,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_csharp">
 <a href="#state_endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -1056,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_intervalinseconds_csharp">
 <a href="#state_intervalinseconds_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -1065,8 +997,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1075,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1085,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkwatcherid_csharp">
 <a href="#state_networkwatcherid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Id</a>
@@ -1095,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_csharp">
 <a href="#state_notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1105,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputworkspaceresourceids_csharp">
 <a href="#state_outputworkspaceresourceids_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -1115,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1124,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1134,8 +1059,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testconfigurations_csharp">
 <a href="#state_testconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -1144,8 +1068,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testgroups_csharp">
 <a href="#state_testgroups_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
@@ -1154,13 +1077,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_autostart_go">
 <a href="#state_autostart_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Start</a>
@@ -1168,8 +1089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1177,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_go">
 <a href="#state_endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -1187,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_intervalinseconds_go">
 <a href="#state_intervalinseconds_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>In<wbr>Seconds</a>
@@ -1196,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1206,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1216,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkwatcherid_go">
 <a href="#state_networkwatcherid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Id</a>
@@ -1226,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_go">
 <a href="#state_notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -1236,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputworkspaceresourceids_go">
 <a href="#state_outputworkspaceresourceids_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -1246,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1255,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1265,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testconfigurations_go">
 <a href="#state_testconfigurations_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configurations</a>
@@ -1275,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testgroups_go">
 <a href="#state_testgroups_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Groups</a>
@@ -1285,13 +1194,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_autostart_nodejs">
 <a href="#state_autostart_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Start</a>
@@ -1299,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1308,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_nodejs">
 <a href="#state_endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1318,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_intervalinseconds_nodejs">
 <a href="#state_intervalinseconds_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>In<wbr>Seconds</a>
@@ -1327,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1337,8 +1240,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1347,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkwatcherid_nodejs">
 <a href="#state_networkwatcherid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Id</a>
@@ -1357,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_nodejs">
 <a href="#state_notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1367,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputworkspaceresourceids_nodejs">
 <a href="#state_outputworkspaceresourceids_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Workspace<wbr>Resource<wbr>Ids</a>
@@ -1377,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1386,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1396,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testconfigurations_nodejs">
 <a href="#state_testconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configurations</a>
@@ -1406,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_testgroups_nodejs">
 <a href="#state_testgroups_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Groups</a>
@@ -1416,13 +1311,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_auto_start_python">
 <a href="#state_auto_start_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>start</a>
@@ -1430,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1439,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_python">
 <a href="#state_endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1449,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpoint">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `endpoint` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_interval_in_seconds_python">
 <a href="#state_interval_in_seconds_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>in_<wbr>seconds</a>
@@ -1458,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1468,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Network Connection Monitor should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1478,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Network Connection Monitor. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_watcher_id_python">
 <a href="#state_network_watcher_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>id</a>
@@ -1488,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notes_python">
 <a href="#state_notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1498,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_output_workspace_resource_ids_python">
 <a href="#state_output_workspace_resource_ids_python" style="color: inherit; text-decoration: inherit;">output_<wbr>workspace_<wbr>resource_<wbr>ids</a>
@@ -1508,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs of the Log Analytics Workspace which will accept the output from the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1517,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1527,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_test_configurations_python">
 <a href="#state_test_configurations_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configurations</a>
@@ -1537,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfiguration">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_test_groups_python">
 <a href="#state_test_groups_python" style="color: inherit; text-decoration: inherit;">test_<wbr>groups</a>
@@ -1547,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestgroup">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `test_group` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1563,8 +1443,7 @@ The following state arguments are supported:
 <h4 id="networkconnectionmonitordestination">Network<wbr>Connection<wbr>Monitor<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1573,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1583,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1593,13 +1470,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1608,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1618,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1628,13 +1501,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1643,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1653,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -1663,13 +1532,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1678,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1688,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -1698,15 +1563,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitorendpoint">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1715,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint for the Network Connection Monitor .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1725,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1735,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1745,13 +1605,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1760,8 +1618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint for the Network Connection Monitor .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1770,8 +1627,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1780,8 +1636,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -1790,13 +1645,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1805,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint for the Network Connection Monitor .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1815,8 +1667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1825,8 +1676,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -1835,13 +1685,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1850,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint for the Network Connection Monitor .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1860,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address or domain name of the Network Connection Monitor endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1870,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -1880,15 +1725,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitorendpointfilter">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1897,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1907,13 +1749,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour type of this endpoint filter. Currently the only allowed value is `Include`. Defaults to `Include`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -1922,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">[]Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1932,13 +1771,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour type of this endpoint filter. Currently the only allowed value is `Include`. Defaults to `Include`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1947,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1957,13 +1793,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behaviour type of this endpoint filter. Currently the only allowed value is `Include`. Defaults to `Include`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -1972,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitorendpointfilteritem">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `item` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1982,15 +1815,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behaviour type of this endpoint filter. Currently the only allowed value is `Include`. Defaults to `Include`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitorendpointfilteritem">Network<wbr>Connection<wbr>Monitor<wbr>Endpoint<wbr>Filter<wbr>Item</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1999,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the filter item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2009,13 +1839,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of items included in the filter. Possible values are `AgentAddress`. Defaults to `AgentAddress`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -2024,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the filter item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2034,13 +1861,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of items included in the filter. Possible values are `AgentAddress`. Defaults to `AgentAddress`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2049,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the filter item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2059,13 +1883,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of items included in the filter. Possible values are `AgentAddress`. Defaults to `AgentAddress`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -2074,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the filter item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2084,15 +1905,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of items included in the filter. Possible values are `AgentAddress`. Defaults to `AgentAddress`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitorsource">Network<wbr>Connection<wbr>Monitor<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2101,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -2111,13 +1929,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2126,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
@@ -2136,13 +1951,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2151,8 +1964,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
@@ -2161,13 +1973,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2176,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
@@ -2186,15 +1995,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine which is used as the endpoint by the Network Connection Monitor.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The field belongs to the v1 network connection monitor, which is now deprecated in favour of v2 by Azure. Please check the document (https://www.terraform.io/docs/providers/azurerm/r/network_connection_monitor.html) for the v2 properties.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2203,8 +2010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of test configuration for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2213,8 +2019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used to evaluate tests. Possible values are `Tcp`, `Http` and `Icmp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfiguration_csharp">
 <a href="#httpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
@@ -2223,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpconfiguration_csharp">
 <a href="#icmpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
@@ -2233,8 +2037,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredipversion_csharp">
 <a href="#preferredipversion_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Ip<wbr>Version</a>
@@ -2243,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred IP version which is used in the test evaluation. Possible values are `IPv4` and `IPv6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_csharp">
 <a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -2253,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpconfiguration_csharp">
 <a href="#tcpconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
@@ -2263,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testfrequencyinseconds_csharp">
 <a href="#testfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -2273,13 +2073,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time interval in seconds at which the test evaluation will happen. Defaults to `60`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2288,8 +2086,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of test configuration for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2298,8 +2095,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used to evaluate tests. Possible values are `Tcp`, `Http` and `Icmp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfiguration_go">
 <a href="#httpconfiguration_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Configuration</a>
@@ -2308,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpconfiguration_go">
 <a href="#icmpconfiguration_go" style="color: inherit; text-decoration: inherit;">Icmp<wbr>Configuration</a>
@@ -2318,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredipversion_go">
 <a href="#preferredipversion_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Ip<wbr>Version</a>
@@ -2328,8 +2122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred IP version which is used in the test evaluation. Possible values are `IPv4` and `IPv6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_go">
 <a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
@@ -2338,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpconfiguration_go">
 <a href="#tcpconfiguration_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Configuration</a>
@@ -2348,8 +2140,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testfrequencyinseconds_go">
 <a href="#testfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -2358,13 +2149,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time interval in seconds at which the test evaluation will happen. Defaults to `60`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2373,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of test configuration for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2383,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used to evaluate tests. Possible values are `Tcp`, `Http` and `Icmp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpconfiguration_nodejs">
 <a href="#httpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Configuration</a>
@@ -2393,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmpconfiguration_nodejs">
 <a href="#icmpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">icmp<wbr>Configuration</a>
@@ -2403,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredipversion_nodejs">
 <a href="#preferredipversion_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Ip<wbr>Version</a>
@@ -2413,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The preferred IP version which is used in the test evaluation. Possible values are `IPv4` and `IPv6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="successthreshold_nodejs">
 <a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
@@ -2423,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcpconfiguration_nodejs">
 <a href="#tcpconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Configuration</a>
@@ -2433,8 +2216,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="testfrequencyinseconds_nodejs">
 <a href="#testfrequencyinseconds_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Frequency<wbr>In<wbr>Seconds</a>
@@ -2443,13 +2225,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time interval in seconds at which the test evaluation will happen. Defaults to `60`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2458,8 +2238,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of test configuration for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2468,8 +2247,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used to evaluate tests. Possible values are `Tcp`, `Http` and `Icmp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_configuration_python">
 <a href="#http_configuration_python" style="color: inherit; text-decoration: inherit;">http_<wbr>configuration</a>
@@ -2478,8 +2256,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `http_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icmp_configuration_python">
 <a href="#icmp_configuration_python" style="color: inherit; text-decoration: inherit;">icmp_<wbr>configuration</a>
@@ -2488,8 +2265,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `icmp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_ip_version_python">
 <a href="#preferred_ip_version_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>ip_<wbr>version</a>
@@ -2498,8 +2274,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The preferred IP version which is used in the test evaluation. Possible values are `IPv4` and `IPv6`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="success_threshold_python">
 <a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
@@ -2508,8 +2283,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `success_threshold` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tcp_configuration_python">
 <a href="#tcp_configuration_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>configuration</a>
@@ -2518,8 +2292,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tcp_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="test_frequency_in_seconds_python">
 <a href="#test_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">test_<wbr>frequency_<wbr>in_<wbr>seconds</a>
@@ -2528,15 +2301,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time interval in seconds at which the test evaluation will happen. Defaults to `60`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestconfigurationhttpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -2545,8 +2316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Possible values are `Get` and `Post`. Defaults to `Get`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2555,8 +2325,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path component of the URI. It only accepts the absolute path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2565,8 +2334,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferhttps_csharp">
 <a href="#preferhttps_csharp" style="color: inherit; text-decoration: inherit;">Prefer<wbr>Https</a>
@@ -2575,8 +2343,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTPS be preferred over HTTP in cases where the choice is not explicit? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_csharp">
 <a href="#requestheaders_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
@@ -2585,8 +2352,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">List&lt;Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validstatuscoderanges_csharp">
 <a href="#validstatuscoderanges_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -2595,13 +2361,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes to consider successful. For instance, `2xx`, `301-304` and `418`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -2610,8 +2374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Possible values are `Get` and `Post`. Defaults to `Get`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2620,8 +2383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path component of the URI. It only accepts the absolute path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2630,8 +2392,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferhttps_go">
 <a href="#preferhttps_go" style="color: inherit; text-decoration: inherit;">Prefer<wbr>Https</a>
@@ -2640,8 +2401,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTPS be preferred over HTTP in cases where the choice is not explicit? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_go">
 <a href="#requestheaders_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Headers</a>
@@ -2650,8 +2410,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">[]Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validstatuscoderanges_go">
 <a href="#validstatuscoderanges_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -2660,13 +2419,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes to consider successful. For instance, `2xx`, `301-304` and `418`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -2675,8 +2432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Possible values are `Get` and `Post`. Defaults to `Get`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2685,8 +2441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path component of the URI. It only accepts the absolute path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2695,8 +2450,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferhttps_nodejs">
 <a href="#preferhttps_nodejs" style="color: inherit; text-decoration: inherit;">prefer<wbr>Https</a>
@@ -2705,8 +2459,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should HTTPS be preferred over HTTP in cases where the choice is not explicit? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaders_nodejs">
 <a href="#requestheaders_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Headers</a>
@@ -2715,8 +2468,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validstatuscoderanges_nodejs">
 <a href="#validstatuscoderanges_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Status<wbr>Code<wbr>Ranges</a>
@@ -2725,13 +2477,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes to consider successful. For instance, `2xx`, `301-304` and `418`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -2740,8 +2490,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method for the HTTP request. Possible values are `Get` and `Post`. Defaults to `Get`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2750,8 +2499,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path component of the URI. It only accepts the absolute path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2760,8 +2508,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the HTTP connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefer_https_python">
 <a href="#prefer_https_python" style="color: inherit; text-decoration: inherit;">prefer_<wbr>https</a>
@@ -2770,8 +2517,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTPS be preferred over HTTP in cases where the choice is not explicit? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_headers_python">
 <a href="#request_headers_python" style="color: inherit; text-decoration: inherit;">request_<wbr>headers</a>
@@ -2780,8 +2526,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Sequence[Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_status_code_ranges_python">
 <a href="#valid_status_code_ranges_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>status_<wbr>code_<wbr>ranges</a>
@@ -2790,15 +2535,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The HTTP status codes to consider successful. For instance, `2xx`, `301-304` and `418`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestconfigurationhttpconfigurationrequestheader">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Http<wbr>Configuration<wbr>Request<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2807,8 +2550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2817,13 +2559,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2832,8 +2572,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2842,13 +2581,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2857,8 +2594,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2867,13 +2603,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2882,8 +2616,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HTTP header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2892,15 +2625,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the HTTP header.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestconfigurationicmpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Icmp<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_csharp">
 <a href="#tracerouteenabled_csharp" style="color: inherit; text-decoration: inherit;">Trace<wbr>Route<wbr>Enabled</a>
@@ -2909,13 +2640,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_go">
 <a href="#tracerouteenabled_go" style="color: inherit; text-decoration: inherit;">Trace<wbr>Route<wbr>Enabled</a>
@@ -2924,13 +2653,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_nodejs">
 <a href="#tracerouteenabled_nodejs" style="color: inherit; text-decoration: inherit;">trace<wbr>Route<wbr>Enabled</a>
@@ -2939,13 +2666,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="trace_route_enabled_python">
 <a href="#trace_route_enabled_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>route_<wbr>enabled</a>
@@ -2954,15 +2679,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestconfigurationsuccessthreshold">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Success<wbr>Threshold</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checksfailedpercent_csharp">
 <a href="#checksfailedpercent_csharp" style="color: inherit; text-decoration: inherit;">Checks<wbr>Failed<wbr>Percent</a>
@@ -2971,8 +2694,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to be successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roundtriptimems_csharp">
 <a href="#roundtriptimems_csharp" style="color: inherit; text-decoration: inherit;">Round<wbr>Trip<wbr>Time<wbr>Ms</a>
@@ -2981,13 +2703,11 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to be successful.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checksfailedpercent_go">
 <a href="#checksfailedpercent_go" style="color: inherit; text-decoration: inherit;">Checks<wbr>Failed<wbr>Percent</a>
@@ -2996,8 +2716,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to be successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roundtriptimems_go">
 <a href="#roundtriptimems_go" style="color: inherit; text-decoration: inherit;">Round<wbr>Trip<wbr>Time<wbr>Ms</a>
@@ -3006,13 +2725,11 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to be successful.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checksfailedpercent_nodejs">
 <a href="#checksfailedpercent_nodejs" style="color: inherit; text-decoration: inherit;">checks<wbr>Failed<wbr>Percent</a>
@@ -3021,8 +2738,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to be successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roundtriptimems_nodejs">
 <a href="#roundtriptimems_nodejs" style="color: inherit; text-decoration: inherit;">round<wbr>Trip<wbr>Time<wbr>Ms</a>
@@ -3031,13 +2747,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to be successful.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="checks_failed_percent_python">
 <a href="#checks_failed_percent_python" style="color: inherit; text-decoration: inherit;">checks_<wbr>failed_<wbr>percent</a>
@@ -3046,8 +2760,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum percentage of failed checks permitted for a test to be successful.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="round_trip_time_ms_python">
 <a href="#round_trip_time_ms_python" style="color: inherit; text-decoration: inherit;">round_<wbr>trip_<wbr>time_<wbr>ms</a>
@@ -3056,15 +2769,13 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum round-trip time in milliseconds permitted for a test to be successful.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestconfigurationtcpconfiguration">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Configuration<wbr>Tcp<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3073,8 +2784,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_csharp">
 <a href="#tracerouteenabled_csharp" style="color: inherit; text-decoration: inherit;">Trace<wbr>Route<wbr>Enabled</a>
@@ -3083,13 +2793,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3098,8 +2806,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_go">
 <a href="#tracerouteenabled_go" style="color: inherit; text-decoration: inherit;">Trace<wbr>Route<wbr>Enabled</a>
@@ -3108,13 +2815,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3123,8 +2828,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tracerouteenabled_nodejs">
 <a href="#tracerouteenabled_nodejs" style="color: inherit; text-decoration: inherit;">trace<wbr>Route<wbr>Enabled</a>
@@ -3133,13 +2837,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3148,8 +2850,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port for the Tcp connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trace_route_enabled_python">
 <a href="#trace_route_enabled_python" style="color: inherit; text-decoration: inherit;">trace_<wbr>route_<wbr>enabled</a>
@@ -3158,15 +2859,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should path evaluation with trace route be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkconnectionmonitortestgroup">Network<wbr>Connection<wbr>Monitor<wbr>Test<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationendpoints_csharp">
 <a href="#destinationendpoints_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoints</a>
@@ -3175,8 +2874,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of destination endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3185,8 +2883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test group for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceendpoints_csharp">
 <a href="#sourceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoints</a>
@@ -3195,8 +2892,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of source endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurationnames_csharp">
 <a href="#testconfigurationnames_csharp" style="color: inherit; text-decoration: inherit;">Test<wbr>Configuration<wbr>Names</a>
@@ -3205,8 +2901,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of test configuration names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3215,13 +2910,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the test group be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationendpoints_go">
 <a href="#destinationendpoints_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoints</a>
@@ -3230,8 +2923,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of destination endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3240,8 +2932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test group for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceendpoints_go">
 <a href="#sourceendpoints_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoints</a>
@@ -3250,8 +2941,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of source endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurationnames_go">
 <a href="#testconfigurationnames_go" style="color: inherit; text-decoration: inherit;">Test<wbr>Configuration<wbr>Names</a>
@@ -3260,8 +2950,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of test configuration names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -3270,13 +2959,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the test group be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationendpoints_nodejs">
 <a href="#destinationendpoints_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoints</a>
@@ -3285,8 +2972,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of destination endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3295,8 +2981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the test group for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceendpoints_nodejs">
 <a href="#sourceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoints</a>
@@ -3305,8 +2990,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of source endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="testconfigurationnames_nodejs">
 <a href="#testconfigurationnames_nodejs" style="color: inherit; text-decoration: inherit;">test<wbr>Configuration<wbr>Names</a>
@@ -3315,8 +2999,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of test configuration names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3325,13 +3008,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the test group be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_endpoints_python">
 <a href="#destination_endpoints_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoints</a>
@@ -3340,8 +3021,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of destination endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3350,8 +3030,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the test group for the Network Connection Monitor.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_endpoints_python">
 <a href="#source_endpoints_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoints</a>
@@ -3360,8 +3039,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of source endpoint names.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="test_configuration_names_python">
 <a href="#test_configuration_names_python" style="color: inherit; text-decoration: inherit;">test_<wbr>configuration_<wbr>names</a>
@@ -3370,8 +3048,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of test configuration names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3380,8 +3057,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the test group be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

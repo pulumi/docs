@@ -269,8 +269,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -282,8 +281,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -293,8 +291,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -304,8 +301,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -315,13 +311,11 @@ Can be updated without creating a new resource.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -333,8 +327,7 @@ Defaults to the provider project configuration.
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -344,8 +337,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -355,8 +347,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -366,13 +357,11 @@ Can be updated without creating a new resource.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -384,8 +373,7 @@ Defaults to the provider project configuration.
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -395,8 +383,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -406,8 +393,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -417,13 +403,11 @@ Can be updated without creating a new resource.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -435,8 +419,7 @@ Defaults to the provider project configuration.
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -446,8 +429,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -457,8 +439,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -468,8 +449,7 @@ Can be updated without creating a new resource.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -480,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -492,8 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -501,8 +479,7 @@ that would grant the service account privileges.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -511,8 +488,7 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_csharp">
 <a href="#uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -521,13 +497,11 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -538,8 +512,7 @@ that would grant the service account privileges.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -547,8 +520,7 @@ that would grant the service account privileges.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -557,8 +529,7 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_go">
 <a href="#uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -567,13 +538,11 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -584,8 +553,7 @@ that would grant the service account privileges.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,8 +561,7 @@ that would grant the service account privileges.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -603,8 +570,7 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueid_nodejs">
 <a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
@@ -613,13 +579,11 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -630,8 +594,7 @@ that would grant the service account privileges.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -639,8 +602,7 @@ that would grant the service account privileges.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -649,8 +611,7 @@ that would grant the service account privileges.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_id_python">
 <a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
@@ -659,8 +620,7 @@ that would grant the service account privileges.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -787,8 +747,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -800,8 +759,7 @@ The following state arguments are supported:
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -811,8 +769,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -822,8 +779,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -834,8 +790,7 @@ Can be updated without creating a new resource.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -844,8 +799,7 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -855,8 +809,7 @@ that would grant the service account privileges.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniqueid_csharp">
 <a href="#state_uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -865,13 +818,11 @@ Defaults to the provider project configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -883,8 +834,7 @@ Defaults to the provider project configuration.
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -894,8 +844,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -905,8 +854,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -917,8 +865,7 @@ Can be updated without creating a new resource.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -927,8 +874,7 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -938,8 +884,7 @@ that would grant the service account privileges.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniqueid_go">
 <a href="#state_uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
@@ -948,13 +893,11 @@ Defaults to the provider project configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -966,8 +909,7 @@ Defaults to the provider project configuration.
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -977,8 +919,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -988,8 +929,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1000,8 +940,7 @@ Can be updated without creating a new resource.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1010,8 +949,7 @@ that would grant the service account privileges.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1021,8 +959,7 @@ that would grant the service account privileges.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniqueid_nodejs">
 <a href="#state_uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
@@ -1031,13 +968,11 @@ Defaults to the provider project configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1049,8 +984,7 @@ Defaults to the provider project configuration.
 account email address and a stable unique id. It is unique within a project,
 must be 6-30 characters long, and match the regular expression `a-z`
 to comply with RFC1035. Changing this forces a new service account to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1060,8 +994,7 @@ to comply with RFC1035. Changing this forces a new service account to be created
     </dt>
     <dd>{{% md %}}A text description of the service account.
 Must be less than or equal to 256 UTF-8 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1071,8 +1004,7 @@ Must be less than or equal to 256 UTF-8 bytes.
     </dt>
     <dd>{{% md %}}The display name for the service account.
 Can be updated without creating a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1083,8 +1015,7 @@ Can be updated without creating a new resource.
     <dd>{{% md %}}The e-mail address of the service account. This value
 should be referenced from any `gcp.organizations.getIAMPolicy` data sources
 that would grant the service account privileges.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1093,8 +1024,7 @@ that would grant the service account privileges.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified name of the service account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1104,8 +1034,7 @@ that would grant the service account privileges.
     </dt>
     <dd>{{% md %}}The ID of the project that the service account will be created in.
 Defaults to the provider project configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_id_python">
 <a href="#state_unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
@@ -1114,8 +1043,7 @@ Defaults to the provider project configuration.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique id of the service account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

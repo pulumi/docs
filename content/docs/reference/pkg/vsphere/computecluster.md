@@ -162,8 +162,7 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -173,8 +172,7 @@ The ComputeCluster resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -184,8 +182,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmautomationlevel_csharp">
 <a href="#dpmautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -196,8 +193,7 @@ value strings to set for the datastore cluster.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmenabled_csharp">
 <a href="#dpmenabled_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -208,8 +204,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmthreshold_csharp">
 <a href="#dpmthreshold_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
@@ -221,8 +216,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsadvancedoptions_csharp">
 <a href="#drsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
@@ -232,8 +226,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsautomationlevel_csharp">
 <a href="#drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -244,8 +237,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenablepredictivedrs_csharp">
 <a href="#drsenablepredictivedrs_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
@@ -256,8 +248,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenablevmoverrides_csharp">
 <a href="#drsenablevmoverrides_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
@@ -267,8 +258,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenabled_csharp">
 <a href="#drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -277,8 +267,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsmigrationthreshold_csharp">
 <a href="#drsmigrationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
@@ -290,8 +279,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -305,8 +293,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceevacuateondestroy_csharp">
 <a href="#forceevacuateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
@@ -319,8 +306,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolfailoverhostsystemids_csharp">
 <a href="#haadmissioncontrolfailoverhostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
@@ -333,8 +319,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolhostfailuretolerance_csharp">
 <a href="#haadmissioncontrolhostfailuretolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
@@ -347,8 +332,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolperformancetolerance_csharp">
 <a href="#haadmissioncontrolperformancetolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
@@ -360,8 +344,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolpolicy_csharp">
 <a href="#haadmissioncontrolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
@@ -372,8 +355,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentageautocompute_csharp">
 <a href="#haadmissioncontrolresourcepercentageautocompute_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
@@ -387,8 +369,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentagecpu_csharp">
 <a href="#haadmissioncontrolresourcepercentagecpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
@@ -399,8 +380,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentagememory_csharp">
 <a href="#haadmissioncontrolresourcepercentagememory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
@@ -411,8 +391,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyexplicitcpu_csharp">
 <a href="#haadmissioncontrolslotpolicyexplicitcpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
@@ -422,8 +401,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyexplicitmemory_csharp">
 <a href="#haadmissioncontrolslotpolicyexplicitmemory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
@@ -433,8 +411,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyuseexplicitsize_csharp">
 <a href="#haadmissioncontrolslotpolicyuseexplicitsize_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
@@ -446,8 +423,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadvancedoptions_csharp">
 <a href="#haadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
@@ -457,8 +433,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdrecoveryaction_csharp">
 <a href="#hadatastoreapdrecoveryaction_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
@@ -470,8 +445,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdresponse_csharp">
 <a href="#hadatastoreapdresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
@@ -484,8 +458,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdresponsedelay_csharp">
 <a href="#hadatastoreapdresponsedelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
@@ -497,8 +470,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastorepdlresponse_csharp">
 <a href="#hadatastorepdlresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
@@ -511,8 +483,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haenabled_csharp">
 <a href="#haenabled_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
@@ -522,8 +493,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haheartbeatdatastoreids_csharp">
 <a href="#haheartbeatdatastoreids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
@@ -535,8 +505,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haheartbeatdatastorepolicy_csharp">
 <a href="#haheartbeatdatastorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
@@ -548,8 +517,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hahostisolationresponse_csharp">
 <a href="#hahostisolationresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
@@ -561,8 +529,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hahostmonitoring_csharp">
 <a href="#hahostmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
@@ -573,8 +540,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmcomponentprotection_csharp">
 <a href="#havmcomponentprotection_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
@@ -586,8 +552,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmdependencyrestartcondition_csharp">
 <a href="#havmdependencyrestartcondition_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
@@ -602,8 +567,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmfailureinterval_csharp">
 <a href="#havmfailureinterval_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
@@ -614,8 +578,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmaximumfailurewindow_csharp">
 <a href="#havmmaximumfailurewindow_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
@@ -629,8 +592,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmaximumresets_csharp">
 <a href="#havmmaximumresets_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
@@ -640,8 +602,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmminimumuptime_csharp">
 <a href="#havmminimumuptime_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
@@ -652,8 +613,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmonitoring_csharp">
 <a href="#havmmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
@@ -664,8 +624,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestartadditionaldelay_csharp">
 <a href="#havmrestartadditionaldelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
@@ -676,8 +635,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestartpriority_csharp">
 <a href="#havmrestartpriority_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
@@ -688,8 +646,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestarttimeout_csharp">
 <a href="#havmrestarttimeout_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
@@ -701,8 +658,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostclusterexittimeout_csharp">
 <a href="#hostclusterexittimeout_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
@@ -713,8 +669,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostmanaged_csharp">
 <a href="#hostmanaged_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
@@ -726,8 +681,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystemids_csharp">
 <a href="#hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
@@ -737,8 +691,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -747,8 +700,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaautomationlevel_csharp">
 <a href="#proactivehaautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
@@ -760,8 +712,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaenabled_csharp">
 <a href="#proactivehaenabled_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
@@ -771,8 +722,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehamoderateremediation_csharp">
 <a href="#proactivehamoderateremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
@@ -786,8 +736,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaproviderids_csharp">
 <a href="#proactivehaproviderids_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
@@ -798,8 +747,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehasevereremediation_csharp">
 <a href="#proactivehasevereremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
@@ -813,8 +761,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -823,8 +770,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsandiskgroups_csharp">
 <a href="#vsandiskgroups_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
@@ -833,8 +779,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanenabled_csharp">
 <a href="#vsanenabled_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
@@ -843,13 +788,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -859,8 +802,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -870,8 +812,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmautomationlevel_go">
 <a href="#dpmautomationlevel_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -882,8 +823,7 @@ value strings to set for the datastore cluster.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmenabled_go">
 <a href="#dpmenabled_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -894,8 +834,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmthreshold_go">
 <a href="#dpmthreshold_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
@@ -907,8 +846,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsadvancedoptions_go">
 <a href="#drsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
@@ -918,8 +856,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsautomationlevel_go">
 <a href="#drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -930,8 +867,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenablepredictivedrs_go">
 <a href="#drsenablepredictivedrs_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
@@ -942,8 +878,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenablevmoverrides_go">
 <a href="#drsenablevmoverrides_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
@@ -953,8 +888,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenabled_go">
 <a href="#drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -963,8 +897,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsmigrationthreshold_go">
 <a href="#drsmigrationthreshold_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
@@ -976,8 +909,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -991,8 +923,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceevacuateondestroy_go">
 <a href="#forceevacuateondestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
@@ -1005,8 +936,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolfailoverhostsystemids_go">
 <a href="#haadmissioncontrolfailoverhostsystemids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
@@ -1019,8 +949,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolhostfailuretolerance_go">
 <a href="#haadmissioncontrolhostfailuretolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
@@ -1033,8 +962,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolperformancetolerance_go">
 <a href="#haadmissioncontrolperformancetolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
@@ -1046,8 +974,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolpolicy_go">
 <a href="#haadmissioncontrolpolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
@@ -1058,8 +985,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentageautocompute_go">
 <a href="#haadmissioncontrolresourcepercentageautocompute_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
@@ -1073,8 +999,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentagecpu_go">
 <a href="#haadmissioncontrolresourcepercentagecpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
@@ -1085,8 +1010,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentagememory_go">
 <a href="#haadmissioncontrolresourcepercentagememory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
@@ -1097,8 +1021,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyexplicitcpu_go">
 <a href="#haadmissioncontrolslotpolicyexplicitcpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
@@ -1108,8 +1031,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyexplicitmemory_go">
 <a href="#haadmissioncontrolslotpolicyexplicitmemory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
@@ -1119,8 +1041,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyuseexplicitsize_go">
 <a href="#haadmissioncontrolslotpolicyuseexplicitsize_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
@@ -1132,8 +1053,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadvancedoptions_go">
 <a href="#haadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
@@ -1143,8 +1063,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdrecoveryaction_go">
 <a href="#hadatastoreapdrecoveryaction_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
@@ -1156,8 +1075,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdresponse_go">
 <a href="#hadatastoreapdresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
@@ -1170,8 +1088,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdresponsedelay_go">
 <a href="#hadatastoreapdresponsedelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
@@ -1183,8 +1100,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastorepdlresponse_go">
 <a href="#hadatastorepdlresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
@@ -1197,8 +1113,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haenabled_go">
 <a href="#haenabled_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
@@ -1208,8 +1123,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haheartbeatdatastoreids_go">
 <a href="#haheartbeatdatastoreids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
@@ -1221,8 +1135,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haheartbeatdatastorepolicy_go">
 <a href="#haheartbeatdatastorepolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
@@ -1234,8 +1147,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hahostisolationresponse_go">
 <a href="#hahostisolationresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
@@ -1247,8 +1159,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hahostmonitoring_go">
 <a href="#hahostmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
@@ -1259,8 +1170,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmcomponentprotection_go">
 <a href="#havmcomponentprotection_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
@@ -1272,8 +1182,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmdependencyrestartcondition_go">
 <a href="#havmdependencyrestartcondition_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
@@ -1288,8 +1197,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmfailureinterval_go">
 <a href="#havmfailureinterval_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
@@ -1300,8 +1208,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmaximumfailurewindow_go">
 <a href="#havmmaximumfailurewindow_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
@@ -1315,8 +1222,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmaximumresets_go">
 <a href="#havmmaximumresets_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
@@ -1326,8 +1232,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmminimumuptime_go">
 <a href="#havmminimumuptime_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
@@ -1338,8 +1243,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmonitoring_go">
 <a href="#havmmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
@@ -1350,8 +1254,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestartadditionaldelay_go">
 <a href="#havmrestartadditionaldelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
@@ -1362,8 +1265,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestartpriority_go">
 <a href="#havmrestartpriority_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
@@ -1374,8 +1276,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestarttimeout_go">
 <a href="#havmrestarttimeout_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
@@ -1387,8 +1288,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostclusterexittimeout_go">
 <a href="#hostclusterexittimeout_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
@@ -1399,8 +1299,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostmanaged_go">
 <a href="#hostmanaged_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
@@ -1412,8 +1311,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystemids_go">
 <a href="#hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
@@ -1423,8 +1321,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1433,8 +1330,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaautomationlevel_go">
 <a href="#proactivehaautomationlevel_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
@@ -1446,8 +1342,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaenabled_go">
 <a href="#proactivehaenabled_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
@@ -1457,8 +1352,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehamoderateremediation_go">
 <a href="#proactivehamoderateremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
@@ -1472,8 +1366,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaproviderids_go">
 <a href="#proactivehaproviderids_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
@@ -1484,8 +1377,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehasevereremediation_go">
 <a href="#proactivehasevereremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
@@ -1499,8 +1391,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1509,8 +1400,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsandiskgroups_go">
 <a href="#vsandiskgroups_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
@@ -1519,8 +1409,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanenabled_go">
 <a href="#vsanenabled_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
@@ -1529,13 +1418,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -1545,8 +1432,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -1556,8 +1442,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmautomationlevel_nodejs">
 <a href="#dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
@@ -1568,8 +1453,7 @@ value strings to set for the datastore cluster.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmenabled_nodejs">
 <a href="#dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
@@ -1580,8 +1464,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmthreshold_nodejs">
 <a href="#dpmthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Threshold</a>
@@ -1593,8 +1476,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsadvancedoptions_nodejs">
 <a href="#drsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Advanced<wbr>Options</a>
@@ -1604,8 +1486,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsautomationlevel_nodejs">
 <a href="#drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
@@ -1616,8 +1497,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenablepredictivedrs_nodejs">
 <a href="#drsenablepredictivedrs_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
@@ -1628,8 +1508,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenablevmoverrides_nodejs">
 <a href="#drsenablevmoverrides_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
@@ -1639,8 +1518,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsenabled_nodejs">
 <a href="#drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
@@ -1649,8 +1527,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drsmigrationthreshold_nodejs">
 <a href="#drsmigrationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Migration<wbr>Threshold</a>
@@ -1662,8 +1539,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1677,8 +1553,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceevacuateondestroy_nodejs">
 <a href="#forceevacuateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
@@ -1691,8 +1566,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolfailoverhostsystemids_nodejs">
 <a href="#haadmissioncontrolfailoverhostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
@@ -1705,8 +1579,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolhostfailuretolerance_nodejs">
 <a href="#haadmissioncontrolhostfailuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
@@ -1719,8 +1592,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolperformancetolerance_nodejs">
 <a href="#haadmissioncontrolperformancetolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
@@ -1732,8 +1604,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolpolicy_nodejs">
 <a href="#haadmissioncontrolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Policy</a>
@@ -1744,8 +1615,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentageautocompute_nodejs">
 <a href="#haadmissioncontrolresourcepercentageautocompute_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
@@ -1759,8 +1629,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentagecpu_nodejs">
 <a href="#haadmissioncontrolresourcepercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
@@ -1771,8 +1640,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolresourcepercentagememory_nodejs">
 <a href="#haadmissioncontrolresourcepercentagememory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
@@ -1783,8 +1651,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyexplicitcpu_nodejs">
 <a href="#haadmissioncontrolslotpolicyexplicitcpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
@@ -1794,8 +1661,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyexplicitmemory_nodejs">
 <a href="#haadmissioncontrolslotpolicyexplicitmemory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
@@ -1805,8 +1671,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadmissioncontrolslotpolicyuseexplicitsize_nodejs">
 <a href="#haadmissioncontrolslotpolicyuseexplicitsize_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
@@ -1818,8 +1683,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haadvancedoptions_nodejs">
 <a href="#haadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Advanced<wbr>Options</a>
@@ -1829,8 +1693,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdrecoveryaction_nodejs">
 <a href="#hadatastoreapdrecoveryaction_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
@@ -1842,8 +1705,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdresponse_nodejs">
 <a href="#hadatastoreapdresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
@@ -1856,8 +1718,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastoreapdresponsedelay_nodejs">
 <a href="#hadatastoreapdresponsedelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
@@ -1869,8 +1730,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadatastorepdlresponse_nodejs">
 <a href="#hadatastorepdlresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
@@ -1883,8 +1743,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haenabled_nodejs">
 <a href="#haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
@@ -1894,8 +1753,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haheartbeatdatastoreids_nodejs">
 <a href="#haheartbeatdatastoreids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
@@ -1907,8 +1765,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="haheartbeatdatastorepolicy_nodejs">
 <a href="#haheartbeatdatastorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
@@ -1920,8 +1777,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hahostisolationresponse_nodejs">
 <a href="#hahostisolationresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Isolation<wbr>Response</a>
@@ -1933,8 +1789,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hahostmonitoring_nodejs">
 <a href="#hahostmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Monitoring</a>
@@ -1945,8 +1800,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmcomponentprotection_nodejs">
 <a href="#havmcomponentprotection_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Component<wbr>Protection</a>
@@ -1958,8 +1812,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmdependencyrestartcondition_nodejs">
 <a href="#havmdependencyrestartcondition_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
@@ -1974,8 +1827,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmfailureinterval_nodejs">
 <a href="#havmfailureinterval_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
@@ -1986,8 +1838,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmaximumfailurewindow_nodejs">
 <a href="#havmmaximumfailurewindow_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
@@ -2001,8 +1852,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmaximumresets_nodejs">
 <a href="#havmmaximumresets_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
@@ -2012,8 +1862,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmminimumuptime_nodejs">
 <a href="#havmminimumuptime_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
@@ -2024,8 +1873,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmmonitoring_nodejs">
 <a href="#havmmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Monitoring</a>
@@ -2036,8 +1884,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestartadditionaldelay_nodejs">
 <a href="#havmrestartadditionaldelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
@@ -2048,8 +1895,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestartpriority_nodejs">
 <a href="#havmrestartpriority_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
@@ -2060,8 +1906,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="havmrestarttimeout_nodejs">
 <a href="#havmrestarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
@@ -2073,8 +1918,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostclusterexittimeout_nodejs">
 <a href="#hostclusterexittimeout_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
@@ -2085,8 +1929,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostmanaged_nodejs">
 <a href="#hostmanaged_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Managed</a>
@@ -2098,8 +1941,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostsystemids_nodejs">
 <a href="#hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
@@ -2109,8 +1951,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2119,8 +1960,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaautomationlevel_nodejs">
 <a href="#proactivehaautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
@@ -2132,8 +1972,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaenabled_nodejs">
 <a href="#proactivehaenabled_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Enabled</a>
@@ -2143,8 +1982,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehamoderateremediation_nodejs">
 <a href="#proactivehamoderateremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
@@ -2158,8 +1996,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehaproviderids_nodejs">
 <a href="#proactivehaproviderids_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
@@ -2170,8 +2007,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactivehasevereremediation_nodejs">
 <a href="#proactivehasevereremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
@@ -2185,8 +2021,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2195,8 +2030,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsandiskgroups_nodejs">
 <a href="#vsandiskgroups_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Disk<wbr>Groups</a>
@@ -2205,8 +2039,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsanenabled_nodejs">
 <a href="#vsanenabled_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Enabled</a>
@@ -2215,13 +2048,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -2231,8 +2062,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -2242,8 +2072,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_automation_level_python">
 <a href="#dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
@@ -2254,8 +2083,7 @@ value strings to set for the datastore cluster.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_enabled_python">
 <a href="#dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
@@ -2266,8 +2094,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_threshold_python">
 <a href="#dpm_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>threshold</a>
@@ -2279,8 +2106,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_advanced_options_python">
 <a href="#drs_advanced_options_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>advanced_<wbr>options</a>
@@ -2290,8 +2116,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_automation_level_python">
 <a href="#drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
@@ -2302,8 +2127,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_enable_predictive_drs_python">
 <a href="#drs_enable_predictive_drs_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>predictive_<wbr>drs</a>
@@ -2314,8 +2138,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_enable_vm_overrides_python">
 <a href="#drs_enable_vm_overrides_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>vm_<wbr>overrides</a>
@@ -2325,8 +2148,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_enabled_python">
 <a href="#drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
@@ -2335,8 +2157,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="drs_migration_threshold_python">
 <a href="#drs_migration_threshold_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>migration_<wbr>threshold</a>
@@ -2348,8 +2169,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -2363,8 +2183,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_evacuate_on_destroy_python">
 <a href="#force_evacuate_on_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>evacuate_<wbr>on_<wbr>destroy</a>
@@ -2377,8 +2196,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_failover_host_system_ids_python">
 <a href="#ha_admission_control_failover_host_system_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</a>
@@ -2391,8 +2209,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_host_failure_tolerance_python">
 <a href="#ha_admission_control_host_failure_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</a>
@@ -2405,8 +2222,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_performance_tolerance_python">
 <a href="#ha_admission_control_performance_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</a>
@@ -2418,8 +2234,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_policy_python">
 <a href="#ha_admission_control_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>policy</a>
@@ -2430,8 +2245,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_resource_percentage_auto_compute_python">
 <a href="#ha_admission_control_resource_percentage_auto_compute_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</a>
@@ -2445,8 +2259,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_resource_percentage_cpu_python">
 <a href="#ha_admission_control_resource_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</a>
@@ -2457,8 +2270,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_resource_percentage_memory_python">
 <a href="#ha_admission_control_resource_percentage_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</a>
@@ -2469,8 +2281,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_slot_policy_explicit_cpu_python">
 <a href="#ha_admission_control_slot_policy_explicit_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</a>
@@ -2480,8 +2291,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_slot_policy_explicit_memory_python">
 <a href="#ha_admission_control_slot_policy_explicit_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</a>
@@ -2491,8 +2301,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_admission_control_slot_policy_use_explicit_size_python">
 <a href="#ha_admission_control_slot_policy_use_explicit_size_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</a>
@@ -2504,8 +2313,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_advanced_options_python">
 <a href="#ha_advanced_options_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>advanced_<wbr>options</a>
@@ -2515,8 +2323,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_datastore_apd_recovery_action_python">
 <a href="#ha_datastore_apd_recovery_action_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</a>
@@ -2528,8 +2335,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_datastore_apd_response_python">
 <a href="#ha_datastore_apd_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response</a>
@@ -2542,8 +2348,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_datastore_apd_response_delay_python">
 <a href="#ha_datastore_apd_response_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</a>
@@ -2555,8 +2360,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_datastore_pdl_response_python">
 <a href="#ha_datastore_pdl_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>pdl_<wbr>response</a>
@@ -2569,8 +2373,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_enabled_python">
 <a href="#ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
@@ -2580,8 +2383,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_heartbeat_datastore_ids_python">
 <a href="#ha_heartbeat_datastore_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</a>
@@ -2593,8 +2395,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_heartbeat_datastore_policy_python">
 <a href="#ha_heartbeat_datastore_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</a>
@@ -2606,8 +2407,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_host_isolation_response_python">
 <a href="#ha_host_isolation_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>isolation_<wbr>response</a>
@@ -2619,8 +2419,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_host_monitoring_python">
 <a href="#ha_host_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>monitoring</a>
@@ -2631,8 +2430,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_component_protection_python">
 <a href="#ha_vm_component_protection_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>component_<wbr>protection</a>
@@ -2644,8 +2442,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_dependency_restart_condition_python">
 <a href="#ha_vm_dependency_restart_condition_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</a>
@@ -2660,8 +2457,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_failure_interval_python">
 <a href="#ha_vm_failure_interval_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>failure_<wbr>interval</a>
@@ -2672,8 +2468,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_maximum_failure_window_python">
 <a href="#ha_vm_maximum_failure_window_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</a>
@@ -2687,8 +2482,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_maximum_resets_python">
 <a href="#ha_vm_maximum_resets_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>resets</a>
@@ -2698,8 +2492,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_minimum_uptime_python">
 <a href="#ha_vm_minimum_uptime_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>minimum_<wbr>uptime</a>
@@ -2710,8 +2503,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_monitoring_python">
 <a href="#ha_vm_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>monitoring</a>
@@ -2722,8 +2514,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_restart_additional_delay_python">
 <a href="#ha_vm_restart_additional_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</a>
@@ -2734,8 +2525,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_restart_priority_python">
 <a href="#ha_vm_restart_priority_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>priority</a>
@@ -2746,8 +2536,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ha_vm_restart_timeout_python">
 <a href="#ha_vm_restart_timeout_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>timeout</a>
@@ -2759,8 +2548,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_cluster_exit_timeout_python">
 <a href="#host_cluster_exit_timeout_python" style="color: inherit; text-decoration: inherit;">host_<wbr>cluster_<wbr>exit_<wbr>timeout</a>
@@ -2771,8 +2559,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_managed_python">
 <a href="#host_managed_python" style="color: inherit; text-decoration: inherit;">host_<wbr>managed</a>
@@ -2784,8 +2571,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_system_ids_python">
 <a href="#host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
@@ -2795,8 +2581,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2805,8 +2590,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactive_ha_automation_level_python">
 <a href="#proactive_ha_automation_level_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>automation_<wbr>level</a>
@@ -2818,8 +2602,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactive_ha_enabled_python">
 <a href="#proactive_ha_enabled_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>enabled</a>
@@ -2829,8 +2612,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactive_ha_moderate_remediation_python">
 <a href="#proactive_ha_moderate_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</a>
@@ -2844,8 +2626,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactive_ha_provider_ids_python">
 <a href="#proactive_ha_provider_ids_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>provider_<wbr>ids</a>
@@ -2856,8 +2637,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proactive_ha_severe_remediation_python">
 <a href="#proactive_ha_severe_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>severe_<wbr>remediation</a>
@@ -2871,8 +2651,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2881,8 +2660,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsan_disk_groups_python">
 <a href="#vsan_disk_groups_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>disk_<wbr>groups</a>
@@ -2891,8 +2669,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">Sequence[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsan_enabled_python">
 <a href="#vsan_enabled_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>enabled</a>
@@ -2901,8 +2678,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2913,8 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2922,8 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepoolid_csharp">
 <a href="#resourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
@@ -2932,13 +2706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2946,8 +2718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepoolid_go">
 <a href="#resourcepoolid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
@@ -2956,13 +2727,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2970,8 +2739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepoolid_nodejs">
 <a href="#resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
@@ -2980,13 +2748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2994,8 +2760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_pool_id_python">
 <a href="#resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
@@ -3004,8 +2769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3132,8 +2896,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -3143,8 +2906,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_csharp">
 <a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -3154,8 +2916,7 @@ value strings to set for the datastore cluster.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmautomationlevel_csharp">
 <a href="#state_dpmautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -3166,8 +2927,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmenabled_csharp">
 <a href="#state_dpmenabled_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -3178,8 +2938,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmthreshold_csharp">
 <a href="#state_dpmthreshold_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
@@ -3191,8 +2950,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsadvancedoptions_csharp">
 <a href="#state_drsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
@@ -3202,8 +2960,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsautomationlevel_csharp">
 <a href="#state_drsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -3214,8 +2971,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenablepredictivedrs_csharp">
 <a href="#state_drsenablepredictivedrs_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
@@ -3226,8 +2982,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenablevmoverrides_csharp">
 <a href="#state_drsenablevmoverrides_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
@@ -3237,8 +2992,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenabled_csharp">
 <a href="#state_drsenabled_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -3247,8 +3001,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsmigrationthreshold_csharp">
 <a href="#state_drsmigrationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
@@ -3260,8 +3013,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -3275,8 +3027,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceevacuateondestroy_csharp">
 <a href="#state_forceevacuateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
@@ -3289,8 +3040,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolfailoverhostsystemids_csharp">
 <a href="#state_haadmissioncontrolfailoverhostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
@@ -3303,8 +3053,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolhostfailuretolerance_csharp">
 <a href="#state_haadmissioncontrolhostfailuretolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
@@ -3317,8 +3066,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolperformancetolerance_csharp">
 <a href="#state_haadmissioncontrolperformancetolerance_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
@@ -3330,8 +3078,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolpolicy_csharp">
 <a href="#state_haadmissioncontrolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
@@ -3342,8 +3089,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentageautocompute_csharp">
 <a href="#state_haadmissioncontrolresourcepercentageautocompute_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
@@ -3357,8 +3103,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentagecpu_csharp">
 <a href="#state_haadmissioncontrolresourcepercentagecpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
@@ -3369,8 +3114,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentagememory_csharp">
 <a href="#state_haadmissioncontrolresourcepercentagememory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
@@ -3381,8 +3125,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyexplicitcpu_csharp">
 <a href="#state_haadmissioncontrolslotpolicyexplicitcpu_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
@@ -3392,8 +3135,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyexplicitmemory_csharp">
 <a href="#state_haadmissioncontrolslotpolicyexplicitmemory_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
@@ -3403,8 +3145,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyuseexplicitsize_csharp">
 <a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
@@ -3416,8 +3157,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadvancedoptions_csharp">
 <a href="#state_haadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
@@ -3427,8 +3167,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdrecoveryaction_csharp">
 <a href="#state_hadatastoreapdrecoveryaction_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
@@ -3440,8 +3179,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdresponse_csharp">
 <a href="#state_hadatastoreapdresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
@@ -3454,8 +3192,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdresponsedelay_csharp">
 <a href="#state_hadatastoreapdresponsedelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
@@ -3467,8 +3204,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastorepdlresponse_csharp">
 <a href="#state_hadatastorepdlresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
@@ -3481,8 +3217,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haenabled_csharp">
 <a href="#state_haenabled_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
@@ -3492,8 +3227,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haheartbeatdatastoreids_csharp">
 <a href="#state_haheartbeatdatastoreids_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
@@ -3505,8 +3239,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haheartbeatdatastorepolicy_csharp">
 <a href="#state_haheartbeatdatastorepolicy_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
@@ -3518,8 +3251,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hahostisolationresponse_csharp">
 <a href="#state_hahostisolationresponse_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
@@ -3531,8 +3263,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hahostmonitoring_csharp">
 <a href="#state_hahostmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
@@ -3543,8 +3274,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmcomponentprotection_csharp">
 <a href="#state_havmcomponentprotection_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
@@ -3556,8 +3286,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmdependencyrestartcondition_csharp">
 <a href="#state_havmdependencyrestartcondition_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
@@ -3572,8 +3301,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmfailureinterval_csharp">
 <a href="#state_havmfailureinterval_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
@@ -3584,8 +3312,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmaximumfailurewindow_csharp">
 <a href="#state_havmmaximumfailurewindow_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
@@ -3599,8 +3326,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmaximumresets_csharp">
 <a href="#state_havmmaximumresets_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
@@ -3610,8 +3336,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmminimumuptime_csharp">
 <a href="#state_havmminimumuptime_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
@@ -3622,8 +3347,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmonitoring_csharp">
 <a href="#state_havmmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
@@ -3634,8 +3358,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestartadditionaldelay_csharp">
 <a href="#state_havmrestartadditionaldelay_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
@@ -3646,8 +3369,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestartpriority_csharp">
 <a href="#state_havmrestartpriority_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
@@ -3658,8 +3380,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestarttimeout_csharp">
 <a href="#state_havmrestarttimeout_csharp" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
@@ -3671,8 +3392,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostclusterexittimeout_csharp">
 <a href="#state_hostclusterexittimeout_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
@@ -3683,8 +3403,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostmanaged_csharp">
 <a href="#state_hostmanaged_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
@@ -3696,8 +3415,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemids_csharp">
 <a href="#state_hostsystemids_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
@@ -3707,8 +3425,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3717,8 +3434,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaautomationlevel_csharp">
 <a href="#state_proactivehaautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
@@ -3730,8 +3446,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaenabled_csharp">
 <a href="#state_proactivehaenabled_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
@@ -3741,8 +3456,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehamoderateremediation_csharp">
 <a href="#state_proactivehamoderateremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
@@ -3756,8 +3470,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaproviderids_csharp">
 <a href="#state_proactivehaproviderids_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
@@ -3768,8 +3481,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehasevereremediation_csharp">
 <a href="#state_proactivehasevereremediation_csharp" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
@@ -3783,8 +3495,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_csharp">
 <a href="#state_resourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
@@ -3793,8 +3504,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3803,8 +3513,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsandiskgroups_csharp">
 <a href="#state_vsandiskgroups_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
@@ -3813,8 +3522,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">List&lt;Pulumi.<wbr>VSphere.<wbr>Inputs.<wbr>Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanenabled_csharp">
 <a href="#state_vsanenabled_csharp" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
@@ -3823,13 +3531,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -3839,8 +3545,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_go">
 <a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -3850,8 +3555,7 @@ value strings to set for the datastore cluster.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmautomationlevel_go">
 <a href="#state_dpmautomationlevel_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -3862,8 +3566,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmenabled_go">
 <a href="#state_dpmenabled_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -3874,8 +3577,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmthreshold_go">
 <a href="#state_dpmthreshold_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Threshold</a>
@@ -3887,8 +3589,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsadvancedoptions_go">
 <a href="#state_drsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Advanced<wbr>Options</a>
@@ -3898,8 +3599,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsautomationlevel_go">
 <a href="#state_drsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Automation<wbr>Level</a>
@@ -3910,8 +3610,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenablepredictivedrs_go">
 <a href="#state_drsenablepredictivedrs_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
@@ -3922,8 +3621,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenablevmoverrides_go">
 <a href="#state_drsenablevmoverrides_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
@@ -3933,8 +3631,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenabled_go">
 <a href="#state_drsenabled_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Enabled</a>
@@ -3943,8 +3640,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsmigrationthreshold_go">
 <a href="#state_drsmigrationthreshold_go" style="color: inherit; text-decoration: inherit;">Drs<wbr>Migration<wbr>Threshold</a>
@@ -3956,8 +3652,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -3971,8 +3666,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceevacuateondestroy_go">
 <a href="#state_forceevacuateondestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
@@ -3985,8 +3679,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolfailoverhostsystemids_go">
 <a href="#state_haadmissioncontrolfailoverhostsystemids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
@@ -3999,8 +3692,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolhostfailuretolerance_go">
 <a href="#state_haadmissioncontrolhostfailuretolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
@@ -4013,8 +3705,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolperformancetolerance_go">
 <a href="#state_haadmissioncontrolperformancetolerance_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
@@ -4026,8 +3717,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolpolicy_go">
 <a href="#state_haadmissioncontrolpolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Policy</a>
@@ -4038,8 +3728,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentageautocompute_go">
 <a href="#state_haadmissioncontrolresourcepercentageautocompute_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
@@ -4053,8 +3742,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentagecpu_go">
 <a href="#state_haadmissioncontrolresourcepercentagecpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
@@ -4065,8 +3753,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentagememory_go">
 <a href="#state_haadmissioncontrolresourcepercentagememory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
@@ -4077,8 +3764,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyexplicitcpu_go">
 <a href="#state_haadmissioncontrolslotpolicyexplicitcpu_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
@@ -4088,8 +3774,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyexplicitmemory_go">
 <a href="#state_haadmissioncontrolslotpolicyexplicitmemory_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
@@ -4099,8 +3784,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyuseexplicitsize_go">
 <a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
@@ -4112,8 +3796,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadvancedoptions_go">
 <a href="#state_haadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Advanced<wbr>Options</a>
@@ -4123,8 +3806,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdrecoveryaction_go">
 <a href="#state_hadatastoreapdrecoveryaction_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
@@ -4136,8 +3818,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdresponse_go">
 <a href="#state_hadatastoreapdresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
@@ -4150,8 +3831,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdresponsedelay_go">
 <a href="#state_hadatastoreapdresponsedelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
@@ -4163,8 +3843,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastorepdlresponse_go">
 <a href="#state_hadatastorepdlresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
@@ -4177,8 +3856,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haenabled_go">
 <a href="#state_haenabled_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Enabled</a>
@@ -4188,8 +3866,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haheartbeatdatastoreids_go">
 <a href="#state_haheartbeatdatastoreids_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
@@ -4201,8 +3878,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haheartbeatdatastorepolicy_go">
 <a href="#state_haheartbeatdatastorepolicy_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
@@ -4214,8 +3890,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hahostisolationresponse_go">
 <a href="#state_hahostisolationresponse_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Isolation<wbr>Response</a>
@@ -4227,8 +3902,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hahostmonitoring_go">
 <a href="#state_hahostmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Host<wbr>Monitoring</a>
@@ -4239,8 +3913,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmcomponentprotection_go">
 <a href="#state_havmcomponentprotection_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Component<wbr>Protection</a>
@@ -4252,8 +3925,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmdependencyrestartcondition_go">
 <a href="#state_havmdependencyrestartcondition_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
@@ -4268,8 +3940,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmfailureinterval_go">
 <a href="#state_havmfailureinterval_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
@@ -4280,8 +3951,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmaximumfailurewindow_go">
 <a href="#state_havmmaximumfailurewindow_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
@@ -4295,8 +3965,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmaximumresets_go">
 <a href="#state_havmmaximumresets_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
@@ -4306,8 +3975,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmminimumuptime_go">
 <a href="#state_havmminimumuptime_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
@@ -4318,8 +3986,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmonitoring_go">
 <a href="#state_havmmonitoring_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Monitoring</a>
@@ -4330,8 +3997,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestartadditionaldelay_go">
 <a href="#state_havmrestartadditionaldelay_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
@@ -4342,8 +4008,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestartpriority_go">
 <a href="#state_havmrestartpriority_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
@@ -4354,8 +4019,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestarttimeout_go">
 <a href="#state_havmrestarttimeout_go" style="color: inherit; text-decoration: inherit;">Ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
@@ -4367,8 +4031,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostclusterexittimeout_go">
 <a href="#state_hostclusterexittimeout_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
@@ -4379,8 +4042,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostmanaged_go">
 <a href="#state_hostmanaged_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Managed</a>
@@ -4392,8 +4054,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemids_go">
 <a href="#state_hostsystemids_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Ids</a>
@@ -4403,8 +4064,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4413,8 +4073,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaautomationlevel_go">
 <a href="#state_proactivehaautomationlevel_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
@@ -4426,8 +4085,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaenabled_go">
 <a href="#state_proactivehaenabled_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Enabled</a>
@@ -4437,8 +4095,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehamoderateremediation_go">
 <a href="#state_proactivehamoderateremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
@@ -4452,8 +4109,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaproviderids_go">
 <a href="#state_proactivehaproviderids_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
@@ -4464,8 +4120,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehasevereremediation_go">
 <a href="#state_proactivehasevereremediation_go" style="color: inherit; text-decoration: inherit;">Proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
@@ -4479,8 +4134,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_go">
 <a href="#state_resourcepoolid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Pool<wbr>Id</a>
@@ -4489,8 +4143,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -4499,8 +4152,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsandiskgroups_go">
 <a href="#state_vsandiskgroups_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Disk<wbr>Groups</a>
@@ -4509,8 +4161,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">[]Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanenabled_go">
 <a href="#state_vsanenabled_go" style="color: inherit; text-decoration: inherit;">Vsan<wbr>Enabled</a>
@@ -4519,13 +4170,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -4535,8 +4184,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_nodejs">
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -4546,8 +4194,7 @@ value strings to set for the datastore cluster.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmautomationlevel_nodejs">
 <a href="#state_dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
@@ -4558,8 +4205,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmenabled_nodejs">
 <a href="#state_dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
@@ -4570,8 +4216,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmthreshold_nodejs">
 <a href="#state_dpmthreshold_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Threshold</a>
@@ -4583,8 +4228,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsadvancedoptions_nodejs">
 <a href="#state_drsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Advanced<wbr>Options</a>
@@ -4594,8 +4238,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsautomationlevel_nodejs">
 <a href="#state_drsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Automation<wbr>Level</a>
@@ -4606,8 +4249,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenablepredictivedrs_nodejs">
 <a href="#state_drsenablepredictivedrs_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Predictive<wbr>Drs</a>
@@ -4618,8 +4260,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenablevmoverrides_nodejs">
 <a href="#state_drsenablevmoverrides_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enable<wbr>Vm<wbr>Overrides</a>
@@ -4629,8 +4270,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsenabled_nodejs">
 <a href="#state_drsenabled_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Enabled</a>
@@ -4639,8 +4279,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drsmigrationthreshold_nodejs">
 <a href="#state_drsmigrationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">drs<wbr>Migration<wbr>Threshold</a>
@@ -4652,8 +4291,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -4667,8 +4305,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceevacuateondestroy_nodejs">
 <a href="#state_forceevacuateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Evacuate<wbr>On<wbr>Destroy</a>
@@ -4681,8 +4318,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolfailoverhostsystemids_nodejs">
 <a href="#state_haadmissioncontrolfailoverhostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Failover<wbr>Host<wbr>System<wbr>Ids</a>
@@ -4695,8 +4331,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolhostfailuretolerance_nodejs">
 <a href="#state_haadmissioncontrolhostfailuretolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Host<wbr>Failure<wbr>Tolerance</a>
@@ -4709,8 +4344,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolperformancetolerance_nodejs">
 <a href="#state_haadmissioncontrolperformancetolerance_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Performance<wbr>Tolerance</a>
@@ -4722,8 +4356,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolpolicy_nodejs">
 <a href="#state_haadmissioncontrolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Policy</a>
@@ -4734,8 +4367,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentageautocompute_nodejs">
 <a href="#state_haadmissioncontrolresourcepercentageautocompute_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Auto<wbr>Compute</a>
@@ -4749,8 +4381,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentagecpu_nodejs">
 <a href="#state_haadmissioncontrolresourcepercentagecpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Cpu</a>
@@ -4761,8 +4392,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolresourcepercentagememory_nodejs">
 <a href="#state_haadmissioncontrolresourcepercentagememory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Resource<wbr>Percentage<wbr>Memory</a>
@@ -4773,8 +4403,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyexplicitcpu_nodejs">
 <a href="#state_haadmissioncontrolslotpolicyexplicitcpu_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Cpu</a>
@@ -4784,8 +4413,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyexplicitmemory_nodejs">
 <a href="#state_haadmissioncontrolslotpolicyexplicitmemory_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Explicit<wbr>Memory</a>
@@ -4795,8 +4423,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadmissioncontrolslotpolicyuseexplicitsize_nodejs">
 <a href="#state_haadmissioncontrolslotpolicyuseexplicitsize_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Admission<wbr>Control<wbr>Slot<wbr>Policy<wbr>Use<wbr>Explicit<wbr>Size</a>
@@ -4808,8 +4435,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haadvancedoptions_nodejs">
 <a href="#state_haadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Advanced<wbr>Options</a>
@@ -4819,8 +4445,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdrecoveryaction_nodejs">
 <a href="#state_hadatastoreapdrecoveryaction_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</a>
@@ -4832,8 +4457,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdresponse_nodejs">
 <a href="#state_hadatastoreapdresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response</a>
@@ -4846,8 +4470,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastoreapdresponsedelay_nodejs">
 <a href="#state_hadatastoreapdresponsedelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</a>
@@ -4859,8 +4482,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadatastorepdlresponse_nodejs">
 <a href="#state_hadatastorepdlresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Datastore<wbr>Pdl<wbr>Response</a>
@@ -4873,8 +4495,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haenabled_nodejs">
 <a href="#state_haenabled_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Enabled</a>
@@ -4884,8 +4505,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haheartbeatdatastoreids_nodejs">
 <a href="#state_haheartbeatdatastoreids_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Ids</a>
@@ -4897,8 +4517,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_haheartbeatdatastorepolicy_nodejs">
 <a href="#state_haheartbeatdatastorepolicy_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Heartbeat<wbr>Datastore<wbr>Policy</a>
@@ -4910,8 +4529,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hahostisolationresponse_nodejs">
 <a href="#state_hahostisolationresponse_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Isolation<wbr>Response</a>
@@ -4923,8 +4541,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hahostmonitoring_nodejs">
 <a href="#state_hahostmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Host<wbr>Monitoring</a>
@@ -4935,8 +4552,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmcomponentprotection_nodejs">
 <a href="#state_havmcomponentprotection_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Component<wbr>Protection</a>
@@ -4948,8 +4564,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmdependencyrestartcondition_nodejs">
 <a href="#state_havmdependencyrestartcondition_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Dependency<wbr>Restart<wbr>Condition</a>
@@ -4964,8 +4579,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmfailureinterval_nodejs">
 <a href="#state_havmfailureinterval_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Failure<wbr>Interval</a>
@@ -4976,8 +4590,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmaximumfailurewindow_nodejs">
 <a href="#state_havmmaximumfailurewindow_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</a>
@@ -4991,8 +4604,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmaximumresets_nodejs">
 <a href="#state_havmmaximumresets_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Maximum<wbr>Resets</a>
@@ -5002,8 +4614,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmminimumuptime_nodejs">
 <a href="#state_havmminimumuptime_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Minimum<wbr>Uptime</a>
@@ -5014,8 +4625,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmmonitoring_nodejs">
 <a href="#state_havmmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Monitoring</a>
@@ -5026,8 +4636,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestartadditionaldelay_nodejs">
 <a href="#state_havmrestartadditionaldelay_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Additional<wbr>Delay</a>
@@ -5038,8 +4647,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestartpriority_nodejs">
 <a href="#state_havmrestartpriority_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Priority</a>
@@ -5050,8 +4658,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_havmrestarttimeout_nodejs">
 <a href="#state_havmrestarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">ha<wbr>Vm<wbr>Restart<wbr>Timeout</a>
@@ -5063,8 +4670,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostclusterexittimeout_nodejs">
 <a href="#state_hostclusterexittimeout_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Cluster<wbr>Exit<wbr>Timeout</a>
@@ -5075,8 +4681,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostmanaged_nodejs">
 <a href="#state_hostmanaged_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Managed</a>
@@ -5088,8 +4693,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemids_nodejs">
 <a href="#state_hostsystemids_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Ids</a>
@@ -5099,8 +4703,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5109,8 +4712,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaautomationlevel_nodejs">
 <a href="#state_proactivehaautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Automation<wbr>Level</a>
@@ -5122,8 +4724,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaenabled_nodejs">
 <a href="#state_proactivehaenabled_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Enabled</a>
@@ -5133,8 +4734,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehamoderateremediation_nodejs">
 <a href="#state_proactivehamoderateremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Moderate<wbr>Remediation</a>
@@ -5148,8 +4748,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehaproviderids_nodejs">
 <a href="#state_proactivehaproviderids_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Provider<wbr>Ids</a>
@@ -5160,8 +4759,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactivehasevereremediation_nodejs">
 <a href="#state_proactivehasevereremediation_nodejs" style="color: inherit; text-decoration: inherit;">proactive<wbr>Ha<wbr>Severe<wbr>Remediation</a>
@@ -5175,8 +4773,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepoolid_nodejs">
 <a href="#state_resourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Pool<wbr>Id</a>
@@ -5185,8 +4782,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5195,8 +4791,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsandiskgroups_nodejs">
 <a href="#state_vsandiskgroups_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Disk<wbr>Groups</a>
@@ -5205,8 +4800,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsanenabled_nodejs">
 <a href="#state_vsanenabled_nodejs" style="color: inherit; text-decoration: inherit;">vsan<wbr>Enabled</a>
@@ -5215,13 +4809,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -5231,8 +4823,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
     </dt>
     <dd>{{% md %}}A map of custom attribute ids to attribute
 value strings to set for the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_id_python">
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -5242,8 +4833,7 @@ value strings to set for the datastore cluster.
     </dt>
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the cluster in. Forces a new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpm_automation_level_python">
 <a href="#state_dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
@@ -5254,8 +4844,7 @@ the datacenter to create the cluster in. Forces a new resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations in this cluster. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpm_enabled_python">
 <a href="#state_dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
@@ -5266,8 +4855,7 @@ operations in this cluster. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}Enable DPM support for DRS in this cluster.
 Requires `drs_enabled` to be `true` in order to be effective.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpm_threshold_python">
 <a href="#state_dpm_threshold_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>threshold</a>
@@ -5279,8 +4867,7 @@ Default: `false`.
 threshold of load within the cluster that influences host power operations.
 This affects both power on and power off operations - a lower setting will
 tolerate more of a surplus/deficit than a higher setting. Default: `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_advanced_options_python">
 <a href="#state_drs_advanced_options_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>advanced_<wbr>options</a>
@@ -5290,8 +4877,7 @@ tolerate more of a surplus/deficit than a higher setting. Default: `3`.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for DRS and DPM.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_automation_level_python">
 <a href="#state_drs_automation_level_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>automation_<wbr>level</a>
@@ -5302,8 +4888,7 @@ options for DRS and DPM.
     <dd>{{% md %}}The default automation level for all
 virtual machines in this cluster. Can be one of `manual`,
 `partiallyAutomated`, or `fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_enable_predictive_drs_python">
 <a href="#state_drs_enable_predictive_drs_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>predictive_<wbr>drs</a>
@@ -5314,8 +4899,7 @@ virtual machines in this cluster. Can be one of `manual`,
     <dd>{{% md %}}When `true`, enables DRS to use data
 from [vRealize Operations Manager][ref-vsphere-vro] to make proactive DRS
 recommendations. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_enable_vm_overrides_python">
 <a href="#state_drs_enable_vm_overrides_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enable_<wbr>vm_<wbr>overrides</a>
@@ -5325,8 +4909,7 @@ recommendations. <sup>\*</sup>
     </dt>
     <dd>{{% md %}}Allow individual DRS overrides to be
 set for virtual machines in the cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_enabled_python">
 <a href="#state_drs_enabled_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>enabled</a>
@@ -5335,8 +4918,7 @@ set for virtual machines in the cluster. Default: `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DRS for this cluster. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drs_migration_threshold_python">
 <a href="#state_drs_migration_threshold_python" style="color: inherit; text-decoration: inherit;">drs_<wbr>migration_<wbr>threshold</a>
@@ -5348,8 +4930,7 @@ set for virtual machines in the cluster. Default: `true`.
 the threshold of imbalance tolerated between hosts. A lower setting will
 tolerate more imbalance while a higher setting will tolerate less. Default:
 `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -5363,8 +4944,7 @@ Example: for the `dc1` datacenter, and a provided `folder` of `foo/bar`,
 The provider will place a cluster named `compute-cluster-test` in a
 host folder located at `/dc1/host/foo/bar`, with the final inventory path
 being `/dc1/host/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_evacuate_on_destroy_python">
 <a href="#state_force_evacuate_on_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>evacuate_<wbr>on_<wbr>destroy</a>
@@ -5377,8 +4957,7 @@ being `/dc1/host/foo/bar/datastore-cluster-test`.
 as if they were removed by taking their entry out of `host_system_ids` (see
 below). This is an advanced
 option and should only be used for testing. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_failover_host_system_ids_python">
 <a href="#state_ha_admission_control_failover_host_system_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>failover_<wbr>host_<wbr>system_<wbr>ids</a>
@@ -5391,8 +4970,7 @@ managed object IDs of hosts to use as dedicated failover
 hosts. These hosts are kept as available as possible - admission control will
 block access to the host, and DRS will ignore the host when making
 recommendations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_host_failure_tolerance_python">
 <a href="#state_ha_admission_control_host_failure_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>host_<wbr>failure_<wbr>tolerance</a>
@@ -5405,8 +4983,7 @@ of failed hosts that admission control tolerates when making decisions on
 whether to permit virtual machine operations. The maximum is one less than
 the number of hosts in the cluster. Default: `1`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_performance_tolerance_python">
 <a href="#state_ha_admission_control_performance_tolerance_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>performance_<wbr>tolerance</a>
@@ -5418,8 +4995,7 @@ the number of hosts in the cluster. Default: `1`.
 resource reduction that a cluster of virtual machines can tolerate in case of
 a failover. A value of 0 produces warnings only, whereas a value of 100
 disables the setting. Default: `100` (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_policy_python">
 <a href="#state_ha_admission_control_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>policy</a>
@@ -5430,8 +5006,7 @@ disables the setting. Default: `100` (disabled).
     <dd>{{% md %}}The type of admission control
 policy to use with vSphere HA. Can be one of `resourcePercentage`,
 `slotPolicy`, `failoverHosts`, or `disabled`. Default: `resourcePercentage`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_resource_percentage_auto_compute_python">
 <a href="#state_ha_admission_control_resource_percentage_auto_compute_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>auto_<wbr>compute</a>
@@ -5445,8 +5020,7 @@ average number of host resources represented by the
 setting from the total amount of resources in the cluster. Disable to supply
 user-defined values. Default: `true`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_resource_percentage_cpu_python">
 <a href="#state_ha_admission_control_resource_percentage_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>cpu</a>
@@ -5457,8 +5031,7 @@ user-defined values. Default: `true`.
     <dd>{{% md %}}Controls the
 user-defined percentage of CPU resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_resource_percentage_memory_python">
 <a href="#state_ha_admission_control_resource_percentage_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>resource_<wbr>percentage_<wbr>memory</a>
@@ -5469,8 +5042,7 @@ failover. Default: `100`.
     <dd>{{% md %}}Controls the
 user-defined percentage of memory resources in the cluster to reserve for
 failover. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_slot_policy_explicit_cpu_python">
 <a href="#state_ha_admission_control_slot_policy_explicit_cpu_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>cpu</a>
@@ -5480,8 +5052,7 @@ failover. Default: `100`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined CPU slot size, in MHz. Default: `32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_slot_policy_explicit_memory_python">
 <a href="#state_ha_admission_control_slot_policy_explicit_memory_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>explicit_<wbr>memory</a>
@@ -5491,8 +5062,7 @@ user-defined CPU slot size, in MHz. Default: `32`.
     </dt>
     <dd>{{% md %}}Controls the
 user-defined memory slot size, in MB. Default: `100`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_admission_control_slot_policy_use_explicit_size_python">
 <a href="#state_ha_admission_control_slot_policy_use_explicit_size_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>admission_<wbr>control_<wbr>slot_<wbr>policy_<wbr>use_<wbr>explicit_<wbr>size</a>
@@ -5504,8 +5074,7 @@ user-defined memory slot size, in MB. Default: `100`.
 whether or not you wish to supply explicit values to CPU and memory slot
 sizes. The default is `false`, which tells vSphere to gather a automatic
 average based on all powered-on virtual machines currently in the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_advanced_options_python">
 <a href="#state_ha_advanced_options_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>advanced_<wbr>options</a>
@@ -5515,8 +5084,7 @@ average based on all powered-on virtual machines currently in the cluster.
     </dt>
     <dd>{{% md %}}A key/value map that specifies advanced
 options for vSphere HA.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_datastore_apd_recovery_action_python">
 <a href="#state_ha_datastore_apd_recovery_action_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</a>
@@ -5528,8 +5096,7 @@ options for vSphere HA.
 on virtual machines if an APD status on an affected datastore clears in the
 middle of an APD event. Can be one of `none` or `reset`. Default: `none`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_datastore_apd_response_python">
 <a href="#state_ha_datastore_apd_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response</a>
@@ -5542,8 +5109,7 @@ virtual machines when the cluster has detected loss to all paths to a
 relevant datastore. Can be one of `disabled`, `warning`,
 `restartConservative`, or `restartAggressive`.  Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_datastore_apd_response_delay_python">
 <a href="#state_ha_datastore_apd_response_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</a>
@@ -5555,8 +5121,7 @@ relevant datastore. Can be one of `disabled`, `warning`,
 to wait after an APD timeout event to execute the response action defined in
 `ha_datastore_apd_response`. Default: `3`
 minutes. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_datastore_pdl_response_python">
 <a href="#state_ha_datastore_pdl_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>datastore_<wbr>pdl_<wbr>response</a>
@@ -5569,8 +5134,7 @@ virtual machines when the cluster has detected a permanent device loss to a
 relevant datastore. Can be one of `disabled`, `warning`, or
 `restartAggressive`. Default: `disabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_enabled_python">
 <a href="#state_ha_enabled_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>enabled</a>
@@ -5580,8 +5144,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
     </dt>
     <dd>{{% md %}}Enable vSphere HA for this cluster. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_heartbeat_datastore_ids_python">
 <a href="#state_ha_heartbeat_datastore_ids_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>ids</a>
@@ -5593,8 +5156,7 @@ relevant datastore. Can be one of `disabled`, `warning`, or
 preferred datastores to use for HA heartbeating. This setting is only useful
 when `ha_heartbeat_datastore_policy` is set
 to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_heartbeat_datastore_policy_python">
 <a href="#state_ha_heartbeat_datastore_policy_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>heartbeat_<wbr>datastore_<wbr>policy</a>
@@ -5606,8 +5168,7 @@ to either `userSelectedDs` or `allFeasibleDsWithUserPreference`.
 heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 `allFeasibleDsWithUserPreference`. Default:
 `allFeasibleDsWithUserPreference`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_host_isolation_response_python">
 <a href="#state_ha_host_isolation_response_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>isolation_<wbr>response</a>
@@ -5619,8 +5180,7 @@ heartbeat datastores. Can be one of `allFeasibleDs`, `userSelectedDs`, or
 machines when a host has detected that it has been isolated from the rest of
 the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
 `none`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_host_monitoring_python">
 <a href="#state_ha_host_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>host_<wbr>monitoring</a>
@@ -5631,8 +5191,7 @@ the cluster. Can be one of `none`, `powerOff`, or `shutdown`. Default:
     <dd>{{% md %}}Global setting that controls whether
 vSphere HA remediates virtual machines on host failure. Can be one of `enabled`
 or `disabled`. Default: `enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_component_protection_python">
 <a href="#state_ha_vm_component_protection_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>component_<wbr>protection</a>
@@ -5644,8 +5203,7 @@ or `disabled`. Default: `enabled`.
 protection for virtual machines in this cluster. Can be one of `enabled` or
 `disabled`. Default: `enabled`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_dependency_restart_condition_python">
 <a href="#state_ha_vm_dependency_restart_condition_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>dependency_<wbr>restart_<wbr>condition</a>
@@ -5660,8 +5218,7 @@ priority. Can be one of `none`, `poweredOn`, `guestHbStatusGreen`, or
 `appHbStatusGreen`. The default is `none`, which means that a virtual machine
 is considered ready immediately after a host is found to start it on.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_failure_interval_python">
 <a href="#state_ha_vm_failure_interval_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>failure_<wbr>interval</a>
@@ -5672,8 +5229,7 @@ is considered ready immediately after a host is found to start it on.
     <dd>{{% md %}}If a heartbeat from a virtual machine
 is not received within this configured interval, the virtual machine is
 marked as failed. The value is in seconds. Default: `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_maximum_failure_window_python">
 <a href="#state_ha_vm_maximum_failure_window_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</a>
@@ -5687,8 +5243,7 @@ window expires, no more resets are attempted regardless of the setting
 configured in `ha_vm_maximum_resets`. `-1` means no window, meaning an
 unlimited reset time is allotted. The value is specified in seconds. Default:
 `-1` (no window).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_maximum_resets_python">
 <a href="#state_ha_vm_maximum_resets_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>maximum_<wbr>resets</a>
@@ -5698,8 +5253,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to a virtual machine when responding to a failure event. Default: `3`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_minimum_uptime_python">
 <a href="#state_ha_vm_minimum_uptime_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>minimum_<wbr>uptime</a>
@@ -5710,8 +5264,7 @@ perform to a virtual machine when responding to a failure event. Default: `3`
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on a virtual machine before monitoring for heartbeats. Default:
 `120` (2 minutes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_monitoring_python">
 <a href="#state_ha_vm_monitoring_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>monitoring</a>
@@ -5722,8 +5275,7 @@ powering on a virtual machine before monitoring for heartbeats. Default:
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
 `vmMonitoringOnly`, or `vmAndAppMonitoring`. Default: `vmMonitoringDisabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_restart_additional_delay_python">
 <a href="#state_ha_vm_restart_additional_delay_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>additional_<wbr>delay</a>
@@ -5734,8 +5286,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
     <dd>{{% md %}}Additional delay in seconds
 after ready condition is met. A VM is considered ready at this point.
 Default: `0` (no delay). <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_restart_priority_python">
 <a href="#state_ha_vm_restart_priority_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>priority</a>
@@ -5746,8 +5297,7 @@ Default: `0` (no delay). <sup>\*</sup>
     <dd>{{% md %}}The default restart priority
 for affected virtual machines when vSphere detects a host failure. Can be one
 of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ha_vm_restart_timeout_python">
 <a href="#state_ha_vm_restart_timeout_python" style="color: inherit; text-decoration: inherit;">ha_<wbr>vm_<wbr>restart_<wbr>timeout</a>
@@ -5759,8 +5309,7 @@ of `lowest`, `low`, `medium`, `high`, or `highest`. Default: `medium`.
 that vSphere HA will wait for virtual machines in one priority to be ready
 before proceeding with the next priority. Default: `600` (10 minutes).
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_cluster_exit_timeout_python">
 <a href="#state_host_cluster_exit_timeout_python" style="color: inherit; text-decoration: inherit;">host_<wbr>cluster_<wbr>exit_<wbr>timeout</a>
@@ -5771,8 +5320,7 @@ before proceeding with the next priority. Default: `600` (10 minutes).
     <dd>{{% md %}}The timeout for each host maintenance mode
 operation when removing hosts from a cluster. The value is specified in
 seconds. Default: `3600` (1 hour).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_managed_python">
 <a href="#state_host_managed_python" style="color: inherit; text-decoration: inherit;">host_<wbr>managed</a>
@@ -5784,8 +5332,7 @@ seconds. Default: `3600` (1 hour).
 membership will be managed through the `host` resource rather than the
 `compute_cluster` resource. Conflicts with: `host_system_ids`.
 >>>>>>> v1.18.3
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_system_ids_python">
 <a href="#state_host_system_ids_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>ids</a>
@@ -5795,8 +5342,7 @@ membership will be managed through the `host` resource rather than the
     </dt>
     <dd>{{% md %}}The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster. Conflicts with: `host_managed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5805,8 +5351,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactive_ha_automation_level_python">
 <a href="#state_proactive_ha_automation_level_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>automation_<wbr>level</a>
@@ -5818,8 +5363,7 @@ the hosts to put in the cluster. Conflicts with: `host_managed`.
 quarantine, maintenance mode, or virtual machine migration recommendations
 made by proactive HA are to be handled. Can be one of `Automated` or
 `Manual`. Default: `Manual`. <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactive_ha_enabled_python">
 <a href="#state_proactive_ha_enabled_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>enabled</a>
@@ -5829,8 +5373,7 @@ made by proactive HA are to be handled. Can be one of `Automated` or
     </dt>
     <dd>{{% md %}}Enables Proactive HA. Default: `false`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactive_ha_moderate_remediation_python">
 <a href="#state_proactive_ha_moderate_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>moderate_<wbr>remediation</a>
@@ -5844,8 +5387,7 @@ for moderately degraded hosts. Can be one of `MaintenanceMode` or
 `proactive_ha_severe_remediation` is set
 to `QuarantineMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactive_ha_provider_ids_python">
 <a href="#state_proactive_ha_provider_ids_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>provider_<wbr>ids</a>
@@ -5856,8 +5398,7 @@ to `QuarantineMode`. Default: `QuarantineMode`.
     <dd>{{% md %}}The list of IDs for health update
 providers configured for this cluster.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proactive_ha_severe_remediation_python">
 <a href="#state_proactive_ha_severe_remediation_python" style="color: inherit; text-decoration: inherit;">proactive_<wbr>ha_<wbr>severe_<wbr>remediation</a>
@@ -5871,8 +5412,7 @@ Note that this cannot be set to `QuarantineMode` when
 `proactive_ha_moderate_remediation` is
 set to `MaintenanceMode`. Default: `QuarantineMode`.
 <sup>\*</sup>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_pool_id_python">
 <a href="#state_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>pool_<wbr>id</a>
@@ -5881,8 +5421,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the cluster's root resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -5891,8 +5430,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsan_disk_groups_python">
 <a href="#state_vsan_disk_groups_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>disk_<wbr>groups</a>
@@ -5901,8 +5439,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type"><a href="#computeclustervsandiskgroup">Sequence[Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of disk UUIDs to add to the vSAN cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsan_enabled_python">
 <a href="#state_vsan_enabled_python" style="color: inherit; text-decoration: inherit;">vsan_<wbr>enabled</a>
@@ -5911,8 +5448,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VSAN service is enabled for the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -5927,8 +5463,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
 <h4 id="computeclustervsandiskgroup">Compute<wbr>Cluster<wbr>Vsan<wbr>Disk<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cache_csharp">
 <a href="#cache_csharp" style="color: inherit; text-decoration: inherit;">Cache</a>
@@ -5936,8 +5471,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storages_csharp">
 <a href="#storages_csharp" style="color: inherit; text-decoration: inherit;">Storages</a>
@@ -5945,13 +5479,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cache_go">
 <a href="#cache_go" style="color: inherit; text-decoration: inherit;">Cache</a>
@@ -5959,8 +5491,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storages_go">
 <a href="#storages_go" style="color: inherit; text-decoration: inherit;">Storages</a>
@@ -5968,13 +5499,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cache_nodejs">
 <a href="#cache_nodejs" style="color: inherit; text-decoration: inherit;">cache</a>
@@ -5982,8 +5511,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storages_nodejs">
 <a href="#storages_nodejs" style="color: inherit; text-decoration: inherit;">storages</a>
@@ -5991,13 +5519,11 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cache_python">
 <a href="#cache_python" style="color: inherit; text-decoration: inherit;">cache</a>
@@ -6005,8 +5531,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storages_python">
 <a href="#storages_python" style="color: inherit; text-decoration: inherit;">storages</a>
@@ -6014,8 +5539,7 @@ set to `MaintenanceMode`. Default: `QuarantineMode`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

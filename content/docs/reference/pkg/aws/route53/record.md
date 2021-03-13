@@ -753,8 +753,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -763,8 +762,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -773,8 +771,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string | <a href="#recordtype">Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -783,8 +780,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -794,8 +790,7 @@ The Record resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowoverwrite_csharp">
 <a href="#allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
@@ -804,8 +799,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverroutingpolicies_csharp">
 <a href="#failoverroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
@@ -814,8 +808,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List&lt;Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geolocationroutingpolicies_csharp">
 <a href="#geolocationroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
@@ -824,8 +817,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List&lt;Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckid_csharp">
 <a href="#healthcheckid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
@@ -834,8 +826,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latencyroutingpolicies_csharp">
 <a href="#latencyroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
@@ -844,8 +835,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List&lt;Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivalueanswerroutingpolicy_csharp">
 <a href="#multivalueanswerroutingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
@@ -854,8 +844,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_csharp">
 <a href="#records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -864,8 +853,7 @@ Alias record documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setidentifier_csharp">
 <a href="#setidentifier_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
@@ -874,8 +862,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -884,8 +871,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedroutingpolicies_csharp">
 <a href="#weightedroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
@@ -894,13 +880,11 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">List&lt;Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -909,8 +893,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -919,8 +902,7 @@ Alias record documented below.
         <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -929,8 +911,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -940,8 +921,7 @@ Alias record documented below.
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowoverwrite_go">
 <a href="#allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
@@ -950,8 +930,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverroutingpolicies_go">
 <a href="#failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
@@ -960,8 +939,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geolocationroutingpolicies_go">
 <a href="#geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
@@ -970,8 +948,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckid_go">
 <a href="#healthcheckid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
@@ -980,8 +957,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latencyroutingpolicies_go">
 <a href="#latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
@@ -990,8 +966,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivalueanswerroutingpolicy_go">
 <a href="#multivalueanswerroutingpolicy_go" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
@@ -1000,8 +975,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_go">
 <a href="#records_go" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -1010,8 +984,7 @@ Alias record documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setidentifier_go">
 <a href="#setidentifier_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
@@ -1020,8 +993,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1030,8 +1002,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedroutingpolicies_go">
 <a href="#weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
@@ -1040,13 +1011,11 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1055,8 +1024,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1065,8 +1033,7 @@ Alias record documented below.
         <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1075,8 +1042,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -1086,8 +1052,7 @@ Alias record documented below.
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowoverwrite_nodejs">
 <a href="#allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
@@ -1096,8 +1061,7 @@ Alias record documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failoverroutingpolicies_nodejs">
 <a href="#failoverroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Routing<wbr>Policies</a>
@@ -1106,8 +1070,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geolocationroutingpolicies_nodejs">
 <a href="#geolocationroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">geolocation<wbr>Routing<wbr>Policies</a>
@@ -1116,8 +1079,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheckid_nodejs">
 <a href="#healthcheckid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Id</a>
@@ -1126,8 +1088,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latencyroutingpolicies_nodejs">
 <a href="#latencyroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Routing<wbr>Policies</a>
@@ -1136,8 +1097,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivalueanswerroutingpolicy_nodejs">
 <a href="#multivalueanswerroutingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
@@ -1146,8 +1106,7 @@ Alias record documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_nodejs">
 <a href="#records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
@@ -1156,8 +1115,7 @@ Alias record documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setidentifier_nodejs">
 <a href="#setidentifier_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Identifier</a>
@@ -1166,8 +1124,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1176,8 +1133,7 @@ Alias record documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedroutingpolicies_nodejs">
 <a href="#weightedroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Routing<wbr>Policies</a>
@@ -1186,13 +1142,11 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1201,8 +1155,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1211,8 +1164,7 @@ Alias record documented below.
         <span class="property-type">str | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1221,8 +1173,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -1232,8 +1183,7 @@ Alias record documented below.
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_overwrite_python">
 <a href="#allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
@@ -1242,8 +1192,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failover_routing_policies_python">
 <a href="#failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
@@ -1252,8 +1201,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Sequence[Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geolocation_routing_policies_python">
 <a href="#geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
@@ -1262,8 +1210,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Sequence[Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="health_check_id_python">
 <a href="#health_check_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>id</a>
@@ -1272,8 +1219,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latency_routing_policies_python">
 <a href="#latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
@@ -1282,8 +1228,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Sequence[Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multivalue_answer_routing_policy_python">
 <a href="#multivalue_answer_routing_policy_python" style="color: inherit; text-decoration: inherit;">multivalue_<wbr>answer_<wbr>routing_<wbr>policy</a>
@@ -1292,8 +1237,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="records_python">
 <a href="#records_python" style="color: inherit; text-decoration: inherit;">records</a>
@@ -1302,8 +1246,7 @@ Alias record documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="set_identifier_python">
 <a href="#set_identifier_python" style="color: inherit; text-decoration: inherit;">set_<wbr>identifier</a>
@@ -1312,8 +1255,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1322,8 +1264,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_routing_policies_python">
 <a href="#weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
@@ -1332,8 +1273,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">Sequence[Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1344,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1354,8 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1363,13 +1301,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1378,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1387,13 +1322,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1402,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1411,13 +1343,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1426,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1435,8 +1364,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1563,8 +1491,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_csharp">
 <a href="#state_aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -1574,8 +1501,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowoverwrite_csharp">
 <a href="#state_allowoverwrite_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
@@ -1584,8 +1510,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failoverroutingpolicies_csharp">
 <a href="#state_failoverroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
@@ -1594,8 +1519,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">List&lt;Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_csharp">
 <a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1604,8 +1528,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocationroutingpolicies_csharp">
 <a href="#state_geolocationroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
@@ -1614,8 +1537,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">List&lt;Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckid_csharp">
 <a href="#state_healthcheckid_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
@@ -1624,8 +1546,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latencyroutingpolicies_csharp">
 <a href="#state_latencyroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
@@ -1634,8 +1555,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">List&lt;Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multivalueanswerroutingpolicy_csharp">
 <a href="#state_multivalueanswerroutingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
@@ -1644,8 +1564,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1654,8 +1573,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_csharp">
 <a href="#state_records_csharp" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -1664,8 +1582,7 @@ Alias record documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_setidentifier_csharp">
 <a href="#state_setidentifier_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
@@ -1674,8 +1591,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1684,8 +1600,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1694,8 +1609,7 @@ Alias record documented below.
         <span class="property-type">string | <a href="#recordtype">Pulumi.<wbr>Aws.<wbr>Route53.<wbr>Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weightedroutingpolicies_csharp">
 <a href="#state_weightedroutingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
@@ -1704,8 +1618,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">List&lt;Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1714,13 +1627,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_go">
 <a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -1730,8 +1641,7 @@ Alias record documented below.
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowoverwrite_go">
 <a href="#state_allowoverwrite_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Overwrite</a>
@@ -1740,8 +1650,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failoverroutingpolicies_go">
 <a href="#state_failoverroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Routing<wbr>Policies</a>
@@ -1750,8 +1659,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">[]Record<wbr>Failover<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_go">
 <a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1760,8 +1668,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocationroutingpolicies_go">
 <a href="#state_geolocationroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Geolocation<wbr>Routing<wbr>Policies</a>
@@ -1770,8 +1677,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">[]Record<wbr>Geolocation<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckid_go">
 <a href="#state_healthcheckid_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check<wbr>Id</a>
@@ -1780,8 +1686,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latencyroutingpolicies_go">
 <a href="#state_latencyroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Latency<wbr>Routing<wbr>Policies</a>
@@ -1790,8 +1695,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">[]Record<wbr>Latency<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multivalueanswerroutingpolicy_go">
 <a href="#state_multivalueanswerroutingpolicy_go" style="color: inherit; text-decoration: inherit;">Multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
@@ -1800,8 +1704,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1810,8 +1713,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_go">
 <a href="#state_records_go" style="color: inherit; text-decoration: inherit;">Records</a>
@@ -1820,8 +1722,7 @@ Alias record documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_setidentifier_go">
 <a href="#state_setidentifier_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Identifier</a>
@@ -1830,8 +1731,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1840,8 +1740,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1850,8 +1749,7 @@ Alias record documented below.
         <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weightedroutingpolicies_go">
 <a href="#state_weightedroutingpolicies_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Routing<wbr>Policies</a>
@@ -1860,8 +1758,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">[]Record<wbr>Weighted<wbr>Routing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1870,13 +1767,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_nodejs">
 <a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -1886,8 +1781,7 @@ Alias record documented below.
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowoverwrite_nodejs">
 <a href="#state_allowoverwrite_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Overwrite</a>
@@ -1896,8 +1790,7 @@ Alias record documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failoverroutingpolicies_nodejs">
 <a href="#state_failoverroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Routing<wbr>Policies</a>
@@ -1906,8 +1799,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_nodejs">
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1916,8 +1808,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocationroutingpolicies_nodejs">
 <a href="#state_geolocationroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">geolocation<wbr>Routing<wbr>Policies</a>
@@ -1926,8 +1817,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckid_nodejs">
 <a href="#state_healthcheckid_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check<wbr>Id</a>
@@ -1936,8 +1826,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latencyroutingpolicies_nodejs">
 <a href="#state_latencyroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">latency<wbr>Routing<wbr>Policies</a>
@@ -1946,8 +1835,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multivalueanswerroutingpolicy_nodejs">
 <a href="#state_multivalueanswerroutingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">multivalue<wbr>Answer<wbr>Routing<wbr>Policy</a>
@@ -1956,8 +1844,7 @@ Alias record documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1966,8 +1853,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_nodejs">
 <a href="#state_records_nodejs" style="color: inherit; text-decoration: inherit;">records</a>
@@ -1976,8 +1862,7 @@ Alias record documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_setidentifier_nodejs">
 <a href="#state_setidentifier_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Identifier</a>
@@ -1986,8 +1871,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1996,8 +1880,7 @@ Alias record documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2006,8 +1889,7 @@ Alias record documented below.
         <span class="property-type">string | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weightedroutingpolicies_nodejs">
 <a href="#state_weightedroutingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Routing<wbr>Policies</a>
@@ -2016,8 +1898,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -2026,13 +1907,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_python">
 <a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -2042,8 +1921,7 @@ Alias record documented below.
     </dt>
     <dd>{{% md %}}An alias block. Conflicts with `ttl` & `records`.
 Alias record documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_overwrite_python">
 <a href="#state_allow_overwrite_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>overwrite</a>
@@ -2052,8 +1930,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failover_routing_policies_python">
 <a href="#state_failover_routing_policies_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>routing_<wbr>policies</a>
@@ -2062,8 +1939,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordfailoverroutingpolicy">Sequence[Record<wbr>Failover<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_python">
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -2072,8 +1948,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocation_routing_policies_python">
 <a href="#state_geolocation_routing_policies_python" style="color: inherit; text-decoration: inherit;">geolocation_<wbr>routing_<wbr>policies</a>
@@ -2082,8 +1957,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordgeolocationroutingpolicy">Sequence[Record<wbr>Geolocation<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_health_check_id_python">
 <a href="#state_health_check_id_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check_<wbr>id</a>
@@ -2092,8 +1966,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The health check the record should be associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latency_routing_policies_python">
 <a href="#state_latency_routing_policies_python" style="color: inherit; text-decoration: inherit;">latency_<wbr>routing_<wbr>policies</a>
@@ -2102,8 +1975,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordlatencyroutingpolicy">Sequence[Record<wbr>Latency<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multivalue_answer_routing_policy_python">
 <a href="#state_multivalue_answer_routing_policy_python" style="color: inherit; text-decoration: inherit;">multivalue_<wbr>answer_<wbr>routing_<wbr>policy</a>
@@ -2112,8 +1984,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2122,8 +1993,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_records_python">
 <a href="#state_records_python" style="color: inherit; text-decoration: inherit;">records</a>
@@ -2132,8 +2002,7 @@ Alias record documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_set_identifier_python">
 <a href="#state_set_identifier_python" style="color: inherit; text-decoration: inherit;">set_<wbr>identifier</a>
@@ -2142,8 +2011,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -2152,8 +2020,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2162,8 +2029,7 @@ Alias record documented below.
         <span class="property-type">str | <a href="#recordtype">Record<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weighted_routing_policies_python">
 <a href="#state_weighted_routing_policies_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>routing_<wbr>policies</a>
@@ -2172,8 +2038,7 @@ Alias record documented below.
         <span class="property-type"><a href="#recordweightedroutingpolicy">Sequence[Record<wbr>Weighted<wbr>Routing<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -2182,8 +2047,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2198,8 +2062,7 @@ Alias record documented below.
 <h4 id="recordalias">Record<wbr>Alias</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluatetargethealth_csharp">
 <a href="#evaluatetargethealth_csharp" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>Target<wbr>Health</a>
@@ -2208,8 +2071,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2218,8 +2080,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -2228,13 +2089,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluatetargethealth_go">
 <a href="#evaluatetargethealth_go" style="color: inherit; text-decoration: inherit;">Evaluate<wbr>Target<wbr>Health</a>
@@ -2243,8 +2102,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2253,8 +2111,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -2263,13 +2120,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluatetargethealth_nodejs">
 <a href="#evaluatetargethealth_nodejs" style="color: inherit; text-decoration: inherit;">evaluate<wbr>Target<wbr>Health</a>
@@ -2278,8 +2133,7 @@ Alias record documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2288,8 +2142,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -2298,13 +2151,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="evaluate_target_health_python">
 <a href="#evaluate_target_health_python" style="color: inherit; text-decoration: inherit;">evaluate_<wbr>target_<wbr>health</a>
@@ -2313,8 +2164,7 @@ Alias record documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want Route 53 to determine whether to respond to DNS queries using this resource record set by checking the health of the resource record set. Some resources have special requirements, see [related part of documentation](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-values.html#rrsets-values-alias-evaluate-target-health).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2323,8 +2173,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -2333,15 +2182,13 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordfailoverroutingpolicy">Record<wbr>Failover<wbr>Routing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2350,13 +2197,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2365,13 +2210,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2380,13 +2223,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2395,15 +2236,13 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordgeolocationroutingpolicy">Record<wbr>Geolocation<wbr>Routing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continent_csharp">
 <a href="#continent_csharp" style="color: inherit; text-decoration: inherit;">Continent</a>
@@ -2412,8 +2251,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -2422,8 +2260,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdivision_csharp">
 <a href="#subdivision_csharp" style="color: inherit; text-decoration: inherit;">Subdivision</a>
@@ -2432,13 +2269,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continent_go">
 <a href="#continent_go" style="color: inherit; text-decoration: inherit;">Continent</a>
@@ -2447,8 +2282,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -2457,8 +2291,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdivision_go">
 <a href="#subdivision_go" style="color: inherit; text-decoration: inherit;">Subdivision</a>
@@ -2467,13 +2300,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continent_nodejs">
 <a href="#continent_nodejs" style="color: inherit; text-decoration: inherit;">continent</a>
@@ -2482,8 +2313,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -2492,8 +2322,7 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdivision_nodejs">
 <a href="#subdivision_nodejs" style="color: inherit; text-decoration: inherit;">subdivision</a>
@@ -2502,13 +2331,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continent_python">
 <a href="#continent_python" style="color: inherit; text-decoration: inherit;">continent</a>
@@ -2517,8 +2344,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -2527,8 +2353,7 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A two-character country code or `*` to indicate a default resource record set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subdivision_python">
 <a href="#subdivision_python" style="color: inherit; text-decoration: inherit;">subdivision</a>
@@ -2537,15 +2362,13 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subdivision code for a country.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordlatencyroutingpolicy">Record<wbr>Latency<wbr>Routing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2554,13 +2377,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2569,13 +2390,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2584,13 +2403,11 @@ Alias record documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2599,133 +2416,79 @@ Alias record documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordtype">Record<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>A</dt>
-    <dd>A</dd>
-    <dt>AAAA</dt>
-    <dd>AAAA</dd>
-    <dt>CNAME</dt>
-    <dd>CNAME</dd>
-    <dt>CAA</dt>
-    <dd>CAA</dd>
-    <dt>MX</dt>
-    <dd>MX</dd>
-    <dt>NAPTR</dt>
-    <dd>NAPTR</dd>
-    <dt>NS</dt>
-    <dd>NS</dd>
-    <dt>PTR</dt>
-    <dd>PTR</dd>
-    <dt>SOA</dt>
-    <dd>SOA</dd>
-    <dt>SPF</dt>
-    <dd>SPF</dd>
-    <dt>SRV</dt>
-    <dd>SRV</dd>
-    <dt>TXT</dt>
-    <dd>TXT</dd>
-</dl>
+<dl class="tabular"><dt>A</dt>
+    <dd>A</dd><dt>AAAA</dt>
+    <dd>AAAA</dd><dt>CNAME</dt>
+    <dd>CNAME</dd><dt>CAA</dt>
+    <dd>CAA</dd><dt>MX</dt>
+    <dd>MX</dd><dt>NAPTR</dt>
+    <dd>NAPTR</dd><dt>NS</dt>
+    <dd>NS</dd><dt>PTR</dt>
+    <dd>PTR</dd><dt>SOA</dt>
+    <dd>SOA</dd><dt>SPF</dt>
+    <dd>SPF</dd><dt>SRV</dt>
+    <dd>SRV</dd><dt>TXT</dt>
+    <dd>TXT</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Record<wbr>Type<wbr>A</dt>
-    <dd>A</dd>
-    <dt>Record<wbr>Type<wbr>AAAA</dt>
-    <dd>AAAA</dd>
-    <dt>Record<wbr>Type<wbr>CNAME</dt>
-    <dd>CNAME</dd>
-    <dt>Record<wbr>Type<wbr>CAA</dt>
-    <dd>CAA</dd>
-    <dt>Record<wbr>Type<wbr>MX</dt>
-    <dd>MX</dd>
-    <dt>Record<wbr>Type<wbr>NAPTR</dt>
-    <dd>NAPTR</dd>
-    <dt>Record<wbr>Type<wbr>NS</dt>
-    <dd>NS</dd>
-    <dt>Record<wbr>Type<wbr>PTR</dt>
-    <dd>PTR</dd>
-    <dt>Record<wbr>Type<wbr>SOA</dt>
-    <dd>SOA</dd>
-    <dt>Record<wbr>Type<wbr>SPF</dt>
-    <dd>SPF</dd>
-    <dt>Record<wbr>Type<wbr>SRV</dt>
-    <dd>SRV</dd>
-    <dt>Record<wbr>Type<wbr>TXT</dt>
-    <dd>TXT</dd>
-</dl>
+<dl class="tabular"><dt>Record<wbr>Type<wbr>A</dt>
+    <dd>A</dd><dt>Record<wbr>Type<wbr>AAAA</dt>
+    <dd>AAAA</dd><dt>Record<wbr>Type<wbr>CNAME</dt>
+    <dd>CNAME</dd><dt>Record<wbr>Type<wbr>CAA</dt>
+    <dd>CAA</dd><dt>Record<wbr>Type<wbr>MX</dt>
+    <dd>MX</dd><dt>Record<wbr>Type<wbr>NAPTR</dt>
+    <dd>NAPTR</dd><dt>Record<wbr>Type<wbr>NS</dt>
+    <dd>NS</dd><dt>Record<wbr>Type<wbr>PTR</dt>
+    <dd>PTR</dd><dt>Record<wbr>Type<wbr>SOA</dt>
+    <dd>SOA</dd><dt>Record<wbr>Type<wbr>SPF</dt>
+    <dd>SPF</dd><dt>Record<wbr>Type<wbr>SRV</dt>
+    <dd>SRV</dd><dt>Record<wbr>Type<wbr>TXT</dt>
+    <dd>TXT</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>A</dt>
-    <dd>A</dd>
-    <dt>AAAA</dt>
-    <dd>AAAA</dd>
-    <dt>CNAME</dt>
-    <dd>CNAME</dd>
-    <dt>CAA</dt>
-    <dd>CAA</dd>
-    <dt>MX</dt>
-    <dd>MX</dd>
-    <dt>NAPTR</dt>
-    <dd>NAPTR</dd>
-    <dt>NS</dt>
-    <dd>NS</dd>
-    <dt>PTR</dt>
-    <dd>PTR</dd>
-    <dt>SOA</dt>
-    <dd>SOA</dd>
-    <dt>SPF</dt>
-    <dd>SPF</dd>
-    <dt>SRV</dt>
-    <dd>SRV</dd>
-    <dt>TXT</dt>
-    <dd>TXT</dd>
-</dl>
+<dl class="tabular"><dt>A</dt>
+    <dd>A</dd><dt>AAAA</dt>
+    <dd>AAAA</dd><dt>CNAME</dt>
+    <dd>CNAME</dd><dt>CAA</dt>
+    <dd>CAA</dd><dt>MX</dt>
+    <dd>MX</dd><dt>NAPTR</dt>
+    <dd>NAPTR</dd><dt>NS</dt>
+    <dd>NS</dd><dt>PTR</dt>
+    <dd>PTR</dd><dt>SOA</dt>
+    <dd>SOA</dd><dt>SPF</dt>
+    <dd>SPF</dd><dt>SRV</dt>
+    <dd>SRV</dd><dt>TXT</dt>
+    <dd>TXT</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>A</dt>
-    <dd>A</dd>
-    <dt>AAAA</dt>
-    <dd>AAAA</dd>
-    <dt>CNAME</dt>
-    <dd>CNAME</dd>
-    <dt>CAA</dt>
-    <dd>CAA</dd>
-    <dt>MX</dt>
-    <dd>MX</dd>
-    <dt>NAPTR</dt>
-    <dd>NAPTR</dd>
-    <dt>NS</dt>
-    <dd>NS</dd>
-    <dt>PTR</dt>
-    <dd>PTR</dd>
-    <dt>SOA</dt>
-    <dd>SOA</dd>
-    <dt>SPF</dt>
-    <dd>SPF</dd>
-    <dt>SRV</dt>
-    <dd>SRV</dd>
-    <dt>TXT</dt>
-    <dd>TXT</dd>
-</dl>
+<dl class="tabular"><dt>A</dt>
+    <dd>A</dd><dt>AAAA</dt>
+    <dd>AAAA</dd><dt>CNAME</dt>
+    <dd>CNAME</dd><dt>CAA</dt>
+    <dd>CAA</dd><dt>MX</dt>
+    <dd>MX</dd><dt>NAPTR</dt>
+    <dd>NAPTR</dd><dt>NS</dt>
+    <dd>NS</dd><dt>PTR</dt>
+    <dd>PTR</dd><dt>SOA</dt>
+    <dd>SOA</dd><dt>SPF</dt>
+    <dd>SPF</dd><dt>SRV</dt>
+    <dd>SRV</dd><dt>TXT</dt>
+    <dd>TXT</dd></dl>
 {{% /choosable %}}
 
 <h4 id="recordweightedroutingpolicy">Record<wbr>Weighted<wbr>Routing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -2734,13 +2497,11 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -2749,13 +2510,11 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2764,13 +2523,11 @@ Alias record documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2779,8 +2536,7 @@ Alias record documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

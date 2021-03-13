@@ -231,8 +231,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -241,8 +240,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -251,13 +249,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -266,8 +262,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -276,13 +271,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -291,8 +284,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -301,13 +293,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the secret to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -316,8 +306,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret to retrieve.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -326,8 +315,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the secret to retrieve.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -340,8 +328,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -350,8 +337,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -360,8 +346,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +355,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -380,8 +364,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -389,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -399,8 +381,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationenabled_csharp">
 <a href="#rotationenabled_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Enabled</a>
@@ -409,8 +390,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationlambdaarn_csharp">
 <a href="#rotationlambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Lambda<wbr>Arn</a>
@@ -419,8 +399,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationrules_csharp">
 <a href="#rotationrules_csharp" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
@@ -429,8 +408,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">List&lt;Get<wbr>Secret<wbr>Rotation<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -439,13 +417,11 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -454,8 +430,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -464,8 +439,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -474,8 +448,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -484,8 +457,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -493,8 +465,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -503,8 +474,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationenabled_go">
 <a href="#rotationenabled_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Enabled</a>
@@ -513,8 +483,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationlambdaarn_go">
 <a href="#rotationlambdaarn_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Lambda<wbr>Arn</a>
@@ -523,8 +492,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationrules_go">
 <a href="#rotationrules_go" style="color: inherit; text-decoration: inherit;">Rotation<wbr>Rules</a>
@@ -533,8 +501,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">[]Get<wbr>Secret<wbr>Rotation<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -543,13 +510,11 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -558,8 +523,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -568,8 +532,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -578,8 +541,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -588,8 +550,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -597,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -607,8 +567,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationenabled_nodejs">
 <a href="#rotationenabled_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Enabled</a>
@@ -617,8 +576,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationlambdaarn_nodejs">
 <a href="#rotationlambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Lambda<wbr>Arn</a>
@@ -627,8 +585,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotationrules_nodejs">
 <a href="#rotationrules_nodejs" style="color: inherit; text-decoration: inherit;">rotation<wbr>Rules</a>
@@ -637,8 +594,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -647,13 +603,11 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -662,8 +616,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -672,8 +625,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -682,8 +634,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -692,8 +643,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Key Management Service (KMS) Customer Master Key (CMK) associated with the secret.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -701,8 +651,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -711,8 +660,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource-based policy document that's attached to the secret.
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotation_enabled_python">
 <a href="#rotation_enabled_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>enabled</a>
@@ -721,8 +669,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether rotation is enabled or not.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotation_lambda_arn_python">
 <a href="#rotation_lambda_arn_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>lambda_<wbr>arn</a>
@@ -731,8 +678,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rotation Lambda function Amazon Resource Name (ARN) if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="rotation_rules_python">
 <a href="#rotation_rules_python" style="color: inherit; text-decoration: inherit;">rotation_<wbr>rules</a>
@@ -741,8 +687,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getsecretrotationrule">Sequence[Get<wbr>Secret<wbr>Rotation<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}Rotation rules if rotation is enabled.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the aws_secretsmanager_secret_rotation data source instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -751,8 +696,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -766,8 +710,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticallyafterdays_csharp">
 <a href="#automaticallyafterdays_csharp" style="color: inherit; text-decoration: inherit;">Automatically<wbr>After<wbr>Days</a>
@@ -775,13 +718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticallyafterdays_go">
 <a href="#automaticallyafterdays_go" style="color: inherit; text-decoration: inherit;">Automatically<wbr>After<wbr>Days</a>
@@ -789,13 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticallyafterdays_nodejs">
 <a href="#automaticallyafterdays_nodejs" style="color: inherit; text-decoration: inherit;">automatically<wbr>After<wbr>Days</a>
@@ -803,13 +742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automatically_after_days_python">
 <a href="#automatically_after_days_python" style="color: inherit; text-decoration: inherit;">automatically_<wbr>after_<wbr>days</a>
@@ -817,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

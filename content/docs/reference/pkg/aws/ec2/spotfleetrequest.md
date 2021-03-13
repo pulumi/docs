@@ -935,8 +935,7 @@ The SpotFleetRequest resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iamfleetrole_csharp">
 <a href="#iamfleetrole_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
@@ -948,8 +947,7 @@ The SpotFleetRequest resource accepts the following [input]({{< relref "/docs/in
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcapacity_csharp">
 <a href="#targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
@@ -960,8 +958,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationstrategy_csharp">
 <a href="#allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
@@ -972,8 +969,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excesscapacityterminationpolicy_csharp">
 <a href="#excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -984,8 +980,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleettype_csharp">
 <a href="#fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
@@ -995,8 +990,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceinterruptionbehaviour_csharp">
 <a href="#instanceinterruptionbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
@@ -1007,8 +1001,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancepoolstousecount_csharp">
 <a href="#instancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -1020,8 +1013,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchspecifications_csharp">
 <a href="#launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
@@ -1032,8 +1024,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplateconfigs_csharp">
 <a href="#launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -1042,8 +1033,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
 <a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1052,8 +1042,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceunhealthyinstances_csharp">
 <a href="#replaceunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
@@ -1062,8 +1051,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaintenancestrategies_csharp">
 <a href="#spotmaintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
@@ -1072,8 +1060,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -1082,8 +1069,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1092,8 +1078,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_csharp">
 <a href="#targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -1102,8 +1087,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstanceswithexpiration_csharp">
 <a href="#terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -1113,8 +1097,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_csharp">
 <a href="#validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -1123,8 +1106,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_csharp">
 <a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -1133,8 +1115,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforfulfillment_csharp">
 <a href="#waitforfulfillment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
@@ -1145,13 +1126,11 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iamfleetrole_go">
 <a href="#iamfleetrole_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
@@ -1163,8 +1142,7 @@ timeout of 10m is reached.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcapacity_go">
 <a href="#targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
@@ -1175,8 +1153,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationstrategy_go">
 <a href="#allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
@@ -1187,8 +1164,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excesscapacityterminationpolicy_go">
 <a href="#excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -1199,8 +1175,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleettype_go">
 <a href="#fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
@@ -1210,8 +1185,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceinterruptionbehaviour_go">
 <a href="#instanceinterruptionbehaviour_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
@@ -1222,8 +1196,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancepoolstousecount_go">
 <a href="#instancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -1235,8 +1208,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchspecifications_go">
 <a href="#launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
@@ -1247,8 +1219,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplateconfigs_go">
 <a href="#launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -1257,8 +1228,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
 <a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1267,8 +1237,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceunhealthyinstances_go">
 <a href="#replaceunhealthyinstances_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
@@ -1277,8 +1246,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaintenancestrategies_go">
 <a href="#spotmaintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
@@ -1287,8 +1255,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_go">
 <a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -1297,8 +1264,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1307,8 +1273,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_go">
 <a href="#targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -1317,8 +1282,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstanceswithexpiration_go">
 <a href="#terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -1328,8 +1292,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_go">
 <a href="#validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -1338,8 +1301,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_go">
 <a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -1348,8 +1310,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforfulfillment_go">
 <a href="#waitforfulfillment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
@@ -1360,13 +1321,11 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iamfleetrole_nodejs">
 <a href="#iamfleetrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Fleet<wbr>Role</a>
@@ -1378,8 +1337,7 @@ timeout of 10m is reached.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcapacity_nodejs">
 <a href="#targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
@@ -1390,8 +1348,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocationstrategy_nodejs">
 <a href="#allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
@@ -1402,8 +1359,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excesscapacityterminationpolicy_nodejs">
 <a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -1414,8 +1370,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleettype_nodejs">
 <a href="#fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
@@ -1425,8 +1380,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceinterruptionbehaviour_nodejs">
 <a href="#instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
@@ -1437,8 +1391,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancepoolstousecount_nodejs">
 <a href="#instancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -1450,8 +1403,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchspecifications_nodejs">
 <a href="#launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
@@ -1462,8 +1414,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplateconfigs_nodejs">
 <a href="#launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
@@ -1472,8 +1423,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -1482,8 +1432,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replaceunhealthyinstances_nodejs">
 <a href="#replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
@@ -1492,8 +1441,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotmaintenancestrategies_nodejs">
 <a href="#spotmaintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Maintenance<wbr>Strategies</a>
@@ -1502,8 +1450,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -1512,8 +1459,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1522,8 +1468,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetgrouparns_nodejs">
 <a href="#targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
@@ -1532,8 +1477,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstanceswithexpiration_nodejs">
 <a href="#terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -1543,8 +1487,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_nodejs">
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
@@ -1553,8 +1496,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_nodejs">
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -1563,8 +1505,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforfulfillment_nodejs">
 <a href="#waitforfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Fulfillment</a>
@@ -1575,13 +1516,11 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="iam_fleet_role_python">
 <a href="#iam_fleet_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>fleet_<wbr>role</a>
@@ -1593,8 +1532,7 @@ timeout of 10m is reached.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_capacity_python">
 <a href="#target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
@@ -1605,8 +1543,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allocation_strategy_python">
 <a href="#allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
@@ -1617,8 +1554,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excess_capacity_termination_policy_python">
 <a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
@@ -1629,8 +1565,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fleet_type_python">
 <a href="#fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
@@ -1640,8 +1575,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_interruption_behaviour_python">
 <a href="#instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
@@ -1652,8 +1586,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_pools_to_use_count_python">
 <a href="#instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
@@ -1665,8 +1598,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launch_specifications_python">
 <a href="#launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
@@ -1677,8 +1609,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launch_template_configs_python">
 <a href="#launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
@@ -1687,8 +1618,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -1697,8 +1627,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replace_unhealthy_instances_python">
 <a href="#replace_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>unhealthy_<wbr>instances</a>
@@ -1707,8 +1636,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_maintenance_strategies_python">
 <a href="#spot_maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>maintenance_<wbr>strategies</a>
@@ -1717,8 +1645,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_price_python">
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -1727,8 +1654,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1737,8 +1663,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_group_arns_python">
 <a href="#target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
@@ -1747,8 +1672,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminate_instances_with_expiration_python">
 <a href="#terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
@@ -1758,8 +1682,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_from_python">
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
@@ -1768,8 +1691,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_until_python">
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -1778,8 +1700,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_fulfillment_python">
 <a href="#wait_for_fulfillment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>fulfillment</a>
@@ -1790,8 +1711,7 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1802,8 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clienttoken_csharp">
 <a href="#clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -1811,8 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1820,8 +1738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spotrequeststate_csharp">
 <a href="#spotrequeststate_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
@@ -1830,13 +1747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clienttoken_go">
 <a href="#clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -1844,8 +1759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1853,8 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spotrequeststate_go">
 <a href="#spotrequeststate_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
@@ -1863,13 +1776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clienttoken_nodejs">
 <a href="#clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
@@ -1877,8 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1886,8 +1796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spotrequeststate_nodejs">
 <a href="#spotrequeststate_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Request<wbr>State</a>
@@ -1896,13 +1805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="client_token_python">
 <a href="#client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
@@ -1910,8 +1817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1919,8 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="spot_request_state_python">
 <a href="#spot_request_state_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>request_<wbr>state</a>
@@ -1929,8 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2057,8 +1961,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocationstrategy_csharp">
 <a href="#state_allocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
@@ -2069,8 +1972,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_csharp">
 <a href="#state_clienttoken_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -2078,8 +1980,7 @@ the Spot pools specified by the Spot fleet request. The default is
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excesscapacityterminationpolicy_csharp">
 <a href="#state_excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -2090,8 +1991,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_csharp">
 <a href="#state_fleettype_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
@@ -2101,8 +2001,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamfleetrole_csharp">
 <a href="#state_iamfleetrole_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
@@ -2114,8 +2013,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceinterruptionbehaviour_csharp">
 <a href="#state_instanceinterruptionbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
@@ -2126,8 +2024,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancepoolstousecount_csharp">
 <a href="#state_instancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -2139,8 +2036,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchspecifications_csharp">
 <a href="#state_launchspecifications_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
@@ -2151,8 +2047,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateconfigs_csharp">
 <a href="#state_launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -2161,8 +2056,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
 <a href="#state_loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -2171,8 +2065,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replaceunhealthyinstances_csharp">
 <a href="#state_replaceunhealthyinstances_csharp" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
@@ -2181,8 +2074,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotmaintenancestrategies_csharp">
 <a href="#state_spotmaintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
@@ -2191,8 +2083,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotprice_csharp">
 <a href="#state_spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -2201,8 +2092,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotrequeststate_csharp">
 <a href="#state_spotrequeststate_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
@@ -2211,8 +2101,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2221,8 +2110,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcapacity_csharp">
 <a href="#state_targetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
@@ -2233,8 +2121,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_csharp">
 <a href="#state_targetgrouparns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -2243,8 +2130,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstanceswithexpiration_csharp">
 <a href="#state_terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -2254,8 +2140,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validfrom_csharp">
 <a href="#state_validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -2264,8 +2149,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_csharp">
 <a href="#state_validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -2274,8 +2158,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforfulfillment_csharp">
 <a href="#state_waitforfulfillment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
@@ -2286,13 +2169,11 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocationstrategy_go">
 <a href="#state_allocationstrategy_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Strategy</a>
@@ -2303,8 +2184,7 @@ timeout of 10m is reached.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_go">
 <a href="#state_clienttoken_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token</a>
@@ -2312,8 +2192,7 @@ the Spot pools specified by the Spot fleet request. The default is
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excesscapacityterminationpolicy_go">
 <a href="#state_excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -2324,8 +2203,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_go">
 <a href="#state_fleettype_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Type</a>
@@ -2335,8 +2213,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamfleetrole_go">
 <a href="#state_iamfleetrole_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Fleet<wbr>Role</a>
@@ -2348,8 +2225,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceinterruptionbehaviour_go">
 <a href="#state_instanceinterruptionbehaviour_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Interruption<wbr>Behaviour</a>
@@ -2360,8 +2236,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancepoolstousecount_go">
 <a href="#state_instancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -2373,8 +2248,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchspecifications_go">
 <a href="#state_launchspecifications_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Specifications</a>
@@ -2385,8 +2259,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateconfigs_go">
 <a href="#state_launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -2395,8 +2268,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
 <a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -2405,8 +2277,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replaceunhealthyinstances_go">
 <a href="#state_replaceunhealthyinstances_go" style="color: inherit; text-decoration: inherit;">Replace<wbr>Unhealthy<wbr>Instances</a>
@@ -2415,8 +2286,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotmaintenancestrategies_go">
 <a href="#state_spotmaintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
@@ -2425,8 +2295,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotprice_go">
 <a href="#state_spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -2435,8 +2304,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotrequeststate_go">
 <a href="#state_spotrequeststate_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Request<wbr>State</a>
@@ -2445,8 +2313,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2455,8 +2322,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcapacity_go">
 <a href="#state_targetcapacity_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Capacity</a>
@@ -2467,8 +2333,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_go">
 <a href="#state_targetgrouparns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Arns</a>
@@ -2477,8 +2342,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstanceswithexpiration_go">
 <a href="#state_terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -2488,8 +2352,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validfrom_go">
 <a href="#state_validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -2498,8 +2361,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_go">
 <a href="#state_validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -2508,8 +2370,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforfulfillment_go">
 <a href="#state_waitforfulfillment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Fulfillment</a>
@@ -2520,13 +2381,11 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocationstrategy_nodejs">
 <a href="#state_allocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Strategy</a>
@@ -2537,8 +2396,7 @@ timeout of 10m is reached.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienttoken_nodejs">
 <a href="#state_clienttoken_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token</a>
@@ -2546,8 +2404,7 @@ the Spot pools specified by the Spot fleet request. The default is
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excesscapacityterminationpolicy_nodejs">
 <a href="#state_excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -2558,8 +2415,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleettype_nodejs">
 <a href="#state_fleettype_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Type</a>
@@ -2569,8 +2425,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamfleetrole_nodejs">
 <a href="#state_iamfleetrole_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Fleet<wbr>Role</a>
@@ -2582,8 +2437,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceinterruptionbehaviour_nodejs">
 <a href="#state_instanceinterruptionbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Interruption<wbr>Behaviour</a>
@@ -2594,8 +2448,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancepoolstousecount_nodejs">
 <a href="#state_instancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -2607,8 +2460,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchspecifications_nodejs">
 <a href="#state_launchspecifications_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Specifications</a>
@@ -2619,8 +2471,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateconfigs_nodejs">
 <a href="#state_launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
@@ -2629,8 +2480,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -2639,8 +2489,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replaceunhealthyinstances_nodejs">
 <a href="#state_replaceunhealthyinstances_nodejs" style="color: inherit; text-decoration: inherit;">replace<wbr>Unhealthy<wbr>Instances</a>
@@ -2649,8 +2498,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotmaintenancestrategies_nodejs">
 <a href="#state_spotmaintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Maintenance<wbr>Strategies</a>
@@ -2659,8 +2507,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotprice_nodejs">
 <a href="#state_spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -2669,8 +2516,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotrequeststate_nodejs">
 <a href="#state_spotrequeststate_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Request<wbr>State</a>
@@ -2679,8 +2525,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2689,8 +2534,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetcapacity_nodejs">
 <a href="#state_targetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Capacity</a>
@@ -2701,8 +2545,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetgrouparns_nodejs">
 <a href="#state_targetgrouparns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Arns</a>
@@ -2711,8 +2554,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstanceswithexpiration_nodejs">
 <a href="#state_terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -2722,8 +2564,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validfrom_nodejs">
 <a href="#state_validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
@@ -2732,8 +2573,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_nodejs">
 <a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -2742,8 +2582,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforfulfillment_nodejs">
 <a href="#state_waitforfulfillment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Fulfillment</a>
@@ -2754,13 +2593,11 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocation_strategy_python">
 <a href="#state_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>strategy</a>
@@ -2771,8 +2608,7 @@ timeout of 10m is reached.
     <dd>{{% md %}}Indicates how to allocate the target capacity across
 the Spot pools specified by the Spot fleet request. The default is
 `lowestPrice`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_token_python">
 <a href="#state_client_token_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token</a>
@@ -2780,8 +2616,7 @@ the Spot pools specified by the Spot fleet request. The default is
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excess_capacity_termination_policy_python">
 <a href="#state_excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
@@ -2792,8 +2627,7 @@ the Spot pools specified by the Spot fleet request. The default is
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated if the target capacity of the Spot fleet
 request is decreased below the current size of the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleet_type_python">
 <a href="#state_fleet_type_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>type</a>
@@ -2803,8 +2637,7 @@ request is decreased below the current size of the Spot fleet.
     </dt>
     <dd>{{% md %}}The type of fleet request. Indicates whether the Spot Fleet only requests the target
 capacity or also attempts to maintain it. Default is `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_fleet_role_python">
 <a href="#state_iam_fleet_role_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>fleet_<wbr>role</a>
@@ -2816,8 +2649,7 @@ capacity or also attempts to maintain it. Default is `maintain`.
 Spot instances on your behalf when you cancel its Spot fleet request using
 CancelSpotFleetRequests or when the Spot fleet request expires, if you set
 terminateInstancesWithExpiration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_interruption_behaviour_python">
 <a href="#state_instance_interruption_behaviour_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>interruption_<wbr>behaviour</a>
@@ -2828,8 +2660,7 @@ terminateInstancesWithExpiration.
     <dd>{{% md %}}Indicates whether a Spot
 instance stops or terminates when it is interrupted. Default is
 `terminate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_pools_to_use_count_python">
 <a href="#state_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
@@ -2841,8 +2672,7 @@ instance stops or terminates when it is interrupted. Default is
 Valid only when `allocation_strategy` is set to `lowestPrice`. Spot Fleet selects
 the cheapest Spot pools and evenly allocates your target Spot capacity across
 the number of Spot pools that you specify.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_specifications_python">
 <a href="#state_launch_specifications_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>specifications</a>
@@ -2853,8 +2683,7 @@ the number of Spot pools that you specify.
     <dd>{{% md %}}Used to define the launch configuration of the
 spot-fleet request. Can be specified multiple times to define different bids
 across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_template_configs_python">
 <a href="#state_launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
@@ -2863,8 +2692,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfig">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -2873,8 +2701,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of elastic load balancer names to add to the Spot fleet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replace_unhealthy_instances_python">
 <a href="#state_replace_unhealthy_instances_python" style="color: inherit; text-decoration: inherit;">replace_<wbr>unhealthy_<wbr>instances</a>
@@ -2883,8 +2710,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_maintenance_strategies_python">
 <a href="#state_spot_maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>maintenance_<wbr>strategies</a>
@@ -2893,8 +2719,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_price_python">
 <a href="#state_spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -2903,8 +2728,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_request_state_python">
 <a href="#state_spot_request_state_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>request_<wbr>state</a>
@@ -2913,8 +2737,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the Spot fleet request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2923,8 +2746,7 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_capacity_python">
 <a href="#state_target_capacity_python" style="color: inherit; text-decoration: inherit;">target_<wbr>capacity</a>
@@ -2935,8 +2757,7 @@ across different markets and instance types. Conflicts with `launch_template_con
     <dd>{{% md %}}The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_group_arns_python">
 <a href="#state_target_group_arns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>group_<wbr>arns</a>
@@ -2945,8 +2766,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminate_instances_with_expiration_python">
 <a href="#state_terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
@@ -2956,8 +2776,7 @@ important to your application workload, such as vCPUs, memory, or I/O.
     </dt>
     <dd>{{% md %}}Indicates whether running Spot
 instances should be terminated when the Spot fleet request expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_from_python">
 <a href="#state_valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
@@ -2966,8 +2785,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_until_python">
 <a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -2976,8 +2794,7 @@ instances should be terminated when the Spot fleet request expires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_fulfillment_python">
 <a href="#state_wait_for_fulfillment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>fulfillment</a>
@@ -2988,8 +2805,7 @@ instances should be terminated when the Spot fleet request expires.
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
 timeout of 10m is reached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3004,8 +2820,7 @@ timeout of 10m is reached.
 <h4 id="spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_csharp">
 <a href="#ami_csharp" style="color: inherit; text-decoration: inherit;">Ami</a>
@@ -3013,8 +2828,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -3023,8 +2837,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
 <a href="#associatepublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3032,8 +2845,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -3042,8 +2854,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_csharp">
 <a href="#ebsblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -3051,8 +2862,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_csharp">
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -3060,8 +2870,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_csharp">
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -3069,8 +2878,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_csharp">
 <a href="#iaminstanceprofile_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -3078,8 +2886,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofilearn_csharp">
 <a href="#iaminstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -3087,8 +2894,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -3096,8 +2902,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_csharp">
 <a href="#monitoring_csharp" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -3105,8 +2910,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementgroup_csharp">
 <a href="#placementgroup_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -3114,8 +2918,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_csharp">
 <a href="#placementtenancy_csharp" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -3123,8 +2926,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootblockdevices_csharp">
 <a href="#rootblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
@@ -3132,8 +2934,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -3142,8 +2943,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3152,8 +2952,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3162,8 +2961,7 @@ timeout of 10m is reached.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
 <a href="#userdata_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -3171,8 +2969,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_csharp">
 <a href="#vpcsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -3180,8 +2977,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_csharp">
 <a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -3190,13 +2986,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_go">
 <a href="#ami_go" style="color: inherit; text-decoration: inherit;">Ami</a>
@@ -3204,8 +2998,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -3214,8 +3007,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
 <a href="#associatepublicipaddress_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3223,8 +3015,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -3233,8 +3024,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_go">
 <a href="#ebsblockdevices_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Block<wbr>Devices</a>
@@ -3242,8 +3032,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_go">
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
@@ -3251,8 +3040,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_go">
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
@@ -3260,8 +3048,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_go">
 <a href="#iaminstanceprofile_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile</a>
@@ -3269,8 +3056,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofilearn_go">
 <a href="#iaminstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -3278,8 +3064,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -3287,8 +3072,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_go">
 <a href="#monitoring_go" style="color: inherit; text-decoration: inherit;">Monitoring</a>
@@ -3296,8 +3080,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementgroup_go">
 <a href="#placementgroup_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Group</a>
@@ -3305,8 +3088,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_go">
 <a href="#placementtenancy_go" style="color: inherit; text-decoration: inherit;">Placement<wbr>Tenancy</a>
@@ -3314,8 +3096,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootblockdevices_go">
 <a href="#rootblockdevices_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Block<wbr>Devices</a>
@@ -3323,8 +3104,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_go">
 <a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -3333,8 +3113,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3343,8 +3122,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3353,8 +3131,7 @@ timeout of 10m is reached.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
 <a href="#userdata_go" style="color: inherit; text-decoration: inherit;">User<wbr>Data</a>
@@ -3362,8 +3139,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_go">
 <a href="#vpcsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -3371,8 +3147,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_go">
 <a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -3381,13 +3156,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_nodejs">
 <a href="#ami_nodejs" style="color: inherit; text-decoration: inherit;">ami</a>
@@ -3395,8 +3168,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -3405,8 +3177,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
 <a href="#associatepublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>Public<wbr>Ip<wbr>Address</a>
@@ -3414,8 +3185,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -3424,8 +3194,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsblockdevices_nodejs">
 <a href="#ebsblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Block<wbr>Devices</a>
@@ -3433,8 +3202,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebsoptimized_nodejs">
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
@@ -3442,8 +3210,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
@@ -3451,8 +3218,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofile_nodejs">
 <a href="#iaminstanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile</a>
@@ -3460,8 +3226,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iaminstanceprofilearn_nodejs">
 <a href="#iaminstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Instance<wbr>Profile<wbr>Arn</a>
@@ -3469,8 +3234,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -3478,8 +3242,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_nodejs">
 <a href="#monitoring_nodejs" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -3487,8 +3250,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementgroup_nodejs">
 <a href="#placementgroup_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Group</a>
@@ -3496,8 +3258,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placementtenancy_nodejs">
 <a href="#placementtenancy_nodejs" style="color: inherit; text-decoration: inherit;">placement<wbr>Tenancy</a>
@@ -3505,8 +3266,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootblockdevices_nodejs">
 <a href="#rootblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Block<wbr>Devices</a>
@@ -3514,8 +3274,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -3524,8 +3283,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -3534,8 +3292,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3544,8 +3301,7 @@ timeout of 10m is reached.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
 <a href="#userdata_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Data</a>
@@ -3553,8 +3309,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcsecuritygroupids_nodejs">
 <a href="#vpcsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -3562,8 +3317,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_nodejs">
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
@@ -3572,13 +3326,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ami_python">
 <a href="#ami_python" style="color: inherit; text-decoration: inherit;">ami</a>
@@ -3586,8 +3338,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -3596,8 +3347,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
 <a href="#associate_public_ip_address_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>public_<wbr>ip_<wbr>address</a>
@@ -3605,8 +3355,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -3615,8 +3364,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_block_devices_python">
 <a href="#ebs_block_devices_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>block_<wbr>devices</a>
@@ -3624,8 +3372,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationebsblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ebs_optimized_python">
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
@@ -3633,8 +3380,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ephemeral_block_devices_python">
 <a href="#ephemeral_block_devices_python" style="color: inherit; text-decoration: inherit;">ephemeral_<wbr>block_<wbr>devices</a>
@@ -3642,8 +3388,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationephemeralblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_python">
 <a href="#iam_instance_profile_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile</a>
@@ -3651,8 +3396,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_instance_profile_arn_python">
 <a href="#iam_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>instance_<wbr>profile_<wbr>arn</a>
@@ -3660,8 +3404,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -3669,8 +3412,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_python">
 <a href="#monitoring_python" style="color: inherit; text-decoration: inherit;">monitoring</a>
@@ -3678,8 +3420,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_group_python">
 <a href="#placement_group_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>group</a>
@@ -3687,8 +3428,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="placement_tenancy_python">
 <a href="#placement_tenancy_python" style="color: inherit; text-decoration: inherit;">placement_<wbr>tenancy</a>
@@ -3696,8 +3436,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_block_devices_python">
 <a href="#root_block_devices_python" style="color: inherit; text-decoration: inherit;">root_<wbr>block_<wbr>devices</a>
@@ -3705,8 +3444,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotfleetrequestlaunchspecificationrootblockdevice">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_price_python">
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -3715,8 +3453,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -3725,8 +3462,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3735,8 +3471,7 @@ timeout of 10m is reached.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
 <a href="#user_data_python" style="color: inherit; text-decoration: inherit;">user_<wbr>data</a>
@@ -3744,8 +3479,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_security_group_ids_python">
 <a href="#vpc_security_group_ids_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -3753,8 +3487,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_capacity_python">
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
@@ -3763,15 +3496,13 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -3779,8 +3510,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -3788,8 +3518,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -3797,8 +3526,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -3806,8 +3534,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -3815,8 +3542,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -3824,8 +3550,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -3833,8 +3558,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -3842,8 +3566,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -3851,13 +3574,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -3865,8 +3586,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -3874,8 +3594,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -3883,8 +3602,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -3892,8 +3610,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -3901,8 +3618,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -3910,8 +3626,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -3919,8 +3634,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -3928,8 +3642,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -3937,13 +3650,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -3951,8 +3662,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -3960,8 +3670,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -3969,8 +3678,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -3978,8 +3686,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -3987,8 +3694,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -3996,8 +3702,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -4005,8 +3710,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -4014,8 +3718,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -4023,13 +3726,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -4037,8 +3738,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -4046,8 +3746,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -4055,8 +3754,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -4064,8 +3762,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -4073,8 +3770,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -4082,8 +3778,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -4091,8 +3786,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -4100,8 +3794,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -4109,15 +3802,13 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -4125,8 +3816,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -4134,13 +3824,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -4148,8 +3836,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_go">
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
@@ -4157,13 +3844,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -4171,8 +3856,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
@@ -4180,13 +3864,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -4194,8 +3876,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_name_python">
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
@@ -4203,15 +3884,13 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -4219,8 +3898,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -4228,8 +3906,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -4237,8 +3914,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -4246,8 +3922,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -4255,8 +3930,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -4264,8 +3938,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -4273,13 +3946,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
@@ -4287,8 +3958,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -4296,8 +3966,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_go">
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
@@ -4305,8 +3974,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -4314,8 +3982,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -4323,8 +3990,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
@@ -4332,8 +3998,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -4341,13 +4006,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
@@ -4355,8 +4018,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -4364,8 +4026,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -4373,8 +4034,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -4382,8 +4042,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -4391,8 +4050,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
@@ -4400,8 +4058,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -4409,13 +4066,11 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
@@ -4423,8 +4078,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -4432,8 +4086,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iops_python">
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
@@ -4441,8 +4094,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -4450,8 +4102,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -4459,8 +4110,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
@@ -4468,8 +4118,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -4477,15 +4126,13 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestlaunchtemplateconfig">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_csharp">
 <a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
@@ -4494,8 +4141,7 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrides_csharp">
 <a href="#overrides_csharp" style="color: inherit; text-decoration: inherit;">Overrides</a>
@@ -4504,13 +4150,11 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">List&lt;Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_go">
 <a href="#launchtemplatespecification_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
@@ -4519,8 +4163,7 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrides_go">
 <a href="#overrides_go" style="color: inherit; text-decoration: inherit;">Overrides</a>
@@ -4529,13 +4172,11 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">[]Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_nodejs">
 <a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
@@ -4544,8 +4185,7 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrides_nodejs">
 <a href="#overrides_nodejs" style="color: inherit; text-decoration: inherit;">overrides</a>
@@ -4554,13 +4194,11 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launch_template_specification_python">
 <a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
@@ -4569,8 +4207,7 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Launch template specification. See Launch Template Specification below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrides_python">
 <a href="#overrides_python" style="color: inherit; text-decoration: inherit;">overrides</a>
@@ -4579,15 +4216,13 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestlaunchtemplateconfigoverride">Sequence[Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more override configurations. See Overrides below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestlaunchtemplateconfiglaunchtemplatespecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Launch<wbr>Template<wbr>Specification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4596,8 +4231,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4606,8 +4240,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4616,13 +4249,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4631,8 +4262,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4641,8 +4271,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -4651,13 +4280,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4666,8 +4293,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4676,8 +4302,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4686,13 +4311,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4701,8 +4324,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the launch template. Conflicts with `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4711,8 +4333,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. Conflicts with `id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -4721,15 +4342,13 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g. `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestlaunchtemplateconfigoverride">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Template<wbr>Config<wbr>Override</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -4738,8 +4357,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -4748,8 +4366,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -4758,8 +4375,7 @@ timeout of 10m is reached.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -4768,8 +4384,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -4778,8 +4393,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_csharp">
 <a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -4788,13 +4402,11 @@ timeout of 10m is reached.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -4803,8 +4415,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -4813,8 +4424,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -4823,8 +4433,7 @@ timeout of 10m is reached.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_go">
 <a href="#spotprice_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
@@ -4833,8 +4442,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -4843,8 +4451,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_go">
 <a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -4853,13 +4460,11 @@ timeout of 10m is reached.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -4868,8 +4473,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -4878,8 +4482,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -4888,8 +4491,7 @@ timeout of 10m is reached.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
@@ -4898,8 +4500,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -4908,8 +4509,7 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weightedcapacity_nodejs">
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
@@ -4918,13 +4518,11 @@ timeout of 10m is reached.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -4933,8 +4531,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The availability zone in which to place the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -4943,8 +4540,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance to request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -4953,8 +4549,7 @@ timeout of 10m is reached.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_price_python">
 <a href="#spot_price_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>price</a>
@@ -4963,8 +4558,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum spot bid for this override request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -4973,8 +4567,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet in which to launch the requested instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weighted_capacity_python">
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
@@ -4983,15 +4576,13 @@ timeout of 10m is reached.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacityrebalance_csharp">
 <a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
@@ -5000,13 +4591,11 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacityrebalance_go">
 <a href="#capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
@@ -5015,13 +4604,11 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacityrebalance_nodejs">
 <a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
@@ -5030,13 +4617,11 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_rebalance_python">
 <a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
@@ -5045,15 +4630,13 @@ timeout of 10m is reached.
         <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="replacementstrategy_csharp">
 <a href="#replacementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
@@ -5062,13 +4645,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="replacementstrategy_go">
 <a href="#replacementstrategy_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
@@ -5077,13 +4658,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="replacementstrategy_nodejs">
 <a href="#replacementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Strategy</a>
@@ -5092,13 +4671,11 @@ timeout of 10m is reached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="replacement_strategy_python">
 <a href="#replacement_strategy_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>strategy</a>
@@ -5107,8 +4684,7 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

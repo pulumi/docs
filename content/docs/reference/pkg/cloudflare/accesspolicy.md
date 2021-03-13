@@ -381,8 +381,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -391,8 +390,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decision_csharp">
 <a href="#decision_csharp" style="color: inherit; text-decoration: inherit;">Decision</a>
@@ -402,8 +400,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includes_csharp">
 <a href="#includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -412,8 +409,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -422,8 +418,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -432,8 +427,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -442,8 +436,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_csharp">
 <a href="#precedence_csharp" style="color: inherit; text-decoration: inherit;">Precedence</a>
@@ -452,8 +445,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_csharp">
 <a href="#requires_csharp" style="color: inherit; text-decoration: inherit;">Requires</a>
@@ -462,8 +454,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -472,13 +463,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -487,8 +476,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decision_go">
 <a href="#decision_go" style="color: inherit; text-decoration: inherit;">Decision</a>
@@ -498,8 +486,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includes_go">
 <a href="#includes_go" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -508,8 +495,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">[]Access<wbr>Policy<wbr>Include</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -518,8 +504,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -528,8 +513,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -538,8 +522,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_go">
 <a href="#precedence_go" style="color: inherit; text-decoration: inherit;">Precedence</a>
@@ -548,8 +531,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_go">
 <a href="#requires_go" style="color: inherit; text-decoration: inherit;">Requires</a>
@@ -558,8 +540,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -568,13 +549,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -583,8 +562,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decision_nodejs">
 <a href="#decision_nodejs" style="color: inherit; text-decoration: inherit;">decision</a>
@@ -594,8 +572,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includes_nodejs">
 <a href="#includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -604,8 +581,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -614,8 +590,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -624,8 +599,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -634,8 +608,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_nodejs">
 <a href="#precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
@@ -644,8 +617,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_nodejs">
 <a href="#requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
@@ -654,8 +626,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -664,13 +635,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -679,8 +648,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="decision_python">
 <a href="#decision_python" style="color: inherit; text-decoration: inherit;">decision</a>
@@ -690,8 +658,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includes_python">
 <a href="#includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -700,8 +667,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">Sequence[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -710,8 +676,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -720,8 +685,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -730,8 +694,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="precedence_python">
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
@@ -740,8 +703,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_python">
 <a href="#requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
@@ -750,8 +712,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">Sequence[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -760,8 +721,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -772,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -781,13 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -795,13 +752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -809,13 +764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -823,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -951,8 +903,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -961,8 +912,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_csharp">
 <a href="#state_applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -971,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_csharp">
 <a href="#state_decision_csharp" style="color: inherit; text-decoration: inherit;">Decision</a>
@@ -982,8 +931,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludes_csharp">
 <a href="#state_excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -992,8 +940,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includes_csharp">
 <a href="#state_includes_csharp" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -1002,8 +949,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1012,8 +958,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_precedence_csharp">
 <a href="#state_precedence_csharp" style="color: inherit; text-decoration: inherit;">Precedence</a>
@@ -1022,8 +967,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requires_csharp">
 <a href="#state_requires_csharp" style="color: inherit; text-decoration: inherit;">Requires</a>
@@ -1032,8 +976,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1042,13 +985,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1057,8 +998,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_go">
 <a href="#state_applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -1067,8 +1007,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_go">
 <a href="#state_decision_go" style="color: inherit; text-decoration: inherit;">Decision</a>
@@ -1078,8 +1017,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludes_go">
 <a href="#state_excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
@@ -1088,8 +1026,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includes_go">
 <a href="#state_includes_go" style="color: inherit; text-decoration: inherit;">Includes</a>
@@ -1098,8 +1035,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">[]Access<wbr>Policy<wbr>Include</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1108,8 +1044,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_precedence_go">
 <a href="#state_precedence_go" style="color: inherit; text-decoration: inherit;">Precedence</a>
@@ -1118,8 +1053,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requires_go">
 <a href="#state_requires_go" style="color: inherit; text-decoration: inherit;">Requires</a>
@@ -1128,8 +1062,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1138,13 +1071,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1153,8 +1084,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_nodejs">
 <a href="#state_applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -1163,8 +1093,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_nodejs">
 <a href="#state_decision_nodejs" style="color: inherit; text-decoration: inherit;">decision</a>
@@ -1174,8 +1103,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludes_nodejs">
 <a href="#state_excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -1184,8 +1112,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includes_nodejs">
 <a href="#state_includes_nodejs" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -1194,8 +1121,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1204,8 +1130,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_precedence_nodejs">
 <a href="#state_precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
@@ -1214,8 +1139,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requires_nodejs">
 <a href="#state_requires_nodejs" style="color: inherit; text-decoration: inherit;">requires</a>
@@ -1224,8 +1148,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1234,13 +1157,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1249,8 +1170,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account to which the access rule should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_id_python">
 <a href="#state_application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -1259,8 +1179,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decision_python">
 <a href="#state_decision_python" style="color: inherit; text-decoration: inherit;">decision</a>
@@ -1270,8 +1189,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excludes_python">
 <a href="#state_excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
@@ -1280,8 +1198,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyexclude">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_includes_python">
 <a href="#state_includes_python" style="color: inherit; text-decoration: inherit;">includes</a>
@@ -1290,8 +1207,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyinclude">Sequence[Access<wbr>Policy<wbr>Include<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1300,8 +1216,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_precedence_python">
 <a href="#state_precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
@@ -1310,8 +1225,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requires_python">
 <a href="#state_requires_python" style="color: inherit; text-decoration: inherit;">requires</a>
@@ -1320,8 +1234,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">Sequence[Access<wbr>Policy<wbr>Require<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/access_group#conditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1330,8 +1243,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1346,8 +1258,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 <h4 id="accesspolicyexclude">Access<wbr>Policy<wbr>Exclude</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_csharp">
 <a href="#anyvalidservicetoken_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -1355,8 +1266,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_csharp">
 <a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -1364,8 +1274,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
@@ -1373,8 +1282,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeazure">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1382,8 +1290,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1391,8 +1298,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
@@ -1400,8 +1306,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -1409,8 +1314,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_csharp">
 <a href="#everyone_csharp" style="color: inherit; text-decoration: inherit;">Everyone</a>
@@ -1418,8 +1322,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_csharp">
 <a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
@@ -1427,8 +1330,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
@@ -1436,8 +1338,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegithub">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1445,8 +1346,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_csharp">
 <a href="#gsuites_csharp" style="color: inherit; text-decoration: inherit;">Gsuites</a>
@@ -1454,8 +1354,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegsuite">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -1463,8 +1362,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_csharp">
 <a href="#oktas_csharp" style="color: inherit; text-decoration: inherit;">Oktas</a>
@@ -1472,8 +1370,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeokta">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_csharp">
 <a href="#samls_csharp" style="color: inherit; text-decoration: inherit;">Samls</a>
@@ -1481,8 +1378,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludesaml">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_csharp">
 <a href="#servicetokens_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tokens</a>
@@ -1490,13 +1386,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_go">
 <a href="#anyvalidservicetoken_go" style="color: inherit; text-decoration: inherit;">Any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -1504,8 +1398,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_go">
 <a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -1513,8 +1406,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_go">
 <a href="#azures_go" style="color: inherit; text-decoration: inherit;">Azures</a>
@@ -1522,8 +1414,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeazure">[]Access<wbr>Policy<wbr>Exclude<wbr>Azure</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1531,8 +1422,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1540,8 +1430,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_go">
 <a href="#emaildomains_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
@@ -1549,8 +1438,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -1558,8 +1446,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_go">
 <a href="#everyone_go" style="color: inherit; text-decoration: inherit;">Everyone</a>
@@ -1567,8 +1454,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_go">
 <a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
@@ -1576,8 +1462,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_go">
 <a href="#githubs_go" style="color: inherit; text-decoration: inherit;">Githubs</a>
@@ -1585,8 +1470,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegithub">[]Access<wbr>Policy<wbr>Exclude<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1594,8 +1478,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_go">
 <a href="#gsuites_go" style="color: inherit; text-decoration: inherit;">Gsuites</a>
@@ -1603,8 +1486,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegsuite">[]Access<wbr>Policy<wbr>Exclude<wbr>Gsuite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_go">
 <a href="#ips_go" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -1612,8 +1494,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
@@ -1621,8 +1502,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeokta">[]Access<wbr>Policy<wbr>Exclude<wbr>Okta</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_go">
 <a href="#samls_go" style="color: inherit; text-decoration: inherit;">Samls</a>
@@ -1630,8 +1510,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludesaml">[]Access<wbr>Policy<wbr>Exclude<wbr>Saml</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_go">
 <a href="#servicetokens_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tokens</a>
@@ -1639,13 +1518,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_nodejs">
 <a href="#anyvalidservicetoken_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -1653,8 +1530,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_nodejs">
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
@@ -1662,8 +1538,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
@@ -1671,8 +1546,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeazure">Access<wbr>Policy<wbr>Exclude<wbr>Azure[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1680,8 +1554,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -1689,8 +1562,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
@@ -1698,8 +1570,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -1707,8 +1578,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_nodejs">
 <a href="#everyone_nodejs" style="color: inherit; text-decoration: inherit;">everyone</a>
@@ -1716,8 +1586,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_nodejs">
 <a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
@@ -1725,8 +1594,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
@@ -1734,8 +1602,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegithub">Access<wbr>Policy<wbr>Exclude<wbr>Github[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1743,8 +1610,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_nodejs">
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
@@ -1752,8 +1618,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegsuite">Access<wbr>Policy<wbr>Exclude<wbr>Gsuite[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_nodejs">
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -1761,8 +1626,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_nodejs">
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
@@ -1770,8 +1634,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeokta">Access<wbr>Policy<wbr>Exclude<wbr>Okta[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_nodejs">
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
@@ -1779,8 +1642,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludesaml">Access<wbr>Policy<wbr>Exclude<wbr>Saml[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_nodejs">
 <a href="#servicetokens_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
@@ -1788,13 +1650,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="any_valid_service_token_python">
 <a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
@@ -1802,8 +1662,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_method_python">
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
@@ -1811,8 +1670,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
@@ -1820,8 +1678,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeazure">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1829,8 +1686,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -1838,8 +1694,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_domains_python">
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
@@ -1847,8 +1702,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -1856,8 +1710,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_python">
 <a href="#everyone_python" style="color: inherit; text-decoration: inherit;">everyone</a>
@@ -1865,8 +1718,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_python">
 <a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
@@ -1874,8 +1726,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_python">
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
@@ -1883,8 +1734,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegithub">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1892,8 +1742,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_python">
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
@@ -1901,8 +1750,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludegsuite">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -1910,8 +1758,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_python">
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
@@ -1919,8 +1766,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludeokta">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_python">
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
@@ -1928,8 +1774,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyexcludesaml">Sequence[Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_tokens_python">
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
@@ -1937,15 +1782,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyexcludeazure">Access<wbr>Policy<wbr>Exclude<wbr>Azure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -1953,8 +1796,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -1962,13 +1804,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -1976,8 +1816,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -1985,13 +1824,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -1999,8 +1836,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -2008,13 +1844,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -2022,8 +1856,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -2031,15 +1864,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyexcludegithub">Access<wbr>Policy<wbr>Exclude<wbr>Github</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2047,8 +1878,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2057,8 +1887,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_csharp">
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -2066,13 +1895,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2080,8 +1907,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2090,8 +1916,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_go">
 <a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -2099,13 +1924,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -2113,8 +1936,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2123,8 +1945,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_nodejs">
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -2132,13 +1953,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -2146,8 +1965,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2156,8 +1974,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_python">
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -2165,15 +1982,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyexcludegsuite">Access<wbr>Policy<wbr>Exclude<wbr>Gsuite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -2181,8 +1996,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2190,13 +2004,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -2204,8 +2016,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2213,13 +2024,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -2227,8 +2036,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -2236,13 +2044,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -2250,8 +2056,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -2259,15 +2064,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyexcludeokta">Access<wbr>Policy<wbr>Exclude<wbr>Okta</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2275,8 +2078,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -2285,13 +2087,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2299,8 +2099,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -2309,13 +2108,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -2323,8 +2120,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -2333,13 +2129,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -2347,8 +2141,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -2357,15 +2150,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyexcludesaml">Access<wbr>Policy<wbr>Exclude<wbr>Saml</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
 <a href="#attributename_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -2373,8 +2164,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_csharp">
 <a href="#attributevalue_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -2382,8 +2172,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2391,13 +2180,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
 <a href="#attributename_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -2405,8 +2192,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_go">
 <a href="#attributevalue_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -2414,8 +2200,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -2423,13 +2208,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
@@ -2437,8 +2220,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_nodejs">
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
@@ -2446,8 +2228,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -2455,13 +2236,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
@@ -2469,8 +2248,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_value_python">
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
@@ -2478,8 +2256,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -2487,15 +2264,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyinclude">Access<wbr>Policy<wbr>Include</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_csharp">
 <a href="#anyvalidservicetoken_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -2503,8 +2278,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_csharp">
 <a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -2512,8 +2286,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
@@ -2521,8 +2294,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeazure">List&lt;Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2530,8 +2302,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -2539,8 +2310,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
@@ -2548,8 +2318,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -2557,8 +2326,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_csharp">
 <a href="#everyone_csharp" style="color: inherit; text-decoration: inherit;">Everyone</a>
@@ -2566,8 +2334,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_csharp">
 <a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
@@ -2575,8 +2342,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
@@ -2584,8 +2350,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegithub">List&lt;Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2593,8 +2358,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_csharp">
 <a href="#gsuites_csharp" style="color: inherit; text-decoration: inherit;">Gsuites</a>
@@ -2602,8 +2366,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegsuite">List&lt;Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -2611,8 +2374,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_csharp">
 <a href="#oktas_csharp" style="color: inherit; text-decoration: inherit;">Oktas</a>
@@ -2620,8 +2382,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeokta">List&lt;Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_csharp">
 <a href="#samls_csharp" style="color: inherit; text-decoration: inherit;">Samls</a>
@@ -2629,8 +2390,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludesaml">List&lt;Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_csharp">
 <a href="#servicetokens_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tokens</a>
@@ -2638,13 +2398,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_go">
 <a href="#anyvalidservicetoken_go" style="color: inherit; text-decoration: inherit;">Any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -2652,8 +2410,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_go">
 <a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -2661,8 +2418,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_go">
 <a href="#azures_go" style="color: inherit; text-decoration: inherit;">Azures</a>
@@ -2670,8 +2426,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeazure">[]Access<wbr>Policy<wbr>Include<wbr>Azure</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2679,8 +2434,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -2688,8 +2442,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_go">
 <a href="#emaildomains_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
@@ -2697,8 +2450,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -2706,8 +2458,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_go">
 <a href="#everyone_go" style="color: inherit; text-decoration: inherit;">Everyone</a>
@@ -2715,8 +2466,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_go">
 <a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
@@ -2724,8 +2474,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_go">
 <a href="#githubs_go" style="color: inherit; text-decoration: inherit;">Githubs</a>
@@ -2733,8 +2482,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegithub">[]Access<wbr>Policy<wbr>Include<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2742,8 +2490,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_go">
 <a href="#gsuites_go" style="color: inherit; text-decoration: inherit;">Gsuites</a>
@@ -2751,8 +2498,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegsuite">[]Access<wbr>Policy<wbr>Include<wbr>Gsuite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_go">
 <a href="#ips_go" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -2760,8 +2506,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
@@ -2769,8 +2514,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeokta">[]Access<wbr>Policy<wbr>Include<wbr>Okta</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_go">
 <a href="#samls_go" style="color: inherit; text-decoration: inherit;">Samls</a>
@@ -2778,8 +2522,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludesaml">[]Access<wbr>Policy<wbr>Include<wbr>Saml</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_go">
 <a href="#servicetokens_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tokens</a>
@@ -2787,13 +2530,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_nodejs">
 <a href="#anyvalidservicetoken_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -2801,8 +2542,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_nodejs">
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
@@ -2810,8 +2550,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
@@ -2819,8 +2558,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeazure">Access<wbr>Policy<wbr>Include<wbr>Azure[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2828,8 +2566,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -2837,8 +2574,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
@@ -2846,8 +2582,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -2855,8 +2590,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_nodejs">
 <a href="#everyone_nodejs" style="color: inherit; text-decoration: inherit;">everyone</a>
@@ -2864,8 +2598,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_nodejs">
 <a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
@@ -2873,8 +2606,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
@@ -2882,8 +2614,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegithub">Access<wbr>Policy<wbr>Include<wbr>Github[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2891,8 +2622,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_nodejs">
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
@@ -2900,8 +2630,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegsuite">Access<wbr>Policy<wbr>Include<wbr>Gsuite[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_nodejs">
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -2909,8 +2638,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_nodejs">
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
@@ -2918,8 +2646,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeokta">Access<wbr>Policy<wbr>Include<wbr>Okta[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_nodejs">
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
@@ -2927,8 +2654,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludesaml">Access<wbr>Policy<wbr>Include<wbr>Saml[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_nodejs">
 <a href="#servicetokens_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
@@ -2936,13 +2662,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="any_valid_service_token_python">
 <a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
@@ -2950,8 +2674,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_method_python">
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
@@ -2959,8 +2682,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
@@ -2968,8 +2690,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeazure">Sequence[Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2977,8 +2698,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -2986,8 +2706,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_domains_python">
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
@@ -2995,8 +2714,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -3004,8 +2722,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_python">
 <a href="#everyone_python" style="color: inherit; text-decoration: inherit;">everyone</a>
@@ -3013,8 +2730,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_python">
 <a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
@@ -3022,8 +2738,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_python">
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
@@ -3031,8 +2746,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegithub">Sequence[Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -3040,8 +2754,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_python">
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
@@ -3049,8 +2762,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludegsuite">Sequence[Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -3058,8 +2770,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_python">
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
@@ -3067,8 +2778,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludeokta">Sequence[Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_python">
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
@@ -3076,8 +2786,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyincludesaml">Sequence[Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_tokens_python">
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
@@ -3085,15 +2794,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyincludeazure">Access<wbr>Policy<wbr>Include<wbr>Azure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3101,8 +2808,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -3110,13 +2816,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3124,8 +2828,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -3133,13 +2836,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -3147,8 +2848,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -3156,13 +2856,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -3170,8 +2868,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -3179,15 +2876,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyincludegithub">Access<wbr>Policy<wbr>Include<wbr>Github</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3195,8 +2890,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3205,8 +2899,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_csharp">
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -3214,13 +2907,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3228,8 +2919,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3238,8 +2928,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_go">
 <a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -3247,13 +2936,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -3261,8 +2948,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3271,8 +2957,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_nodejs">
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -3280,13 +2965,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -3294,8 +2977,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3304,8 +2986,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_python">
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -3313,15 +2994,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyincludegsuite">Access<wbr>Policy<wbr>Include<wbr>Gsuite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -3329,8 +3008,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3338,13 +3016,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -3352,8 +3028,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3361,13 +3036,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -3375,8 +3048,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -3384,13 +3056,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -3398,8 +3068,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -3407,15 +3076,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyincludeokta">Access<wbr>Policy<wbr>Include<wbr>Okta</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3423,8 +3090,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -3433,13 +3099,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3447,8 +3111,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -3457,13 +3120,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -3471,8 +3132,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -3481,13 +3141,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -3495,8 +3153,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -3505,15 +3162,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyincludesaml">Access<wbr>Policy<wbr>Include<wbr>Saml</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
 <a href="#attributename_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -3521,8 +3176,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_csharp">
 <a href="#attributevalue_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -3530,8 +3184,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3539,13 +3192,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
 <a href="#attributename_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -3553,8 +3204,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_go">
 <a href="#attributevalue_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -3562,8 +3212,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -3571,13 +3220,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
@@ -3585,8 +3232,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_nodejs">
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
@@ -3594,8 +3240,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -3603,13 +3248,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
@@ -3617,8 +3260,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_value_python">
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
@@ -3626,8 +3268,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -3635,15 +3276,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyrequire">Access<wbr>Policy<wbr>Require</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_csharp">
 <a href="#anyvalidservicetoken_csharp" style="color: inherit; text-decoration: inherit;">Any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -3651,8 +3290,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_csharp">
 <a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -3660,8 +3298,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_csharp">
 <a href="#azures_csharp" style="color: inherit; text-decoration: inherit;">Azures</a>
@@ -3669,8 +3306,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireazure">List&lt;Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3678,8 +3314,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -3687,8 +3322,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_csharp">
 <a href="#emaildomains_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
@@ -3696,8 +3330,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -3705,8 +3338,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_csharp">
 <a href="#everyone_csharp" style="color: inherit; text-decoration: inherit;">Everyone</a>
@@ -3714,8 +3346,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_csharp">
 <a href="#geos_csharp" style="color: inherit; text-decoration: inherit;">Geos</a>
@@ -3723,8 +3354,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_csharp">
 <a href="#githubs_csharp" style="color: inherit; text-decoration: inherit;">Githubs</a>
@@ -3732,8 +3362,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregithub">List&lt;Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -3741,8 +3370,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_csharp">
 <a href="#gsuites_csharp" style="color: inherit; text-decoration: inherit;">Gsuites</a>
@@ -3750,8 +3378,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregsuite">List&lt;Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_csharp">
 <a href="#ips_csharp" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -3759,8 +3386,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_csharp">
 <a href="#oktas_csharp" style="color: inherit; text-decoration: inherit;">Oktas</a>
@@ -3768,8 +3394,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireokta">List&lt;Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_csharp">
 <a href="#samls_csharp" style="color: inherit; text-decoration: inherit;">Samls</a>
@@ -3777,8 +3402,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiresaml">List&lt;Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_csharp">
 <a href="#servicetokens_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Tokens</a>
@@ -3786,13 +3410,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_go">
 <a href="#anyvalidservicetoken_go" style="color: inherit; text-decoration: inherit;">Any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -3800,8 +3422,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_go">
 <a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -3809,8 +3430,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_go">
 <a href="#azures_go" style="color: inherit; text-decoration: inherit;">Azures</a>
@@ -3818,8 +3438,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireazure">[]Access<wbr>Policy<wbr>Require<wbr>Azure</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3827,8 +3446,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -3836,8 +3454,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_go">
 <a href="#emaildomains_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Domains</a>
@@ -3845,8 +3462,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -3854,8 +3470,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_go">
 <a href="#everyone_go" style="color: inherit; text-decoration: inherit;">Everyone</a>
@@ -3863,8 +3478,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_go">
 <a href="#geos_go" style="color: inherit; text-decoration: inherit;">Geos</a>
@@ -3872,8 +3486,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_go">
 <a href="#githubs_go" style="color: inherit; text-decoration: inherit;">Githubs</a>
@@ -3881,8 +3494,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregithub">[]Access<wbr>Policy<wbr>Require<wbr>Github</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -3890,8 +3502,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_go">
 <a href="#gsuites_go" style="color: inherit; text-decoration: inherit;">Gsuites</a>
@@ -3899,8 +3510,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregsuite">[]Access<wbr>Policy<wbr>Require<wbr>Gsuite</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_go">
 <a href="#ips_go" style="color: inherit; text-decoration: inherit;">Ips</a>
@@ -3908,8 +3518,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_go">
 <a href="#oktas_go" style="color: inherit; text-decoration: inherit;">Oktas</a>
@@ -3917,8 +3526,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireokta">[]Access<wbr>Policy<wbr>Require<wbr>Okta</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_go">
 <a href="#samls_go" style="color: inherit; text-decoration: inherit;">Samls</a>
@@ -3926,8 +3534,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiresaml">[]Access<wbr>Policy<wbr>Require<wbr>Saml</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_go">
 <a href="#servicetokens_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Tokens</a>
@@ -3935,13 +3542,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_nodejs">
 <a href="#anyvalidservicetoken_nodejs" style="color: inherit; text-decoration: inherit;">any<wbr>Valid<wbr>Service<wbr>Token</a>
@@ -3949,8 +3554,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_nodejs">
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
@@ -3958,8 +3562,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_nodejs">
 <a href="#azures_nodejs" style="color: inherit; text-decoration: inherit;">azures</a>
@@ -3967,8 +3570,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireazure">Access<wbr>Policy<wbr>Require<wbr>Azure[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3976,8 +3578,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -3985,8 +3586,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaildomains_nodejs">
 <a href="#emaildomains_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Domains</a>
@@ -3994,8 +3594,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -4003,8 +3602,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_nodejs">
 <a href="#everyone_nodejs" style="color: inherit; text-decoration: inherit;">everyone</a>
@@ -4012,8 +3610,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_nodejs">
 <a href="#geos_nodejs" style="color: inherit; text-decoration: inherit;">geos</a>
@@ -4021,8 +3618,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_nodejs">
 <a href="#githubs_nodejs" style="color: inherit; text-decoration: inherit;">githubs</a>
@@ -4030,8 +3626,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregithub">Access<wbr>Policy<wbr>Require<wbr>Github[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -4039,8 +3634,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_nodejs">
 <a href="#gsuites_nodejs" style="color: inherit; text-decoration: inherit;">gsuites</a>
@@ -4048,8 +3642,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregsuite">Access<wbr>Policy<wbr>Require<wbr>Gsuite[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_nodejs">
 <a href="#ips_nodejs" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -4057,8 +3650,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_nodejs">
 <a href="#oktas_nodejs" style="color: inherit; text-decoration: inherit;">oktas</a>
@@ -4066,8 +3658,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireokta">Access<wbr>Policy<wbr>Require<wbr>Okta[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_nodejs">
 <a href="#samls_nodejs" style="color: inherit; text-decoration: inherit;">samls</a>
@@ -4075,8 +3666,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiresaml">Access<wbr>Policy<wbr>Require<wbr>Saml[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetokens_nodejs">
 <a href="#servicetokens_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Tokens</a>
@@ -4084,13 +3674,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="any_valid_service_token_python">
 <a href="#any_valid_service_token_python" style="color: inherit; text-decoration: inherit;">any_<wbr>valid_<wbr>service_<wbr>token</a>
@@ -4098,8 +3686,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_method_python">
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
@@ -4107,8 +3694,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azures_python">
 <a href="#azures_python" style="color: inherit; text-decoration: inherit;">azures</a>
@@ -4116,8 +3702,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireazure">Sequence[Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4125,8 +3710,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -4134,8 +3718,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_domains_python">
 <a href="#email_domains_python" style="color: inherit; text-decoration: inherit;">email_<wbr>domains</a>
@@ -4143,8 +3726,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -4152,8 +3734,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="everyone_python">
 <a href="#everyone_python" style="color: inherit; text-decoration: inherit;">everyone</a>
@@ -4161,8 +3742,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geos_python">
 <a href="#geos_python" style="color: inherit; text-decoration: inherit;">geos</a>
@@ -4170,8 +3750,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="githubs_python">
 <a href="#githubs_python" style="color: inherit; text-decoration: inherit;">githubs</a>
@@ -4179,8 +3758,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregithub">Sequence[Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -4188,8 +3766,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gsuites_python">
 <a href="#gsuites_python" style="color: inherit; text-decoration: inherit;">gsuites</a>
@@ -4197,8 +3774,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiregsuite">Sequence[Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ips_python">
 <a href="#ips_python" style="color: inherit; text-decoration: inherit;">ips</a>
@@ -4206,8 +3782,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oktas_python">
 <a href="#oktas_python" style="color: inherit; text-decoration: inherit;">oktas</a>
@@ -4215,8 +3790,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequireokta">Sequence[Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samls_python">
 <a href="#samls_python" style="color: inherit; text-decoration: inherit;">samls</a>
@@ -4224,8 +3798,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accesspolicyrequiresaml">Sequence[Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_tokens_python">
 <a href="#service_tokens_python" style="color: inherit; text-decoration: inherit;">service_<wbr>tokens</a>
@@ -4233,15 +3806,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyrequireazure">Access<wbr>Policy<wbr>Require<wbr>Azure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4249,8 +3820,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -4258,13 +3828,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4272,8 +3840,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -4281,13 +3848,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -4295,8 +3860,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -4304,13 +3868,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -4318,8 +3880,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -4327,15 +3888,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyrequiregithub">Access<wbr>Policy<wbr>Require<wbr>Github</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4343,8 +3902,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4353,8 +3911,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_csharp">
 <a href="#teams_csharp" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -4362,13 +3919,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4376,8 +3931,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4386,8 +3940,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_go">
 <a href="#teams_go" style="color: inherit; text-decoration: inherit;">Teams</a>
@@ -4395,13 +3948,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -4409,8 +3960,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4419,8 +3969,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_nodejs">
 <a href="#teams_nodejs" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -4428,13 +3977,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -4442,8 +3989,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4452,8 +3998,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="teams_python">
 <a href="#teams_python" style="color: inherit; text-decoration: inherit;">teams</a>
@@ -4461,15 +4006,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyrequiregsuite">Access<wbr>Policy<wbr>Require<wbr>Gsuite</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
 <a href="#emails_csharp" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -4477,8 +4020,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4486,13 +4028,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_go">
 <a href="#emails_go" style="color: inherit; text-decoration: inherit;">Emails</a>
@@ -4500,8 +4040,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4509,13 +4048,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
 <a href="#emails_nodejs" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -4523,8 +4060,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -4532,13 +4068,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emails_python">
 <a href="#emails_python" style="color: inherit; text-decoration: inherit;">emails</a>
@@ -4546,8 +4080,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -4555,15 +4088,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyrequireokta">Access<wbr>Policy<wbr>Require<wbr>Okta</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4571,8 +4102,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_csharp">
 <a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -4581,13 +4111,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4595,8 +4123,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_go">
 <a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
@@ -4605,13 +4132,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -4619,8 +4144,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_nodejs">
 <a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
@@ -4629,13 +4153,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -4643,8 +4165,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="names_python">
 <a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
@@ -4653,15 +4174,13 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesspolicyrequiresaml">Access<wbr>Policy<wbr>Require<wbr>Saml</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
 <a href="#attributename_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -4669,8 +4188,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_csharp">
 <a href="#attributevalue_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -4678,8 +4196,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
 <a href="#identityproviderid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4687,13 +4204,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
 <a href="#attributename_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Name</a>
@@ -4701,8 +4216,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_go">
 <a href="#attributevalue_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Value</a>
@@ -4710,8 +4224,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
 <a href="#identityproviderid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Id</a>
@@ -4719,13 +4232,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
 <a href="#attributename_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Name</a>
@@ -4733,8 +4244,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributevalue_nodejs">
 <a href="#attributevalue_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Value</a>
@@ -4742,8 +4252,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
 <a href="#identityproviderid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Id</a>
@@ -4751,13 +4260,11 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">
 <a href="#attribute_name_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>name</a>
@@ -4765,8 +4272,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_value_python">
 <a href="#attribute_value_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>value</a>
@@ -4774,8 +4280,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
 <a href="#identity_provider_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>id</a>
@@ -4783,8 +4288,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

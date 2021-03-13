@@ -477,8 +477,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appprofileid_csharp">
 <a href="#appprofileid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
@@ -487,8 +486,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -497,8 +495,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorewarnings_csharp">
 <a href="#ignorewarnings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
@@ -507,8 +504,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -517,8 +513,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiclusterroutinguseany_csharp">
 <a href="#multiclusterroutinguseany_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
@@ -529,8 +524,7 @@ The AppProfile resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -540,8 +534,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleclusterrouting_csharp">
 <a href="#singleclusterrouting_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
@@ -551,13 +544,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appprofileid_go">
 <a href="#appprofileid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
@@ -566,8 +557,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -576,8 +566,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorewarnings_go">
 <a href="#ignorewarnings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
@@ -586,8 +575,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -596,8 +584,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiclusterroutinguseany_go">
 <a href="#multiclusterroutinguseany_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
@@ -608,8 +595,7 @@ Structure is documented below.
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -619,8 +605,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleclusterrouting_go">
 <a href="#singleclusterrouting_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
@@ -630,13 +615,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appprofileid_nodejs">
 <a href="#appprofileid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Profile<wbr>Id</a>
@@ -645,8 +628,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -655,8 +637,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorewarnings_nodejs">
 <a href="#ignorewarnings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Warnings</a>
@@ -665,8 +646,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -675,8 +655,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multiclusterroutinguseany_nodejs">
 <a href="#multiclusterroutinguseany_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
@@ -687,8 +666,7 @@ Structure is documented below.
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -698,8 +676,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleclusterrouting_nodejs">
 <a href="#singleclusterrouting_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Cluster<wbr>Routing</a>
@@ -709,13 +686,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_profile_id_python">
 <a href="#app_profile_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>profile_<wbr>id</a>
@@ -724,8 +699,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -734,8 +708,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_warnings_python">
 <a href="#ignore_warnings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>warnings</a>
@@ -744,8 +717,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -754,8 +726,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multi_cluster_routing_use_any_python">
 <a href="#multi_cluster_routing_use_any_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>cluster_<wbr>routing_<wbr>use_<wbr>any</a>
@@ -766,8 +737,7 @@ Structure is documented below.
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -777,8 +747,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_cluster_routing_python">
 <a href="#single_cluster_routing_python" style="color: inherit; text-decoration: inherit;">single_<wbr>cluster_<wbr>routing</a>
@@ -788,8 +757,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -809,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -820,13 +786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -834,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -845,13 +808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -859,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -870,13 +830,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -884,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -895,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1023,8 +979,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appprofileid_csharp">
 <a href="#state_appprofileid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
@@ -1033,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1043,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorewarnings_csharp">
 <a href="#state_ignorewarnings_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
@@ -1053,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1063,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiclusterroutinguseany_csharp">
 <a href="#state_multiclusterroutinguseany_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
@@ -1075,8 +1026,7 @@ The following state arguments are supported:
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1086,8 +1036,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1097,8 +1046,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singleclusterrouting_csharp">
 <a href="#state_singleclusterrouting_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
@@ -1108,13 +1056,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appprofileid_go">
 <a href="#state_appprofileid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Profile<wbr>Id</a>
@@ -1123,8 +1069,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1133,8 +1078,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorewarnings_go">
 <a href="#state_ignorewarnings_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Warnings</a>
@@ -1143,8 +1087,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1153,8 +1096,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiclusterroutinguseany_go">
 <a href="#state_multiclusterroutinguseany_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
@@ -1165,8 +1107,7 @@ Structure is documented below.
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1176,8 +1117,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1187,8 +1127,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singleclusterrouting_go">
 <a href="#state_singleclusterrouting_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Cluster<wbr>Routing</a>
@@ -1198,13 +1137,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appprofileid_nodejs">
 <a href="#state_appprofileid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Profile<wbr>Id</a>
@@ -1213,8 +1150,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1223,8 +1159,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorewarnings_nodejs">
 <a href="#state_ignorewarnings_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Warnings</a>
@@ -1233,8 +1168,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1243,8 +1177,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiclusterroutinguseany_nodejs">
 <a href="#state_multiclusterroutinguseany_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Cluster<wbr>Routing<wbr>Use<wbr>Any</a>
@@ -1255,8 +1188,7 @@ Structure is documented below.
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1266,8 +1198,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1277,8 +1208,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singleclusterrouting_nodejs">
 <a href="#state_singleclusterrouting_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Cluster<wbr>Routing</a>
@@ -1288,13 +1218,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_profile_id_python">
 <a href="#state_app_profile_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>profile_<wbr>id</a>
@@ -1303,8 +1231,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1313,8 +1240,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long form description of the use case for this app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_warnings_python">
 <a href="#state_ignore_warnings_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>warnings</a>
@@ -1323,8 +1249,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, ignore safety checks when deleting/updating the app profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1333,8 +1258,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance to create the app profile within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multi_cluster_routing_use_any_python">
 <a href="#state_multi_cluster_routing_use_any_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>cluster_<wbr>routing_<wbr>use_<wbr>any</a>
@@ -1345,8 +1269,7 @@ Structure is documented below.
     <dd>{{% md %}}If true, read/write requests are routed to the nearest cluster in the instance, and will fail over to the nearest cluster that is available
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1356,8 +1279,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The unique name of the requested app profile. Values are of the form
 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1367,8 +1289,7 @@ consistency to improve availability.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_cluster_routing_python">
 <a href="#state_single_cluster_routing_python" style="color: inherit; text-decoration: inherit;">single_<wbr>cluster_<wbr>routing</a>
@@ -1378,8 +1299,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Use a single-cluster routing policy.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1394,8 +1314,7 @@ Structure is documented below.
 <h4 id="appprofilesingleclusterrouting">App<wbr>Profile<wbr>Single<wbr>Cluster<wbr>Routing</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1404,8 +1323,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtransactionalwrites_csharp">
 <a href="#allowtransactionalwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Transactional<wbr>Writes</a>
@@ -1415,13 +1333,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -1430,8 +1346,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtransactionalwrites_go">
 <a href="#allowtransactionalwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Transactional<wbr>Writes</a>
@@ -1441,13 +1356,11 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -1456,8 +1369,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtransactionalwrites_nodejs">
 <a href="#allowtransactionalwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Transactional<wbr>Writes</a>
@@ -1467,13 +1379,11 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -1482,8 +1392,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster to which read/write requests should be routed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_transactional_writes_python">
 <a href="#allow_transactional_writes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>transactional_<wbr>writes</a>
@@ -1493,8 +1402,7 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
     </dt>
     <dd>{{% md %}}If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
 It is unsafe to send these requests to the same table/row/column in multiple clusters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

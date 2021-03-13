@@ -263,8 +263,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainid_csharp">
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -273,8 +272,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userprofilename_csharp">
 <a href="#userprofilename_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
@@ -283,8 +281,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuseridentifier_csharp">
 <a href="#singlesignonuseridentifier_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -293,8 +290,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuservalue_csharp">
 <a href="#singlesignonuservalue_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
@@ -303,8 +299,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -313,8 +308,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersettings_csharp">
 <a href="#usersettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
@@ -323,13 +317,11 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainid_go">
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -338,8 +330,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userprofilename_go">
 <a href="#userprofilename_go" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
@@ -348,8 +339,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuseridentifier_go">
 <a href="#singlesignonuseridentifier_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -358,8 +348,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuservalue_go">
 <a href="#singlesignonuservalue_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
@@ -368,8 +357,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -378,8 +366,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersettings_go">
 <a href="#usersettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
@@ -388,13 +375,11 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainid_nodejs">
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -403,8 +388,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userprofilename_nodejs">
 <a href="#userprofilename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Profile<wbr>Name</a>
@@ -413,8 +397,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuseridentifier_nodejs">
 <a href="#singlesignonuseridentifier_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -423,8 +406,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlesignonuservalue_nodejs">
 <a href="#singlesignonuservalue_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
@@ -433,8 +415,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -443,8 +424,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersettings_nodejs">
 <a href="#usersettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings</a>
@@ -453,13 +433,11 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_id_python">
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -468,8 +446,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_profile_name_python">
 <a href="#user_profile_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>profile_<wbr>name</a>
@@ -478,8 +455,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_sign_on_user_identifier_python">
 <a href="#single_sign_on_user_identifier_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>identifier</a>
@@ -488,8 +464,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_sign_on_user_value_python">
 <a href="#single_sign_on_user_value_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>value</a>
@@ -498,8 +473,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -508,8 +482,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_settings_python">
 <a href="#user_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings</a>
@@ -518,8 +491,7 @@ The UserProfile resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -530,8 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -540,8 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="homeefsfilesystemuid_csharp">
 <a href="#homeefsfilesystemuid_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
@@ -550,8 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,13 +528,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -574,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="homeefsfilesystemuid_go">
 <a href="#homeefsfilesystemuid_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
@@ -584,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -593,13 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -608,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="homeefsfilesystemuid_nodejs">
 <a href="#homeefsfilesystemuid_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
@@ -618,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -627,13 +588,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -642,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="home_efs_file_system_uid_python">
 <a href="#home_efs_file_system_uid_python" style="color: inherit; text-decoration: inherit;">home_<wbr>efs_<wbr>file_<wbr>system_<wbr>uid</a>
@@ -652,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -661,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -789,8 +745,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -799,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_csharp">
 <a href="#state_domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -809,8 +763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homeefsfilesystemuid_csharp">
 <a href="#state_homeefsfilesystemuid_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
@@ -819,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonuseridentifier_csharp">
 <a href="#state_singlesignonuseridentifier_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -829,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonuservalue_csharp">
 <a href="#state_singlesignonuservalue_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
@@ -839,8 +790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -849,8 +799,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userprofilename_csharp">
 <a href="#state_userprofilename_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
@@ -859,8 +808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersettings_csharp">
 <a href="#state_usersettings_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
@@ -869,13 +817,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -884,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_go">
 <a href="#state_domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
@@ -894,8 +839,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homeefsfilesystemuid_go">
 <a href="#state_homeefsfilesystemuid_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
@@ -904,8 +848,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonuseridentifier_go">
 <a href="#state_singlesignonuseridentifier_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -914,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonuservalue_go">
 <a href="#state_singlesignonuservalue_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
@@ -924,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -934,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userprofilename_go">
 <a href="#state_userprofilename_go" style="color: inherit; text-decoration: inherit;">User<wbr>Profile<wbr>Name</a>
@@ -944,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersettings_go">
 <a href="#state_usersettings_go" style="color: inherit; text-decoration: inherit;">User<wbr>Settings</a>
@@ -954,13 +893,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -969,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainid_nodejs">
 <a href="#state_domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
@@ -979,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homeefsfilesystemuid_nodejs">
 <a href="#state_homeefsfilesystemuid_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Efs<wbr>File<wbr>System<wbr>Uid</a>
@@ -989,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonuseridentifier_nodejs">
 <a href="#state_singlesignonuseridentifier_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Identifier</a>
@@ -999,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlesignonuservalue_nodejs">
 <a href="#state_singlesignonuservalue_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Sign<wbr>On<wbr>User<wbr>Value</a>
@@ -1009,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1019,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userprofilename_nodejs">
 <a href="#state_userprofilename_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Profile<wbr>Name</a>
@@ -1029,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersettings_nodejs">
 <a href="#state_usersettings_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings</a>
@@ -1039,13 +969,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1054,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user profile Amazon Resource Name (ARN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_id_python">
 <a href="#state_domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
@@ -1064,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_home_efs_file_system_uid_python">
 <a href="#state_home_efs_file_system_uid_python" style="color: inherit; text-decoration: inherit;">home_<wbr>efs_<wbr>file_<wbr>system_<wbr>uid</a>
@@ -1074,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_sign_on_user_identifier_python">
 <a href="#state_single_sign_on_user_identifier_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>identifier</a>
@@ -1084,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_sign_on_user_value_python">
 <a href="#state_single_sign_on_user_value_python" style="color: inherit; text-decoration: inherit;">single_<wbr>sign_<wbr>on_<wbr>user_<wbr>value</a>
@@ -1094,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1104,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_profile_name_python">
 <a href="#state_user_profile_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>profile_<wbr>name</a>
@@ -1114,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the User Profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_settings_python">
 <a href="#state_user_settings_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings</a>
@@ -1124,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The user settings. See User Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1140,8 +1060,7 @@ The following state arguments are supported:
 <h4 id="userprofileusersettings">User<wbr>Profile<wbr>User<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="executionrole_csharp">
 <a href="#executionrole_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Role</a>
@@ -1150,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The execution role ARN for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jupyterserverappsettings_csharp">
 <a href="#jupyterserverappsettings_csharp" style="color: inherit; text-decoration: inherit;">Jupyter<wbr>Server<wbr>App<wbr>Settings</a>
@@ -1160,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelgatewayappsettings_csharp">
 <a href="#kernelgatewayappsettings_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
@@ -1170,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1180,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharingsettings_csharp">
 <a href="#sharingsettings_csharp" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Settings</a>
@@ -1190,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tensorboardappsettings_csharp">
 <a href="#tensorboardappsettings_csharp" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Board<wbr>App<wbr>Settings</a>
@@ -1200,13 +1114,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="executionrole_go">
 <a href="#executionrole_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Role</a>
@@ -1215,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The execution role ARN for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jupyterserverappsettings_go">
 <a href="#jupyterserverappsettings_go" style="color: inherit; text-decoration: inherit;">Jupyter<wbr>Server<wbr>App<wbr>Settings</a>
@@ -1225,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelgatewayappsettings_go">
 <a href="#kernelgatewayappsettings_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
@@ -1235,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1245,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharingsettings_go">
 <a href="#sharingsettings_go" style="color: inherit; text-decoration: inherit;">Sharing<wbr>Settings</a>
@@ -1255,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tensorboardappsettings_go">
 <a href="#tensorboardappsettings_go" style="color: inherit; text-decoration: inherit;">Tensor<wbr>Board<wbr>App<wbr>Settings</a>
@@ -1265,13 +1172,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="executionrole_nodejs">
 <a href="#executionrole_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Role</a>
@@ -1280,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The execution role ARN for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jupyterserverappsettings_nodejs">
 <a href="#jupyterserverappsettings_nodejs" style="color: inherit; text-decoration: inherit;">jupyter<wbr>Server<wbr>App<wbr>Settings</a>
@@ -1290,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernelgatewayappsettings_nodejs">
 <a href="#kernelgatewayappsettings_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Gateway<wbr>App<wbr>Settings</a>
@@ -1300,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1310,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharingsettings_nodejs">
 <a href="#sharingsettings_nodejs" style="color: inherit; text-decoration: inherit;">sharing<wbr>Settings</a>
@@ -1320,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tensorboardappsettings_nodejs">
 <a href="#tensorboardappsettings_nodejs" style="color: inherit; text-decoration: inherit;">tensor<wbr>Board<wbr>App<wbr>Settings</a>
@@ -1330,13 +1230,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="execution_role_python">
 <a href="#execution_role_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>role</a>
@@ -1345,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The execution role ARN for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jupyter_server_app_settings_python">
 <a href="#jupyter_server_app_settings_python" style="color: inherit; text-decoration: inherit;">jupyter_<wbr>server_<wbr>app_<wbr>settings</a>
@@ -1355,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Jupyter server's app settings. See Jupyter Server App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kernel_gateway_app_settings_python">
 <a href="#kernel_gateway_app_settings_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>gateway_<wbr>app_<wbr>settings</a>
@@ -1365,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The kernel gateway app settings. See Kernel Gateway App Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -1375,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_settings_python">
 <a href="#sharing_settings_python" style="color: inherit; text-decoration: inherit;">sharing_<wbr>settings</a>
@@ -1385,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The sharing settings. See Sharing Settings below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tensor_board_app_settings_python">
 <a href="#tensor_board_app_settings_python" style="color: inherit; text-decoration: inherit;">tensor_<wbr>board_<wbr>app_<wbr>settings</a>
@@ -1395,15 +1288,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TensorBoard app settings. See TensorBoard App Settings below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingsjupyterserverappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
@@ -1412,13 +1303,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
@@ -1427,13 +1316,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
@@ -1442,13 +1329,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
@@ -1457,15 +1342,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingsjupyterserverappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1474,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_csharp">
 <a href="#sagemakerimagearn_csharp" style="color: inherit; text-decoration: inherit;">Sagemaker<wbr>Image<wbr>Arn</a>
@@ -1484,13 +1366,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1499,8 +1379,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_go">
 <a href="#sagemakerimagearn_go" style="color: inherit; text-decoration: inherit;">Sagemaker<wbr>Image<wbr>Arn</a>
@@ -1509,13 +1388,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1524,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_nodejs">
 <a href="#sagemakerimagearn_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker<wbr>Image<wbr>Arn</a>
@@ -1534,13 +1410,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1549,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemaker_image_arn_python">
 <a href="#sagemaker_image_arn_python" style="color: inherit; text-decoration: inherit;">sagemaker_<wbr>image_<wbr>arn</a>
@@ -1559,15 +1432,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingskernelgatewayappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
@@ -1576,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customimages_csharp">
 <a href="#customimages_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Images</a>
@@ -1586,13 +1456,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">List&lt;User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
@@ -1601,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customimages_go">
 <a href="#customimages_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Images</a>
@@ -1611,13 +1478,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">[]User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
@@ -1626,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customimages_nodejs">
 <a href="#customimages_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Images</a>
@@ -1636,13 +1500,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image[]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
@@ -1651,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_images_python">
 <a href="#custom_images_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>images</a>
@@ -1661,15 +1522,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingskernelgatewayappsettingscustomimage">Sequence[User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingskernelgatewayappsettingscustomimage">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appimageconfigname_csharp">
 <a href="#appimageconfigname_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Image<wbr>Config<wbr>Name</a>
@@ -1678,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1688,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Custom Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageversionnumber_csharp">
 <a href="#imageversionnumber_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version<wbr>Number</a>
@@ -1698,13 +1555,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the Custom Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appimageconfigname_go">
 <a href="#appimageconfigname_go" style="color: inherit; text-decoration: inherit;">App<wbr>Image<wbr>Config<wbr>Name</a>
@@ -1713,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1723,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Custom Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageversionnumber_go">
 <a href="#imageversionnumber_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version<wbr>Number</a>
@@ -1733,13 +1586,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the Custom Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appimageconfigname_nodejs">
 <a href="#appimageconfigname_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Image<wbr>Config<wbr>Name</a>
@@ -1748,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1758,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Custom Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageversionnumber_nodejs">
 <a href="#imageversionnumber_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Number</a>
@@ -1768,13 +1617,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The version number of the Custom Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_image_config_name_python">
 <a href="#app_image_config_name_python" style="color: inherit; text-decoration: inherit;">app_<wbr>image_<wbr>config_<wbr>name</a>
@@ -1783,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Image Config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -1793,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Custom Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_version_number_python">
 <a href="#image_version_number_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>number</a>
@@ -1803,15 +1648,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The version number of the Custom Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingskernelgatewayappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1820,8 +1663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_csharp">
 <a href="#sagemakerimagearn_csharp" style="color: inherit; text-decoration: inherit;">Sagemaker<wbr>Image<wbr>Arn</a>
@@ -1830,13 +1672,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -1845,8 +1685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_go">
 <a href="#sagemakerimagearn_go" style="color: inherit; text-decoration: inherit;">Sagemaker<wbr>Image<wbr>Arn</a>
@@ -1855,13 +1694,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -1870,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_nodejs">
 <a href="#sagemakerimagearn_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker<wbr>Image<wbr>Arn</a>
@@ -1880,13 +1716,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -1895,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemaker_image_arn_python">
 <a href="#sagemaker_image_arn_python" style="color: inherit; text-decoration: inherit;">sagemaker_<wbr>image_<wbr>arn</a>
@@ -1905,15 +1738,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingssharingsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="notebookoutputoption_csharp">
 <a href="#notebookoutputoption_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Output<wbr>Option</a>
@@ -1922,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3kmskeyid_csharp">
 <a href="#s3kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">S3Kms<wbr>Key<wbr>Id</a>
@@ -1932,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3outputpath_csharp">
 <a href="#s3outputpath_csharp" style="color: inherit; text-decoration: inherit;">S3Output<wbr>Path</a>
@@ -1942,13 +1771,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="notebookoutputoption_go">
 <a href="#notebookoutputoption_go" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Output<wbr>Option</a>
@@ -1957,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3kmskeyid_go">
 <a href="#s3kmskeyid_go" style="color: inherit; text-decoration: inherit;">S3Kms<wbr>Key<wbr>Id</a>
@@ -1967,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3outputpath_go">
 <a href="#s3outputpath_go" style="color: inherit; text-decoration: inherit;">S3Output<wbr>Path</a>
@@ -1977,13 +1802,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="notebookoutputoption_nodejs">
 <a href="#notebookoutputoption_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Output<wbr>Option</a>
@@ -1992,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3kmskeyid_nodejs">
 <a href="#s3kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">s3Kms<wbr>Key<wbr>Id</a>
@@ -2002,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3outputpath_nodejs">
 <a href="#s3outputpath_nodejs" style="color: inherit; text-decoration: inherit;">s3Output<wbr>Path</a>
@@ -2012,13 +1833,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="notebook_output_option_python">
 <a href="#notebook_output_option_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>output_<wbr>option</a>
@@ -2027,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to include the notebook cell output when sharing the notebook. The default is `Disabled`. Valid values are `Allowed` and `Disabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_kms_key_id_python">
 <a href="#s3_kms_key_id_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>kms_<wbr>key_<wbr>id</a>
@@ -2037,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the AWS Key Management Service (KMS) encryption key ID used to encrypt the notebook cell output in the Amazon S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_output_path_python">
 <a href="#s3_output_path_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>output_<wbr>path</a>
@@ -2047,15 +1864,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `notebook_output_option` is Allowed, the Amazon S3 bucket used to save the notebook cell output.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingstensorboardappsettings">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
@@ -2064,13 +1879,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
@@ -2079,13 +1892,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
@@ -2094,13 +1905,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
@@ -2109,15 +1918,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userprofileusersettingstensorboardappsettingsdefaultresourcespec">User<wbr>Profile<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2126,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_csharp">
 <a href="#sagemakerimagearn_csharp" style="color: inherit; text-decoration: inherit;">Sagemaker<wbr>Image<wbr>Arn</a>
@@ -2136,13 +1942,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2151,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_go">
 <a href="#sagemakerimagearn_go" style="color: inherit; text-decoration: inherit;">Sagemaker<wbr>Image<wbr>Arn</a>
@@ -2161,13 +1964,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -2176,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemakerimagearn_nodejs">
 <a href="#sagemakerimagearn_nodejs" style="color: inherit; text-decoration: inherit;">sagemaker<wbr>Image<wbr>Arn</a>
@@ -2186,13 +1986,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -2201,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sagemaker_image_arn_python">
 <a href="#sagemaker_image_arn_python" style="color: inherit; text-decoration: inherit;">sagemaker_<wbr>image_<wbr>arn</a>
@@ -2211,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -402,8 +402,7 @@ The SubnetPool resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prefixes_csharp">
 <a href="#prefixes_csharp" style="color: inherit; text-decoration: inherit;">Prefixes</a>
@@ -416,8 +415,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressscopeid_csharp">
 <a href="#addressscopeid_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -428,8 +426,7 @@ of the existing subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprefixlen_csharp">
 <a href="#defaultprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -441,8 +438,7 @@ subnetpool.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultquota_csharp">
 <a href="#defaultquota_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -453,8 +449,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -464,8 +459,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -474,8 +468,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_csharp">
 <a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -486,8 +479,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxprefixlen_csharp">
 <a href="#maxprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -499,8 +491,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minprefixlen_csharp">
 <a href="#minprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -511,8 +502,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -522,8 +512,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -533,8 +522,7 @@ the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -546,8 +534,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_csharp">
 <a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -558,8 +545,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -568,8 +554,7 @@ subnetpool.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -578,13 +563,11 @@ subnetpool.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prefixes_go">
 <a href="#prefixes_go" style="color: inherit; text-decoration: inherit;">Prefixes</a>
@@ -597,8 +580,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressscopeid_go">
 <a href="#addressscopeid_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -609,8 +591,7 @@ of the existing subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprefixlen_go">
 <a href="#defaultprefixlen_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -622,8 +603,7 @@ subnetpool.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultquota_go">
 <a href="#defaultquota_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -634,8 +614,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -645,8 +624,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -655,8 +633,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_go">
 <a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -667,8 +644,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxprefixlen_go">
 <a href="#maxprefixlen_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -680,8 +656,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minprefixlen_go">
 <a href="#minprefixlen_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -692,8 +667,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -703,8 +677,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -714,8 +687,7 @@ the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -727,8 +699,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_go">
 <a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -739,8 +710,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -749,8 +719,7 @@ subnetpool.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -759,13 +728,11 @@ subnetpool.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prefixes_nodejs">
 <a href="#prefixes_nodejs" style="color: inherit; text-decoration: inherit;">prefixes</a>
@@ -778,8 +745,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="addressscopeid_nodejs">
 <a href="#addressscopeid_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Scope<wbr>Id</a>
@@ -790,8 +756,7 @@ of the existing subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultprefixlen_nodejs">
 <a href="#defaultprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Prefixlen</a>
@@ -803,8 +768,7 @@ subnetpool.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultquota_nodejs">
 <a href="#defaultquota_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Quota</a>
@@ -815,8 +779,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -826,8 +789,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -836,8 +798,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isdefault_nodejs">
 <a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -848,8 +809,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxprefixlen_nodejs">
 <a href="#maxprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixlen</a>
@@ -861,8 +821,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minprefixlen_nodejs">
 <a href="#minprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Prefixlen</a>
@@ -873,8 +832,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -884,8 +842,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -895,8 +852,7 @@ the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -908,8 +864,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_nodejs">
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -920,8 +875,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -930,8 +884,7 @@ subnetpool.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -940,13 +893,11 @@ subnetpool.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="prefixes_python">
 <a href="#prefixes_python" style="color: inherit; text-decoration: inherit;">prefixes</a>
@@ -959,8 +910,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_scope_id_python">
 <a href="#address_scope_id_python" style="color: inherit; text-decoration: inherit;">address_<wbr>scope_<wbr>id</a>
@@ -971,8 +921,7 @@ of the existing subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_prefixlen_python">
 <a href="#default_prefixlen_python" style="color: inherit; text-decoration: inherit;">default_<wbr>prefixlen</a>
@@ -984,8 +933,7 @@ subnetpool.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_quota_python">
 <a href="#default_quota_python" style="color: inherit; text-decoration: inherit;">default_<wbr>quota</a>
@@ -996,8 +944,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1007,8 +954,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -1017,8 +963,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_default_python">
 <a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -1029,8 +974,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_prefixlen_python">
 <a href="#max_prefixlen_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixlen</a>
@@ -1042,8 +986,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_prefixlen_python">
 <a href="#min_prefixlen_python" style="color: inherit; text-decoration: inherit;">min_<wbr>prefixlen</a>
@@ -1054,8 +997,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1065,8 +1007,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1076,8 +1017,7 @@ the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1089,8 +1029,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_python">
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1101,8 +1040,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1111,8 +1049,7 @@ subnetpool.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1121,8 +1058,7 @@ subnetpool.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1133,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1144,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1154,8 +1088,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1163,8 +1096,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_csharp">
 <a href="#revisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1173,8 +1105,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1183,13 +1114,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1199,8 +1128,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1209,8 +1137,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1218,8 +1145,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_go">
 <a href="#revisionnumber_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1228,8 +1154,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1238,13 +1163,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1254,8 +1177,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1264,8 +1186,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1273,8 +1194,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revisionnumber_nodejs">
 <a href="#revisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Number</a>
@@ -1283,8 +1203,7 @@ explicitly and implicitly added.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1293,13 +1212,11 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1309,8 +1226,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1319,8 +1235,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1328,8 +1243,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revision_number_python">
 <a href="#revision_number_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>number</a>
@@ -1338,8 +1252,7 @@ explicitly and implicitly added.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1348,8 +1261,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1476,8 +1388,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addressscopeid_csharp">
 <a href="#state_addressscopeid_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -1488,8 +1399,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1499,8 +1409,7 @@ subnetpool.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1509,8 +1418,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprefixlen_csharp">
 <a href="#state_defaultprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -1522,8 +1430,7 @@ explicitly and implicitly added.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultquota_csharp">
 <a href="#state_defaultquota_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -1534,8 +1441,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1545,8 +1451,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_csharp">
 <a href="#state_ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1555,8 +1460,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isdefault_csharp">
 <a href="#state_isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -1567,8 +1471,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxprefixlen_csharp">
 <a href="#state_maxprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -1580,8 +1483,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minprefixlen_csharp">
 <a href="#state_minprefixlen_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -1592,8 +1494,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1603,8 +1504,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixes_csharp">
 <a href="#state_prefixes_csharp" style="color: inherit; text-decoration: inherit;">Prefixes</a>
@@ -1617,8 +1517,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1628,8 +1527,7 @@ of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1641,8 +1539,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionnumber_csharp">
 <a href="#state_revisionnumber_csharp" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1651,8 +1548,7 @@ subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_csharp">
 <a href="#state_shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1663,8 +1559,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1673,8 +1568,7 @@ subnetpool.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_csharp">
 <a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1683,8 +1577,7 @@ subnetpool.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1693,13 +1586,11 @@ subnetpool.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addressscopeid_go">
 <a href="#state_addressscopeid_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Scope<wbr>Id</a>
@@ -1710,8 +1601,7 @@ subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1721,8 +1611,7 @@ subnetpool.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1731,8 +1620,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprefixlen_go">
 <a href="#state_defaultprefixlen_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Prefixlen</a>
@@ -1744,8 +1632,7 @@ explicitly and implicitly added.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultquota_go">
 <a href="#state_defaultquota_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Quota</a>
@@ -1756,8 +1643,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1767,8 +1653,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_go">
 <a href="#state_ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1777,8 +1662,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isdefault_go">
 <a href="#state_isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
@@ -1789,8 +1673,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxprefixlen_go">
 <a href="#state_maxprefixlen_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixlen</a>
@@ -1802,8 +1685,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minprefixlen_go">
 <a href="#state_minprefixlen_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Prefixlen</a>
@@ -1814,8 +1696,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1825,8 +1706,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixes_go">
 <a href="#state_prefixes_go" style="color: inherit; text-decoration: inherit;">Prefixes</a>
@@ -1839,8 +1719,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1850,8 +1729,7 @@ of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1863,8 +1741,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionnumber_go">
 <a href="#state_revisionnumber_go" style="color: inherit; text-decoration: inherit;">Revision<wbr>Number</a>
@@ -1873,8 +1750,7 @@ subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_go">
 <a href="#state_shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1885,8 +1761,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1895,8 +1770,7 @@ subnetpool.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_go">
 <a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1905,8 +1779,7 @@ subnetpool.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1915,13 +1788,11 @@ subnetpool.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_addressscopeid_nodejs">
 <a href="#state_addressscopeid_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Scope<wbr>Id</a>
@@ -1932,8 +1803,7 @@ subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1943,8 +1813,7 @@ subnetpool.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1953,8 +1822,7 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultprefixlen_nodejs">
 <a href="#state_defaultprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Prefixlen</a>
@@ -1966,8 +1834,7 @@ explicitly and implicitly added.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultquota_nodejs">
 <a href="#state_defaultquota_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Quota</a>
@@ -1978,8 +1845,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1989,8 +1855,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_nodejs">
 <a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -1999,8 +1864,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isdefault_nodejs">
 <a href="#state_isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
@@ -2011,8 +1875,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxprefixlen_nodejs">
 <a href="#state_maxprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixlen</a>
@@ -2024,8 +1887,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minprefixlen_nodejs">
 <a href="#state_minprefixlen_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Prefixlen</a>
@@ -2036,8 +1898,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2047,8 +1908,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixes_nodejs">
 <a href="#state_prefixes_nodejs" style="color: inherit; text-decoration: inherit;">prefixes</a>
@@ -2061,8 +1921,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -2072,8 +1931,7 @@ of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2085,8 +1943,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revisionnumber_nodejs">
 <a href="#state_revisionnumber_nodejs" style="color: inherit; text-decoration: inherit;">revision<wbr>Number</a>
@@ -2095,8 +1952,7 @@ subnetpool.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_nodejs">
 <a href="#state_shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -2107,8 +1963,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2117,8 +1972,7 @@ subnetpool.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_nodejs">
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -2127,8 +1981,7 @@ subnetpool.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -2137,13 +1990,11 @@ subnetpool.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_scope_id_python">
 <a href="#state_address_scope_id_python" style="color: inherit; text-decoration: inherit;">address_<wbr>scope_<wbr>id</a>
@@ -2154,8 +2005,7 @@ subnetpool.
     <dd>{{% md %}}The Neutron address scope to assign to the
 subnetpool. Changing this updates the address scope id of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -2165,8 +2015,7 @@ subnetpool.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the subnetpool, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2175,8 +2024,7 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_prefixlen_python">
 <a href="#state_default_prefixlen_python" style="color: inherit; text-decoration: inherit;">default_<wbr>prefixlen</a>
@@ -2188,8 +2036,7 @@ explicitly and implicitly added.
 or prefixlen attributes are omitted when you create the subnet. Defaults to the
 MinPrefixLen. Changing this updates the default prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_quota_python">
 <a href="#state_default_quota_python" style="color: inherit; text-decoration: inherit;">default_<wbr>quota</a>
@@ -2200,8 +2047,7 @@ subnetpool.
     <dd>{{% md %}}The per-project quota on the prefix space that can be
 allocated from the subnetpool for project subnets. Changing this updates the
 default quota of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2211,8 +2057,7 @@ default quota of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The human-readable description for the subnetpool.
 Changing this updates the description of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_version_python">
 <a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -2221,8 +2066,7 @@ Changing this updates the description of the existing subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_default_python">
 <a href="#state_is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
@@ -2233,8 +2077,7 @@ Changing this updates the description of the existing subnetpool.
     <dd>{{% md %}}Indicates whether the subnetpool is default
 subnetpool or not. Changing this updates the default status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_prefixlen_python">
 <a href="#state_max_prefixlen_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixlen</a>
@@ -2246,8 +2089,7 @@ subnetpool.
 the subnetpool. For IPv4 subnetpools, default is 32. For IPv6 subnetpools,
 default is 128. Changing this updates the max prefixlen of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_prefixlen_python">
 <a href="#state_min_prefixlen_python" style="color: inherit; text-decoration: inherit;">min_<wbr>prefixlen</a>
@@ -2258,8 +2100,7 @@ subnetpool.
     <dd>{{% md %}}The smallest prefix that can be allocated from a
 subnetpool. For IPv4 subnetpools, default is 8. For IPv6 subnetpools, default
 is 64. Changing this updates the min prefixlen of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2269,8 +2110,7 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The name of the subnetpool. Changing this updates the name of
 the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixes_python">
 <a href="#state_prefixes_python" style="color: inherit; text-decoration: inherit;">prefixes</a>
@@ -2283,8 +2123,7 @@ Neutron API merges adjacent prefixes and treats them as a single prefix. Each
 subnet prefix must be unique among all subnet prefixes in all subnetpools that
 are associated with the address scope. Changing this updates the prefixes list
 of the existing subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2294,8 +2133,7 @@ of the existing subnetpool.
     </dt>
     <dd>{{% md %}}The owner of the subnetpool. Required if admin wants to
 create a subnetpool for another project. Changing this creates a new subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2307,8 +2145,7 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 A Networking client is needed to create a Neutron subnetpool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revision_number_python">
 <a href="#state_revision_number_python" style="color: inherit; text-decoration: inherit;">revision_<wbr>number</a>
@@ -2317,8 +2154,7 @@ subnetpool.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The revision number of the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_python">
 <a href="#state_shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -2329,8 +2165,7 @@ subnetpool.
     <dd>{{% md %}}Indicates whether this subnetpool is shared across
 all projects. Changing this updates the shared status of the existing
 subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2339,8 +2174,7 @@ subnetpool.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnetpool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_at_python">
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -2349,8 +2183,7 @@ subnetpool.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which subnetpool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -2359,8 +2192,7 @@ subnetpool.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

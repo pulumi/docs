@@ -165,8 +165,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancearn_csharp">
 <a href="#instancearn_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Arn</a>
@@ -175,8 +174,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedpolicyarn_csharp">
 <a href="#managedpolicyarn_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arn</a>
@@ -185,8 +183,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissionsetarn_csharp">
 <a href="#permissionsetarn_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Set<wbr>Arn</a>
@@ -195,13 +192,11 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancearn_go">
 <a href="#instancearn_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Arn</a>
@@ -210,8 +205,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedpolicyarn_go">
 <a href="#managedpolicyarn_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arn</a>
@@ -220,8 +214,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissionsetarn_go">
 <a href="#permissionsetarn_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Set<wbr>Arn</a>
@@ -230,13 +223,11 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancearn_nodejs">
 <a href="#instancearn_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Arn</a>
@@ -245,8 +236,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedpolicyarn_nodejs">
 <a href="#managedpolicyarn_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Policy<wbr>Arn</a>
@@ -255,8 +245,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissionsetarn_nodejs">
 <a href="#permissionsetarn_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Set<wbr>Arn</a>
@@ -265,13 +254,11 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_arn_python">
 <a href="#instance_arn_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>arn</a>
@@ -280,8 +267,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_policy_arn_python">
 <a href="#managed_policy_arn_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>policy_<wbr>arn</a>
@@ -290,8 +276,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permission_set_arn_python">
 <a href="#permission_set_arn_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>set_<wbr>arn</a>
@@ -300,8 +285,7 @@ The ManagedPolicyAttachment resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -312,8 +296,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -321,8 +304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedpolicyname_csharp">
 <a href="#managedpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Name</a>
@@ -331,13 +313,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -345,8 +325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedpolicyname_go">
 <a href="#managedpolicyname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Name</a>
@@ -355,13 +334,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -369,8 +346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedpolicyname_nodejs">
 <a href="#managedpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Policy<wbr>Name</a>
@@ -379,13 +355,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -393,8 +367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_policy_name_python">
 <a href="#managed_policy_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>policy_<wbr>name</a>
@@ -403,8 +376,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -531,8 +503,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instancearn_csharp">
 <a href="#state_instancearn_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Arn</a>
@@ -541,8 +512,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedpolicyarn_csharp">
 <a href="#state_managedpolicyarn_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arn</a>
@@ -551,8 +521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedpolicyname_csharp">
 <a href="#state_managedpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Name</a>
@@ -561,8 +530,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissionsetarn_csharp">
 <a href="#state_permissionsetarn_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Set<wbr>Arn</a>
@@ -571,13 +539,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instancearn_go">
 <a href="#state_instancearn_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Arn</a>
@@ -586,8 +552,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedpolicyarn_go">
 <a href="#state_managedpolicyarn_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arn</a>
@@ -596,8 +561,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedpolicyname_go">
 <a href="#state_managedpolicyname_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Name</a>
@@ -606,8 +570,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissionsetarn_go">
 <a href="#state_permissionsetarn_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Set<wbr>Arn</a>
@@ -616,13 +579,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instancearn_nodejs">
 <a href="#state_instancearn_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Arn</a>
@@ -631,8 +592,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedpolicyarn_nodejs">
 <a href="#state_managedpolicyarn_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Policy<wbr>Arn</a>
@@ -641,8 +601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managedpolicyname_nodejs">
 <a href="#state_managedpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Policy<wbr>Name</a>
@@ -651,8 +610,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissionsetarn_nodejs">
 <a href="#state_permissionsetarn_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Set<wbr>Arn</a>
@@ -661,13 +619,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_instance_arn_python">
 <a href="#state_instance_arn_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>arn</a>
@@ -676,8 +632,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_policy_arn_python">
 <a href="#state_managed_policy_arn_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>policy_<wbr>arn</a>
@@ -686,8 +641,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_policy_name_python">
 <a href="#state_managed_policy_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>policy_<wbr>name</a>
@@ -696,8 +650,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IAM Managed Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_set_arn_python">
 <a href="#state_permission_set_arn_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>set_<wbr>arn</a>
@@ -706,8 +659,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Permission Set.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

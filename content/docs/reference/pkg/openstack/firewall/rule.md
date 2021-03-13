@@ -275,8 +275,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -287,8 +286,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -299,8 +297,7 @@ firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -310,8 +307,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipaddress_csharp">
 <a href="#destinationipaddress_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
@@ -322,8 +318,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_csharp">
 <a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -334,8 +329,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -346,8 +340,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -357,8 +350,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -368,8 +360,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -381,8 +372,7 @@ updates the `name` of an existing firewall rule.
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipaddress_csharp">
 <a href="#sourceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
@@ -393,8 +383,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_csharp">
 <a href="#sourceport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
@@ -405,8 +394,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -417,8 +405,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -427,13 +414,11 @@ new firewall rule.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -444,8 +429,7 @@ new firewall rule.
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -456,8 +440,7 @@ firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -467,8 +450,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipaddress_go">
 <a href="#destinationipaddress_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
@@ -479,8 +461,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_go">
 <a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -491,8 +472,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -503,8 +483,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -514,8 +493,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -525,8 +503,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -538,8 +515,7 @@ updates the `name` of an existing firewall rule.
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipaddress_go">
 <a href="#sourceipaddress_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
@@ -550,8 +526,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_go">
 <a href="#sourceport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
@@ -562,8 +537,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -574,8 +548,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -584,13 +557,11 @@ new firewall rule.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -601,8 +572,7 @@ new firewall rule.
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -613,8 +583,7 @@ firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -624,8 +593,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationipaddress_nodejs">
 <a href="#destinationipaddress_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Address</a>
@@ -636,8 +604,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationport_nodejs">
 <a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
@@ -648,8 +615,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -660,8 +626,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -671,8 +636,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -682,8 +646,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -695,8 +658,7 @@ updates the `name` of an existing firewall rule.
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceipaddress_nodejs">
 <a href="#sourceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Address</a>
@@ -707,8 +669,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceport_nodejs">
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
@@ -719,8 +680,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -731,8 +691,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -741,13 +700,11 @@ new firewall rule.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -758,8 +715,7 @@ new firewall rule.
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -770,8 +726,7 @@ firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -781,8 +736,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ip_address_python">
 <a href="#destination_ip_address_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>address</a>
@@ -793,8 +747,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_port_python">
 <a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
@@ -805,8 +758,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -817,8 +769,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -828,8 +779,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -839,8 +789,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -852,8 +801,7 @@ updates the `name` of an existing firewall rule.
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ip_address_python">
 <a href="#source_ip_address_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>address</a>
@@ -864,8 +812,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_port_python">
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
@@ -876,8 +823,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -888,8 +834,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -898,8 +843,7 @@ new firewall rule.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -919,13 +862,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -933,13 +874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -947,13 +886,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -961,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1089,8 +1025,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1101,8 +1036,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1112,8 +1046,7 @@ firewall rule.
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationipaddress_csharp">
 <a href="#state_destinationipaddress_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
@@ -1124,8 +1057,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationport_csharp">
 <a href="#state_destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -1136,8 +1068,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1148,8 +1079,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_csharp">
 <a href="#state_ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1159,8 +1089,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1170,8 +1099,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1182,8 +1110,7 @@ updates the `name` of an existing firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1195,8 +1122,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceipaddress_csharp">
 <a href="#state_sourceipaddress_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
@@ -1207,8 +1133,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_csharp">
 <a href="#state_sourceport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
@@ -1219,8 +1144,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1231,8 +1155,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1241,13 +1164,11 @@ new firewall rule.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1258,8 +1179,7 @@ new firewall rule.
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1269,8 +1189,7 @@ firewall rule.
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationipaddress_go">
 <a href="#state_destinationipaddress_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Address</a>
@@ -1281,8 +1200,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationport_go">
 <a href="#state_destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
@@ -1293,8 +1211,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1305,8 +1222,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_go">
 <a href="#state_ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1316,8 +1232,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1327,8 +1242,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1339,8 +1253,7 @@ updates the `name` of an existing firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1352,8 +1265,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceipaddress_go">
 <a href="#state_sourceipaddress_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Address</a>
@@ -1364,8 +1276,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_go">
 <a href="#state_sourceport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
@@ -1376,8 +1287,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1388,8 +1298,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1398,13 +1307,11 @@ new firewall rule.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1415,8 +1322,7 @@ new firewall rule.
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1426,8 +1332,7 @@ firewall rule.
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationipaddress_nodejs">
 <a href="#state_destinationipaddress_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Address</a>
@@ -1438,8 +1343,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationport_nodejs">
 <a href="#state_destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
@@ -1450,8 +1354,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1462,8 +1365,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipversion_nodejs">
 <a href="#state_ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -1473,8 +1375,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1484,8 +1385,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1496,8 +1396,7 @@ updates the `name` of an existing firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1509,8 +1408,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceipaddress_nodejs">
 <a href="#state_sourceipaddress_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Address</a>
@@ -1521,8 +1419,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceport_nodejs">
 <a href="#state_sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
@@ -1533,8 +1430,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1545,8 +1441,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1555,13 +1450,11 @@ new firewall rule.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1572,8 +1465,7 @@ new firewall rule.
     <dd>{{% md %}}Action to be taken ( must be "allow" or "deny") when the
 firewall rule matches. Changing this updates the `action` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1583,8 +1475,7 @@ firewall rule.
     </dt>
     <dd>{{% md %}}A description for the firewall rule. Changing this
 updates the `description` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_ip_address_python">
 <a href="#state_destination_ip_address_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>address</a>
@@ -1595,8 +1486,7 @@ updates the `description` of an existing firewall rule.
     <dd>{{% md %}}The destination IP address on which the
 firewall rule operates. Changing this updates the `destination_ip_address`
 of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_port_python">
 <a href="#state_destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
@@ -1607,8 +1497,7 @@ of an existing firewall rule.
     <dd>{{% md %}}The destination port on which the firewall
 rule operates. Changing this updates the `destination_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1619,8 +1508,7 @@ firewall rule.
     <dd>{{% md %}}Enabled status for the firewall rule (must be "true"
 or "false" if provided - defaults to "true"). Changing this updates the
 `enabled` status of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_version_python">
 <a href="#state_ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -1630,8 +1518,7 @@ or "false" if provided - defaults to "true"). Changing this updates the
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this
 updates the `ip_version` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1641,8 +1528,7 @@ updates the `ip_version` of an existing firewall rule.
     </dt>
     <dd>{{% md %}}A unique name for the firewall rule. Changing this
 updates the `name` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1653,8 +1539,7 @@ updates the `name` of an existing firewall rule.
     <dd>{{% md %}}The protocol type on which the firewall rule operates.
 Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 `protocol` of an existing firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1666,8 +1551,7 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 A Compute client is needed to create a firewall rule. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_ip_address_python">
 <a href="#state_source_ip_address_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>address</a>
@@ -1678,8 +1562,7 @@ firewall rule.
     <dd>{{% md %}}The source IP address on which the firewall
 rule operates. Changing this updates the `source_ip_address` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_port_python">
 <a href="#state_source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
@@ -1690,8 +1573,7 @@ firewall rule.
     <dd>{{% md %}}The source port on which the firewall
 rule operates. Changing this updates the `source_port` of an existing
 firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1702,8 +1584,7 @@ firewall rule.
     <dd>{{% md %}}The owner of the firewall rule. Required if admin
 wants to create a firewall rule for another tenant. Changing this creates a
 new firewall rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1712,8 +1593,7 @@ new firewall rule.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

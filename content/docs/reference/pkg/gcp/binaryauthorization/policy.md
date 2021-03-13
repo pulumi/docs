@@ -546,8 +546,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultadmissionrule_csharp">
 <a href="#defaultadmissionrule_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
@@ -558,8 +557,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admissionwhitelistpatterns_csharp">
 <a href="#admissionwhitelistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
@@ -571,8 +569,7 @@ Structure is documented below.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteradmissionrules_csharp">
 <a href="#clusteradmissionrules_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
@@ -585,8 +582,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -595,8 +591,7 @@ admission rule per cluster spec.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalpolicyevaluationmode_csharp">
 <a href="#globalpolicyevaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
@@ -608,8 +603,7 @@ admission rule per cluster spec.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -619,13 +613,11 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultadmissionrule_go">
 <a href="#defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
@@ -636,8 +628,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admissionwhitelistpatterns_go">
 <a href="#admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
@@ -649,8 +640,7 @@ Structure is documented below.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteradmissionrules_go">
 <a href="#clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
@@ -663,8 +653,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -673,8 +662,7 @@ admission rule per cluster spec.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalpolicyevaluationmode_go">
 <a href="#globalpolicyevaluationmode_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
@@ -686,8 +674,7 @@ admission rule per cluster spec.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -697,13 +684,11 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultadmissionrule_nodejs">
 <a href="#defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
@@ -714,8 +699,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admissionwhitelistpatterns_nodejs">
 <a href="#admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
@@ -727,8 +711,7 @@ Structure is documented below.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteradmissionrules_nodejs">
 <a href="#clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
@@ -741,8 +724,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -751,8 +733,7 @@ admission rule per cluster spec.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globalpolicyevaluationmode_nodejs">
 <a href="#globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
@@ -764,8 +745,7 @@ admission rule per cluster spec.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -775,13 +755,11 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_admission_rule_python">
 <a href="#default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
@@ -792,8 +770,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admission_whitelist_patterns_python">
 <a href="#admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
@@ -805,8 +782,7 @@ Structure is documented below.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_admission_rules_python">
 <a href="#cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
@@ -819,8 +795,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -829,8 +804,7 @@ admission rule per cluster spec.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="global_policy_evaluation_mode_python">
 <a href="#global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
@@ -842,8 +816,7 @@ admission rule per cluster spec.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -853,8 +826,7 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -865,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -874,13 +845,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -888,13 +857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -902,13 +869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -916,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1044,8 +1008,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admissionwhitelistpatterns_csharp">
 <a href="#state_admissionwhitelistpatterns_csharp" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
@@ -1057,8 +1020,7 @@ The following state arguments are supported:
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteradmissionrules_csharp">
 <a href="#state_clusteradmissionrules_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
@@ -1071,8 +1033,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultadmissionrule_csharp">
 <a href="#state_defaultadmissionrule_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
@@ -1083,8 +1044,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1093,8 +1053,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalpolicyevaluationmode_csharp">
 <a href="#state_globalpolicyevaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
@@ -1106,8 +1065,7 @@ Structure is documented below.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1117,13 +1075,11 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admissionwhitelistpatterns_go">
 <a href="#state_admissionwhitelistpatterns_go" style="color: inherit; text-decoration: inherit;">Admission<wbr>Whitelist<wbr>Patterns</a>
@@ -1135,8 +1091,7 @@ If it is not provided, the provider project is used.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteradmissionrules_go">
 <a href="#state_clusteradmissionrules_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admission<wbr>Rules</a>
@@ -1149,8 +1104,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultadmissionrule_go">
 <a href="#state_defaultadmissionrule_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Admission<wbr>Rule</a>
@@ -1161,8 +1115,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1171,8 +1124,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalpolicyevaluationmode_go">
 <a href="#state_globalpolicyevaluationmode_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
@@ -1184,8 +1136,7 @@ Structure is documented below.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1195,13 +1146,11 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admissionwhitelistpatterns_nodejs">
 <a href="#state_admissionwhitelistpatterns_nodejs" style="color: inherit; text-decoration: inherit;">admission<wbr>Whitelist<wbr>Patterns</a>
@@ -1213,8 +1162,7 @@ If it is not provided, the provider project is used.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusteradmissionrules_nodejs">
 <a href="#state_clusteradmissionrules_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admission<wbr>Rules</a>
@@ -1227,8 +1175,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultadmissionrule_nodejs">
 <a href="#state_defaultadmissionrule_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Admission<wbr>Rule</a>
@@ -1239,8 +1186,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1249,8 +1195,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globalpolicyevaluationmode_nodejs">
 <a href="#state_globalpolicyevaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Policy<wbr>Evaluation<wbr>Mode</a>
@@ -1262,8 +1207,7 @@ Structure is documented below.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1273,13 +1217,11 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admission_whitelist_patterns_python">
 <a href="#state_admission_whitelist_patterns_python" style="color: inherit; text-decoration: inherit;">admission_<wbr>whitelist_<wbr>patterns</a>
@@ -1291,8 +1233,7 @@ If it is not provided, the provider project is used.
 image's name matches a whitelist pattern, the image's admission
 requests will always be permitted regardless of your admission rules.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_admission_rules_python">
 <a href="#state_cluster_admission_rules_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admission_<wbr>rules</a>
@@ -1305,8 +1246,7 @@ all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
 or that all pod creations will be denied. There can be at most one
 admission rule per cluster spec.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_admission_rule_python">
 <a href="#state_default_admission_rule_python" style="color: inherit; text-decoration: inherit;">default_<wbr>admission_<wbr>rule</a>
@@ -1317,8 +1257,7 @@ admission rule per cluster spec.
     <dd>{{% md %}}Default admission rule for a cluster without a per-cluster admission
 rule.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1327,8 +1266,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A descriptive comment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_policy_evaluation_mode_python">
 <a href="#state_global_policy_evaluation_mode_python" style="color: inherit; text-decoration: inherit;">global_<wbr>policy_<wbr>evaluation_<wbr>mode</a>
@@ -1340,8 +1278,7 @@ Structure is documented below.
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy.
 Possible values are `ENABLE` and `DISABLE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1351,8 +1288,7 @@ Possible values are `ENABLE` and `DISABLE`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1367,8 +1303,7 @@ If it is not provided, the provider project is used.
 <h4 id="policyadmissionwhitelistpattern">Policy<wbr>Admission<wbr>Whitelist<wbr>Pattern</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namepattern_csharp">
 <a href="#namepattern_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Pattern</a>
@@ -1380,13 +1315,11 @@ If it is not provided, the provider project is used.
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namepattern_go">
 <a href="#namepattern_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Pattern</a>
@@ -1398,13 +1331,11 @@ part.
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namepattern_nodejs">
 <a href="#namepattern_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Pattern</a>
@@ -1416,13 +1347,11 @@ part.
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_pattern_python">
 <a href="#name_pattern_python" style="color: inherit; text-decoration: inherit;">name_<wbr>pattern</a>
@@ -1434,15 +1363,13 @@ part.
 `registry/path/to/image`. This supports a trailing * as a
 wildcard, but this is allowed only in text after the registry/
 part.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyclusteradmissionrule">Policy<wbr>Cluster<wbr>Admission<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_csharp">
 <a href="#cluster_csharp" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -1451,8 +1378,7 @@ part.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcementmode_csharp">
 <a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -1462,8 +1388,7 @@ part.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluationmode_csharp">
 <a href="#evaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
@@ -1473,8 +1398,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_csharp">
 <a href="#requireattestationsbies_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
@@ -1490,13 +1414,11 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_go">
 <a href="#cluster_go" style="color: inherit; text-decoration: inherit;">Cluster</a>
@@ -1505,8 +1427,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcementmode_go">
 <a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -1516,8 +1437,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluationmode_go">
 <a href="#evaluationmode_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
@@ -1527,8 +1447,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_go">
 <a href="#requireattestationsbies_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
@@ -1544,13 +1463,11 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_nodejs">
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1559,8 +1476,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcementmode_nodejs">
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
@@ -1570,8 +1486,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluationmode_nodejs">
 <a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
@@ -1581,8 +1496,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_nodejs">
 <a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
@@ -1598,13 +1512,11 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_python">
 <a href="#cluster_python" style="color: inherit; text-decoration: inherit;">cluster</a>
@@ -1613,8 +1525,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for this object. Format specified above.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enforcement_mode_python">
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
@@ -1624,8 +1535,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluation_mode_python">
 <a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
@@ -1635,8 +1545,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_attestations_bies_python">
 <a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
@@ -1652,15 +1561,13 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policydefaultadmissionrule">Policy<wbr>Default<wbr>Admission<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforcementmode_csharp">
 <a href="#enforcementmode_csharp" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -1670,8 +1577,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluationmode_csharp">
 <a href="#evaluationmode_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
@@ -1681,8 +1587,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_csharp">
 <a href="#requireattestationsbies_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
@@ -1698,13 +1603,11 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforcementmode_go">
 <a href="#enforcementmode_go" style="color: inherit; text-decoration: inherit;">Enforcement<wbr>Mode</a>
@@ -1714,8 +1617,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluationmode_go">
 <a href="#evaluationmode_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Mode</a>
@@ -1725,8 +1627,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_go">
 <a href="#requireattestationsbies_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Attestations<wbr>Bies</a>
@@ -1742,13 +1643,11 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforcementmode_nodejs">
 <a href="#enforcementmode_nodejs" style="color: inherit; text-decoration: inherit;">enforcement<wbr>Mode</a>
@@ -1758,8 +1657,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluationmode_nodejs">
 <a href="#evaluationmode_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Mode</a>
@@ -1769,8 +1667,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireattestationsbies_nodejs">
 <a href="#requireattestationsbies_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Attestations<wbr>Bies</a>
@@ -1786,13 +1683,11 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enforcement_mode_python">
 <a href="#enforcement_mode_python" style="color: inherit; text-decoration: inherit;">enforcement_<wbr>mode</a>
@@ -1802,8 +1697,7 @@ specifies REQUIRE_ATTESTATION, otherwise it must be empty.
     </dt>
     <dd>{{% md %}}The action when a pod creation is denied by the admission rule.
 Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="evaluation_mode_python">
 <a href="#evaluation_mode_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>mode</a>
@@ -1813,8 +1707,7 @@ Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
     </dt>
     <dd>{{% md %}}How this admission rule will be evaluated.
 Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_attestations_bies_python">
 <a href="#require_attestations_bies_python" style="color: inherit; text-decoration: inherit;">require_<wbr>attestations_<wbr>bies</a>
@@ -1830,8 +1723,7 @@ attestor to a policy the principal issuing the policy change
 request must be able to read the attestor resource.
 Note: this field must be non-empty when the evaluation_mode field
 specifies REQUIRE_ATTESTATION, otherwise it must be empty.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

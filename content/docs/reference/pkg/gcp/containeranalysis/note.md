@@ -438,8 +438,7 @@ The Note resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestationauthority_csharp">
 <a href="#attestationauthority_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
@@ -457,8 +456,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -467,8 +465,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longdescription_csharp">
 <a href="#longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -477,8 +474,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -487,8 +483,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -498,8 +493,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatednotenames_csharp">
 <a href="#relatednotenames_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
@@ -508,8 +502,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatedurls_csharp">
 <a href="#relatedurls_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
@@ -519,8 +512,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -529,13 +521,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestationauthority_go">
 <a href="#attestationauthority_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
@@ -553,8 +543,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -563,8 +552,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longdescription_go">
 <a href="#longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -573,8 +561,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -583,8 +570,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -594,8 +580,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatednotenames_go">
 <a href="#relatednotenames_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
@@ -604,8 +589,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatedurls_go">
 <a href="#relatedurls_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
@@ -615,8 +599,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -625,13 +608,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestationauthority_nodejs">
 <a href="#attestationauthority_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority</a>
@@ -649,8 +630,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -659,8 +639,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="longdescription_nodejs">
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
@@ -669,8 +648,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -679,8 +657,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -690,8 +667,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatednotenames_nodejs">
 <a href="#relatednotenames_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Note<wbr>Names</a>
@@ -700,8 +676,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relatedurls_nodejs">
 <a href="#relatedurls_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Urls</a>
@@ -711,8 +686,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
@@ -721,13 +695,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attestation_authority_python">
 <a href="#attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
@@ -745,8 +717,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -755,8 +726,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="long_description_python">
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
@@ -765,8 +735,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -775,8 +744,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -786,8 +754,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="related_note_names_python">
 <a href="#related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
@@ -796,8 +763,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="related_urls_python">
 <a href="#related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
@@ -807,8 +773,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
@@ -817,8 +782,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -829,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -839,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -848,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -858,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -868,13 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -883,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -892,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -902,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -912,13 +867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -927,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -936,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -946,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -956,13 +906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -971,8 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -980,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -990,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1000,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1128,8 +1072,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestationauthority_csharp">
 <a href="#state_attestationauthority_csharp" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
@@ -1147,8 +1090,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1157,8 +1099,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_csharp">
 <a href="#state_expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1167,8 +1108,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1177,8 +1117,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_longdescription_csharp">
 <a href="#state_longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -1187,8 +1126,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1197,8 +1135,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1208,8 +1145,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_relatednotenames_csharp">
 <a href="#state_relatednotenames_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
@@ -1218,8 +1154,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_relatedurls_csharp">
 <a href="#state_relatedurls_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
@@ -1229,8 +1164,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_csharp">
 <a href="#state_shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -1239,8 +1173,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1249,13 +1182,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestationauthority_go">
 <a href="#state_attestationauthority_go" style="color: inherit; text-decoration: inherit;">Attestation<wbr>Authority</a>
@@ -1273,8 +1204,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1283,8 +1213,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_go">
 <a href="#state_expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1293,8 +1222,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1303,8 +1231,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_longdescription_go">
 <a href="#state_longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -1313,8 +1240,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1323,8 +1249,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1334,8 +1259,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_relatednotenames_go">
 <a href="#state_relatednotenames_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Note<wbr>Names</a>
@@ -1344,8 +1268,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_relatedurls_go">
 <a href="#state_relatedurls_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Urls</a>
@@ -1355,8 +1278,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_go">
 <a href="#state_shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -1365,8 +1287,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1375,13 +1296,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestationauthority_nodejs">
 <a href="#state_attestationauthority_nodejs" style="color: inherit; text-decoration: inherit;">attestation<wbr>Authority</a>
@@ -1399,8 +1318,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1409,8 +1327,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_nodejs">
 <a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -1419,8 +1336,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1429,8 +1345,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_longdescription_nodejs">
 <a href="#state_longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
@@ -1439,8 +1354,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1449,8 +1363,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1460,8 +1373,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_relatednotenames_nodejs">
 <a href="#state_relatednotenames_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Note<wbr>Names</a>
@@ -1470,8 +1382,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_relatedurls_nodejs">
 <a href="#state_relatedurls_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Urls</a>
@@ -1481,8 +1392,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_nodejs">
 <a href="#state_shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
@@ -1491,8 +1401,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1501,13 +1410,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attestation_authority_python">
 <a href="#state_attestation_authority_python" style="color: inherit; text-decoration: inherit;">attestation_<wbr>authority</a>
@@ -1525,8 +1432,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don't all live in the same
 project.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1535,8 +1441,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_time_python">
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -1545,8 +1450,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of expiration for this note. Leave empty if note does not expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1555,8 +1459,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of analysis this note describes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_long_description_python">
 <a href="#state_long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
@@ -1565,8 +1468,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of the note
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1575,8 +1477,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1586,8 +1487,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_related_note_names_python">
 <a href="#state_related_note_names_python" style="color: inherit; text-decoration: inherit;">related_<wbr>note_<wbr>names</a>
@@ -1596,8 +1496,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of other notes related to this note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_related_urls_python">
 <a href="#state_related_urls_python" style="color: inherit; text-decoration: inherit;">related_<wbr>urls</a>
@@ -1607,8 +1506,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}URLs associated with this note and related metadata.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_short_description_python">
 <a href="#state_short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
@@ -1617,8 +1515,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one sentence description of the note.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1627,8 +1524,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time this note was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1643,8 +1539,7 @@ Structure is documented below.
 <h4 id="noteattestationauthority">Note<wbr>Attestation<wbr>Authority</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hint_csharp">
 <a href="#hint_csharp" style="color: inherit; text-decoration: inherit;">Hint</a>
@@ -1661,13 +1556,11 @@ these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
 Attestations to verify.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hint_go">
 <a href="#hint_go" style="color: inherit; text-decoration: inherit;">Hint</a>
@@ -1684,13 +1577,11 @@ these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
 Attestations to verify.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hint_nodejs">
 <a href="#hint_nodejs" style="color: inherit; text-decoration: inherit;">hint</a>
@@ -1707,13 +1598,11 @@ these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
 Attestations to verify.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hint_python">
 <a href="#hint_python" style="color: inherit; text-decoration: inherit;">hint</a>
@@ -1730,15 +1619,13 @@ these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
 Attestations to verify.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="noteattestationauthorityhint">Note<wbr>Attestation<wbr>Authority<wbr>Hint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="humanreadablename_csharp">
 <a href="#humanreadablename_csharp" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
@@ -1748,13 +1635,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="humanreadablename_go">
 <a href="#humanreadablename_go" style="color: inherit; text-decoration: inherit;">Human<wbr>Readable<wbr>Name</a>
@@ -1764,13 +1649,11 @@ example "qa".
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="humanreadablename_nodejs">
 <a href="#humanreadablename_nodejs" style="color: inherit; text-decoration: inherit;">human<wbr>Readable<wbr>Name</a>
@@ -1780,13 +1663,11 @@ example "qa".
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="human_readable_name_python">
 <a href="#human_readable_name_python" style="color: inherit; text-decoration: inherit;">human_<wbr>readable_<wbr>name</a>
@@ -1796,15 +1677,13 @@ example "qa".
     </dt>
     <dd>{{% md %}}The human readable name of this Attestation Authority, for
 example "qa".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="noterelatedurl">Note<wbr>Related<wbr>Url</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1813,8 +1692,7 @@ example "qa".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1823,13 +1701,11 @@ example "qa".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1838,8 +1714,7 @@ example "qa".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1848,13 +1723,11 @@ example "qa".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1863,8 +1736,7 @@ example "qa".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1873,13 +1745,11 @@ example "qa".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1888,8 +1758,7 @@ example "qa".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specific URL associated with the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1898,8 +1767,7 @@ example "qa".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label to describe usage of the URL
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

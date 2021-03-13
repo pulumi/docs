@@ -319,8 +319,7 @@ The KafkaSchema resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -330,8 +329,7 @@ The KafkaSchema resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -340,8 +338,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -350,8 +347,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectname_csharp">
 <a href="#subjectname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name</a>
@@ -360,8 +356,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibilitylevel_csharp">
 <a href="#compatibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
@@ -373,13 +368,11 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -389,8 +382,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -399,8 +391,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -409,8 +400,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectname_go">
 <a href="#subjectname_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name</a>
@@ -419,8 +409,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibilitylevel_go">
 <a href="#compatibilitylevel_go" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
@@ -432,13 +421,11 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -448,8 +435,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -458,8 +444,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -468,8 +453,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectname_nodejs">
 <a href="#subjectname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name</a>
@@ -478,8 +462,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibilitylevel_nodejs">
 <a href="#compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
@@ -491,13 +474,11 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -507,8 +488,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -517,8 +497,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -527,8 +506,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_name_python">
 <a href="#subject_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name</a>
@@ -537,8 +515,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compatibility_level_python">
 <a href="#compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
@@ -550,8 +527,7 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -562,8 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -571,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -581,13 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -595,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -605,13 +576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -619,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -629,13 +597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -643,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -653,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -781,8 +745,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compatibilitylevel_csharp">
 <a href="#state_compatibilitylevel_csharp" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
@@ -794,8 +757,7 @@ The following state arguments are supported:
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -805,8 +767,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_csharp">
 <a href="#state_schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -815,8 +776,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -825,8 +785,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectname_csharp">
 <a href="#state_subjectname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name</a>
@@ -835,8 +794,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -845,13 +803,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compatibilitylevel_go">
 <a href="#state_compatibilitylevel_go" style="color: inherit; text-decoration: inherit;">Compatibility<wbr>Level</a>
@@ -863,8 +819,7 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -874,8 +829,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_go">
 <a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -884,8 +838,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -894,8 +847,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectname_go">
 <a href="#state_subjectname_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name</a>
@@ -904,8 +856,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -914,13 +865,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compatibilitylevel_nodejs">
 <a href="#state_compatibilitylevel_nodejs" style="color: inherit; text-decoration: inherit;">compatibility<wbr>Level</a>
@@ -932,8 +881,7 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -943,8 +891,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_nodejs">
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -953,8 +900,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -963,8 +909,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectname_nodejs">
 <a href="#state_subjectname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name</a>
@@ -973,8 +918,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -983,13 +927,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compatibility_level_python">
 <a href="#state_compatibility_level_python" style="color: inherit; text-decoration: inherit;">compatibility_<wbr>level</a>
@@ -1001,8 +943,7 @@ They should be defined using reference as shown above to set up dependencies cor
 resource. If the compatibility level not specified for the individual subject by default,
 it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FORWARD`,
 `FORWARD_TRANSITIVE`, `FULL`, `FULL_TRANSITIVE`, `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1012,8 +953,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the Kafka Schemas belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_python">
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1022,8 +962,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema configuration should be a valid Avro Schema JSON format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1032,8 +971,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the Kafka Schema to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_name_python">
 <a href="#state_subject_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name</a>
@@ -1042,8 +980,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is Kafka Schema subject name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1052,8 +989,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Kafka Schema configuration version
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

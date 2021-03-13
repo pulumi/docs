@@ -276,8 +276,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -287,8 +286,7 @@ The EndpointGroup resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -298,8 +296,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -309,8 +306,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -322,8 +318,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -333,8 +328,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -344,8 +338,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -354,13 +347,11 @@ Changing this creates a new group.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -370,8 +361,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -381,8 +371,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -392,8 +381,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -405,8 +393,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -416,8 +403,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -427,8 +413,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -437,13 +422,11 @@ Changing this creates a new group.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -453,8 +436,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -464,8 +446,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +456,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -488,8 +468,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -499,8 +478,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -510,8 +488,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -520,13 +497,11 @@ Changing this creates a new group.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -536,8 +511,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -547,8 +521,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -558,8 +531,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -571,8 +543,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -582,8 +553,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -593,8 +563,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -603,8 +572,7 @@ Changing this creates a new group.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -615,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -624,13 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -638,13 +603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -652,13 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -794,8 +754,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -805,8 +764,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_csharp">
 <a href="#state_endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -816,8 +774,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -827,8 +784,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -840,8 +796,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -851,8 +806,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -862,8 +816,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -872,13 +825,11 @@ Changing this creates a new group.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -888,8 +839,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_go">
 <a href="#state_endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -899,8 +849,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -910,8 +859,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -923,8 +871,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -934,8 +881,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -945,8 +891,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -955,13 +900,11 @@ Changing this creates a new group.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -971,8 +914,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_nodejs">
 <a href="#state_endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -982,8 +924,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -993,8 +934,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1006,8 +946,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1017,8 +956,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1028,8 +966,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1038,13 +975,11 @@ Changing this creates a new group.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1054,8 +989,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The human-readable description for the group.
 Changing this updates the description of the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_python">
 <a href="#state_endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1065,8 +999,7 @@ Changing this updates the description of the existing group.
     </dt>
     <dd>{{% md %}}List of endpoints of the same type, for the endpoint group. The values will depend on the type.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1076,8 +1009,7 @@ Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The name of the group. Changing this updates the name of
 the existing group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1089,8 +1021,7 @@ the existing group.
 A Networking client is needed to create an endpoint group. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1100,8 +1031,7 @@ group.
     </dt>
     <dd>{{% md %}}The owner of the group. Required if admin wants to
 create an endpoint group for another project. Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1111,8 +1041,7 @@ create an endpoint group for another project. Changing this creates a new group.
     </dt>
     <dd>{{% md %}}The type of the endpoints in the group. A valid value is subnet, cidr, network, router, or vlan.
 Changing this creates a new group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1121,8 +1050,7 @@ Changing this creates a new group.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

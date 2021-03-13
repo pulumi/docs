@@ -325,8 +325,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisheremail_csharp">
 <a href="#publisheremail_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Email</a>
@@ -335,8 +334,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publishername_csharp">
 <a href="#publishername_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Name</a>
@@ -345,8 +343,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -355,8 +352,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -365,8 +361,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionallocations_csharp">
 <a href="#additionallocations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
@@ -375,8 +370,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -385,8 +379,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_csharp">
 <a href="#hostnameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
@@ -395,8 +388,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -405,8 +397,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -415,8 +406,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -425,8 +415,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationsenderemail_csharp">
 <a href="#notificationsenderemail_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Sender<wbr>Email</a>
@@ -435,8 +424,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -445,8 +433,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -455,8 +442,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_csharp">
 <a href="#security_csharp" style="color: inherit; text-decoration: inherit;">Security</a>
@@ -465,8 +451,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signin_csharp">
 <a href="#signin_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>In</a>
@@ -475,8 +460,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signup_csharp">
 <a href="#signup_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Up</a>
@@ -485,8 +469,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -495,8 +478,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantaccess_csharp">
 <a href="#tenantaccess_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
@@ -505,8 +487,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkconfiguration_csharp">
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
@@ -515,8 +496,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworktype_csharp">
 <a href="#virtualnetworktype_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Type</a>
@@ -526,13 +506,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisheremail_go">
 <a href="#publisheremail_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Email</a>
@@ -541,8 +519,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publishername_go">
 <a href="#publishername_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Name</a>
@@ -551,8 +528,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -561,8 +537,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_go">
 <a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -571,8 +546,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionallocations_go">
 <a href="#additionallocations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
@@ -581,8 +555,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -591,8 +564,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_go">
 <a href="#hostnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
@@ -601,8 +573,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -611,8 +582,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -621,8 +591,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -631,8 +600,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationsenderemail_go">
 <a href="#notificationsenderemail_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Sender<wbr>Email</a>
@@ -641,8 +609,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -651,8 +618,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -661,8 +627,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_go">
 <a href="#security_go" style="color: inherit; text-decoration: inherit;">Security</a>
@@ -671,8 +636,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signin_go">
 <a href="#signin_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>In</a>
@@ -681,8 +645,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signup_go">
 <a href="#signup_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Up</a>
@@ -691,8 +654,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -701,8 +663,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantaccess_go">
 <a href="#tenantaccess_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
@@ -711,8 +672,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkconfiguration_go">
 <a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
@@ -721,8 +681,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworktype_go">
 <a href="#virtualnetworktype_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Type</a>
@@ -732,13 +691,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisheremail_nodejs">
 <a href="#publisheremail_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Email</a>
@@ -747,8 +704,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publishername_nodejs">
 <a href="#publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
@@ -757,8 +713,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -767,8 +722,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -777,8 +731,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionallocations_nodejs">
 <a href="#additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
@@ -787,8 +740,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -797,8 +749,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostnameconfiguration_nodejs">
 <a href="#hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
@@ -807,8 +758,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -817,8 +767,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -827,8 +776,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -837,8 +785,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationsenderemail_nodejs">
 <a href="#notificationsenderemail_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Sender<wbr>Email</a>
@@ -847,8 +794,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -857,8 +803,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -867,8 +812,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_nodejs">
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
@@ -877,8 +821,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signin_nodejs">
 <a href="#signin_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In</a>
@@ -887,8 +830,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signup_nodejs">
 <a href="#signup_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Up</a>
@@ -897,8 +839,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -907,8 +848,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantaccess_nodejs">
 <a href="#tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
@@ -917,8 +857,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkconfiguration_nodejs">
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
@@ -927,8 +866,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworktype_nodejs">
 <a href="#virtualnetworktype_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Type</a>
@@ -938,13 +876,11 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_email_python">
 <a href="#publisher_email_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>email</a>
@@ -953,8 +889,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publisher_name_python">
 <a href="#publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
@@ -963,8 +898,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -973,8 +907,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_name_python">
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -983,8 +916,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_locations_python">
 <a href="#additional_locations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>locations</a>
@@ -993,8 +925,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceadditionallocation">Sequence[Service<wbr>Additional<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1003,8 +934,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicecertificate">Sequence[Service<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_configuration_python">
 <a href="#hostname_configuration_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configuration</a>
@@ -1013,8 +943,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1023,8 +952,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1033,8 +961,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1043,8 +970,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_sender_email_python">
 <a href="#notification_sender_email_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>sender_<wbr>email</a>
@@ -1053,8 +979,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -1063,8 +988,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -1073,8 +997,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_python">
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
@@ -1083,8 +1006,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_in_python">
 <a href="#sign_in_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in</a>
@@ -1093,8 +1015,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_up_python">
 <a href="#sign_up_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>up</a>
@@ -1103,8 +1024,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1113,8 +1033,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_access_python">
 <a href="#tenant_access_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>access</a>
@@ -1123,8 +1042,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_configuration_python">
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
@@ -1133,8 +1051,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_type_python">
 <a href="#virtual_network_type_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>type</a>
@@ -1144,8 +1061,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1156,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="developerportalurl_csharp">
 <a href="#developerportalurl_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
@@ -1166,8 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayregionalurl_csharp">
 <a href="#gatewayregionalurl_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
@@ -1176,8 +1090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayurl_csharp">
 <a href="#gatewayurl_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Url</a>
@@ -1186,8 +1099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1195,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementapiurl_csharp">
 <a href="#managementapiurl_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Api<wbr>Url</a>
@@ -1205,8 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portalurl_csharp">
 <a href="#portalurl_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Url</a>
@@ -1215,8 +1125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddresses_csharp">
 <a href="#privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
@@ -1225,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
@@ -1235,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scmurl_csharp">
 <a href="#scmurl_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Url</a>
@@ -1245,13 +1152,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="developerportalurl_go">
 <a href="#developerportalurl_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
@@ -1260,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayregionalurl_go">
 <a href="#gatewayregionalurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
@@ -1270,8 +1174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayurl_go">
 <a href="#gatewayurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Url</a>
@@ -1280,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1289,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementapiurl_go">
 <a href="#managementapiurl_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Api<wbr>Url</a>
@@ -1299,8 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portalurl_go">
 <a href="#portalurl_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Url</a>
@@ -1309,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddresses_go">
 <a href="#privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
@@ -1319,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddresses_go">
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
@@ -1329,8 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scmurl_go">
 <a href="#scmurl_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Url</a>
@@ -1339,13 +1236,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="developerportalurl_nodejs">
 <a href="#developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
@@ -1354,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayregionalurl_nodejs">
 <a href="#gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
@@ -1364,8 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayurl_nodejs">
 <a href="#gatewayurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Url</a>
@@ -1374,8 +1267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1383,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementapiurl_nodejs">
 <a href="#managementapiurl_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Api<wbr>Url</a>
@@ -1393,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portalurl_nodejs">
 <a href="#portalurl_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Url</a>
@@ -1403,8 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateipaddresses_nodejs">
 <a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
@@ -1413,8 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
@@ -1423,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scmurl_nodejs">
 <a href="#scmurl_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Url</a>
@@ -1433,13 +1320,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="developer_portal_url_python">
 <a href="#developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
@@ -1448,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_regional_url_python">
 <a href="#gateway_regional_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>regional_<wbr>url</a>
@@ -1458,8 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_url_python">
 <a href="#gateway_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>url</a>
@@ -1468,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1477,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_api_url_python">
 <a href="#management_api_url_python" style="color: inherit; text-decoration: inherit;">management_<wbr>api_<wbr>url</a>
@@ -1487,8 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portal_url_python">
 <a href="#portal_url_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>url</a>
@@ -1497,8 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_addresses_python">
 <a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
@@ -1507,8 +1386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_addresses_python">
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
@@ -1517,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scm_url_python">
 <a href="#scm_url_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>url</a>
@@ -1527,8 +1404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1655,8 +1531,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionallocations_csharp">
 <a href="#state_additionallocations_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
@@ -1665,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_csharp">
 <a href="#state_certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -1675,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportalurl_csharp">
 <a href="#state_developerportalurl_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
@@ -1685,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_csharp">
 <a href="#state_gatewayregionalurl_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
@@ -1695,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayurl_csharp">
 <a href="#state_gatewayurl_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Url</a>
@@ -1705,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostnameconfiguration_csharp">
 <a href="#state_hostnameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
@@ -1715,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_csharp">
 <a href="#state_identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -1725,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1735,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementapiurl_csharp">
 <a href="#state_managementapiurl_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Api<wbr>Url</a>
@@ -1745,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1755,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationsenderemail_csharp">
 <a href="#state_notificationsenderemail_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Sender<wbr>Email</a>
@@ -1765,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_csharp">
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -1775,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portalurl_csharp">
 <a href="#state_portalurl_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Url</a>
@@ -1785,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddresses_csharp">
 <a href="#state_privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
@@ -1795,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_csharp">
 <a href="#state_protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -1805,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddresses_csharp">
 <a href="#state_publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
@@ -1815,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisheremail_csharp">
 <a href="#state_publisheremail_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Email</a>
@@ -1825,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishername_csharp">
 <a href="#state_publishername_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Name</a>
@@ -1835,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1845,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scmurl_csharp">
 <a href="#state_scmurl_csharp" style="color: inherit; text-decoration: inherit;">Scm<wbr>Url</a>
@@ -1855,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_csharp">
 <a href="#state_security_csharp" style="color: inherit; text-decoration: inherit;">Security</a>
@@ -1865,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signin_csharp">
 <a href="#state_signin_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>In</a>
@@ -1875,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signup_csharp">
 <a href="#state_signup_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Up</a>
@@ -1885,8 +1738,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1895,8 +1747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1905,8 +1756,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantaccess_csharp">
 <a href="#state_tenantaccess_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
@@ -1915,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkconfiguration_csharp">
 <a href="#state_virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
@@ -1925,8 +1774,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworktype_csharp">
 <a href="#state_virtualnetworktype_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Type</a>
@@ -1936,13 +1784,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionallocations_go">
 <a href="#state_additionallocations_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Locations</a>
@@ -1951,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_go">
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -1961,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportalurl_go">
 <a href="#state_developerportalurl_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portal<wbr>Url</a>
@@ -1971,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_go">
 <a href="#state_gatewayregionalurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
@@ -1981,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayurl_go">
 <a href="#state_gatewayurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Url</a>
@@ -1991,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostnameconfiguration_go">
 <a href="#state_hostnameconfiguration_go" style="color: inherit; text-decoration: inherit;">Hostname<wbr>Configuration</a>
@@ -2001,8 +1842,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_go">
 <a href="#state_identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -2011,8 +1851,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2021,8 +1860,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementapiurl_go">
 <a href="#state_managementapiurl_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Api<wbr>Url</a>
@@ -2031,8 +1869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2041,8 +1878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationsenderemail_go">
 <a href="#state_notificationsenderemail_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Sender<wbr>Email</a>
@@ -2051,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_go">
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
@@ -2061,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portalurl_go">
 <a href="#state_portalurl_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Url</a>
@@ -2071,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddresses_go">
 <a href="#state_privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
@@ -2081,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_go">
 <a href="#state_protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
@@ -2091,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddresses_go">
 <a href="#state_publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
@@ -2101,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisheremail_go">
 <a href="#state_publisheremail_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Email</a>
@@ -2111,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishername_go">
 <a href="#state_publishername_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Name</a>
@@ -2121,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2131,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scmurl_go">
 <a href="#state_scmurl_go" style="color: inherit; text-decoration: inherit;">Scm<wbr>Url</a>
@@ -2141,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_go">
 <a href="#state_security_go" style="color: inherit; text-decoration: inherit;">Security</a>
@@ -2151,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signin_go">
 <a href="#state_signin_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>In</a>
@@ -2161,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signup_go">
 <a href="#state_signup_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Up</a>
@@ -2171,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -2181,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2191,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantaccess_go">
 <a href="#state_tenantaccess_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
@@ -2201,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkconfiguration_go">
 <a href="#state_virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
@@ -2211,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworktype_go">
 <a href="#state_virtualnetworktype_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Type</a>
@@ -2222,13 +2041,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionallocations_nodejs">
 <a href="#state_additionallocations_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Locations</a>
@@ -2237,8 +2054,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_nodejs">
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -2247,8 +2063,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developerportalurl_nodejs">
 <a href="#state_developerportalurl_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portal<wbr>Url</a>
@@ -2257,8 +2072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayregionalurl_nodejs">
 <a href="#state_gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
@@ -2267,8 +2081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayurl_nodejs">
 <a href="#state_gatewayurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Url</a>
@@ -2277,8 +2090,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostnameconfiguration_nodejs">
 <a href="#state_hostnameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">hostname<wbr>Configuration</a>
@@ -2287,8 +2099,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_nodejs">
 <a href="#state_identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -2297,8 +2108,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2307,8 +2117,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementapiurl_nodejs">
 <a href="#state_managementapiurl_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Api<wbr>Url</a>
@@ -2317,8 +2126,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2327,8 +2135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationsenderemail_nodejs">
 <a href="#state_notificationsenderemail_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Sender<wbr>Email</a>
@@ -2337,8 +2144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_nodejs">
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -2347,8 +2153,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portalurl_nodejs">
 <a href="#state_portalurl_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Url</a>
@@ -2357,8 +2162,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateipaddresses_nodejs">
 <a href="#state_privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
@@ -2367,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_nodejs">
 <a href="#state_protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -2377,8 +2180,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipaddresses_nodejs">
 <a href="#state_publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
@@ -2387,8 +2189,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisheremail_nodejs">
 <a href="#state_publisheremail_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Email</a>
@@ -2397,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publishername_nodejs">
 <a href="#state_publishername_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Name</a>
@@ -2407,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2417,8 +2216,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scmurl_nodejs">
 <a href="#state_scmurl_nodejs" style="color: inherit; text-decoration: inherit;">scm<wbr>Url</a>
@@ -2427,8 +2225,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_nodejs">
 <a href="#state_security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
@@ -2437,8 +2234,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signin_nodejs">
 <a href="#state_signin_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>In</a>
@@ -2447,8 +2243,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signup_nodejs">
 <a href="#state_signup_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Up</a>
@@ -2457,8 +2252,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -2467,8 +2261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2477,8 +2270,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantaccess_nodejs">
 <a href="#state_tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
@@ -2487,8 +2279,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkconfiguration_nodejs">
 <a href="#state_virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
@@ -2497,8 +2288,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworktype_nodejs">
 <a href="#state_virtualnetworktype_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Type</a>
@@ -2508,13 +2298,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additional_locations_python">
 <a href="#state_additional_locations_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>locations</a>
@@ -2523,8 +2311,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocation">Sequence[Service<wbr>Additional<wbr>Location<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_python">
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -2533,8 +2320,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicecertificate">Sequence[Service<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_developer_portal_url_python">
 <a href="#state_developer_portal_url_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portal_<wbr>url</a>
@@ -2543,8 +2329,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Developer Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_regional_url_python">
 <a href="#state_gateway_regional_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>regional_<wbr>url</a>
@@ -2553,8 +2338,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_url_python">
 <a href="#state_gateway_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>url</a>
@@ -2563,8 +2347,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_configuration_python">
 <a href="#state_hostname_configuration_python" style="color: inherit; text-decoration: inherit;">hostname_<wbr>configuration</a>
@@ -2573,8 +2356,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_identity_python">
 <a href="#state_identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -2583,8 +2365,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2593,8 +2374,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_api_url_python">
 <a href="#state_management_api_url_python" style="color: inherit; text-decoration: inherit;">management_<wbr>api_<wbr>url</a>
@@ -2603,8 +2383,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2613,8 +2392,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_sender_email_python">
 <a href="#state_notification_sender_email_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>sender_<wbr>email</a>
@@ -2623,8 +2401,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_python">
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
@@ -2633,8 +2410,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portal_url_python">
 <a href="#state_portal_url_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>url</a>
@@ -2643,8 +2419,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_addresses_python">
 <a href="#state_private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
@@ -2653,8 +2428,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocols_python">
 <a href="#state_protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
@@ -2663,8 +2437,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_ip_addresses_python">
 <a href="#state_public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
@@ -2673,8 +2446,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_email_python">
 <a href="#state_publisher_email_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>email</a>
@@ -2683,8 +2455,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_name_python">
 <a href="#state_publisher_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>name</a>
@@ -2693,8 +2464,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2703,8 +2473,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scm_url_python">
 <a href="#state_scm_url_python" style="color: inherit; text-decoration: inherit;">scm_<wbr>url</a>
@@ -2713,8 +2482,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_python">
 <a href="#state_security_python" style="color: inherit; text-decoration: inherit;">security</a>
@@ -2723,8 +2491,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_in_python">
 <a href="#state_sign_in_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>in</a>
@@ -2733,8 +2500,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_up_python">
 <a href="#state_sign_up_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>up</a>
@@ -2743,8 +2509,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -2753,8 +2518,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The first part is the `name`, valid values include: `Consumption`, `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2763,8 +2527,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_access_python">
 <a href="#state_tenant_access_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>access</a>
@@ -2773,8 +2536,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `tenant_access` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_configuration_python">
 <a href="#state_virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
@@ -2783,8 +2545,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_type_python">
 <a href="#state_virtual_network_type_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>type</a>
@@ -2794,8 +2555,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The type of virtual network you want to use, valid values include: `None`, `External`, `Internal`. 
 > **NOTE:** Please ensure that in the subnet, inbound port 3443 is open when `virtual_network_type` is `Internal` or `External`. And please ensure other necessary ports are open according to [api management network configuration](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet#-common-network-configuration-issues).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2810,8 +2570,7 @@ The following state arguments are supported:
 <h4 id="serviceadditionallocation">Service<wbr>Additional<wbr>Location</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2820,8 +2579,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayregionalurl_csharp">
 <a href="#gatewayregionalurl_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
@@ -2830,8 +2588,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddresses_csharp">
 <a href="#privateipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
@@ -2840,8 +2597,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddresses_csharp">
 <a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
@@ -2850,8 +2606,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkconfiguration_csharp">
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
@@ -2860,13 +2615,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2875,8 +2628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayregionalurl_go">
 <a href="#gatewayregionalurl_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Regional<wbr>Url</a>
@@ -2885,8 +2637,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddresses_go">
 <a href="#privateipaddresses_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Addresses</a>
@@ -2895,8 +2646,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddresses_go">
 <a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
@@ -2905,8 +2655,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkconfiguration_go">
 <a href="#virtualnetworkconfiguration_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
@@ -2915,13 +2664,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2930,8 +2677,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayregionalurl_nodejs">
 <a href="#gatewayregionalurl_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Regional<wbr>Url</a>
@@ -2940,8 +2686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateipaddresses_nodejs">
 <a href="#privateipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Addresses</a>
@@ -2950,8 +2695,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipaddresses_nodejs">
 <a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
@@ -2960,8 +2704,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkconfiguration_nodejs">
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
@@ -2970,13 +2713,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2985,8 +2726,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_regional_url_python">
 <a href="#gateway_regional_url_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>regional_<wbr>url</a>
@@ -2995,8 +2735,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_ip_addresses_python">
 <a href="#private_ip_addresses_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>addresses</a>
@@ -3005,8 +2744,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Private IP addresses of the API Management Service.  Available only when the API Manager instance is using Virtual Network mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ip_addresses_python">
 <a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
@@ -3015,8 +2753,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_network_configuration_python">
 <a href="#virtual_network_configuration_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>configuration</a>
@@ -3025,15 +2762,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `virtual_network_configuration` block as defined below.  Required when `virtual_network_type` is `External` or `Internal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceadditionallocationvirtualnetworkconfiguration">Service<wbr>Additional<wbr>Location<wbr>Virtual<wbr>Network<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3042,13 +2777,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3057,13 +2790,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -3072,13 +2803,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -3087,15 +2816,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecertificate">Service<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3104,8 +2831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encodedcertificate_csharp">
 <a href="#encodedcertificate_csharp" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Certificate</a>
@@ -3114,8 +2840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storename_csharp">
 <a href="#storename_csharp" style="color: inherit; text-decoration: inherit;">Store<wbr>Name</a>
@@ -3124,13 +2849,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3139,8 +2862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encodedcertificate_go">
 <a href="#encodedcertificate_go" style="color: inherit; text-decoration: inherit;">Encoded<wbr>Certificate</a>
@@ -3149,8 +2871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storename_go">
 <a href="#storename_go" style="color: inherit; text-decoration: inherit;">Store<wbr>Name</a>
@@ -3159,13 +2880,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -3174,8 +2893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encodedcertificate_nodejs">
 <a href="#encodedcertificate_nodejs" style="color: inherit; text-decoration: inherit;">encoded<wbr>Certificate</a>
@@ -3184,8 +2902,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storename_nodejs">
 <a href="#storename_nodejs" style="color: inherit; text-decoration: inherit;">store<wbr>Name</a>
@@ -3194,13 +2911,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -3209,8 +2924,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encoded_certificate_python">
 <a href="#encoded_certificate_python" style="color: inherit; text-decoration: inherit;">encoded_<wbr>certificate</a>
@@ -3219,8 +2933,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="store_name_python">
 <a href="#store_name_python" style="color: inherit; text-decoration: inherit;">store_<wbr>name</a>
@@ -3229,15 +2942,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="developerportals_csharp">
 <a href="#developerportals_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
@@ -3246,8 +2957,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_csharp">
 <a href="#managements_csharp" style="color: inherit; text-decoration: inherit;">Managements</a>
@@ -3256,8 +2966,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_csharp">
 <a href="#portals_csharp" style="color: inherit; text-decoration: inherit;">Portals</a>
@@ -3266,8 +2975,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_csharp">
 <a href="#proxies_csharp" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -3276,8 +2984,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_csharp">
 <a href="#scms_csharp" style="color: inherit; text-decoration: inherit;">Scms</a>
@@ -3286,13 +2993,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="developerportals_go">
 <a href="#developerportals_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Portals</a>
@@ -3301,8 +3006,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">[]Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_go">
 <a href="#managements_go" style="color: inherit; text-decoration: inherit;">Managements</a>
@@ -3311,8 +3015,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationmanagement">[]Service<wbr>Hostname<wbr>Configuration<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_go">
 <a href="#portals_go" style="color: inherit; text-decoration: inherit;">Portals</a>
@@ -3321,8 +3024,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationportal">[]Service<wbr>Hostname<wbr>Configuration<wbr>Portal</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_go">
 <a href="#proxies_go" style="color: inherit; text-decoration: inherit;">Proxies</a>
@@ -3331,8 +3033,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationproxy">[]Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_go">
 <a href="#scms_go" style="color: inherit; text-decoration: inherit;">Scms</a>
@@ -3341,13 +3042,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationscm">[]Service<wbr>Hostname<wbr>Configuration<wbr>Scm</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="developerportals_nodejs">
 <a href="#developerportals_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Portals</a>
@@ -3356,8 +3055,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_nodejs">
 <a href="#managements_nodejs" style="color: inherit; text-decoration: inherit;">managements</a>
@@ -3366,8 +3064,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_nodejs">
 <a href="#portals_nodejs" style="color: inherit; text-decoration: inherit;">portals</a>
@@ -3376,8 +3073,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_nodejs">
 <a href="#proxies_nodejs" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -3386,8 +3082,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_nodejs">
 <a href="#scms_nodejs" style="color: inherit; text-decoration: inherit;">scms</a>
@@ -3396,13 +3091,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="developer_portals_python">
 <a href="#developer_portals_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>portals</a>
@@ -3411,8 +3104,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationdeveloperportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `developer_portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managements_python">
 <a href="#managements_python" style="color: inherit; text-decoration: inherit;">managements</a>
@@ -3421,8 +3113,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portals_python">
 <a href="#portals_python" style="color: inherit; text-decoration: inherit;">portals</a>
@@ -3431,8 +3122,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationportal">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxies_python">
 <a href="#proxies_python" style="color: inherit; text-decoration: inherit;">proxies</a>
@@ -3441,8 +3131,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationproxy">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_python">
 <a href="#scms_python" style="color: inherit; text-decoration: inherit;">scms</a>
@@ -3451,15 +3140,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicehostnameconfigurationscm">Sequence[Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicehostnameconfigurationdeveloperportal">Service<wbr>Hostname<wbr>Configuration<wbr>Developer<wbr>Portal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3468,8 +3155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3478,8 +3164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3488,8 +3173,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -3498,8 +3182,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -3508,13 +3191,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3523,8 +3204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3533,8 +3213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3543,8 +3222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -3553,8 +3231,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -3563,13 +3240,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -3578,8 +3253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3588,8 +3262,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -3598,8 +3271,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -3608,8 +3280,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -3618,13 +3289,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -3633,8 +3302,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3643,8 +3311,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -3653,8 +3320,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -3663,8 +3329,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -3673,15 +3338,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3690,8 +3353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3700,8 +3362,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3710,8 +3371,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -3720,8 +3380,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -3730,13 +3389,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3745,8 +3402,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3755,8 +3411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3765,8 +3420,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -3775,8 +3429,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -3785,13 +3438,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -3800,8 +3451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3810,8 +3460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -3820,8 +3469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -3830,8 +3478,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -3840,13 +3487,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -3855,8 +3500,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3865,8 +3509,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -3875,8 +3518,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -3885,8 +3527,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -3895,15 +3536,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3912,8 +3551,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3922,8 +3560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3932,8 +3569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -3942,8 +3578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -3952,13 +3587,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -3967,8 +3600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -3977,8 +3609,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -3987,8 +3618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -3997,8 +3627,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -4007,13 +3636,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -4022,8 +3649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4032,8 +3658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -4042,8 +3667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -4052,8 +3676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -4062,13 +3685,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -4077,8 +3698,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4087,8 +3707,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -4097,8 +3716,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -4107,8 +3725,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -4117,15 +3734,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -4134,8 +3749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -4144,8 +3758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -4154,8 +3767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslbinding_csharp">
 <a href="#defaultsslbinding_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Binding</a>
@@ -4164,8 +3776,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -4174,8 +3785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -4184,13 +3794,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -4199,8 +3807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -4209,8 +3816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -4219,8 +3825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslbinding_go">
 <a href="#defaultsslbinding_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ssl<wbr>Binding</a>
@@ -4229,8 +3834,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -4239,8 +3843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -4249,13 +3852,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -4264,8 +3865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4274,8 +3874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -4284,8 +3883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsslbinding_nodejs">
 <a href="#defaultsslbinding_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ssl<wbr>Binding</a>
@@ -4294,8 +3892,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -4304,8 +3901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -4314,13 +3910,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -4329,8 +3923,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4339,8 +3932,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -4349,8 +3941,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ssl_binding_python">
 <a href="#default_ssl_binding_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ssl_<wbr>binding</a>
@@ -4359,8 +3950,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -4369,8 +3959,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -4379,15 +3968,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -4396,8 +3983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -4406,8 +3992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_csharp">
 <a href="#certificatepassword_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -4416,8 +4001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -4426,8 +4010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_csharp">
 <a href="#negotiateclientcertificate_csharp" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -4436,13 +4019,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -4451,8 +4032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -4461,8 +4041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_go">
 <a href="#certificatepassword_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Password</a>
@@ -4471,8 +4050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -4481,8 +4059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_go">
 <a href="#negotiateclientcertificate_go" style="color: inherit; text-decoration: inherit;">Negotiate<wbr>Client<wbr>Certificate</a>
@@ -4491,13 +4068,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -4506,8 +4081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4516,8 +4090,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepassword_nodejs">
 <a href="#certificatepassword_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Password</a>
@@ -4526,8 +4099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -4536,8 +4108,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiateclientcertificate_nodejs">
 <a href="#negotiateclientcertificate_nodejs" style="color: inherit; text-decoration: inherit;">negotiate<wbr>Client<wbr>Certificate</a>
@@ -4546,13 +4117,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -4561,8 +4130,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hostname to use for the Management API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -4571,8 +4139,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_password_python">
 <a href="#certificate_password_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>password</a>
@@ -4581,8 +4148,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -4591,8 +4157,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negotiate_client_certificate_python">
 <a href="#negotiate_client_certificate_python" style="color: inherit; text-decoration: inherit;">negotiate_<wbr>client_<wbr>certificate</a>
@@ -4601,15 +4166,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceidentity">Service<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityids_csharp">
 <a href="#identityids_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -4618,8 +4181,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4628,8 +4190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4638,8 +4199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4648,13 +4208,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityids_go">
 <a href="#identityids_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Ids</a>
@@ -4663,8 +4221,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4673,8 +4230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4683,8 +4239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4693,13 +4248,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identityids_nodejs">
 <a href="#identityids_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Ids</a>
@@ -4708,8 +4261,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -4718,8 +4270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -4728,8 +4279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4738,13 +4288,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="identity_ids_python">
 <a href="#identity_ids_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>ids</a>
@@ -4753,8 +4301,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -4763,8 +4310,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4773,8 +4319,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4783,15 +4328,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are `SystemAssigned`, `UserAssigned`, `SystemAssigned, UserAssigned` (to enable both).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicepolicy">Service<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="xmlcontent_csharp">
 <a href="#xmlcontent_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Content</a>
@@ -4800,8 +4343,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmllink_csharp">
 <a href="#xmllink_csharp" style="color: inherit; text-decoration: inherit;">Xml<wbr>Link</a>
@@ -4810,13 +4352,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="xmlcontent_go">
 <a href="#xmlcontent_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Content</a>
@@ -4825,8 +4365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmllink_go">
 <a href="#xmllink_go" style="color: inherit; text-decoration: inherit;">Xml<wbr>Link</a>
@@ -4835,13 +4374,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="xmlcontent_nodejs">
 <a href="#xmlcontent_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Content</a>
@@ -4850,8 +4387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xmllink_nodejs">
 <a href="#xmllink_nodejs" style="color: inherit; text-decoration: inherit;">xml<wbr>Link</a>
@@ -4860,13 +4396,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="xml_content_python">
 <a href="#xml_content_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>content</a>
@@ -4875,8 +4409,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xml_link_python">
 <a href="#xml_link_python" style="color: inherit; text-decoration: inherit;">xml_<wbr>link</a>
@@ -4885,15 +4418,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceprotocols">Service<wbr>Protocols</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablehttp2_csharp">
 <a href="#enablehttp2_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http2</a>
@@ -4902,13 +4433,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablehttp2_go">
 <a href="#enablehttp2_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Http2</a>
@@ -4917,13 +4446,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablehttp2_nodejs">
 <a href="#enablehttp2_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Http2</a>
@@ -4932,13 +4459,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_http2_python">
 <a href="#enable_http2_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>http2</a>
@@ -4947,15 +4472,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesecurity">Service<wbr>Security</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablebackendssl30_csharp">
 <a href="#enablebackendssl30_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Ssl30</a>
@@ -4964,8 +4487,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendtls10_csharp">
 <a href="#enablebackendtls10_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Tls10</a>
@@ -4974,8 +4496,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendtls11_csharp">
 <a href="#enablebackendtls11_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Tls11</a>
@@ -4984,8 +4505,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendssl30_csharp">
 <a href="#enablefrontendssl30_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Frontend<wbr>Ssl30</a>
@@ -4994,8 +4514,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendtls10_csharp">
 <a href="#enablefrontendtls10_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Frontend<wbr>Tls10</a>
@@ -5004,8 +4523,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendtls11_csharp">
 <a href="#enablefrontendtls11_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Frontend<wbr>Tls11</a>
@@ -5014,8 +4532,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabletripledesciphers_csharp">
 <a href="#enabletripledesciphers_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
@@ -5024,8 +4541,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdheecdsawithaes128cbcshaciphersenabled_csharp">
 <a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5034,8 +4550,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdheecdsawithaes256cbcshaciphersenabled_csharp">
 <a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5044,8 +4559,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdhersawithaes128cbcshaciphersenabled_csharp">
 <a href="#tlsecdhersawithaes128cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5053,8 +4567,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdhersawithaes256cbcshaciphersenabled_csharp">
 <a href="#tlsecdhersawithaes256cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5062,8 +4575,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128cbcsha256ciphersenabled_csharp">
 <a href="#tlsrsawithaes128cbcsha256ciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5072,8 +4584,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128cbcshaciphersenabled_csharp">
 <a href="#tlsrsawithaes128cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5082,8 +4593,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128gcmsha256ciphersenabled_csharp">
 <a href="#tlsrsawithaes128gcmsha256ciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5092,8 +4602,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes256cbcsha256ciphersenabled_csharp">
 <a href="#tlsrsawithaes256cbcsha256ciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5102,8 +4611,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes256cbcshaciphersenabled_csharp">
 <a href="#tlsrsawithaes256cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5112,8 +4620,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tripledesciphersenabled_csharp">
 <a href="#tripledesciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
@@ -5122,13 +4629,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablebackendssl30_go">
 <a href="#enablebackendssl30_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Ssl30</a>
@@ -5137,8 +4642,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendtls10_go">
 <a href="#enablebackendtls10_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Tls10</a>
@@ -5147,8 +4651,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendtls11_go">
 <a href="#enablebackendtls11_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Backend<wbr>Tls11</a>
@@ -5157,8 +4660,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendssl30_go">
 <a href="#enablefrontendssl30_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Frontend<wbr>Ssl30</a>
@@ -5167,8 +4669,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendtls10_go">
 <a href="#enablefrontendtls10_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Frontend<wbr>Tls10</a>
@@ -5177,8 +4678,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendtls11_go">
 <a href="#enablefrontendtls11_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Frontend<wbr>Tls11</a>
@@ -5187,8 +4687,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabletripledesciphers_go">
 <a href="#enabletripledesciphers_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
@@ -5197,8 +4696,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdheecdsawithaes128cbcshaciphersenabled_go">
 <a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5207,8 +4705,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdheecdsawithaes256cbcshaciphersenabled_go">
 <a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5217,8 +4714,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdhersawithaes128cbcshaciphersenabled_go">
 <a href="#tlsecdhersawithaes128cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5226,8 +4722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdhersawithaes256cbcshaciphersenabled_go">
 <a href="#tlsecdhersawithaes256cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5235,8 +4730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128cbcsha256ciphersenabled_go">
 <a href="#tlsrsawithaes128cbcsha256ciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5245,8 +4739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128cbcshaciphersenabled_go">
 <a href="#tlsrsawithaes128cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5255,8 +4748,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128gcmsha256ciphersenabled_go">
 <a href="#tlsrsawithaes128gcmsha256ciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5265,8 +4757,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes256cbcsha256ciphersenabled_go">
 <a href="#tlsrsawithaes256cbcsha256ciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5275,8 +4766,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes256cbcshaciphersenabled_go">
 <a href="#tlsrsawithaes256cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5285,8 +4775,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tripledesciphersenabled_go">
 <a href="#tripledesciphersenabled_go" style="color: inherit; text-decoration: inherit;">Triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
@@ -5295,13 +4784,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enablebackendssl30_nodejs">
 <a href="#enablebackendssl30_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Ssl30</a>
@@ -5310,8 +4797,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendtls10_nodejs">
 <a href="#enablebackendtls10_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Tls10</a>
@@ -5320,8 +4806,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebackendtls11_nodejs">
 <a href="#enablebackendtls11_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Backend<wbr>Tls11</a>
@@ -5330,8 +4815,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendssl30_nodejs">
 <a href="#enablefrontendssl30_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Frontend<wbr>Ssl30</a>
@@ -5340,8 +4824,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendtls10_nodejs">
 <a href="#enablefrontendtls10_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Frontend<wbr>Tls10</a>
@@ -5350,8 +4833,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablefrontendtls11_nodejs">
 <a href="#enablefrontendtls11_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Frontend<wbr>Tls11</a>
@@ -5360,8 +4842,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enabletripledesciphers_nodejs">
 <a href="#enabletripledesciphers_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
@@ -5370,8 +4851,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdheecdsawithaes128cbcshaciphersenabled_nodejs">
 <a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5380,8 +4860,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdheecdsawithaes256cbcshaciphersenabled_nodejs">
 <a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5390,8 +4869,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdhersawithaes128cbcshaciphersenabled_nodejs">
 <a href="#tlsecdhersawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5399,8 +4877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsecdhersawithaes256cbcshaciphersenabled_nodejs">
 <a href="#tlsecdhersawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5408,8 +4885,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128cbcsha256ciphersenabled_nodejs">
 <a href="#tlsrsawithaes128cbcsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5418,8 +4894,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128cbcshaciphersenabled_nodejs">
 <a href="#tlsrsawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5428,8 +4903,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes128gcmsha256ciphersenabled_nodejs">
 <a href="#tlsrsawithaes128gcmsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5438,8 +4912,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes256cbcsha256ciphersenabled_nodejs">
 <a href="#tlsrsawithaes256cbcsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
@@ -5448,8 +4921,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsrsawithaes256cbcshaciphersenabled_nodejs">
 <a href="#tlsrsawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
@@ -5458,8 +4930,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tripledesciphersenabled_nodejs">
 <a href="#tripledesciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
@@ -5468,13 +4939,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_backend_ssl30_python">
 <a href="#enable_backend_ssl30_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>ssl30</a>
@@ -5483,8 +4952,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_backend_tls10_python">
 <a href="#enable_backend_tls10_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>tls10</a>
@@ -5493,8 +4961,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_backend_tls11_python">
 <a href="#enable_backend_tls11_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>backend_<wbr>tls11</a>
@@ -5503,8 +4970,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_frontend_ssl30_python">
 <a href="#enable_frontend_ssl30_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>frontend_<wbr>ssl30</a>
@@ -5513,8 +4979,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_frontend_tls10_python">
 <a href="#enable_frontend_tls10_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>frontend_<wbr>tls10</a>
@@ -5523,8 +4988,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_frontend_tls11_python">
 <a href="#enable_frontend_tls11_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>frontend_<wbr>tls11</a>
@@ -5533,8 +4997,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enable_triple_des_ciphers_python">
 <a href="#enable_triple_des_ciphers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>triple_<wbr>des_<wbr>ciphers</a>
@@ -5543,8 +5006,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_python">
 <a href="#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>ecdsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
@@ -5553,8 +5015,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_python">
 <a href="#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>ecdsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
@@ -5563,8 +5024,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_python">
 <a href="#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
@@ -5572,8 +5032,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_python">
 <a href="#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
@@ -5581,8 +5040,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_python">
 <a href="#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
@@ -5591,8 +5049,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_rsa_with_aes128_cbc_sha_ciphers_enabled_python">
 <a href="#tls_rsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
@@ -5601,8 +5058,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_python">
 <a href="#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>gcm_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
@@ -5611,8 +5067,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_python">
 <a href="#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
@@ -5621,8 +5076,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_rsa_with_aes256_cbc_sha_ciphers_enabled_python">
 <a href="#tls_rsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
@@ -5631,8 +5085,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triple_des_ciphers_enabled_python">
 <a href="#triple_des_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">triple_<wbr>des_<wbr>ciphers_<wbr>enabled</a>
@@ -5641,15 +5094,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesignin">Service<wbr>Sign<wbr>In</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5658,13 +5109,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5673,13 +5122,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5688,13 +5135,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5703,15 +5148,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesignup">Service<wbr>Sign<wbr>Up</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5720,8 +5163,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="termsofservice_csharp">
 <a href="#termsofservice_csharp" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service</a>
@@ -5730,13 +5172,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5745,8 +5185,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="termsofservice_go">
 <a href="#termsofservice_go" style="color: inherit; text-decoration: inherit;">Terms<wbr>Of<wbr>Service</a>
@@ -5755,13 +5194,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5770,8 +5207,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="termsofservice_nodejs">
 <a href="#termsofservice_nodejs" style="color: inherit; text-decoration: inherit;">terms<wbr>Of<wbr>Service</a>
@@ -5780,13 +5216,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5795,8 +5229,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terms_of_service_python">
 <a href="#terms_of_service_python" style="color: inherit; text-decoration: inherit;">terms_<wbr>of_<wbr>service</a>
@@ -5805,15 +5238,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `terms_of_service` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consentrequired_csharp">
 <a href="#consentrequired_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Required</a>
@@ -5822,8 +5253,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5832,8 +5262,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_csharp">
 <a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -5842,13 +5271,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consentrequired_go">
 <a href="#consentrequired_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Required</a>
@@ -5857,8 +5284,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5867,8 +5293,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_go">
 <a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -5877,13 +5302,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consentrequired_nodejs">
 <a href="#consentrequired_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Required</a>
@@ -5892,8 +5315,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5902,8 +5324,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_nodejs">
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
@@ -5912,13 +5333,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consent_required_python">
 <a href="#consent_required_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>required</a>
@@ -5927,8 +5346,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5937,8 +5355,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_python">
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
@@ -5947,15 +5364,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicetenantaccess">Service<wbr>Tenant<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -5964,8 +5379,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the access to the management api be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -5974,8 +5388,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -5984,8 +5397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -5994,13 +5406,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -6009,8 +5419,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the access to the management api be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -6019,8 +5428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -6029,8 +5437,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -6039,13 +5446,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6054,8 +5459,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the access to the management api be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -6064,8 +5468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -6074,8 +5477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -6084,13 +5486,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -6099,8 +5499,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the access to the management api be enabled?
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -6109,8 +5508,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -6119,8 +5517,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary access key for the tenant access information contract.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -6129,15 +5526,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier for the tenant access information contract.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicevirtualnetworkconfiguration">Service<wbr>Virtual<wbr>Network<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -6146,13 +5541,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -6161,13 +5554,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -6176,13 +5567,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -6191,8 +5580,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the subnet that will be used for the API Management.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

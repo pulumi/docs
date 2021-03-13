@@ -487,8 +487,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floatingip_csharp">
 <a href="#floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -497,8 +496,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -507,8 +505,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_csharp">
 <a href="#fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -517,8 +514,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -530,8 +526,7 @@ The FloatingIpAssociate resource accepts the following [input]({{< relref "/docs
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waituntilassociated_csharp">
 <a href="#waituntilassociated_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
@@ -539,13 +534,11 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floatingip_go">
 <a href="#floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -554,8 +547,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -564,8 +556,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_go">
 <a href="#fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -574,8 +565,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -587,8 +577,7 @@ Changing this creates a new floatingip_associate.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waituntilassociated_go">
 <a href="#waituntilassociated_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
@@ -596,13 +585,11 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floatingip_nodejs">
 <a href="#floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
@@ -611,8 +598,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -621,8 +607,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedip_nodejs">
 <a href="#fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -631,8 +616,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -644,8 +628,7 @@ Changing this creates a new floatingip_associate.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waituntilassociated_nodejs">
 <a href="#waituntilassociated_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Until<wbr>Associated</a>
@@ -653,13 +636,11 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="floating_ip_python">
 <a href="#floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
@@ -668,8 +649,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -678,8 +658,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_ip_python">
 <a href="#fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -688,8 +667,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -701,8 +679,7 @@ Changing this creates a new floatingip_associate.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_until_associated_python">
 <a href="#wait_until_associated_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>until_<wbr>associated</a>
@@ -710,8 +687,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -722,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -731,13 +706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -745,13 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -759,13 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -901,8 +869,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_csharp">
 <a href="#state_fixedip_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -911,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_csharp">
 <a href="#state_floatingip_csharp" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -921,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -931,8 +896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -944,8 +908,7 @@ The following state arguments are supported:
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waituntilassociated_csharp">
 <a href="#state_waituntilassociated_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
@@ -953,13 +916,11 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_go">
 <a href="#state_fixedip_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip</a>
@@ -968,8 +929,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_go">
 <a href="#state_floatingip_go" style="color: inherit; text-decoration: inherit;">Floating<wbr>Ip</a>
@@ -978,8 +938,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -988,8 +947,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1001,8 +959,7 @@ Changing this creates a new floatingip_associate.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waituntilassociated_go">
 <a href="#state_waituntilassociated_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>Until<wbr>Associated</a>
@@ -1010,13 +967,11 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixedip_nodejs">
 <a href="#state_fixedip_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip</a>
@@ -1025,8 +980,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floatingip_nodejs">
 <a href="#state_floatingip_nodejs" style="color: inherit; text-decoration: inherit;">floating<wbr>Ip</a>
@@ -1035,8 +989,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1045,8 +998,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1058,8 +1010,7 @@ Changing this creates a new floatingip_associate.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waituntilassociated_nodejs">
 <a href="#state_waituntilassociated_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>Until<wbr>Associated</a>
@@ -1067,13 +1018,11 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_fixed_ip_python">
 <a href="#state_fixed_ip_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip</a>
@@ -1082,8 +1031,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specific IP address to direct traffic to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_floating_ip_python">
 <a href="#state_floating_ip_python" style="color: inherit; text-decoration: inherit;">floating_<wbr>ip</a>
@@ -1092,8 +1040,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The floating IP to associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1102,8 +1049,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance to associte the floating IP with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1115,8 +1061,7 @@ Changing this creates a new floatingip_associate.
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new floatingip_associate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_until_associated_python">
 <a href="#state_wait_until_associated_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>until_<wbr>associated</a>
@@ -1124,8 +1069,7 @@ Changing this creates a new floatingip_associate.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

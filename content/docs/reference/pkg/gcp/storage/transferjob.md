@@ -514,8 +514,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -524,8 +523,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -534,8 +532,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferspec_csharp">
 <a href="#transferspec_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
@@ -544,8 +541,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -555,8 +551,7 @@ The TransferJob resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -565,13 +560,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -580,8 +573,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -590,8 +582,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferspec_go">
 <a href="#transferspec_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
@@ -600,8 +591,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -611,8 +601,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -621,13 +610,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -636,8 +623,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -646,8 +632,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferspec_nodejs">
 <a href="#transferspec_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Spec</a>
@@ -656,8 +641,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -667,8 +651,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -677,13 +660,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -692,8 +673,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -702,8 +682,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_spec_python">
 <a href="#transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
@@ -712,8 +691,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -723,8 +701,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -733,8 +710,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -745,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -755,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletiontime_csharp">
 <a href="#deletiontime_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
@@ -765,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -774,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodificationtime_csharp">
 <a href="#lastmodificationtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
@@ -784,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -794,13 +765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -809,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletiontime_go">
 <a href="#deletiontime_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
@@ -819,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -828,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodificationtime_go">
 <a href="#lastmodificationtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
@@ -838,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -848,13 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -863,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletiontime_nodejs">
 <a href="#deletiontime_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Time</a>
@@ -873,8 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -882,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodificationtime_nodejs">
 <a href="#lastmodificationtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
@@ -892,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -902,13 +861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -917,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletion_time_python">
 <a href="#deletion_time_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>time</a>
@@ -927,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -936,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modification_time_python">
 <a href="#last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
@@ -946,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -956,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1084,8 +1036,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_csharp">
 <a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1094,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletiontime_csharp">
 <a href="#state_deletiontime_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
@@ -1104,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1114,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodificationtime_csharp">
 <a href="#state_lastmodificationtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
@@ -1124,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1134,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1145,8 +1091,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_csharp">
 <a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1155,8 +1100,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1165,8 +1109,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transferspec_csharp">
 <a href="#state_transferspec_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
@@ -1175,13 +1118,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_go">
 <a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
@@ -1190,8 +1131,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletiontime_go">
 <a href="#state_deletiontime_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Time</a>
@@ -1200,8 +1140,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1210,8 +1149,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodificationtime_go">
 <a href="#state_lastmodificationtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modification<wbr>Time</a>
@@ -1220,8 +1158,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1230,8 +1167,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1241,8 +1177,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_go">
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1251,8 +1186,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1261,8 +1195,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transferspec_go">
 <a href="#state_transferspec_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Spec</a>
@@ -1271,13 +1204,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtime_nodejs">
 <a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
@@ -1286,8 +1217,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletiontime_nodejs">
 <a href="#state_deletiontime_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Time</a>
@@ -1296,8 +1226,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1306,8 +1235,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodificationtime_nodejs">
 <a href="#state_lastmodificationtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modification<wbr>Time</a>
@@ -1316,8 +1244,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1326,8 +1253,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1337,8 +1263,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_nodejs">
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1347,8 +1272,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1357,8 +1281,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transferspec_nodejs">
 <a href="#state_transferspec_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Spec</a>
@@ -1367,13 +1290,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creation_time_python">
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
@@ -1382,8 +1303,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_time_python">
 <a href="#state_deletion_time_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>time</a>
@@ -1392,8 +1312,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1402,8 +1321,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modification_time_python">
 <a href="#state_last_modification_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modification_<wbr>time</a>
@@ -1412,8 +1330,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1422,8 +1339,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1433,8 +1349,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_python">
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1443,8 +1358,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1453,8 +1367,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transfer_spec_python">
 <a href="#state_transfer_spec_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>spec</a>
@@ -1463,8 +1376,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1479,8 +1391,7 @@ is not provided, the provider project is used.
 <h4 id="transferjobschedule">Transfer<wbr>Job<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedulestartdate_csharp">
 <a href="#schedulestartdate_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Start<wbr>Date</a>
@@ -1489,8 +1400,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleenddate_csharp">
 <a href="#scheduleenddate_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>End<wbr>Date</a>
@@ -1499,8 +1409,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttimeofday_csharp">
 <a href="#starttimeofday_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Of<wbr>Day</a>
@@ -1509,13 +1418,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedulestartdate_go">
 <a href="#schedulestartdate_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Start<wbr>Date</a>
@@ -1524,8 +1431,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleenddate_go">
 <a href="#scheduleenddate_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>End<wbr>Date</a>
@@ -1534,8 +1440,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttimeofday_go">
 <a href="#starttimeofday_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Of<wbr>Day</a>
@@ -1544,13 +1449,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedulestartdate_nodejs">
 <a href="#schedulestartdate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Start<wbr>Date</a>
@@ -1559,8 +1462,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleenddate_nodejs">
 <a href="#scheduleenddate_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>End<wbr>Date</a>
@@ -1569,8 +1471,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttimeofday_nodejs">
 <a href="#starttimeofday_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Of<wbr>Day</a>
@@ -1579,13 +1480,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedule_start_date_python">
 <a href="#schedule_start_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>start_<wbr>date</a>
@@ -1594,8 +1493,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_end_date_python">
 <a href="#schedule_end_date_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>end_<wbr>date</a>
@@ -1604,8 +1502,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_of_day_python">
 <a href="#start_time_of_day_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>of_<wbr>day</a>
@@ -1614,15 +1511,13 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1631,8 +1526,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_csharp">
 <a href="#month_csharp" style="color: inherit; text-decoration: inherit;">Month</a>
@@ -1641,8 +1535,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_csharp">
 <a href="#year_csharp" style="color: inherit; text-decoration: inherit;">Year</a>
@@ -1651,13 +1544,11 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1666,8 +1557,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_go">
 <a href="#month_go" style="color: inherit; text-decoration: inherit;">Month</a>
@@ -1676,8 +1566,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_go">
 <a href="#year_go" style="color: inherit; text-decoration: inherit;">Year</a>
@@ -1686,13 +1575,11 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1701,8 +1588,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_nodejs">
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
@@ -1711,8 +1597,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_nodejs">
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
@@ -1721,13 +1606,11 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1736,8 +1619,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_python">
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
@@ -1746,8 +1628,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_python">
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
@@ -1756,15 +1637,13 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobscheduleschedulestartdate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1773,8 +1652,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_csharp">
 <a href="#month_csharp" style="color: inherit; text-decoration: inherit;">Month</a>
@@ -1783,8 +1661,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_csharp">
 <a href="#year_csharp" style="color: inherit; text-decoration: inherit;">Year</a>
@@ -1793,13 +1670,11 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -1808,8 +1683,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_go">
 <a href="#month_go" style="color: inherit; text-decoration: inherit;">Month</a>
@@ -1818,8 +1692,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_go">
 <a href="#year_go" style="color: inherit; text-decoration: inherit;">Year</a>
@@ -1828,13 +1701,11 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1843,8 +1714,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_nodejs">
 <a href="#month_nodejs" style="color: inherit; text-decoration: inherit;">month</a>
@@ -1853,8 +1723,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_nodejs">
 <a href="#year_nodejs" style="color: inherit; text-decoration: inherit;">year</a>
@@ -1863,13 +1732,11 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -1878,8 +1745,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="month_python">
 <a href="#month_python" style="color: inherit; text-decoration: inherit;">month</a>
@@ -1888,8 +1754,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="year_python">
 <a href="#year_python" style="color: inherit; text-decoration: inherit;">year</a>
@@ -1898,15 +1763,13 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_csharp">
 <a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -1915,8 +1778,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -1925,8 +1787,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -1935,8 +1796,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -1945,13 +1805,11 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_go">
 <a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
@@ -1960,8 +1818,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -1970,8 +1827,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
@@ -1980,8 +1836,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
@@ -1990,13 +1845,11 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_nodejs">
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -2005,8 +1858,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -2015,8 +1867,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -2025,8 +1876,7 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -2035,13 +1885,11 @@ is not provided, the provider project is used.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_python">
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
@@ -2050,8 +1898,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -2060,8 +1907,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
@@ -2070,8 +1916,7 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
@@ -2080,15 +1925,13 @@ is not provided, the provider project is used.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="awss3datasource_csharp">
 <a href="#awss3datasource_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>S3Data<wbr>Source</a>
@@ -2097,8 +1940,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsdatasink_csharp">
 <a href="#gcsdatasink_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
@@ -2107,8 +1949,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsdatasource_csharp">
 <a href="#gcsdatasource_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Source</a>
@@ -2117,8 +1958,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpdatasource_csharp">
 <a href="#httpdatasource_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Data<wbr>Source</a>
@@ -2127,8 +1967,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectconditions_csharp">
 <a href="#objectconditions_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Conditions</a>
@@ -2137,8 +1976,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferoptions_csharp">
 <a href="#transferoptions_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
@@ -2147,13 +1985,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="awss3datasource_go">
 <a href="#awss3datasource_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>S3Data<wbr>Source</a>
@@ -2162,8 +1998,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsdatasink_go">
 <a href="#gcsdatasink_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Sink</a>
@@ -2172,8 +2007,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsdatasource_go">
 <a href="#gcsdatasource_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Data<wbr>Source</a>
@@ -2182,8 +2016,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpdatasource_go">
 <a href="#httpdatasource_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Data<wbr>Source</a>
@@ -2192,8 +2025,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectconditions_go">
 <a href="#objectconditions_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Conditions</a>
@@ -2202,8 +2034,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferoptions_go">
 <a href="#transferoptions_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Options</a>
@@ -2212,13 +2043,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="awss3datasource_nodejs">
 <a href="#awss3datasource_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>S3Data<wbr>Source</a>
@@ -2227,8 +2056,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsdatasink_nodejs">
 <a href="#gcsdatasink_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Sink</a>
@@ -2237,8 +2065,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsdatasource_nodejs">
 <a href="#gcsdatasource_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Data<wbr>Source</a>
@@ -2247,8 +2074,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpdatasource_nodejs">
 <a href="#httpdatasource_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Data<wbr>Source</a>
@@ -2257,8 +2083,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectconditions_nodejs">
 <a href="#objectconditions_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Conditions</a>
@@ -2267,8 +2092,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transferoptions_nodejs">
 <a href="#transferoptions_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Options</a>
@@ -2277,13 +2101,11 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aws_s3_data_source_python">
 <a href="#aws_s3_data_source_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>s3_<wbr>data_<wbr>source</a>
@@ -2292,8 +2114,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_data_sink_python">
 <a href="#gcs_data_sink_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>sink</a>
@@ -2302,8 +2123,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_data_source_python">
 <a href="#gcs_data_source_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>data_<wbr>source</a>
@@ -2312,8 +2132,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_data_source_python">
 <a href="#http_data_source_python" style="color: inherit; text-decoration: inherit;">http_<wbr>data_<wbr>source</a>
@@ -2322,8 +2141,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_conditions_python">
 <a href="#object_conditions_python" style="color: inherit; text-decoration: inherit;">object_<wbr>conditions</a>
@@ -2332,8 +2150,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transfer_options_python">
 <a href="#transfer_options_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>options</a>
@@ -2342,15 +2159,13 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsaccesskey_csharp">
 <a href="#awsaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key</a>
@@ -2359,8 +2174,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2369,13 +2183,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsaccesskey_go">
 <a href="#awsaccesskey_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Access<wbr>Key</a>
@@ -2384,8 +2196,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2394,13 +2205,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awsaccesskey_nodejs">
 <a href="#awsaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Access<wbr>Key</a>
@@ -2409,8 +2218,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -2419,13 +2227,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aws_access_key_python">
 <a href="#aws_access_key_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>access_<wbr>key</a>
@@ -2434,8 +2240,7 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS credentials block.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -2444,15 +2249,13 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspecawss3datasourceawsaccesskey">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Aws<wbr>Access<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskeyid_csharp">
 <a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -2461,8 +2264,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_csharp">
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -2471,13 +2273,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskeyid_go">
 <a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -2486,8 +2286,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_go">
 <a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -2496,13 +2295,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskeyid_nodejs">
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
@@ -2511,8 +2308,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretaccesskey_nodejs">
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
@@ -2521,13 +2317,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_id_python">
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
@@ -2536,8 +2330,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_access_key_python">
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
@@ -2546,15 +2339,13 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2563,13 +2354,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2578,13 +2367,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -2593,13 +2380,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -2608,15 +2393,13 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2625,13 +2408,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -2640,13 +2421,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -2655,13 +2434,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -2670,15 +2447,13 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listurl_csharp">
 <a href="#listurl_csharp" style="color: inherit; text-decoration: inherit;">List<wbr>Url</a>
@@ -2687,13 +2462,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listurl_go">
 <a href="#listurl_go" style="color: inherit; text-decoration: inherit;">List<wbr>Url</a>
@@ -2702,13 +2475,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="listurl_nodejs">
 <a href="#listurl_nodejs" style="color: inherit; text-decoration: inherit;">list<wbr>Url</a>
@@ -2717,13 +2488,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="list_url_python">
 <a href="#list_url_python" style="color: inherit; text-decoration: inherit;">list_<wbr>url</a>
@@ -2732,15 +2501,13 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludeprefixes_csharp">
 <a href="#excludeprefixes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Prefixes</a>
@@ -2749,8 +2516,7 @@ is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeprefixes_csharp">
 <a href="#includeprefixes_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Prefixes</a>
@@ -2759,8 +2525,7 @@ is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeelapsedsincelastmodification_csharp">
 <a href="#maxtimeelapsedsincelastmodification_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
@@ -2769,8 +2534,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintimeelapsedsincelastmodification_csharp">
 <a href="#mintimeelapsedsincelastmodification_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
@@ -2779,13 +2543,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludeprefixes_go">
 <a href="#excludeprefixes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Prefixes</a>
@@ -2794,8 +2556,7 @@ is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeprefixes_go">
 <a href="#includeprefixes_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Prefixes</a>
@@ -2804,8 +2565,7 @@ is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeelapsedsincelastmodification_go">
 <a href="#maxtimeelapsedsincelastmodification_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
@@ -2814,8 +2574,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintimeelapsedsincelastmodification_go">
 <a href="#mintimeelapsedsincelastmodification_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
@@ -2824,13 +2583,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="excludeprefixes_nodejs">
 <a href="#excludeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Prefixes</a>
@@ -2839,8 +2596,7 @@ is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includeprefixes_nodejs">
 <a href="#includeprefixes_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Prefixes</a>
@@ -2849,8 +2605,7 @@ is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeelapsedsincelastmodification_nodejs">
 <a href="#maxtimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
@@ -2859,8 +2614,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintimeelapsedsincelastmodification_nodejs">
 <a href="#mintimeelapsedsincelastmodification_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</a>
@@ -2869,13 +2623,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="exclude_prefixes_python">
 <a href="#exclude_prefixes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>prefixes</a>
@@ -2884,8 +2636,7 @@ is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_prefixes_python">
 <a href="#include_prefixes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>prefixes</a>
@@ -2894,8 +2645,7 @@ is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_time_elapsed_since_last_modification_python">
 <a href="#max_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
@@ -2904,8 +2654,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_time_elapsed_since_last_modification_python">
 <a href="#min_time_elapsed_since_last_modification_python" style="color: inherit; text-decoration: inherit;">min_<wbr>time_<wbr>elapsed_<wbr>since_<wbr>last_<wbr>modification</a>
@@ -2914,15 +2663,13 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteobjectsfromsourceaftertransfer_csharp">
 <a href="#deleteobjectsfromsourceaftertransfer_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
@@ -2931,8 +2678,7 @@ is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteobjectsuniqueinsink_csharp">
 <a href="#deleteobjectsuniqueinsink_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
@@ -2942,8 +2688,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overwriteobjectsalreadyexistinginsink_csharp">
 <a href="#overwriteobjectsalreadyexistinginsink_csharp" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
@@ -2952,13 +2697,11 @@ is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteobjectsfromsourceaftertransfer_go">
 <a href="#deleteobjectsfromsourceaftertransfer_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
@@ -2967,8 +2710,7 @@ is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteobjectsuniqueinsink_go">
 <a href="#deleteobjectsuniqueinsink_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
@@ -2978,8 +2720,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overwriteobjectsalreadyexistinginsink_go">
 <a href="#overwriteobjectsalreadyexistinginsink_go" style="color: inherit; text-decoration: inherit;">Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
@@ -2988,13 +2729,11 @@ is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deleteobjectsfromsourceaftertransfer_nodejs">
 <a href="#deleteobjectsfromsourceaftertransfer_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</a>
@@ -3003,8 +2742,7 @@ is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deleteobjectsuniqueinsink_nodejs">
 <a href="#deleteobjectsuniqueinsink_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</a>
@@ -3014,8 +2752,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overwriteobjectsalreadyexistinginsink_nodejs">
 <a href="#overwriteobjectsalreadyexistinginsink_nodejs" style="color: inherit; text-decoration: inherit;">overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</a>
@@ -3024,13 +2761,11 @@ is not provided, the provider project is used.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="delete_objects_from_source_after_transfer_python">
 <a href="#delete_objects_from_source_after_transfer_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>from_<wbr>source_<wbr>after_<wbr>transfer</a>
@@ -3039,8 +2774,7 @@ is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_objects_unique_in_sink_python">
 <a href="#delete_objects_unique_in_sink_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>objects_<wbr>unique_<wbr>in_<wbr>sink</a>
@@ -3050,8 +2784,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overwrite_objects_already_existing_in_sink_python">
 <a href="#overwrite_objects_already_existing_in_sink_python" style="color: inherit; text-decoration: inherit;">overwrite_<wbr>objects_<wbr>already_<wbr>existing_<wbr>in_<wbr>sink</a>
@@ -3060,8 +2793,7 @@ is not provided, the provider project is used.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

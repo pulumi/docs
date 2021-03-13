@@ -398,8 +398,7 @@ The TrafficManagerEndpoint resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -409,8 +408,7 @@ The TrafficManagerEndpoint resource accepts the following [input]({{< relref "/d
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -419,8 +417,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -432,8 +429,7 @@ create the Traffic Manager endpoint.
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -442,8 +438,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">List&lt;Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_csharp">
 <a href="#endpointlocation_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -456,8 +451,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_csharp">
 <a href="#endpointstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -467,8 +461,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomappings_csharp">
 <a href="#geomappings_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mappings</a>
@@ -477,8 +470,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_csharp">
 <a href="#minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -491,8 +483,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -502,8 +493,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -515,8 +505,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -525,8 +514,7 @@ omitted the value will be computed in order of creation.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">List&lt;Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -537,8 +525,7 @@ omitted the value will be computed in order of creation.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -549,8 +536,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -561,13 +547,11 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -577,8 +561,7 @@ routing method. Supports values between 1 and 1000.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -587,8 +570,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -600,8 +582,7 @@ create the Traffic Manager endpoint.
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -610,8 +591,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">[]Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_go">
 <a href="#endpointlocation_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -624,8 +604,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_go">
 <a href="#endpointstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -635,8 +614,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomappings_go">
 <a href="#geomappings_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mappings</a>
@@ -645,8 +623,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_go">
 <a href="#minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -659,8 +636,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -670,8 +646,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -683,8 +658,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_go">
 <a href="#subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -693,8 +667,7 @@ omitted the value will be computed in order of creation.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">[]Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -705,8 +678,7 @@ omitted the value will be computed in order of creation.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -717,8 +689,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -729,13 +700,11 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -745,8 +714,7 @@ routing method. Supports values between 1 and 1000.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -755,8 +723,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -768,8 +735,7 @@ create the Traffic Manager endpoint.
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -778,8 +744,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointlocation_nodejs">
 <a href="#endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
@@ -792,8 +757,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointstatus_nodejs">
 <a href="#endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
@@ -803,8 +767,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geomappings_nodejs">
 <a href="#geomappings_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mappings</a>
@@ -813,8 +776,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minchildendpoints_nodejs">
 <a href="#minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
@@ -827,8 +789,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -838,8 +799,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -851,8 +811,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -861,8 +820,7 @@ omitted the value will be computed in order of creation.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -873,8 +831,7 @@ omitted the value will be computed in order of creation.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -885,8 +842,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -897,13 +853,11 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -913,8 +867,7 @@ routing method. Supports values between 1 and 1000.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -923,8 +876,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -936,8 +888,7 @@ create the Traffic Manager endpoint.
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -946,8 +897,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">Sequence[Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_location_python">
 <a href="#endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
@@ -960,8 +910,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_status_python">
 <a href="#endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
@@ -971,8 +920,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_mappings_python">
 <a href="#geo_mappings_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mappings</a>
@@ -981,8 +929,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_child_endpoints_python">
 <a href="#min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
@@ -995,8 +942,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1006,8 +952,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1019,8 +964,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnets_python">
 <a href="#subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1029,8 +973,7 @@ omitted the value will be computed in order of creation.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">Sequence[Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1041,8 +984,7 @@ omitted the value will be computed in order of creation.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -1053,8 +995,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1065,8 +1006,7 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1077,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointmonitorstatus_csharp">
 <a href="#endpointmonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -1086,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1095,13 +1033,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointmonitorstatus_go">
 <a href="#endpointmonitorstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -1109,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1118,13 +1053,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpointmonitorstatus_nodejs">
 <a href="#endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
@@ -1132,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1141,13 +1073,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="endpoint_monitor_status_python">
 <a href="#endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
@@ -1155,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1164,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1292,8 +1220,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_csharp">
 <a href="#state_customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -1302,8 +1229,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">List&lt;Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointlocation_csharp">
 <a href="#state_endpointlocation_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -1316,8 +1242,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointmonitorstatus_csharp">
 <a href="#state_endpointmonitorstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -1325,8 +1250,7 @@ location of the Azure target resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointstatus_csharp">
 <a href="#state_endpointstatus_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -1336,8 +1260,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geomappings_csharp">
 <a href="#state_geomappings_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mappings</a>
@@ -1346,8 +1269,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minchildendpoints_csharp">
 <a href="#state_minchildendpoints_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -1360,8 +1282,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1371,8 +1292,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1384,8 +1304,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_csharp">
 <a href="#state_profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1395,8 +1314,7 @@ omitted the value will be computed in order of creation.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1405,8 +1323,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnets_csharp">
 <a href="#state_subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1415,8 +1332,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">List&lt;Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1427,8 +1343,7 @@ create the Traffic Manager endpoint.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourceid_csharp">
 <a href="#state_targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -1439,8 +1354,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1452,8 +1366,7 @@ target. This argument must be provided for an endpoint of type
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_csharp">
 <a href="#state_weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1464,13 +1377,11 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_go">
 <a href="#state_customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -1479,8 +1390,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">[]Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointlocation_go">
 <a href="#state_endpointlocation_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Location</a>
@@ -1493,8 +1403,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointmonitorstatus_go">
 <a href="#state_endpointmonitorstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Monitor<wbr>Status</a>
@@ -1502,8 +1411,7 @@ location of the Azure target resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointstatus_go">
 <a href="#state_endpointstatus_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Status</a>
@@ -1513,8 +1421,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geomappings_go">
 <a href="#state_geomappings_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Mappings</a>
@@ -1523,8 +1430,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minchildendpoints_go">
 <a href="#state_minchildendpoints_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Child<wbr>Endpoints</a>
@@ -1537,8 +1443,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1548,8 +1453,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1561,8 +1465,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_go">
 <a href="#state_profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1572,8 +1475,7 @@ omitted the value will be computed in order of creation.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1582,8 +1484,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnets_go">
 <a href="#state_subnets_go" style="color: inherit; text-decoration: inherit;">Subnets</a>
@@ -1592,8 +1493,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">[]Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1604,8 +1504,7 @@ create the Traffic Manager endpoint.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourceid_go">
 <a href="#state_targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -1616,8 +1515,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1629,8 +1527,7 @@ target. This argument must be provided for an endpoint of type
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_go">
 <a href="#state_weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1641,13 +1538,11 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_nodejs">
 <a href="#state_customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -1656,8 +1551,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointlocation_nodejs">
 <a href="#state_endpointlocation_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Location</a>
@@ -1670,8 +1564,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointmonitorstatus_nodejs">
 <a href="#state_endpointmonitorstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Monitor<wbr>Status</a>
@@ -1679,8 +1572,7 @@ location of the Azure target resource.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointstatus_nodejs">
 <a href="#state_endpointstatus_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Status</a>
@@ -1690,8 +1582,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geomappings_nodejs">
 <a href="#state_geomappings_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Mappings</a>
@@ -1700,8 +1591,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minchildendpoints_nodejs">
 <a href="#state_minchildendpoints_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Child<wbr>Endpoints</a>
@@ -1714,8 +1604,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1725,8 +1614,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1738,8 +1626,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_nodejs">
 <a href="#state_profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -1749,8 +1636,7 @@ omitted the value will be computed in order of creation.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1759,8 +1645,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnets_nodejs">
 <a href="#state_subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1769,8 +1654,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1781,8 +1665,7 @@ create the Traffic Manager endpoint.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourceid_nodejs">
 <a href="#state_targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -1793,8 +1676,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1806,8 +1688,7 @@ target. This argument must be provided for an endpoint of type
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_nodejs">
 <a href="#state_weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1818,13 +1699,11 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_custom_headers_python">
 <a href="#state_custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -1833,8 +1712,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type"><a href="#trafficmanagerendpointcustomheader">Sequence[Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `custom_header` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_location_python">
 <a href="#state_endpoint_location_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>location</a>
@@ -1847,8 +1725,7 @@ this must be specified for Profiles using the `Performance` routing method
 if the Endpoint is of either type `nestedEndpoints` or `externalEndpoints`.
 For Endpoints of type `azureEndpoints` the value will be taken from the
 location of the Azure target resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_monitor_status_python">
 <a href="#state_endpoint_monitor_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>monitor_<wbr>status</a>
@@ -1856,8 +1733,7 @@ location of the Azure target resource.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_status_python">
 <a href="#state_endpoint_status_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>status</a>
@@ -1867,8 +1743,7 @@ location of the Azure target resource.
     </dt>
     <dd>{{% md %}}The status of the Endpoint, can be set to
 either `Enabled` or `Disabled`. Defaults to `Enabled`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geo_mappings_python">
 <a href="#state_geo_mappings_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>mappings</a>
@@ -1877,8 +1752,7 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_child_endpoints_python">
 <a href="#state_min_child_endpoints_python" style="color: inherit; text-decoration: inherit;">min_<wbr>child_<wbr>endpoints</a>
@@ -1891,8 +1765,7 @@ of endpoints that must be ‘online’ in the child profile in order for the
 parent profile to direct traffic to any of the endpoints in that child
 profile. This argument only applies to Endpoints of type `nestedEndpoints`
 and defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1902,8 +1775,7 @@ and defaults to `1`.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager endpoint. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1915,8 +1787,7 @@ new resource to be created.
 specified for Profiles using the `Priority` traffic routing method. Supports
 values between 1 and 1000, with no Endpoints sharing the same value. If
 omitted the value will be computed in order of creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_name_python">
 <a href="#state_profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -1926,8 +1797,7 @@ omitted the value will be computed in order of creation.
     </dt>
     <dd>{{% md %}}The name of the Traffic Manager Profile to attach
 create the Traffic Manager endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1936,8 +1806,7 @@ create the Traffic Manager endpoint.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the Traffic Manager Profile exists.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnets_python">
 <a href="#state_subnets_python" style="color: inherit; text-decoration: inherit;">subnets</a>
@@ -1946,8 +1815,7 @@ create the Traffic Manager endpoint.
         <span class="property-type"><a href="#trafficmanagerendpointsubnet">Sequence[Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `subnet` blocks as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1958,8 +1826,7 @@ create the Traffic Manager endpoint.
     <dd>{{% md %}}The FQDN DNS name of the target. This argument must be
 provided for an endpoint of type `externalEndpoints`, for other types it
 will be computed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_resource_id_python">
 <a href="#state_target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -1970,8 +1837,7 @@ will be computed.
     <dd>{{% md %}}The resource id of an Azure resource to
 target. This argument must be provided for an endpoint of type
 `azureEndpoints` or `nestedEndpoints`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1983,8 +1849,7 @@ target. This argument must be provided for an endpoint of type
 - `azureEndpoints`
 - `externalEndpoints`
 - `nestedEndpoints`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_weight_python">
 <a href="#state_weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1995,8 +1860,7 @@ target. This argument must be provided for an endpoint of type
     <dd>{{% md %}}Specifies how much traffic should be distributed to this
 endpoint, this must be specified for Profiles using the  `Weighted` traffic
 routing method. Supports values between 1 and 1000.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2011,8 +1875,7 @@ routing method. Supports values between 1 and 1000.
 <h4 id="trafficmanagerendpointcustomheader">Traffic<wbr>Manager<wbr>Endpoint<wbr>Custom<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2021,8 +1884,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2031,13 +1893,11 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of custom header. Applicable for Http and Https protocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2046,8 +1906,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2056,13 +1915,11 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of custom header. Applicable for Http and Https protocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2071,8 +1928,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2081,13 +1937,11 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of custom header. Applicable for Http and Https protocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2096,8 +1950,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the custom header.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2106,15 +1959,13 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of custom header. Applicable for Http and Https protocol.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficmanagerendpointsubnet">Traffic<wbr>Manager<wbr>Endpoint<wbr>Subnet</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="first_csharp">
 <a href="#first_csharp" style="color: inherit; text-decoration: inherit;">First</a>
@@ -2123,8 +1974,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The First IP....
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_csharp">
 <a href="#last_csharp" style="color: inherit; text-decoration: inherit;">Last</a>
@@ -2133,8 +1983,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Last IP...
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2143,13 +1992,11 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scope...
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="first_go">
 <a href="#first_go" style="color: inherit; text-decoration: inherit;">First</a>
@@ -2158,8 +2005,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The First IP....
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_go">
 <a href="#last_go" style="color: inherit; text-decoration: inherit;">Last</a>
@@ -2168,8 +2014,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Last IP...
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -2178,13 +2023,11 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scope...
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="first_nodejs">
 <a href="#first_nodejs" style="color: inherit; text-decoration: inherit;">first</a>
@@ -2193,8 +2036,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The First IP....
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_nodejs">
 <a href="#last_nodejs" style="color: inherit; text-decoration: inherit;">last</a>
@@ -2203,8 +2045,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Last IP...
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2213,13 +2054,11 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Scope...
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="first_python">
 <a href="#first_python" style="color: inherit; text-decoration: inherit;">first</a>
@@ -2228,8 +2067,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The First IP....
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_python">
 <a href="#last_python" style="color: inherit; text-decoration: inherit;">last</a>
@@ -2238,8 +2076,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Last IP...
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -2248,8 +2085,7 @@ routing method. Supports values between 1 and 1000.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Scope...
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

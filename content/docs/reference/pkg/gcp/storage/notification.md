@@ -385,8 +385,7 @@ The Notification resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -395,8 +394,7 @@ The Notification resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="payloadformat_csharp">
 <a href="#payloadformat_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format</a>
@@ -405,8 +403,7 @@ The Notification resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -418,8 +415,7 @@ The Notification resource accepts the following [input]({{< relref "/docs/intro/
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -428,8 +424,7 @@ you will need to use the project-level name.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtypes_csharp">
 <a href="#eventtypes_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
@@ -438,8 +433,7 @@ you will need to use the project-level name.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectnameprefix_csharp">
 <a href="#objectnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Name<wbr>Prefix</a>
@@ -448,13 +442,11 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -463,8 +455,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="payloadformat_go">
 <a href="#payloadformat_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format</a>
@@ -473,8 +464,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -486,8 +476,7 @@ you will need to use the project-level name.
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -496,8 +485,7 @@ you will need to use the project-level name.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtypes_go">
 <a href="#eventtypes_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
@@ -506,8 +494,7 @@ you will need to use the project-level name.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectnameprefix_go">
 <a href="#objectnameprefix_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Name<wbr>Prefix</a>
@@ -516,13 +503,11 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -531,8 +516,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="payloadformat_nodejs">
 <a href="#payloadformat_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format</a>
@@ -541,8 +525,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -554,8 +537,7 @@ you will need to use the project-level name.
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -564,8 +546,7 @@ you will need to use the project-level name.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtypes_nodejs">
 <a href="#eventtypes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
@@ -574,8 +555,7 @@ you will need to use the project-level name.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectnameprefix_nodejs">
 <a href="#objectnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Name<wbr>Prefix</a>
@@ -584,13 +564,11 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -599,8 +577,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="payload_format_python">
 <a href="#payload_format_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format</a>
@@ -609,8 +586,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -622,8 +598,7 @@ you will need to use the project-level name.
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -632,8 +607,7 @@ you will need to use the project-level name.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_types_python">
 <a href="#event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
@@ -642,8 +616,7 @@ you will need to use the project-level name.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_name_prefix_python">
 <a href="#object_name_prefix_python" style="color: inherit; text-decoration: inherit;">object_<wbr>name_<wbr>prefix</a>
@@ -652,8 +625,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -664,8 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -673,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationid_csharp">
 <a href="#notificationid_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Id</a>
@@ -683,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -693,13 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -707,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationid_go">
 <a href="#notificationid_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Id</a>
@@ -717,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -727,13 +692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -741,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationid_nodejs">
 <a href="#notificationid_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Id</a>
@@ -751,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -761,13 +722,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -775,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notification_id_python">
 <a href="#notification_id_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>id</a>
@@ -785,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -795,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -923,8 +879,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -933,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -943,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtypes_csharp">
 <a href="#state_eventtypes_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
@@ -953,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationid_csharp">
 <a href="#state_notificationid_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Id</a>
@@ -963,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectnameprefix_csharp">
 <a href="#state_objectnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Name<wbr>Prefix</a>
@@ -973,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadformat_csharp">
 <a href="#state_payloadformat_csharp" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format</a>
@@ -983,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -993,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topic_csharp">
 <a href="#state_topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -1006,13 +954,11 @@ The following state arguments are supported:
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -1021,8 +967,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1031,8 +976,7 @@ you will need to use the project-level name.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtypes_go">
 <a href="#state_eventtypes_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Types</a>
@@ -1041,8 +985,7 @@ you will need to use the project-level name.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationid_go">
 <a href="#state_notificationid_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Id</a>
@@ -1051,8 +994,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectnameprefix_go">
 <a href="#state_objectnameprefix_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Name<wbr>Prefix</a>
@@ -1061,8 +1003,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadformat_go">
 <a href="#state_payloadformat_go" style="color: inherit; text-decoration: inherit;">Payload<wbr>Format</a>
@@ -1071,8 +1012,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1081,8 +1021,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topic_go">
 <a href="#state_topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -1094,13 +1033,11 @@ you will need to use the project-level name.
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1109,8 +1046,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -1119,8 +1055,7 @@ you will need to use the project-level name.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtypes_nodejs">
 <a href="#state_eventtypes_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Types</a>
@@ -1129,8 +1064,7 @@ you will need to use the project-level name.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationid_nodejs">
 <a href="#state_notificationid_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Id</a>
@@ -1139,8 +1073,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectnameprefix_nodejs">
 <a href="#state_objectnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Name<wbr>Prefix</a>
@@ -1149,8 +1082,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payloadformat_nodejs">
 <a href="#state_payloadformat_nodejs" style="color: inherit; text-decoration: inherit;">payload<wbr>Format</a>
@@ -1159,8 +1091,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1169,8 +1100,7 @@ you will need to use the project-level name.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topic_nodejs">
 <a href="#state_topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -1182,13 +1112,11 @@ you will need to use the project-level name.
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -1197,8 +1125,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -1207,8 +1134,7 @@ you will need to use the project-level name.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_types_python">
 <a href="#state_event_types_python" style="color: inherit; text-decoration: inherit;">event_<wbr>types</a>
@@ -1217,8 +1143,7 @@ you will need to use the project-level name.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_id_python">
 <a href="#state_notification_id_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>id</a>
@@ -1227,8 +1152,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the created notification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_name_prefix_python">
 <a href="#state_object_name_prefix_python" style="color: inherit; text-decoration: inherit;">object_<wbr>name_<wbr>prefix</a>
@@ -1237,8 +1161,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payload_format_python">
 <a href="#state_payload_format_python" style="color: inherit; text-decoration: inherit;">payload_<wbr>format</a>
@@ -1247,8 +1170,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1257,8 +1179,7 @@ you will need to use the project-level name.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_topic_python">
 <a href="#state_topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -1270,8 +1191,7 @@ you will need to use the project-level name.
 topic name, assumed to belong to the default GCP provider project, or the project-level name,
 i.e. `projects/my-gcp-project/topics/my-topic` or `my-topic`. If the project is not set in the provider,
 you will need to use the project-level name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

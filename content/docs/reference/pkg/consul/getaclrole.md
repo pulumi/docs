@@ -152,8 +152,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -162,8 +161,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -172,8 +170,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -182,8 +179,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -193,8 +189,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceidentities_csharp">
 <a href="#serviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
@@ -204,13 +199,11 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -219,8 +212,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -229,8 +221,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -239,8 +230,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -250,8 +240,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceidentities_go">
 <a href="#serviceidentities_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
@@ -261,13 +250,11 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -276,8 +263,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -286,8 +272,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -296,8 +281,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -307,8 +291,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceidentities_nodejs">
 <a href="#serviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Identities</a>
@@ -318,13 +301,11 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -333,8 +314,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -343,8 +323,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -353,8 +332,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -364,8 +342,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_identities_python">
 <a href="#service_identities_python" style="color: inherit; text-decoration: inherit;">service_<wbr>identities</a>
@@ -375,8 +352,7 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -389,8 +365,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -399,8 +374,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -408,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -418,8 +391,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -427,8 +399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -438,8 +409,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceidentities_csharp">
 <a href="#serviceidentities_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
@@ -449,13 +419,11 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -464,8 +432,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -473,8 +440,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -483,8 +449,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -492,8 +457,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -503,8 +467,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceidentities_go">
 <a href="#serviceidentities_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Identities</a>
@@ -514,13 +477,11 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -529,8 +490,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -538,8 +498,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -548,8 +507,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -557,8 +515,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -568,8 +525,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceidentities_nodejs">
 <a href="#serviceidentities_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Identities</a>
@@ -579,13 +535,11 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -594,8 +548,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -603,8 +556,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -613,8 +565,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the ACL Role.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -622,8 +573,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -633,8 +583,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
     </dt>
     <dd>{{% md %}}The list of policies associated with the ACL Role. Each entry has
 an `id` and a `name` attribute.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_identities_python">
 <a href="#service_identities_python" style="color: inherit; text-decoration: inherit;">service_<wbr>identities</a>
@@ -644,8 +593,7 @@ an `id` and a `name` attribute.
     </dt>
     <dd>{{% md %}}The list of service identities associated with the ACL
 Role. Each entry has a `service_name` attribute and a list of `datacenters`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -659,8 +607,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -668,8 +615,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -678,13 +624,11 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -692,8 +636,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -702,13 +645,11 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -716,8 +657,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -726,13 +666,11 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -740,8 +678,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -750,8 +687,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL Role.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity</h4>
@@ -759,8 +695,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_csharp">
 <a href="#datacenters_csharp" style="color: inherit; text-decoration: inherit;">Datacenters</a>
@@ -768,8 +703,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -777,13 +711,11 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_go">
 <a href="#datacenters_go" style="color: inherit; text-decoration: inherit;">Datacenters</a>
@@ -791,8 +723,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -800,13 +731,11 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_nodejs">
 <a href="#datacenters_nodejs" style="color: inherit; text-decoration: inherit;">datacenters</a>
@@ -814,8 +743,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -823,13 +751,11 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datacenters_python">
 <a href="#datacenters_python" style="color: inherit; text-decoration: inherit;">datacenters</a>
@@ -837,8 +763,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -846,8 +771,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

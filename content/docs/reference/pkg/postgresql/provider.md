@@ -167,8 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcert_csharp">
 <a href="#clientcert_csharp" style="color: inherit; text-decoration: inherit;">Clientcert</a>
@@ -177,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#providerclientcert">Pulumi.<wbr>Postgre<wbr>Sql.<wbr>Inputs.<wbr>Provider<wbr>Clientcert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL client certificate if required by the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_csharp">
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -187,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
- It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
 <a href="#database_csharp" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -197,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseusername_csharp">
 <a href="#databaseusername_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Username</a>
@@ -207,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedversion_csharp">
 <a href="#expectedversion_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Version</a>
@@ -217,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -227,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_csharp">
 <a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
@@ -237,8 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -247,8 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -257,8 +248,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_csharp">
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -266,8 +256,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslmode_csharp">
 <a href="#sslmode_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
@@ -275,8 +264,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_csharp">
 <a href="#sslmode_csharp" style="color: inherit; text-decoration: inherit;">Sslmode</a>
@@ -286,8 +274,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
- It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcert_csharp">
 <a href="#sslrootcert_csharp" style="color: inherit; text-decoration: inherit;">Sslrootcert</a>
@@ -296,8 +283,7 @@ PostgreSQL server
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_csharp">
 <a href="#superuser_csharp" style="color: inherit; text-decoration: inherit;">Superuser</a>
@@ -307,8 +293,7 @@ PostgreSQL server
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -317,13 +302,11 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcert_go">
 <a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Clientcert</a>
@@ -332,8 +315,7 @@ Refreshing state password from Postgres)
         <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert</a></span>
     </dt>
     <dd>{{% md %}}SSL client certificate if required by the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_go">
 <a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -342,8 +324,7 @@ Refreshing state password from Postgres)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
- It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_go">
 <a href="#database_go" style="color: inherit; text-decoration: inherit;">Database</a>
@@ -352,8 +333,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseusername_go">
 <a href="#databaseusername_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Username</a>
@@ -362,8 +342,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedversion_go">
 <a href="#expectedversion_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Version</a>
@@ -372,8 +351,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -382,8 +360,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_go">
 <a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
@@ -392,8 +369,7 @@ Refreshing state password from Postgres)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -402,8 +378,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -412,8 +387,7 @@ Refreshing state password from Postgres)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_go">
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -421,8 +395,7 @@ Refreshing state password from Postgres)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslmode_go">
 <a href="#sslmode_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Mode</a>
@@ -430,8 +403,7 @@ Refreshing state password from Postgres)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_go">
 <a href="#sslmode_go" style="color: inherit; text-decoration: inherit;">Sslmode</a>
@@ -441,8 +413,7 @@ Refreshing state password from Postgres)
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
- It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcert_go">
 <a href="#sslrootcert_go" style="color: inherit; text-decoration: inherit;">Sslrootcert</a>
@@ -451,8 +422,7 @@ PostgreSQL server
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_go">
 <a href="#superuser_go" style="color: inherit; text-decoration: inherit;">Superuser</a>
@@ -462,8 +432,7 @@ PostgreSQL server
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -472,13 +441,11 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcert_nodejs">
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">clientcert</a>
@@ -487,8 +454,7 @@ Refreshing state password from Postgres)
         <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert</a></span>
     </dt>
     <dd>{{% md %}}SSL client certificate if required by the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_nodejs">
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
@@ -497,8 +463,7 @@ Refreshing state password from Postgres)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
- It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
 <a href="#database_nodejs" style="color: inherit; text-decoration: inherit;">database</a>
@@ -507,8 +472,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseusername_nodejs">
 <a href="#databaseusername_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Username</a>
@@ -517,8 +481,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedversion_nodejs">
 <a href="#expectedversion_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Version</a>
@@ -527,8 +490,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -537,8 +499,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnections_nodejs">
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
@@ -547,8 +508,7 @@ Refreshing state password from Postgres)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -557,8 +517,7 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -567,8 +526,7 @@ Refreshing state password from Postgres)
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_nodejs">
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -576,8 +534,7 @@ Refreshing state password from Postgres)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslmode_nodejs">
 <a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Mode</a>
@@ -585,8 +542,7 @@ Refreshing state password from Postgres)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_nodejs">
 <a href="#sslmode_nodejs" style="color: inherit; text-decoration: inherit;">sslmode</a>
@@ -596,8 +552,7 @@ Refreshing state password from Postgres)
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
- It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcert_nodejs">
 <a href="#sslrootcert_nodejs" style="color: inherit; text-decoration: inherit;">sslrootcert</a>
@@ -606,8 +561,7 @@ PostgreSQL server
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_nodejs">
 <a href="#superuser_nodejs" style="color: inherit; text-decoration: inherit;">superuser</a>
@@ -617,8 +571,7 @@ PostgreSQL server
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -627,13 +580,11 @@ Refreshing state password from Postgres)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientcert_python">
 <a href="#clientcert_python" style="color: inherit; text-decoration: inherit;">clientcert</a>
@@ -642,8 +593,7 @@ Refreshing state password from Postgres)
         <span class="property-type"><a href="#providerclientcert">Provider<wbr>Clientcert<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSL client certificate if required by the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_timeout_python">
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
@@ -652,8 +602,7 @@ Refreshing state password from Postgres)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
- It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGCONNECT_TIMEOUT`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_python">
 <a href="#database_python" style="color: inherit; text-decoration: inherit;">database</a>
@@ -662,8 +611,7 @@ Refreshing state password from Postgres)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_username_python">
 <a href="#database_username_python" style="color: inherit; text-decoration: inherit;">database_<wbr>username</a>
@@ -672,8 +620,7 @@ Refreshing state password from Postgres)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_version_python">
 <a href="#expected_version_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>version</a>
@@ -682,8 +629,7 @@ Refreshing state password from Postgres)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -692,8 +638,7 @@ Refreshing state password from Postgres)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connections_python">
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
@@ -702,8 +647,7 @@ Refreshing state password from Postgres)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -712,8 +656,7 @@ Refreshing state password from Postgres)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -722,8 +665,7 @@ Refreshing state password from Postgres)
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheme_python">
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -731,8 +673,7 @@ Refreshing state password from Postgres)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ssl_mode_python">
 <a href="#ssl_mode_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>mode</a>
@@ -740,8 +681,7 @@ Refreshing state password from Postgres)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslmode_python">
 <a href="#sslmode_python" style="color: inherit; text-decoration: inherit;">sslmode</a>
@@ -751,8 +691,7 @@ Refreshing state password from Postgres)
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
- It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `PGSSLMODE`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslrootcert_python">
 <a href="#sslrootcert_python" style="color: inherit; text-decoration: inherit;">sslrootcert</a>
@@ -761,8 +700,7 @@ PostgreSQL server
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSL server root certificate file path. The file must contain PEM encoded data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="superuser_python">
 <a href="#superuser_python" style="color: inherit; text-decoration: inherit;">superuser</a>
@@ -772,8 +710,7 @@ PostgreSQL server
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -782,8 +719,7 @@ Refreshing state password from Postgres)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -794,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -803,13 +738,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -817,13 +750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -831,13 +762,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -845,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -862,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="providerclientcert">Provider<wbr>Clientcert</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -871,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -880,13 +806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -894,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -903,13 +826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -917,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -926,13 +846,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -940,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -949,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

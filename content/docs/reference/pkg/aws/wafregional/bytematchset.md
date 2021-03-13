@@ -297,8 +297,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytematchtuples_csharp">
 <a href="#bytematchtuples_csharp" style="color: inherit; text-decoration: inherit;">Byte<wbr>Match<wbr>Tuples</a>
@@ -307,8 +306,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#bytematchsetbytematchtuple">List&lt;Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -317,13 +315,11 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytematchtuples_go">
 <a href="#bytematchtuples_go" style="color: inherit; text-decoration: inherit;">Byte<wbr>Match<wbr>Tuples</a>
@@ -332,8 +328,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -342,13 +337,11 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bytematchtuples_nodejs">
 <a href="#bytematchtuples_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Tuples</a>
@@ -357,8 +350,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#bytematchsetbytematchtuple">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -367,13 +359,11 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="byte_match_tuples_python">
 <a href="#byte_match_tuples_python" style="color: inherit; text-decoration: inherit;">byte_<wbr>match_<wbr>tuples</a>
@@ -382,8 +372,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#bytematchsetbytematchtuple">Sequence[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -392,8 +381,7 @@ The ByteMatchSet resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -404,8 +392,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -413,13 +400,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -427,13 +412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -441,13 +424,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -455,8 +436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -583,8 +563,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bytematchtuples_csharp">
 <a href="#state_bytematchtuples_csharp" style="color: inherit; text-decoration: inherit;">Byte<wbr>Match<wbr>Tuples</a>
@@ -593,8 +572,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuple">List&lt;Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -603,13 +581,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bytematchtuples_go">
 <a href="#state_bytematchtuples_go" style="color: inherit; text-decoration: inherit;">Byte<wbr>Match<wbr>Tuples</a>
@@ -618,8 +594,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuple">[]Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -628,13 +603,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bytematchtuples_nodejs">
 <a href="#state_bytematchtuples_nodejs" style="color: inherit; text-decoration: inherit;">byte<wbr>Match<wbr>Tuples</a>
@@ -643,8 +616,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuple">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple[]</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -653,13 +625,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_byte_match_tuples_python">
 <a href="#state_byte_match_tuples_python" style="color: inherit; text-decoration: inherit;">byte_<wbr>match_<wbr>tuples</a>
@@ -668,8 +638,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuple">Sequence[Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -678,8 +647,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or description of the ByteMatchSet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,8 +662,7 @@ The following state arguments are supported:
 <h4 id="bytematchsetbytematchtuple">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldtomatch_csharp">
 <a href="#fieldtomatch_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
@@ -704,8 +671,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positionalconstraint_csharp">
 <a href="#positionalconstraint_csharp" style="color: inherit; text-decoration: inherit;">Positional<wbr>Constraint</a>
@@ -714,8 +680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Within the portion of a web request that you want to search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="texttransformation_csharp">
 <a href="#texttransformation_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
@@ -724,8 +689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The formatting way for web request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetstring_csharp">
 <a href="#targetstring_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>String</a>
@@ -734,13 +698,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldtomatch_go">
 <a href="#fieldtomatch_go" style="color: inherit; text-decoration: inherit;">Field<wbr>To<wbr>Match</a>
@@ -749,8 +711,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positionalconstraint_go">
 <a href="#positionalconstraint_go" style="color: inherit; text-decoration: inherit;">Positional<wbr>Constraint</a>
@@ -759,8 +720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Within the portion of a web request that you want to search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="texttransformation_go">
 <a href="#texttransformation_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Transformation</a>
@@ -769,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The formatting way for web request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetstring_go">
 <a href="#targetstring_go" style="color: inherit; text-decoration: inherit;">Target<wbr>String</a>
@@ -779,13 +738,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fieldtomatch_nodejs">
 <a href="#fieldtomatch_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>To<wbr>Match</a>
@@ -794,8 +751,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positionalconstraint_nodejs">
 <a href="#positionalconstraint_nodejs" style="color: inherit; text-decoration: inherit;">positional<wbr>Constraint</a>
@@ -804,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Within the portion of a web request that you want to search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="texttransformation_nodejs">
 <a href="#texttransformation_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Transformation</a>
@@ -814,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The formatting way for web request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetstring_nodejs">
 <a href="#targetstring_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>String</a>
@@ -824,13 +778,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="field_to_match_python">
 <a href="#field_to_match_python" style="color: inherit; text-decoration: inherit;">field_<wbr>to_<wbr>match</a>
@@ -839,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the ByteMatchTuple. FieldToMatch documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="positional_constraint_python">
 <a href="#positional_constraint_python" style="color: inherit; text-decoration: inherit;">positional_<wbr>constraint</a>
@@ -849,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Within the portion of a web request that you want to search.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="text_transformation_python">
 <a href="#text_transformation_python" style="color: inherit; text-decoration: inherit;">text_<wbr>transformation</a>
@@ -859,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The formatting way for web request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_string_python">
 <a href="#target_string_python" style="color: inherit; text-decoration: inherit;">target_<wbr>string</a>
@@ -869,15 +818,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bytematchsetbytematchtuplefieldtomatch">Byte<wbr>Match<wbr>Set<wbr>Byte<wbr>Match<wbr>Tuple<wbr>Field<wbr>To<wbr>Match</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -886,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -896,13 +842,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -911,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -921,13 +864,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -936,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -946,13 +886,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -961,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The part of the web request that you want AWS WAF to search for a specified string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -971,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

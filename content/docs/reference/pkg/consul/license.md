@@ -243,8 +243,7 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consullicense_csharp">
 <a href="#consullicense_csharp" style="color: inherit; text-decoration: inherit;">Consul<wbr>License</a>
@@ -253,8 +252,7 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -264,13 +262,11 @@ The License resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="license_go">
 <a href="#license_go" style="color: inherit; text-decoration: inherit;">License</a>
@@ -279,8 +275,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -290,13 +285,11 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="license_nodejs">
 <a href="#license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
@@ -305,8 +298,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -316,13 +308,11 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="license_python">
 <a href="#license_python" style="color: inherit; text-decoration: inherit;">license</a>
@@ -331,8 +321,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -342,8 +331,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -354,8 +342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customerid_csharp">
 <a href="#customerid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Id</a>
@@ -364,8 +351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -374,8 +360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -384,8 +369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -393,8 +377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="installationid_csharp">
 <a href="#installationid_csharp" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
@@ -403,8 +386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuetime_csharp">
 <a href="#issuetime_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Time</a>
@@ -413,8 +395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenseid_csharp">
 <a href="#licenseid_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Id</a>
@@ -423,8 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="product_csharp">
 <a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -433,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -443,8 +422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_csharp">
 <a href="#valid_csharp" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -453,8 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_csharp">
 <a href="#warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -463,13 +440,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customerid_go">
 <a href="#customerid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Id</a>
@@ -478,8 +453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -488,8 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -498,8 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -507,8 +479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="installationid_go">
 <a href="#installationid_go" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
@@ -517,8 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuetime_go">
 <a href="#issuetime_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Time</a>
@@ -527,8 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenseid_go">
 <a href="#licenseid_go" style="color: inherit; text-decoration: inherit;">License<wbr>Id</a>
@@ -537,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="product_go">
 <a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -547,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -557,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_go">
 <a href="#valid_go" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -567,8 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_go">
 <a href="#warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -577,13 +542,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customerid_nodejs">
 <a href="#customerid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Id</a>
@@ -592,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -602,8 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -612,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -621,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="installationid_nodejs">
 <a href="#installationid_nodejs" style="color: inherit; text-decoration: inherit;">installation<wbr>Id</a>
@@ -631,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuetime_nodejs">
 <a href="#issuetime_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Time</a>
@@ -641,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenseid_nodejs">
 <a href="#licenseid_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Id</a>
@@ -651,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="product_nodejs">
 <a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -661,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -671,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_nodejs">
 <a href="#valid_nodejs" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -681,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_nodejs">
 <a href="#warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -691,13 +644,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customer_id_python">
 <a href="#customer_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>id</a>
@@ -706,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -716,8 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -726,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -735,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="installation_id_python">
 <a href="#installation_id_python" style="color: inherit; text-decoration: inherit;">installation_<wbr>id</a>
@@ -745,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issue_time_python">
 <a href="#issue_time_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>time</a>
@@ -755,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="license_id_python">
 <a href="#license_id_python" style="color: inherit; text-decoration: inherit;">license_<wbr>id</a>
@@ -765,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="product_python">
 <a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -775,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -785,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valid_python">
 <a href="#valid_python" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -795,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="warnings_python">
 <a href="#warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -805,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -933,8 +873,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_consullicense_csharp">
 <a href="#state_consullicense_csharp" style="color: inherit; text-decoration: inherit;">Consul<wbr>License</a>
@@ -943,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerid_csharp">
 <a href="#state_customerid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Id</a>
@@ -953,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -964,8 +901,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_csharp">
 <a href="#state_expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -974,8 +910,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_csharp">
 <a href="#state_features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -984,8 +919,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installationid_csharp">
 <a href="#state_installationid_csharp" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
@@ -994,8 +928,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuetime_csharp">
 <a href="#state_issuetime_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Time</a>
@@ -1004,8 +937,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenseid_csharp">
 <a href="#state_licenseid_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Id</a>
@@ -1014,8 +946,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_csharp">
 <a href="#state_product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1024,8 +955,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1034,8 +964,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_csharp">
 <a href="#state_valid_csharp" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -1044,8 +973,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warnings_csharp">
 <a href="#state_warnings_csharp" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -1054,13 +982,11 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customerid_go">
 <a href="#state_customerid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Id</a>
@@ -1069,8 +995,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -1080,8 +1005,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_go">
 <a href="#state_expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1090,8 +1014,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_go">
 <a href="#state_features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -1100,8 +1023,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installationid_go">
 <a href="#state_installationid_go" style="color: inherit; text-decoration: inherit;">Installation<wbr>Id</a>
@@ -1110,8 +1032,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuetime_go">
 <a href="#state_issuetime_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Time</a>
@@ -1120,8 +1041,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_go">
 <a href="#state_license_go" style="color: inherit; text-decoration: inherit;">License</a>
@@ -1130,8 +1050,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenseid_go">
 <a href="#state_licenseid_go" style="color: inherit; text-decoration: inherit;">License<wbr>Id</a>
@@ -1140,8 +1059,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_go">
 <a href="#state_product_go" style="color: inherit; text-decoration: inherit;">Product</a>
@@ -1150,8 +1068,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_go">
 <a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1160,8 +1077,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_go">
 <a href="#state_valid_go" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -1170,8 +1086,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warnings_go">
 <a href="#state_warnings_go" style="color: inherit; text-decoration: inherit;">Warnings</a>
@@ -1180,13 +1095,11 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customerid_nodejs">
 <a href="#state_customerid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Id</a>
@@ -1195,8 +1108,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1206,8 +1118,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_nodejs">
 <a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -1216,8 +1127,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_nodejs">
 <a href="#state_features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -1226,8 +1136,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installationid_nodejs">
 <a href="#state_installationid_nodejs" style="color: inherit; text-decoration: inherit;">installation<wbr>Id</a>
@@ -1236,8 +1145,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuetime_nodejs">
 <a href="#state_issuetime_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Time</a>
@@ -1246,8 +1154,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_nodejs">
 <a href="#state_license_nodejs" style="color: inherit; text-decoration: inherit;">license</a>
@@ -1256,8 +1163,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licenseid_nodejs">
 <a href="#state_licenseid_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Id</a>
@@ -1266,8 +1172,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_nodejs">
 <a href="#state_product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1276,8 +1181,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1286,8 +1190,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_nodejs">
 <a href="#state_valid_nodejs" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -1296,8 +1199,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warnings_nodejs">
 <a href="#state_warnings_nodejs" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -1306,13 +1208,11 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customer_id_python">
 <a href="#state_customer_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>id</a>
@@ -1321,8 +1221,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer the license is attached to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1332,8 +1231,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_time_python">
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -1342,8 +1240,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_python">
 <a href="#state_features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -1352,8 +1249,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The features for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installation_id_python">
 <a href="#state_installation_id_python" style="color: inherit; text-decoration: inherit;">installation_<wbr>id</a>
@@ -1362,8 +1258,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the current installation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issue_time_python">
 <a href="#state_issue_time_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>time</a>
@@ -1372,8 +1267,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the license was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_python">
 <a href="#state_license_python" style="color: inherit; text-decoration: inherit;">license</a>
@@ -1382,8 +1276,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consul license to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_id_python">
 <a href="#state_license_id_python" style="color: inherit; text-decoration: inherit;">license_<wbr>id</a>
@@ -1392,8 +1285,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the license used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_python">
 <a href="#state_product_python" style="color: inherit; text-decoration: inherit;">product</a>
@@ -1402,8 +1294,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The product for which the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1412,8 +1303,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_python">
 <a href="#state_valid_python" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -1422,8 +1312,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the license is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warnings_python">
 <a href="#state_warnings_python" style="color: inherit; text-decoration: inherit;">warnings</a>
@@ -1432,8 +1321,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of warning messages regarding the license validity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -336,8 +336,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -347,8 +346,7 @@ The Stack resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablerollback_csharp">
 <a href="#disablerollback_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
@@ -358,8 +356,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrolearn_csharp">
 <a href="#iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -368,8 +365,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -378,8 +374,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationarns_csharp">
 <a href="#notificationarns_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Arns</a>
@@ -388,8 +383,7 @@ Conflicts with `on_failure`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfailure_csharp">
 <a href="#onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -399,8 +393,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -409,8 +402,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policybody_csharp">
 <a href="#policybody_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Body</a>
@@ -420,8 +412,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyurl_csharp">
 <a href="#policyurl_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Url</a>
@@ -431,8 +422,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -441,8 +431,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatebody_csharp">
 <a href="#templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -451,8 +440,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateurl_csharp">
 <a href="#templateurl_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Url</a>
@@ -461,8 +449,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinminutes_csharp">
 <a href="#timeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Minutes</a>
@@ -471,13 +458,11 @@ Conflicts w/ `policy_body`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -487,8 +472,7 @@ Conflicts w/ `policy_body`.
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablerollback_go">
 <a href="#disablerollback_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
@@ -498,8 +482,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrolearn_go">
 <a href="#iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -508,8 +491,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -518,8 +500,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationarns_go">
 <a href="#notificationarns_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Arns</a>
@@ -528,8 +509,7 @@ Conflicts with `on_failure`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfailure_go">
 <a href="#onfailure_go" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -539,8 +519,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -549,8 +528,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policybody_go">
 <a href="#policybody_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Body</a>
@@ -560,8 +538,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyurl_go">
 <a href="#policyurl_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Url</a>
@@ -571,8 +548,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -581,8 +557,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatebody_go">
 <a href="#templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -591,8 +566,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateurl_go">
 <a href="#templateurl_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Url</a>
@@ -601,8 +575,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinminutes_go">
 <a href="#timeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Minutes</a>
@@ -611,13 +584,11 @@ Conflicts w/ `policy_body`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -627,8 +598,7 @@ Conflicts w/ `policy_body`.
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablerollback_nodejs">
 <a href="#disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
@@ -638,8 +608,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrolearn_nodejs">
 <a href="#iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -648,8 +617,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -658,8 +626,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationarns_nodejs">
 <a href="#notificationarns_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Arns</a>
@@ -668,8 +635,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onfailure_nodejs">
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
@@ -679,8 +645,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -689,8 +654,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policybody_nodejs">
 <a href="#policybody_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Body</a>
@@ -700,8 +664,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyurl_nodejs">
 <a href="#policyurl_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Url</a>
@@ -711,8 +674,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -721,8 +683,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatebody_nodejs">
 <a href="#templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
@@ -731,8 +692,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateurl_nodejs">
 <a href="#templateurl_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Url</a>
@@ -741,8 +701,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinminutes_nodejs">
 <a href="#timeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Minutes</a>
@@ -751,13 +710,11 @@ Conflicts w/ `policy_body`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -767,8 +724,7 @@ Conflicts w/ `policy_body`.
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_rollback_python">
 <a href="#disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
@@ -778,8 +734,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_role_arn_python">
 <a href="#iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -788,8 +743,7 @@ Conflicts with `on_failure`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -798,8 +752,7 @@ Conflicts with `on_failure`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_arns_python">
 <a href="#notification_arns_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>arns</a>
@@ -808,8 +761,7 @@ Conflicts with `on_failure`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_failure_python">
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
@@ -819,8 +771,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -829,8 +780,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_body_python">
 <a href="#policy_body_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>body</a>
@@ -840,8 +790,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_url_python">
 <a href="#policy_url_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>url</a>
@@ -851,8 +800,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -861,8 +809,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_body_python">
 <a href="#template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
@@ -871,8 +818,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_url_python">
 <a href="#template_url_python" style="color: inherit; text-decoration: inherit;">template_<wbr>url</a>
@@ -881,8 +827,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_minutes_python">
 <a href="#timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>minutes</a>
@@ -891,8 +836,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -903,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -912,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -922,13 +864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -936,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -946,13 +885,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -960,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -970,13 +906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -984,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -994,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1122,8 +1054,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_csharp">
 <a href="#state_capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -1133,8 +1064,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablerollback_csharp">
 <a href="#state_disablerollback_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
@@ -1144,8 +1074,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_csharp">
 <a href="#state_iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -1154,8 +1083,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1164,8 +1092,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationarns_csharp">
 <a href="#state_notificationarns_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Arns</a>
@@ -1174,8 +1101,7 @@ Conflicts with `on_failure`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onfailure_csharp">
 <a href="#state_onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -1185,8 +1111,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_csharp">
 <a href="#state_outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1195,8 +1120,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_csharp">
 <a href="#state_parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1205,8 +1129,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policybody_csharp">
 <a href="#state_policybody_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Body</a>
@@ -1216,8 +1139,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyurl_csharp">
 <a href="#state_policyurl_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Url</a>
@@ -1227,8 +1149,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1237,8 +1158,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatebody_csharp">
 <a href="#state_templatebody_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -1247,8 +1167,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateurl_csharp">
 <a href="#state_templateurl_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Url</a>
@@ -1257,8 +1176,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutinminutes_csharp">
 <a href="#state_timeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Minutes</a>
@@ -1267,13 +1185,11 @@ Conflicts w/ `policy_body`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_go">
 <a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -1283,8 +1199,7 @@ Conflicts w/ `policy_body`.
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablerollback_go">
 <a href="#state_disablerollback_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Rollback</a>
@@ -1294,8 +1209,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_go">
 <a href="#state_iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -1304,8 +1218,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1314,8 +1227,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationarns_go">
 <a href="#state_notificationarns_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Arns</a>
@@ -1324,8 +1236,7 @@ Conflicts with `on_failure`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onfailure_go">
 <a href="#state_onfailure_go" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -1335,8 +1246,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_go">
 <a href="#state_outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1345,8 +1255,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_go">
 <a href="#state_parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -1355,8 +1264,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policybody_go">
 <a href="#state_policybody_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Body</a>
@@ -1366,8 +1274,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyurl_go">
 <a href="#state_policyurl_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Url</a>
@@ -1377,8 +1284,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1387,8 +1293,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatebody_go">
 <a href="#state_templatebody_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Body</a>
@@ -1397,8 +1302,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateurl_go">
 <a href="#state_templateurl_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Url</a>
@@ -1407,8 +1311,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutinminutes_go">
 <a href="#state_timeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Minutes</a>
@@ -1417,13 +1320,11 @@ Conflicts w/ `policy_body`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_nodejs">
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1433,8 +1334,7 @@ Conflicts w/ `policy_body`.
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablerollback_nodejs">
 <a href="#state_disablerollback_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Rollback</a>
@@ -1444,8 +1344,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_nodejs">
 <a href="#state_iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -1454,8 +1353,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1464,8 +1362,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationarns_nodejs">
 <a href="#state_notificationarns_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Arns</a>
@@ -1474,8 +1371,7 @@ Conflicts with `on_failure`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_onfailure_nodejs">
 <a href="#state_onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
@@ -1485,8 +1381,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_nodejs">
 <a href="#state_outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1495,8 +1390,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_nodejs">
 <a href="#state_parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1505,8 +1399,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policybody_nodejs">
 <a href="#state_policybody_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Body</a>
@@ -1516,8 +1409,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyurl_nodejs">
 <a href="#state_policyurl_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Url</a>
@@ -1527,8 +1419,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1537,8 +1428,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatebody_nodejs">
 <a href="#state_templatebody_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Body</a>
@@ -1547,8 +1437,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateurl_nodejs">
 <a href="#state_templateurl_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Url</a>
@@ -1557,8 +1446,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeoutinminutes_nodejs">
 <a href="#state_timeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Minutes</a>
@@ -1567,13 +1455,11 @@ Conflicts w/ `policy_body`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_python">
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1583,8 +1469,7 @@ Conflicts w/ `policy_body`.
     </dt>
     <dd>{{% md %}}A list of capabilities.
 Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_rollback_python">
 <a href="#state_disable_rollback_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>rollback</a>
@@ -1594,8 +1479,7 @@ Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPA
     </dt>
     <dd>{{% md %}}Set to true to disable rollback of the stack if stack creation failed.
 Conflicts with `on_failure`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_role_arn_python">
 <a href="#state_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -1604,8 +1488,7 @@ Conflicts with `on_failure`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1614,8 +1497,7 @@ Conflicts with `on_failure`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Stack name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_arns_python">
 <a href="#state_notification_arns_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>arns</a>
@@ -1624,8 +1506,7 @@ Conflicts with `on_failure`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of SNS topic ARNs to publish stack related events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_on_failure_python">
 <a href="#state_on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
@@ -1635,8 +1516,7 @@ Conflicts with `on_failure`.
     </dt>
     <dd>{{% md %}}Action to be taken if stack creation fails. This must be
 one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outputs_python">
 <a href="#state_outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1645,8 +1525,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of outputs from the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parameters_python">
 <a href="#state_parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -1655,8 +1534,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Parameter structures that specify input parameters for the stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_body_python">
 <a href="#state_policy_body_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>body</a>
@@ -1666,8 +1544,7 @@ one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`
     </dt>
     <dd>{{% md %}}Structure containing the stack policy body.
 Conflicts w/ `policy_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_url_python">
 <a href="#state_policy_url_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>url</a>
@@ -1677,8 +1554,7 @@ Conflicts w/ `policy_url`.
     </dt>
     <dd>{{% md %}}Location of a file containing the stack policy.
 Conflicts w/ `policy_body`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1687,8 +1563,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with this stack.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_body_python">
 <a href="#state_template_body_python" style="color: inherit; text-decoration: inherit;">template_<wbr>body</a>
@@ -1697,8 +1572,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Structure containing the template body (max size: 51,200 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_url_python">
 <a href="#state_template_url_python" style="color: inherit; text-decoration: inherit;">template_<wbr>url</a>
@@ -1707,8 +1581,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of a file containing the template body (max size: 460,800 bytes).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_in_minutes_python">
 <a href="#state_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>minutes</a>
@@ -1717,8 +1590,7 @@ Conflicts w/ `policy_body`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

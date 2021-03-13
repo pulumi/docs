@@ -282,8 +282,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -292,8 +291,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameservers_csharp">
 <a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -302,8 +300,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofdots_csharp">
 <a href="#numberofdots_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
@@ -312,8 +309,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_csharp">
 <a href="#searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -322,13 +318,11 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -337,8 +331,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameservers_go">
 <a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -347,8 +340,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofdots_go">
 <a href="#numberofdots_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
@@ -357,8 +349,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_go">
 <a href="#searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -367,13 +358,11 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -382,8 +371,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameservers_nodejs">
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
@@ -392,8 +380,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofdots_nodejs">
 <a href="#numberofdots_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Dots</a>
@@ -402,8 +389,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_nodejs">
 <a href="#searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -412,13 +398,11 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -427,8 +411,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_servers_python">
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
@@ -437,8 +420,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_dots_python">
 <a href="#number_of_dots_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>dots</a>
@@ -447,8 +429,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searches_python">
 <a href="#searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -457,8 +438,7 @@ The Dns resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -469,8 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -478,13 +457,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -492,13 +469,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -506,13 +481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -520,8 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -648,8 +620,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -658,8 +629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameservers_csharp">
 <a href="#state_nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -668,8 +638,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofdots_csharp">
 <a href="#state_numberofdots_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
@@ -678,8 +647,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searches_csharp">
 <a href="#state_searches_csharp" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -688,13 +656,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -703,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameservers_go">
 <a href="#state_nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
@@ -713,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofdots_go">
 <a href="#state_numberofdots_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Dots</a>
@@ -723,8 +687,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searches_go">
 <a href="#state_searches_go" style="color: inherit; text-decoration: inherit;">Searches</a>
@@ -733,13 +696,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -748,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameservers_nodejs">
 <a href="#state_nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
@@ -758,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofdots_nodejs">
 <a href="#state_numberofdots_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Dots</a>
@@ -768,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searches_nodejs">
 <a href="#state_searches_nodejs" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -778,13 +736,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -793,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provide description for your DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_servers_python">
 <a href="#state_name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
@@ -803,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Name or IP address of the DNS server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_of_dots_python">
 <a href="#state_number_of_dots_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>dots</a>
@@ -813,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the number of dots needed in a name before an initial absolute query will be made.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searches_python">
 <a href="#state_searches_python" style="color: inherit; text-decoration: inherit;">searches</a>
@@ -823,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify what domains you want to search
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

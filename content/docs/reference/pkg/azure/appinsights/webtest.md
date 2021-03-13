@@ -369,8 +369,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationinsightsid_csharp">
 <a href="#applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -379,8 +378,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -389,8 +387,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geolocations_csharp">
 <a href="#geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
@@ -399,8 +396,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -409,8 +405,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -419,8 +414,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -429,8 +423,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -439,8 +432,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
 <a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -449,8 +441,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -459,8 +450,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -470,8 +460,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryenabled_csharp">
 <a href="#retryenabled_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
@@ -480,8 +469,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -490,8 +478,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -500,13 +487,11 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationinsightsid_go">
 <a href="#applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -515,8 +500,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -525,8 +509,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geolocations_go">
 <a href="#geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
@@ -535,8 +518,7 @@ new resource to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -545,8 +527,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -555,8 +536,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -565,8 +545,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -575,8 +554,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
 <a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -585,8 +563,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -595,8 +572,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -606,8 +582,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryenabled_go">
 <a href="#retryenabled_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
@@ -616,8 +591,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -626,8 +600,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -636,13 +609,11 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationinsightsid_nodejs">
 <a href="#applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
@@ -651,8 +622,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -661,8 +631,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geolocations_nodejs">
 <a href="#geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
@@ -671,8 +640,7 @@ new resource to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -681,8 +649,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -691,8 +658,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -701,8 +667,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -711,8 +676,7 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
 <a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -721,8 +685,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -731,8 +694,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -742,8 +704,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryenabled_nodejs">
 <a href="#retryenabled_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Enabled</a>
@@ -752,8 +713,7 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -762,8 +722,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -772,13 +731,11 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_insights_id_python">
 <a href="#application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
@@ -787,8 +744,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -797,8 +753,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="geo_locations_python">
 <a href="#geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
@@ -807,8 +762,7 @@ new resource to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -817,8 +771,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -827,8 +780,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -837,8 +789,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -847,8 +798,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
 <a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -857,8 +807,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -867,8 +816,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -878,8 +826,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_enabled_python">
 <a href="#retry_enabled_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>enabled</a>
@@ -888,8 +835,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -898,8 +844,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -908,8 +853,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -920,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -929,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticmonitorid_csharp">
 <a href="#syntheticmonitorid_csharp" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
@@ -938,13 +880,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -952,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticmonitorid_go">
 <a href="#syntheticmonitorid_go" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
@@ -961,13 +900,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -975,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syntheticmonitorid_nodejs">
 <a href="#syntheticmonitorid_nodejs" style="color: inherit; text-decoration: inherit;">synthetic<wbr>Monitor<wbr>Id</a>
@@ -984,13 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -998,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="synthetic_monitor_id_python">
 <a href="#synthetic_monitor_id_python" style="color: inherit; text-decoration: inherit;">synthetic_<wbr>monitor_<wbr>id</a>
@@ -1007,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1135,8 +1067,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationinsightsid_csharp">
 <a href="#state_applicationinsightsid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -1145,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_csharp">
 <a href="#state_configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1155,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1165,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1175,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_csharp">
 <a href="#state_frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1185,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocations_csharp">
 <a href="#state_geolocations_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
@@ -1195,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1205,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1215,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1226,8 +1149,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1236,8 +1158,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryenabled_csharp">
 <a href="#state_retryenabled_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
@@ -1246,8 +1167,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syntheticmonitorid_csharp">
 <a href="#state_syntheticmonitorid_csharp" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
@@ -1255,8 +1175,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1265,8 +1184,7 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1275,13 +1193,11 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationinsightsid_go">
 <a href="#state_applicationinsightsid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Insights<wbr>Id</a>
@@ -1290,8 +1206,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_go">
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1300,8 +1215,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1310,8 +1224,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1320,8 +1233,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_go">
 <a href="#state_frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
@@ -1330,8 +1242,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocations_go">
 <a href="#state_geolocations_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Locations</a>
@@ -1340,8 +1251,7 @@ new resource to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1350,8 +1260,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1360,8 +1269,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1371,8 +1279,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1381,8 +1288,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryenabled_go">
 <a href="#state_retryenabled_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Enabled</a>
@@ -1391,8 +1297,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syntheticmonitorid_go">
 <a href="#state_syntheticmonitorid_go" style="color: inherit; text-decoration: inherit;">Synthetic<wbr>Monitor<wbr>Id</a>
@@ -1400,8 +1305,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1410,8 +1314,7 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1420,13 +1323,11 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationinsightsid_nodejs">
 <a href="#state_applicationinsightsid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Insights<wbr>Id</a>
@@ -1435,8 +1336,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_nodejs">
 <a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1445,8 +1345,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1455,8 +1354,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1465,8 +1363,7 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_nodejs">
 <a href="#state_frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1475,8 +1372,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geolocations_nodejs">
 <a href="#state_geolocations_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Locations</a>
@@ -1485,8 +1381,7 @@ new resource to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1495,8 +1390,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1505,8 +1399,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1516,8 +1409,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1526,8 +1418,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryenabled_nodejs">
 <a href="#state_retryenabled_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Enabled</a>
@@ -1536,8 +1427,7 @@ new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syntheticmonitorid_nodejs">
 <a href="#state_syntheticmonitorid_nodejs" style="color: inherit; text-decoration: inherit;">synthetic<wbr>Monitor<wbr>Id</a>
@@ -1545,8 +1435,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1555,8 +1444,7 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1565,13 +1453,11 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_insights_id_python">
 <a href="#state_application_insights_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>insights_<wbr>id</a>
@@ -1580,8 +1466,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_python">
 <a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1590,8 +1475,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1600,8 +1484,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Purpose/user defined descriptive test for this WebTest.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1610,8 +1493,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the test actively being monitored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frequency_python">
 <a href="#state_frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
@@ -1620,8 +1502,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geo_locations_python">
 <a href="#state_geo_locations_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>locations</a>
@@ -1630,8 +1511,7 @@ new resource to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of where to physically run the tests from to give global coverage for accessibility of your application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1640,8 +1520,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1650,8 +1529,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1661,8 +1539,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights WebTest. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1671,8 +1548,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retry_enabled_python">
 <a href="#state_retry_enabled_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>enabled</a>
@@ -1681,8 +1557,7 @@ new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for retries should this WebTest fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_synthetic_monitor_id_python">
 <a href="#state_synthetic_monitor_id_python" style="color: inherit; text-decoration: inherit;">synthetic_<wbr>monitor_<wbr>id</a>
@@ -1690,8 +1565,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1700,8 +1574,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1710,8 +1583,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds until this WebTest will timeout and fail. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -268,8 +268,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientvpnendpointid_csharp">
 <a href="#clientvpnendpointid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Vpn<wbr>Endpoint<wbr>Id</a>
@@ -278,8 +277,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnetworkcidr_csharp">
 <a href="#targetnetworkcidr_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Cidr</a>
@@ -288,8 +286,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessgroupid_csharp">
 <a href="#accessgroupid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Id</a>
@@ -298,8 +295,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizeallgroups_csharp">
 <a href="#authorizeallgroups_csharp" style="color: inherit; text-decoration: inherit;">Authorize<wbr>All<wbr>Groups</a>
@@ -308,8 +304,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -318,13 +313,11 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientvpnendpointid_go">
 <a href="#clientvpnendpointid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Vpn<wbr>Endpoint<wbr>Id</a>
@@ -333,8 +326,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnetworkcidr_go">
 <a href="#targetnetworkcidr_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Cidr</a>
@@ -343,8 +335,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessgroupid_go">
 <a href="#accessgroupid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Id</a>
@@ -353,8 +344,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizeallgroups_go">
 <a href="#authorizeallgroups_go" style="color: inherit; text-decoration: inherit;">Authorize<wbr>All<wbr>Groups</a>
@@ -363,8 +353,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -373,13 +362,11 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientvpnendpointid_nodejs">
 <a href="#clientvpnendpointid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Vpn<wbr>Endpoint<wbr>Id</a>
@@ -388,8 +375,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnetworkcidr_nodejs">
 <a href="#targetnetworkcidr_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Cidr</a>
@@ -398,8 +384,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessgroupid_nodejs">
 <a href="#accessgroupid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Id</a>
@@ -408,8 +393,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizeallgroups_nodejs">
 <a href="#authorizeallgroups_nodejs" style="color: inherit; text-decoration: inherit;">authorize<wbr>All<wbr>Groups</a>
@@ -418,8 +402,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -428,13 +411,11 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_vpn_endpoint_id_python">
 <a href="#client_vpn_endpoint_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>vpn_<wbr>endpoint_<wbr>id</a>
@@ -443,8 +424,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_network_cidr_python">
 <a href="#target_network_cidr_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>cidr</a>
@@ -453,8 +433,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_group_id_python">
 <a href="#access_group_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>id</a>
@@ -463,8 +442,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorize_all_groups_python">
 <a href="#authorize_all_groups_python" style="color: inherit; text-decoration: inherit;">authorize_<wbr>all_<wbr>groups</a>
@@ -473,8 +451,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -483,8 +460,7 @@ The AuthorizationRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -495,8 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -504,13 +479,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -518,13 +491,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -532,13 +503,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -546,8 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -674,8 +642,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessgroupid_csharp">
 <a href="#state_accessgroupid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Id</a>
@@ -684,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizeallgroups_csharp">
 <a href="#state_authorizeallgroups_csharp" style="color: inherit; text-decoration: inherit;">Authorize<wbr>All<wbr>Groups</a>
@@ -694,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientvpnendpointid_csharp">
 <a href="#state_clientvpnendpointid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Vpn<wbr>Endpoint<wbr>Id</a>
@@ -704,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -714,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnetworkcidr_csharp">
 <a href="#state_targetnetworkcidr_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Cidr</a>
@@ -724,13 +687,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessgroupid_go">
 <a href="#state_accessgroupid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Group<wbr>Id</a>
@@ -739,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizeallgroups_go">
 <a href="#state_authorizeallgroups_go" style="color: inherit; text-decoration: inherit;">Authorize<wbr>All<wbr>Groups</a>
@@ -749,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientvpnendpointid_go">
 <a href="#state_clientvpnendpointid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Vpn<wbr>Endpoint<wbr>Id</a>
@@ -759,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -769,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnetworkcidr_go">
 <a href="#state_targetnetworkcidr_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Cidr</a>
@@ -779,13 +736,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessgroupid_nodejs">
 <a href="#state_accessgroupid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Group<wbr>Id</a>
@@ -794,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizeallgroups_nodejs">
 <a href="#state_authorizeallgroups_nodejs" style="color: inherit; text-decoration: inherit;">authorize<wbr>All<wbr>Groups</a>
@@ -804,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientvpnendpointid_nodejs">
 <a href="#state_clientvpnendpointid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Vpn<wbr>Endpoint<wbr>Id</a>
@@ -814,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -824,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnetworkcidr_nodejs">
 <a href="#state_targetnetworkcidr_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Cidr</a>
@@ -834,13 +785,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_group_id_python">
 <a href="#state_access_group_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>group_<wbr>id</a>
@@ -849,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorize_all_groups_python">
 <a href="#state_authorize_all_groups_python" style="color: inherit; text-decoration: inherit;">authorize_<wbr>all_<wbr>groups</a>
@@ -859,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_vpn_endpoint_id_python">
 <a href="#state_client_vpn_endpoint_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>vpn_<wbr>endpoint_<wbr>id</a>
@@ -869,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -879,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of the authorization rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_network_cidr_python">
 <a href="#state_target_network_cidr_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>cidr</a>
@@ -889,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

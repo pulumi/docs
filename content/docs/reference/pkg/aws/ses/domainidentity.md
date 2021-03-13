@@ -293,8 +293,7 @@ The DomainIdentity resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -303,13 +302,11 @@ The DomainIdentity resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -318,13 +315,11 @@ The DomainIdentity resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -333,13 +328,11 @@ The DomainIdentity resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -348,8 +341,7 @@ The DomainIdentity resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -360,8 +352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -370,8 +361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -379,8 +369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verificationtoken_csharp">
 <a href="#verificationtoken_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -395,13 +384,11 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -410,8 +397,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -419,8 +405,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verificationtoken_go">
 <a href="#verificationtoken_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -435,13 +420,11 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -450,8 +433,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -459,8 +441,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verificationtoken_nodejs">
 <a href="#verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
@@ -475,13 +456,11 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -490,8 +469,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -499,8 +477,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verification_token_python">
 <a href="#verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
@@ -515,8 +492,7 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -643,8 +619,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -653,8 +628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -663,8 +637,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationtoken_csharp">
 <a href="#state_verificationtoken_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -679,13 +652,11 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -694,8 +665,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -704,8 +674,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationtoken_go">
 <a href="#state_verificationtoken_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Token</a>
@@ -720,13 +689,11 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -735,8 +702,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -745,8 +711,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationtoken_nodejs">
 <a href="#state_verificationtoken_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Token</a>
@@ -761,13 +726,11 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -776,8 +739,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -786,8 +748,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain name to assign to SES
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verification_token_python">
 <a href="#state_verification_token_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>token</a>
@@ -802,8 +763,7 @@ until this is done. See below for an example of how this might be achieved
 when the domain is hosted in Route 53 and managed by this provider.  Find out
 more about verifying domains in Amazon SES in the [AWS SES
 docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

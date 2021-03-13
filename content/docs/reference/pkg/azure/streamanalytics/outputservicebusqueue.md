@@ -372,8 +372,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queuename_csharp">
 <a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -382,8 +381,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -392,8 +390,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialization_csharp">
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
@@ -402,8 +399,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebusnamespace_csharp">
 <a href="#servicebusnamespace_csharp" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Namespace</a>
@@ -412,8 +408,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccesspolicykey_csharp">
 <a href="#sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
@@ -422,8 +417,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccesspolicyname_csharp">
 <a href="#sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -432,8 +426,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamanalyticsjobname_csharp">
 <a href="#streamanalyticsjobname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
@@ -442,8 +435,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -452,13 +444,11 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queuename_go">
 <a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -467,8 +457,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -477,8 +466,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialization_go">
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
@@ -487,8 +475,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebusnamespace_go">
 <a href="#servicebusnamespace_go" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Namespace</a>
@@ -497,8 +484,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccesspolicykey_go">
 <a href="#sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
@@ -507,8 +493,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccesspolicyname_go">
 <a href="#sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -517,8 +502,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamanalyticsjobname_go">
 <a href="#streamanalyticsjobname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
@@ -527,8 +511,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -537,13 +520,11 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queuename_nodejs">
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
@@ -552,8 +533,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -562,8 +542,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialization_nodejs">
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
@@ -572,8 +551,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebusnamespace_nodejs">
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">servicebus<wbr>Namespace</a>
@@ -582,8 +560,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccesspolicykey_nodejs">
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
@@ -592,8 +569,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharedaccesspolicyname_nodejs">
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -602,8 +578,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamanalyticsjobname_nodejs">
 <a href="#streamanalyticsjobname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Analytics<wbr>Job<wbr>Name</a>
@@ -612,8 +587,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -622,13 +596,11 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="queue_name_python">
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
@@ -637,8 +609,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -647,8 +618,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serialization_python">
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
@@ -657,8 +627,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebus_namespace_python">
 <a href="#servicebus_namespace_python" style="color: inherit; text-decoration: inherit;">servicebus_<wbr>namespace</a>
@@ -667,8 +636,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shared_access_policy_key_python">
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
@@ -677,8 +645,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shared_access_policy_name_python">
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
@@ -687,8 +654,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stream_analytics_job_name_python">
 <a href="#stream_analytics_job_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>analytics_<wbr>job_<wbr>name</a>
@@ -697,8 +663,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -707,8 +672,7 @@ The OutputServiceBusQueue resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -719,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -728,13 +691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -742,13 +703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,13 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -770,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -898,8 +854,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -908,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queuename_csharp">
 <a href="#state_queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -918,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -928,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialization_csharp">
 <a href="#state_serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
@@ -938,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusnamespace_csharp">
 <a href="#state_servicebusnamespace_csharp" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Namespace</a>
@@ -948,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedaccesspolicykey_csharp">
 <a href="#state_sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
@@ -958,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedaccesspolicyname_csharp">
 <a href="#state_sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -968,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamanalyticsjobname_csharp">
 <a href="#state_streamanalyticsjobname_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
@@ -978,13 +926,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -993,8 +939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queuename_go">
 <a href="#state_queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -1003,8 +948,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1013,8 +957,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialization_go">
 <a href="#state_serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
@@ -1023,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusnamespace_go">
 <a href="#state_servicebusnamespace_go" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Namespace</a>
@@ -1033,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedaccesspolicykey_go">
 <a href="#state_sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
@@ -1043,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedaccesspolicyname_go">
 <a href="#state_sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -1053,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamanalyticsjobname_go">
 <a href="#state_streamanalyticsjobname_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Analytics<wbr>Job<wbr>Name</a>
@@ -1063,13 +1002,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1078,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queuename_nodejs">
 <a href="#state_queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
@@ -1088,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1098,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialization_nodejs">
 <a href="#state_serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
@@ -1108,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusnamespace_nodejs">
 <a href="#state_servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">servicebus<wbr>Namespace</a>
@@ -1118,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedaccesspolicykey_nodejs">
 <a href="#state_sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
@@ -1128,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedaccesspolicyname_nodejs">
 <a href="#state_sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
@@ -1138,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamanalyticsjobname_nodejs">
 <a href="#state_streamanalyticsjobname_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Analytics<wbr>Job<wbr>Name</a>
@@ -1148,13 +1078,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1163,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Output. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queue_name_python">
 <a href="#state_queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
@@ -1173,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Service Bus Queue.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1183,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Stream Analytics Job exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serialization_python">
 <a href="#state_serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
@@ -1193,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `serialization` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebus_namespace_python">
 <a href="#state_servicebus_namespace_python" style="color: inherit; text-decoration: inherit;">servicebus_<wbr>namespace</a>
@@ -1203,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_access_policy_key_python">
 <a href="#state_shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
@@ -1213,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_access_policy_name_python">
 <a href="#state_shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
@@ -1223,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stream_analytics_job_name_python">
 <a href="#state_stream_analytics_job_name_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>analytics_<wbr>job_<wbr>name</a>
@@ -1233,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Stream Analytics Job. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1249,8 +1169,7 @@ The following state arguments are supported:
 <h4 id="outputservicebusqueueserialization">Output<wbr>Service<wbr>Bus<wbr>Queue<wbr>Serialization</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1259,8 +1178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -1269,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to `UTF8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_csharp">
 <a href="#fielddelimiter_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
@@ -1279,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The delimiter that will be used to separate comma-separated value (CSV) records. Possible values are ` ` (space), `,` (comma), `   ` (tab), `|` (pipe) and `;`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1289,13 +1205,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the JSON the output will be written in. Possible values are `Array` and `LineSeparated`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1304,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -1314,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to `UTF8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_go">
 <a href="#fielddelimiter_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
@@ -1324,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The delimiter that will be used to separate comma-separated value (CSV) records. Possible values are ` ` (space), `,` (comma), `   ` (tab), `|` (pipe) and `;`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1334,13 +1245,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the JSON the output will be written in. Possible values are `Array` and `LineSeparated`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1349,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -1359,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to `UTF8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_nodejs">
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
@@ -1369,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The delimiter that will be used to separate comma-separated value (CSV) records. Possible values are ` ` (space), `,` (comma), `   ` (tab), `|` (pipe) and `;`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1379,13 +1285,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the JSON the output will be written in. Possible values are `Array` and `LineSeparated`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1394,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serialization format used for outgoing data streams. Possible values are `Avro`, `Csv` and `Json`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -1404,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. It currently can only be set to `UTF8`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_delimiter_python">
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
@@ -1414,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The delimiter that will be used to separate comma-separated value (CSV) records. Possible values are ` ` (space), `,` (comma), `   ` (tab), `|` (pipe) and `;`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1424,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the format of the JSON the output will be written in. Possible values are `Array` and `LineSeparated`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

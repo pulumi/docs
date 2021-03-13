@@ -128,8 +128,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceendpointid_csharp">
 <a href="#interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -137,8 +136,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -147,8 +145,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -157,13 +154,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceendpointid_go">
 <a href="#interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -171,8 +166,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -181,8 +175,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -191,13 +184,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interfaceendpointid_nodejs">
 <a href="#interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
@@ -205,8 +196,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -215,8 +205,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -225,13 +214,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_endpoint_id_python">
 <a href="#interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
@@ -239,8 +226,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -249,8 +235,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the AWS PrivateLink connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -259,8 +244,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -273,8 +257,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_csharp">
 <a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -284,8 +267,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_csharp">
 <a href="#deleterequested_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -294,8 +276,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -304,8 +285,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -314,8 +294,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpointid_csharp">
 <a href="#interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -323,8 +302,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -332,8 +310,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -341,13 +318,11 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_go">
 <a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
@@ -357,8 +332,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_go">
 <a href="#deleterequested_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -367,8 +341,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -377,8 +350,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -387,8 +359,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpointid_go">
 <a href="#interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -396,8 +367,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -405,8 +375,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -414,13 +383,11 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionstatus_nodejs">
 <a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
@@ -430,8 +397,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_nodejs">
 <a href="#deleterequested_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Requested</a>
@@ -440,8 +406,7 @@ Returns one of the following values:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -450,8 +415,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -460,8 +424,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpointid_nodejs">
 <a href="#interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
@@ -469,8 +432,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -478,8 +440,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -487,13 +448,11 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_status_python">
 <a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
@@ -503,8 +462,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delete_requested_python">
 <a href="#delete_requested_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>requested</a>
@@ -513,8 +471,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -523,8 +480,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -533,8 +489,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interface_endpoint_id_python">
 <a href="#interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
@@ -542,8 +497,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -551,8 +505,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -560,8 +513,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

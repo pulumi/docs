@@ -283,8 +283,7 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointregion_csharp">
 <a href="#endpointregion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
@@ -294,8 +293,7 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_csharp">
 <a href="#serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -304,8 +302,7 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -314,8 +311,7 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -325,8 +321,7 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -335,8 +330,7 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -346,13 +340,11 @@ The EndpointV3 resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointregion_go">
 <a href="#endpointregion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
@@ -362,8 +354,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_go">
 <a href="#serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -372,8 +363,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -382,8 +372,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -393,8 +382,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -403,8 +391,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -414,13 +401,11 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointregion_nodejs">
 <a href="#endpointregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Region</a>
@@ -430,8 +415,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceid_nodejs">
 <a href="#serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -440,8 +424,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -450,8 +433,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -461,8 +443,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -471,8 +452,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -482,13 +462,11 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_region_python">
 <a href="#endpoint_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>region</a>
@@ -498,8 +476,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_id_python">
 <a href="#service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -508,8 +485,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -518,8 +494,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -529,8 +504,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -539,8 +513,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -550,8 +523,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -562,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -571,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -581,8 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -591,13 +560,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -605,8 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -615,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -625,13 +590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -639,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -649,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -659,13 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -673,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -683,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -693,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -821,8 +777,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpointregion_csharp">
 <a href="#state_endpointregion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
@@ -832,8 +787,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_csharp">
 <a href="#state_interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -843,8 +797,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -853,8 +806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -864,8 +816,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_csharp">
 <a href="#state_serviceid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -874,8 +825,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -884,8 +834,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_csharp">
 <a href="#state_servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -894,8 +843,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -904,13 +852,11 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpointregion_go">
 <a href="#state_endpointregion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Region</a>
@@ -920,8 +866,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_go">
 <a href="#state_interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -931,8 +876,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -941,8 +885,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -952,8 +895,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_go">
 <a href="#state_serviceid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Id</a>
@@ -962,8 +904,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -972,8 +913,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_go">
 <a href="#state_servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -982,8 +922,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -992,13 +931,11 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpointregion_nodejs">
 <a href="#state_endpointregion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Region</a>
@@ -1008,8 +945,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_nodejs">
 <a href="#state_interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1019,8 +955,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1029,8 +964,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1040,8 +974,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceid_nodejs">
 <a href="#state_serviceid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Id</a>
@@ -1050,8 +983,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1060,8 +992,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicetype_nodejs">
 <a href="#state_servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1070,8 +1001,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1080,13 +1010,11 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_region_python">
 <a href="#state_endpoint_region_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>region</a>
@@ -1096,8 +1024,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_python">
 <a href="#state_interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1107,8 +1034,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1117,8 +1043,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1128,8 +1053,7 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_id_python">
 <a href="#state_service_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>id</a>
@@ -1138,8 +1062,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1148,8 +1071,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_type_python">
 <a href="#state_service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1158,8 +1080,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1168,8 +1089,7 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

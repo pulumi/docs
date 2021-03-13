@@ -323,8 +323,7 @@ The TopicPermissions resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -334,8 +333,7 @@ The TopicPermissions resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -344,8 +342,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_csharp">
 <a href="#vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -354,13 +351,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -370,8 +365,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -380,8 +374,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_go">
 <a href="#vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -390,13 +383,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -406,8 +397,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -416,8 +406,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_nodejs">
 <a href="#vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -426,13 +415,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -442,8 +429,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -452,8 +438,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhost_python">
 <a href="#vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -462,8 +447,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -474,8 +458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -483,13 +466,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -497,13 +478,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -511,13 +490,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -525,8 +502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -653,8 +629,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_csharp">
 <a href="#state_permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -664,8 +639,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_csharp">
 <a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -674,8 +648,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_csharp">
 <a href="#state_vhost_csharp" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -684,13 +657,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_go">
 <a href="#state_permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -700,8 +671,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_go">
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -710,8 +680,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_go">
 <a href="#state_vhost_go" style="color: inherit; text-decoration: inherit;">Vhost</a>
@@ -720,13 +689,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_nodejs">
 <a href="#state_permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -736,8 +703,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_nodejs">
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -746,8 +712,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_nodejs">
 <a href="#state_vhost_nodejs" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -756,13 +721,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_permissions_python">
 <a href="#state_permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -772,8 +735,7 @@ described below.
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_python">
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -782,8 +744,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhost_python">
 <a href="#state_vhost_python" style="color: inherit; text-decoration: inherit;">vhost</a>
@@ -792,8 +753,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -808,8 +768,7 @@ described below.
 <h4 id="topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exchange_csharp">
 <a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
@@ -818,8 +777,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_csharp">
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -828,8 +786,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_csharp">
 <a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -838,13 +795,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exchange_go">
 <a href="#exchange_go" style="color: inherit; text-decoration: inherit;">Exchange</a>
@@ -853,8 +808,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_go">
 <a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -863,8 +817,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_go">
 <a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -873,13 +826,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exchange_nodejs">
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
@@ -888,8 +839,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_nodejs">
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
@@ -898,8 +848,7 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_nodejs">
 <a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
@@ -908,13 +857,11 @@ described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="exchange_python">
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
@@ -923,8 +870,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The exchange to set the permissions for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_python">
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
@@ -933,8 +879,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "read" ACL.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_python">
 <a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
@@ -943,8 +888,7 @@ described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "write" ACL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -1,6 +1,6 @@
 ---
 title: "PagerDuty"
-title_tag: "Module PagerDuty | Package PagerDuty"
+title_tag: "pagerduty.PagerDuty"
 meta_desc: "A Pulumi package for creating and managing pagerduty cloud resources."
 menu:
     reference:

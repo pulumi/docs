@@ -299,8 +299,7 @@ The SecGroupRule resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -310,8 +309,7 @@ The SecGroupRule resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ethertype_csharp">
 <a href="#ethertype_csharp" style="color: inherit; text-decoration: inherit;">Ethertype</a>
@@ -321,8 +319,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -333,8 +330,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -343,8 +339,7 @@ tenant. Changing this creates a new security group rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrangemax_csharp">
 <a href="#portrangemax_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
@@ -355,8 +350,7 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrangemin_csharp">
 <a href="#portrangemin_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
@@ -367,8 +361,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -398,8 +391,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -411,8 +403,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotegroupid_csharp">
 <a href="#remotegroupid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
@@ -423,8 +414,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteipprefix_csharp">
 <a href="#remoteipprefix_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
@@ -434,8 +424,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -446,13 +435,11 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -462,8 +449,7 @@ security group rule.
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ethertype_go">
 <a href="#ethertype_go" style="color: inherit; text-decoration: inherit;">Ethertype</a>
@@ -473,8 +459,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -485,8 +470,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -495,8 +479,7 @@ tenant. Changing this creates a new security group rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrangemax_go">
 <a href="#portrangemax_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
@@ -507,8 +490,7 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrangemin_go">
 <a href="#portrangemin_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
@@ -519,8 +501,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -550,8 +531,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -563,8 +543,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotegroupid_go">
 <a href="#remotegroupid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
@@ -575,8 +554,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteipprefix_go">
 <a href="#remoteipprefix_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
@@ -586,8 +564,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -598,13 +575,11 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -614,8 +589,7 @@ security group rule.
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ethertype_nodejs">
 <a href="#ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
@@ -625,8 +599,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -637,8 +610,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -647,8 +619,7 @@ tenant. Changing this creates a new security group rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrangemax_nodejs">
 <a href="#portrangemax_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Max</a>
@@ -659,8 +630,7 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrangemin_nodejs">
 <a href="#portrangemin_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Min</a>
@@ -671,8 +641,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -702,8 +671,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -715,8 +683,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remotegroupid_nodejs">
 <a href="#remotegroupid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Group<wbr>Id</a>
@@ -727,8 +694,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteipprefix_nodejs">
 <a href="#remoteipprefix_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Prefix</a>
@@ -738,8 +704,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -750,13 +715,11 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -766,8 +729,7 @@ security group rule.
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ethertype_python">
 <a href="#ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
@@ -777,8 +739,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -789,8 +750,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -799,8 +759,7 @@ tenant. Changing this creates a new security group rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_range_max_python">
 <a href="#port_range_max_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>max</a>
@@ -811,8 +770,7 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_range_min_python">
 <a href="#port_range_min_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>min</a>
@@ -823,8 +781,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -854,8 +811,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -867,8 +823,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_group_id_python">
 <a href="#remote_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>group_<wbr>id</a>
@@ -879,8 +834,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_ip_prefix_python">
 <a href="#remote_ip_prefix_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>prefix</a>
@@ -890,8 +844,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -902,8 +855,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -914,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -923,13 +874,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -937,13 +886,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -951,13 +898,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -965,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1093,8 +1037,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1103,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_csharp">
 <a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1114,8 +1056,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ethertype_csharp">
 <a href="#state_ethertype_csharp" style="color: inherit; text-decoration: inherit;">Ethertype</a>
@@ -1125,8 +1066,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrangemax_csharp">
 <a href="#state_portrangemax_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
@@ -1137,8 +1077,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrangemin_csharp">
 <a href="#state_portrangemin_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
@@ -1149,8 +1088,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1180,8 +1118,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1193,8 +1130,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotegroupid_csharp">
 <a href="#state_remotegroupid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
@@ -1205,8 +1141,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remoteipprefix_csharp">
 <a href="#state_remoteipprefix_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
@@ -1216,8 +1151,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_csharp">
 <a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1228,8 +1162,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1240,13 +1173,11 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1255,8 +1186,7 @@ security group rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_go">
 <a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1266,8 +1196,7 @@ security group rule.
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ethertype_go">
 <a href="#state_ethertype_go" style="color: inherit; text-decoration: inherit;">Ethertype</a>
@@ -1277,8 +1206,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrangemax_go">
 <a href="#state_portrangemax_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Max</a>
@@ -1289,8 +1217,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrangemin_go">
 <a href="#state_portrangemin_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range<wbr>Min</a>
@@ -1301,8 +1228,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1332,8 +1258,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1345,8 +1270,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotegroupid_go">
 <a href="#state_remotegroupid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Group<wbr>Id</a>
@@ -1357,8 +1281,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remoteipprefix_go">
 <a href="#state_remoteipprefix_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Prefix</a>
@@ -1368,8 +1291,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_go">
 <a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1380,8 +1302,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1392,13 +1313,11 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1407,8 +1326,7 @@ security group rule.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_nodejs">
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1418,8 +1336,7 @@ security group rule.
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ethertype_nodejs">
 <a href="#state_ethertype_nodejs" style="color: inherit; text-decoration: inherit;">ethertype</a>
@@ -1429,8 +1346,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrangemax_nodejs">
 <a href="#state_portrangemax_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Max</a>
@@ -1441,8 +1357,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portrangemin_nodejs">
 <a href="#state_portrangemin_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range<wbr>Min</a>
@@ -1453,8 +1368,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1484,8 +1398,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1497,8 +1410,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotegroupid_nodejs">
 <a href="#state_remotegroupid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Group<wbr>Id</a>
@@ -1509,8 +1421,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remoteipprefix_nodejs">
 <a href="#state_remoteipprefix_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Prefix</a>
@@ -1520,8 +1431,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_nodejs">
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -1532,8 +1442,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1544,13 +1453,11 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1559,8 +1466,7 @@ security group rule.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the rule. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_python">
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1570,8 +1476,7 @@ security group rule.
     </dt>
     <dd>{{% md %}}The direction of the rule, valid values are __ingress__
 or __egress__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ethertype_python">
 <a href="#state_ethertype_python" style="color: inherit; text-decoration: inherit;">ethertype</a>
@@ -1581,8 +1486,7 @@ or __egress__. Changing this creates a new security group rule.
     </dt>
     <dd>{{% md %}}The layer 3 protocol type, valid values are __IPv4__
 or __IPv6__. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_range_max_python">
 <a href="#state_port_range_max_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>max</a>
@@ -1593,8 +1497,7 @@ or __IPv6__. Changing this creates a new security group rule.
     <dd>{{% md %}}The higher part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_range_min_python">
 <a href="#state_port_range_min_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range_<wbr>min</a>
@@ -1605,8 +1508,7 @@ security group rule.
     <dd>{{% md %}}The lower part of the allowed port range, valid
 integer value needs to be between 1 and 65535. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1636,8 +1538,7 @@ security group rule.
 * __sctp__
 * __udplite__
 * __vrrp__
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1649,8 +1550,7 @@ security group rule.
 A networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_group_id_python">
 <a href="#state_remote_group_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>group_<wbr>id</a>
@@ -1661,8 +1561,7 @@ security group rule.
     <dd>{{% md %}}The remote group id, the value needs to be an
 Openstack ID of a security group in the same tenant. Changing this creates
 a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_ip_prefix_python">
 <a href="#state_remote_ip_prefix_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>prefix</a>
@@ -1672,8 +1571,7 @@ a new security group rule.
     </dt>
     <dd>{{% md %}}The remote CIDR, the value needs to be a valid
 CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_id_python">
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -1684,8 +1582,7 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
     <dd>{{% md %}}The security group id the rule should belong
 to, the value needs to be an Openstack ID of a security group in the same
 tenant. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1696,8 +1593,7 @@ tenant. Changing this creates a new security group rule.
     <dd>{{% md %}}The owner of the security group. Required if admin
 wants to create a port for another tenant. Changing this creates a new
 security group rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

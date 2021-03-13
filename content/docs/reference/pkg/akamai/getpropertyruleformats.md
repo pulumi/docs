@@ -1,8 +1,8 @@
 
 ---
-title: "GetPropertyRuleFormats"
-title_tag: "Function GetPropertyRuleFormats | Package Akamai"
-meta_desc: "Explore the GetPropertyRuleFormats function of the Akamai package, including examples, input properties, output properties, and supporting types. Use the `akamai.getPropertyRuleFormats` data source to query the list of "
+title: "getPropertyRuleFormats"
+title_tag: "akamai.getPropertyRuleFormats"
+meta_desc: "Documentation for the akamai.getPropertyRuleFormats function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -22,11 +22,17 @@ There are no arguments available for this data source.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -60,18 +69,24 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 
 pulumi.export("propertyMatch", data["akamai_property_rule_formats"]["my-example"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -79,12 +94,19 @@ import * as pulumi from "@pulumi/pulumi";
 export const propertyMatch = data.akamai_property_rule_formats["my-example"];
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
 
-## Using GetPropertyRuleFormats {#using}
+
+
+## Using getPropertyRuleFormats {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -102,6 +124,8 @@ export const propertyMatch = data.akamai_property_rule_formats["my-example"];
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPropertyRuleFormats<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPropertyRuleFormatsResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetPropertyRuleFormats` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -114,16 +138,14 @@ export const propertyMatch = data.akamai_property_rule_formats["my-example"];
 
 
 
-## GetPropertyRuleFormats Result {#result}
+## getPropertyRuleFormats Result {#result}
 
 The following output properties are available:
 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -132,8 +154,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruleformats_csharp">
 <a href="#ruleformats_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Formats</a>
@@ -141,14 +162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -157,8 +175,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruleformats_go">
 <a href="#ruleformats_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Formats</a>
@@ -166,14 +183,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -182,8 +196,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ruleformats_nodejs">
 <a href="#ruleformats_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Formats</a>
@@ -191,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -207,8 +217,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rule_formats_python">
 <a href="#rule_formats_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>formats</a>
@@ -216,8 +225,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -162,8 +162,7 @@ The DatastoreCluster resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -174,8 +173,7 @@ The DatastoreCluster resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -187,8 +185,7 @@ changed.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -203,8 +200,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -213,8 +209,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsadvancedoptions_csharp">
 <a href="#sdrsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
@@ -224,8 +219,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_csharp">
 <a href="#sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -235,8 +229,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsdefaultintravmaffinity_csharp">
 <a href="#sdrsdefaultintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -246,8 +239,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_csharp">
 <a href="#sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -257,8 +249,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethreshold_csharp">
 <a href="#sdrsfreespacethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
@@ -270,8 +261,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethresholdmode_csharp">
 <a href="#sdrsfreespacethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
@@ -281,8 +271,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespaceutilizationdifference_csharp">
 <a href="#sdrsfreespaceutilizationdifference_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
@@ -293,8 +282,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsiobalanceautomationlevel_csharp">
 <a href="#sdrsiobalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -304,8 +292,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsiolatencythreshold_csharp">
 <a href="#sdrsiolatencythreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
@@ -316,8 +303,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadbalanceenabled_csharp">
 <a href="#sdrsioloadbalanceenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
@@ -327,8 +313,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadimbalancethreshold_csharp">
 <a href="#sdrsioloadimbalancethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
@@ -339,8 +324,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservableiopsthreshold_csharp">
 <a href="#sdrsioreservableiopsthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
@@ -354,8 +338,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablepercentthreshold_csharp">
 <a href="#sdrsioreservablepercentthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
@@ -367,8 +350,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablethresholdmode_csharp">
 <a href="#sdrsioreservablethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
@@ -380,8 +362,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsloadbalanceinterval_csharp">
 <a href="#sdrsloadbalanceinterval_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
@@ -391,8 +372,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrspolicyenforcementautomationlevel_csharp">
 <a href="#sdrspolicyenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -402,8 +382,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsruleenforcementautomationlevel_csharp">
 <a href="#sdrsruleenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -413,8 +392,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsspacebalanceautomationlevel_csharp">
 <a href="#sdrsspacebalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -424,8 +402,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsspaceutilizationthreshold_csharp">
 <a href="#sdrsspaceutilizationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
@@ -434,8 +411,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsvmevacuationautomationlevel_csharp">
 <a href="#sdrsvmevacuationautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
@@ -445,8 +421,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -455,13 +430,11 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -472,8 +445,7 @@ automation settings when generating recommendations for datastore evacuation.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -485,8 +457,7 @@ changed.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -501,8 +472,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -511,8 +481,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsadvancedoptions_go">
 <a href="#sdrsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
@@ -522,8 +491,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_go">
 <a href="#sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -533,8 +501,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsdefaultintravmaffinity_go">
 <a href="#sdrsdefaultintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -544,8 +511,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_go">
 <a href="#sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -555,8 +521,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethreshold_go">
 <a href="#sdrsfreespacethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
@@ -568,8 +533,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethresholdmode_go">
 <a href="#sdrsfreespacethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
@@ -579,8 +543,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespaceutilizationdifference_go">
 <a href="#sdrsfreespaceutilizationdifference_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
@@ -591,8 +554,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsiobalanceautomationlevel_go">
 <a href="#sdrsiobalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -602,8 +564,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsiolatencythreshold_go">
 <a href="#sdrsiolatencythreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
@@ -614,8 +575,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadbalanceenabled_go">
 <a href="#sdrsioloadbalanceenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
@@ -625,8 +585,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadimbalancethreshold_go">
 <a href="#sdrsioloadimbalancethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
@@ -637,8 +596,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservableiopsthreshold_go">
 <a href="#sdrsioreservableiopsthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
@@ -652,8 +610,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablepercentthreshold_go">
 <a href="#sdrsioreservablepercentthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
@@ -665,8 +622,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablethresholdmode_go">
 <a href="#sdrsioreservablethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
@@ -678,8 +634,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsloadbalanceinterval_go">
 <a href="#sdrsloadbalanceinterval_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
@@ -689,8 +644,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrspolicyenforcementautomationlevel_go">
 <a href="#sdrspolicyenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -700,8 +654,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsruleenforcementautomationlevel_go">
 <a href="#sdrsruleenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -711,8 +664,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsspacebalanceautomationlevel_go">
 <a href="#sdrsspacebalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -722,8 +674,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsspaceutilizationthreshold_go">
 <a href="#sdrsspaceutilizationthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
@@ -732,8 +683,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsvmevacuationautomationlevel_go">
 <a href="#sdrsvmevacuationautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
@@ -743,8 +693,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -753,13 +702,11 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -770,8 +717,7 @@ automation settings when generating recommendations for datastore evacuation.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -783,8 +729,7 @@ changed.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -799,8 +744,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -809,8 +753,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsadvancedoptions_nodejs">
 <a href="#sdrsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Advanced<wbr>Options</a>
@@ -820,8 +763,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsautomationlevel_nodejs">
 <a href="#sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
@@ -831,8 +773,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsdefaultintravmaffinity_nodejs">
 <a href="#sdrsdefaultintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -842,8 +783,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsenabled_nodejs">
 <a href="#sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
@@ -853,8 +793,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethreshold_nodejs">
 <a href="#sdrsfreespacethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
@@ -866,8 +805,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespacethresholdmode_nodejs">
 <a href="#sdrsfreespacethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
@@ -877,8 +815,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsfreespaceutilizationdifference_nodejs">
 <a href="#sdrsfreespaceutilizationdifference_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
@@ -889,8 +826,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsiobalanceautomationlevel_nodejs">
 <a href="#sdrsiobalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -900,8 +836,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsiolatencythreshold_nodejs">
 <a href="#sdrsiolatencythreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
@@ -912,8 +847,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadbalanceenabled_nodejs">
 <a href="#sdrsioloadbalanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
@@ -923,8 +857,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioloadimbalancethreshold_nodejs">
 <a href="#sdrsioloadimbalancethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
@@ -935,8 +868,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservableiopsthreshold_nodejs">
 <a href="#sdrsioreservableiopsthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
@@ -950,8 +882,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablepercentthreshold_nodejs">
 <a href="#sdrsioreservablepercentthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
@@ -963,8 +894,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsioreservablethresholdmode_nodejs">
 <a href="#sdrsioreservablethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
@@ -976,8 +906,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsloadbalanceinterval_nodejs">
 <a href="#sdrsloadbalanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
@@ -987,8 +916,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrspolicyenforcementautomationlevel_nodejs">
 <a href="#sdrspolicyenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -998,8 +926,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsruleenforcementautomationlevel_nodejs">
 <a href="#sdrsruleenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -1009,8 +936,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsspacebalanceautomationlevel_nodejs">
 <a href="#sdrsspacebalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -1020,8 +946,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsspaceutilizationthreshold_nodejs">
 <a href="#sdrsspaceutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
@@ -1030,8 +955,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrsvmevacuationautomationlevel_nodejs">
 <a href="#sdrsvmevacuationautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
@@ -1041,8 +965,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1051,13 +974,11 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -1068,8 +989,7 @@ automation settings when generating recommendations for datastore evacuation.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -1081,8 +1001,7 @@ changed.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1097,8 +1016,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1107,8 +1025,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_advanced_options_python">
 <a href="#sdrs_advanced_options_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>advanced_<wbr>options</a>
@@ -1118,8 +1035,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_automation_level_python">
 <a href="#sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
@@ -1129,8 +1045,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_default_intra_vm_affinity_python">
 <a href="#sdrs_default_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>default_<wbr>intra_<wbr>vm_<wbr>affinity</a>
@@ -1140,8 +1055,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_enabled_python">
 <a href="#sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
@@ -1151,8 +1065,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_free_space_threshold_python">
 <a href="#sdrs_free_space_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold</a>
@@ -1164,8 +1077,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_free_space_threshold_mode_python">
 <a href="#sdrs_free_space_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold_<wbr>mode</a>
@@ -1175,8 +1087,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_free_space_utilization_difference_python">
 <a href="#sdrs_free_space_utilization_difference_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>utilization_<wbr>difference</a>
@@ -1187,8 +1098,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_balance_automation_level_python">
 <a href="#sdrs_io_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>balance_<wbr>automation_<wbr>level</a>
@@ -1198,8 +1108,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_latency_threshold_python">
 <a href="#sdrs_io_latency_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>latency_<wbr>threshold</a>
@@ -1210,8 +1119,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_load_balance_enabled_python">
 <a href="#sdrs_io_load_balance_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>balance_<wbr>enabled</a>
@@ -1221,8 +1129,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_load_imbalance_threshold_python">
 <a href="#sdrs_io_load_imbalance_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>imbalance_<wbr>threshold</a>
@@ -1233,8 +1140,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_reservable_iops_threshold_python">
 <a href="#sdrs_io_reservable_iops_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>iops_<wbr>threshold</a>
@@ -1248,8 +1154,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_reservable_percent_threshold_python">
 <a href="#sdrs_io_reservable_percent_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>percent_<wbr>threshold</a>
@@ -1261,8 +1166,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_io_reservable_threshold_mode_python">
 <a href="#sdrs_io_reservable_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>threshold_<wbr>mode</a>
@@ -1274,8 +1178,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_load_balance_interval_python">
 <a href="#sdrs_load_balance_interval_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>load_<wbr>balance_<wbr>interval</a>
@@ -1285,8 +1188,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_policy_enforcement_automation_level_python">
 <a href="#sdrs_policy_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>policy_<wbr>enforcement_<wbr>automation_<wbr>level</a>
@@ -1296,8 +1198,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_rule_enforcement_automation_level_python">
 <a href="#sdrs_rule_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>rule_<wbr>enforcement_<wbr>automation_<wbr>level</a>
@@ -1307,8 +1208,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_space_balance_automation_level_python">
 <a href="#sdrs_space_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>balance_<wbr>automation_<wbr>level</a>
@@ -1318,8 +1218,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_space_utilization_threshold_python">
 <a href="#sdrs_space_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>utilization_<wbr>threshold</a>
@@ -1328,8 +1227,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sdrs_vm_evacuation_automation_level_python">
 <a href="#sdrs_vm_evacuation_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>vm_<wbr>evacuation_<wbr>automation_<wbr>level</a>
@@ -1339,8 +1237,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1349,8 +1246,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1361,8 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1370,13 +1265,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1384,13 +1277,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1398,13 +1289,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1412,8 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1540,8 +1428,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1553,8 +1440,7 @@ The following state arguments are supported:
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_csharp">
 <a href="#state_datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -1565,8 +1451,7 @@ for custom attributes.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1581,8 +1466,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1591,8 +1475,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsadvancedoptions_csharp">
 <a href="#state_sdrsadvancedoptions_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
@@ -1602,8 +1485,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_csharp">
 <a href="#state_sdrsautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -1613,8 +1495,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsdefaultintravmaffinity_csharp">
 <a href="#state_sdrsdefaultintravmaffinity_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -1624,8 +1505,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_csharp">
 <a href="#state_sdrsenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -1635,8 +1515,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethreshold_csharp">
 <a href="#state_sdrsfreespacethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
@@ -1648,8 +1527,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethresholdmode_csharp">
 <a href="#state_sdrsfreespacethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
@@ -1659,8 +1537,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespaceutilizationdifference_csharp">
 <a href="#state_sdrsfreespaceutilizationdifference_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
@@ -1671,8 +1548,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiobalanceautomationlevel_csharp">
 <a href="#state_sdrsiobalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -1682,8 +1558,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiolatencythreshold_csharp">
 <a href="#state_sdrsiolatencythreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
@@ -1694,8 +1569,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadbalanceenabled_csharp">
 <a href="#state_sdrsioloadbalanceenabled_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
@@ -1705,8 +1579,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadimbalancethreshold_csharp">
 <a href="#state_sdrsioloadimbalancethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
@@ -1717,8 +1590,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservableiopsthreshold_csharp">
 <a href="#state_sdrsioreservableiopsthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
@@ -1732,8 +1604,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablepercentthreshold_csharp">
 <a href="#state_sdrsioreservablepercentthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
@@ -1745,8 +1616,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablethresholdmode_csharp">
 <a href="#state_sdrsioreservablethresholdmode_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
@@ -1758,8 +1628,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsloadbalanceinterval_csharp">
 <a href="#state_sdrsloadbalanceinterval_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
@@ -1769,8 +1638,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrspolicyenforcementautomationlevel_csharp">
 <a href="#state_sdrspolicyenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -1780,8 +1648,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsruleenforcementautomationlevel_csharp">
 <a href="#state_sdrsruleenforcementautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -1791,8 +1658,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspacebalanceautomationlevel_csharp">
 <a href="#state_sdrsspacebalanceautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -1802,8 +1668,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspaceutilizationthreshold_csharp">
 <a href="#state_sdrsspaceutilizationthreshold_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
@@ -1812,8 +1677,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsvmevacuationautomationlevel_csharp">
 <a href="#state_sdrsvmevacuationautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
@@ -1823,8 +1687,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1833,13 +1696,11 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1851,8 +1712,7 @@ automation settings when generating recommendations for datastore evacuation.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_go">
 <a href="#state_datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -1863,8 +1723,7 @@ for custom attributes.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1879,8 +1738,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1889,8 +1747,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsadvancedoptions_go">
 <a href="#state_sdrsadvancedoptions_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Advanced<wbr>Options</a>
@@ -1900,8 +1757,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_go">
 <a href="#state_sdrsautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Automation<wbr>Level</a>
@@ -1911,8 +1767,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsdefaultintravmaffinity_go">
 <a href="#state_sdrsdefaultintravmaffinity_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -1922,8 +1777,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_go">
 <a href="#state_sdrsenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Enabled</a>
@@ -1933,8 +1787,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethreshold_go">
 <a href="#state_sdrsfreespacethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
@@ -1946,8 +1799,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethresholdmode_go">
 <a href="#state_sdrsfreespacethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
@@ -1957,8 +1809,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespaceutilizationdifference_go">
 <a href="#state_sdrsfreespaceutilizationdifference_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
@@ -1969,8 +1820,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiobalanceautomationlevel_go">
 <a href="#state_sdrsiobalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -1980,8 +1830,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiolatencythreshold_go">
 <a href="#state_sdrsiolatencythreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
@@ -1992,8 +1841,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadbalanceenabled_go">
 <a href="#state_sdrsioloadbalanceenabled_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
@@ -2003,8 +1851,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadimbalancethreshold_go">
 <a href="#state_sdrsioloadimbalancethreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
@@ -2015,8 +1862,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservableiopsthreshold_go">
 <a href="#state_sdrsioreservableiopsthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
@@ -2030,8 +1876,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablepercentthreshold_go">
 <a href="#state_sdrsioreservablepercentthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
@@ -2043,8 +1888,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablethresholdmode_go">
 <a href="#state_sdrsioreservablethresholdmode_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
@@ -2056,8 +1900,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsloadbalanceinterval_go">
 <a href="#state_sdrsloadbalanceinterval_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
@@ -2067,8 +1910,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrspolicyenforcementautomationlevel_go">
 <a href="#state_sdrspolicyenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -2078,8 +1920,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsruleenforcementautomationlevel_go">
 <a href="#state_sdrsruleenforcementautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -2089,8 +1930,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspacebalanceautomationlevel_go">
 <a href="#state_sdrsspacebalanceautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -2100,8 +1940,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspaceutilizationthreshold_go">
 <a href="#state_sdrsspaceutilizationthreshold_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
@@ -2110,8 +1949,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsvmevacuationautomationlevel_go">
 <a href="#state_sdrsvmevacuationautomationlevel_go" style="color: inherit; text-decoration: inherit;">Sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
@@ -2121,8 +1959,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2131,13 +1968,11 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -2149,8 +1984,7 @@ automation settings when generating recommendations for datastore evacuation.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenterid_nodejs">
 <a href="#state_datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -2161,8 +1995,7 @@ for custom attributes.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -2177,8 +2010,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2187,8 +2019,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsadvancedoptions_nodejs">
 <a href="#state_sdrsadvancedoptions_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Advanced<wbr>Options</a>
@@ -2198,8 +2029,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsautomationlevel_nodejs">
 <a href="#state_sdrsautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Automation<wbr>Level</a>
@@ -2209,8 +2039,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsdefaultintravmaffinity_nodejs">
 <a href="#state_sdrsdefaultintravmaffinity_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Default<wbr>Intra<wbr>Vm<wbr>Affinity</a>
@@ -2220,8 +2049,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsenabled_nodejs">
 <a href="#state_sdrsenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Enabled</a>
@@ -2231,8 +2059,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethreshold_nodejs">
 <a href="#state_sdrsfreespacethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold</a>
@@ -2244,8 +2071,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespacethresholdmode_nodejs">
 <a href="#state_sdrsfreespacethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Threshold<wbr>Mode</a>
@@ -2255,8 +2081,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsfreespaceutilizationdifference_nodejs">
 <a href="#state_sdrsfreespaceutilizationdifference_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Free<wbr>Space<wbr>Utilization<wbr>Difference</a>
@@ -2267,8 +2092,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiobalanceautomationlevel_nodejs">
 <a href="#state_sdrsiobalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -2278,8 +2102,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsiolatencythreshold_nodejs">
 <a href="#state_sdrsiolatencythreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Latency<wbr>Threshold</a>
@@ -2290,8 +2113,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadbalanceenabled_nodejs">
 <a href="#state_sdrsioloadbalanceenabled_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Balance<wbr>Enabled</a>
@@ -2301,8 +2123,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioloadimbalancethreshold_nodejs">
 <a href="#state_sdrsioloadimbalancethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Load<wbr>Imbalance<wbr>Threshold</a>
@@ -2313,8 +2134,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservableiopsthreshold_nodejs">
 <a href="#state_sdrsioreservableiopsthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Iops<wbr>Threshold</a>
@@ -2328,8 +2148,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablepercentthreshold_nodejs">
 <a href="#state_sdrsioreservablepercentthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Percent<wbr>Threshold</a>
@@ -2341,8 +2160,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsioreservablethresholdmode_nodejs">
 <a href="#state_sdrsioreservablethresholdmode_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Io<wbr>Reservable<wbr>Threshold<wbr>Mode</a>
@@ -2354,8 +2172,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsloadbalanceinterval_nodejs">
 <a href="#state_sdrsloadbalanceinterval_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Load<wbr>Balance<wbr>Interval</a>
@@ -2365,8 +2182,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrspolicyenforcementautomationlevel_nodejs">
 <a href="#state_sdrspolicyenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Policy<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -2376,8 +2192,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsruleenforcementautomationlevel_nodejs">
 <a href="#state_sdrsruleenforcementautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Rule<wbr>Enforcement<wbr>Automation<wbr>Level</a>
@@ -2387,8 +2202,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspacebalanceautomationlevel_nodejs">
 <a href="#state_sdrsspacebalanceautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Balance<wbr>Automation<wbr>Level</a>
@@ -2398,8 +2212,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsspaceutilizationthreshold_nodejs">
 <a href="#state_sdrsspaceutilizationthreshold_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Space<wbr>Utilization<wbr>Threshold</a>
@@ -2408,8 +2221,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrsvmevacuationautomationlevel_nodejs">
 <a href="#state_sdrsvmevacuationautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">sdrs<wbr>Vm<wbr>Evacuation<wbr>Automation<wbr>Level</a>
@@ -2419,8 +2231,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2429,13 +2240,11 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -2447,8 +2256,7 @@ automation settings when generating recommendations for datastore evacuation.
 value strings to set for the datastore cluster. See
 [here][docs-setting-custom-attributes] for a reference on how to set values
 for custom attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_id_python">
 <a href="#state_datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -2459,8 +2267,7 @@ for custom attributes.
     <dd>{{% md %}}The managed object ID of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -2475,8 +2282,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
 `datastore-cluster-test` in a datastore folder located at
 `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/datastore-cluster-test`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2485,8 +2291,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datastore cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_advanced_options_python">
 <a href="#state_sdrs_advanced_options_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>advanced_<wbr>options</a>
@@ -2496,8 +2301,7 @@ datastore to.  Example: for the `dc1` datacenter, and a provided `folder` of
     </dt>
     <dd>{{% md %}}A key/value map of advanced Storage DRS
 settings that are not exposed via the provider or the vSphere client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_automation_level_python">
 <a href="#state_sdrs_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>automation_<wbr>level</a>
@@ -2507,8 +2311,7 @@ settings that are not exposed via the provider or the vSphere client.
     </dt>
     <dd>{{% md %}}The global automation level for all
 virtual machines in this datastore cluster. Default: `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_default_intra_vm_affinity_python">
 <a href="#state_sdrs_default_intra_vm_affinity_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>default_<wbr>intra_<wbr>vm_<wbr>affinity</a>
@@ -2518,8 +2321,7 @@ virtual machines in this datastore cluster. Default: `manual`.
     </dt>
     <dd>{{% md %}}When `true`, all disks in a
 single virtual machine will be kept on the same datastore. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_enabled_python">
 <a href="#state_sdrs_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>enabled</a>
@@ -2529,8 +2331,7 @@ single virtual machine will be kept on the same datastore. Default: `true`.
     </dt>
     <dd>{{% md %}}Enable Storage DRS for this datastore cluster.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_free_space_threshold_python">
 <a href="#state_sdrs_free_space_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold</a>
@@ -2542,8 +2343,7 @@ Default: `false`.
 When set to `utilization`, `drs_space_utilization_threshold` is used, and
 when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
 `utilization`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_free_space_threshold_mode_python">
 <a href="#state_sdrs_free_space_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>threshold_<wbr>mode</a>
@@ -2553,8 +2353,7 @@ when set to `freeSpace`, `drs_free_space_threshold` is used. Default:
     </dt>
     <dd>{{% md %}}The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when set to
 freeSpace, drs_free_space_threshold is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_free_space_utilization_difference_python">
 <a href="#state_sdrs_free_space_utilization_difference_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>free_<wbr>space_<wbr>utilization_<wbr>difference</a>
@@ -2565,8 +2364,7 @@ freeSpace, drs_free_space_threshold is used.
     <dd>{{% md %}}The threshold, in
 percent, of difference between space utilization in datastores before storage
 DRS makes decisions to balance the space. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_balance_automation_level_python">
 <a href="#state_sdrs_io_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>balance_<wbr>automation_<wbr>level</a>
@@ -2576,8 +2374,7 @@ DRS makes decisions to balance the space. Default: `5` percent.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting I/O load imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_latency_threshold_python">
 <a href="#state_sdrs_io_latency_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>latency_<wbr>threshold</a>
@@ -2588,8 +2385,7 @@ automation settings when correcting I/O load imbalances.
     <dd>{{% md %}}The I/O latency threshold, in
 milliseconds, that storage DRS uses to make recommendations to move disks
 from this datastore. Default: `15` seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_load_balance_enabled_python">
 <a href="#state_sdrs_io_load_balance_enabled_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>balance_<wbr>enabled</a>
@@ -2599,8 +2395,7 @@ from this datastore. Default: `15` seconds.
     </dt>
     <dd>{{% md %}}Enable I/O load balancing for
 this datastore cluster. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_load_imbalance_threshold_python">
 <a href="#state_sdrs_io_load_imbalance_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>load_<wbr>imbalance_<wbr>threshold</a>
@@ -2611,8 +2406,7 @@ this datastore cluster. Default: `true`.
     <dd>{{% md %}}The difference between load
 in datastores in the cluster before storage DRS makes recommendations to
 balance the load. Default: `5` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_reservable_iops_threshold_python">
 <a href="#state_sdrs_io_reservable_iops_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>iops_<wbr>threshold</a>
@@ -2626,8 +2420,7 @@ recommendations to move VMs off of a datastore. Note that this setting should
 only be set if `sdrs_io_reservable_percent_threshold` cannot make an accurate
 estimate of the capacity of the datastores in your cluster, and should be set
 to roughly 50-60% of the worst case peak performance of the backing LUNs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_reservable_percent_threshold_python">
 <a href="#state_sdrs_io_reservable_percent_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>percent_<wbr>threshold</a>
@@ -2639,8 +2432,7 @@ to roughly 50-60% of the worst case peak performance of the backing LUNs.
 percent, of actual estimated performance of the datastore (in IOPS) that
 storage DRS uses to make recommendations to move VMs off of a datastore when
 the total reservable IOPS exceeds the threshold. Default: `60` percent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_io_reservable_threshold_mode_python">
 <a href="#state_sdrs_io_reservable_threshold_mode_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>io_<wbr>reservable_<wbr>threshold_<wbr>mode</a>
@@ -2652,8 +2444,7 @@ the total reservable IOPS exceeds the threshold. Default: `60` percent.
 threshold setting to use, `sdrs_io_reservable_percent_threshold` in the event
 of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
 `manual`. Default: `automatic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_load_balance_interval_python">
 <a href="#state_sdrs_load_balance_interval_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>load_<wbr>balance_<wbr>interval</a>
@@ -2663,8 +2454,7 @@ of `automatic`, or `sdrs_io_reservable_iops_threshold` in the event of
     </dt>
     <dd>{{% md %}}The storage DRS poll interval, in
 minutes. Default: `480` minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_policy_enforcement_automation_level_python">
 <a href="#state_sdrs_policy_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>policy_<wbr>enforcement_<wbr>automation_<wbr>level</a>
@@ -2674,8 +2464,7 @@ minutes. Default: `480` minutes.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting storage and VM policy violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_rule_enforcement_automation_level_python">
 <a href="#state_sdrs_rule_enforcement_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>rule_<wbr>enforcement_<wbr>automation_<wbr>level</a>
@@ -2685,8 +2474,7 @@ automation settings when correcting storage and VM policy violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting affinity rule violations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_space_balance_automation_level_python">
 <a href="#state_sdrs_space_balance_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>balance_<wbr>automation_<wbr>level</a>
@@ -2696,8 +2484,7 @@ automation settings when correcting affinity rule violations.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when correcting disk space imbalances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_space_utilization_threshold_python">
 <a href="#state_sdrs_space_utilization_threshold_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>space_<wbr>utilization_<wbr>threshold</a>
@@ -2706,8 +2493,7 @@ automation settings when correcting disk space imbalances.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sdrs_vm_evacuation_automation_level_python">
 <a href="#state_sdrs_vm_evacuation_automation_level_python" style="color: inherit; text-decoration: inherit;">sdrs_<wbr>vm_<wbr>evacuation_<wbr>automation_<wbr>level</a>
@@ -2717,8 +2503,7 @@ automation settings when correcting disk space imbalances.
     </dt>
     <dd>{{% md %}}Overrides the default
 automation settings when generating recommendations for datastore evacuation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2727,8 +2512,7 @@ automation settings when generating recommendations for datastore evacuation.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

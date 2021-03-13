@@ -263,8 +263,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routerid_csharp">
 <a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -273,8 +272,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -284,8 +282,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -295,8 +292,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -306,8 +302,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -319,8 +314,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -329,8 +323,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -340,8 +333,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -350,13 +342,11 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routerid_go">
 <a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -365,8 +355,7 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -376,8 +365,7 @@ create a service for another project. Changing this creates a new service.
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -387,8 +375,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -398,8 +385,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -411,8 +397,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -421,8 +406,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -432,8 +416,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -442,13 +425,11 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routerid_nodejs">
 <a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
@@ -457,8 +438,7 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -468,8 +448,7 @@ create a service for another project. Changing this creates a new service.
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -479,8 +458,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -490,8 +468,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -503,8 +480,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -513,8 +489,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -524,8 +499,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -534,13 +508,11 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="router_id_python">
 <a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
@@ -549,8 +521,7 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -560,8 +531,7 @@ create a service for another project. Changing this creates a new service.
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -571,8 +541,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -582,8 +551,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -595,8 +563,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -605,8 +572,7 @@ service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -616,8 +582,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -626,8 +591,7 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -638,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="externalv4ip_csharp">
 <a href="#externalv4ip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>V4Ip</a>
@@ -648,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalv6ip_csharp">
 <a href="#externalv6ip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>V6Ip</a>
@@ -658,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -667,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -677,13 +637,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="externalv4ip_go">
 <a href="#externalv4ip_go" style="color: inherit; text-decoration: inherit;">External<wbr>V4Ip</a>
@@ -692,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalv6ip_go">
 <a href="#externalv6ip_go" style="color: inherit; text-decoration: inherit;">External<wbr>V6Ip</a>
@@ -702,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -711,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -721,13 +676,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="externalv4ip_nodejs">
 <a href="#externalv4ip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>V4Ip</a>
@@ -736,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="externalv6ip_nodejs">
 <a href="#externalv6ip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>V6Ip</a>
@@ -746,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -755,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -765,13 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="external_v4_ip_python">
 <a href="#external_v4_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>v4_<wbr>ip</a>
@@ -780,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="external_v6_ip_python">
 <a href="#external_v6_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>v6_<wbr>ip</a>
@@ -790,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -799,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -809,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -937,8 +881,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -948,8 +891,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -959,8 +901,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalv4ip_csharp">
 <a href="#state_externalv4ip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>V4Ip</a>
@@ -969,8 +910,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalv6ip_csharp">
 <a href="#state_externalv6ip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>V6Ip</a>
@@ -979,8 +919,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -990,8 +929,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1003,8 +941,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_csharp">
 <a href="#state_routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -1013,8 +950,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1023,8 +959,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1033,8 +968,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1044,8 +978,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1054,13 +987,11 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1070,8 +1001,7 @@ create a service for another project. Changing this creates a new service.
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1081,8 +1011,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalv4ip_go">
 <a href="#state_externalv4ip_go" style="color: inherit; text-decoration: inherit;">External<wbr>V4Ip</a>
@@ -1091,8 +1020,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalv6ip_go">
 <a href="#state_externalv6ip_go" style="color: inherit; text-decoration: inherit;">External<wbr>V6Ip</a>
@@ -1101,8 +1029,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1112,8 +1039,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1125,8 +1051,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_go">
 <a href="#state_routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -1135,8 +1060,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1145,8 +1069,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1155,8 +1078,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1166,8 +1088,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1176,13 +1097,11 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1192,8 +1111,7 @@ create a service for another project. Changing this creates a new service.
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1203,8 +1121,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalv4ip_nodejs">
 <a href="#state_externalv4ip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>V4Ip</a>
@@ -1213,8 +1130,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_externalv6ip_nodejs">
 <a href="#state_externalv6ip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>V6Ip</a>
@@ -1223,8 +1139,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1234,8 +1149,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1247,8 +1161,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_nodejs">
 <a href="#state_routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
@@ -1257,8 +1170,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1267,8 +1179,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1277,8 +1188,7 @@ service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1288,8 +1198,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1298,13 +1207,11 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1314,8 +1221,7 @@ create a service for another project. Changing this creates a new service.
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1325,8 +1231,7 @@ Changing this updates the administrative state of the existing service.
     </dt>
     <dd>{{% md %}}The human-readable description for the service.
 Changing this updates the description of the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_v4_ip_python">
 <a href="#state_external_v4_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>v4_<wbr>ip</a>
@@ -1335,8 +1240,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv4 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_v6_ip_python">
 <a href="#state_external_v6_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>v6_<wbr>ip</a>
@@ -1345,8 +1249,7 @@ Changing this updates the description of the existing service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The read-only external (public) IPv6 address that is used for the VPN service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1356,8 +1259,7 @@ Changing this updates the description of the existing service.
     </dt>
     <dd>{{% md %}}The name of the service. Changing this updates the name of
 the existing service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1369,8 +1271,7 @@ the existing service.
 A Networking client is needed to create a VPN service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_id_python">
 <a href="#state_router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
@@ -1379,8 +1280,7 @@ service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the router. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1389,8 +1289,7 @@ service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether IPsec VPN service is currently operational. Values are ACTIVE, DOWN, BUILD, ERROR, PENDING_CREATE, PENDING_UPDATE, or PENDING_DELETE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1399,8 +1298,7 @@ service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SubnetID is the ID of the subnet. Default is null.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1410,8 +1308,7 @@ service.
     </dt>
     <dd>{{% md %}}The owner of the service. Required if admin wants to
 create a service for another project. Changing this creates a new service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1420,8 +1317,7 @@ create a service for another project. Changing this creates a new service.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -465,8 +465,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendaddresspoolid_csharp">
 <a href="#backendaddresspoolid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
@@ -475,8 +474,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipconfigurationname_csharp">
 <a href="#ipconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
@@ -485,8 +483,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_csharp">
 <a href="#networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -495,13 +492,11 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendaddresspoolid_go">
 <a href="#backendaddresspoolid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
@@ -510,8 +505,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipconfigurationname_go">
 <a href="#ipconfigurationname_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
@@ -520,8 +514,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_go">
 <a href="#networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -530,13 +523,11 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendaddresspoolid_nodejs">
 <a href="#backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
@@ -545,8 +536,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipconfigurationname_nodejs">
 <a href="#ipconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Name</a>
@@ -555,8 +545,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkinterfaceid_nodejs">
 <a href="#networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
@@ -565,13 +554,11 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_address_pool_id_python">
 <a href="#backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
@@ -580,8 +567,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ip_configuration_name_python">
 <a href="#ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>name</a>
@@ -590,8 +576,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_interface_id_python">
 <a href="#network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
@@ -600,8 +585,7 @@ The NetworkInterfaceBackendAddressPoolAssociation resource accepts the following
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -612,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -621,13 +604,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -635,13 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -649,13 +628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -663,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -791,8 +767,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendaddresspoolid_csharp">
 <a href="#state_backendaddresspoolid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
@@ -801,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfigurationname_csharp">
 <a href="#state_ipconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
@@ -811,8 +785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_csharp">
 <a href="#state_networkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -821,13 +794,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendaddresspoolid_go">
 <a href="#state_backendaddresspoolid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Address<wbr>Pool<wbr>Id</a>
@@ -836,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfigurationname_go">
 <a href="#state_ipconfigurationname_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
@@ -846,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_go">
 <a href="#state_networkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface<wbr>Id</a>
@@ -856,13 +825,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendaddresspoolid_nodejs">
 <a href="#state_backendaddresspoolid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Address<wbr>Pool<wbr>Id</a>
@@ -871,8 +838,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipconfigurationname_nodejs">
 <a href="#state_ipconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Name</a>
@@ -881,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaceid_nodejs">
 <a href="#state_networkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface<wbr>Id</a>
@@ -891,13 +856,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_address_pool_id_python">
 <a href="#state_backend_address_pool_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>address_<wbr>pool_<wbr>id</a>
@@ -906,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Load Balancer Backend Address Pool which this Network Interface which should be connected to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_configuration_name_python">
 <a href="#state_ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>name</a>
@@ -916,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the IP Configuration within the Network Interface which should be connected to the Backend Address Pool. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interface_id_python">
 <a href="#state_network_interface_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface_<wbr>id</a>
@@ -926,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Network Interface. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -287,8 +287,7 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -297,8 +296,7 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -307,8 +305,7 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_csharp">
 <a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -319,8 +316,7 @@ The RepositoryCollaborator resource accepts the following [input]({{< relref "/d
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiondiffsuppression_csharp">
 <a href="#permissiondiffsuppression_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
@@ -329,13 +325,11 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -344,8 +338,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -354,8 +347,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_go">
 <a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -366,8 +358,7 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiondiffsuppression_go">
 <a href="#permissiondiffsuppression_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
@@ -376,13 +367,11 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -391,8 +380,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -401,8 +389,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_nodejs">
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -413,8 +400,7 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permissiondiffsuppression_nodejs">
 <a href="#permissiondiffsuppression_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Diff<wbr>Suppression</a>
@@ -423,13 +409,11 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -438,8 +422,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -448,8 +431,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_python">
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -460,8 +442,7 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="permission_diff_suppression_python">
 <a href="#permission_diff_suppression_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>diff_<wbr>suppression</a>
@@ -470,8 +451,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -482,8 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -491,8 +470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitationid_csharp">
 <a href="#invitationid_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
@@ -501,13 +479,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -515,8 +491,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitationid_go">
 <a href="#invitationid_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
@@ -525,13 +500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -539,8 +512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitationid_nodejs">
 <a href="#invitationid_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Id</a>
@@ -549,13 +521,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -563,8 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitation_id_python">
 <a href="#invitation_id_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>id</a>
@@ -573,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -701,8 +669,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_invitationid_csharp">
 <a href="#state_invitationid_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
@@ -711,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_csharp">
 <a href="#state_permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -723,8 +689,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissiondiffsuppression_csharp">
 <a href="#state_permissiondiffsuppression_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
@@ -733,8 +698,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_csharp">
 <a href="#state_repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -743,8 +707,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -753,13 +716,11 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_invitationid_go">
 <a href="#state_invitationid_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Id</a>
@@ -768,8 +729,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_go">
 <a href="#state_permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -780,8 +740,7 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissiondiffsuppression_go">
 <a href="#state_permissiondiffsuppression_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Diff<wbr>Suppression</a>
@@ -790,8 +749,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_go">
 <a href="#state_repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -800,8 +758,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -810,13 +767,11 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_invitationid_nodejs">
 <a href="#state_invitationid_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Id</a>
@@ -825,8 +780,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_nodejs">
 <a href="#state_permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -837,8 +791,7 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permissiondiffsuppression_nodejs">
 <a href="#state_permissiondiffsuppression_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Diff<wbr>Suppression</a>
@@ -847,8 +800,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_nodejs">
 <a href="#state_repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -857,8 +809,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -867,13 +818,11 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_invitation_id_python">
 <a href="#state_invitation_id_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>id</a>
@@ -882,8 +831,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the invitation to be used in `github.UserInvitationAccepter`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_python">
 <a href="#state_permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -894,8 +842,7 @@ Must be `push` for personal repositories. Defaults to `push`.
     <dd>{{% md %}}The permission of the outside collaborator for the repository.
 Must be one of `pull`, `push`, `maintain`, `triage` or `admin` for organization-owned repositories.
 Must be `push` for personal repositories. Defaults to `push`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_permission_diff_suppression_python">
 <a href="#state_permission_diff_suppression_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>diff_<wbr>suppression</a>
@@ -904,8 +851,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppress plan diffs for `triage` and `maintain`.  Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repository_python">
 <a href="#state_repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -914,8 +860,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GitHub repository
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -924,8 +869,7 @@ Must be `push` for personal repositories. Defaults to `push`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user to add to the repository as a collaborator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

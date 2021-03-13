@@ -311,8 +311,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authenticationoptions_csharp">
 <a href="#authenticationoptions_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Options</a>
@@ -321,8 +320,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointauthenticationoption">List&lt;Endpoint<wbr>Authentication<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientcidrblock_csharp">
 <a href="#clientcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cidr<wbr>Block</a>
@@ -331,8 +329,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectionlogoptions_csharp">
 <a href="#connectionlogoptions_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Log<wbr>Options</a>
@@ -341,8 +338,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servercertificatearn_csharp">
 <a href="#servercertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Arn</a>
@@ -351,8 +347,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -361,8 +356,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_csharp">
 <a href="#dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -371,8 +365,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splittunnel_csharp">
 <a href="#splittunnel_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Tunnel</a>
@@ -381,8 +374,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -391,8 +383,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_csharp">
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -401,13 +392,11 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authenticationoptions_go">
 <a href="#authenticationoptions_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Options</a>
@@ -416,8 +405,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointauthenticationoption">[]Endpoint<wbr>Authentication<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientcidrblock_go">
 <a href="#clientcidrblock_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cidr<wbr>Block</a>
@@ -426,8 +414,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectionlogoptions_go">
 <a href="#connectionlogoptions_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Log<wbr>Options</a>
@@ -436,8 +423,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servercertificatearn_go">
 <a href="#servercertificatearn_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Arn</a>
@@ -446,8 +432,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -456,8 +441,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_go">
 <a href="#dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -466,8 +450,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splittunnel_go">
 <a href="#splittunnel_go" style="color: inherit; text-decoration: inherit;">Split<wbr>Tunnel</a>
@@ -476,8 +459,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -486,8 +468,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_go">
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -496,13 +477,11 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authenticationoptions_nodejs">
 <a href="#authenticationoptions_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Options</a>
@@ -511,8 +490,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointauthenticationoption">Endpoint<wbr>Authentication<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientcidrblock_nodejs">
 <a href="#clientcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cidr<wbr>Block</a>
@@ -521,8 +499,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectionlogoptions_nodejs">
 <a href="#connectionlogoptions_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Log<wbr>Options</a>
@@ -531,8 +508,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servercertificatearn_nodejs">
 <a href="#servercertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Arn</a>
@@ -541,8 +517,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -551,8 +526,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsservers_nodejs">
 <a href="#dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -561,8 +535,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splittunnel_nodejs">
 <a href="#splittunnel_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Tunnel</a>
@@ -571,8 +544,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -581,8 +553,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_nodejs">
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
@@ -591,13 +562,11 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authentication_options_python">
 <a href="#authentication_options_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>options</a>
@@ -606,8 +575,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointauthenticationoption">Sequence[Endpoint<wbr>Authentication<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_cidr_block_python">
 <a href="#client_cidr_block_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cidr_<wbr>block</a>
@@ -616,8 +584,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connection_log_options_python">
 <a href="#connection_log_options_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>log_<wbr>options</a>
@@ -626,8 +593,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_certificate_arn_python">
 <a href="#server_certificate_arn_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>arn</a>
@@ -636,8 +602,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -646,8 +611,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_servers_python">
 <a href="#dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -656,8 +620,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="split_tunnel_python">
 <a href="#split_tunnel_python" style="color: inherit; text-decoration: inherit;">split_<wbr>tunnel</a>
@@ -666,8 +629,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -676,8 +638,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transport_protocol_python">
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
@@ -686,8 +647,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -698,8 +658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -708,8 +667,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -718,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -727,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -737,13 +693,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -752,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -762,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -771,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -781,13 +732,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -796,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -806,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -815,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -825,13 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -840,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -850,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -859,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -869,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -997,8 +937,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1007,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticationoptions_csharp">
 <a href="#state_authenticationoptions_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Options</a>
@@ -1017,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointauthenticationoption">List&lt;Endpoint<wbr>Authentication<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcidrblock_csharp">
 <a href="#state_clientcidrblock_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cidr<wbr>Block</a>
@@ -1027,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlogoptions_csharp">
 <a href="#state_connectionlogoptions_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Log<wbr>Options</a>
@@ -1037,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1047,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_csharp">
 <a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1057,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsservers_csharp">
 <a href="#state_dnsservers_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1067,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificatearn_csharp">
 <a href="#state_servercertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Arn</a>
@@ -1077,8 +1009,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splittunnel_csharp">
 <a href="#state_splittunnel_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Tunnel</a>
@@ -1087,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1097,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1107,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transportprotocol_csharp">
 <a href="#state_transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -1117,13 +1045,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1132,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticationoptions_go">
 <a href="#state_authenticationoptions_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Options</a>
@@ -1142,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointauthenticationoption">[]Endpoint<wbr>Authentication<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcidrblock_go">
 <a href="#state_clientcidrblock_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cidr<wbr>Block</a>
@@ -1152,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlogoptions_go">
 <a href="#state_connectionlogoptions_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Log<wbr>Options</a>
@@ -1162,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1172,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_go">
 <a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1182,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsservers_go">
 <a href="#state_dnsservers_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Servers</a>
@@ -1192,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificatearn_go">
 <a href="#state_servercertificatearn_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Arn</a>
@@ -1202,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splittunnel_go">
 <a href="#state_splittunnel_go" style="color: inherit; text-decoration: inherit;">Split<wbr>Tunnel</a>
@@ -1212,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1222,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1232,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transportprotocol_go">
 <a href="#state_transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
@@ -1242,13 +1157,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1257,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authenticationoptions_nodejs">
 <a href="#state_authenticationoptions_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Options</a>
@@ -1267,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointauthenticationoption">Endpoint<wbr>Authentication<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientcidrblock_nodejs">
 <a href="#state_clientcidrblock_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cidr<wbr>Block</a>
@@ -1277,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlogoptions_nodejs">
 <a href="#state_connectionlogoptions_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Log<wbr>Options</a>
@@ -1287,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1297,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_nodejs">
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -1307,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsservers_nodejs">
 <a href="#state_dnsservers_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Servers</a>
@@ -1317,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercertificatearn_nodejs">
 <a href="#state_servercertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Arn</a>
@@ -1327,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splittunnel_nodejs">
 <a href="#state_splittunnel_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Tunnel</a>
@@ -1337,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1347,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1357,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transportprotocol_nodejs">
 <a href="#state_transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
@@ -1367,13 +1269,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1382,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_options_python">
 <a href="#state_authentication_options_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>options</a>
@@ -1392,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointauthenticationoption">Sequence[Endpoint<wbr>Authentication<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about the authentication method to be used to authenticate clients.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_cidr_block_python">
 <a href="#state_client_cidr_block_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cidr_<wbr>block</a>
@@ -1402,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block should be /22 or greater.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_log_options_python">
 <a href="#state_connection_log_options_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>log_<wbr>options</a>
@@ -1412,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about the client connection logging options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1422,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_name_python">
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -1432,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name to be used by clients when establishing their VPN session.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_servers_python">
 <a href="#state_dns_servers_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>servers</a>
@@ -1442,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Information about the DNS servers to be used for DNS resolution. A Client VPN endpoint can have up to two DNS servers. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_certificate_arn_python">
 <a href="#state_server_certificate_arn_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>arn</a>
@@ -1452,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the ACM server certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_split_tunnel_python">
 <a href="#state_split_tunnel_python" style="color: inherit; text-decoration: inherit;">split_<wbr>tunnel</a>
@@ -1462,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether split-tunnel is enabled on VPN endpoint. Default value is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1472,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of the Client VPN endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1482,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transport_protocol_python">
 <a href="#state_transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
@@ -1492,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The transport protocol to be used by the VPN session. Default value is `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1508,8 +1396,7 @@ The following state arguments are supported:
 <h4 id="endpointauthenticationoption">Endpoint<wbr>Authentication<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1518,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryid_csharp">
 <a href="#activedirectoryid_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Id</a>
@@ -1528,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootcertificatechainarn_csharp">
 <a href="#rootcertificatechainarn_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificate<wbr>Chain<wbr>Arn</a>
@@ -1538,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlproviderarn_csharp">
 <a href="#samlproviderarn_csharp" style="color: inherit; text-decoration: inherit;">Saml<wbr>Provider<wbr>Arn</a>
@@ -1548,13 +1432,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1563,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryid_go">
 <a href="#activedirectoryid_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Id</a>
@@ -1573,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootcertificatechainarn_go">
 <a href="#rootcertificatechainarn_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Certificate<wbr>Chain<wbr>Arn</a>
@@ -1583,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlproviderarn_go">
 <a href="#samlproviderarn_go" style="color: inherit; text-decoration: inherit;">Saml<wbr>Provider<wbr>Arn</a>
@@ -1593,13 +1472,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1608,8 +1485,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activedirectoryid_nodejs">
 <a href="#activedirectoryid_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Id</a>
@@ -1618,8 +1494,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootcertificatechainarn_nodejs">
 <a href="#rootcertificatechainarn_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Certificate<wbr>Chain<wbr>Arn</a>
@@ -1628,8 +1503,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samlproviderarn_nodejs">
 <a href="#samlproviderarn_nodejs" style="color: inherit; text-decoration: inherit;">saml<wbr>Provider<wbr>Arn</a>
@@ -1638,13 +1512,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1653,8 +1525,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="active_directory_id_python">
 <a href="#active_directory_id_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>id</a>
@@ -1663,8 +1534,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_certificate_chain_arn_python">
 <a href="#root_certificate_chain_arn_python" style="color: inherit; text-decoration: inherit;">root_<wbr>certificate_<wbr>chain_<wbr>arn</a>
@@ -1673,8 +1543,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saml_provider_arn_python">
 <a href="#saml_provider_arn_python" style="color: inherit; text-decoration: inherit;">saml_<wbr>provider_<wbr>arn</a>
@@ -1683,15 +1552,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM SAML identity provider if type is `federated-authentication`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointconnectionlogoptions">Endpoint<wbr>Connection<wbr>Log<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1700,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether connection logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggroup_csharp">
 <a href="#cloudwatchloggroup_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group</a>
@@ -1710,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchlogstream_csharp">
 <a href="#cloudwatchlogstream_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Stream</a>
@@ -1720,13 +1585,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log stream to which the connection data is published.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1735,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether connection logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggroup_go">
 <a href="#cloudwatchloggroup_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group</a>
@@ -1745,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchlogstream_go">
 <a href="#cloudwatchlogstream_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Stream</a>
@@ -1755,13 +1616,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log stream to which the connection data is published.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1770,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether connection logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggroup_nodejs">
 <a href="#cloudwatchloggroup_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group</a>
@@ -1780,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchlogstream_nodejs">
 <a href="#cloudwatchlogstream_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Stream</a>
@@ -1790,13 +1647,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log stream to which the connection data is published.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1805,8 +1660,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether connection logging is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_log_group_python">
 <a href="#cloudwatch_log_group_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group</a>
@@ -1815,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_log_stream_python">
 <a href="#cloudwatch_log_stream_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>stream</a>
@@ -1825,8 +1678,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch Logs log stream to which the connection data is published.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -59,8 +59,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acldatacenter_csharp">
 <a href="#acldatacenter_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Datacenter</a>
@@ -68,8 +67,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldefaultpolicy_csharp">
 <a href="#acldefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Default<wbr>Policy</a>
@@ -77,8 +75,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldisabledttl_csharp">
 <a href="#acldisabledttl_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Disabled<wbr>Ttl</a>
@@ -86,8 +83,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldownpolicy_csharp">
 <a href="#acldownpolicy_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Down<wbr>Policy</a>
@@ -95,8 +91,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aclenforce08semantics_csharp">
 <a href="#aclenforce08semantics_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Enforce08Semantics</a>
@@ -104,8 +99,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aclttl_csharp">
 <a href="#aclttl_csharp" style="color: inherit; text-decoration: inherit;">Acl<wbr>Ttl</a>
@@ -113,8 +107,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addresses_csharp">
 <a href="#addresses_csharp" style="color: inherit; text-decoration: inherit;">Addresses</a>
@@ -122,8 +115,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddr_csharp">
 <a href="#advertiseaddr_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Addr</a>
@@ -131,8 +123,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddrwan_csharp">
 <a href="#advertiseaddrwan_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Addr<wbr>Wan</a>
@@ -140,8 +131,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddrs_csharp">
 <a href="#advertiseaddrs_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Addrs</a>
@@ -149,8 +139,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlasjoin_csharp">
 <a href="#atlasjoin_csharp" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Join</a>
@@ -158,8 +147,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindaddr_csharp">
 <a href="#bindaddr_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Addr</a>
@@ -167,8 +155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrapexpect_csharp">
 <a href="#bootstrapexpect_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Expect</a>
@@ -176,8 +163,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrapmode_csharp">
 <a href="#bootstrapmode_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Mode</a>
@@ -185,8 +171,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkderegisterintervalmin_csharp">
 <a href="#checkderegisterintervalmin_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Deregister<wbr>Interval<wbr>Min</a>
@@ -194,8 +179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkreapinterval_csharp">
 <a href="#checkreapinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Reap<wbr>Interval</a>
@@ -203,8 +187,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkupdateinterval_csharp">
 <a href="#checkupdateinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Update<wbr>Interval</a>
@@ -212,8 +195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientaddr_csharp">
 <a href="#clientaddr_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Addr</a>
@@ -221,8 +203,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datadir_csharp">
 <a href="#datadir_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Dir</a>
@@ -230,8 +211,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -239,8 +219,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devmode_csharp">
 <a href="#devmode_csharp" style="color: inherit; text-decoration: inherit;">Dev<wbr>Mode</a>
@@ -248,8 +227,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_csharp">
 <a href="#dns_csharp" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -315,8 +293,7 @@ of telemetry configuration.
 * [`translate_wan_addrs`](https://www.consul.io/docs/agent/options.html#translate_wan_addrs)
 * [`ui_dir`](https://www.consul.io/docs/agent/options.html#ui_dir)
 * [`unix_sockets`](https://www.consul.io/docs/agent/options.html#unix_sockets)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsrecursors_csharp">
 <a href="#dnsrecursors_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Recursors</a>
@@ -324,8 +301,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -333,8 +309,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableanonymoussignature_csharp">
 <a href="#enableanonymoussignature_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Anonymous<wbr>Signature</a>
@@ -342,8 +317,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablecoordinates_csharp">
 <a href="#enablecoordinates_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Coordinates</a>
@@ -351,8 +325,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledebug_csharp">
 <a href="#enabledebug_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Debug</a>
@@ -360,8 +333,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableremoteexec_csharp">
 <a href="#enableremoteexec_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Remote<wbr>Exec</a>
@@ -369,8 +341,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablesyslog_csharp">
 <a href="#enablesyslog_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Syslog</a>
@@ -378,8 +349,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableui_csharp">
 <a href="#enableui_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ui</a>
@@ -387,8 +357,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableupdatecheck_csharp">
 <a href="#enableupdatecheck_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Check</a>
@@ -396,8 +365,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -405,8 +373,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaveonint_csharp">
 <a href="#leaveonint_csharp" style="color: inherit; text-decoration: inherit;">Leave<wbr>On<wbr>Int</a>
@@ -414,8 +381,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaveonterm_csharp">
 <a href="#leaveonterm_csharp" style="color: inherit; text-decoration: inherit;">Leave<wbr>On<wbr>Term</a>
@@ -423,8 +389,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -432,8 +397,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -441,8 +405,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="performance_csharp">
 <a href="#performance_csharp" style="color: inherit; text-decoration: inherit;">Performance</a>
@@ -450,8 +413,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pidfile_csharp">
 <a href="#pidfile_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>File</a>
@@ -459,8 +421,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -468,8 +429,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolversion_csharp">
 <a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -477,8 +437,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnecttimeoutlan_csharp">
 <a href="#reconnecttimeoutlan_csharp" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Timeout<wbr>Lan</a>
@@ -486,8 +445,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnecttimeoutwan_csharp">
 <a href="#reconnecttimeoutwan_csharp" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Timeout<wbr>Wan</a>
@@ -495,8 +453,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rejoinafterleave_csharp">
 <a href="#rejoinafterleave_csharp" style="color: inherit; text-decoration: inherit;">Rejoin<wbr>After<wbr>Leave</a>
@@ -504,8 +461,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoinec2_csharp">
 <a href="#retryjoinec2_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Join<wbr>Ec2</a>
@@ -513,8 +469,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoingce_csharp">
 <a href="#retryjoingce_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Join<wbr>Gce</a>
@@ -522,8 +477,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoinwans_csharp">
 <a href="#retryjoinwans_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Join<wbr>Wans</a>
@@ -531,8 +485,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoins_csharp">
 <a href="#retryjoins_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Joins</a>
@@ -540,8 +493,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrymaxattempts_csharp">
 <a href="#retrymaxattempts_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Max<wbr>Attempts</a>
@@ -549,8 +501,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrymaxattemptswan_csharp">
 <a href="#retrymaxattemptswan_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Max<wbr>Attempts<wbr>Wan</a>
@@ -558,8 +509,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serflanbindaddr_csharp">
 <a href="#serflanbindaddr_csharp" style="color: inherit; text-decoration: inherit;">Serf<wbr>Lan<wbr>Bind<wbr>Addr</a>
@@ -567,8 +517,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serfwanbindaddr_csharp">
 <a href="#serfwanbindaddr_csharp" style="color: inherit; text-decoration: inherit;">Serf<wbr>Wan<wbr>Bind<wbr>Addr</a>
@@ -576,8 +525,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermode_csharp">
 <a href="#servermode_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Mode</a>
@@ -585,8 +533,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -594,8 +541,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessionttlmin_csharp">
 <a href="#sessionttlmin_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Ttl<wbr>Min</a>
@@ -603,8 +549,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startjoinwans_csharp">
 <a href="#startjoinwans_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Join<wbr>Wans</a>
@@ -612,8 +557,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startjoins_csharp">
 <a href="#startjoins_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Joins</a>
@@ -621,8 +565,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syslogfacility_csharp">
 <a href="#syslogfacility_csharp" style="color: inherit; text-decoration: inherit;">Syslog<wbr>Facility</a>
@@ -630,8 +573,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="taggedaddresses_csharp">
 <a href="#taggedaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tagged<wbr>Addresses</a>
@@ -639,8 +581,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="telemetry_csharp">
 <a href="#telemetry_csharp" style="color: inherit; text-decoration: inherit;">Telemetry</a>
@@ -648,8 +589,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlscafile_csharp">
 <a href="#tlscafile_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>File</a>
@@ -657,8 +597,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlscertfile_csharp">
 <a href="#tlscertfile_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Cert<wbr>File</a>
@@ -666,8 +605,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlskeyfile_csharp">
 <a href="#tlskeyfile_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key<wbr>File</a>
@@ -675,8 +613,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsminversion_csharp">
 <a href="#tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
@@ -684,8 +621,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyincoming_csharp">
 <a href="#tlsverifyincoming_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Verify<wbr>Incoming</a>
@@ -693,8 +629,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyoutgoing_csharp">
 <a href="#tlsverifyoutgoing_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Verify<wbr>Outgoing</a>
@@ -702,8 +637,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyserverhostname_csharp">
 <a href="#tlsverifyserverhostname_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Verify<wbr>Server<wbr>Hostname</a>
@@ -711,8 +645,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="translatewanaddrs_csharp">
 <a href="#translatewanaddrs_csharp" style="color: inherit; text-decoration: inherit;">Translate<wbr>Wan<wbr>Addrs</a>
@@ -720,8 +653,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uidir_csharp">
 <a href="#uidir_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Dir</a>
@@ -729,8 +661,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unixsockets_csharp">
 <a href="#unixsockets_csharp" style="color: inherit; text-decoration: inherit;">Unix<wbr>Sockets</a>
@@ -738,8 +669,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -750,8 +680,7 @@ of telemetry configuration.
     <dd>{{% md %}}The version of the Consul agent.
 * `version_prerelease`
 * `version_revision`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionprerelease_csharp">
 <a href="#versionprerelease_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Prerelease</a>
@@ -759,8 +688,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionrevision_csharp">
 <a href="#versionrevision_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Revision</a>
@@ -768,13 +696,11 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acldatacenter_go">
 <a href="#acldatacenter_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Datacenter</a>
@@ -782,8 +708,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldefaultpolicy_go">
 <a href="#acldefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Default<wbr>Policy</a>
@@ -791,8 +716,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldisabledttl_go">
 <a href="#acldisabledttl_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Disabled<wbr>Ttl</a>
@@ -800,8 +724,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldownpolicy_go">
 <a href="#acldownpolicy_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Down<wbr>Policy</a>
@@ -809,8 +732,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aclenforce08semantics_go">
 <a href="#aclenforce08semantics_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Enforce08Semantics</a>
@@ -818,8 +740,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aclttl_go">
 <a href="#aclttl_go" style="color: inherit; text-decoration: inherit;">Acl<wbr>Ttl</a>
@@ -827,8 +748,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addresses_go">
 <a href="#addresses_go" style="color: inherit; text-decoration: inherit;">Addresses</a>
@@ -836,8 +756,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddr_go">
 <a href="#advertiseaddr_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Addr</a>
@@ -845,8 +764,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddrwan_go">
 <a href="#advertiseaddrwan_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Addr<wbr>Wan</a>
@@ -854,8 +772,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddrs_go">
 <a href="#advertiseaddrs_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Addrs</a>
@@ -863,8 +780,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlasjoin_go">
 <a href="#atlasjoin_go" style="color: inherit; text-decoration: inherit;">Atlas<wbr>Join</a>
@@ -872,8 +788,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindaddr_go">
 <a href="#bindaddr_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Addr</a>
@@ -881,8 +796,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrapexpect_go">
 <a href="#bootstrapexpect_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Expect</a>
@@ -890,8 +804,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrapmode_go">
 <a href="#bootstrapmode_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Mode</a>
@@ -899,8 +812,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkderegisterintervalmin_go">
 <a href="#checkderegisterintervalmin_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Deregister<wbr>Interval<wbr>Min</a>
@@ -908,8 +820,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkreapinterval_go">
 <a href="#checkreapinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Reap<wbr>Interval</a>
@@ -917,8 +828,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkupdateinterval_go">
 <a href="#checkupdateinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Update<wbr>Interval</a>
@@ -926,8 +836,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientaddr_go">
 <a href="#clientaddr_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Addr</a>
@@ -935,8 +844,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datadir_go">
 <a href="#datadir_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Dir</a>
@@ -944,8 +852,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -953,8 +860,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devmode_go">
 <a href="#devmode_go" style="color: inherit; text-decoration: inherit;">Dev<wbr>Mode</a>
@@ -962,8 +868,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_go">
 <a href="#dns_go" style="color: inherit; text-decoration: inherit;">Dns</a>
@@ -1029,8 +934,7 @@ of telemetry configuration.
 * [`translate_wan_addrs`](https://www.consul.io/docs/agent/options.html#translate_wan_addrs)
 * [`ui_dir`](https://www.consul.io/docs/agent/options.html#ui_dir)
 * [`unix_sockets`](https://www.consul.io/docs/agent/options.html#unix_sockets)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsrecursors_go">
 <a href="#dnsrecursors_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Recursors</a>
@@ -1038,8 +942,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1047,8 +950,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableanonymoussignature_go">
 <a href="#enableanonymoussignature_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Anonymous<wbr>Signature</a>
@@ -1056,8 +958,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablecoordinates_go">
 <a href="#enablecoordinates_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Coordinates</a>
@@ -1065,8 +966,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledebug_go">
 <a href="#enabledebug_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Debug</a>
@@ -1074,8 +974,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableremoteexec_go">
 <a href="#enableremoteexec_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Remote<wbr>Exec</a>
@@ -1083,8 +982,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablesyslog_go">
 <a href="#enablesyslog_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Syslog</a>
@@ -1092,8 +990,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableui_go">
 <a href="#enableui_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ui</a>
@@ -1101,8 +998,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableupdatecheck_go">
 <a href="#enableupdatecheck_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Check</a>
@@ -1110,8 +1006,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1119,8 +1014,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaveonint_go">
 <a href="#leaveonint_go" style="color: inherit; text-decoration: inherit;">Leave<wbr>On<wbr>Int</a>
@@ -1128,8 +1022,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaveonterm_go">
 <a href="#leaveonterm_go" style="color: inherit; text-decoration: inherit;">Leave<wbr>On<wbr>Term</a>
@@ -1137,8 +1030,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -1146,8 +1038,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1155,8 +1046,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="performance_go">
 <a href="#performance_go" style="color: inherit; text-decoration: inherit;">Performance</a>
@@ -1164,8 +1054,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pidfile_go">
 <a href="#pidfile_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>File</a>
@@ -1173,8 +1062,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -1182,8 +1070,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolversion_go">
 <a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -1191,8 +1078,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnecttimeoutlan_go">
 <a href="#reconnecttimeoutlan_go" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Timeout<wbr>Lan</a>
@@ -1200,8 +1086,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnecttimeoutwan_go">
 <a href="#reconnecttimeoutwan_go" style="color: inherit; text-decoration: inherit;">Reconnect<wbr>Timeout<wbr>Wan</a>
@@ -1209,8 +1094,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rejoinafterleave_go">
 <a href="#rejoinafterleave_go" style="color: inherit; text-decoration: inherit;">Rejoin<wbr>After<wbr>Leave</a>
@@ -1218,8 +1102,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoinec2_go">
 <a href="#retryjoinec2_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Join<wbr>Ec2</a>
@@ -1227,8 +1110,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoingce_go">
 <a href="#retryjoingce_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Join<wbr>Gce</a>
@@ -1236,8 +1118,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoinwans_go">
 <a href="#retryjoinwans_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Join<wbr>Wans</a>
@@ -1245,8 +1126,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoins_go">
 <a href="#retryjoins_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Joins</a>
@@ -1254,8 +1134,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrymaxattempts_go">
 <a href="#retrymaxattempts_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Max<wbr>Attempts</a>
@@ -1263,8 +1142,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrymaxattemptswan_go">
 <a href="#retrymaxattemptswan_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Max<wbr>Attempts<wbr>Wan</a>
@@ -1272,8 +1150,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serflanbindaddr_go">
 <a href="#serflanbindaddr_go" style="color: inherit; text-decoration: inherit;">Serf<wbr>Lan<wbr>Bind<wbr>Addr</a>
@@ -1281,8 +1158,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serfwanbindaddr_go">
 <a href="#serfwanbindaddr_go" style="color: inherit; text-decoration: inherit;">Serf<wbr>Wan<wbr>Bind<wbr>Addr</a>
@@ -1290,8 +1166,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermode_go">
 <a href="#servermode_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Mode</a>
@@ -1299,8 +1174,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
@@ -1308,8 +1182,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessionttlmin_go">
 <a href="#sessionttlmin_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Ttl<wbr>Min</a>
@@ -1317,8 +1190,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startjoinwans_go">
 <a href="#startjoinwans_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Join<wbr>Wans</a>
@@ -1326,8 +1198,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startjoins_go">
 <a href="#startjoins_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Joins</a>
@@ -1335,8 +1206,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syslogfacility_go">
 <a href="#syslogfacility_go" style="color: inherit; text-decoration: inherit;">Syslog<wbr>Facility</a>
@@ -1344,8 +1214,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="taggedaddresses_go">
 <a href="#taggedaddresses_go" style="color: inherit; text-decoration: inherit;">Tagged<wbr>Addresses</a>
@@ -1353,8 +1222,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="telemetry_go">
 <a href="#telemetry_go" style="color: inherit; text-decoration: inherit;">Telemetry</a>
@@ -1362,8 +1230,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlscafile_go">
 <a href="#tlscafile_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>File</a>
@@ -1371,8 +1238,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlscertfile_go">
 <a href="#tlscertfile_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Cert<wbr>File</a>
@@ -1380,8 +1246,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlskeyfile_go">
 <a href="#tlskeyfile_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Key<wbr>File</a>
@@ -1389,8 +1254,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsminversion_go">
 <a href="#tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
@@ -1398,8 +1262,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyincoming_go">
 <a href="#tlsverifyincoming_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Verify<wbr>Incoming</a>
@@ -1407,8 +1270,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyoutgoing_go">
 <a href="#tlsverifyoutgoing_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Verify<wbr>Outgoing</a>
@@ -1416,8 +1278,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyserverhostname_go">
 <a href="#tlsverifyserverhostname_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Verify<wbr>Server<wbr>Hostname</a>
@@ -1425,8 +1286,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="translatewanaddrs_go">
 <a href="#translatewanaddrs_go" style="color: inherit; text-decoration: inherit;">Translate<wbr>Wan<wbr>Addrs</a>
@@ -1434,8 +1294,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uidir_go">
 <a href="#uidir_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Dir</a>
@@ -1443,8 +1302,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unixsockets_go">
 <a href="#unixsockets_go" style="color: inherit; text-decoration: inherit;">Unix<wbr>Sockets</a>
@@ -1452,8 +1310,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1464,8 +1321,7 @@ of telemetry configuration.
     <dd>{{% md %}}The version of the Consul agent.
 * `version_prerelease`
 * `version_revision`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionprerelease_go">
 <a href="#versionprerelease_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Prerelease</a>
@@ -1473,8 +1329,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionrevision_go">
 <a href="#versionrevision_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Revision</a>
@@ -1482,13 +1337,11 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acldatacenter_nodejs">
 <a href="#acldatacenter_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Datacenter</a>
@@ -1496,8 +1349,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldefaultpolicy_nodejs">
 <a href="#acldefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Default<wbr>Policy</a>
@@ -1505,8 +1357,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldisabledttl_nodejs">
 <a href="#acldisabledttl_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Disabled<wbr>Ttl</a>
@@ -1514,8 +1365,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acldownpolicy_nodejs">
 <a href="#acldownpolicy_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Down<wbr>Policy</a>
@@ -1523,8 +1373,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aclenforce08semantics_nodejs">
 <a href="#aclenforce08semantics_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Enforce08Semantics</a>
@@ -1532,8 +1381,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aclttl_nodejs">
 <a href="#aclttl_nodejs" style="color: inherit; text-decoration: inherit;">acl<wbr>Ttl</a>
@@ -1541,8 +1389,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addresses_nodejs">
 <a href="#addresses_nodejs" style="color: inherit; text-decoration: inherit;">addresses</a>
@@ -1550,8 +1397,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddr_nodejs">
 <a href="#advertiseaddr_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Addr</a>
@@ -1559,8 +1405,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddrwan_nodejs">
 <a href="#advertiseaddrwan_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Addr<wbr>Wan</a>
@@ -1568,8 +1413,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertiseaddrs_nodejs">
 <a href="#advertiseaddrs_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Addrs</a>
@@ -1577,8 +1421,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlasjoin_nodejs">
 <a href="#atlasjoin_nodejs" style="color: inherit; text-decoration: inherit;">atlas<wbr>Join</a>
@@ -1586,8 +1429,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bindaddr_nodejs">
 <a href="#bindaddr_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Addr</a>
@@ -1595,8 +1437,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrapexpect_nodejs">
 <a href="#bootstrapexpect_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Expect</a>
@@ -1604,8 +1445,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrapmode_nodejs">
 <a href="#bootstrapmode_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Mode</a>
@@ -1613,8 +1453,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkderegisterintervalmin_nodejs">
 <a href="#checkderegisterintervalmin_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Deregister<wbr>Interval<wbr>Min</a>
@@ -1622,8 +1461,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkreapinterval_nodejs">
 <a href="#checkreapinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Reap<wbr>Interval</a>
@@ -1631,8 +1469,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="checkupdateinterval_nodejs">
 <a href="#checkupdateinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Update<wbr>Interval</a>
@@ -1640,8 +1477,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientaddr_nodejs">
 <a href="#clientaddr_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Addr</a>
@@ -1649,8 +1485,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datadir_nodejs">
 <a href="#datadir_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Dir</a>
@@ -1658,8 +1493,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1667,8 +1501,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="devmode_nodejs">
 <a href="#devmode_nodejs" style="color: inherit; text-decoration: inherit;">dev<wbr>Mode</a>
@@ -1676,8 +1509,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_nodejs">
 <a href="#dns_nodejs" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -1743,8 +1575,7 @@ of telemetry configuration.
 * [`translate_wan_addrs`](https://www.consul.io/docs/agent/options.html#translate_wan_addrs)
 * [`ui_dir`](https://www.consul.io/docs/agent/options.html#ui_dir)
 * [`unix_sockets`](https://www.consul.io/docs/agent/options.html#unix_sockets)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsrecursors_nodejs">
 <a href="#dnsrecursors_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Recursors</a>
@@ -1752,8 +1583,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1761,8 +1591,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableanonymoussignature_nodejs">
 <a href="#enableanonymoussignature_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Anonymous<wbr>Signature</a>
@@ -1770,8 +1599,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablecoordinates_nodejs">
 <a href="#enablecoordinates_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Coordinates</a>
@@ -1779,8 +1607,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledebug_nodejs">
 <a href="#enabledebug_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Debug</a>
@@ -1788,8 +1615,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableremoteexec_nodejs">
 <a href="#enableremoteexec_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Remote<wbr>Exec</a>
@@ -1797,8 +1623,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablesyslog_nodejs">
 <a href="#enablesyslog_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Syslog</a>
@@ -1806,8 +1631,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableui_nodejs">
 <a href="#enableui_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ui</a>
@@ -1815,8 +1639,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableupdatecheck_nodejs">
 <a href="#enableupdatecheck_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Update<wbr>Check</a>
@@ -1824,8 +1647,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1833,8 +1655,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaveonint_nodejs">
 <a href="#leaveonint_nodejs" style="color: inherit; text-decoration: inherit;">leave<wbr>On<wbr>Int</a>
@@ -1842,8 +1663,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaveonterm_nodejs">
 <a href="#leaveonterm_nodejs" style="color: inherit; text-decoration: inherit;">leave<wbr>On<wbr>Term</a>
@@ -1851,8 +1671,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -1860,8 +1679,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1869,8 +1687,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="performance_nodejs">
 <a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
@@ -1878,8 +1695,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pidfile_nodejs">
 <a href="#pidfile_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>File</a>
@@ -1887,8 +1703,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1896,8 +1711,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: number}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocolversion_nodejs">
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
@@ -1905,8 +1719,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnecttimeoutlan_nodejs">
 <a href="#reconnecttimeoutlan_nodejs" style="color: inherit; text-decoration: inherit;">reconnect<wbr>Timeout<wbr>Lan</a>
@@ -1914,8 +1727,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnecttimeoutwan_nodejs">
 <a href="#reconnecttimeoutwan_nodejs" style="color: inherit; text-decoration: inherit;">reconnect<wbr>Timeout<wbr>Wan</a>
@@ -1923,8 +1735,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rejoinafterleave_nodejs">
 <a href="#rejoinafterleave_nodejs" style="color: inherit; text-decoration: inherit;">rejoin<wbr>After<wbr>Leave</a>
@@ -1932,8 +1743,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoinec2_nodejs">
 <a href="#retryjoinec2_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Join<wbr>Ec2</a>
@@ -1941,8 +1751,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoingce_nodejs">
 <a href="#retryjoingce_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Join<wbr>Gce</a>
@@ -1950,8 +1759,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoinwans_nodejs">
 <a href="#retryjoinwans_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Join<wbr>Wans</a>
@@ -1959,8 +1767,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retryjoins_nodejs">
 <a href="#retryjoins_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Joins</a>
@@ -1968,8 +1775,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrymaxattempts_nodejs">
 <a href="#retrymaxattempts_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Max<wbr>Attempts</a>
@@ -1977,8 +1783,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retrymaxattemptswan_nodejs">
 <a href="#retrymaxattemptswan_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Max<wbr>Attempts<wbr>Wan</a>
@@ -1986,8 +1791,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serflanbindaddr_nodejs">
 <a href="#serflanbindaddr_nodejs" style="color: inherit; text-decoration: inherit;">serf<wbr>Lan<wbr>Bind<wbr>Addr</a>
@@ -1995,8 +1799,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serfwanbindaddr_nodejs">
 <a href="#serfwanbindaddr_nodejs" style="color: inherit; text-decoration: inherit;">serf<wbr>Wan<wbr>Bind<wbr>Addr</a>
@@ -2004,8 +1807,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermode_nodejs">
 <a href="#servermode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Mode</a>
@@ -2013,8 +1815,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
@@ -2022,8 +1823,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sessionttlmin_nodejs">
 <a href="#sessionttlmin_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Ttl<wbr>Min</a>
@@ -2031,8 +1831,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startjoinwans_nodejs">
 <a href="#startjoinwans_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Join<wbr>Wans</a>
@@ -2040,8 +1839,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startjoins_nodejs">
 <a href="#startjoins_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Joins</a>
@@ -2049,8 +1847,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syslogfacility_nodejs">
 <a href="#syslogfacility_nodejs" style="color: inherit; text-decoration: inherit;">syslog<wbr>Facility</a>
@@ -2058,8 +1855,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="taggedaddresses_nodejs">
 <a href="#taggedaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tagged<wbr>Addresses</a>
@@ -2067,8 +1863,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="telemetry_nodejs">
 <a href="#telemetry_nodejs" style="color: inherit; text-decoration: inherit;">telemetry</a>
@@ -2076,8 +1871,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlscafile_nodejs">
 <a href="#tlscafile_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>File</a>
@@ -2085,8 +1879,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlscertfile_nodejs">
 <a href="#tlscertfile_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Cert<wbr>File</a>
@@ -2094,8 +1887,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlskeyfile_nodejs">
 <a href="#tlskeyfile_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Key<wbr>File</a>
@@ -2103,8 +1895,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsminversion_nodejs">
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
@@ -2112,8 +1903,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyincoming_nodejs">
 <a href="#tlsverifyincoming_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Verify<wbr>Incoming</a>
@@ -2121,8 +1911,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyoutgoing_nodejs">
 <a href="#tlsverifyoutgoing_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Verify<wbr>Outgoing</a>
@@ -2130,8 +1919,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tlsverifyserverhostname_nodejs">
 <a href="#tlsverifyserverhostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Verify<wbr>Server<wbr>Hostname</a>
@@ -2139,8 +1927,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="translatewanaddrs_nodejs">
 <a href="#translatewanaddrs_nodejs" style="color: inherit; text-decoration: inherit;">translate<wbr>Wan<wbr>Addrs</a>
@@ -2148,8 +1935,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uidir_nodejs">
 <a href="#uidir_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Dir</a>
@@ -2157,8 +1943,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unixsockets_nodejs">
 <a href="#unixsockets_nodejs" style="color: inherit; text-decoration: inherit;">unix<wbr>Sockets</a>
@@ -2166,8 +1951,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2178,8 +1962,7 @@ of telemetry configuration.
     <dd>{{% md %}}The version of the Consul agent.
 * `version_prerelease`
 * `version_revision`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionprerelease_nodejs">
 <a href="#versionprerelease_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Prerelease</a>
@@ -2187,8 +1970,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="versionrevision_nodejs">
 <a href="#versionrevision_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Revision</a>
@@ -2196,13 +1978,11 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acl_datacenter_python">
 <a href="#acl_datacenter_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>datacenter</a>
@@ -2210,8 +1990,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acl_default_policy_python">
 <a href="#acl_default_policy_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>default_<wbr>policy</a>
@@ -2219,8 +1998,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acl_disabled_ttl_python">
 <a href="#acl_disabled_ttl_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>disabled_<wbr>ttl</a>
@@ -2228,8 +2006,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acl_down_policy_python">
 <a href="#acl_down_policy_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>down_<wbr>policy</a>
@@ -2237,8 +2014,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acl_enforce08_semantics_python">
 <a href="#acl_enforce08_semantics_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>enforce08_<wbr>semantics</a>
@@ -2246,8 +2022,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="acl_ttl_python">
 <a href="#acl_ttl_python" style="color: inherit; text-decoration: inherit;">acl_<wbr>ttl</a>
@@ -2255,8 +2030,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addresses_python">
 <a href="#addresses_python" style="color: inherit; text-decoration: inherit;">addresses</a>
@@ -2264,8 +2038,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertise_addr_python">
 <a href="#advertise_addr_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>addr</a>
@@ -2273,8 +2046,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertise_addr_wan_python">
 <a href="#advertise_addr_wan_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>addr_<wbr>wan</a>
@@ -2282,8 +2054,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="advertise_addrs_python">
 <a href="#advertise_addrs_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>addrs</a>
@@ -2291,8 +2062,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="atlas_join_python">
 <a href="#atlas_join_python" style="color: inherit; text-decoration: inherit;">atlas_<wbr>join</a>
@@ -2300,8 +2070,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bind_addr_python">
 <a href="#bind_addr_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>addr</a>
@@ -2309,8 +2078,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrap_expect_python">
 <a href="#bootstrap_expect_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>expect</a>
@@ -2318,8 +2086,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootstrap_mode_python">
 <a href="#bootstrap_mode_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>mode</a>
@@ -2327,8 +2094,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="check_deregister_interval_min_python">
 <a href="#check_deregister_interval_min_python" style="color: inherit; text-decoration: inherit;">check_<wbr>deregister_<wbr>interval_<wbr>min</a>
@@ -2336,8 +2102,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="check_reap_interval_python">
 <a href="#check_reap_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>reap_<wbr>interval</a>
@@ -2345,8 +2110,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="check_update_interval_python">
 <a href="#check_update_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>update_<wbr>interval</a>
@@ -2354,8 +2118,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_addr_python">
 <a href="#client_addr_python" style="color: inherit; text-decoration: inherit;">client_<wbr>addr</a>
@@ -2363,8 +2126,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_dir_python">
 <a href="#data_dir_python" style="color: inherit; text-decoration: inherit;">data_<wbr>dir</a>
@@ -2372,8 +2134,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -2381,8 +2142,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dev_mode_python">
 <a href="#dev_mode_python" style="color: inherit; text-decoration: inherit;">dev_<wbr>mode</a>
@@ -2390,8 +2150,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_python">
 <a href="#dns_python" style="color: inherit; text-decoration: inherit;">dns</a>
@@ -2457,8 +2216,7 @@ of telemetry configuration.
 * [`translate_wan_addrs`](https://www.consul.io/docs/agent/options.html#translate_wan_addrs)
 * [`ui_dir`](https://www.consul.io/docs/agent/options.html#ui_dir)
 * [`unix_sockets`](https://www.consul.io/docs/agent/options.html#unix_sockets)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_recursors_python">
 <a href="#dns_recursors_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>recursors</a>
@@ -2466,8 +2224,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -2475,8 +2232,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_anonymous_signature_python">
 <a href="#enable_anonymous_signature_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>anonymous_<wbr>signature</a>
@@ -2484,8 +2240,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_coordinates_python">
 <a href="#enable_coordinates_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>coordinates</a>
@@ -2493,8 +2248,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_debug_python">
 <a href="#enable_debug_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>debug</a>
@@ -2502,8 +2256,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_remote_exec_python">
 <a href="#enable_remote_exec_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>remote_<wbr>exec</a>
@@ -2511,8 +2264,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_syslog_python">
 <a href="#enable_syslog_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>syslog</a>
@@ -2520,8 +2272,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_ui_python">
 <a href="#enable_ui_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ui</a>
@@ -2529,8 +2280,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_update_check_python">
 <a href="#enable_update_check_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>update_<wbr>check</a>
@@ -2538,8 +2288,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2547,8 +2296,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leave_on_int_python">
 <a href="#leave_on_int_python" style="color: inherit; text-decoration: inherit;">leave_<wbr>on_<wbr>int</a>
@@ -2556,8 +2304,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leave_on_term_python">
 <a href="#leave_on_term_python" style="color: inherit; text-decoration: inherit;">leave_<wbr>on_<wbr>term</a>
@@ -2565,8 +2312,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -2574,8 +2320,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2583,8 +2328,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="performance_python">
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
@@ -2592,8 +2336,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pid_file_python">
 <a href="#pid_file_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>file</a>
@@ -2601,8 +2344,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2610,8 +2352,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_version_python">
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
@@ -2619,8 +2360,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnect_timeout_lan_python">
 <a href="#reconnect_timeout_lan_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>timeout_<wbr>lan</a>
@@ -2628,8 +2368,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="reconnect_timeout_wan_python">
 <a href="#reconnect_timeout_wan_python" style="color: inherit; text-decoration: inherit;">reconnect_<wbr>timeout_<wbr>wan</a>
@@ -2637,8 +2376,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rejoin_after_leave_python">
 <a href="#rejoin_after_leave_python" style="color: inherit; text-decoration: inherit;">rejoin_<wbr>after_<wbr>leave</a>
@@ -2646,8 +2384,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_join_ec2_python">
 <a href="#retry_join_ec2_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>join_<wbr>ec2</a>
@@ -2655,8 +2392,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_join_gce_python">
 <a href="#retry_join_gce_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>join_<wbr>gce</a>
@@ -2664,8 +2400,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_join_wans_python">
 <a href="#retry_join_wans_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>join_<wbr>wans</a>
@@ -2673,8 +2408,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_joins_python">
 <a href="#retry_joins_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>joins</a>
@@ -2682,8 +2416,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_max_attempts_python">
 <a href="#retry_max_attempts_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>max_<wbr>attempts</a>
@@ -2691,8 +2424,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retry_max_attempts_wan_python">
 <a href="#retry_max_attempts_wan_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>max_<wbr>attempts_<wbr>wan</a>
@@ -2700,8 +2432,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serf_lan_bind_addr_python">
 <a href="#serf_lan_bind_addr_python" style="color: inherit; text-decoration: inherit;">serf_<wbr>lan_<wbr>bind_<wbr>addr</a>
@@ -2709,8 +2440,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serf_wan_bind_addr_python">
 <a href="#serf_wan_bind_addr_python" style="color: inherit; text-decoration: inherit;">serf_<wbr>wan_<wbr>bind_<wbr>addr</a>
@@ -2718,8 +2448,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_mode_python">
 <a href="#server_mode_python" style="color: inherit; text-decoration: inherit;">server_<wbr>mode</a>
@@ -2727,8 +2456,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
@@ -2736,8 +2464,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="session_ttl_min_python">
 <a href="#session_ttl_min_python" style="color: inherit; text-decoration: inherit;">session_<wbr>ttl_<wbr>min</a>
@@ -2745,8 +2472,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_join_wans_python">
 <a href="#start_join_wans_python" style="color: inherit; text-decoration: inherit;">start_<wbr>join_<wbr>wans</a>
@@ -2754,8 +2480,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_joins_python">
 <a href="#start_joins_python" style="color: inherit; text-decoration: inherit;">start_<wbr>joins</a>
@@ -2763,8 +2488,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="syslog_facility_python">
 <a href="#syslog_facility_python" style="color: inherit; text-decoration: inherit;">syslog_<wbr>facility</a>
@@ -2772,8 +2496,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagged_addresses_python">
 <a href="#tagged_addresses_python" style="color: inherit; text-decoration: inherit;">tagged_<wbr>addresses</a>
@@ -2781,8 +2504,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="telemetry_python">
 <a href="#telemetry_python" style="color: inherit; text-decoration: inherit;">telemetry</a>
@@ -2790,8 +2512,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_ca_file_python">
 <a href="#tls_ca_file_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>file</a>
@@ -2799,8 +2520,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_cert_file_python">
 <a href="#tls_cert_file_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>cert_<wbr>file</a>
@@ -2808,8 +2528,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_key_file_python">
 <a href="#tls_key_file_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>key_<wbr>file</a>
@@ -2817,8 +2536,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_min_version_python">
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
@@ -2826,8 +2544,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_verify_incoming_python">
 <a href="#tls_verify_incoming_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>verify_<wbr>incoming</a>
@@ -2835,8 +2552,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_verify_outgoing_python">
 <a href="#tls_verify_outgoing_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>verify_<wbr>outgoing</a>
@@ -2844,8 +2560,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_verify_server_hostname_python">
 <a href="#tls_verify_server_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>verify_<wbr>server_<wbr>hostname</a>
@@ -2853,8 +2568,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="translate_wan_addrs_python">
 <a href="#translate_wan_addrs_python" style="color: inherit; text-decoration: inherit;">translate_<wbr>wan_<wbr>addrs</a>
@@ -2862,8 +2576,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ui_dir_python">
 <a href="#ui_dir_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>dir</a>
@@ -2871,8 +2584,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unix_sockets_python">
 <a href="#unix_sockets_python" style="color: inherit; text-decoration: inherit;">unix_<wbr>sockets</a>
@@ -2880,8 +2592,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2892,8 +2603,7 @@ of telemetry configuration.
     <dd>{{% md %}}The version of the Consul agent.
 * `version_prerelease`
 * `version_revision`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_prerelease_python">
 <a href="#version_prerelease_python" style="color: inherit; text-decoration: inherit;">version_<wbr>prerelease</a>
@@ -2901,8 +2611,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_revision_python">
 <a href="#version_revision_python" style="color: inherit; text-decoration: inherit;">version_<wbr>revision</a>
@@ -2910,8 +2619,7 @@ of telemetry configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

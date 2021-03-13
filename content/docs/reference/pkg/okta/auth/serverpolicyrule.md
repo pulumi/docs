@@ -291,8 +291,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authserverid_csharp">
 <a href="#authserverid_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Server<wbr>Id</a>
@@ -301,8 +300,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="granttypewhitelists_csharp">
 <a href="#granttypewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Type<wbr>Whitelists</a>
@@ -311,8 +309,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -321,8 +318,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -331,8 +327,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifetimeminutes_csharp">
 <a href="#accesstokenlifetimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -341,8 +336,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupblacklists_csharp">
 <a href="#groupblacklists_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Blacklists</a>
@@ -351,8 +345,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupwhitelists_csharp">
 <a href="#groupwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Whitelists</a>
@@ -361,8 +354,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inlinehookid_csharp">
 <a href="#inlinehookid_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
@@ -371,8 +363,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -381,8 +372,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenlifetimeminutes_csharp">
 <a href="#refreshtokenlifetimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -391,8 +381,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenwindowminutes_csharp">
 <a href="#refreshtokenwindowminutes_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Window<wbr>Minutes</a>
@@ -402,8 +391,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopewhitelists_csharp">
 <a href="#scopewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Whitelists</a>
@@ -412,8 +400,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -422,8 +409,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -432,8 +418,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userblacklists_csharp">
 <a href="#userblacklists_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Blacklists</a>
@@ -442,8 +427,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userwhitelists_csharp">
 <a href="#userwhitelists_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelists</a>
@@ -452,13 +436,11 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authserverid_go">
 <a href="#authserverid_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Server<wbr>Id</a>
@@ -467,8 +449,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="granttypewhitelists_go">
 <a href="#granttypewhitelists_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Type<wbr>Whitelists</a>
@@ -477,8 +458,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -487,8 +467,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -497,8 +476,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifetimeminutes_go">
 <a href="#accesstokenlifetimeminutes_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -507,8 +485,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupblacklists_go">
 <a href="#groupblacklists_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Blacklists</a>
@@ -517,8 +494,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupwhitelists_go">
 <a href="#groupwhitelists_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Whitelists</a>
@@ -527,8 +503,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inlinehookid_go">
 <a href="#inlinehookid_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
@@ -537,8 +512,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +521,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenlifetimeminutes_go">
 <a href="#refreshtokenlifetimeminutes_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -557,8 +530,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenwindowminutes_go">
 <a href="#refreshtokenwindowminutes_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Window<wbr>Minutes</a>
@@ -568,8 +540,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopewhitelists_go">
 <a href="#scopewhitelists_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Whitelists</a>
@@ -578,8 +549,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -588,8 +558,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -598,8 +567,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userblacklists_go">
 <a href="#userblacklists_go" style="color: inherit; text-decoration: inherit;">User<wbr>Blacklists</a>
@@ -608,8 +576,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userwhitelists_go">
 <a href="#userwhitelists_go" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelists</a>
@@ -618,13 +585,11 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authserverid_nodejs">
 <a href="#authserverid_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Server<wbr>Id</a>
@@ -633,8 +598,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="granttypewhitelists_nodejs">
 <a href="#granttypewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Type<wbr>Whitelists</a>
@@ -643,8 +607,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -653,8 +616,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -663,8 +625,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesstokenlifetimeminutes_nodejs">
 <a href="#accesstokenlifetimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -673,8 +634,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupblacklists_nodejs">
 <a href="#groupblacklists_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Blacklists</a>
@@ -683,8 +643,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupwhitelists_nodejs">
 <a href="#groupwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Whitelists</a>
@@ -693,8 +652,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inlinehookid_nodejs">
 <a href="#inlinehookid_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Hook<wbr>Id</a>
@@ -703,8 +661,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -713,8 +670,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenlifetimeminutes_nodejs">
 <a href="#refreshtokenlifetimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -723,8 +679,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshtokenwindowminutes_nodejs">
 <a href="#refreshtokenwindowminutes_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Window<wbr>Minutes</a>
@@ -734,8 +689,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopewhitelists_nodejs">
 <a href="#scopewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Whitelists</a>
@@ -744,8 +698,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -754,8 +707,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -764,8 +716,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userblacklists_nodejs">
 <a href="#userblacklists_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Blacklists</a>
@@ -774,8 +725,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userwhitelists_nodejs">
 <a href="#userwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Whitelists</a>
@@ -784,13 +734,11 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auth_server_id_python">
 <a href="#auth_server_id_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>server_<wbr>id</a>
@@ -799,8 +747,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grant_type_whitelists_python">
 <a href="#grant_type_whitelists_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>type_<wbr>whitelists</a>
@@ -809,8 +756,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -819,8 +765,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -829,8 +774,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_token_lifetime_minutes_python">
 <a href="#access_token_lifetime_minutes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifetime_<wbr>minutes</a>
@@ -839,8 +783,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_blacklists_python">
 <a href="#group_blacklists_python" style="color: inherit; text-decoration: inherit;">group_<wbr>blacklists</a>
@@ -849,8 +792,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_whitelists_python">
 <a href="#group_whitelists_python" style="color: inherit; text-decoration: inherit;">group_<wbr>whitelists</a>
@@ -859,8 +801,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inline_hook_id_python">
 <a href="#inline_hook_id_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>hook_<wbr>id</a>
@@ -869,8 +810,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -879,8 +819,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_lifetime_minutes_python">
 <a href="#refresh_token_lifetime_minutes_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>lifetime_<wbr>minutes</a>
@@ -889,8 +828,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_token_window_minutes_python">
 <a href="#refresh_token_window_minutes_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>window_<wbr>minutes</a>
@@ -900,8 +838,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_whitelists_python">
 <a href="#scope_whitelists_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>whitelists</a>
@@ -910,8 +847,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -920,8 +856,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -930,8 +865,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_blacklists_python">
 <a href="#user_blacklists_python" style="color: inherit; text-decoration: inherit;">user_<wbr>blacklists</a>
@@ -940,8 +874,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_whitelists_python">
 <a href="#user_whitelists_python" style="color: inherit; text-decoration: inherit;">user_<wbr>whitelists</a>
@@ -950,8 +883,7 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -962,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -971,13 +902,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -985,13 +914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -999,13 +926,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1013,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1141,8 +1065,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifetimeminutes_csharp">
 <a href="#state_accesstokenlifetimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -1151,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authserverid_csharp">
 <a href="#state_authserverid_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Server<wbr>Id</a>
@@ -1161,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypewhitelists_csharp">
 <a href="#state_granttypewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Type<wbr>Whitelists</a>
@@ -1171,8 +1092,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupblacklists_csharp">
 <a href="#state_groupblacklists_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Blacklists</a>
@@ -1181,8 +1101,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupwhitelists_csharp">
 <a href="#state_groupwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Whitelists</a>
@@ -1191,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inlinehookid_csharp">
 <a href="#state_inlinehookid_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
@@ -1201,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1211,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1221,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1231,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenlifetimeminutes_csharp">
 <a href="#state_refreshtokenlifetimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -1241,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenwindowminutes_csharp">
 <a href="#state_refreshtokenwindowminutes_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Window<wbr>Minutes</a>
@@ -1252,8 +1165,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopewhitelists_csharp">
 <a href="#state_scopewhitelists_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Whitelists</a>
@@ -1262,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1272,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1282,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userblacklists_csharp">
 <a href="#state_userblacklists_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Blacklists</a>
@@ -1292,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userwhitelists_csharp">
 <a href="#state_userwhitelists_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelists</a>
@@ -1302,13 +1210,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifetimeminutes_go">
 <a href="#state_accesstokenlifetimeminutes_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -1317,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authserverid_go">
 <a href="#state_authserverid_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Server<wbr>Id</a>
@@ -1327,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypewhitelists_go">
 <a href="#state_granttypewhitelists_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Type<wbr>Whitelists</a>
@@ -1337,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupblacklists_go">
 <a href="#state_groupblacklists_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Blacklists</a>
@@ -1347,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupwhitelists_go">
 <a href="#state_groupwhitelists_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Whitelists</a>
@@ -1357,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inlinehookid_go">
 <a href="#state_inlinehookid_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Hook<wbr>Id</a>
@@ -1367,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1377,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1387,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1397,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenlifetimeminutes_go">
 <a href="#state_refreshtokenlifetimeminutes_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -1407,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenwindowminutes_go">
 <a href="#state_refreshtokenwindowminutes_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Token<wbr>Window<wbr>Minutes</a>
@@ -1418,8 +1314,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopewhitelists_go">
 <a href="#state_scopewhitelists_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Whitelists</a>
@@ -1428,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1438,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1448,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userblacklists_go">
 <a href="#state_userblacklists_go" style="color: inherit; text-decoration: inherit;">User<wbr>Blacklists</a>
@@ -1458,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userwhitelists_go">
 <a href="#state_userwhitelists_go" style="color: inherit; text-decoration: inherit;">User<wbr>Whitelists</a>
@@ -1468,13 +1359,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesstokenlifetimeminutes_nodejs">
 <a href="#state_accesstokenlifetimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -1483,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authserverid_nodejs">
 <a href="#state_authserverid_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Server<wbr>Id</a>
@@ -1493,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypewhitelists_nodejs">
 <a href="#state_granttypewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Type<wbr>Whitelists</a>
@@ -1503,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupblacklists_nodejs">
 <a href="#state_groupblacklists_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Blacklists</a>
@@ -1513,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupwhitelists_nodejs">
 <a href="#state_groupwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Whitelists</a>
@@ -1523,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inlinehookid_nodejs">
 <a href="#state_inlinehookid_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Hook<wbr>Id</a>
@@ -1533,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1543,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -1553,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1563,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenlifetimeminutes_nodejs">
 <a href="#state_refreshtokenlifetimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</a>
@@ -1573,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refreshtokenwindowminutes_nodejs">
 <a href="#state_refreshtokenwindowminutes_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Token<wbr>Window<wbr>Minutes</a>
@@ -1584,8 +1463,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scopewhitelists_nodejs">
 <a href="#state_scopewhitelists_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Whitelists</a>
@@ -1594,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1604,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1614,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userblacklists_nodejs">
 <a href="#state_userblacklists_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Blacklists</a>
@@ -1624,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userwhitelists_nodejs">
 <a href="#state_userwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Whitelists</a>
@@ -1634,13 +1508,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_token_lifetime_minutes_python">
 <a href="#state_access_token_lifetime_minutes_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token_<wbr>lifetime_<wbr>minutes</a>
@@ -1649,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_server_id_python">
 <a href="#state_auth_server_id_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>server_<wbr>id</a>
@@ -1659,8 +1530,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grant_type_whitelists_python">
 <a href="#state_grant_type_whitelists_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>type_<wbr>whitelists</a>
@@ -1669,8 +1539,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"` or `"client_credentials"`. For `"implicit"` value either `user_whitelist` or `group_whitelist` should be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_blacklists_python">
 <a href="#state_group_blacklists_python" style="color: inherit; text-decoration: inherit;">group_<wbr>blacklists</a>
@@ -1679,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_whitelists_python">
 <a href="#state_group_whitelists_python" style="color: inherit; text-decoration: inherit;">group_<wbr>whitelists</a>
@@ -1689,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Groups whose Users are to be included. Can be set to Group ID or to the following: "EVERYONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inline_hook_id_python">
 <a href="#state_inline_hook_id_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>hook_<wbr>id</a>
@@ -1699,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1709,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1719,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1729,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_token_lifetime_minutes_python">
 <a href="#state_refresh_token_lifetime_minutes_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>lifetime_<wbr>minutes</a>
@@ -1739,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_refresh_token_window_minutes_python">
 <a href="#state_refresh_token_window_minutes_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>token_<wbr>window_<wbr>minutes</a>
@@ -1750,8 +1612,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Window in which a refresh token can be used. It can be a value between 5 and 2628000 (5 years) minutes.
 `"refresh_token_window_minutes"` must be between `"access_token_lifetime_minutes"` and `"refresh_token_lifetime_minutes"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scope_whitelists_python">
 <a href="#state_scope_whitelists_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>whitelists</a>
@@ -1760,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1770,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1780,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_blacklists_python">
 <a href="#state_user_blacklists_python" style="color: inherit; text-decoration: inherit;">user_<wbr>blacklists</a>
@@ -1790,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_whitelists_python">
 <a href="#state_user_whitelists_python" style="color: inherit; text-decoration: inherit;">user_<wbr>whitelists</a>
@@ -1800,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies a set of Users to be included.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -266,8 +266,7 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -276,8 +275,7 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceids_csharp">
 <a href="#instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
@@ -286,13 +284,11 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -301,8 +297,7 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceids_go">
 <a href="#instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
@@ -311,13 +306,11 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -326,8 +319,7 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceids_nodejs">
 <a href="#instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
@@ -336,13 +328,11 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -351,8 +341,7 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_ids_python">
 <a href="#instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
@@ -361,8 +350,7 @@ The InstanceClusterAttachment resource accepts the following [input]({{< relref 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -373,8 +361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clustermemberids_csharp">
 <a href="#clustermemberids_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
@@ -383,8 +370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ecumap_csharp">
 <a href="#ecumap_csharp" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
@@ -393,8 +379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -402,8 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusmap_csharp">
 <a href="#statusmap_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
@@ -412,13 +396,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clustermemberids_go">
 <a href="#clustermemberids_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
@@ -427,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ecumap_go">
 <a href="#ecumap_go" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
@@ -437,8 +418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -446,8 +426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusmap_go">
 <a href="#statusmap_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
@@ -456,13 +435,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]int</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clustermemberids_nodejs">
 <a href="#clustermemberids_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Member<wbr>Ids</a>
@@ -471,8 +448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ecumap_nodejs">
 <a href="#ecumap_nodejs" style="color: inherit; text-decoration: inherit;">ecu<wbr>Map</a>
@@ -481,8 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusmap_nodejs">
 <a href="#statusmap_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Map</a>
@@ -500,13 +474,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cluster_member_ids_python">
 <a href="#cluster_member_ids_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>member_<wbr>ids</a>
@@ -515,8 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ecu_map_python">
 <a href="#ecu_map_python" style="color: inherit; text-decoration: inherit;">ecu_<wbr>map</a>
@@ -525,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -534,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_map_python">
 <a href="#status_map_python" style="color: inherit; text-decoration: inherit;">status_<wbr>map</a>
@@ -544,8 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -672,8 +640,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -682,8 +649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustermemberids_csharp">
 <a href="#state_clustermemberids_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
@@ -692,8 +658,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecumap_csharp">
 <a href="#state_ecumap_csharp" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
@@ -702,8 +667,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_csharp">
 <a href="#state_instanceids_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
@@ -712,8 +676,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statusmap_csharp">
 <a href="#state_statusmap_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
@@ -722,13 +685,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, int&gt;</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -737,8 +698,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustermemberids_go">
 <a href="#state_clustermemberids_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Member<wbr>Ids</a>
@@ -747,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecumap_go">
 <a href="#state_ecumap_go" style="color: inherit; text-decoration: inherit;">Ecu<wbr>Map</a>
@@ -757,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_go">
 <a href="#state_instanceids_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Ids</a>
@@ -767,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statusmap_go">
 <a href="#state_statusmap_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Map</a>
@@ -777,13 +734,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]int</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -792,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustermemberids_nodejs">
 <a href="#state_clustermemberids_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Member<wbr>Ids</a>
@@ -802,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecumap_nodejs">
 <a href="#state_ecumap_nodejs" style="color: inherit; text-decoration: inherit;">ecu<wbr>Map</a>
@@ -812,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceids_nodejs">
 <a href="#state_instanceids_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Ids</a>
@@ -822,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statusmap_nodejs">
 <a href="#state_statusmap_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Map</a>
@@ -832,13 +783,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -847,8 +796,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the cluster that you want to create the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_member_ids_python">
 <a href="#state_cluster_member_ids_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>member_<wbr>ids</a>
@@ -857,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The cluster members map of the resource supplied above. The key is instance_id and the value is cluster_member_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ecu_map_python">
 <a href="#state_ecu_map_python" style="color: inherit; text-decoration: inherit;">ecu_<wbr>map</a>
@@ -867,8 +814,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The ecu map of the resource supplied above. The key is instance_id and the value is ecu_id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_ids_python">
 <a href="#state_instance_ids_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>ids</a>
@@ -877,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ID of instance. Type: list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_map_python">
 <a href="#state_status_map_python" style="color: inherit; text-decoration: inherit;">status_<wbr>map</a>
@@ -887,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, int]</span>
     </dt>
     <dd>{{% md %}}The status map of the resource supplied above. The key is instance_id and the values are 1(running) 0(converting) -1(failed) and -2(offline).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

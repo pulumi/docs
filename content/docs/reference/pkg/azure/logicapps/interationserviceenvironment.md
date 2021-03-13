@@ -494,8 +494,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessendpointtype_csharp">
 <a href="#accessendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Type</a>
@@ -504,8 +503,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -514,8 +512,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetids_csharp">
 <a href="#virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -524,8 +521,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -534,8 +530,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -544,8 +539,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_csharp">
 <a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -554,8 +548,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -564,13 +557,11 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessendpointtype_go">
 <a href="#accessendpointtype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Type</a>
@@ -579,8 +570,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -589,8 +579,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetids_go">
 <a href="#virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -599,8 +588,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -609,8 +597,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -619,8 +606,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_go">
 <a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -629,8 +615,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -639,13 +624,11 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessendpointtype_nodejs">
 <a href="#accessendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Type</a>
@@ -654,8 +637,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -664,8 +646,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworksubnetids_nodejs">
 <a href="#virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -674,8 +655,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -684,8 +664,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -694,8 +673,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuname_nodejs">
 <a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -704,8 +682,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -714,13 +691,11 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_endpoint_type_python">
 <a href="#access_endpoint_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>type</a>
@@ -729,8 +704,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -739,8 +713,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_subnet_ids_python">
 <a href="#virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
@@ -749,8 +722,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -759,8 +731,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -769,8 +740,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_name_python">
 <a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -779,8 +749,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -789,8 +758,7 @@ The InterationServiceEnvironment resource accepts the following [input]({{< relr
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectorendpointipaddresses_csharp">
 <a href="#connectorendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -811,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectoroutboundipaddresses_csharp">
 <a href="#connectoroutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -821,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -830,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflowendpointipaddresses_csharp">
 <a href="#workflowendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -840,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflowoutboundipaddresses_csharp">
 <a href="#workflowoutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -850,13 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectorendpointipaddresses_go">
 <a href="#connectorendpointipaddresses_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -865,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectoroutboundipaddresses_go">
 <a href="#connectoroutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -875,8 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -884,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflowendpointipaddresses_go">
 <a href="#workflowendpointipaddresses_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -894,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflowoutboundipaddresses_go">
 <a href="#workflowoutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -904,13 +861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectorendpointipaddresses_nodejs">
 <a href="#connectorendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -919,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectoroutboundipaddresses_nodejs">
 <a href="#connectoroutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -929,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -938,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflowendpointipaddresses_nodejs">
 <a href="#workflowendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -948,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflowoutboundipaddresses_nodejs">
 <a href="#workflowoutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -958,13 +909,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connector_endpoint_ip_addresses_python">
 <a href="#connector_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
@@ -973,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connector_outbound_ip_addresses_python">
 <a href="#connector_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
@@ -983,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -992,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflow_endpoint_ip_addresses_python">
 <a href="#workflow_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
@@ -1002,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workflow_outbound_ip_addresses_python">
 <a href="#workflow_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
@@ -1012,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1140,8 +1084,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessendpointtype_csharp">
 <a href="#state_accessendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Type</a>
@@ -1150,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectorendpointipaddresses_csharp">
 <a href="#state_connectorendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -1160,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectoroutboundipaddresses_csharp">
 <a href="#state_connectoroutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -1170,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1180,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1190,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1200,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_csharp">
 <a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1210,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1220,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworksubnetids_csharp">
 <a href="#state_virtualnetworksubnetids_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -1230,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowendpointipaddresses_csharp">
 <a href="#state_workflowendpointipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -1240,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowoutboundipaddresses_csharp">
 <a href="#state_workflowoutboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -1250,13 +1183,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessendpointtype_go">
 <a href="#state_accessendpointtype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Endpoint<wbr>Type</a>
@@ -1265,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectorendpointipaddresses_go">
 <a href="#state_connectorendpointipaddresses_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -1275,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectoroutboundipaddresses_go">
 <a href="#state_connectoroutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -1285,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1295,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1305,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1315,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_go">
 <a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
@@ -1325,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1335,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworksubnetids_go">
 <a href="#state_virtualnetworksubnetids_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -1345,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowendpointipaddresses_go">
 <a href="#state_workflowendpointipaddresses_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -1355,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowoutboundipaddresses_go">
 <a href="#state_workflowoutboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -1365,13 +1286,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessendpointtype_nodejs">
 <a href="#state_accessendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Endpoint<wbr>Type</a>
@@ -1380,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectorendpointipaddresses_nodejs">
 <a href="#state_connectorendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -1390,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectoroutboundipaddresses_nodejs">
 <a href="#state_connectoroutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -1400,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1410,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1420,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1430,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skuname_nodejs">
 <a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
@@ -1440,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1450,8 +1362,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworksubnetids_nodejs">
 <a href="#state_virtualnetworksubnetids_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Subnet<wbr>Ids</a>
@@ -1460,8 +1371,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowendpointipaddresses_nodejs">
 <a href="#state_workflowendpointipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Endpoint<wbr>Ip<wbr>Addresses</a>
@@ -1470,8 +1380,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflowoutboundipaddresses_nodejs">
 <a href="#state_workflowoutboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Outbound<wbr>Ip<wbr>Addresses</a>
@@ -1480,13 +1389,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_endpoint_type_python">
 <a href="#state_access_endpoint_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>endpoint_<wbr>type</a>
@@ -1495,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of access endpoint to use for the Integration Service Environment. Possible Values are `Internal` and `External`. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connector_endpoint_ip_addresses_python">
 <a href="#state_connector_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
@@ -1505,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connector_outbound_ip_addresses_python">
 <a href="#state_connector_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
@@ -1515,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of connector.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1525,8 +1429,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Region where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1535,8 +1438,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Integration Service Environment. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1545,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Integration Service Environment should exist. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sku_name_python">
 <a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
@@ -1555,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name and capacity of the Integration Service Environment. Possible Values for `sku` element are `Developer` and `Premium` and possible values for the `capacity` element are from `0` to `10`.  Defaults to `sku` of `Developer` with a `Capacity` of `0` (e.g. `Developer_0`). Changing this forces a new Integration Service Environment to be created when `sku` element is not the same with existing one.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1565,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags which should be assigned to the Integration Service Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_subnet_ids_python">
 <a href="#state_virtual_network_subnet_ids_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>subnet_<wbr>ids</a>
@@ -1575,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of virtual network subnet ids to be used by Integration Service Environment. Exactly four distinct ids to subnets must be provided. Changing this forces a new Integration Service Environment to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflow_endpoint_ip_addresses_python">
 <a href="#state_workflow_endpoint_ip_addresses_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>endpoint_<wbr>ip_<wbr>addresses</a>
@@ -1585,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of access endpoint ip addresses of workflow.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workflow_outbound_ip_addresses_python">
 <a href="#state_workflow_outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>outbound_<wbr>ip_<wbr>addresses</a>
@@ -1595,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of outgoing ip addresses of workflow.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

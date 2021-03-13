@@ -1,8 +1,8 @@
 
 ---
 title: "UserNotificationRule"
-title_tag: "Resource UserNotificationRule | Package PagerDuty"
-meta_desc: "Explore the UserNotificationRule resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_notification_rules_notification_rule_id) configures where and when a PagerDuty user is notified when a triggered incident is assigned to him. Unique notification rules can be created for both high and low-urgency incidents."
+title_tag: "pagerduty.UserNotificationRule"
+meta_desc: "Documentation for the pagerduty.UserNotificationRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the UserNotificationRule resource of the PagerDuty package, 
 A [notification rule](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Users/get_users_id_notification_rules_notification_rule_id) configures where and when a PagerDuty user is notified when a triggered incident is assigned to him. Unique notification rules can be created for both high and low-urgency incidents.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Pagerduty = Pulumi.Pagerduty;
@@ -91,9 +97,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -180,9 +189,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_pagerduty as pagerduty
@@ -231,9 +243,12 @@ low_urgency_sms = pagerduty.UserNotificationRule("lowUrgencySms",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -289,9 +304,16 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a UserNotificationRule Resource {#create}
@@ -316,9 +338,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -326,9 +346,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -336,9 +354,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -346,10 +362,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -375,9 +388,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -385,9 +396,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -395,9 +404,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -405,9 +412,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -415,18 +420,13 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -434,9 +434,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -444,9 +442,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -454,10 +450,7 @@ const lowUrgencySms = new pagerduty.UserNotificationRule("lowUrgencySms", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -472,9 +465,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactmethod_csharp">
 <a href="#contactmethod_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
@@ -483,8 +474,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startdelayinminutes_csharp">
 <a href="#startdelayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
@@ -493,8 +483,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urgency_csharp">
 <a href="#urgency_csharp" style="color: inherit; text-decoration: inherit;">Urgency</a>
@@ -503,8 +492,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -513,14 +501,11 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactmethod_go">
 <a href="#contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
@@ -529,8 +514,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startdelayinminutes_go">
 <a href="#startdelayinminutes_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
@@ -539,8 +523,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urgency_go">
 <a href="#urgency_go" style="color: inherit; text-decoration: inherit;">Urgency</a>
@@ -549,8 +532,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -559,14 +541,11 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contactmethod_nodejs">
 <a href="#contactmethod_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Method</a>
@@ -575,8 +554,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startdelayinminutes_nodejs">
 <a href="#startdelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay<wbr>In<wbr>Minutes</a>
@@ -585,8 +563,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urgency_nodejs">
 <a href="#urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
@@ -595,8 +572,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -605,14 +581,11 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="contact_method_python">
 <a href="#contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
@@ -621,8 +594,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_delay_in_minutes_python">
 <a href="#start_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay_<wbr>in_<wbr>minutes</a>
@@ -631,8 +603,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="urgency_python">
 <a href="#urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
@@ -641,8 +612,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -651,8 +621,7 @@ The UserNotificationRule resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -663,9 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -673,14 +640,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -688,14 +652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -703,14 +664,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -718,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -846,9 +803,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contactmethod_csharp">
 <a href="#state_contactmethod_csharp" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
@@ -857,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdelayinminutes_csharp">
 <a href="#state_startdelayinminutes_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
@@ -867,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urgency_csharp">
 <a href="#state_urgency_csharp" style="color: inherit; text-decoration: inherit;">Urgency</a>
@@ -877,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userid_csharp">
 <a href="#state_userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -887,14 +839,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contactmethod_go">
 <a href="#state_contactmethod_go" style="color: inherit; text-decoration: inherit;">Contact<wbr>Method</a>
@@ -903,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdelayinminutes_go">
 <a href="#state_startdelayinminutes_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Delay<wbr>In<wbr>Minutes</a>
@@ -913,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urgency_go">
 <a href="#state_urgency_go" style="color: inherit; text-decoration: inherit;">Urgency</a>
@@ -923,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userid_go">
 <a href="#state_userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -933,14 +879,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contactmethod_nodejs">
 <a href="#state_contactmethod_nodejs" style="color: inherit; text-decoration: inherit;">contact<wbr>Method</a>
@@ -949,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_startdelayinminutes_nodejs">
 <a href="#state_startdelayinminutes_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Delay<wbr>In<wbr>Minutes</a>
@@ -959,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urgency_nodejs">
 <a href="#state_urgency_nodejs" style="color: inherit; text-decoration: inherit;">urgency</a>
@@ -969,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userid_nodejs">
 <a href="#state_userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -979,14 +919,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contact_method_python">
 <a href="#state_contact_method_python" style="color: inherit; text-decoration: inherit;">contact_<wbr>method</a>
@@ -995,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A contact method block, configured as a block described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_delay_in_minutes_python">
 <a href="#state_start_delay_in_minutes_python" style="color: inherit; text-decoration: inherit;">start_<wbr>delay_<wbr>in_<wbr>minutes</a>
@@ -1005,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The delay before firing the rule, in minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urgency_python">
 <a href="#state_urgency_python" style="color: inherit; text-decoration: inherit;">urgency</a>
@@ -1015,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which incident urgency this rule is used for. Account must have the `urgencies` ability to have a low urgency notification rule. Can be `high` or `low`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_id_python">
 <a href="#state_user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -1025,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1041,9 +974,7 @@ The following state arguments are supported:
 <h4 id="usernotificationrulecontactmethod">User<wbr>Notification<wbr>Rule<wbr>Contact<wbr>Method</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1052,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1062,14 +992,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1078,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1088,14 +1014,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1104,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1114,14 +1036,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1130,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the referenced contact method.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1140,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of contact method. Can be `email_contact_method`, `phone_contact_method`, `push_notification_contact_method` or `sms_contact_method`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

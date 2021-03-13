@@ -275,8 +275,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appapdexthreshold_csharp">
 <a href="#appapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
@@ -285,8 +284,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablerealusermonitoring_csharp">
 <a href="#enablerealusermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
@@ -295,8 +293,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enduserapdexthreshold_csharp">
 <a href="#enduserapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
@@ -305,8 +302,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -315,13 +311,11 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appapdexthreshold_go">
 <a href="#appapdexthreshold_go" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
@@ -330,8 +324,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablerealusermonitoring_go">
 <a href="#enablerealusermonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
@@ -340,8 +333,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enduserapdexthreshold_go">
 <a href="#enduserapdexthreshold_go" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
@@ -350,8 +342,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -360,13 +351,11 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appapdexthreshold_nodejs">
 <a href="#appapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Apdex<wbr>Threshold</a>
@@ -375,8 +364,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablerealusermonitoring_nodejs">
 <a href="#enablerealusermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>User<wbr>Monitoring</a>
@@ -385,8 +373,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enduserapdexthreshold_nodejs">
 <a href="#enduserapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Apdex<wbr>Threshold</a>
@@ -395,8 +382,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -405,13 +391,11 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_apdex_threshold_python">
 <a href="#app_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">app_<wbr>apdex_<wbr>threshold</a>
@@ -420,8 +404,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_real_user_monitoring_python">
 <a href="#enable_real_user_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>user_<wbr>monitoring</a>
@@ -430,8 +413,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_user_apdex_threshold_python">
 <a href="#end_user_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>apdex_<wbr>threshold</a>
@@ -440,8 +422,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -450,8 +431,7 @@ The ApplicationSettings resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -462,8 +442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -471,13 +450,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -485,13 +462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -499,13 +474,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -513,8 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -641,8 +613,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appapdexthreshold_csharp">
 <a href="#state_appapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
@@ -651,8 +622,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablerealusermonitoring_csharp">
 <a href="#state_enablerealusermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
@@ -661,8 +631,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enduserapdexthreshold_csharp">
 <a href="#state_enduserapdexthreshold_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
@@ -671,8 +640,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -681,13 +649,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appapdexthreshold_go">
 <a href="#state_appapdexthreshold_go" style="color: inherit; text-decoration: inherit;">App<wbr>Apdex<wbr>Threshold</a>
@@ -696,8 +662,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablerealusermonitoring_go">
 <a href="#state_enablerealusermonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>User<wbr>Monitoring</a>
@@ -706,8 +671,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enduserapdexthreshold_go">
 <a href="#state_enduserapdexthreshold_go" style="color: inherit; text-decoration: inherit;">End<wbr>User<wbr>Apdex<wbr>Threshold</a>
@@ -716,8 +680,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -726,13 +689,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appapdexthreshold_nodejs">
 <a href="#state_appapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Apdex<wbr>Threshold</a>
@@ -741,8 +702,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablerealusermonitoring_nodejs">
 <a href="#state_enablerealusermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>User<wbr>Monitoring</a>
@@ -751,8 +711,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enduserapdexthreshold_nodejs">
 <a href="#state_enduserapdexthreshold_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>User<wbr>Apdex<wbr>Threshold</a>
@@ -761,8 +720,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -771,13 +729,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_apdex_threshold_python">
 <a href="#state_app_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">app_<wbr>apdex_<wbr>threshold</a>
@@ -786,8 +742,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The appex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_real_user_monitoring_python">
 <a href="#state_enable_real_user_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>user_<wbr>monitoring</a>
@@ -796,8 +751,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable real user monitoring for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_end_user_apdex_threshold_python">
 <a href="#state_end_user_apdex_threshold_python" style="color: inherit; text-decoration: inherit;">end_<wbr>user_<wbr>apdex_<wbr>threshold</a>
@@ -806,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The user's apdex threshold for the New Relic application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -816,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the application in New Relic APM.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -412,8 +412,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linkedrediscacheid_csharp">
 <a href="#linkedrediscacheid_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Id</a>
@@ -422,8 +421,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkedrediscachelocation_csharp">
 <a href="#linkedrediscachelocation_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Location</a>
@@ -432,8 +430,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -442,8 +439,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverrole_csharp">
 <a href="#serverrole_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
@@ -452,8 +448,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrediscachename_csharp">
 <a href="#targetrediscachename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Redis<wbr>Cache<wbr>Name</a>
@@ -462,13 +457,11 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linkedrediscacheid_go">
 <a href="#linkedrediscacheid_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Id</a>
@@ -477,8 +470,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkedrediscachelocation_go">
 <a href="#linkedrediscachelocation_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Location</a>
@@ -487,8 +479,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -497,8 +488,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverrole_go">
 <a href="#serverrole_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
@@ -507,8 +497,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrediscachename_go">
 <a href="#targetrediscachename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Redis<wbr>Cache<wbr>Name</a>
@@ -517,13 +506,11 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linkedrediscacheid_nodejs">
 <a href="#linkedrediscacheid_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Redis<wbr>Cache<wbr>Id</a>
@@ -532,8 +519,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linkedrediscachelocation_nodejs">
 <a href="#linkedrediscachelocation_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Redis<wbr>Cache<wbr>Location</a>
@@ -542,8 +528,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -552,8 +537,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serverrole_nodejs">
 <a href="#serverrole_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Role</a>
@@ -562,8 +546,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrediscachename_nodejs">
 <a href="#targetrediscachename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Redis<wbr>Cache<wbr>Name</a>
@@ -572,13 +555,11 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="linked_redis_cache_id_python">
 <a href="#linked_redis_cache_id_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>redis_<wbr>cache_<wbr>id</a>
@@ -587,8 +568,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linked_redis_cache_location_python">
 <a href="#linked_redis_cache_location_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>redis_<wbr>cache_<wbr>location</a>
@@ -597,8 +577,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -607,8 +586,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="server_role_python">
 <a href="#server_role_python" style="color: inherit; text-decoration: inherit;">server_<wbr>role</a>
@@ -617,8 +595,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_redis_cache_name_python">
 <a href="#target_redis_cache_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>redis_<wbr>cache_<wbr>name</a>
@@ -627,8 +604,7 @@ The LinkedServer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -639,8 +615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -648,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -658,13 +632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -682,13 +653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -696,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -706,13 +674,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -720,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -730,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -858,8 +822,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_linkedrediscacheid_csharp">
 <a href="#state_linkedrediscacheid_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Id</a>
@@ -868,8 +831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkedrediscachelocation_csharp">
 <a href="#state_linkedrediscachelocation_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Location</a>
@@ -878,8 +840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -888,8 +849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -898,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverrole_csharp">
 <a href="#state_serverrole_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
@@ -908,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrediscachename_csharp">
 <a href="#state_targetrediscachename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Redis<wbr>Cache<wbr>Name</a>
@@ -918,13 +876,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_linkedrediscacheid_go">
 <a href="#state_linkedrediscacheid_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Id</a>
@@ -933,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkedrediscachelocation_go">
 <a href="#state_linkedrediscachelocation_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Redis<wbr>Cache<wbr>Location</a>
@@ -943,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -953,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -963,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverrole_go">
 <a href="#state_serverrole_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
@@ -973,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrediscachename_go">
 <a href="#state_targetrediscachename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Redis<wbr>Cache<wbr>Name</a>
@@ -983,13 +934,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_linkedrediscacheid_nodejs">
 <a href="#state_linkedrediscacheid_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Redis<wbr>Cache<wbr>Id</a>
@@ -998,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linkedrediscachelocation_nodejs">
 <a href="#state_linkedrediscachelocation_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Redis<wbr>Cache<wbr>Location</a>
@@ -1008,8 +956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1018,8 +965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1028,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverrole_nodejs">
 <a href="#state_serverrole_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Role</a>
@@ -1038,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrediscachename_nodejs">
 <a href="#state_targetrediscachename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Redis<wbr>Cache<wbr>Name</a>
@@ -1048,13 +992,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_linked_redis_cache_id_python">
 <a href="#state_linked_redis_cache_id_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>redis_<wbr>cache_<wbr>id</a>
@@ -1063,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linked_redis_cache_location_python">
 <a href="#state_linked_redis_cache_location_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>redis_<wbr>cache_<wbr>location</a>
@@ -1073,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the linked Redis cache. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1083,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the linked server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1093,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Redis caches exists. Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_role_python">
 <a href="#state_server_role_python" style="color: inherit; text-decoration: inherit;">server_<wbr>role</a>
@@ -1103,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role of the linked Redis cache (eg "Secondary"). Changing this forces a new Redis to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_redis_cache_name_python">
 <a href="#state_target_redis_cache_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>redis_<wbr>cache_<wbr>name</a>
@@ -1113,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Redis cache to link with. Changing this forces a new Redis to be created. (eg The primary role)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -557,8 +557,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtime_csharp">
 <a href="#runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -568,8 +567,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_csharp">
 <a href="#availablememorymb_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>Mb</a>
@@ -578,8 +576,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildenvironmentvariables_csharp">
 <a href="#buildenvironmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
@@ -588,8 +585,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -598,8 +594,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoint_csharp">
 <a href="#entrypoint_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
@@ -608,8 +603,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_csharp">
 <a href="#environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -618,8 +612,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtrigger_csharp">
 <a href="#eventtrigger_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Trigger</a>
@@ -628,8 +621,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpstriggerurl_csharp">
 <a href="#httpstriggerurl_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Trigger<wbr>Url</a>
@@ -638,8 +630,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingresssettings_csharp">
 <a href="#ingresssettings_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
@@ -648,8 +639,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -658,8 +648,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -668,8 +657,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -678,8 +666,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -688,8 +675,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -698,8 +684,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_csharp">
 <a href="#serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -708,8 +693,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearchivebucket_csharp">
 <a href="#sourcearchivebucket_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Bucket</a>
@@ -718,8 +702,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearchiveobject_csharp">
 <a href="#sourcearchiveobject_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Object</a>
@@ -728,8 +711,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerepository_csharp">
 <a href="#sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -739,8 +721,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -749,8 +730,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerhttp_csharp">
 <a href="#triggerhttp_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Http</a>
@@ -759,8 +739,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnector_csharp">
 <a href="#vpcconnector_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector</a>
@@ -769,8 +748,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnectoregresssettings_csharp">
 <a href="#vpcconnectoregresssettings_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -779,13 +757,11 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtime_go">
 <a href="#runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -795,8 +771,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_go">
 <a href="#availablememorymb_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>Mb</a>
@@ -805,8 +780,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildenvironmentvariables_go">
 <a href="#buildenvironmentvariables_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
@@ -815,8 +789,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -825,8 +798,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoint_go">
 <a href="#entrypoint_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
@@ -835,8 +807,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_go">
 <a href="#environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -845,8 +816,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtrigger_go">
 <a href="#eventtrigger_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Trigger</a>
@@ -855,8 +825,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpstriggerurl_go">
 <a href="#httpstriggerurl_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Trigger<wbr>Url</a>
@@ -865,8 +834,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingresssettings_go">
 <a href="#ingresssettings_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
@@ -875,8 +843,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -885,8 +852,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -895,8 +861,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -905,8 +870,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -915,8 +879,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -925,8 +888,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_go">
 <a href="#serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -935,8 +897,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearchivebucket_go">
 <a href="#sourcearchivebucket_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Bucket</a>
@@ -945,8 +906,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearchiveobject_go">
 <a href="#sourcearchiveobject_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Object</a>
@@ -955,8 +915,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerepository_go">
 <a href="#sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -966,8 +925,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -976,8 +934,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerhttp_go">
 <a href="#triggerhttp_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Http</a>
@@ -986,8 +943,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnector_go">
 <a href="#vpcconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector</a>
@@ -996,8 +952,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnectoregresssettings_go">
 <a href="#vpcconnectoregresssettings_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -1006,13 +961,11 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtime_nodejs">
 <a href="#runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -1022,8 +975,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablememorymb_nodejs">
 <a href="#availablememorymb_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>Mb</a>
@@ -1032,8 +984,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildenvironmentvariables_nodejs">
 <a href="#buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
@@ -1042,8 +993,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1052,8 +1002,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entrypoint_nodejs">
 <a href="#entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
@@ -1062,8 +1011,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentvariables_nodejs">
 <a href="#environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -1072,8 +1020,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtrigger_nodejs">
 <a href="#eventtrigger_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Trigger</a>
@@ -1082,8 +1029,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpstriggerurl_nodejs">
 <a href="#httpstriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Trigger<wbr>Url</a>
@@ -1092,8 +1038,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingresssettings_nodejs">
 <a href="#ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
@@ -1102,8 +1047,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1112,8 +1056,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
@@ -1122,8 +1065,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1132,8 +1074,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1142,8 +1083,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1152,8 +1092,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountemail_nodejs">
 <a href="#serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
@@ -1162,8 +1101,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearchivebucket_nodejs">
 <a href="#sourcearchivebucket_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Bucket</a>
@@ -1172,8 +1110,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearchiveobject_nodejs">
 <a href="#sourcearchiveobject_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Object</a>
@@ -1182,8 +1119,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcerepository_nodejs">
 <a href="#sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
@@ -1193,8 +1129,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1203,8 +1138,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerhttp_nodejs">
 <a href="#triggerhttp_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Http</a>
@@ -1213,8 +1147,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnector_nodejs">
 <a href="#vpcconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector</a>
@@ -1223,8 +1156,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcconnectoregresssettings_nodejs">
 <a href="#vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -1233,13 +1165,11 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runtime_python">
 <a href="#runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -1249,8 +1179,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_memory_mb_python">
 <a href="#available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
@@ -1259,8 +1188,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_environment_variables_python">
 <a href="#build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
@@ -1269,8 +1197,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1279,8 +1206,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entry_point_python">
 <a href="#entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
@@ -1289,8 +1215,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_variables_python">
 <a href="#environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -1299,8 +1224,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_trigger_python">
 <a href="#event_trigger_python" style="color: inherit; text-decoration: inherit;">event_<wbr>trigger</a>
@@ -1309,8 +1233,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_trigger_url_python">
 <a href="#https_trigger_url_python" style="color: inherit; text-decoration: inherit;">https_<wbr>trigger_<wbr>url</a>
@@ -1319,8 +1242,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ingress_settings_python">
 <a href="#ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
@@ -1329,8 +1251,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1339,8 +1260,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
@@ -1349,8 +1269,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1359,8 +1278,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1369,8 +1287,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1379,8 +1296,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_email_python">
 <a href="#service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
@@ -1389,8 +1305,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_archive_bucket_python">
 <a href="#source_archive_bucket_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>bucket</a>
@@ -1399,8 +1314,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_archive_object_python">
 <a href="#source_archive_object_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>object</a>
@@ -1409,8 +1323,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_repository_python">
 <a href="#source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
@@ -1420,8 +1333,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1430,8 +1342,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_http_python">
 <a href="#trigger_http_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>http</a>
@@ -1440,8 +1351,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_connector_python">
 <a href="#vpc_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector</a>
@@ -1450,8 +1360,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_connector_egress_settings_python">
 <a href="#vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
@@ -1460,8 +1369,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1472,8 +1380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1481,13 +1388,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1495,13 +1400,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1509,13 +1412,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1523,8 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1651,8 +1551,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availablememorymb_csharp">
 <a href="#state_availablememorymb_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>Mb</a>
@@ -1661,8 +1560,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buildenvironmentvariables_csharp">
 <a href="#state_buildenvironmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
@@ -1671,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1681,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_csharp">
 <a href="#state_entrypoint_csharp" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
@@ -1691,8 +1587,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_csharp">
 <a href="#state_environmentvariables_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -1701,8 +1596,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtrigger_csharp">
 <a href="#state_eventtrigger_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Trigger</a>
@@ -1711,8 +1605,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpstriggerurl_csharp">
 <a href="#state_httpstriggerurl_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Trigger<wbr>Url</a>
@@ -1721,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingresssettings_csharp">
 <a href="#state_ingresssettings_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
@@ -1731,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1741,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxinstances_csharp">
 <a href="#state_maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1751,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1761,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1771,8 +1659,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1781,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_csharp">
 <a href="#state_runtime_csharp" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -1792,8 +1678,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_csharp">
 <a href="#state_serviceaccountemail_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -1802,8 +1687,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcearchivebucket_csharp">
 <a href="#state_sourcearchivebucket_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Bucket</a>
@@ -1812,8 +1696,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcearchiveobject_csharp">
 <a href="#state_sourcearchiveobject_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Object</a>
@@ -1822,8 +1705,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerepository_csharp">
 <a href="#state_sourcerepository_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -1833,8 +1715,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1843,8 +1724,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerhttp_csharp">
 <a href="#state_triggerhttp_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Http</a>
@@ -1853,8 +1733,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnector_csharp">
 <a href="#state_vpcconnector_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector</a>
@@ -1863,8 +1742,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnectoregresssettings_csharp">
 <a href="#state_vpcconnectoregresssettings_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -1873,13 +1751,11 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availablememorymb_go">
 <a href="#state_availablememorymb_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>Mb</a>
@@ -1888,8 +1764,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buildenvironmentvariables_go">
 <a href="#state_buildenvironmentvariables_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Environment<wbr>Variables</a>
@@ -1898,8 +1773,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1908,8 +1782,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_go">
 <a href="#state_entrypoint_go" style="color: inherit; text-decoration: inherit;">Entry<wbr>Point</a>
@@ -1918,8 +1791,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_go">
 <a href="#state_environmentvariables_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Variables</a>
@@ -1928,8 +1800,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtrigger_go">
 <a href="#state_eventtrigger_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Trigger</a>
@@ -1938,8 +1809,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpstriggerurl_go">
 <a href="#state_httpstriggerurl_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Trigger<wbr>Url</a>
@@ -1948,8 +1818,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingresssettings_go">
 <a href="#state_ingresssettings_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Settings</a>
@@ -1958,8 +1827,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1968,8 +1836,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxinstances_go">
 <a href="#state_maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1978,8 +1845,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1988,8 +1854,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1998,8 +1863,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2008,8 +1872,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_go">
 <a href="#state_runtime_go" style="color: inherit; text-decoration: inherit;">Runtime</a>
@@ -2019,8 +1882,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_go">
 <a href="#state_serviceaccountemail_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Email</a>
@@ -2029,8 +1891,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcearchivebucket_go">
 <a href="#state_sourcearchivebucket_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Bucket</a>
@@ -2039,8 +1900,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcearchiveobject_go">
 <a href="#state_sourcearchiveobject_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Archive<wbr>Object</a>
@@ -2049,8 +1909,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerepository_go">
 <a href="#state_sourcerepository_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Repository</a>
@@ -2060,8 +1919,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -2070,8 +1928,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerhttp_go">
 <a href="#state_triggerhttp_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Http</a>
@@ -2080,8 +1937,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnector_go">
 <a href="#state_vpcconnector_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector</a>
@@ -2090,8 +1946,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnectoregresssettings_go">
 <a href="#state_vpcconnectoregresssettings_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -2100,13 +1955,11 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_availablememorymb_nodejs">
 <a href="#state_availablememorymb_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Memory<wbr>Mb</a>
@@ -2115,8 +1968,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_buildenvironmentvariables_nodejs">
 <a href="#state_buildenvironmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Environment<wbr>Variables</a>
@@ -2125,8 +1977,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2135,8 +1986,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entrypoint_nodejs">
 <a href="#state_entrypoint_nodejs" style="color: inherit; text-decoration: inherit;">entry<wbr>Point</a>
@@ -2145,8 +1995,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentvariables_nodejs">
 <a href="#state_environmentvariables_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Variables</a>
@@ -2155,8 +2004,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtrigger_nodejs">
 <a href="#state_eventtrigger_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Trigger</a>
@@ -2165,8 +2013,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpstriggerurl_nodejs">
 <a href="#state_httpstriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Trigger<wbr>Url</a>
@@ -2175,8 +2022,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingresssettings_nodejs">
 <a href="#state_ingresssettings_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Settings</a>
@@ -2185,8 +2031,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2195,8 +2040,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxinstances_nodejs">
 <a href="#state_maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
@@ -2205,8 +2049,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2215,8 +2058,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2225,8 +2067,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2235,8 +2076,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_nodejs">
 <a href="#state_runtime_nodejs" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2246,8 +2086,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountemail_nodejs">
 <a href="#state_serviceaccountemail_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Email</a>
@@ -2256,8 +2095,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcearchivebucket_nodejs">
 <a href="#state_sourcearchivebucket_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Bucket</a>
@@ -2266,8 +2104,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcearchiveobject_nodejs">
 <a href="#state_sourcearchiveobject_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Archive<wbr>Object</a>
@@ -2276,8 +2113,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerepository_nodejs">
 <a href="#state_sourcerepository_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Repository</a>
@@ -2287,8 +2123,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2297,8 +2132,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerhttp_nodejs">
 <a href="#state_triggerhttp_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Http</a>
@@ -2307,8 +2141,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnector_nodejs">
 <a href="#state_vpcconnector_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector</a>
@@ -2317,8 +2150,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcconnectoregresssettings_nodejs">
 <a href="#state_vpcconnectoregresssettings_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Connector<wbr>Egress<wbr>Settings</a>
@@ -2327,13 +2159,11 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_available_memory_mb_python">
 <a href="#state_available_memory_mb_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>mb</a>
@@ -2342,8 +2172,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, 2048MB and 4096MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_build_environment_variables_python">
 <a href="#state_build_environment_variables_python" style="color: inherit; text-decoration: inherit;">build_<wbr>environment_<wbr>variables</a>
@@ -2352,8 +2181,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs available during build time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2362,8 +2190,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entry_point_python">
 <a href="#state_entry_point_python" style="color: inherit; text-decoration: inherit;">entry_<wbr>point</a>
@@ -2372,8 +2199,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the function that will be executed when the Google Cloud Function is triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environment_variables_python">
 <a href="#state_environment_variables_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>variables</a>
@@ -2382,8 +2208,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value environment variable pairs to assign to the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_trigger_python">
 <a href="#state_event_trigger_python" style="color: inherit; text-decoration: inherit;">event_<wbr>trigger</a>
@@ -2392,8 +2217,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type"><a href="#functioneventtrigger">Function<wbr>Event<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with `trigger_http`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_https_trigger_url_python">
 <a href="#state_https_trigger_url_python" style="color: inherit; text-decoration: inherit;">https_<wbr>trigger_<wbr>url</a>
@@ -2402,8 +2226,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL which triggers function execution. Returned only if `trigger_http` is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ingress_settings_python">
 <a href="#state_ingress_settings_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>settings</a>
@@ -2412,8 +2235,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value that controls what traffic can reach the function. Allowed values are `ALLOW_ALL`, `ALLOW_INTERNAL_AND_GCLB` and `ALLOW_INTERNAL_ONLY`. Changes to this field will recreate the cloud function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2422,8 +2244,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_instances_python">
 <a href="#state_max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
@@ -2432,8 +2253,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The limit on the maximum number of function instances that may coexist at a given time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2442,8 +2262,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the function. Function names must be unique globally.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2452,8 +2271,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project of the function. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2462,8 +2280,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runtime_python">
 <a href="#state_runtime_python" style="color: inherit; text-decoration: inherit;">runtime</a>
@@ -2473,8 +2290,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     </dt>
     <dd>{{% md %}}The runtime in which the function is going to run.
 Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_email_python">
 <a href="#state_service_account_email_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>email</a>
@@ -2483,8 +2299,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If provided, the self-provided service account to run the function with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_archive_bucket_python">
 <a href="#state_source_archive_bucket_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>bucket</a>
@@ -2493,8 +2308,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_archive_object_python">
 <a href="#state_source_archive_object_python" style="color: inherit; text-decoration: inherit;">source_<wbr>archive_<wbr>object</a>
@@ -2503,8 +2317,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_repository_python">
 <a href="#state_source_repository_python" style="color: inherit; text-decoration: inherit;">source_<wbr>repository</a>
@@ -2514,8 +2327,7 @@ Eg. `"nodejs8"`, `"nodejs10"`, `"python37"`, `"go111"`, `"go113"`.
     </dt>
     <dd>{{% md %}}Represents parameters related to source repository where a function is hosted.
 Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -2524,8 +2336,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trigger_http_python">
 <a href="#state_trigger_http_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>http</a>
@@ -2534,8 +2345,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as `https_trigger_url`. Cannot be used with `trigger_bucket` and `trigger_topic`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_connector_python">
 <a href="#state_vpc_connector_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector</a>
@@ -2544,8 +2354,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. It should be set up as fully-qualified URI. The format of this field is `projects/*/locations/*/connectors/*`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_connector_egress_settings_python">
 <a href="#state_vpc_connector_egress_settings_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>connector_<wbr>egress_<wbr>settings</a>
@@ -2554,8 +2363,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are `ALL_TRAFFIC` and `PRIVATE_RANGES_ONLY`. Defaults to `PRIVATE_RANGES_ONLY`. If unset, this field preserves the previously set value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2570,8 +2378,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 <h4 id="functioneventtrigger">Function<wbr>Event<wbr>Trigger</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -2582,8 +2389,7 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
 full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2593,8 +2399,7 @@ full reference of accepted triggers.
     </dt>
     <dd>{{% md %}}Required. The name or partial URI of the resource from
 which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurepolicy_csharp">
 <a href="#failurepolicy_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policy</a>
@@ -2603,13 +2408,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_go">
 <a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -2620,8 +2423,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
 full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2631,8 +2433,7 @@ full reference of accepted triggers.
     </dt>
     <dd>{{% md %}}Required. The name or partial URI of the resource from
 which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurepolicy_go">
 <a href="#failurepolicy_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Policy</a>
@@ -2641,13 +2442,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
@@ -2658,8 +2457,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
 full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2669,8 +2467,7 @@ full reference of accepted triggers.
     </dt>
     <dd>{{% md %}}Required. The name or partial URI of the resource from
 which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurepolicy_nodejs">
 <a href="#failurepolicy_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Policy</a>
@@ -2679,13 +2476,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_type_python">
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
@@ -2696,8 +2491,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/) for a
 full reference of accepted triggers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2707,8 +2501,7 @@ full reference of accepted triggers.
     </dt>
     <dd>{{% md %}}Required. The name or partial URI of the resource from
 which to observe events. For example, `"myBucket"` or `"projects/my-project/topics/my-topic"`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_policy_python">
 <a href="#failure_policy_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>policy</a>
@@ -2717,15 +2510,13 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type"><a href="#functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies policy for failed executions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functioneventtriggerfailurepolicy">Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_csharp">
 <a href="#retry_csharp" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -2734,13 +2525,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_go">
 <a href="#retry_go" style="color: inherit; text-decoration: inherit;">Retry</a>
@@ -2749,13 +2538,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_nodejs">
 <a href="#retry_nodejs" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -2764,13 +2551,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="retry_python">
 <a href="#retry_python" style="color: inherit; text-decoration: inherit;">retry</a>
@@ -2779,15 +2564,13 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functionsourcerepository">Function<wbr>Source<wbr>Repository</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2796,8 +2579,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployedurl_csharp">
 <a href="#deployedurl_csharp" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Url</a>
@@ -2805,13 +2587,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2820,8 +2600,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployedurl_go">
 <a href="#deployedurl_go" style="color: inherit; text-decoration: inherit;">Deployed<wbr>Url</a>
@@ -2829,13 +2608,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2844,8 +2621,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployedurl_nodejs">
 <a href="#deployedurl_nodejs" style="color: inherit; text-decoration: inherit;">deployed<wbr>Url</a>
@@ -2853,13 +2629,11 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2868,8 +2642,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployed_url_python">
 <a href="#deployed_url_python" style="color: inherit; text-decoration: inherit;">deployed_<wbr>url</a>
@@ -2877,8 +2650,7 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

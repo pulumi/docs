@@ -266,8 +266,7 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationconf_csharp">
 <a href="#destinationconf_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Conf</a>
@@ -276,8 +275,7 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -286,13 +284,11 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationconf_go">
 <a href="#destinationconf_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Conf</a>
@@ -301,8 +297,7 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -311,13 +306,11 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destinationconf_nodejs">
 <a href="#destinationconf_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Conf</a>
@@ -326,8 +319,7 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -336,13 +328,11 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_conf_python">
 <a href="#destination_conf_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>conf</a>
@@ -351,8 +341,7 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -361,8 +350,7 @@ The LogPushOwnershipChallenge resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -373,8 +361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -382,8 +369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipchallengefilename_csharp">
 <a href="#ownershipchallengefilename_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge<wbr>Filename</a>
@@ -393,13 +379,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -407,8 +391,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipchallengefilename_go">
 <a href="#ownershipchallengefilename_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge<wbr>Filename</a>
@@ -418,13 +401,11 @@ contains the contents required for Logpush Job creation.
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -432,8 +413,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipchallengefilename_nodejs">
 <a href="#ownershipchallengefilename_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Challenge<wbr>Filename</a>
@@ -443,13 +423,11 @@ contains the contents required for Logpush Job creation.
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -457,8 +435,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownership_challenge_filename_python">
 <a href="#ownership_challenge_filename_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>challenge_<wbr>filename</a>
@@ -468,8 +445,7 @@ contains the contents required for Logpush Job creation.
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -596,8 +572,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconf_csharp">
 <a href="#state_destinationconf_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Conf</a>
@@ -606,8 +581,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipchallengefilename_csharp">
 <a href="#state_ownershipchallengefilename_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge<wbr>Filename</a>
@@ -617,8 +591,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -627,13 +600,11 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconf_go">
 <a href="#state_destinationconf_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Conf</a>
@@ -642,8 +613,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipchallengefilename_go">
 <a href="#state_ownershipchallengefilename_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Challenge<wbr>Filename</a>
@@ -653,8 +623,7 @@ contains the contents required for Logpush Job creation.
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -663,13 +632,11 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconf_nodejs">
 <a href="#state_destinationconf_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Conf</a>
@@ -678,8 +645,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipchallengefilename_nodejs">
 <a href="#state_ownershipchallengefilename_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Challenge<wbr>Filename</a>
@@ -689,8 +655,7 @@ contains the contents required for Logpush Job creation.
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -699,13 +664,11 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_destination_conf_python">
 <a href="#state_destination_conf_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>conf</a>
@@ -714,8 +677,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uniquely identifies a resource (such as an s3 bucket) where data will be pushed. Additional configuration parameters supported by the destination may be included. See [Logpush destination documentation](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/#destination).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownership_challenge_filename_python">
 <a href="#state_ownership_challenge_filename_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>challenge_<wbr>filename</a>
@@ -725,8 +687,7 @@ contains the contents required for Logpush Job creation.
     </dt>
     <dd>{{% md %}}The filename of the ownership challenge which
 contains the contents required for Logpush Job creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -735,8 +696,7 @@ contains the contents required for Logpush Job creation.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone ID where the logpush ownership challenge should be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

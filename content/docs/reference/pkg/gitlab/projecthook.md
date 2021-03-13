@@ -272,8 +272,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -282,8 +281,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -292,8 +290,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidentialissuesevents_csharp">
 <a href="#confidentialissuesevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
@@ -302,8 +299,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidentialnoteevents_csharp">
 <a href="#confidentialnoteevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
@@ -312,8 +308,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentevents_csharp">
 <a href="#deploymentevents_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Events</a>
@@ -322,8 +317,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesslverification_csharp">
 <a href="#enablesslverification_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl<wbr>Verification</a>
@@ -332,8 +326,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuesevents_csharp">
 <a href="#issuesevents_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
@@ -342,8 +335,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobevents_csharp">
 <a href="#jobevents_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
@@ -352,8 +344,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsevents_csharp">
 <a href="#mergerequestsevents_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
@@ -362,8 +353,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noteevents_csharp">
 <a href="#noteevents_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
@@ -372,8 +362,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelineevents_csharp">
 <a href="#pipelineevents_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
@@ -382,8 +371,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushevents_csharp">
 <a href="#pushevents_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
@@ -392,8 +380,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pusheventsbranchfilter_csharp">
 <a href="#pusheventsbranchfilter_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Events<wbr>Branch<wbr>Filter</a>
@@ -402,8 +389,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagpushevents_csharp">
 <a href="#tagpushevents_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
@@ -412,8 +398,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -422,8 +407,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wikipageevents_csharp">
 <a href="#wikipageevents_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
@@ -432,13 +416,11 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -447,8 +429,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -457,8 +438,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidentialissuesevents_go">
 <a href="#confidentialissuesevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
@@ -467,8 +447,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidentialnoteevents_go">
 <a href="#confidentialnoteevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
@@ -477,8 +456,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentevents_go">
 <a href="#deploymentevents_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Events</a>
@@ -487,8 +465,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesslverification_go">
 <a href="#enablesslverification_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl<wbr>Verification</a>
@@ -497,8 +474,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuesevents_go">
 <a href="#issuesevents_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
@@ -507,8 +483,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobevents_go">
 <a href="#jobevents_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
@@ -517,8 +492,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsevents_go">
 <a href="#mergerequestsevents_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
@@ -527,8 +501,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noteevents_go">
 <a href="#noteevents_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
@@ -537,8 +510,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelineevents_go">
 <a href="#pipelineevents_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
@@ -547,8 +519,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushevents_go">
 <a href="#pushevents_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
@@ -557,8 +528,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pusheventsbranchfilter_go">
 <a href="#pusheventsbranchfilter_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Events<wbr>Branch<wbr>Filter</a>
@@ -567,8 +537,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagpushevents_go">
 <a href="#tagpushevents_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
@@ -577,8 +546,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -587,8 +555,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wikipageevents_go">
 <a href="#wikipageevents_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
@@ -597,13 +564,11 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -612,8 +577,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -622,8 +586,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidentialissuesevents_nodejs">
 <a href="#confidentialissuesevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issues<wbr>Events</a>
@@ -632,8 +595,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidentialnoteevents_nodejs">
 <a href="#confidentialnoteevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Note<wbr>Events</a>
@@ -642,8 +604,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentevents_nodejs">
 <a href="#deploymentevents_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Events</a>
@@ -652,8 +613,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesslverification_nodejs">
 <a href="#enablesslverification_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl<wbr>Verification</a>
@@ -662,8 +622,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuesevents_nodejs">
 <a href="#issuesevents_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Events</a>
@@ -672,8 +631,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jobevents_nodejs">
 <a href="#jobevents_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Events</a>
@@ -682,8 +640,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mergerequestsevents_nodejs">
 <a href="#mergerequestsevents_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Events</a>
@@ -692,8 +649,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noteevents_nodejs">
 <a href="#noteevents_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Events</a>
@@ -702,8 +658,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelineevents_nodejs">
 <a href="#pipelineevents_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Events</a>
@@ -712,8 +667,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pushevents_nodejs">
 <a href="#pushevents_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events</a>
@@ -722,8 +676,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pusheventsbranchfilter_nodejs">
 <a href="#pusheventsbranchfilter_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events<wbr>Branch<wbr>Filter</a>
@@ -732,8 +685,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagpushevents_nodejs">
 <a href="#tagpushevents_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Events</a>
@@ -742,8 +694,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -752,8 +703,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wikipageevents_nodejs">
 <a href="#wikipageevents_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Events</a>
@@ -762,13 +712,11 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -777,8 +725,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -787,8 +734,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidential_issues_events_python">
 <a href="#confidential_issues_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issues_<wbr>events</a>
@@ -797,8 +743,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="confidential_note_events_python">
 <a href="#confidential_note_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>note_<wbr>events</a>
@@ -807,8 +752,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_events_python">
 <a href="#deployment_events_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>events</a>
@@ -817,8 +761,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_ssl_verification_python">
 <a href="#enable_ssl_verification_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl_<wbr>verification</a>
@@ -827,8 +770,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issues_events_python">
 <a href="#issues_events_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>events</a>
@@ -837,8 +779,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="job_events_python">
 <a href="#job_events_python" style="color: inherit; text-decoration: inherit;">job_<wbr>events</a>
@@ -847,8 +788,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="merge_requests_events_python">
 <a href="#merge_requests_events_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>events</a>
@@ -857,8 +797,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="note_events_python">
 <a href="#note_events_python" style="color: inherit; text-decoration: inherit;">note_<wbr>events</a>
@@ -867,8 +806,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_events_python">
 <a href="#pipeline_events_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>events</a>
@@ -877,8 +815,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="push_events_python">
 <a href="#push_events_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events</a>
@@ -887,8 +824,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="push_events_branch_filter_python">
 <a href="#push_events_branch_filter_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events_<wbr>branch_<wbr>filter</a>
@@ -897,8 +833,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_push_events_python">
 <a href="#tag_push_events_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>events</a>
@@ -907,8 +842,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -917,8 +851,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wiki_page_events_python">
 <a href="#wiki_page_events_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>events</a>
@@ -927,8 +860,7 @@ The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -939,8 +871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -948,13 +879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -962,13 +891,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -976,13 +903,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -990,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1118,8 +1042,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuesevents_csharp">
 <a href="#state_confidentialissuesevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
@@ -1128,8 +1051,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_confidentialnoteevents_csharp">
 <a href="#state_confidentialnoteevents_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
@@ -1138,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentevents_csharp">
 <a href="#state_deploymentevents_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Events</a>
@@ -1148,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesslverification_csharp">
 <a href="#state_enablesslverification_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl<wbr>Verification</a>
@@ -1158,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuesevents_csharp">
 <a href="#state_issuesevents_csharp" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
@@ -1168,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobevents_csharp">
 <a href="#state_jobevents_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
@@ -1178,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsevents_csharp">
 <a href="#state_mergerequestsevents_csharp" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
@@ -1188,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noteevents_csharp">
 <a href="#state_noteevents_csharp" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
@@ -1198,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pipelineevents_csharp">
 <a href="#state_pipelineevents_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
@@ -1208,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1218,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pushevents_csharp">
 <a href="#state_pushevents_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
@@ -1228,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pusheventsbranchfilter_csharp">
 <a href="#state_pusheventsbranchfilter_csharp" style="color: inherit; text-decoration: inherit;">Push<wbr>Events<wbr>Branch<wbr>Filter</a>
@@ -1238,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagpushevents_csharp">
 <a href="#state_tagpushevents_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
@@ -1248,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1258,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1268,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wikipageevents_csharp">
 <a href="#state_wikipageevents_csharp" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
@@ -1278,13 +1186,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuesevents_go">
 <a href="#state_confidentialissuesevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Issues<wbr>Events</a>
@@ -1293,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_confidentialnoteevents_go">
 <a href="#state_confidentialnoteevents_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Note<wbr>Events</a>
@@ -1303,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentevents_go">
 <a href="#state_deploymentevents_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Events</a>
@@ -1313,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesslverification_go">
 <a href="#state_enablesslverification_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Ssl<wbr>Verification</a>
@@ -1323,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuesevents_go">
 <a href="#state_issuesevents_go" style="color: inherit; text-decoration: inherit;">Issues<wbr>Events</a>
@@ -1333,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobevents_go">
 <a href="#state_jobevents_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Events</a>
@@ -1343,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsevents_go">
 <a href="#state_mergerequestsevents_go" style="color: inherit; text-decoration: inherit;">Merge<wbr>Requests<wbr>Events</a>
@@ -1353,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noteevents_go">
 <a href="#state_noteevents_go" style="color: inherit; text-decoration: inherit;">Note<wbr>Events</a>
@@ -1363,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pipelineevents_go">
 <a href="#state_pipelineevents_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Events</a>
@@ -1373,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1383,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pushevents_go">
 <a href="#state_pushevents_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Events</a>
@@ -1393,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pusheventsbranchfilter_go">
 <a href="#state_pusheventsbranchfilter_go" style="color: inherit; text-decoration: inherit;">Push<wbr>Events<wbr>Branch<wbr>Filter</a>
@@ -1403,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagpushevents_go">
 <a href="#state_tagpushevents_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Push<wbr>Events</a>
@@ -1413,8 +1307,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1423,8 +1316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1433,8 +1325,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wikipageevents_go">
 <a href="#state_wikipageevents_go" style="color: inherit; text-decoration: inherit;">Wiki<wbr>Page<wbr>Events</a>
@@ -1443,13 +1334,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_confidentialissuesevents_nodejs">
 <a href="#state_confidentialissuesevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Issues<wbr>Events</a>
@@ -1458,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_confidentialnoteevents_nodejs">
 <a href="#state_confidentialnoteevents_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Note<wbr>Events</a>
@@ -1468,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentevents_nodejs">
 <a href="#state_deploymentevents_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Events</a>
@@ -1478,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesslverification_nodejs">
 <a href="#state_enablesslverification_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Ssl<wbr>Verification</a>
@@ -1488,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuesevents_nodejs">
 <a href="#state_issuesevents_nodejs" style="color: inherit; text-decoration: inherit;">issues<wbr>Events</a>
@@ -1498,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobevents_nodejs">
 <a href="#state_jobevents_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Events</a>
@@ -1508,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mergerequestsevents_nodejs">
 <a href="#state_mergerequestsevents_nodejs" style="color: inherit; text-decoration: inherit;">merge<wbr>Requests<wbr>Events</a>
@@ -1518,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noteevents_nodejs">
 <a href="#state_noteevents_nodejs" style="color: inherit; text-decoration: inherit;">note<wbr>Events</a>
@@ -1528,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pipelineevents_nodejs">
 <a href="#state_pipelineevents_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Events</a>
@@ -1538,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1548,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pushevents_nodejs">
 <a href="#state_pushevents_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events</a>
@@ -1558,8 +1437,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pusheventsbranchfilter_nodejs">
 <a href="#state_pusheventsbranchfilter_nodejs" style="color: inherit; text-decoration: inherit;">push<wbr>Events<wbr>Branch<wbr>Filter</a>
@@ -1568,8 +1446,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tagpushevents_nodejs">
 <a href="#state_tagpushevents_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Push<wbr>Events</a>
@@ -1578,8 +1455,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1588,8 +1464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1598,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wikipageevents_nodejs">
 <a href="#state_wikipageevents_nodejs" style="color: inherit; text-decoration: inherit;">wiki<wbr>Page<wbr>Events</a>
@@ -1608,13 +1482,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_confidential_issues_events_python">
 <a href="#state_confidential_issues_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>issues_<wbr>events</a>
@@ -1623,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_confidential_note_events_python">
 <a href="#state_confidential_note_events_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>note_<wbr>events</a>
@@ -1633,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for confidential notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_events_python">
 <a href="#state_deployment_events_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>events</a>
@@ -1643,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for deployment events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_ssl_verification_python">
 <a href="#state_enable_ssl_verification_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>ssl_<wbr>verification</a>
@@ -1653,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable ssl verification when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issues_events_python">
 <a href="#state_issues_events_python" style="color: inherit; text-decoration: inherit;">issues_<wbr>events</a>
@@ -1663,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for issues events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_events_python">
 <a href="#state_job_events_python" style="color: inherit; text-decoration: inherit;">job_<wbr>events</a>
@@ -1673,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for job events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_merge_requests_events_python">
 <a href="#state_merge_requests_events_python" style="color: inherit; text-decoration: inherit;">merge_<wbr>requests_<wbr>events</a>
@@ -1683,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for merge requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_note_events_python">
 <a href="#state_note_events_python" style="color: inherit; text-decoration: inherit;">note_<wbr>events</a>
@@ -1693,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for notes events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pipeline_events_python">
 <a href="#state_pipeline_events_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>events</a>
@@ -1703,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for pipeline events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1713,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the hook to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_push_events_python">
 <a href="#state_push_events_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events</a>
@@ -1723,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_push_events_branch_filter_python">
 <a href="#state_push_events_branch_filter_python" style="color: inherit; text-decoration: inherit;">push_<wbr>events_<wbr>branch_<wbr>filter</a>
@@ -1733,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for push events on matching branches only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tag_push_events_python">
 <a href="#state_tag_push_events_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>push_<wbr>events</a>
@@ -1743,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for tag push events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1753,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A token to present when invoking the hook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1763,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url of the hook to invoke.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wiki_page_events_python">
 <a href="#state_wiki_page_events_python" style="color: inherit; text-decoration: inherit;">wiki_<wbr>page_<wbr>events</a>
@@ -1773,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Invoke the hook for wiki page events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

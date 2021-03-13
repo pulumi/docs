@@ -626,8 +626,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -636,8 +635,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealththreshold_csharp">
 <a href="#childhealththreshold_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Health<wbr>Threshold</a>
@@ -646,8 +644,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealthchecks_csharp">
 <a href="#childhealthchecks_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Healthchecks</a>
@@ -656,8 +653,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchalarmname_csharp">
 <a href="#cloudwatchalarmname_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Name</a>
@@ -666,8 +662,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchalarmregion_csharp">
 <a href="#cloudwatchalarmregion_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Region</a>
@@ -676,8 +671,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -689,8 +683,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesni_csharp">
 <a href="#enablesni_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Sni</a>
@@ -699,8 +692,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_csharp">
 <a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
@@ -709,8 +701,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -719,8 +710,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insufficientdatahealthstatus_csharp">
 <a href="#insufficientdatahealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Insufficient<wbr>Data<wbr>Health<wbr>Status</a>
@@ -729,8 +719,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inverthealthcheck_csharp">
 <a href="#inverthealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Healthcheck</a>
@@ -739,8 +728,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -749,8 +737,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="measurelatency_csharp">
 <a href="#measurelatency_csharp" style="color: inherit; text-decoration: inherit;">Measure<wbr>Latency</a>
@@ -759,8 +746,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -769,8 +755,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencename_csharp">
 <a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -780,8 +765,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -790,8 +774,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestinterval_csharp">
 <a href="#requestinterval_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Interval</a>
@@ -800,8 +783,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepath_csharp">
 <a href="#resourcepath_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
@@ -810,8 +792,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchstring_csharp">
 <a href="#searchstring_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
@@ -820,8 +801,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -830,13 +810,11 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -845,8 +823,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealththreshold_go">
 <a href="#childhealththreshold_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Health<wbr>Threshold</a>
@@ -855,8 +832,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealthchecks_go">
 <a href="#childhealthchecks_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Healthchecks</a>
@@ -865,8 +841,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchalarmname_go">
 <a href="#cloudwatchalarmname_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Name</a>
@@ -875,8 +850,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchalarmregion_go">
 <a href="#cloudwatchalarmregion_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Region</a>
@@ -885,8 +859,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -898,8 +871,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesni_go">
 <a href="#enablesni_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Sni</a>
@@ -908,8 +880,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_go">
 <a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
@@ -918,8 +889,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -928,8 +898,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insufficientdatahealthstatus_go">
 <a href="#insufficientdatahealthstatus_go" style="color: inherit; text-decoration: inherit;">Insufficient<wbr>Data<wbr>Health<wbr>Status</a>
@@ -938,8 +907,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inverthealthcheck_go">
 <a href="#inverthealthcheck_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Healthcheck</a>
@@ -948,8 +916,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -958,8 +925,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="measurelatency_go">
 <a href="#measurelatency_go" style="color: inherit; text-decoration: inherit;">Measure<wbr>Latency</a>
@@ -968,8 +934,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -978,8 +943,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencename_go">
 <a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -989,8 +953,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -999,8 +962,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestinterval_go">
 <a href="#requestinterval_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Interval</a>
@@ -1009,8 +971,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepath_go">
 <a href="#resourcepath_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
@@ -1019,8 +980,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchstring_go">
 <a href="#searchstring_go" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
@@ -1029,8 +989,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1039,13 +998,11 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1054,8 +1011,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealththreshold_nodejs">
 <a href="#childhealththreshold_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Health<wbr>Threshold</a>
@@ -1064,8 +1020,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childhealthchecks_nodejs">
 <a href="#childhealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Healthchecks</a>
@@ -1074,8 +1029,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchalarmname_nodejs">
 <a href="#cloudwatchalarmname_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm<wbr>Name</a>
@@ -1084,8 +1038,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatchalarmregion_nodejs">
 <a href="#cloudwatchalarmregion_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm<wbr>Region</a>
@@ -1094,8 +1047,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1107,8 +1059,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesni_nodejs">
 <a href="#enablesni_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Sni</a>
@@ -1117,8 +1068,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failurethreshold_nodejs">
 <a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
@@ -1127,8 +1077,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1137,8 +1086,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insufficientdatahealthstatus_nodejs">
 <a href="#insufficientdatahealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">insufficient<wbr>Data<wbr>Health<wbr>Status</a>
@@ -1147,8 +1095,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inverthealthcheck_nodejs">
 <a href="#inverthealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Healthcheck</a>
@@ -1157,8 +1104,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1167,8 +1113,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="measurelatency_nodejs">
 <a href="#measurelatency_nodejs" style="color: inherit; text-decoration: inherit;">measure<wbr>Latency</a>
@@ -1177,8 +1122,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1187,8 +1131,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencename_nodejs">
 <a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -1198,8 +1141,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1208,8 +1150,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestinterval_nodejs">
 <a href="#requestinterval_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Interval</a>
@@ -1218,8 +1159,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcepath_nodejs">
 <a href="#resourcepath_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Path</a>
@@ -1228,8 +1168,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchstring_nodejs">
 <a href="#searchstring_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>String</a>
@@ -1238,8 +1177,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1248,13 +1186,11 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1263,8 +1199,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="child_health_threshold_python">
 <a href="#child_health_threshold_python" style="color: inherit; text-decoration: inherit;">child_<wbr>health_<wbr>threshold</a>
@@ -1273,8 +1208,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="child_healthchecks_python">
 <a href="#child_healthchecks_python" style="color: inherit; text-decoration: inherit;">child_<wbr>healthchecks</a>
@@ -1283,8 +1217,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_alarm_name_python">
 <a href="#cloudwatch_alarm_name_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm_<wbr>name</a>
@@ -1293,8 +1226,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_alarm_region_python">
 <a href="#cloudwatch_alarm_region_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm_<wbr>region</a>
@@ -1303,8 +1235,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1316,8 +1247,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_sni_python">
 <a href="#enable_sni_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>sni</a>
@@ -1326,8 +1256,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="failure_threshold_python">
 <a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
@@ -1336,8 +1265,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -1346,8 +1274,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insufficient_data_health_status_python">
 <a href="#insufficient_data_health_status_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>health_<wbr>status</a>
@@ -1356,8 +1283,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invert_healthcheck_python">
 <a href="#invert_healthcheck_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>healthcheck</a>
@@ -1366,8 +1292,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1376,8 +1301,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="measure_latency_python">
 <a href="#measure_latency_python" style="color: inherit; text-decoration: inherit;">measure_<wbr>latency</a>
@@ -1386,8 +1310,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1396,8 +1319,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_name_python">
 <a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -1407,8 +1329,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1417,8 +1338,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_interval_python">
 <a href="#request_interval_python" style="color: inherit; text-decoration: inherit;">request_<wbr>interval</a>
@@ -1427,8 +1347,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_path_python">
 <a href="#resource_path_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>path</a>
@@ -1437,8 +1356,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_string_python">
 <a href="#search_string_python" style="color: inherit; text-decoration: inherit;">search_<wbr>string</a>
@@ -1447,8 +1365,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1457,8 +1374,7 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1469,8 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1478,13 +1393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1492,13 +1405,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1506,13 +1417,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1520,8 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1648,8 +1556,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_childhealththreshold_csharp">
 <a href="#state_childhealththreshold_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Health<wbr>Threshold</a>
@@ -1658,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childhealthchecks_csharp">
 <a href="#state_childhealthchecks_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Healthchecks</a>
@@ -1668,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchalarmname_csharp">
 <a href="#state_cloudwatchalarmname_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Name</a>
@@ -1678,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchalarmregion_csharp">
 <a href="#state_cloudwatchalarmregion_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Region</a>
@@ -1688,8 +1592,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1701,8 +1604,7 @@ The following state arguments are supported:
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesni_csharp">
 <a href="#state_enablesni_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Sni</a>
@@ -1711,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurethreshold_csharp">
 <a href="#state_failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
@@ -1721,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_csharp">
 <a href="#state_fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1731,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insufficientdatahealthstatus_csharp">
 <a href="#state_insufficientdatahealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Insufficient<wbr>Data<wbr>Health<wbr>Status</a>
@@ -1741,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inverthealthcheck_csharp">
 <a href="#state_inverthealthcheck_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Healthcheck</a>
@@ -1751,8 +1649,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1761,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_measurelatency_csharp">
 <a href="#state_measurelatency_csharp" style="color: inherit; text-decoration: inherit;">Measure<wbr>Latency</a>
@@ -1771,8 +1667,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1781,8 +1676,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencename_csharp">
 <a href="#state_referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -1792,8 +1686,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_csharp">
 <a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -1802,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestinterval_csharp">
 <a href="#state_requestinterval_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Interval</a>
@@ -1812,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepath_csharp">
 <a href="#state_resourcepath_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
@@ -1822,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchstring_csharp">
 <a href="#state_searchstring_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
@@ -1832,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1842,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1852,13 +1740,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_childhealththreshold_go">
 <a href="#state_childhealththreshold_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Health<wbr>Threshold</a>
@@ -1867,8 +1753,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childhealthchecks_go">
 <a href="#state_childhealthchecks_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Healthchecks</a>
@@ -1877,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchalarmname_go">
 <a href="#state_cloudwatchalarmname_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Name</a>
@@ -1887,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchalarmregion_go">
 <a href="#state_cloudwatchalarmregion_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Alarm<wbr>Region</a>
@@ -1897,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1910,8 +1792,7 @@ The following state arguments are supported:
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesni_go">
 <a href="#state_enablesni_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Sni</a>
@@ -1920,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurethreshold_go">
 <a href="#state_failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
@@ -1930,8 +1810,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_go">
 <a href="#state_fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
@@ -1940,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insufficientdatahealthstatus_go">
 <a href="#state_insufficientdatahealthstatus_go" style="color: inherit; text-decoration: inherit;">Insufficient<wbr>Data<wbr>Health<wbr>Status</a>
@@ -1950,8 +1828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inverthealthcheck_go">
 <a href="#state_inverthealthcheck_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Healthcheck</a>
@@ -1960,8 +1837,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1970,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_measurelatency_go">
 <a href="#state_measurelatency_go" style="color: inherit; text-decoration: inherit;">Measure<wbr>Latency</a>
@@ -1980,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1990,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencename_go">
 <a href="#state_referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
@@ -2001,8 +1874,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_go">
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -2011,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestinterval_go">
 <a href="#state_requestinterval_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Interval</a>
@@ -2021,8 +1892,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepath_go">
 <a href="#state_resourcepath_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Path</a>
@@ -2031,8 +1901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchstring_go">
 <a href="#state_searchstring_go" style="color: inherit; text-decoration: inherit;">Search<wbr>String</a>
@@ -2041,8 +1910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2051,8 +1919,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2061,13 +1928,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_childhealththreshold_nodejs">
 <a href="#state_childhealththreshold_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Health<wbr>Threshold</a>
@@ -2076,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childhealthchecks_nodejs">
 <a href="#state_childhealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Healthchecks</a>
@@ -2086,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchalarmname_nodejs">
 <a href="#state_cloudwatchalarmname_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm<wbr>Name</a>
@@ -2096,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatchalarmregion_nodejs">
 <a href="#state_cloudwatchalarmregion_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Alarm<wbr>Region</a>
@@ -2106,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -2119,8 +1980,7 @@ The following state arguments are supported:
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablesni_nodejs">
 <a href="#state_enablesni_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Sni</a>
@@ -2129,8 +1989,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failurethreshold_nodejs">
 <a href="#state_failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
@@ -2139,8 +1998,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_nodejs">
 <a href="#state_fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -2149,8 +2007,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insufficientdatahealthstatus_nodejs">
 <a href="#state_insufficientdatahealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">insufficient<wbr>Data<wbr>Health<wbr>Status</a>
@@ -2159,8 +2016,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inverthealthcheck_nodejs">
 <a href="#state_inverthealthcheck_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Healthcheck</a>
@@ -2169,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2179,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_measurelatency_nodejs">
 <a href="#state_measurelatency_nodejs" style="color: inherit; text-decoration: inherit;">measure<wbr>Latency</a>
@@ -2189,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2199,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_referencename_nodejs">
 <a href="#state_referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
@@ -2210,8 +2062,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_nodejs">
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -2220,8 +2071,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestinterval_nodejs">
 <a href="#state_requestinterval_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Interval</a>
@@ -2230,8 +2080,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcepath_nodejs">
 <a href="#state_resourcepath_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Path</a>
@@ -2240,8 +2089,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchstring_nodejs">
 <a href="#state_searchstring_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>String</a>
@@ -2250,8 +2098,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2260,8 +2107,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2270,13 +2116,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_child_health_threshold_python">
 <a href="#state_child_health_threshold_python" style="color: inherit; text-decoration: inherit;">child_<wbr>health_<wbr>threshold</a>
@@ -2285,8 +2129,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_child_healthchecks_python">
 <a href="#state_child_healthchecks_python" style="color: inherit; text-decoration: inherit;">child_<wbr>healthchecks</a>
@@ -2295,8 +2138,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatch_alarm_name_python">
 <a href="#state_cloudwatch_alarm_name_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm_<wbr>name</a>
@@ -2305,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudwatch_alarm_region_python">
 <a href="#state_cloudwatch_alarm_region_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>alarm_<wbr>region</a>
@@ -2315,8 +2156,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -2328,8 +2168,7 @@ The following state arguments are supported:
 * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
 * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
 * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_sni_python">
 <a href="#state_enable_sni_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>sni</a>
@@ -2338,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_failure_threshold_python">
 <a href="#state_failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
@@ -2348,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fqdn_python">
 <a href="#state_fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
@@ -2358,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insufficient_data_health_status_python">
 <a href="#state_insufficient_data_health_status_python" style="color: inherit; text-decoration: inherit;">insufficient_<wbr>data_<wbr>health_<wbr>status</a>
@@ -2368,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_invert_healthcheck_python">
 <a href="#state_invert_healthcheck_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>healthcheck</a>
@@ -2378,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2388,8 +2222,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_measure_latency_python">
 <a href="#state_measure_latency_python" style="color: inherit; text-decoration: inherit;">measure_<wbr>latency</a>
@@ -2398,8 +2231,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2408,8 +2240,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_name_python">
 <a href="#state_reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
@@ -2419,8 +2250,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_python">
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -2429,8 +2259,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_interval_python">
 <a href="#state_request_interval_python" style="color: inherit; text-decoration: inherit;">request_<wbr>interval</a>
@@ -2439,8 +2268,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_path_python">
 <a href="#state_resource_path_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>path</a>
@@ -2449,8 +2277,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_string_python">
 <a href="#state_search_string_python" style="color: inherit; text-decoration: inherit;">search_<wbr>string</a>
@@ -2459,8 +2286,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2469,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the health check.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2479,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

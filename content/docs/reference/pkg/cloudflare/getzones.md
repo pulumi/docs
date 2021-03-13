@@ -221,8 +221,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -232,13 +231,11 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
 values must match in order to be included, see below for full list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -248,13 +245,11 @@ values must match in order to be included, see below for full list.
     </dt>
     <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
 values must match in order to be included, see below for full list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -264,13 +259,11 @@ values must match in order to be included, see below for full list.
     </dt>
     <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
 values must match in order to be included, see below for full list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -280,8 +273,7 @@ values must match in order to be included, see below for full list.
     </dt>
     <dd>{{% md %}}One or more values used to look up zone records. If more than one value is given all
 values must match in order to be included, see below for full list.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -294,8 +286,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -303,8 +294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -313,8 +303,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -323,13 +312,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getzoneszone">List&lt;Get<wbr>Zones<wbr>Zone&gt;</a></span>
     </dt>
     <dd>{{% md %}}A map of zone details. Full list below:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -337,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -347,8 +333,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
@@ -357,13 +342,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getzoneszone">[]Get<wbr>Zones<wbr>Zone</a></span>
     </dt>
     <dd>{{% md %}}A map of zone details. Full list below:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -371,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -381,8 +363,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -391,13 +372,11 @@ The following output properties are available:
         <span class="property-type"><a href="#getzoneszone">Get<wbr>Zones<wbr>Zone[]</a></span>
     </dt>
     <dd>{{% md %}}A map of zone details. Full list below:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -405,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getzonesfilter">Get<wbr>Zones<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -415,8 +393,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
@@ -425,8 +402,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getzoneszone">Sequence[Get<wbr>Zones<wbr>Zone]</a></span>
     </dt>
     <dd>{{% md %}}A map of zone details. Full list below:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -440,8 +416,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lookuptype_csharp">
 <a href="#lookuptype_csharp" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Type</a>
@@ -452,8 +427,7 @@ The following output properties are available:
     <dd>{{% md %}}The type of search to perform for the `name` value
 when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
 to `"exact"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -464,8 +438,7 @@ to `"exact"`.
     <dd>{{% md %}}A RE2 compatible regular expression to filter the
 results. This is performed client side whereas the `name` and `lookup_type`
 are performed on the Cloudflare server side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -474,8 +447,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paused_csharp">
 <a href="#paused_csharp" style="color: inherit; text-decoration: inherit;">Paused</a>
@@ -485,8 +457,7 @@ are performed on the Cloudflare server side.
     </dt>
     <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
 `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -497,13 +468,11 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
 `"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
 `"read only"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lookuptype_go">
 <a href="#lookuptype_go" style="color: inherit; text-decoration: inherit;">Lookup<wbr>Type</a>
@@ -514,8 +483,7 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}The type of search to perform for the `name` value
 when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
 to `"exact"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -526,8 +494,7 @@ to `"exact"`.
     <dd>{{% md %}}A RE2 compatible regular expression to filter the
 results. This is performed client side whereas the `name` and `lookup_type`
 are performed on the Cloudflare server side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -536,8 +503,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paused_go">
 <a href="#paused_go" style="color: inherit; text-decoration: inherit;">Paused</a>
@@ -547,8 +513,7 @@ are performed on the Cloudflare server side.
     </dt>
     <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
 `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -559,13 +524,11 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
 `"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
 `"read only"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lookuptype_nodejs">
 <a href="#lookuptype_nodejs" style="color: inherit; text-decoration: inherit;">lookup<wbr>Type</a>
@@ -576,8 +539,7 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}The type of search to perform for the `name` value
 when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
 to `"exact"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
@@ -588,8 +550,7 @@ to `"exact"`.
     <dd>{{% md %}}A RE2 compatible regular expression to filter the
 results. This is performed client side whereas the `name` and `lookup_type`
 are performed on the Cloudflare server side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -598,8 +559,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paused_nodejs">
 <a href="#paused_nodejs" style="color: inherit; text-decoration: inherit;">paused</a>
@@ -609,8 +569,7 @@ are performed on the Cloudflare server side.
     </dt>
     <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
 `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -621,13 +580,11 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
 `"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
 `"read only"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lookup_type_python">
 <a href="#lookup_type_python" style="color: inherit; text-decoration: inherit;">lookup_<wbr>type</a>
@@ -638,8 +595,7 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}The type of search to perform for the `name` value
 when querying the zone API. Valid values: `"exact"` and `"contains"`. Defaults
 to `"exact"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
@@ -650,8 +606,7 @@ to `"exact"`.
     <dd>{{% md %}}A RE2 compatible regular expression to filter the
 results. This is performed client side whereas the `name` and `lookup_type`
 are performed on the Cloudflare server side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -660,8 +615,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paused_python">
 <a href="#paused_python" style="color: inherit; text-decoration: inherit;">paused</a>
@@ -671,8 +625,7 @@ are performed on the Cloudflare server side.
     </dt>
     <dd>{{% md %}}Paused status of the zone to lookup. Valid values are
 `true` or `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -683,8 +636,7 @@ are performed on the Cloudflare server side.
     <dd>{{% md %}}Status of the zone to lookup. Valid values: `"active"`,
 `"pending"`, `"initializing"`, `"moved"`, `"deleted"`, `"deactivated"` and
 `"read only"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getzoneszone">Get<wbr>Zones<wbr>Zone</h4>
@@ -692,8 +644,7 @@ are performed on the Cloudflare server side.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -702,8 +653,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -712,13 +662,11 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -727,8 +675,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -737,13 +684,11 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -752,8 +697,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -762,13 +706,11 @@ are performed on the Cloudflare server side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -777,8 +719,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -787,8 +728,7 @@ are performed on the Cloudflare server side.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string value to search for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

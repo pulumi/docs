@@ -470,8 +470,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancername_csharp">
 <a href="#loadbalancername_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -480,8 +479,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -490,8 +488,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytypename_csharp">
 <a href="#policytypename_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
@@ -500,8 +497,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyattributes_csharp">
 <a href="#policyattributes_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
@@ -510,13 +506,11 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancername_go">
 <a href="#loadbalancername_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -525,8 +519,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -535,8 +528,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytypename_go">
 <a href="#policytypename_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
@@ -545,8 +537,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyattributes_go">
 <a href="#policyattributes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
@@ -555,13 +546,11 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="loadbalancername_nodejs">
 <a href="#loadbalancername_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Name</a>
@@ -570,8 +559,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -580,8 +568,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policytypename_nodejs">
 <a href="#policytypename_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type<wbr>Name</a>
@@ -590,8 +577,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyattributes_nodejs">
 <a href="#policyattributes_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Attributes</a>
@@ -600,13 +586,11 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="load_balancer_name_python">
 <a href="#load_balancer_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>name</a>
@@ -615,8 +599,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -625,8 +608,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_type_name_python">
 <a href="#policy_type_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type_<wbr>name</a>
@@ -635,8 +617,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_attributes_python">
 <a href="#policy_attributes_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>attributes</a>
@@ -645,8 +626,7 @@ The LoadBalancerPolicy resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Sequence[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -657,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -666,13 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -680,13 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -694,13 +669,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -708,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -836,8 +808,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancername_csharp">
 <a href="#state_loadbalancername_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -846,8 +817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyattributes_csharp">
 <a href="#state_policyattributes_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
@@ -856,8 +826,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">List&lt;Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyname_csharp">
 <a href="#state_policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -866,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytypename_csharp">
 <a href="#state_policytypename_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
@@ -876,13 +844,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancername_go">
 <a href="#state_loadbalancername_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Name</a>
@@ -891,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyattributes_go">
 <a href="#state_policyattributes_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Attributes</a>
@@ -901,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">[]Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyname_go">
 <a href="#state_policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -911,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytypename_go">
 <a href="#state_policytypename_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type<wbr>Name</a>
@@ -921,13 +884,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancername_nodejs">
 <a href="#state_loadbalancername_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Name</a>
@@ -936,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyattributes_nodejs">
 <a href="#state_policyattributes_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Attributes</a>
@@ -946,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute[]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyname_nodejs">
 <a href="#state_policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -956,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policytypename_nodejs">
 <a href="#state_policytypename_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type<wbr>Name</a>
@@ -966,13 +924,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancer_name_python">
 <a href="#state_load_balancer_name_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>name</a>
@@ -981,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancer on which the policy is defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_attributes_python">
 <a href="#state_policy_attributes_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>attributes</a>
@@ -991,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpolicypolicyattribute">Sequence[Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Policy attribute to apply to the policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_name_python">
 <a href="#state_policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -1001,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the load balancer policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_type_name_python">
 <a href="#state_policy_type_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type_<wbr>name</a>
@@ -1011,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1027,8 +979,7 @@ The following state arguments are supported:
 <h4 id="loadbalancerpolicypolicyattribute">Load<wbr>Balancer<wbr>Policy<wbr>Policy<wbr>Attribute</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1036,8 +987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1045,13 +995,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1059,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1068,13 +1015,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1082,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1091,13 +1035,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1105,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1114,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

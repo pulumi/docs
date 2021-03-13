@@ -267,8 +267,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associatewithprivateip_csharp">
 <a href="#associatewithprivateip_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -279,8 +278,7 @@ The Eip resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_csharp">
 <a href="#customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -289,8 +287,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -299,8 +296,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkbordergroup_csharp">
 <a href="#networkbordergroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Border<wbr>Group</a>
@@ -309,8 +305,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterface_csharp">
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
@@ -319,8 +314,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipv4pool_csharp">
 <a href="#publicipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ipv4Pool</a>
@@ -329,8 +323,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -339,8 +332,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_csharp">
 <a href="#vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -349,13 +341,11 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associatewithprivateip_go">
 <a href="#associatewithprivateip_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -366,8 +356,7 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_go">
 <a href="#customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -376,8 +365,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -386,8 +374,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkbordergroup_go">
 <a href="#networkbordergroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Border<wbr>Group</a>
@@ -396,8 +383,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterface_go">
 <a href="#networkinterface_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
@@ -406,8 +392,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipv4pool_go">
 <a href="#publicipv4pool_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ipv4Pool</a>
@@ -416,8 +401,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -426,8 +410,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_go">
 <a href="#vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -436,13 +419,11 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associatewithprivateip_nodejs">
 <a href="#associatewithprivateip_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -453,8 +434,7 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerownedipv4pool_nodejs">
 <a href="#customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -463,8 +443,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -473,8 +452,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkbordergroup_nodejs">
 <a href="#networkbordergroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Border<wbr>Group</a>
@@ -483,8 +461,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterface_nodejs">
 <a href="#networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
@@ -493,8 +470,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicipv4pool_nodejs">
 <a href="#publicipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ipv4Pool</a>
@@ -503,8 +479,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -513,8 +488,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_nodejs">
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -523,13 +497,11 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="associate_with_private_ip_python">
 <a href="#associate_with_private_ip_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>with_<wbr>private_<wbr>ip</a>
@@ -540,8 +512,7 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_owned_ipv4_pool_python">
 <a href="#customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
@@ -550,8 +521,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -560,8 +530,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_border_group_python">
 <a href="#network_border_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>border_<wbr>group</a>
@@ -570,8 +539,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interface_python">
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
@@ -580,8 +548,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_ipv4_pool_python">
 <a href="#public_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ipv4_<wbr>pool</a>
@@ -590,8 +557,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -600,8 +566,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_python">
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -610,8 +575,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocationid_csharp">
 <a href="#allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
@@ -631,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associationid_csharp">
 <a href="#associationid_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -640,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrierip_csharp">
 <a href="#carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -650,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerownedip_csharp">
 <a href="#customerownedip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
@@ -660,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -670,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -679,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_csharp">
 <a href="#privatedns_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
@@ -689,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateip_csharp">
 <a href="#privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
@@ -699,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdns_csharp">
 <a href="#publicdns_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
@@ -709,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_csharp">
 <a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
@@ -719,13 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocationid_go">
 <a href="#allocationid_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
@@ -733,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associationid_go">
 <a href="#associationid_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -742,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrierip_go">
 <a href="#carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -752,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerownedip_go">
 <a href="#customerownedip_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
@@ -762,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -772,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -781,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_go">
 <a href="#privatedns_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
@@ -791,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateip_go">
 <a href="#privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
@@ -801,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdns_go">
 <a href="#publicdns_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
@@ -811,8 +755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_go">
 <a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
@@ -821,13 +764,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocationid_nodejs">
 <a href="#allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
@@ -835,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="associationid_nodejs">
 <a href="#associationid_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Id</a>
@@ -844,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrierip_nodejs">
 <a href="#carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
@@ -854,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerownedip_nodejs">
 <a href="#customerownedip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip</a>
@@ -864,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -874,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -883,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatedns_nodejs">
 <a href="#privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
@@ -893,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateip_nodejs">
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
@@ -903,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicdns_nodejs">
 <a href="#publicdns_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Dns</a>
@@ -913,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicip_nodejs">
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
@@ -923,13 +855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allocation_id_python">
 <a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
@@ -937,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="association_id_python">
 <a href="#association_id_python" style="color: inherit; text-decoration: inherit;">association_<wbr>id</a>
@@ -946,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="carrier_ip_python">
 <a href="#carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
@@ -956,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_owned_ip_python">
 <a href="#customer_owned_ip_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ip</a>
@@ -966,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -976,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -985,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_dns_python">
 <a href="#private_dns_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns</a>
@@ -995,8 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_ip_python">
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
@@ -1005,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_dns_python">
 <a href="#public_dns_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns</a>
@@ -1015,8 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_python">
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
@@ -1025,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1153,8 +1073,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocationid_csharp">
 <a href="#state_allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
@@ -1162,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatewithprivateip_csharp">
 <a href="#state_associatewithprivateip_csharp" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -1174,8 +1092,7 @@ The following state arguments are supported:
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associationid_csharp">
 <a href="#state_associationid_csharp" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -1183,8 +1100,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrierip_csharp">
 <a href="#state_carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -1193,8 +1109,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_csharp">
 <a href="#state_customerownedip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
@@ -1203,8 +1118,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_csharp">
 <a href="#state_customerownedipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1213,8 +1127,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1223,8 +1136,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1233,8 +1145,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkbordergroup_csharp">
 <a href="#state_networkbordergroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Border<wbr>Group</a>
@@ -1243,8 +1154,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterface_csharp">
 <a href="#state_networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
@@ -1253,8 +1163,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatedns_csharp">
 <a href="#state_privatedns_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
@@ -1263,8 +1172,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateip_csharp">
 <a href="#state_privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
@@ -1273,8 +1181,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicdns_csharp">
 <a href="#state_publicdns_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
@@ -1283,8 +1190,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicip_csharp">
 <a href="#state_publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
@@ -1293,8 +1199,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipv4pool_csharp">
 <a href="#state_publicipv4pool_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ipv4Pool</a>
@@ -1303,8 +1208,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1313,8 +1217,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_csharp">
 <a href="#state_vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -1323,13 +1226,11 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocationid_go">
 <a href="#state_allocationid_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
@@ -1337,8 +1238,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatewithprivateip_go">
 <a href="#state_associatewithprivateip_go" style="color: inherit; text-decoration: inherit;">Associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -1349,8 +1249,7 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associationid_go">
 <a href="#state_associationid_go" style="color: inherit; text-decoration: inherit;">Association<wbr>Id</a>
@@ -1358,8 +1257,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrierip_go">
 <a href="#state_carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
@@ -1368,8 +1266,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_go">
 <a href="#state_customerownedip_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
@@ -1378,8 +1275,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_go">
 <a href="#state_customerownedipv4pool_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1388,8 +1284,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1398,8 +1293,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1408,8 +1302,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkbordergroup_go">
 <a href="#state_networkbordergroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Border<wbr>Group</a>
@@ -1418,8 +1311,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterface_go">
 <a href="#state_networkinterface_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
@@ -1428,8 +1320,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatedns_go">
 <a href="#state_privatedns_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
@@ -1438,8 +1329,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateip_go">
 <a href="#state_privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
@@ -1448,8 +1338,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicdns_go">
 <a href="#state_publicdns_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
@@ -1458,8 +1347,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicip_go">
 <a href="#state_publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
@@ -1468,8 +1356,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipv4pool_go">
 <a href="#state_publicipv4pool_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ipv4Pool</a>
@@ -1478,8 +1365,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1488,8 +1374,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_go">
 <a href="#state_vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -1498,13 +1383,11 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocationid_nodejs">
 <a href="#state_allocationid_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>Id</a>
@@ -1512,8 +1395,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associatewithprivateip_nodejs">
 <a href="#state_associatewithprivateip_nodejs" style="color: inherit; text-decoration: inherit;">associate<wbr>With<wbr>Private<wbr>Ip</a>
@@ -1524,8 +1406,7 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associationid_nodejs">
 <a href="#state_associationid_nodejs" style="color: inherit; text-decoration: inherit;">association<wbr>Id</a>
@@ -1533,8 +1414,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrierip_nodejs">
 <a href="#state_carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
@@ -1543,8 +1423,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_nodejs">
 <a href="#state_customerownedip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip</a>
@@ -1553,8 +1432,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerownedipv4pool_nodejs">
 <a href="#state_customerownedipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ipv4Pool</a>
@@ -1563,8 +1441,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1573,8 +1450,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1583,8 +1459,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkbordergroup_nodejs">
 <a href="#state_networkbordergroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Border<wbr>Group</a>
@@ -1593,8 +1468,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterface_nodejs">
 <a href="#state_networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
@@ -1603,8 +1477,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatedns_nodejs">
 <a href="#state_privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
@@ -1613,8 +1486,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateip_nodejs">
 <a href="#state_privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
@@ -1623,8 +1495,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicdns_nodejs">
 <a href="#state_publicdns_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Dns</a>
@@ -1633,8 +1504,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicip_nodejs">
 <a href="#state_publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
@@ -1643,8 +1513,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicipv4pool_nodejs">
 <a href="#state_publicipv4pool_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ipv4Pool</a>
@@ -1653,8 +1522,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1663,8 +1531,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_nodejs">
 <a href="#state_vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -1673,13 +1540,11 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allocation_id_python">
 <a href="#state_allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
@@ -1687,8 +1552,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_associate_with_private_ip_python">
 <a href="#state_associate_with_private_ip_python" style="color: inherit; text-decoration: inherit;">associate_<wbr>with_<wbr>private_<wbr>ip</a>
@@ -1699,8 +1563,7 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
 the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_association_id_python">
 <a href="#state_association_id_python" style="color: inherit; text-decoration: inherit;">association_<wbr>id</a>
@@ -1708,8 +1571,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_carrier_ip_python">
 <a href="#state_carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
@@ -1718,8 +1580,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The carrier IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_owned_ip_python">
 <a href="#state_customer_owned_ip_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ip</a>
@@ -1728,8 +1589,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customer owned IP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_owned_ipv4_pool_python">
 <a href="#state_customer_owned_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ipv4_<wbr>pool</a>
@@ -1738,8 +1598,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The  ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1748,8 +1607,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1758,8 +1616,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_border_group_python">
 <a href="#state_network_border_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>border_<wbr>group</a>
@@ -1768,8 +1625,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location from which the IP address is advertised. Use this parameter to limit the address to this location.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interface_python">
 <a href="#state_network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
@@ -1778,8 +1634,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_dns_python">
 <a href="#state_private_dns_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns</a>
@@ -1788,8 +1643,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_ip_python">
 <a href="#state_private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
@@ -1798,8 +1652,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_dns_python">
 <a href="#state_public_dns_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns</a>
@@ -1808,8 +1661,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_ip_python">
 <a href="#state_public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
@@ -1818,8 +1670,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_ipv4_pool_python">
 <a href="#state_public_ipv4_pool_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ipv4_<wbr>pool</a>
@@ -1828,8 +1679,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1838,8 +1688,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_python">
 <a href="#state_vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -1848,8 +1697,7 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

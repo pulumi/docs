@@ -268,8 +268,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -278,8 +277,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationid_csharp">
 <a href="#integrationid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
@@ -288,8 +286,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationresponsekey_csharp">
 <a href="#integrationresponsekey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Key</a>
@@ -298,8 +295,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandlingstrategy_csharp">
 <a href="#contenthandlingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -308,8 +304,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_csharp">
 <a href="#responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -318,8 +313,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateselectionexpression_csharp">
 <a href="#templateselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -328,13 +322,11 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -343,8 +335,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationid_go">
 <a href="#integrationid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
@@ -353,8 +344,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationresponsekey_go">
 <a href="#integrationresponsekey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Key</a>
@@ -363,8 +353,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandlingstrategy_go">
 <a href="#contenthandlingstrategy_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -373,8 +362,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_go">
 <a href="#responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -383,8 +371,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateselectionexpression_go">
 <a href="#templateselectionexpression_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -393,13 +380,11 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -408,8 +393,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationid_nodejs">
 <a href="#integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
@@ -418,8 +402,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationresponsekey_nodejs">
 <a href="#integrationresponsekey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Response<wbr>Key</a>
@@ -428,8 +411,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandlingstrategy_nodejs">
 <a href="#contenthandlingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling<wbr>Strategy</a>
@@ -438,8 +420,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_nodejs">
 <a href="#responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
@@ -448,8 +429,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templateselectionexpression_nodejs">
 <a href="#templateselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Selection<wbr>Expression</a>
@@ -458,13 +438,11 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -473,8 +451,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_id_python">
 <a href="#integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
@@ -483,8 +460,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_response_key_python">
 <a href="#integration_response_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>response_<wbr>key</a>
@@ -493,8 +469,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_handling_strategy_python">
 <a href="#content_handling_strategy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling_<wbr>strategy</a>
@@ -503,8 +478,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_templates_python">
 <a href="#response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
@@ -513,8 +487,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_selection_expression_python">
 <a href="#template_selection_expression_python" style="color: inherit; text-decoration: inherit;">template_<wbr>selection_<wbr>expression</a>
@@ -523,8 +496,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -535,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -544,13 +515,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -558,13 +527,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -572,13 +539,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -586,8 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -714,8 +678,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_csharp">
 <a href="#state_apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -724,8 +687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandlingstrategy_csharp">
 <a href="#state_contenthandlingstrategy_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -734,8 +696,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationid_csharp">
 <a href="#state_integrationid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
@@ -744,8 +705,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationresponsekey_csharp">
 <a href="#state_integrationresponsekey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Key</a>
@@ -754,8 +714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_csharp">
 <a href="#state_responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -764,8 +723,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateselectionexpression_csharp">
 <a href="#state_templateselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -774,13 +732,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_go">
 <a href="#state_apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -789,8 +745,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandlingstrategy_go">
 <a href="#state_contenthandlingstrategy_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling<wbr>Strategy</a>
@@ -799,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationid_go">
 <a href="#state_integrationid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
@@ -809,8 +763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationresponsekey_go">
 <a href="#state_integrationresponsekey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Response<wbr>Key</a>
@@ -819,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_go">
 <a href="#state_responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -829,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateselectionexpression_go">
 <a href="#state_templateselectionexpression_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Selection<wbr>Expression</a>
@@ -839,13 +790,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_nodejs">
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -854,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandlingstrategy_nodejs">
 <a href="#state_contenthandlingstrategy_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling<wbr>Strategy</a>
@@ -864,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationid_nodejs">
 <a href="#state_integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
@@ -874,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationresponsekey_nodejs">
 <a href="#state_integrationresponsekey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Response<wbr>Key</a>
@@ -884,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_nodejs">
 <a href="#state_responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
@@ -894,8 +839,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templateselectionexpression_nodejs">
 <a href="#state_templateselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Selection<wbr>Expression</a>
@@ -904,13 +848,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_id_python">
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -919,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_handling_strategy_python">
 <a href="#state_content_handling_strategy_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling_<wbr>strategy</a>
@@ -929,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_id_python">
 <a href="#state_integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
@@ -939,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_response_key_python">
 <a href="#state_integration_response_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>response_<wbr>key</a>
@@ -949,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration response key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_templates_python">
 <a href="#state_response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
@@ -959,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_selection_expression_python">
 <a href="#state_template_selection_expression_python" style="color: inherit; text-decoration: inherit;">template_<wbr>selection_<wbr>expression</a>
@@ -969,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

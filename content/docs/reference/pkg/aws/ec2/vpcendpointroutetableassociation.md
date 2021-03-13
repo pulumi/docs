@@ -263,8 +263,7 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routetableid_csharp">
 <a href="#routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -273,8 +272,7 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcendpointid_csharp">
 <a href="#vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
@@ -283,13 +281,11 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routetableid_go">
 <a href="#routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -298,8 +294,7 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcendpointid_go">
 <a href="#vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
@@ -308,13 +303,11 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routetableid_nodejs">
 <a href="#routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
@@ -323,8 +316,7 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcendpointid_nodejs">
 <a href="#vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
@@ -333,13 +325,11 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="route_table_id_python">
 <a href="#route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
@@ -348,8 +338,7 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_endpoint_id_python">
 <a href="#vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
@@ -358,8 +347,7 @@ The VpcEndpointRouteTableAssociation resource accepts the following [input]({{< 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -370,8 +358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -379,13 +366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -393,13 +378,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -407,13 +390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -421,8 +402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -549,8 +529,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_csharp">
 <a href="#state_routetableid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -559,8 +538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcendpointid_csharp">
 <a href="#state_vpcendpointid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
@@ -569,13 +547,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_go">
 <a href="#state_routetableid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Id</a>
@@ -584,8 +560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcendpointid_go">
 <a href="#state_vpcendpointid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Endpoint<wbr>Id</a>
@@ -594,13 +569,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_routetableid_nodejs">
 <a href="#state_routetableid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Id</a>
@@ -609,8 +582,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcendpointid_nodejs">
 <a href="#state_vpcendpointid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Endpoint<wbr>Id</a>
@@ -619,13 +591,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_route_table_id_python">
 <a href="#state_route_table_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>id</a>
@@ -634,8 +604,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_endpoint_id_python">
 <a href="#state_vpc_endpoint_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>endpoint_<wbr>id</a>
@@ -644,8 +613,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

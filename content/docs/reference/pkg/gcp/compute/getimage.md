@@ -185,8 +185,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -195,8 +194,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -204,8 +202,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -214,8 +211,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -226,13 +222,11 @@ The following arguments are supported:
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used. If you are using a
 [public base image][pubimg], be sure to specify the correct Image Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -241,8 +235,7 @@ provided, the provider project is used. If you are using a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -250,8 +243,7 @@ provided, the provider project is used. If you are using a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -260,8 +252,7 @@ provided, the provider project is used. If you are using a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -272,13 +263,11 @@ provided, the provider project is used. If you are using a
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used. If you are using a
 [public base image][pubimg], be sure to specify the correct Image Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -287,8 +276,7 @@ provided, the provider project is used. If you are using a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -296,8 +284,7 @@ provided, the provider project is used. If you are using a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -306,8 +293,7 @@ provided, the provider project is used. If you are using a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -318,13 +304,11 @@ provided, the provider project is used. If you are using a
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used. If you are using a
 [public base image][pubimg], be sure to specify the correct Image Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -333,8 +317,7 @@ provided, the provider project is used. If you are using a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -342,8 +325,7 @@ provided, the provider project is used. If you are using a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -352,8 +334,7 @@ provided, the provider project is used. If you are using a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -364,8 +345,7 @@ provided, the provider project is used. If you are using a
     <dd>{{% md %}}The project in which the resource belongs. If it is not
 provided, the provider project is used. If you are using a
 [public base image][pubimg], be sure to specify the correct Image Project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -378,8 +358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archivesizebytes_csharp">
 <a href="#archivesizebytes_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -388,8 +367,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -398,8 +376,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -408,8 +385,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -418,8 +394,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image when restored onto a persistent disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -428,8 +403,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -438,8 +412,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageencryptionkeysha256_csharp">
 <a href="#imageencryptionkeysha256_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -450,8 +423,7 @@ The following output properties are available:
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -460,8 +432,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -470,8 +441,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -480,8 +450,7 @@ that protects this image.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenses_csharp">
 <a href="#licenses_csharp" style="color: inherit; text-decoration: inherit;">Licenses</a>
@@ -490,8 +459,7 @@ that protects this image.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -500,8 +468,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -509,8 +476,7 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -519,8 +485,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedisk_csharp">
 <a href="#sourcedisk_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
@@ -529,8 +494,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the source disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcediskencryptionkeysha256_csharp">
 <a href="#sourcediskencryptionkeysha256_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -541,8 +505,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcediskid_csharp">
 <a href="#sourcediskid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Id</a>
@@ -551,8 +514,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID value of the disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceimageid_csharp">
 <a href="#sourceimageid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
@@ -561,8 +523,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID value of the image used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -571,8 +532,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -580,13 +540,11 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archivesizebytes_go">
 <a href="#archivesizebytes_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Size<wbr>Bytes</a>
@@ -595,8 +553,7 @@ that protects this image.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -605,8 +562,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -615,8 +571,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -625,8 +580,7 @@ that protects this image.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image when restored onto a persistent disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -635,8 +589,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -645,8 +598,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageencryptionkeysha256_go">
 <a href="#imageencryptionkeysha256_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -657,8 +609,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -667,8 +618,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -677,8 +627,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -687,8 +636,7 @@ that protects this image.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenses_go">
 <a href="#licenses_go" style="color: inherit; text-decoration: inherit;">Licenses</a>
@@ -697,8 +645,7 @@ that protects this image.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -707,8 +654,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -716,8 +662,7 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -726,8 +671,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedisk_go">
 <a href="#sourcedisk_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk</a>
@@ -736,8 +680,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the source disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcediskencryptionkeysha256_go">
 <a href="#sourcediskencryptionkeysha256_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -748,8 +691,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcediskid_go">
 <a href="#sourcediskid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Disk<wbr>Id</a>
@@ -758,8 +700,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID value of the disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceimageid_go">
 <a href="#sourceimageid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Image<wbr>Id</a>
@@ -768,8 +709,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID value of the image used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -778,8 +718,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -787,13 +726,11 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archivesizebytes_nodejs">
 <a href="#archivesizebytes_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Size<wbr>Bytes</a>
@@ -802,8 +739,7 @@ that protects this image.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -812,8 +748,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -822,8 +757,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -832,8 +766,7 @@ that protects this image.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the image when restored onto a persistent disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -842,8 +775,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -852,8 +784,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageencryptionkeysha256_nodejs">
 <a href="#imageencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -864,8 +795,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -874,8 +804,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -884,8 +813,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -894,8 +822,7 @@ that protects this image.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenses_nodejs">
 <a href="#licenses_nodejs" style="color: inherit; text-decoration: inherit;">licenses</a>
@@ -904,8 +831,7 @@ that protects this image.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -914,8 +840,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -923,8 +848,7 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -933,8 +857,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcedisk_nodejs">
 <a href="#sourcedisk_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk</a>
@@ -943,8 +866,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the source disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcediskencryptionkeysha256_nodejs">
 <a href="#sourcediskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -955,8 +877,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcediskid_nodejs">
 <a href="#sourcediskid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Disk<wbr>Id</a>
@@ -965,8 +886,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID value of the disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourceimageid_nodejs">
 <a href="#sourceimageid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image<wbr>Id</a>
@@ -975,8 +895,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID value of the image used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -985,8 +904,7 @@ that protects this image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -994,13 +912,11 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="archive_size_bytes_python">
 <a href="#archive_size_bytes_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>size_<wbr>bytes</a>
@@ -1009,8 +925,7 @@ that protects this image.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image tar.gz archive stored in Google Cloud Storage in bytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1019,8 +934,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1029,8 +943,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -1039,8 +952,7 @@ that protects this image.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image when restored onto a persistent disk in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1049,8 +961,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1059,8 +970,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_encryption_key_sha256_python">
 <a href="#image_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">image_<wbr>encryption_<wbr>key_<wbr>sha256</a>
@@ -1071,8 +981,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -1081,8 +990,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1091,8 +999,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A fingerprint for the labels being applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1101,8 +1008,7 @@ that protects this image.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licenses_python">
 <a href="#licenses_python" style="color: inherit; text-decoration: inherit;">licenses</a>
@@ -1111,8 +1017,7 @@ that protects this image.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of applicable license URI.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1121,8 +1026,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1130,8 +1034,7 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1140,8 +1043,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_disk_python">
 <a href="#source_disk_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk</a>
@@ -1150,8 +1052,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the source disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_disk_encryption_key_sha256_python">
 <a href="#source_disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
@@ -1162,8 +1063,7 @@ that protects this image.
     <dd>{{% md %}}The [RFC 4648 base64](https://tools.ietf.org/html/rfc4648#section-4)
 encoded SHA-256 hash of the [customer-supplied encryption key](https://cloud.google.com/compute/docs/disks/customer-supplied-encryption)
 that protects this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_disk_id_python">
 <a href="#source_disk_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>disk_<wbr>id</a>
@@ -1172,8 +1072,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID value of the disk used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_image_id_python">
 <a href="#source_image_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image_<wbr>id</a>
@@ -1182,8 +1081,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID value of the image used to create this image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1192,8 +1090,7 @@ that protects this image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the image. Possible values are **FAILED**, **PENDING**, or **READY**.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1201,8 +1098,7 @@ that protects this image.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

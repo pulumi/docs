@@ -156,8 +156,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -166,8 +165,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -176,8 +174,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_csharp">
 <a href="#dhcpenabled_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Enabled</a>
@@ -186,8 +183,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the subnet has DHCP enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayip_csharp">
 <a href="#gatewayip_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -196,8 +192,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the subnet's gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -206,8 +201,7 @@ The following arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP version of the subnet (either 4 or 6).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addressmode_csharp">
 <a href="#ipv6addressmode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -217,8 +211,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6ramode_csharp">
 <a href="#ipv6ramode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -228,8 +221,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -238,8 +230,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -247,8 +238,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -257,8 +247,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network the subnet belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -269,8 +258,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve subnet ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortdirection_csharp">
 <a href="#sortdirection_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
@@ -280,8 +268,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
     </dt>
     <dd>{{% md %}}Order the results in either `asc` or `desc`.
 Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortkey_csharp">
 <a href="#sortkey_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
@@ -290,8 +277,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort subnets based on a certain key. Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpoolid_csharp">
 <a href="#subnetpoolid_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -300,8 +286,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -310,8 +295,7 @@ Defaults to none.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of subnet tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -320,13 +304,11 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -335,8 +317,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -345,8 +326,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_go">
 <a href="#dhcpenabled_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Enabled</a>
@@ -355,8 +335,7 @@ Defaults to none.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the subnet has DHCP enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayip_go">
 <a href="#gatewayip_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -365,8 +344,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the subnet's gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -375,8 +353,7 @@ Defaults to none.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP version of the subnet (either 4 or 6).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addressmode_go">
 <a href="#ipv6addressmode_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -386,8 +363,7 @@ Defaults to none.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6ramode_go">
 <a href="#ipv6ramode_go" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -397,8 +373,7 @@ Defaults to none.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -407,8 +382,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -416,8 +390,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -426,8 +399,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network the subnet belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -438,8 +410,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve subnet ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortdirection_go">
 <a href="#sortdirection_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
@@ -449,8 +420,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
     </dt>
     <dd>{{% md %}}Order the results in either `asc` or `desc`.
 Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortkey_go">
 <a href="#sortkey_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
@@ -459,8 +429,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort subnets based on a certain key. Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpoolid_go">
 <a href="#subnetpoolid_go" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -469,8 +438,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -479,8 +447,7 @@ Defaults to none.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of subnet tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -489,13 +456,11 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -504,8 +469,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -514,8 +478,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_nodejs">
 <a href="#dhcpenabled_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Enabled</a>
@@ -524,8 +487,7 @@ Defaults to none.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If the subnet has DHCP enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gatewayip_nodejs">
 <a href="#gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
@@ -534,8 +496,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP of the subnet's gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -544,8 +505,7 @@ Defaults to none.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP version of the subnet (either 4 or 6).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6addressmode_nodejs">
 <a href="#ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
@@ -555,8 +515,7 @@ Defaults to none.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6ramode_nodejs">
 <a href="#ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
@@ -566,8 +525,7 @@ Defaults to none.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -576,8 +534,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
@@ -585,8 +542,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -595,8 +551,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network the subnet belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -607,8 +562,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve subnet ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortdirection_nodejs">
 <a href="#sortdirection_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Direction</a>
@@ -618,8 +572,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
     </dt>
     <dd>{{% md %}}Order the results in either `asc` or `desc`.
 Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sortkey_nodejs">
 <a href="#sortkey_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Key</a>
@@ -628,8 +581,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sort subnets based on a certain key. Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpoolid_nodejs">
 <a href="#subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
@@ -638,8 +590,7 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -648,8 +599,7 @@ Defaults to none.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of subnet tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -658,13 +608,11 @@ Defaults to none.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -673,8 +621,7 @@ Defaults to none.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -683,8 +630,7 @@ Defaults to none.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dhcp_enabled_python">
 <a href="#dhcp_enabled_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>enabled</a>
@@ -693,8 +639,7 @@ Defaults to none.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If the subnet has DHCP enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gateway_ip_python">
 <a href="#gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
@@ -703,8 +648,7 @@ Defaults to none.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP of the subnet's gateway.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -713,8 +657,7 @@ Defaults to none.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP version of the subnet (either 4 or 6).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_address_mode_python">
 <a href="#ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
@@ -724,8 +667,7 @@ Defaults to none.
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_ra_mode_python">
 <a href="#ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
@@ -735,8 +677,7 @@ Defaults to none.
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -745,8 +686,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
@@ -754,8 +694,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -764,8 +703,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network the subnet belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -776,8 +714,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
     <dd>{{% md %}}The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve subnet ids. If omitted, the
 `region` argument of the provider is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_direction_python">
 <a href="#sort_direction_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>direction</a>
@@ -787,8 +724,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
     </dt>
     <dd>{{% md %}}Order the results in either `asc` or `desc`.
 Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sort_key_python">
 <a href="#sort_key_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>key</a>
@@ -797,8 +733,7 @@ Defaults to none.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sort subnets based on a certain key. Defaults to none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetpool_id_python">
 <a href="#subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
@@ -807,8 +742,7 @@ Defaults to none.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -817,8 +751,7 @@ Defaults to none.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of subnet tags to filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -827,8 +760,7 @@ Defaults to none.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -841,8 +773,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -851,8 +782,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_csharp">
 <a href="#ids_csharp" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -860,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6ramode_csharp">
 <a href="#ipv6ramode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -869,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -878,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -887,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -896,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dhcpenabled_csharp">
 <a href="#dhcpenabled_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Enabled</a>
@@ -905,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayip_csharp">
 <a href="#gatewayip_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -914,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -923,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6addressmode_csharp">
 <a href="#ipv6addressmode_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -932,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -941,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -950,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -959,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sortdirection_csharp">
 <a href="#sortdirection_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
@@ -968,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sortkey_csharp">
 <a href="#sortkey_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
@@ -977,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetpoolid_csharp">
 <a href="#subnetpoolid_csharp" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -986,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -995,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1004,13 +918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1019,8 +931,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
@@ -1028,8 +939,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6ramode_go">
 <a href="#ipv6ramode_go" style="color: inherit; text-decoration: inherit;">Ipv6Ra<wbr>Mode</a>
@@ -1037,8 +947,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1046,8 +955,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1055,8 +963,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1064,8 +971,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dhcpenabled_go">
 <a href="#dhcpenabled_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Enabled</a>
@@ -1073,8 +979,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayip_go">
 <a href="#gatewayip_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ip</a>
@@ -1082,8 +987,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -1091,8 +995,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6addressmode_go">
 <a href="#ipv6addressmode_go" style="color: inherit; text-decoration: inherit;">Ipv6Address<wbr>Mode</a>
@@ -1100,8 +1003,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1109,8 +1011,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
@@ -1118,8 +1019,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1127,8 +1027,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sortdirection_go">
 <a href="#sortdirection_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Direction</a>
@@ -1136,8 +1035,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sortkey_go">
 <a href="#sortkey_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Key</a>
@@ -1145,8 +1043,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetpoolid_go">
 <a href="#subnetpoolid_go" style="color: inherit; text-decoration: inherit;">Subnetpool<wbr>Id</a>
@@ -1154,8 +1051,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1163,8 +1059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1172,13 +1067,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1187,8 +1080,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -1196,8 +1088,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6ramode_nodejs">
 <a href="#ipv6ramode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Ra<wbr>Mode</a>
@@ -1205,8 +1096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1214,8 +1104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1223,8 +1112,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1232,8 +1120,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dhcpenabled_nodejs">
 <a href="#dhcpenabled_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Enabled</a>
@@ -1241,8 +1128,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gatewayip_nodejs">
 <a href="#gatewayip_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ip</a>
@@ -1250,8 +1136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -1259,8 +1144,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6addressmode_nodejs">
 <a href="#ipv6addressmode_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address<wbr>Mode</a>
@@ -1268,8 +1152,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1277,8 +1160,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
@@ -1286,8 +1168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -1295,8 +1176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sortdirection_nodejs">
 <a href="#sortdirection_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Direction</a>
@@ -1304,8 +1184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sortkey_nodejs">
 <a href="#sortkey_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Key</a>
@@ -1313,8 +1192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetpoolid_nodejs">
 <a href="#subnetpoolid_nodejs" style="color: inherit; text-decoration: inherit;">subnetpool<wbr>Id</a>
@@ -1322,8 +1200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1331,8 +1208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1340,13 +1216,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1355,8 +1229,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ids_python">
 <a href="#ids_python" style="color: inherit; text-decoration: inherit;">ids</a>
@@ -1364,8 +1237,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_ra_mode_python">
 <a href="#ipv6_ra_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>ra_<wbr>mode</a>
@@ -1373,8 +1245,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1382,8 +1253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1391,8 +1261,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1400,8 +1269,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dhcp_enabled_python">
 <a href="#dhcp_enabled_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>enabled</a>
@@ -1409,8 +1277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_ip_python">
 <a href="#gateway_ip_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ip</a>
@@ -1418,8 +1285,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -1427,8 +1293,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipv6_address_mode_python">
 <a href="#ipv6_address_mode_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address_<wbr>mode</a>
@@ -1436,8 +1301,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1445,8 +1309,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
@@ -1454,8 +1317,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1463,8 +1325,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sort_direction_python">
 <a href="#sort_direction_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>direction</a>
@@ -1472,8 +1333,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sort_key_python">
 <a href="#sort_key_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>key</a>
@@ -1481,8 +1341,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subnetpool_id_python">
 <a href="#subnetpool_id_python" style="color: inherit; text-decoration: inherit;">subnetpool_<wbr>id</a>
@@ -1490,8 +1349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1499,8 +1357,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1508,8 +1365,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

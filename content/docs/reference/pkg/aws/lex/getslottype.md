@@ -150,8 +150,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -160,8 +159,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -170,13 +168,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -185,8 +181,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -195,13 +190,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -210,8 +203,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -220,13 +212,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -235,8 +225,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -245,8 +234,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -259,8 +247,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_csharp">
 <a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
@@ -270,8 +257,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -280,8 +266,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -290,8 +275,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enumerationvalues_csharp">
 <a href="#enumerationvalues_csharp" style="color: inherit; text-decoration: inherit;">Enumeration<wbr>Values</a>
@@ -302,8 +286,7 @@ not included as an argument because the resource will add it automatically when 
     <dd>{{% md %}}A set of EnumerationValue objects that defines the values that
 the slot type can take. Each value can have a set of synonyms, which are additional values that help
 train the machine learning model about the values that it resolves for a slot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -312,8 +295,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdateddate_csharp">
 <a href="#lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
@@ -322,8 +304,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -332,8 +313,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valueselectionstrategy_csharp">
 <a href="#valueselectionstrategy_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Selection<wbr>Strategy</a>
@@ -345,8 +325,7 @@ train the machine learning model about the values that it resolves for a slot.
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
 if there is a resolution list for the slot, otherwise null is returned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -355,13 +334,11 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_go">
 <a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
@@ -371,8 +348,7 @@ if there is a resolution list for the slot, otherwise null is returned.
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -381,8 +357,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -391,8 +366,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enumerationvalues_go">
 <a href="#enumerationvalues_go" style="color: inherit; text-decoration: inherit;">Enumeration<wbr>Values</a>
@@ -403,8 +377,7 @@ not included as an argument because the resource will add it automatically when 
     <dd>{{% md %}}A set of EnumerationValue objects that defines the values that
 the slot type can take. Each value can have a set of synonyms, which are additional values that help
 train the machine learning model about the values that it resolves for a slot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -413,8 +386,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdateddate_go">
 <a href="#lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
@@ -423,8 +395,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +404,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valueselectionstrategy_go">
 <a href="#valueselectionstrategy_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Selection<wbr>Strategy</a>
@@ -446,8 +416,7 @@ train the machine learning model about the values that it resolves for a slot.
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
 if there is a resolution list for the slot, otherwise null is returned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -456,13 +425,11 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_nodejs">
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
@@ -472,8 +439,7 @@ if there is a resolution list for the slot, otherwise null is returned.
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -482,8 +448,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -492,8 +457,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enumerationvalues_nodejs">
 <a href="#enumerationvalues_nodejs" style="color: inherit; text-decoration: inherit;">enumeration<wbr>Values</a>
@@ -504,8 +468,7 @@ not included as an argument because the resource will add it automatically when 
     <dd>{{% md %}}A set of EnumerationValue objects that defines the values that
 the slot type can take. Each value can have a set of synonyms, which are additional values that help
 train the machine learning model about the values that it resolves for a slot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -514,8 +477,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdateddate_nodejs">
 <a href="#lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
@@ -524,8 +486,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -534,8 +495,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="valueselectionstrategy_nodejs">
 <a href="#valueselectionstrategy_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Selection<wbr>Strategy</a>
@@ -547,8 +507,7 @@ train the machine learning model about the values that it resolves for a slot.
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
 if there is a resolution list for the slot, otherwise null is returned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -557,13 +516,11 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_python">
 <a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
@@ -573,8 +530,7 @@ if there is a resolution list for the slot, otherwise null is returned.
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -583,8 +539,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -593,8 +548,7 @@ not included as an argument because the resource will add it automatically when 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enumeration_values_python">
 <a href="#enumeration_values_python" style="color: inherit; text-decoration: inherit;">enumeration_<wbr>values</a>
@@ -605,8 +559,7 @@ not included as an argument because the resource will add it automatically when 
     <dd>{{% md %}}A set of EnumerationValue objects that defines the values that
 the slot type can take. Each value can have a set of synonyms, which are additional values that help
 train the machine learning model about the values that it resolves for a slot.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -615,8 +568,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_date_python">
 <a href="#last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
@@ -625,8 +577,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -635,8 +586,7 @@ train the machine learning model about the values that it resolves for a slot.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_selection_strategy_python">
 <a href="#value_selection_strategy_python" style="color: inherit; text-decoration: inherit;">value_<wbr>selection_<wbr>strategy</a>
@@ -648,8 +598,7 @@ train the machine learning model about the values that it resolves for a slot.
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
 value is similar to the slot value. `TOP_RESOLUTION` returns the first value in the resolution list
 if there is a resolution list for the slot, otherwise null is returned.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -658,8 +607,7 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -673,8 +621,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_csharp">
 <a href="#synonyms_csharp" style="color: inherit; text-decoration: inherit;">Synonyms</a>
@@ -682,8 +629,7 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -691,13 +637,11 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_go">
 <a href="#synonyms_go" style="color: inherit; text-decoration: inherit;">Synonyms</a>
@@ -705,8 +649,7 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -714,13 +657,11 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_nodejs">
 <a href="#synonyms_nodejs" style="color: inherit; text-decoration: inherit;">synonyms</a>
@@ -728,8 +669,7 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -737,13 +677,11 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="synonyms_python">
 <a href="#synonyms_python" style="color: inherit; text-decoration: inherit;">synonyms</a>
@@ -751,8 +689,7 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -760,8 +697,7 @@ if there is a resolution list for the slot, otherwise null is returned.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -316,8 +316,7 @@ The CatalogEntry resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -327,8 +326,7 @@ The CatalogEntry resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_csharp">
 <a href="#node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -338,8 +336,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -349,8 +346,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -360,8 +356,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -370,13 +365,11 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -386,8 +379,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_go">
 <a href="#node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -397,8 +389,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -408,8 +399,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -419,8 +409,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -429,13 +418,11 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -445,8 +432,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_nodejs">
 <a href="#node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -456,8 +442,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -467,8 +452,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -478,8 +462,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -488,13 +471,11 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -504,8 +485,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_python">
 <a href="#node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -515,8 +495,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -526,8 +505,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -537,8 +515,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -547,8 +524,7 @@ the node. Supported values are documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -559,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -568,13 +543,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -582,13 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -596,13 +567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -738,8 +706,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -749,8 +716,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -760,8 +726,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_csharp">
 <a href="#state_node_csharp" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -771,8 +736,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_csharp">
 <a href="#state_services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -782,8 +746,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -792,13 +755,11 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -808,8 +769,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -819,8 +779,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_go">
 <a href="#state_node_go" style="color: inherit; text-decoration: inherit;">Node</a>
@@ -830,8 +789,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_go">
 <a href="#state_services_go" style="color: inherit; text-decoration: inherit;">Services</a>
@@ -841,8 +799,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -851,13 +808,11 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -867,8 +822,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -878,8 +832,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_nodejs">
 <a href="#state_node_nodejs" style="color: inherit; text-decoration: inherit;">node</a>
@@ -889,8 +842,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_nodejs">
 <a href="#state_services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
@@ -900,8 +852,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -910,13 +861,11 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -926,8 +875,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the node being added to,
 or referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -937,8 +885,7 @@ or referenced in the catalog.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_python">
 <a href="#state_node_python" style="color: inherit; text-decoration: inherit;">node</a>
@@ -948,8 +895,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the node being added to, or
 referenced in the catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_services_python">
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
@@ -959,8 +905,7 @@ referenced in the catalog.
     </dt>
     <dd>{{% md %}}A service to optionally associated with
 the node. Supported values are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -969,8 +914,7 @@ the node. Supported values are documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ACL token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -985,8 +929,7 @@ the node. Supported values are documented below.
 <h4 id="catalogentryservice">Catalog<wbr>Entry<wbr>Service</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -995,8 +938,7 @@ the node. Supported values are documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1006,8 +948,7 @@ the node. Supported values are documented below.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 node address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1016,8 +957,7 @@ node address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1026,8 +966,7 @@ node address.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1037,13 +976,11 @@ node address.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1052,8 +989,7 @@ but can be used to distinguish between services or nodes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1063,8 +999,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 node address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1073,8 +1008,7 @@ node address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1083,8 +1017,7 @@ node address.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1094,13 +1027,11 @@ node address.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1109,8 +1040,7 @@ but can be used to distinguish between services or nodes.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1120,8 +1050,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 node address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1130,8 +1059,7 @@ node address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1140,8 +1068,7 @@ node address.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1151,13 +1078,11 @@ node address.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1166,8 +1091,7 @@ but can be used to distinguish between services or nodes.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1177,8 +1101,7 @@ but can be used to distinguish between services or nodes.
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 node address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1187,8 +1110,7 @@ node address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service. Defaults to the `name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1197,8 +1119,7 @@ node address.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1208,8 +1129,7 @@ node address.
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceIntegration"
-title_tag: "Resource ServiceIntegration | Package PagerDuty"
-meta_desc: "Explore the ServiceIntegration resource of the PagerDuty package, including examples, input properties, output properties, lookup functions, and supporting types. A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service."
+title_tag: "pagerduty.ServiceIntegration"
+meta_desc: "Documentation for the pagerduty.ServiceIntegration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the ServiceIntegration resource of the PagerDuty package, in
 A [service integration](https://v2.developer.pagerduty.com/v2/page/api-reference#!/Services/post_services_id_integrations) is an integration that belongs to a service.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Pagerduty = Pulumi.Pagerduty;
@@ -87,13 +93,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_pagerduty as pagerduty
@@ -127,9 +139,12 @@ cloudwatch_service_integration = pagerduty.ServiceIntegration("cloudwatchService
     vendor=cloudwatch_vendor.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -174,9 +189,16 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceIntegration Resource {#create}
@@ -201,9 +223,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +231,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +239,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,10 +247,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -260,9 +273,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -270,9 +281,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -280,9 +289,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -290,9 +297,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -300,18 +305,13 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -319,9 +319,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -329,9 +327,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -339,10 +335,7 @@ const cloudwatchServiceIntegration = new pagerduty.ServiceIntegration("cloudwatc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -357,9 +350,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -368,8 +359,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationemail_csharp">
 <a href="#integrationemail_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Email</a>
@@ -378,8 +368,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationkey_csharp">
 <a href="#integrationkey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -388,8 +377,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -398,8 +386,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -417,8 +404,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendor_csharp">
 <a href="#vendor_csharp" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -427,14 +413,11 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -443,8 +426,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationemail_go">
 <a href="#integrationemail_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Email</a>
@@ -453,8 +435,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationkey_go">
 <a href="#integrationkey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -463,8 +444,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -473,8 +453,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -492,8 +471,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendor_go">
 <a href="#vendor_go" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -502,14 +480,11 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -518,8 +493,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationemail_nodejs">
 <a href="#integrationemail_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Email</a>
@@ -528,8 +502,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integrationkey_nodejs">
 <a href="#integrationkey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Key</a>
@@ -538,8 +511,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -548,8 +520,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -567,8 +538,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendor_nodejs">
 <a href="#vendor_nodejs" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -577,14 +547,11 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -593,8 +560,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_email_python">
 <a href="#integration_email_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>email</a>
@@ -603,8 +569,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="integration_key_python">
 <a href="#integration_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>key</a>
@@ -613,8 +578,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -623,8 +587,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -642,8 +605,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vendor_python">
 <a href="#vendor_python" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -652,8 +614,7 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -664,9 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="htmlurl_csharp">
 <a href="#htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -675,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -684,14 +642,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="htmlurl_go">
 <a href="#htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -700,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -709,14 +663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="htmlurl_nodejs">
 <a href="#htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
@@ -725,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -734,14 +684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="html_url_python">
 <a href="#html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
@@ -750,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -759,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -887,9 +832,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_htmlurl_csharp">
 <a href="#state_htmlurl_csharp" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -898,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationemail_csharp">
 <a href="#state_integrationemail_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Email</a>
@@ -908,8 +850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkey_csharp">
 <a href="#state_integrationkey_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -918,8 +859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -928,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -938,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -957,8 +895,7 @@ The following state arguments are supported:
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_csharp">
 <a href="#state_vendor_csharp" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -967,14 +904,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_htmlurl_go">
 <a href="#state_htmlurl_go" style="color: inherit; text-decoration: inherit;">Html<wbr>Url</a>
@@ -983,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationemail_go">
 <a href="#state_integrationemail_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Email</a>
@@ -993,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkey_go">
 <a href="#state_integrationkey_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Key</a>
@@ -1003,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1013,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1023,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1042,8 +971,7 @@ The following state arguments are supported:
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_go">
 <a href="#state_vendor_go" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -1052,14 +980,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_htmlurl_nodejs">
 <a href="#state_htmlurl_nodejs" style="color: inherit; text-decoration: inherit;">html<wbr>Url</a>
@@ -1068,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationemail_nodejs">
 <a href="#state_integrationemail_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Email</a>
@@ -1078,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integrationkey_nodejs">
 <a href="#state_integrationkey_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Key</a>
@@ -1088,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1098,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1108,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1127,8 +1047,7 @@ The following state arguments are supported:
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_nodejs">
 <a href="#state_vendor_nodejs" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -1137,14 +1056,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_html_url_python">
 <a href="#state_html_url_python" style="color: inherit; text-decoration: inherit;">html_<wbr>url</a>
@@ -1153,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL at which the entity is uniquely displayed in the Web app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_email_python">
 <a href="#state_integration_email_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>email</a>
@@ -1163,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the unique fully-qualified email address used for routing emails to this integration for processing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_integration_key_python">
 <a href="#state_integration_key_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>key</a>
@@ -1173,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the unique key used to route events to this integration when received via the PagerDuty Events API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1183,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service integration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1193,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the service the integration should belong to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1212,8 +1123,7 @@ The following state arguments are supported:
 `keynote_inbound_integration`,
 `nagios_inbound_integration`,
 `pingdom_inbound_integration`or `sql_monitor_inbound_integration`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_python">
 <a href="#state_vendor_python" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -1222,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the vendor the integration should integrate with (e.g Datadog or Amazon Cloudwatch).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

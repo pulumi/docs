@@ -414,8 +414,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressroutecircuitname_csharp">
 <a href="#expressroutecircuitname_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -424,8 +423,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeringtype_csharp">
 <a href="#peeringtype_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
@@ -434,8 +432,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarypeeraddressprefix_csharp">
 <a href="#primarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -444,8 +441,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -454,8 +450,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarypeeraddressprefix_csharp">
 <a href="#secondarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -464,8 +459,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlanid_csharp">
 <a href="#vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -474,8 +468,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_csharp">
 <a href="#ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -484,8 +477,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="microsoftpeeringconfig_csharp">
 <a href="#microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
@@ -494,8 +486,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerasn_csharp">
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -504,8 +495,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routefilterid_csharp">
 <a href="#routefilterid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
@@ -514,8 +504,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_csharp">
 <a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -524,13 +513,11 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressroutecircuitname_go">
 <a href="#expressroutecircuitname_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -539,8 +526,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeringtype_go">
 <a href="#peeringtype_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
@@ -549,8 +535,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarypeeraddressprefix_go">
 <a href="#primarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -559,8 +544,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -569,8 +553,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarypeeraddressprefix_go">
 <a href="#secondarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -579,8 +562,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlanid_go">
 <a href="#vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -589,8 +571,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_go">
 <a href="#ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -599,8 +580,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="microsoftpeeringconfig_go">
 <a href="#microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
@@ -609,8 +589,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerasn_go">
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -619,8 +598,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routefilterid_go">
 <a href="#routefilterid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
@@ -629,8 +607,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_go">
 <a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -639,13 +616,11 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expressroutecircuitname_nodejs">
 <a href="#expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -654,8 +629,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeringtype_nodejs">
 <a href="#peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
@@ -664,8 +638,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarypeeraddressprefix_nodejs">
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -674,8 +647,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -684,8 +656,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarypeeraddressprefix_nodejs">
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -694,8 +665,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlanid_nodejs">
 <a href="#vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
@@ -704,8 +674,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_nodejs">
 <a href="#ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -714,8 +683,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="microsoftpeeringconfig_nodejs">
 <a href="#microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
@@ -724,8 +692,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerasn_nodejs">
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
@@ -734,8 +701,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routefilterid_nodejs">
 <a href="#routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
@@ -744,8 +710,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_nodejs">
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -754,13 +719,11 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="express_route_circuit_name_python">
 <a href="#express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
@@ -769,8 +732,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peering_type_python">
 <a href="#peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
@@ -779,8 +741,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primary_peer_address_prefix_python">
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
@@ -789,8 +750,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -799,8 +759,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondary_peer_address_prefix_python">
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
@@ -809,8 +768,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vlan_id_python">
 <a href="#vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
@@ -819,8 +777,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_python">
 <a href="#ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -829,8 +786,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="microsoft_peering_config_python">
 <a href="#microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
@@ -839,8 +795,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_asn_python">
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
@@ -849,8 +804,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_filter_id_python">
 <a href="#route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
@@ -859,8 +813,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_key_python">
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -869,8 +822,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -881,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azureasn_csharp">
 <a href="#azureasn_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
@@ -891,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -900,8 +850,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryazureport_csharp">
 <a href="#primaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
@@ -910,8 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryazureport_csharp">
 <a href="#secondaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
@@ -920,13 +868,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azureasn_go">
 <a href="#azureasn_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
@@ -935,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -944,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryazureport_go">
 <a href="#primaryazureport_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
@@ -954,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryazureport_go">
 <a href="#secondaryazureport_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
@@ -964,13 +907,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azureasn_nodejs">
 <a href="#azureasn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Asn</a>
@@ -979,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -988,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryazureport_nodejs">
 <a href="#primaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Azure<wbr>Port</a>
@@ -998,8 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryazureport_nodejs">
 <a href="#secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
@@ -1008,13 +946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="azure_asn_python">
 <a href="#azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
@@ -1023,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1032,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_azure_port_python">
 <a href="#primary_azure_port_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>azure_<wbr>port</a>
@@ -1042,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_azure_port_python">
 <a href="#secondary_azure_port_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>azure_<wbr>port</a>
@@ -1052,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1180,8 +1112,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azureasn_csharp">
 <a href="#state_azureasn_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
@@ -1190,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitname_csharp">
 <a href="#state_expressroutecircuitname_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -1200,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_csharp">
 <a href="#state_ipv6_csharp" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1210,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoftpeeringconfig_csharp">
 <a href="#state_microsoftpeeringconfig_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
@@ -1220,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerasn_csharp">
 <a href="#state_peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -1230,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peeringtype_csharp">
 <a href="#state_peeringtype_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
@@ -1240,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryazureport_csharp">
 <a href="#state_primaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
@@ -1250,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarypeeraddressprefix_csharp">
 <a href="#state_primarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1260,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1270,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routefilterid_csharp">
 <a href="#state_routefilterid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
@@ -1280,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryazureport_csharp">
 <a href="#state_secondaryazureport_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
@@ -1290,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarypeeraddressprefix_csharp">
 <a href="#state_secondarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1300,8 +1220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedkey_csharp">
 <a href="#state_sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -1310,8 +1229,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_csharp">
 <a href="#state_vlanid_csharp" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -1320,13 +1238,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azureasn_go">
 <a href="#state_azureasn_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Asn</a>
@@ -1335,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitname_go">
 <a href="#state_expressroutecircuitname_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -1345,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_go">
 <a href="#state_ipv6_go" style="color: inherit; text-decoration: inherit;">Ipv6</a>
@@ -1355,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoftpeeringconfig_go">
 <a href="#state_microsoftpeeringconfig_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering<wbr>Config</a>
@@ -1365,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerasn_go">
 <a href="#state_peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -1375,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peeringtype_go">
 <a href="#state_peeringtype_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Type</a>
@@ -1385,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryazureport_go">
 <a href="#state_primaryazureport_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Azure<wbr>Port</a>
@@ -1395,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarypeeraddressprefix_go">
 <a href="#state_primarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1405,8 +1314,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1415,8 +1323,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routefilterid_go">
 <a href="#state_routefilterid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
@@ -1425,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryazureport_go">
 <a href="#state_secondaryazureport_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Azure<wbr>Port</a>
@@ -1435,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarypeeraddressprefix_go">
 <a href="#state_secondarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1445,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedkey_go">
 <a href="#state_sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -1455,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_go">
 <a href="#state_vlanid_go" style="color: inherit; text-decoration: inherit;">Vlan<wbr>Id</a>
@@ -1465,13 +1368,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azureasn_nodejs">
 <a href="#state_azureasn_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Asn</a>
@@ -1480,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitname_nodejs">
 <a href="#state_expressroutecircuitname_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Name</a>
@@ -1490,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_nodejs">
 <a href="#state_ipv6_nodejs" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1500,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoftpeeringconfig_nodejs">
 <a href="#state_microsoftpeeringconfig_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering<wbr>Config</a>
@@ -1510,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerasn_nodejs">
 <a href="#state_peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
@@ -1520,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peeringtype_nodejs">
 <a href="#state_peeringtype_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Type</a>
@@ -1530,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primaryazureport_nodejs">
 <a href="#state_primaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Azure<wbr>Port</a>
@@ -1540,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarypeeraddressprefix_nodejs">
 <a href="#state_primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1550,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1560,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routefilterid_nodejs">
 <a href="#state_routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
@@ -1570,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryazureport_nodejs">
 <a href="#state_secondaryazureport_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Azure<wbr>Port</a>
@@ -1580,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondarypeeraddressprefix_nodejs">
 <a href="#state_secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1590,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedkey_nodejs">
 <a href="#state_sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -1600,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlanid_nodejs">
 <a href="#state_vlanid_nodejs" style="color: inherit; text-decoration: inherit;">vlan<wbr>Id</a>
@@ -1610,13 +1498,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_azure_asn_python">
 <a href="#state_azure_asn_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>asn</a>
@@ -1625,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ASN used by Azure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_express_route_circuit_name_python">
 <a href="#state_express_route_circuit_name_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>name</a>
@@ -1635,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ExpressRoute Circuit in which to create the Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_python">
 <a href="#state_ipv6_python" style="color: inherit; text-decoration: inherit;">ipv6</a>
@@ -1645,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipv6` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_microsoft_peering_config_python">
 <a href="#state_microsoft_peering_config_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering_<wbr>config</a>
@@ -1655,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering_config` block as defined below. Required when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_asn_python">
 <a href="#state_peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
@@ -1665,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Either a 16-bit or a 32-bit ASN. Can either be public or private.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_type_python">
 <a href="#state_peering_type_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>type</a>
@@ -1675,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ExpressRoute Circuit Peering. Acceptable values include `AzurePrivatePeering`, `AzurePublicPeering` and `MicrosoftPeering`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_azure_port_python">
 <a href="#state_primary_azure_port_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>azure_<wbr>port</a>
@@ -1685,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Primary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_peer_address_prefix_python">
 <a href="#state_primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
@@ -1695,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1705,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Express Route Circuit Peering. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_route_filter_id_python">
 <a href="#state_route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
@@ -1715,8 +1592,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_azure_port_python">
 <a href="#state_secondary_azure_port_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>azure_<wbr>port</a>
@@ -1725,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Secondary Port used by Azure for this Peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_peer_address_prefix_python">
 <a href="#state_secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
@@ -1735,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_key_python">
 <a href="#state_shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -1745,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared key. Can be a maximum of 25 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vlan_id_python">
 <a href="#state_vlan_id_python" style="color: inherit; text-decoration: inherit;">vlan_<wbr>id</a>
@@ -1755,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A valid VLAN ID to establish this peering on.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1771,8 +1643,7 @@ The following state arguments are supported:
 <h4 id="expressroutecircuitpeeringipv6">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoftpeering_csharp">
 <a href="#microsoftpeering_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering</a>
@@ -1781,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarypeeraddressprefix_csharp">
 <a href="#primarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1791,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarypeeraddressprefix_csharp">
 <a href="#secondarypeeraddressprefix_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1801,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routefilterid_csharp">
 <a href="#routefilterid_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
@@ -1811,13 +1679,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoftpeering_go">
 <a href="#microsoftpeering_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Peering</a>
@@ -1826,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarypeeraddressprefix_go">
 <a href="#primarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1836,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarypeeraddressprefix_go">
 <a href="#secondarypeeraddressprefix_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1846,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routefilterid_go">
 <a href="#routefilterid_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Filter<wbr>Id</a>
@@ -1856,13 +1719,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoftpeering_nodejs">
 <a href="#microsoftpeering_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Peering</a>
@@ -1871,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarypeeraddressprefix_nodejs">
 <a href="#primarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1881,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondarypeeraddressprefix_nodejs">
 <a href="#secondarypeeraddressprefix_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Peer<wbr>Address<wbr>Prefix</a>
@@ -1891,8 +1750,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routefilterid_nodejs">
 <a href="#routefilterid_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Filter<wbr>Id</a>
@@ -1901,13 +1759,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="microsoft_peering_python">
 <a href="#microsoft_peering_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>peering</a>
@@ -1916,8 +1772,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `microsoft_peering` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primary_peer_address_prefix_python">
 <a href="#primary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>peer_<wbr>address_<wbr>prefix</a>
@@ -1926,8 +1781,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the primary link.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secondary_peer_address_prefix_python">
 <a href="#secondary_peer_address_prefix_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>peer_<wbr>address_<wbr>prefix</a>
@@ -1936,8 +1790,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A subnet for the secondary link.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_filter_id_python">
 <a href="#route_filter_id_python" style="color: inherit; text-decoration: inherit;">route_<wbr>filter_<wbr>id</a>
@@ -1946,15 +1799,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Filter. Only available when `peering_type` is set to `MicrosoftPeering`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="expressroutecircuitpeeringipv6microsoftpeering">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Ipv6Microsoft<wbr>Peering</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advertisedpublicprefixes_csharp">
 <a href="#advertisedpublicprefixes_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
@@ -1963,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerasn_csharp">
 <a href="#customerasn_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
@@ -1973,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingregistryname_csharp">
 <a href="#routingregistryname_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
@@ -1983,13 +1832,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advertisedpublicprefixes_go">
 <a href="#advertisedpublicprefixes_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
@@ -1998,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerasn_go">
 <a href="#customerasn_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
@@ -2008,8 +1854,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingregistryname_go">
 <a href="#routingregistryname_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
@@ -2018,13 +1863,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advertisedpublicprefixes_nodejs">
 <a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
@@ -2033,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerasn_nodejs">
 <a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
@@ -2043,8 +1885,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingregistryname_nodejs">
 <a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
@@ -2053,13 +1894,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="advertised_public_prefixes_python">
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
@@ -2068,8 +1907,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_asn_python">
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
@@ -2078,8 +1916,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_registry_name_python">
 <a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
@@ -2088,15 +1925,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="expressroutecircuitpeeringmicrosoftpeeringconfig">Express<wbr>Route<wbr>Circuit<wbr>Peering<wbr>Microsoft<wbr>Peering<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advertisedpublicprefixes_csharp">
 <a href="#advertisedpublicprefixes_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
@@ -2105,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerasn_csharp">
 <a href="#customerasn_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
@@ -2115,8 +1949,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingregistryname_csharp">
 <a href="#routingregistryname_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
@@ -2125,13 +1958,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advertisedpublicprefixes_go">
 <a href="#advertisedpublicprefixes_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Public<wbr>Prefixes</a>
@@ -2140,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerasn_go">
 <a href="#customerasn_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Asn</a>
@@ -2150,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingregistryname_go">
 <a href="#routingregistryname_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Registry<wbr>Name</a>
@@ -2160,13 +1989,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advertisedpublicprefixes_nodejs">
 <a href="#advertisedpublicprefixes_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Public<wbr>Prefixes</a>
@@ -2175,8 +2002,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerasn_nodejs">
 <a href="#customerasn_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Asn</a>
@@ -2185,8 +2011,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingregistryname_nodejs">
 <a href="#routingregistryname_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Registry<wbr>Name</a>
@@ -2195,13 +2020,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advertised_public_prefixes_python">
 <a href="#advertised_public_prefixes_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>public_<wbr>prefixes</a>
@@ -2210,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Advertised Public Prefixes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_asn_python">
 <a href="#customer_asn_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>asn</a>
@@ -2220,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CustomerASN of the peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_registry_name_python">
 <a href="#routing_registry_name_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>registry_<wbr>name</a>
@@ -2230,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Routing Registry against which the AS number and prefixes are registered. For example:  `ARIN`, `RIPE`, `AFRINIC` etc.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

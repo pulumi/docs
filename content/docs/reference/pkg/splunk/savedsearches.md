@@ -1,8 +1,8 @@
 
 ---
 title: "SavedSearches"
-title_tag: "Resource SavedSearches | Package Splunk"
-meta_desc: "Explore the SavedSearches resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.SavedSearches"
+title_tag: "splunk.SavedSearches"
+meta_desc: "Documentation for the splunk.SavedSearches resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Create and manage saved searches.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -55,9 +61,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -97,9 +106,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -124,9 +136,12 @@ saved_search = splunk.SavedSearches("savedSearch",
     search="index=main")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -153,9 +168,16 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SavedSearches Resource {#create}
@@ -180,9 +202,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -190,9 +210,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -200,9 +218,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -210,10 +226,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -239,9 +252,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -249,9 +260,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -259,9 +268,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -269,9 +276,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -279,18 +284,13 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -298,9 +298,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -308,9 +306,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -318,10 +314,7 @@ const savedSearch = new splunk.SavedSearches("saved_search", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -336,9 +329,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="search_csharp">
 <a href="#search_csharp" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -347,8 +338,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -357,8 +347,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailauthpassword_csharp">
 <a href="#actionemailauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Password</a>
@@ -367,8 +356,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailauthusername_csharp">
 <a href="#actionemailauthusername_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Username</a>
@@ -377,8 +365,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailbcc_csharp">
 <a href="#actionemailbcc_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Bcc</a>
@@ -387,8 +374,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailcc_csharp">
 <a href="#actionemailcc_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Cc</a>
@@ -397,8 +383,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailcommand_csharp">
 <a href="#actionemailcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Command</a>
@@ -407,8 +392,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailformat_csharp">
 <a href="#actionemailformat_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Format</a>
@@ -417,8 +401,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailfrom_csharp">
 <a href="#actionemailfrom_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>From</a>
@@ -427,8 +410,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailhostname_csharp">
 <a href="#actionemailhostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Hostname</a>
@@ -437,8 +419,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincluderesultslink_csharp">
 <a href="#actionemailincluderesultslink_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Results<wbr>Link</a>
@@ -447,8 +428,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludesearch_csharp">
 <a href="#actionemailincludesearch_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Search</a>
@@ -457,8 +437,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludetrigger_csharp">
 <a href="#actionemailincludetrigger_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger</a>
@@ -467,8 +446,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludetriggertime_csharp">
 <a href="#actionemailincludetriggertime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger<wbr>Time</a>
@@ -477,8 +455,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludeviewlink_csharp">
 <a href="#actionemailincludeviewlink_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>View<wbr>Link</a>
@@ -487,8 +464,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailinline_csharp">
 <a href="#actionemailinline_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Inline</a>
@@ -497,8 +473,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmailserver_csharp">
 <a href="#actionemailmailserver_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Mailserver</a>
@@ -507,8 +482,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmaxresults_csharp">
 <a href="#actionemailmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Results</a>
@@ -517,8 +491,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmaxtime_csharp">
 <a href="#actionemailmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Time</a>
@@ -527,8 +500,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmessagealert_csharp">
 <a href="#actionemailmessagealert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Alert</a>
@@ -537,8 +509,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmessagereport_csharp">
 <a href="#actionemailmessagereport_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Report</a>
@@ -547,8 +518,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailpdfview_csharp">
 <a href="#actionemailpdfview_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Pdfview</a>
@@ -557,8 +527,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailpreprocessresults_csharp">
 <a href="#actionemailpreprocessresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Preprocess<wbr>Results</a>
@@ -567,8 +536,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportcidfontlist_csharp">
 <a href="#actionemailreportcidfontlist_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Cid<wbr>Font<wbr>List</a>
@@ -577,8 +545,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportincludesplunklogo_csharp">
 <a href="#actionemailreportincludesplunklogo_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Include<wbr>Splunk<wbr>Logo</a>
@@ -587,8 +554,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportpaperorientation_csharp">
 <a href="#actionemailreportpaperorientation_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Orientation</a>
@@ -597,8 +563,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportpapersize_csharp">
 <a href="#actionemailreportpapersize_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Size</a>
@@ -607,8 +572,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportserverenabled_csharp">
 <a href="#actionemailreportserverenabled_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Enabled</a>
@@ -617,8 +581,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportserverurl_csharp">
 <a href="#actionemailreportserverurl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Url</a>
@@ -627,8 +590,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendcsv_csharp">
 <a href="#actionemailsendcsv_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Csv</a>
@@ -637,8 +599,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendpdf_csharp">
 <a href="#actionemailsendpdf_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Pdf</a>
@@ -647,8 +608,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendresults_csharp">
 <a href="#actionemailsendresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Results</a>
@@ -657,8 +617,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsubject_csharp">
 <a href="#actionemailsubject_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Subject</a>
@@ -667,8 +626,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailto_csharp">
 <a href="#actionemailto_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>To</a>
@@ -677,8 +635,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailtrackalert_csharp">
 <a href="#actionemailtrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Track<wbr>Alert</a>
@@ -687,8 +644,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailttl_csharp">
 <a href="#actionemailttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Ttl</a>
@@ -697,8 +653,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailusessl_csharp">
 <a href="#actionemailusessl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Ssl</a>
@@ -707,8 +662,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailusetls_csharp">
 <a href="#actionemailusetls_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Tls</a>
@@ -717,8 +671,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailwidthsortcolumns_csharp">
 <a href="#actionemailwidthsortcolumns_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Width<wbr>Sort<wbr>Columns</a>
@@ -727,8 +680,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupcommand_csharp">
 <a href="#actionpopulatelookupcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Command</a>
@@ -737,8 +689,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupdest_csharp">
 <a href="#actionpopulatelookupdest_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Dest</a>
@@ -747,8 +698,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookuphostname_csharp">
 <a href="#actionpopulatelookuphostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Hostname</a>
@@ -757,8 +707,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupmaxresults_csharp">
 <a href="#actionpopulatelookupmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Results</a>
@@ -767,8 +716,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupmaxtime_csharp">
 <a href="#actionpopulatelookupmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Time</a>
@@ -777,8 +725,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookuptrackalert_csharp">
 <a href="#actionpopulatelookuptrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Track<wbr>Alert</a>
@@ -787,8 +734,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupttl_csharp">
 <a href="#actionpopulatelookupttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Ttl</a>
@@ -797,8 +743,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsscommand_csharp">
 <a href="#actionrsscommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Command</a>
@@ -807,8 +752,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsshostname_csharp">
 <a href="#actionrsshostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Hostname</a>
@@ -817,8 +761,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssmaxresults_csharp">
 <a href="#actionrssmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Results</a>
@@ -827,8 +770,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssmaxtime_csharp">
 <a href="#actionrssmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Time</a>
@@ -837,8 +779,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsstrackalert_csharp">
 <a href="#actionrsstrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Track<wbr>Alert</a>
@@ -847,8 +788,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssttl_csharp">
 <a href="#actionrssttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Ttl</a>
@@ -857,8 +797,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptcommand_csharp">
 <a href="#actionscriptcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Command</a>
@@ -867,8 +806,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptfilename_csharp">
 <a href="#actionscriptfilename_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Filename</a>
@@ -877,8 +815,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscripthostname_csharp">
 <a href="#actionscripthostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Hostname</a>
@@ -887,8 +824,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptmaxresults_csharp">
 <a href="#actionscriptmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Results</a>
@@ -897,8 +833,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptmaxtime_csharp">
 <a href="#actionscriptmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Time</a>
@@ -907,8 +842,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscripttrackalert_csharp">
 <a href="#actionscripttrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Track<wbr>Alert</a>
@@ -917,8 +851,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptttl_csharp">
 <a href="#actionscriptttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Ttl</a>
@@ -927,8 +860,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamattachment_csharp">
 <a href="#actionslackparamattachment_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Attachment</a>
@@ -937,8 +869,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamchannel_csharp">
 <a href="#actionslackparamchannel_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Channel</a>
@@ -947,8 +878,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamfields_csharp">
 <a href="#actionslackparamfields_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Fields</a>
@@ -957,8 +887,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparammessage_csharp">
 <a href="#actionslackparammessage_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Message</a>
@@ -967,8 +896,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamwebhookurloverride_csharp">
 <a href="#actionslackparamwebhookurloverride_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Webhook<wbr>Url<wbr>Override</a>
@@ -977,8 +905,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexcommand_csharp">
 <a href="#actionsummaryindexcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Command</a>
@@ -987,8 +914,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexhostname_csharp">
 <a href="#actionsummaryindexhostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Hostname</a>
@@ -997,8 +923,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexinline_csharp">
 <a href="#actionsummaryindexinline_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Inline</a>
@@ -1007,8 +932,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexmaxresults_csharp">
 <a href="#actionsummaryindexmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Results</a>
@@ -1017,8 +941,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexmaxtime_csharp">
 <a href="#actionsummaryindexmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Time</a>
@@ -1027,8 +950,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexname_csharp">
 <a href="#actionsummaryindexname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Name</a>
@@ -1037,8 +959,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindextrackalert_csharp">
 <a href="#actionsummaryindextrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Track<wbr>Alert</a>
@@ -1047,8 +968,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexttl_csharp">
 <a href="#actionsummaryindexttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Ttl</a>
@@ -1057,8 +977,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -1067,8 +986,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcomparator_csharp">
 <a href="#alertcomparator_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Comparator</a>
@@ -1077,8 +995,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcondition_csharp">
 <a href="#alertcondition_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Condition</a>
@@ -1087,8 +1004,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdigestmode_csharp">
 <a href="#alertdigestmode_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Digest<wbr>Mode</a>
@@ -1097,8 +1013,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertexpires_csharp">
 <a href="#alertexpires_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Expires</a>
@@ -1107,8 +1022,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertseverity_csharp">
 <a href="#alertseverity_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Severity</a>
@@ -1117,8 +1031,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppress_csharp">
 <a href="#alertsuppress_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress</a>
@@ -1127,8 +1040,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppressfields_csharp">
 <a href="#alertsuppressfields_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Fields</a>
@@ -1137,8 +1049,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppressperiod_csharp">
 <a href="#alertsuppressperiod_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Period</a>
@@ -1147,8 +1058,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertthreshold_csharp">
 <a href="#alertthreshold_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Threshold</a>
@@ -1157,8 +1067,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttrack_csharp">
 <a href="#alerttrack_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Track</a>
@@ -1167,8 +1076,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttype_csharp">
 <a href="#alerttype_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -1177,8 +1085,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowskew_csharp">
 <a href="#allowskew_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Skew</a>
@@ -1187,8 +1094,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarize_csharp">
 <a href="#autosummarize_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize</a>
@@ -1197,8 +1103,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizecommand_csharp">
 <a href="#autosummarizecommand_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Command</a>
@@ -1207,8 +1112,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizecronschedule_csharp">
 <a href="#autosummarizecronschedule_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Cron<wbr>Schedule</a>
@@ -1217,8 +1121,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchearliesttime_csharp">
 <a href="#autosummarizedispatchearliesttime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Earliest<wbr>Time</a>
@@ -1227,8 +1130,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchlatesttime_csharp">
 <a href="#autosummarizedispatchlatesttime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Latest<wbr>Time</a>
@@ -1237,8 +1139,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchtimeformat_csharp">
 <a href="#autosummarizedispatchtimeformat_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Time<wbr>Format</a>
@@ -1247,8 +1148,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchttl_csharp">
 <a href="#autosummarizedispatchttl_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Ttl</a>
@@ -1257,8 +1157,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxdisabledbuckets_csharp">
 <a href="#autosummarizemaxdisabledbuckets_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Disabled<wbr>Buckets</a>
@@ -1267,8 +1166,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxsummaryratio_csharp">
 <a href="#autosummarizemaxsummaryratio_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Ratio</a>
@@ -1277,8 +1175,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxsummarysize_csharp">
 <a href="#autosummarizemaxsummarysize_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Size</a>
@@ -1287,8 +1184,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxtime_csharp">
 <a href="#autosummarizemaxtime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Time</a>
@@ -1297,8 +1193,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizesuspendperiod_csharp">
 <a href="#autosummarizesuspendperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Suspend<wbr>Period</a>
@@ -1307,8 +1202,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizetimespan_csharp">
 <a href="#autosummarizetimespan_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Timespan</a>
@@ -1317,8 +1211,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronschedule_csharp">
 <a href="#cronschedule_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Schedule</a>
@@ -1327,8 +1220,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1337,8 +1229,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1347,8 +1238,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchbuckets_csharp">
 <a href="#dispatchbuckets_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Buckets</a>
@@ -1357,8 +1247,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchearliesttime_csharp">
 <a href="#dispatchearliesttime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Earliest<wbr>Time</a>
@@ -1367,8 +1256,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexearliest_csharp">
 <a href="#dispatchindexearliest_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Earliest</a>
@@ -1377,8 +1265,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexlatest_csharp">
 <a href="#dispatchindexlatest_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Latest</a>
@@ -1387,8 +1274,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtime_csharp">
 <a href="#dispatchindexedrealtime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime</a>
@@ -1397,8 +1283,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtimeminspan_csharp">
 <a href="#dispatchindexedrealtimeminspan_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Minspan</a>
@@ -1407,8 +1292,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtimeoffset_csharp">
 <a href="#dispatchindexedrealtimeoffset_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Offset</a>
@@ -1417,8 +1301,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchlatesttime_csharp">
 <a href="#dispatchlatesttime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Latest<wbr>Time</a>
@@ -1427,8 +1310,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchlookups_csharp">
 <a href="#dispatchlookups_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Lookups</a>
@@ -1437,8 +1319,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchmaxcount_csharp">
 <a href="#dispatchmaxcount_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Count</a>
@@ -1447,8 +1328,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchmaxtime_csharp">
 <a href="#dispatchmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Time</a>
@@ -1457,8 +1337,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchreducefreq_csharp">
 <a href="#dispatchreducefreq_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Reduce<wbr>Freq</a>
@@ -1467,8 +1346,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchrtbackfill_csharp">
 <a href="#dispatchrtbackfill_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Backfill</a>
@@ -1477,8 +1355,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchrtmaximumspan_csharp">
 <a href="#dispatchrtmaximumspan_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Maximum<wbr>Span</a>
@@ -1487,8 +1364,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchspawnprocess_csharp">
 <a href="#dispatchspawnprocess_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Spawn<wbr>Process</a>
@@ -1497,8 +1373,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchtimeformat_csharp">
 <a href="#dispatchtimeformat_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Time<wbr>Format</a>
@@ -1507,8 +1382,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchttl_csharp">
 <a href="#dispatchttl_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Ttl</a>
@@ -1517,8 +1391,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayview_csharp">
 <a href="#displayview_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>View</a>
@@ -1527,8 +1400,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isscheduled_csharp">
 <a href="#isscheduled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled</a>
@@ -1537,8 +1409,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvisible_csharp">
 <a href="#isvisible_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Visible</a>
@@ -1547,8 +1418,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrent_csharp">
 <a href="#maxconcurrent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent</a>
@@ -1557,8 +1427,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1567,8 +1436,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimeschedule_csharp">
 <a href="#realtimeschedule_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Schedule</a>
@@ -1577,8 +1445,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestuidispatchapp_csharp">
 <a href="#requestuidispatchapp_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>App</a>
@@ -1587,8 +1454,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestuidispatchview_csharp">
 <a href="#requestuidispatchview_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>View</a>
@@ -1597,8 +1463,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartonsearchpeeradd_csharp">
 <a href="#restartonsearchpeeradd_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>On<wbr>Searchpeer<wbr>Add</a>
@@ -1607,8 +1472,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runonstartup_csharp">
 <a href="#runonstartup_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>On<wbr>Startup</a>
@@ -1617,8 +1481,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulepriority_csharp">
 <a href="#schedulepriority_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Priority</a>
@@ -1627,8 +1490,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulewindow_csharp">
 <a href="#schedulewindow_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Window</a>
@@ -1637,8 +1499,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsid_csharp">
 <a href="#vsid_csharp" style="color: inherit; text-decoration: inherit;">Vsid</a>
@@ -1647,8 +1508,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadpool_csharp">
 <a href="#workloadpool_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
@@ -1657,14 +1517,11 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="search_go">
 <a href="#search_go" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -1673,8 +1530,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -1683,8 +1539,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailauthpassword_go">
 <a href="#actionemailauthpassword_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Password</a>
@@ -1693,8 +1548,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailauthusername_go">
 <a href="#actionemailauthusername_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Username</a>
@@ -1703,8 +1557,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailbcc_go">
 <a href="#actionemailbcc_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Bcc</a>
@@ -1713,8 +1566,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailcc_go">
 <a href="#actionemailcc_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Cc</a>
@@ -1723,8 +1575,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailcommand_go">
 <a href="#actionemailcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Command</a>
@@ -1733,8 +1584,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailformat_go">
 <a href="#actionemailformat_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Format</a>
@@ -1743,8 +1593,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailfrom_go">
 <a href="#actionemailfrom_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>From</a>
@@ -1753,8 +1602,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailhostname_go">
 <a href="#actionemailhostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Hostname</a>
@@ -1763,8 +1611,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincluderesultslink_go">
 <a href="#actionemailincluderesultslink_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Results<wbr>Link</a>
@@ -1773,8 +1620,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludesearch_go">
 <a href="#actionemailincludesearch_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Search</a>
@@ -1783,8 +1629,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludetrigger_go">
 <a href="#actionemailincludetrigger_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger</a>
@@ -1793,8 +1638,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludetriggertime_go">
 <a href="#actionemailincludetriggertime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger<wbr>Time</a>
@@ -1803,8 +1647,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludeviewlink_go">
 <a href="#actionemailincludeviewlink_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>View<wbr>Link</a>
@@ -1813,8 +1656,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailinline_go">
 <a href="#actionemailinline_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Inline</a>
@@ -1823,8 +1665,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmailserver_go">
 <a href="#actionemailmailserver_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Mailserver</a>
@@ -1833,8 +1674,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmaxresults_go">
 <a href="#actionemailmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Results</a>
@@ -1843,8 +1683,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmaxtime_go">
 <a href="#actionemailmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Time</a>
@@ -1853,8 +1692,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmessagealert_go">
 <a href="#actionemailmessagealert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Alert</a>
@@ -1863,8 +1701,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmessagereport_go">
 <a href="#actionemailmessagereport_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Report</a>
@@ -1873,8 +1710,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailpdfview_go">
 <a href="#actionemailpdfview_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Pdfview</a>
@@ -1883,8 +1719,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailpreprocessresults_go">
 <a href="#actionemailpreprocessresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Preprocess<wbr>Results</a>
@@ -1893,8 +1728,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportcidfontlist_go">
 <a href="#actionemailreportcidfontlist_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Cid<wbr>Font<wbr>List</a>
@@ -1903,8 +1737,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportincludesplunklogo_go">
 <a href="#actionemailreportincludesplunklogo_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Include<wbr>Splunk<wbr>Logo</a>
@@ -1913,8 +1746,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportpaperorientation_go">
 <a href="#actionemailreportpaperorientation_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Orientation</a>
@@ -1923,8 +1755,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportpapersize_go">
 <a href="#actionemailreportpapersize_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Size</a>
@@ -1933,8 +1764,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportserverenabled_go">
 <a href="#actionemailreportserverenabled_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Enabled</a>
@@ -1943,8 +1773,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportserverurl_go">
 <a href="#actionemailreportserverurl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Url</a>
@@ -1953,8 +1782,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendcsv_go">
 <a href="#actionemailsendcsv_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Csv</a>
@@ -1963,8 +1791,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendpdf_go">
 <a href="#actionemailsendpdf_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Pdf</a>
@@ -1973,8 +1800,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendresults_go">
 <a href="#actionemailsendresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Results</a>
@@ -1983,8 +1809,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsubject_go">
 <a href="#actionemailsubject_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Subject</a>
@@ -1993,8 +1818,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailto_go">
 <a href="#actionemailto_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>To</a>
@@ -2003,8 +1827,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailtrackalert_go">
 <a href="#actionemailtrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Track<wbr>Alert</a>
@@ -2013,8 +1836,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailttl_go">
 <a href="#actionemailttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Ttl</a>
@@ -2023,8 +1845,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailusessl_go">
 <a href="#actionemailusessl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Ssl</a>
@@ -2033,8 +1854,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailusetls_go">
 <a href="#actionemailusetls_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Tls</a>
@@ -2043,8 +1863,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailwidthsortcolumns_go">
 <a href="#actionemailwidthsortcolumns_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Width<wbr>Sort<wbr>Columns</a>
@@ -2053,8 +1872,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupcommand_go">
 <a href="#actionpopulatelookupcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Command</a>
@@ -2063,8 +1881,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupdest_go">
 <a href="#actionpopulatelookupdest_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Dest</a>
@@ -2073,8 +1890,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookuphostname_go">
 <a href="#actionpopulatelookuphostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Hostname</a>
@@ -2083,8 +1899,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupmaxresults_go">
 <a href="#actionpopulatelookupmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Results</a>
@@ -2093,8 +1908,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupmaxtime_go">
 <a href="#actionpopulatelookupmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Time</a>
@@ -2103,8 +1917,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookuptrackalert_go">
 <a href="#actionpopulatelookuptrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Track<wbr>Alert</a>
@@ -2113,8 +1926,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupttl_go">
 <a href="#actionpopulatelookupttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Ttl</a>
@@ -2123,8 +1935,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsscommand_go">
 <a href="#actionrsscommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Command</a>
@@ -2133,8 +1944,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsshostname_go">
 <a href="#actionrsshostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Hostname</a>
@@ -2143,8 +1953,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssmaxresults_go">
 <a href="#actionrssmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Results</a>
@@ -2153,8 +1962,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssmaxtime_go">
 <a href="#actionrssmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Time</a>
@@ -2163,8 +1971,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsstrackalert_go">
 <a href="#actionrsstrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Track<wbr>Alert</a>
@@ -2173,8 +1980,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssttl_go">
 <a href="#actionrssttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Ttl</a>
@@ -2183,8 +1989,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptcommand_go">
 <a href="#actionscriptcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Command</a>
@@ -2193,8 +1998,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptfilename_go">
 <a href="#actionscriptfilename_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Filename</a>
@@ -2203,8 +2007,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscripthostname_go">
 <a href="#actionscripthostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Hostname</a>
@@ -2213,8 +2016,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptmaxresults_go">
 <a href="#actionscriptmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Results</a>
@@ -2223,8 +2025,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptmaxtime_go">
 <a href="#actionscriptmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Time</a>
@@ -2233,8 +2034,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscripttrackalert_go">
 <a href="#actionscripttrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Track<wbr>Alert</a>
@@ -2243,8 +2043,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptttl_go">
 <a href="#actionscriptttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Ttl</a>
@@ -2253,8 +2052,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamattachment_go">
 <a href="#actionslackparamattachment_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Attachment</a>
@@ -2263,8 +2061,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamchannel_go">
 <a href="#actionslackparamchannel_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Channel</a>
@@ -2273,8 +2070,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamfields_go">
 <a href="#actionslackparamfields_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Fields</a>
@@ -2283,8 +2079,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparammessage_go">
 <a href="#actionslackparammessage_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Message</a>
@@ -2293,8 +2088,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamwebhookurloverride_go">
 <a href="#actionslackparamwebhookurloverride_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Webhook<wbr>Url<wbr>Override</a>
@@ -2303,8 +2097,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexcommand_go">
 <a href="#actionsummaryindexcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Command</a>
@@ -2313,8 +2106,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexhostname_go">
 <a href="#actionsummaryindexhostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Hostname</a>
@@ -2323,8 +2115,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexinline_go">
 <a href="#actionsummaryindexinline_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Inline</a>
@@ -2333,8 +2124,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexmaxresults_go">
 <a href="#actionsummaryindexmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Results</a>
@@ -2343,8 +2133,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexmaxtime_go">
 <a href="#actionsummaryindexmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Time</a>
@@ -2353,8 +2142,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexname_go">
 <a href="#actionsummaryindexname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Name</a>
@@ -2363,8 +2151,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindextrackalert_go">
 <a href="#actionsummaryindextrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Track<wbr>Alert</a>
@@ -2373,8 +2160,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexttl_go">
 <a href="#actionsummaryindexttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Ttl</a>
@@ -2383,8 +2169,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -2393,8 +2178,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcomparator_go">
 <a href="#alertcomparator_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Comparator</a>
@@ -2403,8 +2187,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcondition_go">
 <a href="#alertcondition_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Condition</a>
@@ -2413,8 +2196,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdigestmode_go">
 <a href="#alertdigestmode_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Digest<wbr>Mode</a>
@@ -2423,8 +2205,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertexpires_go">
 <a href="#alertexpires_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Expires</a>
@@ -2433,8 +2214,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertseverity_go">
 <a href="#alertseverity_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Severity</a>
@@ -2443,8 +2223,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppress_go">
 <a href="#alertsuppress_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress</a>
@@ -2453,8 +2232,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppressfields_go">
 <a href="#alertsuppressfields_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Fields</a>
@@ -2463,8 +2241,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppressperiod_go">
 <a href="#alertsuppressperiod_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Period</a>
@@ -2473,8 +2250,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertthreshold_go">
 <a href="#alertthreshold_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Threshold</a>
@@ -2483,8 +2259,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttrack_go">
 <a href="#alerttrack_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Track</a>
@@ -2493,8 +2268,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttype_go">
 <a href="#alerttype_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -2503,8 +2277,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowskew_go">
 <a href="#allowskew_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Skew</a>
@@ -2513,8 +2286,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarize_go">
 <a href="#autosummarize_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize</a>
@@ -2523,8 +2295,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizecommand_go">
 <a href="#autosummarizecommand_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Command</a>
@@ -2533,8 +2304,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizecronschedule_go">
 <a href="#autosummarizecronschedule_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Cron<wbr>Schedule</a>
@@ -2543,8 +2313,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchearliesttime_go">
 <a href="#autosummarizedispatchearliesttime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Earliest<wbr>Time</a>
@@ -2553,8 +2322,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchlatesttime_go">
 <a href="#autosummarizedispatchlatesttime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Latest<wbr>Time</a>
@@ -2563,8 +2331,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchtimeformat_go">
 <a href="#autosummarizedispatchtimeformat_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Time<wbr>Format</a>
@@ -2573,8 +2340,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchttl_go">
 <a href="#autosummarizedispatchttl_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Ttl</a>
@@ -2583,8 +2349,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxdisabledbuckets_go">
 <a href="#autosummarizemaxdisabledbuckets_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Disabled<wbr>Buckets</a>
@@ -2593,8 +2358,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxsummaryratio_go">
 <a href="#autosummarizemaxsummaryratio_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Ratio</a>
@@ -2603,8 +2367,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxsummarysize_go">
 <a href="#autosummarizemaxsummarysize_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Size</a>
@@ -2613,8 +2376,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxtime_go">
 <a href="#autosummarizemaxtime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Time</a>
@@ -2623,8 +2385,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizesuspendperiod_go">
 <a href="#autosummarizesuspendperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Suspend<wbr>Period</a>
@@ -2633,8 +2394,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizetimespan_go">
 <a href="#autosummarizetimespan_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Timespan</a>
@@ -2643,8 +2403,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronschedule_go">
 <a href="#cronschedule_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Schedule</a>
@@ -2653,8 +2412,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2663,8 +2421,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -2673,8 +2430,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchbuckets_go">
 <a href="#dispatchbuckets_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Buckets</a>
@@ -2683,8 +2439,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchearliesttime_go">
 <a href="#dispatchearliesttime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Earliest<wbr>Time</a>
@@ -2693,8 +2448,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexearliest_go">
 <a href="#dispatchindexearliest_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Earliest</a>
@@ -2703,8 +2457,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexlatest_go">
 <a href="#dispatchindexlatest_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Latest</a>
@@ -2713,8 +2466,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtime_go">
 <a href="#dispatchindexedrealtime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime</a>
@@ -2723,8 +2475,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtimeminspan_go">
 <a href="#dispatchindexedrealtimeminspan_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Minspan</a>
@@ -2733,8 +2484,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtimeoffset_go">
 <a href="#dispatchindexedrealtimeoffset_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Offset</a>
@@ -2743,8 +2493,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchlatesttime_go">
 <a href="#dispatchlatesttime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Latest<wbr>Time</a>
@@ -2753,8 +2502,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchlookups_go">
 <a href="#dispatchlookups_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Lookups</a>
@@ -2763,8 +2511,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchmaxcount_go">
 <a href="#dispatchmaxcount_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Count</a>
@@ -2773,8 +2520,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchmaxtime_go">
 <a href="#dispatchmaxtime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Time</a>
@@ -2783,8 +2529,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchreducefreq_go">
 <a href="#dispatchreducefreq_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Reduce<wbr>Freq</a>
@@ -2793,8 +2538,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchrtbackfill_go">
 <a href="#dispatchrtbackfill_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Backfill</a>
@@ -2803,8 +2547,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchrtmaximumspan_go">
 <a href="#dispatchrtmaximumspan_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Maximum<wbr>Span</a>
@@ -2813,8 +2556,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchspawnprocess_go">
 <a href="#dispatchspawnprocess_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Spawn<wbr>Process</a>
@@ -2823,8 +2565,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchtimeformat_go">
 <a href="#dispatchtimeformat_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Time<wbr>Format</a>
@@ -2833,8 +2574,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchttl_go">
 <a href="#dispatchttl_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Ttl</a>
@@ -2843,8 +2583,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayview_go">
 <a href="#displayview_go" style="color: inherit; text-decoration: inherit;">Display<wbr>View</a>
@@ -2853,8 +2592,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isscheduled_go">
 <a href="#isscheduled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled</a>
@@ -2863,8 +2601,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvisible_go">
 <a href="#isvisible_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Visible</a>
@@ -2873,8 +2610,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrent_go">
 <a href="#maxconcurrent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent</a>
@@ -2883,8 +2619,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2893,8 +2628,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimeschedule_go">
 <a href="#realtimeschedule_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Schedule</a>
@@ -2903,8 +2637,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestuidispatchapp_go">
 <a href="#requestuidispatchapp_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>App</a>
@@ -2913,8 +2646,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestuidispatchview_go">
 <a href="#requestuidispatchview_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>View</a>
@@ -2923,8 +2655,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartonsearchpeeradd_go">
 <a href="#restartonsearchpeeradd_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>On<wbr>Searchpeer<wbr>Add</a>
@@ -2933,8 +2664,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runonstartup_go">
 <a href="#runonstartup_go" style="color: inherit; text-decoration: inherit;">Run<wbr>On<wbr>Startup</a>
@@ -2943,8 +2673,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulepriority_go">
 <a href="#schedulepriority_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Priority</a>
@@ -2953,8 +2682,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulewindow_go">
 <a href="#schedulewindow_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Window</a>
@@ -2963,8 +2691,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsid_go">
 <a href="#vsid_go" style="color: inherit; text-decoration: inherit;">Vsid</a>
@@ -2973,8 +2700,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadpool_go">
 <a href="#workloadpool_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
@@ -2983,14 +2709,11 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="search_nodejs">
 <a href="#search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
@@ -2999,8 +2722,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -3009,8 +2731,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailauthpassword_nodejs">
 <a href="#actionemailauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Auth<wbr>Password</a>
@@ -3019,8 +2740,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailauthusername_nodejs">
 <a href="#actionemailauthusername_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Auth<wbr>Username</a>
@@ -3029,8 +2749,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailbcc_nodejs">
 <a href="#actionemailbcc_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Bcc</a>
@@ -3039,8 +2758,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailcc_nodejs">
 <a href="#actionemailcc_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Cc</a>
@@ -3049,8 +2767,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailcommand_nodejs">
 <a href="#actionemailcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Command</a>
@@ -3059,8 +2776,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailformat_nodejs">
 <a href="#actionemailformat_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Format</a>
@@ -3069,8 +2785,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailfrom_nodejs">
 <a href="#actionemailfrom_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>From</a>
@@ -3079,8 +2794,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailhostname_nodejs">
 <a href="#actionemailhostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Hostname</a>
@@ -3089,8 +2803,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincluderesultslink_nodejs">
 <a href="#actionemailincluderesultslink_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Results<wbr>Link</a>
@@ -3099,8 +2812,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludesearch_nodejs">
 <a href="#actionemailincludesearch_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Search</a>
@@ -3109,8 +2821,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludetrigger_nodejs">
 <a href="#actionemailincludetrigger_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Trigger</a>
@@ -3119,8 +2830,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludetriggertime_nodejs">
 <a href="#actionemailincludetriggertime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Trigger<wbr>Time</a>
@@ -3129,8 +2839,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailincludeviewlink_nodejs">
 <a href="#actionemailincludeviewlink_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>View<wbr>Link</a>
@@ -3139,8 +2848,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailinline_nodejs">
 <a href="#actionemailinline_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Inline</a>
@@ -3149,8 +2857,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmailserver_nodejs">
 <a href="#actionemailmailserver_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Mailserver</a>
@@ -3159,8 +2866,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmaxresults_nodejs">
 <a href="#actionemailmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Max<wbr>Results</a>
@@ -3169,8 +2875,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmaxtime_nodejs">
 <a href="#actionemailmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Max<wbr>Time</a>
@@ -3179,8 +2884,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmessagealert_nodejs">
 <a href="#actionemailmessagealert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Message<wbr>Alert</a>
@@ -3189,8 +2893,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailmessagereport_nodejs">
 <a href="#actionemailmessagereport_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Message<wbr>Report</a>
@@ -3199,8 +2902,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailpdfview_nodejs">
 <a href="#actionemailpdfview_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Pdfview</a>
@@ -3209,8 +2911,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailpreprocessresults_nodejs">
 <a href="#actionemailpreprocessresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Preprocess<wbr>Results</a>
@@ -3219,8 +2920,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportcidfontlist_nodejs">
 <a href="#actionemailreportcidfontlist_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Cid<wbr>Font<wbr>List</a>
@@ -3229,8 +2929,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportincludesplunklogo_nodejs">
 <a href="#actionemailreportincludesplunklogo_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Include<wbr>Splunk<wbr>Logo</a>
@@ -3239,8 +2938,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportpaperorientation_nodejs">
 <a href="#actionemailreportpaperorientation_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Paper<wbr>Orientation</a>
@@ -3249,8 +2947,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportpapersize_nodejs">
 <a href="#actionemailreportpapersize_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Paper<wbr>Size</a>
@@ -3259,8 +2956,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportserverenabled_nodejs">
 <a href="#actionemailreportserverenabled_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Server<wbr>Enabled</a>
@@ -3269,8 +2965,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailreportserverurl_nodejs">
 <a href="#actionemailreportserverurl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Server<wbr>Url</a>
@@ -3279,8 +2974,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendcsv_nodejs">
 <a href="#actionemailsendcsv_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Send<wbr>Csv</a>
@@ -3289,8 +2983,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendpdf_nodejs">
 <a href="#actionemailsendpdf_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Send<wbr>Pdf</a>
@@ -3299,8 +2992,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsendresults_nodejs">
 <a href="#actionemailsendresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Send<wbr>Results</a>
@@ -3309,8 +3001,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailsubject_nodejs">
 <a href="#actionemailsubject_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Subject</a>
@@ -3319,8 +3010,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailto_nodejs">
 <a href="#actionemailto_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>To</a>
@@ -3329,8 +3019,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailtrackalert_nodejs">
 <a href="#actionemailtrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Track<wbr>Alert</a>
@@ -3339,8 +3028,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailttl_nodejs">
 <a href="#actionemailttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Ttl</a>
@@ -3349,8 +3037,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailusessl_nodejs">
 <a href="#actionemailusessl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Use<wbr>Ssl</a>
@@ -3359,8 +3046,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailusetls_nodejs">
 <a href="#actionemailusetls_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Use<wbr>Tls</a>
@@ -3369,8 +3055,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionemailwidthsortcolumns_nodejs">
 <a href="#actionemailwidthsortcolumns_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Width<wbr>Sort<wbr>Columns</a>
@@ -3379,8 +3064,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupcommand_nodejs">
 <a href="#actionpopulatelookupcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Command</a>
@@ -3389,8 +3073,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupdest_nodejs">
 <a href="#actionpopulatelookupdest_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Dest</a>
@@ -3399,8 +3082,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookuphostname_nodejs">
 <a href="#actionpopulatelookuphostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Hostname</a>
@@ -3409,8 +3091,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupmaxresults_nodejs">
 <a href="#actionpopulatelookupmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Results</a>
@@ -3419,8 +3100,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupmaxtime_nodejs">
 <a href="#actionpopulatelookupmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Time</a>
@@ -3429,8 +3109,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookuptrackalert_nodejs">
 <a href="#actionpopulatelookuptrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Track<wbr>Alert</a>
@@ -3439,8 +3118,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionpopulatelookupttl_nodejs">
 <a href="#actionpopulatelookupttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Ttl</a>
@@ -3449,8 +3127,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsscommand_nodejs">
 <a href="#actionrsscommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Command</a>
@@ -3459,8 +3136,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsshostname_nodejs">
 <a href="#actionrsshostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Hostname</a>
@@ -3469,8 +3145,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssmaxresults_nodejs">
 <a href="#actionrssmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Max<wbr>Results</a>
@@ -3479,8 +3154,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssmaxtime_nodejs">
 <a href="#actionrssmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Max<wbr>Time</a>
@@ -3489,8 +3163,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrsstrackalert_nodejs">
 <a href="#actionrsstrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Track<wbr>Alert</a>
@@ -3499,8 +3172,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionrssttl_nodejs">
 <a href="#actionrssttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Ttl</a>
@@ -3509,8 +3181,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptcommand_nodejs">
 <a href="#actionscriptcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Command</a>
@@ -3519,8 +3190,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptfilename_nodejs">
 <a href="#actionscriptfilename_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Filename</a>
@@ -3529,8 +3199,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscripthostname_nodejs">
 <a href="#actionscripthostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Hostname</a>
@@ -3539,8 +3208,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptmaxresults_nodejs">
 <a href="#actionscriptmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Max<wbr>Results</a>
@@ -3549,8 +3217,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptmaxtime_nodejs">
 <a href="#actionscriptmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Max<wbr>Time</a>
@@ -3559,8 +3226,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscripttrackalert_nodejs">
 <a href="#actionscripttrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Track<wbr>Alert</a>
@@ -3569,8 +3235,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionscriptttl_nodejs">
 <a href="#actionscriptttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Ttl</a>
@@ -3579,8 +3244,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamattachment_nodejs">
 <a href="#actionslackparamattachment_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Attachment</a>
@@ -3589,8 +3253,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamchannel_nodejs">
 <a href="#actionslackparamchannel_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Channel</a>
@@ -3599,8 +3262,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamfields_nodejs">
 <a href="#actionslackparamfields_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Fields</a>
@@ -3609,8 +3271,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparammessage_nodejs">
 <a href="#actionslackparammessage_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Message</a>
@@ -3619,8 +3280,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionslackparamwebhookurloverride_nodejs">
 <a href="#actionslackparamwebhookurloverride_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Webhook<wbr>Url<wbr>Override</a>
@@ -3629,8 +3289,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexcommand_nodejs">
 <a href="#actionsummaryindexcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Command</a>
@@ -3639,8 +3298,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexhostname_nodejs">
 <a href="#actionsummaryindexhostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Hostname</a>
@@ -3649,8 +3307,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexinline_nodejs">
 <a href="#actionsummaryindexinline_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Inline</a>
@@ -3659,8 +3316,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexmaxresults_nodejs">
 <a href="#actionsummaryindexmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Max<wbr>Results</a>
@@ -3669,8 +3325,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexmaxtime_nodejs">
 <a href="#actionsummaryindexmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Max<wbr>Time</a>
@@ -3679,8 +3334,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexname_nodejs">
 <a href="#actionsummaryindexname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Name</a>
@@ -3689,8 +3343,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindextrackalert_nodejs">
 <a href="#actionsummaryindextrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Track<wbr>Alert</a>
@@ -3699,8 +3352,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actionsummaryindexttl_nodejs">
 <a href="#actionsummaryindexttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Ttl</a>
@@ -3709,8 +3361,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -3719,8 +3370,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcomparator_nodejs">
 <a href="#alertcomparator_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Comparator</a>
@@ -3729,8 +3379,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertcondition_nodejs">
 <a href="#alertcondition_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Condition</a>
@@ -3739,8 +3388,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdigestmode_nodejs">
 <a href="#alertdigestmode_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Digest<wbr>Mode</a>
@@ -3749,8 +3397,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertexpires_nodejs">
 <a href="#alertexpires_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Expires</a>
@@ -3759,8 +3406,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertseverity_nodejs">
 <a href="#alertseverity_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Severity</a>
@@ -3769,8 +3415,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppress_nodejs">
 <a href="#alertsuppress_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Suppress</a>
@@ -3779,8 +3424,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppressfields_nodejs">
 <a href="#alertsuppressfields_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Suppress<wbr>Fields</a>
@@ -3789,8 +3433,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertsuppressperiod_nodejs">
 <a href="#alertsuppressperiod_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Suppress<wbr>Period</a>
@@ -3799,8 +3442,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertthreshold_nodejs">
 <a href="#alertthreshold_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Threshold</a>
@@ -3809,8 +3451,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttrack_nodejs">
 <a href="#alerttrack_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Track</a>
@@ -3819,8 +3460,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttype_nodejs">
 <a href="#alerttype_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Type</a>
@@ -3829,8 +3469,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowskew_nodejs">
 <a href="#allowskew_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Skew</a>
@@ -3839,8 +3478,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarize_nodejs">
 <a href="#autosummarize_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize</a>
@@ -3849,8 +3487,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizecommand_nodejs">
 <a href="#autosummarizecommand_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Command</a>
@@ -3859,8 +3496,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizecronschedule_nodejs">
 <a href="#autosummarizecronschedule_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Cron<wbr>Schedule</a>
@@ -3869,8 +3505,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchearliesttime_nodejs">
 <a href="#autosummarizedispatchearliesttime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Earliest<wbr>Time</a>
@@ -3879,8 +3514,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchlatesttime_nodejs">
 <a href="#autosummarizedispatchlatesttime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Latest<wbr>Time</a>
@@ -3889,8 +3523,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchtimeformat_nodejs">
 <a href="#autosummarizedispatchtimeformat_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Time<wbr>Format</a>
@@ -3899,8 +3532,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizedispatchttl_nodejs">
 <a href="#autosummarizedispatchttl_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Ttl</a>
@@ -3909,8 +3541,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxdisabledbuckets_nodejs">
 <a href="#autosummarizemaxdisabledbuckets_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Disabled<wbr>Buckets</a>
@@ -3919,8 +3550,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxsummaryratio_nodejs">
 <a href="#autosummarizemaxsummaryratio_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Ratio</a>
@@ -3929,8 +3559,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxsummarysize_nodejs">
 <a href="#autosummarizemaxsummarysize_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Size</a>
@@ -3939,8 +3568,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizemaxtime_nodejs">
 <a href="#autosummarizemaxtime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Time</a>
@@ -3949,8 +3577,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizesuspendperiod_nodejs">
 <a href="#autosummarizesuspendperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Suspend<wbr>Period</a>
@@ -3959,8 +3586,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosummarizetimespan_nodejs">
 <a href="#autosummarizetimespan_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Timespan</a>
@@ -3969,8 +3595,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronschedule_nodejs">
 <a href="#cronschedule_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Schedule</a>
@@ -3979,8 +3604,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3989,8 +3613,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -3999,8 +3622,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchbuckets_nodejs">
 <a href="#dispatchbuckets_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Buckets</a>
@@ -4009,8 +3631,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchearliesttime_nodejs">
 <a href="#dispatchearliesttime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Earliest<wbr>Time</a>
@@ -4019,8 +3640,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexearliest_nodejs">
 <a href="#dispatchindexearliest_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Index<wbr>Earliest</a>
@@ -4029,8 +3649,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexlatest_nodejs">
 <a href="#dispatchindexlatest_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Index<wbr>Latest</a>
@@ -4039,8 +3658,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtime_nodejs">
 <a href="#dispatchindexedrealtime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Indexed<wbr>Realtime</a>
@@ -4049,8 +3667,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtimeminspan_nodejs">
 <a href="#dispatchindexedrealtimeminspan_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Indexed<wbr>Realtime<wbr>Minspan</a>
@@ -4059,8 +3676,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchindexedrealtimeoffset_nodejs">
 <a href="#dispatchindexedrealtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Indexed<wbr>Realtime<wbr>Offset</a>
@@ -4069,8 +3685,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchlatesttime_nodejs">
 <a href="#dispatchlatesttime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Latest<wbr>Time</a>
@@ -4079,8 +3694,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchlookups_nodejs">
 <a href="#dispatchlookups_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Lookups</a>
@@ -4089,8 +3703,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchmaxcount_nodejs">
 <a href="#dispatchmaxcount_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Max<wbr>Count</a>
@@ -4099,8 +3712,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchmaxtime_nodejs">
 <a href="#dispatchmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Max<wbr>Time</a>
@@ -4109,8 +3721,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchreducefreq_nodejs">
 <a href="#dispatchreducefreq_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Reduce<wbr>Freq</a>
@@ -4119,8 +3730,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchrtbackfill_nodejs">
 <a href="#dispatchrtbackfill_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Rt<wbr>Backfill</a>
@@ -4129,8 +3739,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchrtmaximumspan_nodejs">
 <a href="#dispatchrtmaximumspan_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Rt<wbr>Maximum<wbr>Span</a>
@@ -4139,8 +3748,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchspawnprocess_nodejs">
 <a href="#dispatchspawnprocess_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Spawn<wbr>Process</a>
@@ -4149,8 +3757,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchtimeformat_nodejs">
 <a href="#dispatchtimeformat_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Time<wbr>Format</a>
@@ -4159,8 +3766,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatchttl_nodejs">
 <a href="#dispatchttl_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Ttl</a>
@@ -4169,8 +3775,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayview_nodejs">
 <a href="#displayview_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>View</a>
@@ -4179,8 +3784,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isscheduled_nodejs">
 <a href="#isscheduled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled</a>
@@ -4189,8 +3793,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isvisible_nodejs">
 <a href="#isvisible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Visible</a>
@@ -4199,8 +3802,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrent_nodejs">
 <a href="#maxconcurrent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent</a>
@@ -4209,8 +3811,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4219,8 +3820,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimeschedule_nodejs">
 <a href="#realtimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Schedule</a>
@@ -4229,8 +3829,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestuidispatchapp_nodejs">
 <a href="#requestuidispatchapp_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Ui<wbr>Dispatch<wbr>App</a>
@@ -4239,8 +3838,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestuidispatchview_nodejs">
 <a href="#requestuidispatchview_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Ui<wbr>Dispatch<wbr>View</a>
@@ -4249,8 +3847,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartonsearchpeeradd_nodejs">
 <a href="#restartonsearchpeeradd_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>On<wbr>Searchpeer<wbr>Add</a>
@@ -4259,8 +3856,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runonstartup_nodejs">
 <a href="#runonstartup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>On<wbr>Startup</a>
@@ -4269,8 +3865,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulepriority_nodejs">
 <a href="#schedulepriority_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Priority</a>
@@ -4279,8 +3874,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulewindow_nodejs">
 <a href="#schedulewindow_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Window</a>
@@ -4289,8 +3883,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsid_nodejs">
 <a href="#vsid_nodejs" style="color: inherit; text-decoration: inherit;">vsid</a>
@@ -4299,8 +3892,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadpool_nodejs">
 <a href="#workloadpool_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Pool</a>
@@ -4309,14 +3901,11 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="search_python">
 <a href="#search_python" style="color: inherit; text-decoration: inherit;">search</a>
@@ -4325,8 +3914,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -4335,8 +3923,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_auth_password_python">
 <a href="#action_email_auth_password_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>auth_<wbr>password</a>
@@ -4345,8 +3932,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_auth_username_python">
 <a href="#action_email_auth_username_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>auth_<wbr>username</a>
@@ -4355,8 +3941,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_bcc_python">
 <a href="#action_email_bcc_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>bcc</a>
@@ -4365,8 +3950,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_cc_python">
 <a href="#action_email_cc_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>cc</a>
@@ -4375,8 +3959,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_command_python">
 <a href="#action_email_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>command</a>
@@ -4385,8 +3968,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_format_python">
 <a href="#action_email_format_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>format</a>
@@ -4395,8 +3977,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_from_python">
 <a href="#action_email_from_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>from</a>
@@ -4405,8 +3986,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_hostname_python">
 <a href="#action_email_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>hostname</a>
@@ -4415,8 +3995,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_include_results_link_python">
 <a href="#action_email_include_results_link_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>results_<wbr>link</a>
@@ -4425,8 +4004,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_include_search_python">
 <a href="#action_email_include_search_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>search</a>
@@ -4435,8 +4013,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_include_trigger_python">
 <a href="#action_email_include_trigger_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>trigger</a>
@@ -4445,8 +4022,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_include_trigger_time_python">
 <a href="#action_email_include_trigger_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>trigger_<wbr>time</a>
@@ -4455,8 +4031,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_include_view_link_python">
 <a href="#action_email_include_view_link_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>view_<wbr>link</a>
@@ -4465,8 +4040,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_inline_python">
 <a href="#action_email_inline_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>inline</a>
@@ -4475,8 +4049,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_mailserver_python">
 <a href="#action_email_mailserver_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>mailserver</a>
@@ -4485,8 +4058,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_max_results_python">
 <a href="#action_email_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>max_<wbr>results</a>
@@ -4495,8 +4067,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_max_time_python">
 <a href="#action_email_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>max_<wbr>time</a>
@@ -4505,8 +4076,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_message_alert_python">
 <a href="#action_email_message_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>message_<wbr>alert</a>
@@ -4515,8 +4085,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_message_report_python">
 <a href="#action_email_message_report_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>message_<wbr>report</a>
@@ -4525,8 +4094,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_pdfview_python">
 <a href="#action_email_pdfview_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>pdfview</a>
@@ -4535,8 +4103,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_preprocess_results_python">
 <a href="#action_email_preprocess_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>preprocess_<wbr>results</a>
@@ -4545,8 +4112,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_report_cid_font_list_python">
 <a href="#action_email_report_cid_font_list_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>cid_<wbr>font_<wbr>list</a>
@@ -4555,8 +4121,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_report_include_splunk_logo_python">
 <a href="#action_email_report_include_splunk_logo_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>include_<wbr>splunk_<wbr>logo</a>
@@ -4565,8 +4130,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_report_paper_orientation_python">
 <a href="#action_email_report_paper_orientation_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>paper_<wbr>orientation</a>
@@ -4575,8 +4139,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_report_paper_size_python">
 <a href="#action_email_report_paper_size_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>paper_<wbr>size</a>
@@ -4585,8 +4148,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_report_server_enabled_python">
 <a href="#action_email_report_server_enabled_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>server_<wbr>enabled</a>
@@ -4595,8 +4157,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_report_server_url_python">
 <a href="#action_email_report_server_url_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>server_<wbr>url</a>
@@ -4605,8 +4166,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_send_csv_python">
 <a href="#action_email_send_csv_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>send_<wbr>csv</a>
@@ -4615,8 +4175,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_send_pdf_python">
 <a href="#action_email_send_pdf_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>send_<wbr>pdf</a>
@@ -4625,8 +4184,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_send_results_python">
 <a href="#action_email_send_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>send_<wbr>results</a>
@@ -4635,8 +4193,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_subject_python">
 <a href="#action_email_subject_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>subject</a>
@@ -4645,8 +4202,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_to_python">
 <a href="#action_email_to_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>to</a>
@@ -4655,8 +4211,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_track_alert_python">
 <a href="#action_email_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>track_<wbr>alert</a>
@@ -4665,8 +4220,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_ttl_python">
 <a href="#action_email_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>ttl</a>
@@ -4675,8 +4229,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_use_ssl_python">
 <a href="#action_email_use_ssl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>use_<wbr>ssl</a>
@@ -4685,8 +4238,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_use_tls_python">
 <a href="#action_email_use_tls_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>use_<wbr>tls</a>
@@ -4695,8 +4247,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_email_width_sort_columns_python">
 <a href="#action_email_width_sort_columns_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>width_<wbr>sort_<wbr>columns</a>
@@ -4705,8 +4256,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_command_python">
 <a href="#action_populate_lookup_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>command</a>
@@ -4715,8 +4265,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_dest_python">
 <a href="#action_populate_lookup_dest_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>dest</a>
@@ -4725,8 +4274,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_hostname_python">
 <a href="#action_populate_lookup_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>hostname</a>
@@ -4735,8 +4283,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_max_results_python">
 <a href="#action_populate_lookup_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>max_<wbr>results</a>
@@ -4745,8 +4292,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_max_time_python">
 <a href="#action_populate_lookup_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>max_<wbr>time</a>
@@ -4755,8 +4301,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_track_alert_python">
 <a href="#action_populate_lookup_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>track_<wbr>alert</a>
@@ -4765,8 +4310,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_populate_lookup_ttl_python">
 <a href="#action_populate_lookup_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>ttl</a>
@@ -4775,8 +4319,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_rss_command_python">
 <a href="#action_rss_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>command</a>
@@ -4785,8 +4328,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_rss_hostname_python">
 <a href="#action_rss_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>hostname</a>
@@ -4795,8 +4337,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_rss_max_results_python">
 <a href="#action_rss_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>max_<wbr>results</a>
@@ -4805,8 +4346,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_rss_max_time_python">
 <a href="#action_rss_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>max_<wbr>time</a>
@@ -4815,8 +4355,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_rss_track_alert_python">
 <a href="#action_rss_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>track_<wbr>alert</a>
@@ -4825,8 +4364,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_rss_ttl_python">
 <a href="#action_rss_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>ttl</a>
@@ -4835,8 +4373,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_command_python">
 <a href="#action_script_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>command</a>
@@ -4845,8 +4382,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_filename_python">
 <a href="#action_script_filename_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>filename</a>
@@ -4855,8 +4391,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_hostname_python">
 <a href="#action_script_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>hostname</a>
@@ -4865,8 +4400,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_max_results_python">
 <a href="#action_script_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>max_<wbr>results</a>
@@ -4875,8 +4409,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_max_time_python">
 <a href="#action_script_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>max_<wbr>time</a>
@@ -4885,8 +4418,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_track_alert_python">
 <a href="#action_script_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>track_<wbr>alert</a>
@@ -4895,8 +4427,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_script_ttl_python">
 <a href="#action_script_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>ttl</a>
@@ -4905,8 +4436,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_slack_param_attachment_python">
 <a href="#action_slack_param_attachment_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>attachment</a>
@@ -4915,8 +4445,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_slack_param_channel_python">
 <a href="#action_slack_param_channel_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>channel</a>
@@ -4925,8 +4454,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_slack_param_fields_python">
 <a href="#action_slack_param_fields_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>fields</a>
@@ -4935,8 +4463,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_slack_param_message_python">
 <a href="#action_slack_param_message_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>message</a>
@@ -4945,8 +4472,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_slack_param_webhook_url_override_python">
 <a href="#action_slack_param_webhook_url_override_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>webhook_<wbr>url_<wbr>override</a>
@@ -4955,8 +4481,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_command_python">
 <a href="#action_summary_index_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>command</a>
@@ -4965,8 +4490,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_hostname_python">
 <a href="#action_summary_index_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>hostname</a>
@@ -4975,8 +4499,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_inline_python">
 <a href="#action_summary_index_inline_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>inline</a>
@@ -4985,8 +4508,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_max_results_python">
 <a href="#action_summary_index_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>max_<wbr>results</a>
@@ -4995,8 +4517,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_max_time_python">
 <a href="#action_summary_index_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>max_<wbr>time</a>
@@ -5005,8 +4526,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_name_python">
 <a href="#action_summary_index_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>name</a>
@@ -5015,8 +4535,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_track_alert_python">
 <a href="#action_summary_index_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>track_<wbr>alert</a>
@@ -5025,8 +4544,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_summary_index_ttl_python">
 <a href="#action_summary_index_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>ttl</a>
@@ -5035,8 +4553,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -5045,8 +4562,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_comparator_python">
 <a href="#alert_comparator_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>comparator</a>
@@ -5055,8 +4571,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_condition_python">
 <a href="#alert_condition_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>condition</a>
@@ -5065,8 +4580,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_digest_mode_python">
 <a href="#alert_digest_mode_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>digest_<wbr>mode</a>
@@ -5075,8 +4589,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_expires_python">
 <a href="#alert_expires_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>expires</a>
@@ -5085,8 +4598,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_severity_python">
 <a href="#alert_severity_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>severity</a>
@@ -5095,8 +4607,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_suppress_python">
 <a href="#alert_suppress_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>suppress</a>
@@ -5105,8 +4616,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_suppress_fields_python">
 <a href="#alert_suppress_fields_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>suppress_<wbr>fields</a>
@@ -5115,8 +4625,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_suppress_period_python">
 <a href="#alert_suppress_period_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>suppress_<wbr>period</a>
@@ -5125,8 +4634,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_threshold_python">
 <a href="#alert_threshold_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>threshold</a>
@@ -5135,8 +4643,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_track_python">
 <a href="#alert_track_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>track</a>
@@ -5145,8 +4652,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_type_python">
 <a href="#alert_type_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>type</a>
@@ -5155,8 +4661,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_skew_python">
 <a href="#allow_skew_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>skew</a>
@@ -5165,8 +4670,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_python">
 <a href="#auto_summarize_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize</a>
@@ -5175,8 +4679,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_command_python">
 <a href="#auto_summarize_command_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>command</a>
@@ -5185,8 +4688,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_cron_schedule_python">
 <a href="#auto_summarize_cron_schedule_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>cron_<wbr>schedule</a>
@@ -5195,8 +4697,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_dispatch_earliest_time_python">
 <a href="#auto_summarize_dispatch_earliest_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>earliest_<wbr>time</a>
@@ -5205,8 +4706,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_dispatch_latest_time_python">
 <a href="#auto_summarize_dispatch_latest_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>latest_<wbr>time</a>
@@ -5215,8 +4715,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_dispatch_time_format_python">
 <a href="#auto_summarize_dispatch_time_format_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>time_<wbr>format</a>
@@ -5225,8 +4724,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_dispatch_ttl_python">
 <a href="#auto_summarize_dispatch_ttl_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>ttl</a>
@@ -5235,8 +4733,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_max_disabled_buckets_python">
 <a href="#auto_summarize_max_disabled_buckets_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>disabled_<wbr>buckets</a>
@@ -5245,8 +4742,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_max_summary_ratio_python">
 <a href="#auto_summarize_max_summary_ratio_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>summary_<wbr>ratio</a>
@@ -5255,8 +4751,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_max_summary_size_python">
 <a href="#auto_summarize_max_summary_size_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>summary_<wbr>size</a>
@@ -5265,8 +4760,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_max_time_python">
 <a href="#auto_summarize_max_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>time</a>
@@ -5275,8 +4769,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_suspend_period_python">
 <a href="#auto_summarize_suspend_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>suspend_<wbr>period</a>
@@ -5285,8 +4778,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_summarize_timespan_python">
 <a href="#auto_summarize_timespan_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>timespan</a>
@@ -5295,8 +4787,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cron_schedule_python">
 <a href="#cron_schedule_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>schedule</a>
@@ -5305,8 +4796,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -5315,8 +4805,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -5325,8 +4814,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_buckets_python">
 <a href="#dispatch_buckets_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>buckets</a>
@@ -5335,8 +4823,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_earliest_time_python">
 <a href="#dispatch_earliest_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>earliest_<wbr>time</a>
@@ -5345,8 +4832,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_index_earliest_python">
 <a href="#dispatch_index_earliest_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>index_<wbr>earliest</a>
@@ -5355,8 +4841,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_index_latest_python">
 <a href="#dispatch_index_latest_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>index_<wbr>latest</a>
@@ -5365,8 +4850,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_indexed_realtime_python">
 <a href="#dispatch_indexed_realtime_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>indexed_<wbr>realtime</a>
@@ -5375,8 +4859,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_indexed_realtime_minspan_python">
 <a href="#dispatch_indexed_realtime_minspan_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>indexed_<wbr>realtime_<wbr>minspan</a>
@@ -5385,8 +4868,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_indexed_realtime_offset_python">
 <a href="#dispatch_indexed_realtime_offset_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>indexed_<wbr>realtime_<wbr>offset</a>
@@ -5395,8 +4877,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_latest_time_python">
 <a href="#dispatch_latest_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>latest_<wbr>time</a>
@@ -5405,8 +4886,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_lookups_python">
 <a href="#dispatch_lookups_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>lookups</a>
@@ -5415,8 +4895,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_max_count_python">
 <a href="#dispatch_max_count_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>max_<wbr>count</a>
@@ -5425,8 +4904,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_max_time_python">
 <a href="#dispatch_max_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>max_<wbr>time</a>
@@ -5435,8 +4913,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_reduce_freq_python">
 <a href="#dispatch_reduce_freq_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>reduce_<wbr>freq</a>
@@ -5445,8 +4922,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_rt_backfill_python">
 <a href="#dispatch_rt_backfill_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rt_<wbr>backfill</a>
@@ -5455,8 +4931,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_rt_maximum_span_python">
 <a href="#dispatch_rt_maximum_span_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rt_<wbr>maximum_<wbr>span</a>
@@ -5465,8 +4940,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_spawn_process_python">
 <a href="#dispatch_spawn_process_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>spawn_<wbr>process</a>
@@ -5475,8 +4949,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_time_format_python">
 <a href="#dispatch_time_format_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>time_<wbr>format</a>
@@ -5485,8 +4958,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dispatch_ttl_python">
 <a href="#dispatch_ttl_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>ttl</a>
@@ -5495,8 +4967,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_view_python">
 <a href="#display_view_python" style="color: inherit; text-decoration: inherit;">display_<wbr>view</a>
@@ -5505,8 +4976,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_python">
 <a href="#is_scheduled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled</a>
@@ -5515,8 +4985,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_visible_python">
 <a href="#is_visible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>visible</a>
@@ -5525,8 +4994,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_python">
 <a href="#max_concurrent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent</a>
@@ -5535,8 +5003,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5545,8 +5012,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtime_schedule_python">
 <a href="#realtime_schedule_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>schedule</a>
@@ -5555,8 +5021,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_ui_dispatch_app_python">
 <a href="#request_ui_dispatch_app_python" style="color: inherit; text-decoration: inherit;">request_<wbr>ui_<wbr>dispatch_<wbr>app</a>
@@ -5565,8 +5030,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_ui_dispatch_view_python">
 <a href="#request_ui_dispatch_view_python" style="color: inherit; text-decoration: inherit;">request_<wbr>ui_<wbr>dispatch_<wbr>view</a>
@@ -5575,8 +5039,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_on_searchpeer_add_python">
 <a href="#restart_on_searchpeer_add_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>on_<wbr>searchpeer_<wbr>add</a>
@@ -5585,8 +5048,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_on_startup_python">
 <a href="#run_on_startup_python" style="color: inherit; text-decoration: inherit;">run_<wbr>on_<wbr>startup</a>
@@ -5595,8 +5057,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_priority_python">
 <a href="#schedule_priority_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>priority</a>
@@ -5605,8 +5066,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_window_python">
 <a href="#schedule_window_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>window</a>
@@ -5615,8 +5075,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vsid_python">
 <a href="#vsid_python" style="color: inherit; text-decoration: inherit;">vsid</a>
@@ -5625,8 +5084,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_pool_python">
 <a href="#workload_pool_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>pool</a>
@@ -5635,8 +5093,7 @@ The SavedSearches resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -5647,9 +5104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actionemail_csharp">
 <a href="#actionemail_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email</a>
@@ -5658,8 +5113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionpopulatelookup_csharp">
 <a href="#actionpopulatelookup_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup</a>
@@ -5668,8 +5122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionrss_csharp">
 <a href="#actionrss_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss</a>
@@ -5678,8 +5131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionscript_csharp">
 <a href="#actionscript_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script</a>
@@ -5688,8 +5140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionsummaryindex_csharp">
 <a href="#actionsummaryindex_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index</a>
@@ -5698,8 +5149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5707,14 +5157,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actionemail_go">
 <a href="#actionemail_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email</a>
@@ -5723,8 +5170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionpopulatelookup_go">
 <a href="#actionpopulatelookup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup</a>
@@ -5733,8 +5179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionrss_go">
 <a href="#actionrss_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss</a>
@@ -5743,8 +5188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionscript_go">
 <a href="#actionscript_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script</a>
@@ -5753,8 +5197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionsummaryindex_go">
 <a href="#actionsummaryindex_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index</a>
@@ -5763,8 +5206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5772,14 +5214,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="actionemail_nodejs">
 <a href="#actionemail_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email</a>
@@ -5788,8 +5227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionpopulatelookup_nodejs">
 <a href="#actionpopulatelookup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup</a>
@@ -5798,8 +5236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionrss_nodejs">
 <a href="#actionrss_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss</a>
@@ -5808,8 +5245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionscript_nodejs">
 <a href="#actionscript_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script</a>
@@ -5818,8 +5254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="actionsummaryindex_nodejs">
 <a href="#actionsummaryindex_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index</a>
@@ -5828,8 +5263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5837,14 +5271,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="action_email_python">
 <a href="#action_email_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email</a>
@@ -5853,8 +5284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="action_populate_lookup_python">
 <a href="#action_populate_lookup_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup</a>
@@ -5863,8 +5293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="action_rss_python">
 <a href="#action_rss_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss</a>
@@ -5873,8 +5302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="action_script_python">
 <a href="#action_script_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script</a>
@@ -5883,8 +5311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="action_summary_index_python">
 <a href="#action_summary_index_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index</a>
@@ -5893,8 +5320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5902,8 +5328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -6030,9 +5455,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -6041,8 +5464,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemail_csharp">
 <a href="#state_actionemail_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email</a>
@@ -6051,8 +5473,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailauthpassword_csharp">
 <a href="#state_actionemailauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Password</a>
@@ -6061,8 +5482,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailauthusername_csharp">
 <a href="#state_actionemailauthusername_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Username</a>
@@ -6071,8 +5491,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailbcc_csharp">
 <a href="#state_actionemailbcc_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Bcc</a>
@@ -6081,8 +5500,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailcc_csharp">
 <a href="#state_actionemailcc_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Cc</a>
@@ -6091,8 +5509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailcommand_csharp">
 <a href="#state_actionemailcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Command</a>
@@ -6101,8 +5518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailformat_csharp">
 <a href="#state_actionemailformat_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Format</a>
@@ -6111,8 +5527,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailfrom_csharp">
 <a href="#state_actionemailfrom_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>From</a>
@@ -6121,8 +5536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailhostname_csharp">
 <a href="#state_actionemailhostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Hostname</a>
@@ -6131,8 +5545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincluderesultslink_csharp">
 <a href="#state_actionemailincluderesultslink_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Results<wbr>Link</a>
@@ -6141,8 +5554,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludesearch_csharp">
 <a href="#state_actionemailincludesearch_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Search</a>
@@ -6151,8 +5563,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludetrigger_csharp">
 <a href="#state_actionemailincludetrigger_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger</a>
@@ -6161,8 +5572,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludetriggertime_csharp">
 <a href="#state_actionemailincludetriggertime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger<wbr>Time</a>
@@ -6171,8 +5581,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludeviewlink_csharp">
 <a href="#state_actionemailincludeviewlink_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>View<wbr>Link</a>
@@ -6181,8 +5590,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailinline_csharp">
 <a href="#state_actionemailinline_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Inline</a>
@@ -6191,8 +5599,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmailserver_csharp">
 <a href="#state_actionemailmailserver_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Mailserver</a>
@@ -6201,8 +5608,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmaxresults_csharp">
 <a href="#state_actionemailmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Results</a>
@@ -6211,8 +5617,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmaxtime_csharp">
 <a href="#state_actionemailmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Time</a>
@@ -6221,8 +5626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmessagealert_csharp">
 <a href="#state_actionemailmessagealert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Alert</a>
@@ -6231,8 +5635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmessagereport_csharp">
 <a href="#state_actionemailmessagereport_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Report</a>
@@ -6241,8 +5644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailpdfview_csharp">
 <a href="#state_actionemailpdfview_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Pdfview</a>
@@ -6251,8 +5653,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailpreprocessresults_csharp">
 <a href="#state_actionemailpreprocessresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Preprocess<wbr>Results</a>
@@ -6261,8 +5662,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportcidfontlist_csharp">
 <a href="#state_actionemailreportcidfontlist_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Cid<wbr>Font<wbr>List</a>
@@ -6271,8 +5671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportincludesplunklogo_csharp">
 <a href="#state_actionemailreportincludesplunklogo_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Include<wbr>Splunk<wbr>Logo</a>
@@ -6281,8 +5680,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportpaperorientation_csharp">
 <a href="#state_actionemailreportpaperorientation_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Orientation</a>
@@ -6291,8 +5689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportpapersize_csharp">
 <a href="#state_actionemailreportpapersize_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Size</a>
@@ -6301,8 +5698,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportserverenabled_csharp">
 <a href="#state_actionemailreportserverenabled_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Enabled</a>
@@ -6311,8 +5707,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportserverurl_csharp">
 <a href="#state_actionemailreportserverurl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Url</a>
@@ -6321,8 +5716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendcsv_csharp">
 <a href="#state_actionemailsendcsv_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Csv</a>
@@ -6331,8 +5725,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendpdf_csharp">
 <a href="#state_actionemailsendpdf_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Pdf</a>
@@ -6341,8 +5734,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendresults_csharp">
 <a href="#state_actionemailsendresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Results</a>
@@ -6351,8 +5743,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsubject_csharp">
 <a href="#state_actionemailsubject_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Subject</a>
@@ -6361,8 +5752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailto_csharp">
 <a href="#state_actionemailto_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>To</a>
@@ -6371,8 +5761,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailtrackalert_csharp">
 <a href="#state_actionemailtrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Track<wbr>Alert</a>
@@ -6381,8 +5770,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailttl_csharp">
 <a href="#state_actionemailttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Ttl</a>
@@ -6391,8 +5779,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailusessl_csharp">
 <a href="#state_actionemailusessl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Ssl</a>
@@ -6401,8 +5788,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailusetls_csharp">
 <a href="#state_actionemailusetls_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Tls</a>
@@ -6411,8 +5797,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailwidthsortcolumns_csharp">
 <a href="#state_actionemailwidthsortcolumns_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Width<wbr>Sort<wbr>Columns</a>
@@ -6421,8 +5806,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookup_csharp">
 <a href="#state_actionpopulatelookup_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup</a>
@@ -6431,8 +5815,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupcommand_csharp">
 <a href="#state_actionpopulatelookupcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Command</a>
@@ -6441,8 +5824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupdest_csharp">
 <a href="#state_actionpopulatelookupdest_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Dest</a>
@@ -6451,8 +5833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookuphostname_csharp">
 <a href="#state_actionpopulatelookuphostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Hostname</a>
@@ -6461,8 +5842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupmaxresults_csharp">
 <a href="#state_actionpopulatelookupmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Results</a>
@@ -6471,8 +5851,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupmaxtime_csharp">
 <a href="#state_actionpopulatelookupmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Time</a>
@@ -6481,8 +5860,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookuptrackalert_csharp">
 <a href="#state_actionpopulatelookuptrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Track<wbr>Alert</a>
@@ -6491,8 +5869,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupttl_csharp">
 <a href="#state_actionpopulatelookupttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Ttl</a>
@@ -6501,8 +5878,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrss_csharp">
 <a href="#state_actionrss_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss</a>
@@ -6511,8 +5887,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsscommand_csharp">
 <a href="#state_actionrsscommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Command</a>
@@ -6521,8 +5896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsshostname_csharp">
 <a href="#state_actionrsshostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Hostname</a>
@@ -6531,8 +5905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssmaxresults_csharp">
 <a href="#state_actionrssmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Results</a>
@@ -6541,8 +5914,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssmaxtime_csharp">
 <a href="#state_actionrssmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Time</a>
@@ -6551,8 +5923,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsstrackalert_csharp">
 <a href="#state_actionrsstrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Track<wbr>Alert</a>
@@ -6561,8 +5932,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssttl_csharp">
 <a href="#state_actionrssttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Ttl</a>
@@ -6571,8 +5941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscript_csharp">
 <a href="#state_actionscript_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script</a>
@@ -6581,8 +5950,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptcommand_csharp">
 <a href="#state_actionscriptcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Command</a>
@@ -6591,8 +5959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptfilename_csharp">
 <a href="#state_actionscriptfilename_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Filename</a>
@@ -6601,8 +5968,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscripthostname_csharp">
 <a href="#state_actionscripthostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Hostname</a>
@@ -6611,8 +5977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptmaxresults_csharp">
 <a href="#state_actionscriptmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Results</a>
@@ -6621,8 +5986,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptmaxtime_csharp">
 <a href="#state_actionscriptmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Time</a>
@@ -6631,8 +5995,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscripttrackalert_csharp">
 <a href="#state_actionscripttrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Track<wbr>Alert</a>
@@ -6641,8 +6004,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptttl_csharp">
 <a href="#state_actionscriptttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Ttl</a>
@@ -6651,8 +6013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamattachment_csharp">
 <a href="#state_actionslackparamattachment_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Attachment</a>
@@ -6661,8 +6022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamchannel_csharp">
 <a href="#state_actionslackparamchannel_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Channel</a>
@@ -6671,8 +6031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamfields_csharp">
 <a href="#state_actionslackparamfields_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Fields</a>
@@ -6681,8 +6040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparammessage_csharp">
 <a href="#state_actionslackparammessage_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Message</a>
@@ -6691,8 +6049,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamwebhookurloverride_csharp">
 <a href="#state_actionslackparamwebhookurloverride_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Webhook<wbr>Url<wbr>Override</a>
@@ -6701,8 +6058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindex_csharp">
 <a href="#state_actionsummaryindex_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index</a>
@@ -6711,8 +6067,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexcommand_csharp">
 <a href="#state_actionsummaryindexcommand_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Command</a>
@@ -6721,8 +6076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexhostname_csharp">
 <a href="#state_actionsummaryindexhostname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Hostname</a>
@@ -6731,8 +6085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexinline_csharp">
 <a href="#state_actionsummaryindexinline_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Inline</a>
@@ -6741,8 +6094,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexmaxresults_csharp">
 <a href="#state_actionsummaryindexmaxresults_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Results</a>
@@ -6751,8 +6103,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexmaxtime_csharp">
 <a href="#state_actionsummaryindexmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Time</a>
@@ -6761,8 +6112,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexname_csharp">
 <a href="#state_actionsummaryindexname_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Name</a>
@@ -6771,8 +6121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindextrackalert_csharp">
 <a href="#state_actionsummaryindextrackalert_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Track<wbr>Alert</a>
@@ -6781,8 +6130,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexttl_csharp">
 <a href="#state_actionsummaryindexttl_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Ttl</a>
@@ -6791,8 +6139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actions_csharp">
 <a href="#state_actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -6801,8 +6148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcomparator_csharp">
 <a href="#state_alertcomparator_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Comparator</a>
@@ -6811,8 +6157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcondition_csharp">
 <a href="#state_alertcondition_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Condition</a>
@@ -6821,8 +6166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdigestmode_csharp">
 <a href="#state_alertdigestmode_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Digest<wbr>Mode</a>
@@ -6831,8 +6175,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertexpires_csharp">
 <a href="#state_alertexpires_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Expires</a>
@@ -6841,8 +6184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertseverity_csharp">
 <a href="#state_alertseverity_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Severity</a>
@@ -6851,8 +6193,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppress_csharp">
 <a href="#state_alertsuppress_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress</a>
@@ -6861,8 +6202,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppressfields_csharp">
 <a href="#state_alertsuppressfields_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Fields</a>
@@ -6871,8 +6211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppressperiod_csharp">
 <a href="#state_alertsuppressperiod_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Period</a>
@@ -6881,8 +6220,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertthreshold_csharp">
 <a href="#state_alertthreshold_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Threshold</a>
@@ -6891,8 +6229,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttrack_csharp">
 <a href="#state_alerttrack_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Track</a>
@@ -6901,8 +6238,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttype_csharp">
 <a href="#state_alerttype_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -6911,8 +6247,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowskew_csharp">
 <a href="#state_allowskew_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Skew</a>
@@ -6921,8 +6256,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarize_csharp">
 <a href="#state_autosummarize_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize</a>
@@ -6931,8 +6265,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizecommand_csharp">
 <a href="#state_autosummarizecommand_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Command</a>
@@ -6941,8 +6274,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizecronschedule_csharp">
 <a href="#state_autosummarizecronschedule_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Cron<wbr>Schedule</a>
@@ -6951,8 +6283,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchearliesttime_csharp">
 <a href="#state_autosummarizedispatchearliesttime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Earliest<wbr>Time</a>
@@ -6961,8 +6292,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchlatesttime_csharp">
 <a href="#state_autosummarizedispatchlatesttime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Latest<wbr>Time</a>
@@ -6971,8 +6301,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchtimeformat_csharp">
 <a href="#state_autosummarizedispatchtimeformat_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Time<wbr>Format</a>
@@ -6981,8 +6310,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchttl_csharp">
 <a href="#state_autosummarizedispatchttl_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Ttl</a>
@@ -6991,8 +6319,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxdisabledbuckets_csharp">
 <a href="#state_autosummarizemaxdisabledbuckets_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Disabled<wbr>Buckets</a>
@@ -7001,8 +6328,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxsummaryratio_csharp">
 <a href="#state_autosummarizemaxsummaryratio_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Ratio</a>
@@ -7011,8 +6337,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxsummarysize_csharp">
 <a href="#state_autosummarizemaxsummarysize_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Size</a>
@@ -7021,8 +6346,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxtime_csharp">
 <a href="#state_autosummarizemaxtime_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Time</a>
@@ -7031,8 +6355,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizesuspendperiod_csharp">
 <a href="#state_autosummarizesuspendperiod_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Suspend<wbr>Period</a>
@@ -7041,8 +6364,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizetimespan_csharp">
 <a href="#state_autosummarizetimespan_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Timespan</a>
@@ -7051,8 +6373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cronschedule_csharp">
 <a href="#state_cronschedule_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Schedule</a>
@@ -7061,8 +6382,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7071,8 +6391,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -7081,8 +6400,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchbuckets_csharp">
 <a href="#state_dispatchbuckets_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Buckets</a>
@@ -7091,8 +6409,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchearliesttime_csharp">
 <a href="#state_dispatchearliesttime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Earliest<wbr>Time</a>
@@ -7101,8 +6418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexearliest_csharp">
 <a href="#state_dispatchindexearliest_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Earliest</a>
@@ -7111,8 +6427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexlatest_csharp">
 <a href="#state_dispatchindexlatest_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Latest</a>
@@ -7121,8 +6436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtime_csharp">
 <a href="#state_dispatchindexedrealtime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime</a>
@@ -7131,8 +6445,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtimeminspan_csharp">
 <a href="#state_dispatchindexedrealtimeminspan_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Minspan</a>
@@ -7141,8 +6454,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtimeoffset_csharp">
 <a href="#state_dispatchindexedrealtimeoffset_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Offset</a>
@@ -7151,8 +6463,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchlatesttime_csharp">
 <a href="#state_dispatchlatesttime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Latest<wbr>Time</a>
@@ -7161,8 +6472,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchlookups_csharp">
 <a href="#state_dispatchlookups_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Lookups</a>
@@ -7171,8 +6481,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchmaxcount_csharp">
 <a href="#state_dispatchmaxcount_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Count</a>
@@ -7181,8 +6490,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchmaxtime_csharp">
 <a href="#state_dispatchmaxtime_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Time</a>
@@ -7191,8 +6499,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchreducefreq_csharp">
 <a href="#state_dispatchreducefreq_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Reduce<wbr>Freq</a>
@@ -7201,8 +6508,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchrtbackfill_csharp">
 <a href="#state_dispatchrtbackfill_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Backfill</a>
@@ -7211,8 +6517,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchrtmaximumspan_csharp">
 <a href="#state_dispatchrtmaximumspan_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Maximum<wbr>Span</a>
@@ -7221,8 +6526,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchspawnprocess_csharp">
 <a href="#state_dispatchspawnprocess_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Spawn<wbr>Process</a>
@@ -7231,8 +6535,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchtimeformat_csharp">
 <a href="#state_dispatchtimeformat_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Time<wbr>Format</a>
@@ -7241,8 +6544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchttl_csharp">
 <a href="#state_dispatchttl_csharp" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Ttl</a>
@@ -7251,8 +6553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayview_csharp">
 <a href="#state_displayview_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>View</a>
@@ -7261,8 +6562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isscheduled_csharp">
 <a href="#state_isscheduled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled</a>
@@ -7271,8 +6571,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isvisible_csharp">
 <a href="#state_isvisible_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Visible</a>
@@ -7281,8 +6580,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrent_csharp">
 <a href="#state_maxconcurrent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent</a>
@@ -7291,8 +6589,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7301,8 +6598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtimeschedule_csharp">
 <a href="#state_realtimeschedule_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Schedule</a>
@@ -7311,8 +6607,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestuidispatchapp_csharp">
 <a href="#state_requestuidispatchapp_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>App</a>
@@ -7321,8 +6616,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestuidispatchview_csharp">
 <a href="#state_requestuidispatchview_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>View</a>
@@ -7331,8 +6625,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restartonsearchpeeradd_csharp">
 <a href="#state_restartonsearchpeeradd_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>On<wbr>Searchpeer<wbr>Add</a>
@@ -7341,8 +6634,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runonstartup_csharp">
 <a href="#state_runonstartup_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>On<wbr>Startup</a>
@@ -7351,8 +6643,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulepriority_csharp">
 <a href="#state_schedulepriority_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Priority</a>
@@ -7361,8 +6652,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulewindow_csharp">
 <a href="#state_schedulewindow_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Window</a>
@@ -7371,8 +6661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_csharp">
 <a href="#state_search_csharp" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -7381,8 +6670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsid_csharp">
 <a href="#state_vsid_csharp" style="color: inherit; text-decoration: inherit;">Vsid</a>
@@ -7391,8 +6679,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadpool_csharp">
 <a href="#state_workloadpool_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
@@ -7401,14 +6688,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -7417,8 +6701,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemail_go">
 <a href="#state_actionemail_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email</a>
@@ -7427,8 +6710,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailauthpassword_go">
 <a href="#state_actionemailauthpassword_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Password</a>
@@ -7437,8 +6719,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailauthusername_go">
 <a href="#state_actionemailauthusername_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Auth<wbr>Username</a>
@@ -7447,8 +6728,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailbcc_go">
 <a href="#state_actionemailbcc_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Bcc</a>
@@ -7457,8 +6737,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailcc_go">
 <a href="#state_actionemailcc_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Cc</a>
@@ -7467,8 +6746,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailcommand_go">
 <a href="#state_actionemailcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Command</a>
@@ -7477,8 +6755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailformat_go">
 <a href="#state_actionemailformat_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Format</a>
@@ -7487,8 +6764,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailfrom_go">
 <a href="#state_actionemailfrom_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>From</a>
@@ -7497,8 +6773,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailhostname_go">
 <a href="#state_actionemailhostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Hostname</a>
@@ -7507,8 +6782,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincluderesultslink_go">
 <a href="#state_actionemailincluderesultslink_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Results<wbr>Link</a>
@@ -7517,8 +6791,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludesearch_go">
 <a href="#state_actionemailincludesearch_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Search</a>
@@ -7527,8 +6800,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludetrigger_go">
 <a href="#state_actionemailincludetrigger_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger</a>
@@ -7537,8 +6809,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludetriggertime_go">
 <a href="#state_actionemailincludetriggertime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>Trigger<wbr>Time</a>
@@ -7547,8 +6818,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludeviewlink_go">
 <a href="#state_actionemailincludeviewlink_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Include<wbr>View<wbr>Link</a>
@@ -7557,8 +6827,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailinline_go">
 <a href="#state_actionemailinline_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Inline</a>
@@ -7567,8 +6836,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmailserver_go">
 <a href="#state_actionemailmailserver_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Mailserver</a>
@@ -7577,8 +6845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmaxresults_go">
 <a href="#state_actionemailmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Results</a>
@@ -7587,8 +6854,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmaxtime_go">
 <a href="#state_actionemailmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Max<wbr>Time</a>
@@ -7597,8 +6863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmessagealert_go">
 <a href="#state_actionemailmessagealert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Alert</a>
@@ -7607,8 +6872,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmessagereport_go">
 <a href="#state_actionemailmessagereport_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Message<wbr>Report</a>
@@ -7617,8 +6881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailpdfview_go">
 <a href="#state_actionemailpdfview_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Pdfview</a>
@@ -7627,8 +6890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailpreprocessresults_go">
 <a href="#state_actionemailpreprocessresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Preprocess<wbr>Results</a>
@@ -7637,8 +6899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportcidfontlist_go">
 <a href="#state_actionemailreportcidfontlist_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Cid<wbr>Font<wbr>List</a>
@@ -7647,8 +6908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportincludesplunklogo_go">
 <a href="#state_actionemailreportincludesplunklogo_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Include<wbr>Splunk<wbr>Logo</a>
@@ -7657,8 +6917,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportpaperorientation_go">
 <a href="#state_actionemailreportpaperorientation_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Orientation</a>
@@ -7667,8 +6926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportpapersize_go">
 <a href="#state_actionemailreportpapersize_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Paper<wbr>Size</a>
@@ -7677,8 +6935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportserverenabled_go">
 <a href="#state_actionemailreportserverenabled_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Enabled</a>
@@ -7687,8 +6944,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportserverurl_go">
 <a href="#state_actionemailreportserverurl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Report<wbr>Server<wbr>Url</a>
@@ -7697,8 +6953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendcsv_go">
 <a href="#state_actionemailsendcsv_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Csv</a>
@@ -7707,8 +6962,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendpdf_go">
 <a href="#state_actionemailsendpdf_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Pdf</a>
@@ -7717,8 +6971,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendresults_go">
 <a href="#state_actionemailsendresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Send<wbr>Results</a>
@@ -7727,8 +6980,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsubject_go">
 <a href="#state_actionemailsubject_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Subject</a>
@@ -7737,8 +6989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailto_go">
 <a href="#state_actionemailto_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>To</a>
@@ -7747,8 +6998,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailtrackalert_go">
 <a href="#state_actionemailtrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Track<wbr>Alert</a>
@@ -7757,8 +7007,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailttl_go">
 <a href="#state_actionemailttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Ttl</a>
@@ -7767,8 +7016,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailusessl_go">
 <a href="#state_actionemailusessl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Ssl</a>
@@ -7777,8 +7025,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailusetls_go">
 <a href="#state_actionemailusetls_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Use<wbr>Tls</a>
@@ -7787,8 +7034,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailwidthsortcolumns_go">
 <a href="#state_actionemailwidthsortcolumns_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Email<wbr>Width<wbr>Sort<wbr>Columns</a>
@@ -7797,8 +7043,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookup_go">
 <a href="#state_actionpopulatelookup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup</a>
@@ -7807,8 +7052,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupcommand_go">
 <a href="#state_actionpopulatelookupcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Command</a>
@@ -7817,8 +7061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupdest_go">
 <a href="#state_actionpopulatelookupdest_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Dest</a>
@@ -7827,8 +7070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookuphostname_go">
 <a href="#state_actionpopulatelookuphostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Hostname</a>
@@ -7837,8 +7079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupmaxresults_go">
 <a href="#state_actionpopulatelookupmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Results</a>
@@ -7847,8 +7088,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupmaxtime_go">
 <a href="#state_actionpopulatelookupmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Time</a>
@@ -7857,8 +7097,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookuptrackalert_go">
 <a href="#state_actionpopulatelookuptrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Track<wbr>Alert</a>
@@ -7867,8 +7106,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupttl_go">
 <a href="#state_actionpopulatelookupttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Populate<wbr>Lookup<wbr>Ttl</a>
@@ -7877,8 +7115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrss_go">
 <a href="#state_actionrss_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss</a>
@@ -7887,8 +7124,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsscommand_go">
 <a href="#state_actionrsscommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Command</a>
@@ -7897,8 +7133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsshostname_go">
 <a href="#state_actionrsshostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Hostname</a>
@@ -7907,8 +7142,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssmaxresults_go">
 <a href="#state_actionrssmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Results</a>
@@ -7917,8 +7151,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssmaxtime_go">
 <a href="#state_actionrssmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Max<wbr>Time</a>
@@ -7927,8 +7160,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsstrackalert_go">
 <a href="#state_actionrsstrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Track<wbr>Alert</a>
@@ -7937,8 +7169,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssttl_go">
 <a href="#state_actionrssttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Rss<wbr>Ttl</a>
@@ -7947,8 +7178,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscript_go">
 <a href="#state_actionscript_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script</a>
@@ -7957,8 +7187,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptcommand_go">
 <a href="#state_actionscriptcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Command</a>
@@ -7967,8 +7196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptfilename_go">
 <a href="#state_actionscriptfilename_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Filename</a>
@@ -7977,8 +7205,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscripthostname_go">
 <a href="#state_actionscripthostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Hostname</a>
@@ -7987,8 +7214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptmaxresults_go">
 <a href="#state_actionscriptmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Results</a>
@@ -7997,8 +7223,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptmaxtime_go">
 <a href="#state_actionscriptmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Max<wbr>Time</a>
@@ -8007,8 +7232,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscripttrackalert_go">
 <a href="#state_actionscripttrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Track<wbr>Alert</a>
@@ -8017,8 +7241,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptttl_go">
 <a href="#state_actionscriptttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Script<wbr>Ttl</a>
@@ -8027,8 +7250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamattachment_go">
 <a href="#state_actionslackparamattachment_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Attachment</a>
@@ -8037,8 +7259,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamchannel_go">
 <a href="#state_actionslackparamchannel_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Channel</a>
@@ -8047,8 +7268,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamfields_go">
 <a href="#state_actionslackparamfields_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Fields</a>
@@ -8057,8 +7277,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparammessage_go">
 <a href="#state_actionslackparammessage_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Message</a>
@@ -8067,8 +7286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamwebhookurloverride_go">
 <a href="#state_actionslackparamwebhookurloverride_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Slack<wbr>Param<wbr>Webhook<wbr>Url<wbr>Override</a>
@@ -8077,8 +7295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindex_go">
 <a href="#state_actionsummaryindex_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index</a>
@@ -8087,8 +7304,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexcommand_go">
 <a href="#state_actionsummaryindexcommand_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Command</a>
@@ -8097,8 +7313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexhostname_go">
 <a href="#state_actionsummaryindexhostname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Hostname</a>
@@ -8107,8 +7322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexinline_go">
 <a href="#state_actionsummaryindexinline_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Inline</a>
@@ -8117,8 +7331,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexmaxresults_go">
 <a href="#state_actionsummaryindexmaxresults_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Results</a>
@@ -8127,8 +7340,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexmaxtime_go">
 <a href="#state_actionsummaryindexmaxtime_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Max<wbr>Time</a>
@@ -8137,8 +7349,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexname_go">
 <a href="#state_actionsummaryindexname_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Name</a>
@@ -8147,8 +7358,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindextrackalert_go">
 <a href="#state_actionsummaryindextrackalert_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Track<wbr>Alert</a>
@@ -8157,8 +7367,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexttl_go">
 <a href="#state_actionsummaryindexttl_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Summary<wbr>Index<wbr>Ttl</a>
@@ -8167,8 +7376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actions_go">
 <a href="#state_actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -8177,8 +7385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcomparator_go">
 <a href="#state_alertcomparator_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Comparator</a>
@@ -8187,8 +7394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcondition_go">
 <a href="#state_alertcondition_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Condition</a>
@@ -8197,8 +7403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdigestmode_go">
 <a href="#state_alertdigestmode_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Digest<wbr>Mode</a>
@@ -8207,8 +7412,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertexpires_go">
 <a href="#state_alertexpires_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Expires</a>
@@ -8217,8 +7421,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertseverity_go">
 <a href="#state_alertseverity_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Severity</a>
@@ -8227,8 +7430,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppress_go">
 <a href="#state_alertsuppress_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress</a>
@@ -8237,8 +7439,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppressfields_go">
 <a href="#state_alertsuppressfields_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Fields</a>
@@ -8247,8 +7448,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppressperiod_go">
 <a href="#state_alertsuppressperiod_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Suppress<wbr>Period</a>
@@ -8257,8 +7457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertthreshold_go">
 <a href="#state_alertthreshold_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Threshold</a>
@@ -8267,8 +7466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttrack_go">
 <a href="#state_alerttrack_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Track</a>
@@ -8277,8 +7475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttype_go">
 <a href="#state_alerttype_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -8287,8 +7484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowskew_go">
 <a href="#state_allowskew_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Skew</a>
@@ -8297,8 +7493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarize_go">
 <a href="#state_autosummarize_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize</a>
@@ -8307,8 +7502,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizecommand_go">
 <a href="#state_autosummarizecommand_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Command</a>
@@ -8317,8 +7511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizecronschedule_go">
 <a href="#state_autosummarizecronschedule_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Cron<wbr>Schedule</a>
@@ -8327,8 +7520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchearliesttime_go">
 <a href="#state_autosummarizedispatchearliesttime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Earliest<wbr>Time</a>
@@ -8337,8 +7529,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchlatesttime_go">
 <a href="#state_autosummarizedispatchlatesttime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Latest<wbr>Time</a>
@@ -8347,8 +7538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchtimeformat_go">
 <a href="#state_autosummarizedispatchtimeformat_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Time<wbr>Format</a>
@@ -8357,8 +7547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchttl_go">
 <a href="#state_autosummarizedispatchttl_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Dispatch<wbr>Ttl</a>
@@ -8367,8 +7556,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxdisabledbuckets_go">
 <a href="#state_autosummarizemaxdisabledbuckets_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Disabled<wbr>Buckets</a>
@@ -8377,8 +7565,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxsummaryratio_go">
 <a href="#state_autosummarizemaxsummaryratio_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Ratio</a>
@@ -8387,8 +7574,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxsummarysize_go">
 <a href="#state_autosummarizemaxsummarysize_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Size</a>
@@ -8397,8 +7583,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxtime_go">
 <a href="#state_autosummarizemaxtime_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Max<wbr>Time</a>
@@ -8407,8 +7592,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizesuspendperiod_go">
 <a href="#state_autosummarizesuspendperiod_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Suspend<wbr>Period</a>
@@ -8417,8 +7601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizetimespan_go">
 <a href="#state_autosummarizetimespan_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Summarize<wbr>Timespan</a>
@@ -8427,8 +7610,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cronschedule_go">
 <a href="#state_cronschedule_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Schedule</a>
@@ -8437,8 +7619,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -8447,8 +7628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -8457,8 +7637,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchbuckets_go">
 <a href="#state_dispatchbuckets_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Buckets</a>
@@ -8467,8 +7646,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchearliesttime_go">
 <a href="#state_dispatchearliesttime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Earliest<wbr>Time</a>
@@ -8477,8 +7655,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexearliest_go">
 <a href="#state_dispatchindexearliest_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Earliest</a>
@@ -8487,8 +7664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexlatest_go">
 <a href="#state_dispatchindexlatest_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Index<wbr>Latest</a>
@@ -8497,8 +7673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtime_go">
 <a href="#state_dispatchindexedrealtime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime</a>
@@ -8507,8 +7682,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtimeminspan_go">
 <a href="#state_dispatchindexedrealtimeminspan_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Minspan</a>
@@ -8517,8 +7691,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtimeoffset_go">
 <a href="#state_dispatchindexedrealtimeoffset_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Indexed<wbr>Realtime<wbr>Offset</a>
@@ -8527,8 +7700,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchlatesttime_go">
 <a href="#state_dispatchlatesttime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Latest<wbr>Time</a>
@@ -8537,8 +7709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchlookups_go">
 <a href="#state_dispatchlookups_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Lookups</a>
@@ -8547,8 +7718,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchmaxcount_go">
 <a href="#state_dispatchmaxcount_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Count</a>
@@ -8557,8 +7727,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchmaxtime_go">
 <a href="#state_dispatchmaxtime_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Max<wbr>Time</a>
@@ -8567,8 +7736,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchreducefreq_go">
 <a href="#state_dispatchreducefreq_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Reduce<wbr>Freq</a>
@@ -8577,8 +7745,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchrtbackfill_go">
 <a href="#state_dispatchrtbackfill_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Backfill</a>
@@ -8587,8 +7754,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchrtmaximumspan_go">
 <a href="#state_dispatchrtmaximumspan_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Rt<wbr>Maximum<wbr>Span</a>
@@ -8597,8 +7763,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchspawnprocess_go">
 <a href="#state_dispatchspawnprocess_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Spawn<wbr>Process</a>
@@ -8607,8 +7772,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchtimeformat_go">
 <a href="#state_dispatchtimeformat_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Time<wbr>Format</a>
@@ -8617,8 +7781,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchttl_go">
 <a href="#state_dispatchttl_go" style="color: inherit; text-decoration: inherit;">Dispatch<wbr>Ttl</a>
@@ -8627,8 +7790,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayview_go">
 <a href="#state_displayview_go" style="color: inherit; text-decoration: inherit;">Display<wbr>View</a>
@@ -8637,8 +7799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isscheduled_go">
 <a href="#state_isscheduled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled</a>
@@ -8647,8 +7808,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isvisible_go">
 <a href="#state_isvisible_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Visible</a>
@@ -8657,8 +7817,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrent_go">
 <a href="#state_maxconcurrent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent</a>
@@ -8667,8 +7826,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8677,8 +7835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtimeschedule_go">
 <a href="#state_realtimeschedule_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Schedule</a>
@@ -8687,8 +7844,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestuidispatchapp_go">
 <a href="#state_requestuidispatchapp_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>App</a>
@@ -8697,8 +7853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestuidispatchview_go">
 <a href="#state_requestuidispatchview_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Ui<wbr>Dispatch<wbr>View</a>
@@ -8707,8 +7862,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restartonsearchpeeradd_go">
 <a href="#state_restartonsearchpeeradd_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>On<wbr>Searchpeer<wbr>Add</a>
@@ -8717,8 +7871,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runonstartup_go">
 <a href="#state_runonstartup_go" style="color: inherit; text-decoration: inherit;">Run<wbr>On<wbr>Startup</a>
@@ -8727,8 +7880,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulepriority_go">
 <a href="#state_schedulepriority_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Priority</a>
@@ -8737,8 +7889,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulewindow_go">
 <a href="#state_schedulewindow_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Window</a>
@@ -8747,8 +7898,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_go">
 <a href="#state_search_go" style="color: inherit; text-decoration: inherit;">Search</a>
@@ -8757,8 +7907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsid_go">
 <a href="#state_vsid_go" style="color: inherit; text-decoration: inherit;">Vsid</a>
@@ -8767,8 +7916,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadpool_go">
 <a href="#state_workloadpool_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Pool</a>
@@ -8777,14 +7925,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -8793,8 +7938,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemail_nodejs">
 <a href="#state_actionemail_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email</a>
@@ -8803,8 +7947,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailauthpassword_nodejs">
 <a href="#state_actionemailauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Auth<wbr>Password</a>
@@ -8813,8 +7956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailauthusername_nodejs">
 <a href="#state_actionemailauthusername_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Auth<wbr>Username</a>
@@ -8823,8 +7965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailbcc_nodejs">
 <a href="#state_actionemailbcc_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Bcc</a>
@@ -8833,8 +7974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailcc_nodejs">
 <a href="#state_actionemailcc_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Cc</a>
@@ -8843,8 +7983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailcommand_nodejs">
 <a href="#state_actionemailcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Command</a>
@@ -8853,8 +7992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailformat_nodejs">
 <a href="#state_actionemailformat_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Format</a>
@@ -8863,8 +8001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailfrom_nodejs">
 <a href="#state_actionemailfrom_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>From</a>
@@ -8873,8 +8010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailhostname_nodejs">
 <a href="#state_actionemailhostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Hostname</a>
@@ -8883,8 +8019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincluderesultslink_nodejs">
 <a href="#state_actionemailincluderesultslink_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Results<wbr>Link</a>
@@ -8893,8 +8028,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludesearch_nodejs">
 <a href="#state_actionemailincludesearch_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Search</a>
@@ -8903,8 +8037,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludetrigger_nodejs">
 <a href="#state_actionemailincludetrigger_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Trigger</a>
@@ -8913,8 +8046,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludetriggertime_nodejs">
 <a href="#state_actionemailincludetriggertime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>Trigger<wbr>Time</a>
@@ -8923,8 +8055,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailincludeviewlink_nodejs">
 <a href="#state_actionemailincludeviewlink_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Include<wbr>View<wbr>Link</a>
@@ -8933,8 +8064,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailinline_nodejs">
 <a href="#state_actionemailinline_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Inline</a>
@@ -8943,8 +8073,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmailserver_nodejs">
 <a href="#state_actionemailmailserver_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Mailserver</a>
@@ -8953,8 +8082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmaxresults_nodejs">
 <a href="#state_actionemailmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Max<wbr>Results</a>
@@ -8963,8 +8091,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmaxtime_nodejs">
 <a href="#state_actionemailmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Max<wbr>Time</a>
@@ -8973,8 +8100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmessagealert_nodejs">
 <a href="#state_actionemailmessagealert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Message<wbr>Alert</a>
@@ -8983,8 +8109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailmessagereport_nodejs">
 <a href="#state_actionemailmessagereport_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Message<wbr>Report</a>
@@ -8993,8 +8118,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailpdfview_nodejs">
 <a href="#state_actionemailpdfview_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Pdfview</a>
@@ -9003,8 +8127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailpreprocessresults_nodejs">
 <a href="#state_actionemailpreprocessresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Preprocess<wbr>Results</a>
@@ -9013,8 +8136,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportcidfontlist_nodejs">
 <a href="#state_actionemailreportcidfontlist_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Cid<wbr>Font<wbr>List</a>
@@ -9023,8 +8145,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportincludesplunklogo_nodejs">
 <a href="#state_actionemailreportincludesplunklogo_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Include<wbr>Splunk<wbr>Logo</a>
@@ -9033,8 +8154,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportpaperorientation_nodejs">
 <a href="#state_actionemailreportpaperorientation_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Paper<wbr>Orientation</a>
@@ -9043,8 +8163,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportpapersize_nodejs">
 <a href="#state_actionemailreportpapersize_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Paper<wbr>Size</a>
@@ -9053,8 +8172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportserverenabled_nodejs">
 <a href="#state_actionemailreportserverenabled_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Server<wbr>Enabled</a>
@@ -9063,8 +8181,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailreportserverurl_nodejs">
 <a href="#state_actionemailreportserverurl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Report<wbr>Server<wbr>Url</a>
@@ -9073,8 +8190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendcsv_nodejs">
 <a href="#state_actionemailsendcsv_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Send<wbr>Csv</a>
@@ -9083,8 +8199,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendpdf_nodejs">
 <a href="#state_actionemailsendpdf_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Send<wbr>Pdf</a>
@@ -9093,8 +8208,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsendresults_nodejs">
 <a href="#state_actionemailsendresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Send<wbr>Results</a>
@@ -9103,8 +8217,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailsubject_nodejs">
 <a href="#state_actionemailsubject_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Subject</a>
@@ -9113,8 +8226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailto_nodejs">
 <a href="#state_actionemailto_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>To</a>
@@ -9123,8 +8235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailtrackalert_nodejs">
 <a href="#state_actionemailtrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Track<wbr>Alert</a>
@@ -9133,8 +8244,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailttl_nodejs">
 <a href="#state_actionemailttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Ttl</a>
@@ -9143,8 +8253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailusessl_nodejs">
 <a href="#state_actionemailusessl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Use<wbr>Ssl</a>
@@ -9153,8 +8262,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailusetls_nodejs">
 <a href="#state_actionemailusetls_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Use<wbr>Tls</a>
@@ -9163,8 +8271,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionemailwidthsortcolumns_nodejs">
 <a href="#state_actionemailwidthsortcolumns_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Email<wbr>Width<wbr>Sort<wbr>Columns</a>
@@ -9173,8 +8280,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookup_nodejs">
 <a href="#state_actionpopulatelookup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup</a>
@@ -9183,8 +8289,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupcommand_nodejs">
 <a href="#state_actionpopulatelookupcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Command</a>
@@ -9193,8 +8298,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupdest_nodejs">
 <a href="#state_actionpopulatelookupdest_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Dest</a>
@@ -9203,8 +8307,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookuphostname_nodejs">
 <a href="#state_actionpopulatelookuphostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Hostname</a>
@@ -9213,8 +8316,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupmaxresults_nodejs">
 <a href="#state_actionpopulatelookupmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Results</a>
@@ -9223,8 +8325,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupmaxtime_nodejs">
 <a href="#state_actionpopulatelookupmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Max<wbr>Time</a>
@@ -9233,8 +8334,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookuptrackalert_nodejs">
 <a href="#state_actionpopulatelookuptrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Track<wbr>Alert</a>
@@ -9243,8 +8343,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionpopulatelookupttl_nodejs">
 <a href="#state_actionpopulatelookupttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Populate<wbr>Lookup<wbr>Ttl</a>
@@ -9253,8 +8352,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrss_nodejs">
 <a href="#state_actionrss_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss</a>
@@ -9263,8 +8361,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsscommand_nodejs">
 <a href="#state_actionrsscommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Command</a>
@@ -9273,8 +8370,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsshostname_nodejs">
 <a href="#state_actionrsshostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Hostname</a>
@@ -9283,8 +8379,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssmaxresults_nodejs">
 <a href="#state_actionrssmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Max<wbr>Results</a>
@@ -9293,8 +8388,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssmaxtime_nodejs">
 <a href="#state_actionrssmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Max<wbr>Time</a>
@@ -9303,8 +8397,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrsstrackalert_nodejs">
 <a href="#state_actionrsstrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Track<wbr>Alert</a>
@@ -9313,8 +8406,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionrssttl_nodejs">
 <a href="#state_actionrssttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Rss<wbr>Ttl</a>
@@ -9323,8 +8415,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscript_nodejs">
 <a href="#state_actionscript_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script</a>
@@ -9333,8 +8424,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptcommand_nodejs">
 <a href="#state_actionscriptcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Command</a>
@@ -9343,8 +8433,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptfilename_nodejs">
 <a href="#state_actionscriptfilename_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Filename</a>
@@ -9353,8 +8442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscripthostname_nodejs">
 <a href="#state_actionscripthostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Hostname</a>
@@ -9363,8 +8451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptmaxresults_nodejs">
 <a href="#state_actionscriptmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Max<wbr>Results</a>
@@ -9373,8 +8460,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptmaxtime_nodejs">
 <a href="#state_actionscriptmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Max<wbr>Time</a>
@@ -9383,8 +8469,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscripttrackalert_nodejs">
 <a href="#state_actionscripttrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Track<wbr>Alert</a>
@@ -9393,8 +8478,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionscriptttl_nodejs">
 <a href="#state_actionscriptttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Script<wbr>Ttl</a>
@@ -9403,8 +8487,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamattachment_nodejs">
 <a href="#state_actionslackparamattachment_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Attachment</a>
@@ -9413,8 +8496,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamchannel_nodejs">
 <a href="#state_actionslackparamchannel_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Channel</a>
@@ -9423,8 +8505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamfields_nodejs">
 <a href="#state_actionslackparamfields_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Fields</a>
@@ -9433,8 +8514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparammessage_nodejs">
 <a href="#state_actionslackparammessage_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Message</a>
@@ -9443,8 +8523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionslackparamwebhookurloverride_nodejs">
 <a href="#state_actionslackparamwebhookurloverride_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Slack<wbr>Param<wbr>Webhook<wbr>Url<wbr>Override</a>
@@ -9453,8 +8532,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindex_nodejs">
 <a href="#state_actionsummaryindex_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index</a>
@@ -9463,8 +8541,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexcommand_nodejs">
 <a href="#state_actionsummaryindexcommand_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Command</a>
@@ -9473,8 +8550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexhostname_nodejs">
 <a href="#state_actionsummaryindexhostname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Hostname</a>
@@ -9483,8 +8559,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexinline_nodejs">
 <a href="#state_actionsummaryindexinline_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Inline</a>
@@ -9493,8 +8568,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexmaxresults_nodejs">
 <a href="#state_actionsummaryindexmaxresults_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Max<wbr>Results</a>
@@ -9503,8 +8577,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexmaxtime_nodejs">
 <a href="#state_actionsummaryindexmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Max<wbr>Time</a>
@@ -9513,8 +8586,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexname_nodejs">
 <a href="#state_actionsummaryindexname_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Name</a>
@@ -9523,8 +8595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindextrackalert_nodejs">
 <a href="#state_actionsummaryindextrackalert_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Track<wbr>Alert</a>
@@ -9533,8 +8604,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actionsummaryindexttl_nodejs">
 <a href="#state_actionsummaryindexttl_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Summary<wbr>Index<wbr>Ttl</a>
@@ -9543,8 +8613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actions_nodejs">
 <a href="#state_actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -9553,8 +8622,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcomparator_nodejs">
 <a href="#state_alertcomparator_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Comparator</a>
@@ -9563,8 +8631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertcondition_nodejs">
 <a href="#state_alertcondition_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Condition</a>
@@ -9573,8 +8640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdigestmode_nodejs">
 <a href="#state_alertdigestmode_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Digest<wbr>Mode</a>
@@ -9583,8 +8649,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertexpires_nodejs">
 <a href="#state_alertexpires_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Expires</a>
@@ -9593,8 +8658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertseverity_nodejs">
 <a href="#state_alertseverity_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Severity</a>
@@ -9603,8 +8667,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppress_nodejs">
 <a href="#state_alertsuppress_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Suppress</a>
@@ -9613,8 +8676,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppressfields_nodejs">
 <a href="#state_alertsuppressfields_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Suppress<wbr>Fields</a>
@@ -9623,8 +8685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertsuppressperiod_nodejs">
 <a href="#state_alertsuppressperiod_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Suppress<wbr>Period</a>
@@ -9633,8 +8694,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertthreshold_nodejs">
 <a href="#state_alertthreshold_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Threshold</a>
@@ -9643,8 +8703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttrack_nodejs">
 <a href="#state_alerttrack_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Track</a>
@@ -9653,8 +8712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttype_nodejs">
 <a href="#state_alerttype_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Type</a>
@@ -9663,8 +8721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowskew_nodejs">
 <a href="#state_allowskew_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Skew</a>
@@ -9673,8 +8730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarize_nodejs">
 <a href="#state_autosummarize_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize</a>
@@ -9683,8 +8739,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizecommand_nodejs">
 <a href="#state_autosummarizecommand_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Command</a>
@@ -9693,8 +8748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizecronschedule_nodejs">
 <a href="#state_autosummarizecronschedule_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Cron<wbr>Schedule</a>
@@ -9703,8 +8757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchearliesttime_nodejs">
 <a href="#state_autosummarizedispatchearliesttime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Earliest<wbr>Time</a>
@@ -9713,8 +8766,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchlatesttime_nodejs">
 <a href="#state_autosummarizedispatchlatesttime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Latest<wbr>Time</a>
@@ -9723,8 +8775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchtimeformat_nodejs">
 <a href="#state_autosummarizedispatchtimeformat_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Time<wbr>Format</a>
@@ -9733,8 +8784,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizedispatchttl_nodejs">
 <a href="#state_autosummarizedispatchttl_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Dispatch<wbr>Ttl</a>
@@ -9743,8 +8793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxdisabledbuckets_nodejs">
 <a href="#state_autosummarizemaxdisabledbuckets_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Disabled<wbr>Buckets</a>
@@ -9753,8 +8802,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxsummaryratio_nodejs">
 <a href="#state_autosummarizemaxsummaryratio_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Ratio</a>
@@ -9763,8 +8811,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxsummarysize_nodejs">
 <a href="#state_autosummarizemaxsummarysize_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Summary<wbr>Size</a>
@@ -9773,8 +8820,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizemaxtime_nodejs">
 <a href="#state_autosummarizemaxtime_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Max<wbr>Time</a>
@@ -9783,8 +8829,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizesuspendperiod_nodejs">
 <a href="#state_autosummarizesuspendperiod_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Suspend<wbr>Period</a>
@@ -9793,8 +8838,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosummarizetimespan_nodejs">
 <a href="#state_autosummarizetimespan_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Summarize<wbr>Timespan</a>
@@ -9803,8 +8847,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cronschedule_nodejs">
 <a href="#state_cronschedule_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Schedule</a>
@@ -9813,8 +8856,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -9823,8 +8865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -9833,8 +8874,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchbuckets_nodejs">
 <a href="#state_dispatchbuckets_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Buckets</a>
@@ -9843,8 +8883,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchearliesttime_nodejs">
 <a href="#state_dispatchearliesttime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Earliest<wbr>Time</a>
@@ -9853,8 +8892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexearliest_nodejs">
 <a href="#state_dispatchindexearliest_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Index<wbr>Earliest</a>
@@ -9863,8 +8901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexlatest_nodejs">
 <a href="#state_dispatchindexlatest_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Index<wbr>Latest</a>
@@ -9873,8 +8910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtime_nodejs">
 <a href="#state_dispatchindexedrealtime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Indexed<wbr>Realtime</a>
@@ -9883,8 +8919,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtimeminspan_nodejs">
 <a href="#state_dispatchindexedrealtimeminspan_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Indexed<wbr>Realtime<wbr>Minspan</a>
@@ -9893,8 +8928,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchindexedrealtimeoffset_nodejs">
 <a href="#state_dispatchindexedrealtimeoffset_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Indexed<wbr>Realtime<wbr>Offset</a>
@@ -9903,8 +8937,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchlatesttime_nodejs">
 <a href="#state_dispatchlatesttime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Latest<wbr>Time</a>
@@ -9913,8 +8946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchlookups_nodejs">
 <a href="#state_dispatchlookups_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Lookups</a>
@@ -9923,8 +8955,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchmaxcount_nodejs">
 <a href="#state_dispatchmaxcount_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Max<wbr>Count</a>
@@ -9933,8 +8964,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchmaxtime_nodejs">
 <a href="#state_dispatchmaxtime_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Max<wbr>Time</a>
@@ -9943,8 +8973,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchreducefreq_nodejs">
 <a href="#state_dispatchreducefreq_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Reduce<wbr>Freq</a>
@@ -9953,8 +8982,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchrtbackfill_nodejs">
 <a href="#state_dispatchrtbackfill_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Rt<wbr>Backfill</a>
@@ -9963,8 +8991,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchrtmaximumspan_nodejs">
 <a href="#state_dispatchrtmaximumspan_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Rt<wbr>Maximum<wbr>Span</a>
@@ -9973,8 +9000,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchspawnprocess_nodejs">
 <a href="#state_dispatchspawnprocess_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Spawn<wbr>Process</a>
@@ -9983,8 +9009,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchtimeformat_nodejs">
 <a href="#state_dispatchtimeformat_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Time<wbr>Format</a>
@@ -9993,8 +9018,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatchttl_nodejs">
 <a href="#state_dispatchttl_nodejs" style="color: inherit; text-decoration: inherit;">dispatch<wbr>Ttl</a>
@@ -10003,8 +9027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayview_nodejs">
 <a href="#state_displayview_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>View</a>
@@ -10013,8 +9036,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isscheduled_nodejs">
 <a href="#state_isscheduled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled</a>
@@ -10023,8 +9045,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isvisible_nodejs">
 <a href="#state_isvisible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Visible</a>
@@ -10033,8 +9054,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrent_nodejs">
 <a href="#state_maxconcurrent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent</a>
@@ -10043,8 +9063,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10053,8 +9072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtimeschedule_nodejs">
 <a href="#state_realtimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Schedule</a>
@@ -10063,8 +9081,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestuidispatchapp_nodejs">
 <a href="#state_requestuidispatchapp_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Ui<wbr>Dispatch<wbr>App</a>
@@ -10073,8 +9090,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestuidispatchview_nodejs">
 <a href="#state_requestuidispatchview_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Ui<wbr>Dispatch<wbr>View</a>
@@ -10083,8 +9099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restartonsearchpeeradd_nodejs">
 <a href="#state_restartonsearchpeeradd_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>On<wbr>Searchpeer<wbr>Add</a>
@@ -10093,8 +9108,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runonstartup_nodejs">
 <a href="#state_runonstartup_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>On<wbr>Startup</a>
@@ -10103,8 +9117,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulepriority_nodejs">
 <a href="#state_schedulepriority_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Priority</a>
@@ -10113,8 +9126,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulewindow_nodejs">
 <a href="#state_schedulewindow_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Window</a>
@@ -10123,8 +9135,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_nodejs">
 <a href="#state_search_nodejs" style="color: inherit; text-decoration: inherit;">search</a>
@@ -10133,8 +9144,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsid_nodejs">
 <a href="#state_vsid_nodejs" style="color: inherit; text-decoration: inherit;">vsid</a>
@@ -10143,8 +9153,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadpool_nodejs">
 <a href="#state_workloadpool_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Pool</a>
@@ -10153,14 +9162,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -10169,8 +9175,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#savedsearchesacl">Saved<wbr>Searches<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_python">
 <a href="#state_action_email_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email</a>
@@ -10179,8 +9184,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the email action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_auth_password_python">
 <a href="#state_action_email_auth_password_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>auth_<wbr>password</a>
@@ -10189,8 +9193,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to use when authenticating with the SMTP server. Normally this value is set when editing the email settings, however you can set a clear text password here and it is encrypted on the next platform restart.Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_auth_username_python">
 <a href="#state_action_email_auth_username_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>auth_<wbr>username</a>
@@ -10199,8 +9202,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to use when authenticating with the SMTP server. If this is empty string, no authentication is attempted. Defaults to empty stringNOTE: Your SMTP server might reject unauthenticated emails.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_bcc_python">
 <a href="#state_action_email_bcc_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>bcc</a>
@@ -10209,8 +9211,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BCC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_cc_python">
 <a href="#state_action_email_cc_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>cc</a>
@@ -10219,8 +9220,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CC email address to use if action.email is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_command_python">
 <a href="#state_action_email_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>command</a>
@@ -10229,8 +9229,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_format_python">
 <a href="#state_action_email_format_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>format</a>
@@ -10239,8 +9238,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (table | plain | html | raw | csv)Specify the format of text in the email. This value also applies to any attachments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_from_python">
 <a href="#state_action_email_from_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>from</a>
@@ -10249,8 +9247,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address from which the email action originates.Defaults to splunk@$LOCALHOST or whatever value is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_hostname_python">
 <a href="#state_action_email_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>hostname</a>
@@ -10259,8 +9256,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in email actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_include_results_link_python">
 <a href="#state_action_email_include_results_link_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>results_<wbr>link</a>
@@ -10269,8 +9265,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include a link to the results. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_include_search_python">
 <a href="#state_action_email_include_search_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>search</a>
@@ -10279,8 +9274,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to include the search that caused an email to be sent. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_include_trigger_python">
 <a href="#state_action_email_include_trigger_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>trigger</a>
@@ -10289,8 +9283,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the trigger condition that caused the alert to fire. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_include_trigger_time_python">
 <a href="#state_action_email_include_trigger_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>trigger_<wbr>time</a>
@@ -10299,8 +9292,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the time that the alert was fired. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_include_view_link_python">
 <a href="#state_action_email_include_view_link_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>include_<wbr>view_<wbr>link</a>
@@ -10309,8 +9301,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to show the title and a link to enable the user to edit the saved search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_inline_python">
 <a href="#state_action_email_inline_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>inline</a>
@@ -10319,8 +9310,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the search results are contained in the body of the email.Results can be either inline or attached to an email.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_mailserver_python">
 <a href="#state_action_email_mailserver_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>mailserver</a>
@@ -10329,8 +9319,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the address of the MTA server to be used to send the emails.Defaults to <LOCALHOST> or whatever is set in alert_actions.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_max_results_python">
 <a href="#state_action_email_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>max_<wbr>results</a>
@@ -10339,8 +9328,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the global maximum number of search results to send when email.action is enabled. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_max_time_python">
 <a href="#state_action_email_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>max_<wbr>time</a>
@@ -10349,8 +9337,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Specifies the maximum amount of time the execution of an email action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_message_alert_python">
 <a href="#state_action_email_message_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>message_<wbr>alert</a>
@@ -10359,8 +9346,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed alert. Defaults to: The alert condition for '$name$' was triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_message_report_python">
 <a href="#state_action_email_message_report_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>message_<wbr>report</a>
@@ -10369,8 +9355,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Customize the message sent in the emailed report. Defaults to: The scheduled report '$name$' has run
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_pdfview_python">
 <a href="#state_action_email_pdfview_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>pdfview</a>
@@ -10379,8 +9364,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the view to deliver if sendpdf is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_preprocess_results_python">
 <a href="#state_action_email_preprocess_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>preprocess_<wbr>results</a>
@@ -10389,8 +9373,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Search string to preprocess results before emailing them. Defaults to empty string (no preprocessing).Usually the preprocessing consists of filtering out unwanted internal fields.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_report_cid_font_list_python">
 <a href="#state_action_email_report_cid_font_list_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>cid_<wbr>font_<wbr>list</a>
@@ -10399,8 +9382,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Space-separated list. Specifies the set (and load order) of CID fonts for handling Simplified Chinese(gb), Traditional Chinese(cns), Japanese(jp), and Korean(kor) in Integrated PDF Rendering.If multiple fonts provide a glyph for a given character code, the glyph from the first font specified in the list is used.To skip loading any CID fonts, specify the empty string.Defaults to 'gb cns jp kor'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_report_include_splunk_logo_python">
 <a href="#state_action_email_report_include_splunk_logo_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>include_<wbr>splunk_<wbr>logo</a>
@@ -10409,8 +9391,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to include the Splunk logo with the report.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_report_paper_orientation_python">
 <a href="#state_action_email_report_paper_orientation_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>paper_<wbr>orientation</a>
@@ -10419,8 +9400,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (portrait | landscape)Specifies the paper orientation: portrait or landscape. Defaults to portrait.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_report_paper_size_python">
 <a href="#state_action_email_report_paper_size_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>paper_<wbr>size</a>
@@ -10429,8 +9409,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (letter | legal | ledger | a2 | a3 | a4 | a5)Specifies the paper size for PDFs. Defaults to letter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_report_server_enabled_python">
 <a href="#state_action_email_report_server_enabled_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>server_<wbr>enabled</a>
@@ -10439,8 +9418,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No Supported
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_report_server_url_python">
 <a href="#state_action_email_report_server_url_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>report_<wbr>server_<wbr>url</a>
@@ -10449,8 +9427,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Not supported.For a default locally installed report server, the URL is http://localhost:8091/
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_send_csv_python">
 <a href="#state_action_email_send_csv_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>send_<wbr>csv</a>
@@ -10459,8 +9436,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify whether to send results as a CSV file. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_send_pdf_python">
 <a href="#state_action_email_send_pdf_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>send_<wbr>pdf</a>
@@ -10469,8 +9445,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to create and send the results as a PDF. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_send_results_python">
 <a href="#state_action_email_send_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>send_<wbr>results</a>
@@ -10479,8 +9454,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to attach the search results in the email.Results can be either attached or inline. See action.email.inline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_subject_python">
 <a href="#state_action_email_subject_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>subject</a>
@@ -10489,8 +9463,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate email subject.Defaults to SplunkAlert-<savedsearchname>.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_to_python">
 <a href="#state_action_email_to_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>to</a>
@@ -10499,8 +9472,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma or semicolon separated list of recipient email addresses. Required if this search is scheduled and the email alert action is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_track_alert_python">
 <a href="#state_action_email_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>track_<wbr>alert</a>
@@ -10509,8 +9481,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_ttl_python">
 <a href="#state_action_email_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>ttl</a>
@@ -10519,8 +9490,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p].Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows <Integer>, int is the number of scheduled periods. Defaults to 86400 (24 hours).If no actions are triggered, the artifacts have their ttl determined by dispatch.ttl in savedsearches.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_use_ssl_python">
 <a href="#state_action_email_use_ssl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>use_<wbr>ssl</a>
@@ -10529,8 +9499,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use SSL when communicating with the SMTP server. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_use_tls_python">
 <a href="#state_action_email_use_tls_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>use_<wbr>tls</a>
@@ -10539,8 +9508,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to use TLS (transport layer security) when communicating with the SMTP server (starttls).Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_email_width_sort_columns_python">
 <a href="#state_action_email_width_sort_columns_python" style="color: inherit; text-decoration: inherit;">action_<wbr>email_<wbr>width_<wbr>sort_<wbr>columns</a>
@@ -10549,8 +9517,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether columns should be sorted from least wide to most wide, left to right.Only valid if format=text.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_python">
 <a href="#state_action_populate_lookup_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup</a>
@@ -10559,8 +9526,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the populate lookup action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_command_python">
 <a href="#state_action_populate_lookup_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>command</a>
@@ -10569,8 +9535,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_dest_python">
 <a href="#state_action_populate_lookup_dest_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>dest</a>
@@ -10579,8 +9544,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lookup name of path of the lookup to populate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_hostname_python">
 <a href="#state_action_populate_lookup_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>hostname</a>
@@ -10589,8 +9553,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms: hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_max_results_python">
 <a href="#state_action_populate_lookup_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>max_<wbr>results</a>
@@ -10599,8 +9562,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_max_time_python">
 <a href="#state_action_populate_lookup_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>max_<wbr>time</a>
@@ -10609,8 +9571,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d]Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 5m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_track_alert_python">
 <a href="#state_action_populate_lookup_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>track_<wbr>alert</a>
@@ -10619,8 +9580,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_populate_lookup_ttl_python">
 <a href="#state_action_populate_lookup_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>populate_<wbr>lookup_<wbr>ttl</a>
@@ -10629,8 +9589,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[p]Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, then this specifies the number of scheduled periods. Defaults to 10p.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_python">
 <a href="#state_action_rss_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss</a>
@@ -10639,8 +9598,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the rss action. Read-only attribute. Value ignored on POST.Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_command_python">
 <a href="#state_action_rss_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>command</a>
@@ -10649,8 +9607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_hostname_python">
 <a href="#state_action_rss_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>hostname</a>
@@ -10659,8 +9616,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_max_results_python">
 <a href="#state_action_rss_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>max_<wbr>results</a>
@@ -10669,8 +9625,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_max_time_python">
 <a href="#state_action_rss_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>max_<wbr>time</a>
@@ -10679,8 +9634,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_track_alert_python">
 <a href="#state_action_rss_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>track_<wbr>alert</a>
@@ -10689,8 +9643,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_rss_ttl_python">
 <a href="#state_action_rss_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>rss_<wbr>ttl</a>
@@ -10699,8 +9652,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_python">
 <a href="#state_action_script_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script</a>
@@ -10709,8 +9661,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the script action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_command_python">
 <a href="#state_action_script_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>command</a>
@@ -10719,8 +9670,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_filename_python">
 <a href="#state_action_script_filename_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>filename</a>
@@ -10729,8 +9679,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File name of the script to call. Required if script action is enabled
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_hostname_python">
 <a href="#state_action_script_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>hostname</a>
@@ -10739,8 +9688,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)\n\nprotocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_max_results_python">
 <a href="#state_action_script_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>max_<wbr>results</a>
@@ -10749,8 +9697,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_max_time_python">
 <a href="#state_action_script_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>max_<wbr>time</a>
@@ -10759,8 +9706,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_track_alert_python">
 <a href="#state_action_script_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>track_<wbr>alert</a>
@@ -10769,8 +9715,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_script_ttl_python">
 <a href="#state_action_script_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>script_<wbr>ttl</a>
@@ -10779,8 +9724,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_slack_param_attachment_python">
 <a href="#state_action_slack_param_attachment_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>attachment</a>
@@ -10789,8 +9733,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Include a message attachment. Valid values are message, none, or alert_link
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_slack_param_channel_python">
 <a href="#state_action_slack_param_channel_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>channel</a>
@@ -10799,8 +9742,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Slack channel to send the message to (Should start with # or @)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_slack_param_fields_python">
 <a href="#state_action_slack_param_fields_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>fields</a>
@@ -10809,8 +9751,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Show one or more fields from the search results below your Slack message. Comma-separated list of field names. Allows wildcards. eg. index,source*
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_slack_param_message_python">
 <a href="#state_action_slack_param_message_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>message</a>
@@ -10819,8 +9760,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enter the chat message to send to the Slack channel. The message can include tokens that insert text based on the results of the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_slack_param_webhook_url_override_python">
 <a href="#state_action_slack_param_webhook_url_override_python" style="color: inherit; text-decoration: inherit;">action_<wbr>slack_<wbr>param_<wbr>webhook_<wbr>url_<wbr>override</a>
@@ -10829,8 +9769,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}You can override the Slack webhook URL here if you need to send the alert message to a different Slack team
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_python">
 <a href="#state_action_summary_index_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index</a>
@@ -10839,8 +9778,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The state of the summary index action. Read-only attribute. Value ignored on POST. Use actions to specify a list of enabled actions. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_command_python">
 <a href="#state_action_summary_index_command_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>command</a>
@@ -10849,8 +9787,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The search command (or pipeline) which is responsible for executing the action.Generally the command is a template search pipeline which is realized with values from the saved search. To reference saved search field values wrap them in $, for example to reference the savedsearch name use $name$, to reference the search use $search$.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_hostname_python">
 <a href="#state_action_summary_index_hostname_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>hostname</a>
@@ -10859,8 +9796,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the hostname used in the web link (url) sent in summary-index alert actions.This value accepts two forms:hostname (for example, splunkserver, splunkserver.example.com)protocol://hostname:port (for example, http://splunkserver:8000, https://splunkserver.example.com:443)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_inline_python">
 <a href="#state_action_summary_index_inline_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>inline</a>
@@ -10869,8 +9805,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether to execute the summary indexing action as part of the scheduled search.NOTE: This option is considered only if the summary index action is enabled and is always executed (in other words, if counttype = always).Defaults to true
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_max_results_python">
 <a href="#state_action_summary_index_max_results_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>max_<wbr>results</a>
@@ -10879,8 +9814,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the maximum number of search results sent using alerts. Defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_max_time_python">
 <a href="#state_action_summary_index_max_time_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>max_<wbr>time</a>
@@ -10889,8 +9823,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values are Integer[m|s|h|d].Sets the maximum amount of time the execution of an action takes before the action is aborted. Defaults to 1m.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_name_python">
 <a href="#state_action_summary_index_name_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>name</a>
@@ -10899,8 +9832,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the summary index where the results of the scheduled search are saved.Defaults to summary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_track_alert_python">
 <a href="#state_action_summary_index_track_alert_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>track_<wbr>alert</a>
@@ -10909,8 +9841,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the execution of this action signifies a trackable alert.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_action_summary_index_ttl_python">
 <a href="#state_action_summary_index_ttl_python" style="color: inherit; text-decoration: inherit;">action_<wbr>summary_<wbr>index_<wbr>ttl</a>
@@ -10919,8 +9850,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[p] Specifies the minimum time-to-live in seconds of the search artifacts if this action is triggered. If p follows Integer, specifies the number of scheduled periods. Defaults to 86400 (24 hours).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_actions_python">
 <a href="#state_actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -10929,8 +9859,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of actions to enable. For example: rss,email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_comparator_python">
 <a href="#state_alert_comparator_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>comparator</a>
@@ -10939,8 +9868,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}One of the following strings: greater than, less than, equal to, rises by, drops by, rises by perc, drops by percUsed with alert_threshold to trigger alert actions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_condition_python">
 <a href="#state_alert_condition_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>condition</a>
@@ -10949,8 +9877,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains a conditional search that is evaluated against the results of the saved search. Defaults to an empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_digest_mode_python">
 <a href="#state_alert_digest_mode_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>digest_<wbr>mode</a>
@@ -10959,8 +9886,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether alert actions are applied to the entire result set or on each individual result.Defaults to 1 (true).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_expires_python">
 <a href="#state_alert_expires_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>expires</a>
@@ -10969,8 +9895,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit]Sets the period of time to show the alert in the dashboard. Defaults to 24h.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_severity_python">
 <a href="#state_alert_severity_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>severity</a>
@@ -10979,8 +9904,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Valid values: (1 | 2 | 3 | 4 | 5 | 6) Sets the alert severity level.Valid values are:1 DEBUG 2 INFO 3 WARN 4 ERROR 5 SEVERE 6 FATAL Defaults to 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_suppress_python">
 <a href="#state_alert_suppress_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>suppress</a>
@@ -10989,8 +9913,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether alert suppression is enabled for this scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_suppress_fields_python">
 <a href="#state_alert_suppress_fields_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>suppress_<wbr>fields</a>
@@ -10999,8 +9922,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma delimited list of fields to use for suppression when doing per result alerting. Required if suppression is turned on and per result alerting is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_suppress_period_python">
 <a href="#state_alert_suppress_period_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>suppress_<wbr>period</a>
@@ -11009,8 +9931,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: [number][time-unit] Specifies the suppresion period. Only valid if alert.supress is enabled.Use [number][time-unit] to specify a time. For example: 60 = 60 seconds, 1m = 1 minute, 1h = 60 minutes = 1 hour.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_threshold_python">
 <a href="#state_alert_threshold_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>threshold</a>
@@ -11019,8 +9940,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are: Integer[%]Specifies the value to compare (see alert_comparator) before triggering the alert actions. If expressed as a percentage, indicates value to use when alert_comparator is set to rises by perc or drops by perc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_track_python">
 <a href="#state_alert_track_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>track</a>
@@ -11029,8 +9949,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (true | false | auto) Specifies whether to track the actions triggered by this scheduled search.auto - determine whether to track or not based on the tracking setting of each action, do not track scheduled searches that always trigger actions. Default value true - force alert tracking.false - disable alert tracking for this search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_type_python">
 <a href="#state_alert_type_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>type</a>
@@ -11039,8 +9958,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What to base the alert on, overriden by alert_condition if it is specified. Valid values are: always, custom, number of events, number of hosts, number of sources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_skew_python">
 <a href="#state_allow_skew_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>skew</a>
@@ -11049,8 +9967,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allows the search scheduler to distribute scheduled searches randomly and more evenly over their specified search periods.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_python">
 <a href="#state_auto_summarize_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize</a>
@@ -11059,8 +9976,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the scheduler should ensure that the data for this search is automatically summarized. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_command_python">
 <a href="#state_auto_summarize_command_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>command</a>
@@ -11069,8 +9985,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An auto summarization template for this search. See auto summarization options in savedsearches.conf for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_cron_schedule_python">
 <a href="#state_auto_summarize_cron_schedule_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>cron_<wbr>schedule</a>
@@ -11079,8 +9994,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cron schedule that probes and generates the summaries for this saved search.The default value is */10 * * * * and corresponds to \`every ten hours\`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_dispatch_earliest_time_python">
 <a href="#state_auto_summarize_dispatch_earliest_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>earliest_<wbr>time</a>
@@ -11089,8 +10003,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for summarizing this search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_dispatch_latest_time_python">
 <a href="#state_auto_summarize_dispatch_latest_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>latest_<wbr>time</a>
@@ -11099,8 +10012,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for summarizing this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_dispatch_time_format_python">
 <a href="#state_auto_summarize_dispatch_time_format_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>time_<wbr>format</a>
@@ -11109,8 +10021,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the time format that Splunk software uses to specify the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_dispatch_ttl_python">
 <a href="#state_auto_summarize_dispatch_ttl_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>dispatch_<wbr>ttl</a>
@@ -11119,8 +10030,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 60.Indicates the time to live (in seconds) for the artifacts of the summarization of the scheduled search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_max_disabled_buckets_python">
 <a href="#state_auto_summarize_max_disabled_buckets_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>disabled_<wbr>buckets</a>
@@ -11129,8 +10039,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of buckets with the suspended summarization before the summarization search is completely stopped, and the summarization of the search is suspended for auto_summarize.suspend_period. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_max_summary_ratio_python">
 <a href="#state_auto_summarize_max_summary_ratio_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>summary_<wbr>ratio</a>
@@ -11139,8 +10048,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum ratio of summary_size/bucket_size, which specifies when to stop summarization and deem it unhelpful for a bucket. Defaults to 0.1 Note: The test is only performed if the summary size is larger than auto_summarize.max_summary_size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_max_summary_size_python">
 <a href="#state_auto_summarize_max_summary_size_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>summary_<wbr>size</a>
@@ -11149,8 +10057,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum summary size, in bytes, before testing whether the summarization is helpful.The default value is 52428800 and is equivalent to 5MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_max_time_python">
 <a href="#state_auto_summarize_max_time_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>max_<wbr>time</a>
@@ -11159,8 +10066,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time (in seconds) that the summary search is allowed to run. Defaults to 3600.Note: This is an approximate time. The summary search stops at clean bucket boundaries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_suspend_period_python">
 <a href="#state_auto_summarize_suspend_period_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>suspend_<wbr>period</a>
@@ -11169,8 +10075,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time specfier indicating when to suspend summarization of this search if the summarization is deemed unhelpful.Defaults to 24h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_summarize_timespan_python">
 <a href="#state_auto_summarize_timespan_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>summarize_<wbr>timespan</a>
@@ -11179,8 +10084,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The list of time ranges that each summarized chunk should span. This comprises the list of available granularity levels for which summaries would be available. Specify a comma delimited list of time specifiers.For example a timechart over the last month whose granuality is at the day level should set this to 1d. If you need the same data summarized at the hour level for weekly charts, use: 1h,1d.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cron_schedule_python">
 <a href="#state_cron_schedule_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>schedule</a>
@@ -11189,8 +10093,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: cron stringThe cron schedule to execute this search. For example: */5 * * * * causes the search to execute every 5 minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -11199,8 +10102,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of this saved search. Defaults to empty string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -11209,8 +10111,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the saved search is enabled. Defaults to 0.Disabled saved searches are not visible in Splunk Web.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_buckets_python">
 <a href="#state_dispatch_buckets_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>buckets</a>
@@ -11219,8 +10120,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of timeline buckets. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_earliest_time_python">
 <a href="#state_dispatch_earliest_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>earliest_<wbr>time</a>
@@ -11229,8 +10129,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_index_earliest_python">
 <a href="#state_dispatch_index_earliest_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>index_<wbr>earliest</a>
@@ -11239,8 +10138,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_index_latest_python">
 <a href="#state_dispatch_index_latest_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>index_<wbr>latest</a>
@@ -11249,8 +10147,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest index time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_indexed_realtime_python">
 <a href="#state_dispatch_indexed_realtime_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>indexed_<wbr>realtime</a>
@@ -11259,8 +10156,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the earliest time for this search. Can be a relative or absolute time. If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_indexed_realtime_minspan_python">
 <a href="#state_dispatch_indexed_realtime_minspan_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>indexed_<wbr>realtime_<wbr>minspan</a>
@@ -11269,8 +10165,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_indexed_realtime_offset_python">
 <a href="#state_dispatch_indexed_realtime_offset_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>indexed_<wbr>realtime_<wbr>offset</a>
@@ -11279,8 +10174,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_disk_sync_delay setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_latest_time_python">
 <a href="#state_dispatch_latest_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>latest_<wbr>time</a>
@@ -11289,8 +10183,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time string that specifies the latest time for this saved search. Can be a relative or absolute time.If this value is an absolute time, use the dispatch.time_format to format the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_lookups_python">
 <a href="#state_dispatch_lookups_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>lookups</a>
@@ -11299,8 +10192,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the lookups for this search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_max_count_python">
 <a href="#state_dispatch_max_count_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>max_<wbr>count</a>
@@ -11309,8 +10201,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of results before finalizing the search. Defaults to 500000.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_max_time_python">
 <a href="#state_dispatch_max_time_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>max_<wbr>time</a>
@@ -11319,8 +10210,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates the maximum amount of time (in seconds) before finalizing the search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_reduce_freq_python">
 <a href="#state_dispatch_reduce_freq_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>reduce_<wbr>freq</a>
@@ -11329,8 +10219,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies, in seconds, how frequently the MapReduce reduce phase runs on accumulated map values. Defaults to 10.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_rt_backfill_python">
 <a href="#state_dispatch_rt_backfill_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rt_<wbr>backfill</a>
@@ -11339,8 +10228,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to back fill the real time window for this search. Parameter valid only if this is a real time search. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_rt_maximum_span_python">
 <a href="#state_dispatch_rt_maximum_span_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>rt_<wbr>maximum_<wbr>span</a>
@@ -11349,8 +10237,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Allows for a per-job override of the [search] indexed_realtime_maximum_span setting in limits.conf.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_spawn_process_python">
 <a href="#state_dispatch_spawn_process_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>spawn_<wbr>process</a>
@@ -11359,8 +10246,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a new search process spawns when this saved search is executed. Defaults to 1. Searches against indexes must run in a separate process.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_time_format_python">
 <a href="#state_dispatch_time_format_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>time_<wbr>format</a>
@@ -11369,8 +10255,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A time format string that defines the time format for specifying the earliest and latest time. Defaults to %FT%T.%Q%:z
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dispatch_ttl_python">
 <a href="#state_dispatch_ttl_python" style="color: inherit; text-decoration: inherit;">dispatch_<wbr>ttl</a>
@@ -11379,8 +10264,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: Integer[p]. Defaults to 2p.Indicates the time to live (in seconds) for the artifacts of the scheduled search, if no actions are triggered.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_view_python">
 <a href="#state_display_view_python" style="color: inherit; text-decoration: inherit;">display_<wbr>view</a>
@@ -11389,8 +10273,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the default UI view name (not label) in which to load the results. Accessibility is subject to the user having sufficient permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_scheduled_python">
 <a href="#state_is_scheduled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled</a>
@@ -11399,8 +10282,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this search is to be run on a schedule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_visible_python">
 <a href="#state_is_visible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>visible</a>
@@ -11409,8 +10291,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether this saved search should be listed in the visible saved search list. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_concurrent_python">
 <a href="#state_max_concurrent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent</a>
@@ -11419,8 +10300,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent instances of this search the scheduler is allowed to run. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11429,8 +10309,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtime_schedule_python">
 <a href="#state_realtime_schedule_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>schedule</a>
@@ -11439,8 +10318,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to 1. Controls the way the scheduler computes the next execution time of a scheduled search. If this value is set to 1, the scheduler bases its determination of the next scheduled search execution time on the current time. If this value is set to 0, the scheduler bases its determination of the next scheduled search on the last search execution time. This is called continuous scheduling. If set to 0, the scheduler never skips scheduled execution periods. However, the execution of the saved search might fall behind depending on the scheduler load. Use continuous scheduling whenever you enable the summary index option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_ui_dispatch_app_python">
 <a href="#state_request_ui_dispatch_app_python" style="color: inherit; text-decoration: inherit;">request_<wbr>ui_<wbr>dispatch_<wbr>app</a>
@@ -11449,8 +10327,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the app this search should be dispatched in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_ui_dispatch_view_python">
 <a href="#state_request_ui_dispatch_view_python" style="color: inherit; text-decoration: inherit;">request_<wbr>ui_<wbr>dispatch_<wbr>view</a>
@@ -11459,8 +10336,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a field used by Splunk Web to denote the view this search should be displayed in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restart_on_searchpeer_add_python">
 <a href="#state_restart_on_searchpeer_add_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>on_<wbr>searchpeer_<wbr>add</a>
@@ -11469,8 +10345,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to restart a real-time search managed by the scheduler when a search peer becomes available for this saved search. Defaults to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_run_on_startup_python">
 <a href="#state_run_on_startup_python" style="color: inherit; text-decoration: inherit;">run_<wbr>on_<wbr>startup</a>
@@ -11479,8 +10354,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this search runs at startup. If it does not run on startup, it runs at the next scheduled time. Defaults to 0. Set to 1 for scheduled searches that populate lookup tables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_priority_python">
 <a href="#state_schedule_priority_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>priority</a>
@@ -11489,8 +10363,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Raises the scheduling priority of the named search. Defaults to Default
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_window_python">
 <a href="#state_schedule_window_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>window</a>
@@ -11499,8 +10372,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time window (in minutes) during which the search has lower priority. Defaults to 0. The scheduler can give higher priority to more critical searches during this window. The window must be smaller than the search period.Set to auto to let the scheduler determine the optimal window value automatically. Requires the edit_search_schedule_window capability to override auto.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_python">
 <a href="#state_search_python" style="color: inherit; text-decoration: inherit;">search</a>
@@ -11509,8 +10381,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required when creating a new search.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vsid_python">
 <a href="#state_vsid_python" style="color: inherit; text-decoration: inherit;">vsid</a>
@@ -11519,8 +10390,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the viewstate id associated with the UI view listed in 'displayview'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workload_pool_python">
 <a href="#state_workload_pool_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>pool</a>
@@ -11529,8 +10399,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the new workload pool where the existing running search will be placed.`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -11545,9 +10414,7 @@ The following state arguments are supported:
 <h4 id="savedsearchesacl">Saved<wbr>Searches<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -11555,8 +10422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -11564,8 +10430,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -11573,8 +10438,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -11582,8 +10446,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -11591,8 +10454,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -11600,8 +10462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -11609,8 +10470,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -11618,8 +10478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -11627,8 +10486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -11636,8 +10494,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -11645,14 +10502,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -11660,8 +10514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -11669,8 +10522,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -11678,8 +10530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -11687,8 +10538,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -11696,8 +10546,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -11705,8 +10554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -11714,8 +10562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -11723,8 +10570,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -11732,8 +10578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -11741,8 +10586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -11750,14 +10594,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -11765,8 +10606,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -11774,8 +10614,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -11783,8 +10622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -11792,8 +10630,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -11801,8 +10638,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -11810,8 +10646,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -11819,8 +10654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -11828,8 +10662,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -11837,8 +10670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -11846,8 +10678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -11855,14 +10686,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -11870,8 +10698,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -11879,8 +10706,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -11888,8 +10714,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -11897,8 +10722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -11906,8 +10730,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -11915,8 +10738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -11924,8 +10746,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -11933,8 +10754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -11942,8 +10762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -11951,8 +10770,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -11960,8 +10778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

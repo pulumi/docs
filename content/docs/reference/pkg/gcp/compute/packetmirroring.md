@@ -555,8 +555,7 @@ The PacketMirroring resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collectorilb_csharp">
 <a href="#collectorilb_csharp" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
@@ -569,8 +568,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroredresources_csharp">
 <a href="#mirroredresources_csharp" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
@@ -580,8 +578,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -593,8 +590,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -603,8 +599,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -614,8 +609,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -624,8 +618,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -636,8 +629,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -647,8 +639,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -658,13 +649,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collectorilb_go">
 <a href="#collectorilb_go" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
@@ -677,8 +666,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroredresources_go">
 <a href="#mirroredresources_go" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
@@ -688,8 +676,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -701,8 +688,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -711,8 +697,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -722,8 +707,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -732,8 +716,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -744,8 +727,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -755,8 +737,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -766,13 +747,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collectorilb_nodejs">
 <a href="#collectorilb_nodejs" style="color: inherit; text-decoration: inherit;">collector<wbr>Ilb</a>
@@ -785,8 +764,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirroredresources_nodejs">
 <a href="#mirroredresources_nodejs" style="color: inherit; text-decoration: inherit;">mirrored<wbr>Resources</a>
@@ -796,8 +774,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -809,8 +786,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -819,8 +795,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -830,8 +805,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -840,8 +814,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -852,8 +825,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -863,8 +835,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -874,13 +845,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collector_ilb_python">
 <a href="#collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
@@ -893,8 +862,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mirrored_resources_python">
 <a href="#mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
@@ -904,8 +872,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -917,8 +884,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -927,8 +893,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -938,8 +903,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -948,8 +912,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -960,8 +923,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -971,8 +933,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -982,8 +943,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -994,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1003,13 +962,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1017,13 +974,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1031,13 +986,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1045,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1173,8 +1125,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collectorilb_csharp">
 <a href="#state_collectorilb_csharp" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
@@ -1187,8 +1138,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1197,8 +1147,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1208,8 +1157,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirroredresources_csharp">
 <a href="#state_mirroredresources_csharp" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
@@ -1219,8 +1167,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1229,8 +1176,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1242,8 +1188,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1254,8 +1199,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1265,8 +1209,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1276,13 +1219,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collectorilb_go">
 <a href="#state_collectorilb_go" style="color: inherit; text-decoration: inherit;">Collector<wbr>Ilb</a>
@@ -1295,8 +1236,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1305,8 +1245,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1316,8 +1255,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirroredresources_go">
 <a href="#state_mirroredresources_go" style="color: inherit; text-decoration: inherit;">Mirrored<wbr>Resources</a>
@@ -1327,8 +1265,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1337,8 +1274,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1350,8 +1286,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1362,8 +1297,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1373,8 +1307,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1384,13 +1317,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collectorilb_nodejs">
 <a href="#state_collectorilb_nodejs" style="color: inherit; text-decoration: inherit;">collector<wbr>Ilb</a>
@@ -1403,8 +1334,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1413,8 +1343,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1424,8 +1353,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirroredresources_nodejs">
 <a href="#state_mirroredresources_nodejs" style="color: inherit; text-decoration: inherit;">mirrored<wbr>Resources</a>
@@ -1435,8 +1363,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1445,8 +1372,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1458,8 +1384,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1470,8 +1395,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1481,8 +1405,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1492,13 +1415,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_collector_ilb_python">
 <a href="#state_collector_ilb_python" style="color: inherit; text-decoration: inherit;">collector_<wbr>ilb</a>
@@ -1511,8 +1432,7 @@ that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
 set to true.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1521,8 +1441,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1532,8 +1451,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A filter for mirrored traffic.  If unset, all traffic is mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirrored_resources_python">
 <a href="#state_mirrored_resources_python" style="color: inherit; text-decoration: inherit;">mirrored_<wbr>resources</a>
@@ -1543,8 +1461,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A means of specifying which resources to mirror.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1553,8 +1470,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the packet mirroring rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1566,8 +1482,7 @@ Structure is documented below.
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1578,8 +1493,7 @@ Structure is documented below.
     <dd>{{% md %}}Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1589,8 +1503,7 @@ the same instances.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1600,8 +1513,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Region in which the created address should reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1616,8 +1528,7 @@ If it is not provided, the provider region is used.
 <h4 id="packetmirroringcollectorilb">Packet<wbr>Mirroring<wbr>Collector<wbr>Ilb</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1626,13 +1537,11 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1641,13 +1550,11 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1656,13 +1563,11 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1671,15 +1576,13 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packetmirroringfilter">Packet<wbr>Mirroring<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidrranges_csharp">
 <a href="#cidrranges_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
@@ -1689,8 +1592,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1701,8 +1603,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
     <dd>{{% md %}}Direction of traffic to mirror.
 Default value is `BOTH`.
 Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_csharp">
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
@@ -1712,13 +1613,11 @@ Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
 Each value may be one of `tcp`, `udp`, and `icmp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidrranges_go">
 <a href="#cidrranges_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Ranges</a>
@@ -1728,8 +1627,7 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1740,8 +1638,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
     <dd>{{% md %}}Direction of traffic to mirror.
 Default value is `BOTH`.
 Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_go">
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
@@ -1751,13 +1648,11 @@ Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
 Each value may be one of `tcp`, `udp`, and `icmp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidrranges_nodejs">
 <a href="#cidrranges_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Ranges</a>
@@ -1767,8 +1662,7 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1779,8 +1673,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
     <dd>{{% md %}}Direction of traffic to mirror.
 Default value is `BOTH`.
 Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_nodejs">
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
@@ -1790,13 +1683,11 @@ Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
 Each value may be one of `tcp`, `udp`, and `icmp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cidr_ranges_python">
 <a href="#cidr_ranges_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>ranges</a>
@@ -1806,8 +1697,7 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
     </dt>
     <dd>{{% md %}}IP CIDR ranges that apply as a filter on the source (ingress) or
 destination (egress) IP in the IP header. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1818,8 +1708,7 @@ destination (egress) IP in the IP header. Only IPv4 is supported.
     <dd>{{% md %}}Direction of traffic to mirror.
 Default value is `BOTH`.
 Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_protocols_python">
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
@@ -1829,15 +1718,13 @@ Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
     </dt>
     <dd>{{% md %}}Protocols that apply as a filter on mirrored traffic.
 Each value may be one of `tcp`, `udp`, and `icmp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packetmirroringmirroredresources">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1847,8 +1734,7 @@ Each value may be one of `tcp`, `udp`, and `icmp`.
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_csharp">
 <a href="#subnetworks_csharp" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
@@ -1858,8 +1744,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1868,13 +1753,11 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1884,8 +1767,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_go">
 <a href="#subnetworks_go" style="color: inherit; text-decoration: inherit;">Subnetworks</a>
@@ -1895,8 +1777,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1905,13 +1786,11 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1921,8 +1800,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_nodejs">
 <a href="#subnetworks_nodejs" style="color: inherit; text-decoration: inherit;">subnetworks</a>
@@ -1932,8 +1810,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1942,13 +1819,11 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1958,8 +1833,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All the listed instances will be mirrored.  Specify at most 50.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetworks_python">
 <a href="#subnetworks_python" style="color: inherit; text-decoration: inherit;">subnetworks</a>
@@ -1969,8 +1843,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}All instances in one of these subnetworks will be mirrored.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1979,15 +1852,13 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}All instances with these tags will be mirrored.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packetmirroringmirroredresourcesinstance">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Instance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1996,13 +1867,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2011,13 +1880,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2026,13 +1893,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2041,15 +1906,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packetmirroringmirroredresourcessubnetwork">Packet<wbr>Mirroring<wbr>Mirrored<wbr>Resources<wbr>Subnetwork</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2058,13 +1921,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2073,13 +1934,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2088,13 +1947,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2103,15 +1960,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="packetmirroringnetwork">Packet<wbr>Mirroring<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2120,13 +1975,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2135,13 +1988,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2150,13 +2001,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2165,8 +2014,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the instances where this rule should be active.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

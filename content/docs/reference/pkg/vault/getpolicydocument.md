@@ -206,8 +206,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -215,13 +214,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -229,13 +226,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">[]Get<wbr>Policy<wbr>Document<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -243,13 +238,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">Get<wbr>Policy<wbr>Document<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -257,8 +250,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -271,8 +263,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hcl_csharp">
 <a href="#hcl_csharp" style="color: inherit; text-decoration: inherit;">Hcl</a>
@@ -281,8 +272,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard Vault HCL policy document.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -291,8 +281,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -300,13 +289,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hcl_go">
 <a href="#hcl_go" style="color: inherit; text-decoration: inherit;">Hcl</a>
@@ -315,8 +302,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard Vault HCL policy document.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +311,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -334,13 +319,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">[]Get<wbr>Policy<wbr>Document<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hcl_nodejs">
 <a href="#hcl_nodejs" style="color: inherit; text-decoration: inherit;">hcl</a>
@@ -349,8 +332,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard Vault HCL policy document.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -359,8 +341,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -368,13 +349,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">Get<wbr>Policy<wbr>Document<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hcl_python">
 <a href="#hcl_python" style="color: inherit; text-decoration: inherit;">hcl</a>
@@ -383,8 +362,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard Vault HCL policy document.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -393,8 +371,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -402,8 +379,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpolicydocumentrule">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -417,8 +393,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -427,8 +402,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of capabilities that this rule apply to `path`. For example, ["read", "write"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -437,8 +411,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A path in Vault that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedparameters_csharp">
 <a href="#allowedparameters_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Parameters</a>
@@ -447,8 +420,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deniedparameters_csharp">
 <a href="#deniedparameters_csharp" style="color: inherit; text-decoration: inherit;">Denied<wbr>Parameters</a>
@@ -457,8 +429,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">List&lt;Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameter`. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -467,8 +438,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwrappingttl_csharp">
 <a href="#maxwrappingttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Wrapping<wbr>Ttl</a>
@@ -477,8 +447,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minwrappingttl_csharp">
 <a href="#minwrappingttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Wrapping<wbr>Ttl</a>
@@ -487,8 +456,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredparameters_csharp">
 <a href="#requiredparameters_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Parameters</a>
@@ -497,13 +465,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of parameters that must be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -512,8 +478,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of capabilities that this rule apply to `path`. For example, ["read", "write"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -522,8 +487,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A path in Vault that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedparameters_go">
 <a href="#allowedparameters_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Parameters</a>
@@ -532,8 +496,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">[]Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deniedparameters_go">
 <a href="#deniedparameters_go" style="color: inherit; text-decoration: inherit;">Denied<wbr>Parameters</a>
@@ -542,8 +505,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">[]Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameter`. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -552,8 +514,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwrappingttl_go">
 <a href="#maxwrappingttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Wrapping<wbr>Ttl</a>
@@ -562,8 +523,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minwrappingttl_go">
 <a href="#minwrappingttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Wrapping<wbr>Ttl</a>
@@ -572,8 +532,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredparameters_go">
 <a href="#requiredparameters_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Parameters</a>
@@ -582,13 +541,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of parameters that must be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -597,8 +554,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of capabilities that this rule apply to `path`. For example, ["read", "write"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -607,8 +563,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A path in Vault that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedparameters_nodejs">
 <a href="#allowedparameters_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Parameters</a>
@@ -617,8 +572,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deniedparameters_nodejs">
 <a href="#deniedparameters_nodejs" style="color: inherit; text-decoration: inherit;">denied<wbr>Parameters</a>
@@ -627,8 +581,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameter`. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -637,8 +590,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwrappingttl_nodejs">
 <a href="#maxwrappingttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Wrapping<wbr>Ttl</a>
@@ -647,8 +599,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minwrappingttl_nodejs">
 <a href="#minwrappingttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Wrapping<wbr>Ttl</a>
@@ -657,8 +608,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredparameters_nodejs">
 <a href="#requiredparameters_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Parameters</a>
@@ -667,13 +617,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of parameters that must be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -682,8 +630,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of capabilities that this rule apply to `path`. For example, ["read", "write"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -692,8 +639,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A path in Vault that this rule applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_parameters_python">
 <a href="#allowed_parameters_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>parameters</a>
@@ -702,8 +648,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruleallowedparameter">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Whitelists a list of keys and values that are permitted on the given path. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denied_parameters_python">
 <a href="#denied_parameters_python" style="color: inherit; text-decoration: inherit;">denied_<wbr>parameters</a>
@@ -712,8 +657,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpolicydocumentruledeniedparameter">Sequence[Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Blacklists a list of parameter and values. Any values specified here take precedence over `allowed_parameter`. See Parameters below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -722,8 +666,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_wrapping_ttl_python">
 <a href="#max_wrapping_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>wrapping_<wbr>ttl</a>
@@ -732,8 +675,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_wrapping_ttl_python">
 <a href="#min_wrapping_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>wrapping_<wbr>ttl</a>
@@ -742,8 +684,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum allowed TTL that clients can specify for a wrapped response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_parameters_python">
 <a href="#required_parameters_python" style="color: inherit; text-decoration: inherit;">required_<wbr>parameters</a>
@@ -752,8 +693,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of parameters that must be specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpolicydocumentruleallowedparameter">Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter</h4>
@@ -761,8 +701,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -771,8 +710,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -781,13 +719,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -796,8 +732,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -806,13 +741,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -821,8 +754,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -831,13 +763,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -846,8 +776,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -856,8 +785,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getpolicydocumentruledeniedparameter">Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter</h4>
@@ -865,8 +793,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -875,8 +802,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -885,13 +811,11 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -900,8 +824,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -910,13 +833,11 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -925,8 +846,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -935,13 +855,11 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -950,8 +868,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of permitted or denied parameter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -960,8 +877,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of values what are permitted or denied by policy rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

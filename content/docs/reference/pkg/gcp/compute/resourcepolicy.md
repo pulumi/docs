@@ -563,8 +563,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupplacementpolicy_csharp">
 <a href="#groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
@@ -574,8 +573,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -590,8 +588,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -601,8 +598,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -611,8 +607,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotschedulepolicy_csharp">
 <a href="#snapshotschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
@@ -622,13 +617,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupplacementpolicy_go">
 <a href="#groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
@@ -638,8 +631,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -654,8 +646,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -665,8 +656,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -675,8 +665,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotschedulepolicy_go">
 <a href="#snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
@@ -686,13 +675,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="groupplacementpolicy_nodejs">
 <a href="#groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
@@ -702,8 +689,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -718,8 +704,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -729,8 +714,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -739,8 +723,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotschedulepolicy_nodejs">
 <a href="#snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
@@ -750,13 +733,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="group_placement_policy_python">
 <a href="#group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
@@ -766,8 +747,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -782,8 +762,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -793,8 +772,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -803,8 +781,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_schedule_policy_python">
 <a href="#snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
@@ -814,8 +791,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -826,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -835,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -845,13 +819,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -859,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -869,13 +840,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -883,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -893,13 +861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -907,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -917,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1045,8 +1009,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_groupplacementpolicy_csharp">
 <a href="#state_groupplacementpolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
@@ -1056,8 +1019,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1072,8 +1034,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1083,8 +1044,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1093,8 +1053,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1103,8 +1062,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotschedulepolicy_csharp">
 <a href="#state_snapshotschedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
@@ -1114,13 +1072,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_groupplacementpolicy_go">
 <a href="#state_groupplacementpolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Placement<wbr>Policy</a>
@@ -1130,8 +1086,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1146,8 +1101,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1157,8 +1111,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1167,8 +1120,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1177,8 +1129,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotschedulepolicy_go">
 <a href="#state_snapshotschedulepolicy_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Schedule<wbr>Policy</a>
@@ -1188,13 +1139,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_groupplacementpolicy_nodejs">
 <a href="#state_groupplacementpolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Placement<wbr>Policy</a>
@@ -1204,8 +1153,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1220,8 +1168,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1231,8 +1178,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1241,8 +1187,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1251,8 +1196,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotschedulepolicy_nodejs">
 <a href="#state_snapshotschedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Schedule<wbr>Policy</a>
@@ -1262,13 +1206,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_group_placement_policy_python">
 <a href="#state_group_placement_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>placement_<wbr>policy</a>
@@ -1278,8 +1220,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1294,8 +1235,7 @@ match the regular expression `a-z`? which means the
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1305,8 +1245,7 @@ which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1315,8 +1254,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Region where resource policy resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1325,8 +1263,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_schedule_policy_python">
 <a href="#state_snapshot_schedule_policy_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>schedule_<wbr>policy</a>
@@ -1336,8 +1273,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Policy for creating snapshots of persistent disks.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1352,8 +1288,7 @@ Structure is documented below.
 <h4 id="resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilitydomaincount_csharp">
 <a href="#availabilitydomaincount_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Domain<wbr>Count</a>
@@ -1363,8 +1298,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collocation_csharp">
 <a href="#collocation_csharp" style="color: inherit; text-decoration: inherit;">Collocation</a>
@@ -1377,8 +1311,7 @@ Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
 Possible values are `COLLOCATED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmcount_csharp">
 <a href="#vmcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Count</a>
@@ -1387,13 +1320,11 @@ Possible values are `COLLOCATED`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilitydomaincount_go">
 <a href="#availabilitydomaincount_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Domain<wbr>Count</a>
@@ -1403,8 +1334,7 @@ Possible values are `COLLOCATED`.
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collocation_go">
 <a href="#collocation_go" style="color: inherit; text-decoration: inherit;">Collocation</a>
@@ -1417,8 +1347,7 @@ Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
 Possible values are `COLLOCATED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmcount_go">
 <a href="#vmcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Count</a>
@@ -1427,13 +1356,11 @@ Possible values are `COLLOCATED`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availabilitydomaincount_nodejs">
 <a href="#availabilitydomaincount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Domain<wbr>Count</a>
@@ -1443,8 +1370,7 @@ Possible values are `COLLOCATED`.
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collocation_nodejs">
 <a href="#collocation_nodejs" style="color: inherit; text-decoration: inherit;">collocation</a>
@@ -1457,8 +1383,7 @@ Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
 Possible values are `COLLOCATED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmcount_nodejs">
 <a href="#vmcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Count</a>
@@ -1467,13 +1392,11 @@ Possible values are `COLLOCATED`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_domain_count_python">
 <a href="#availability_domain_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>domain_<wbr>count</a>
@@ -1483,8 +1406,7 @@ Possible values are `COLLOCATED`.
     </dt>
     <dd>{{% md %}}The number of availability domains instances will be spread across. If two instances are in different
 availability domain, they will not be put in the same low latency network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collocation_python">
 <a href="#collocation_python" style="color: inherit; text-decoration: inherit;">collocation</a>
@@ -1497,8 +1419,7 @@ Specify `COLLOCATED` to enable collocation. Can only be specified with `vm_count
 with a COLLOCATED policy, then exactly `vm_count` instances must be created at the same time with the resource policy
 attached.
 Possible values are `COLLOCATED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_count_python">
 <a href="#vm_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>count</a>
@@ -1507,15 +1428,13 @@ Possible values are `COLLOCATED`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of vms in this placement group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1525,8 +1444,7 @@ Possible values are `COLLOCATED`.
     </dt>
     <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -1536,8 +1454,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotproperties_csharp">
 <a href="#snapshotproperties_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
@@ -1547,13 +1464,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1563,8 +1478,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -1574,8 +1488,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotproperties_go">
 <a href="#snapshotproperties_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Properties</a>
@@ -1585,13 +1498,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1601,8 +1512,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -1612,8 +1522,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotproperties_nodejs">
 <a href="#snapshotproperties_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Properties</a>
@@ -1623,13 +1532,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1639,8 +1546,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains one of an `hourlySchedule`, `dailySchedule`, or `weeklySchedule`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -1650,8 +1556,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Retention policy applied to snapshots created by this resource policy.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_properties_python">
 <a href="#snapshot_properties_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>properties</a>
@@ -1661,15 +1566,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Properties with which the snapshots are created, such as labels.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyretentionpolicy">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Retention<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxretentiondays_csharp">
 <a href="#maxretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retention<wbr>Days</a>
@@ -1678,8 +1581,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onsourcediskdelete_csharp">
 <a href="#onsourcediskdelete_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
@@ -1691,13 +1593,11 @@ Structure is documented below.
 the source disk is deleted.
 Default value is `KEEP_AUTO_SNAPSHOTS`.
 Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxretentiondays_go">
 <a href="#maxretentiondays_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retention<wbr>Days</a>
@@ -1706,8 +1606,7 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onsourcediskdelete_go">
 <a href="#onsourcediskdelete_go" style="color: inherit; text-decoration: inherit;">On<wbr>Source<wbr>Disk<wbr>Delete</a>
@@ -1719,13 +1618,11 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 the source disk is deleted.
 Default value is `KEEP_AUTO_SNAPSHOTS`.
 Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxretentiondays_nodejs">
 <a href="#maxretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retention<wbr>Days</a>
@@ -1734,8 +1631,7 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onsourcediskdelete_nodejs">
 <a href="#onsourcediskdelete_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Source<wbr>Disk<wbr>Delete</a>
@@ -1747,13 +1643,11 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 the source disk is deleted.
 Default value is `KEEP_AUTO_SNAPSHOTS`.
 Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_retention_days_python">
 <a href="#max_retention_days_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retention_<wbr>days</a>
@@ -1762,8 +1656,7 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of the snapshot that is allowed to be kept.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_source_disk_delete_python">
 <a href="#on_source_disk_delete_python" style="color: inherit; text-decoration: inherit;">on_<wbr>source_<wbr>disk_<wbr>delete</a>
@@ -1775,15 +1668,13 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
 the source disk is deleted.
 Default value is `KEEP_AUTO_SNAPSHOTS`.
 Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dailyschedule_csharp">
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
@@ -1793,8 +1684,7 @@ Possible values are `KEEP_AUTO_SNAPSHOTS` and `APPLY_RETENTION_POLICY`.
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_csharp">
 <a href="#hourlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
@@ -1804,8 +1694,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_csharp">
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
@@ -1815,13 +1704,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dailyschedule_go">
 <a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
@@ -1831,8 +1718,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_go">
 <a href="#hourlyschedule_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Schedule</a>
@@ -1842,8 +1728,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_go">
 <a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
@@ -1853,13 +1738,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dailyschedule_nodejs">
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
@@ -1869,8 +1752,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourlyschedule_nodejs">
 <a href="#hourlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Schedule</a>
@@ -1880,8 +1762,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_nodejs">
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
@@ -1891,13 +1772,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daily_schedule_python">
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
@@ -1907,8 +1786,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth day at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hourly_schedule_python">
 <a href="#hourly_schedule_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>schedule</a>
@@ -1918,8 +1796,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The policy will execute every nth hour starting at the specified time.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weekly_schedule_python">
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
@@ -1929,15 +1806,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Allows specifying a snapshot time for each day of the week.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyscheduledailyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Daily<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="daysincycle_csharp">
 <a href="#daysincycle_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>In<wbr>Cycle</a>
@@ -1946,8 +1821,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1957,13 +1831,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="daysincycle_go">
 <a href="#daysincycle_go" style="color: inherit; text-decoration: inherit;">Days<wbr>In<wbr>Cycle</a>
@@ -1972,8 +1844,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1983,13 +1854,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="daysincycle_nodejs">
 <a href="#daysincycle_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>In<wbr>Cycle</a>
@@ -1998,8 +1867,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2009,13 +1877,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_in_cycle_python">
 <a href="#days_in_cycle_python" style="color: inherit; text-decoration: inherit;">days_<wbr>in_<wbr>cycle</a>
@@ -2024,8 +1890,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2035,15 +1900,13 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyschedulehourlyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Hourly<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hoursincycle_csharp">
 <a href="#hoursincycle_csharp" style="color: inherit; text-decoration: inherit;">Hours<wbr>In<wbr>Cycle</a>
@@ -2052,8 +1915,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2063,13 +1925,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hoursincycle_go">
 <a href="#hoursincycle_go" style="color: inherit; text-decoration: inherit;">Hours<wbr>In<wbr>Cycle</a>
@@ -2078,8 +1938,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2089,13 +1948,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hoursincycle_nodejs">
 <a href="#hoursincycle_nodejs" style="color: inherit; text-decoration: inherit;">hours<wbr>In<wbr>Cycle</a>
@@ -2104,8 +1961,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2115,13 +1971,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hours_in_cycle_python">
 <a href="#hours_in_cycle_python" style="color: inherit; text-decoration: inherit;">hours_<wbr>in_<wbr>cycle</a>
@@ -2130,8 +1984,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hours between snapshots.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2141,15 +1994,13 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyscheduleweeklyschedule">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweeks_csharp">
 <a href="#dayofweeks_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
@@ -2159,13 +2010,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweeks_go">
 <a href="#dayofweeks_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Weeks</a>
@@ -2175,13 +2024,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweeks_nodejs">
 <a href="#dayofweeks_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Weeks</a>
@@ -2191,13 +2038,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_weeks_python">
 <a href="#day_of_weeks_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>weeks</a>
@@ -2207,15 +2052,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}May contain up to seven (one for each day of the week) snapshot times.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicyscheduleweeklyscheduledayofweek">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Schedule<wbr>Weekly<wbr>Schedule<wbr>Day<wbr>Of<wbr>Week</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_csharp">
 <a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2225,8 +2068,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2236,13 +2078,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_go">
 <a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
@@ -2252,8 +2092,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2263,13 +2102,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_nodejs">
 <a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2279,8 +2116,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2290,13 +2126,11 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_python">
 <a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
@@ -2306,8 +2140,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}The day of the week to create the snapshot. e.g. MONDAY
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2317,15 +2150,13 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
     </dt>
     <dd>{{% md %}}Time within the window to start the operations.
 It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcepolicysnapshotschedulepolicysnapshotproperties">Resource<wbr>Policy<wbr>Snapshot<wbr>Schedule<wbr>Policy<wbr>Snapshot<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="guestflush_csharp">
 <a href="#guestflush_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
@@ -2334,8 +2165,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2344,8 +2174,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagelocations_csharp">
 <a href="#storagelocations_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
@@ -2355,13 +2184,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="guestflush_go">
 <a href="#guestflush_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Flush</a>
@@ -2370,8 +2197,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2380,8 +2206,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagelocations_go">
 <a href="#storagelocations_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Locations</a>
@@ -2391,13 +2216,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="guestflush_nodejs">
 <a href="#guestflush_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Flush</a>
@@ -2406,8 +2229,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2416,8 +2238,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagelocations_nodejs">
 <a href="#storagelocations_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Locations</a>
@@ -2427,13 +2248,11 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="guest_flush_python">
 <a href="#guest_flush_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>flush</a>
@@ -2442,8 +2261,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to perform a 'guest aware' snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2452,8 +2270,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key-value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_locations_python">
 <a href="#storage_locations_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>locations</a>
@@ -2463,8 +2280,7 @@ It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     </dt>
     <dd>{{% md %}}Cloud Storage bucket location to store the auto snapshot
 (regional or multi-regional)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
